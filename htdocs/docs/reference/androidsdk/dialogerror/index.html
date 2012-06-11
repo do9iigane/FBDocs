@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/androidsdk/dialogerror/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/androidsdk/dialogerror/">https://developers.facebook.com/docs/reference/androidsdk/dialogerror/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</li>
+<li>
+<a href="/docs/reference/php" name="https://developers.facebook.com/docs/reference/php">PHP SDK</a>
+</li>
+<li>
+<a href="/docs/reference/iossdk" name="https://developers.facebook.com/docs/reference/iossdk">iOS SDK</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/androidsdk" name="https://developers.facebook.com/docs/reference/androidsdk">Android SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/request/" name="http://developers.facebook.com/docs/reference/androidsdk/request/">API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/" name="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/">Async API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/authentication/" name="http://developers.facebook.com/docs/reference/androidsdk/authentication/">Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialog/" name="http://developers.facebook.com/docs/reference/androidsdk/dialog/">Dialogs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/helper/" name="http://developers.facebook.com/docs/reference/androidsdk/helper/">Helpers</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Interfaces</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/" name="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/">DialogListener</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/" name="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/">RequestListener</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Errors</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/" name="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/">DialogError</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/" name="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/">FacebookError</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>DialogError</h1>
+<div class="breadcrumbs">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/androidsdk/" name="https://developers.facebook.com/docs/reference/androidsdk/">Android SDK</a> › <a href="/docs/reference/androidsdk/dialogerror/" name="https://developers.facebook.com/docs/reference/androidsdk/dialogerror/">DialogError</a>
+</div>
+</div>
+</div>
+<p>The DialogError class encapsulates the Dialog Error. These are defined in <a href="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/DialogError.java" name="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/DialogError.java">FacebookError.java</a>.</p>
+<h2>Methods</h2>
+<hr />
+<h2>DialogError(String message, int errorCode, String failingUrl) :</h2>
+<p>Constructor for the DialogError class.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>message</code> - The message for this error.</p>
+<p>
+<code>errorCode</code> - Error code.</p>
+<p>
+<code>failingUrl</code> - The URL that the dialog was trying to load.</p>
+<hr />
+<h2>int getErrorCode():</h2>
+<p>Get the error code for this error.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>None</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>Error code for this object</p>
+<hr />
+<h2>String getFailingUrl():</h2>
+<p>Get the failing URL for this dialog.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>None</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>Failing URL for this dialog</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1316384439" title="2011年9月18日 15:20">約9ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

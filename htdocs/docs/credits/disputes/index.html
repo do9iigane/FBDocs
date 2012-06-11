@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/credits/disputes/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/credits/disputes/">https://developers.facebook.com/docs/credits/disputes/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Getting Started</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/build/" name="http://developers.facebook.com/docs/credits/build/">Credits Tutorial </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/callback/" name="http://developers.facebook.com/docs/credits/callback/">Credits Callback</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/reports/" name="http://developers.facebook.com/docs/credits/reports/">Reports and Payouts</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/credits/disputes/" name="http://developers.facebook.com/docs/credits/disputes/">Disputes &amp; Chargebacks</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Core APIs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/pay_dialog/" name="http://developers.facebook.com/docs/credits/pay_dialog/">Pay Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/orders/" name="http://developers.facebook.com/docs/credits/orders/">Order API</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/errorcodes/" name="http://developers.facebook.com/docs/credits/errorcodes/">Error Codes</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/paymethods/" name="http://developers.facebook.com/docs/credits/paymethods/">Payment methods</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/offers/" name="http://developers.facebook.com/docs/credits/offers/">Using Offers with Credits</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/terms/" name="http://developers.facebook.com/docs/credits/terms/">Credits Terms</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Disputes &amp; Chargebacks</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/credits/" name="https://developers.facebook.com/docs/credits/">Credits</a> › <a href="/docs/credits/disputes/" name="https://developers.facebook.com/docs/credits/disputes/">Disputes &amp; Chargebacks</a>
+</div>
+</div>
+</div>
+<p>This document discusses disputes, chargebacks and refunds with Facebook Credits.</p>
+<h2>User Dispute Process and Policy</h2>
+<h3>Facebook User Dispute Philosophy</h3>
+<p>Facebook&apos;s philosophy around user support is that for issues where users are likely to request a refund back to their funding source, Facebook should provide primary support. When users have an in-game purchasing issue or do not receive the desired item or currency, they should be routed directly to the developer. In these cases, the developer is best equipped to satisfy these users by issuing more in-game items, refunding the Facebook Credits, or clarifying an item delivery delay.</p>
+<h3>How Users Dispute a Previous Purchase</h3>
+<p>The dispute resolution flows give the user and the developer an easy way to interact regarding a previous payment made using Facebook Credits.</p>
+<p>There are currently two ways for a user to dispute a previous purchase directly with a developer:</p>
+<p>I. <strong>Facebook Credits Support Center</strong>
+</p>
+<p>From a dynamic contact form in our help center, users are able to identify their issue by selecting from a series of questions. Depending on the users&apos; selections, they are directed to the appropriate contact, either Facebook or the developer.</p>
+<p>Below is an example endpoint of what the Facebook Credits Support Center developer-side dispute looks like from a user&apos;s perspective:</p>
+<p>
+<img src="https://developers.facebook.com/attachment/lombardbiggest.png/" width="700px" />
+</p>
+<p>II. <strong>In-App Dispute Flow</strong>
+</p>
+<p>There is a link at the bottom of the application canvas page for apps that are using our payments: &quot;Report/Contact this App&quot;. When users click the link they are prompted with choices, the third of which is &quot;Dispute ...&quot;.</p>
+<p>Below is an example flow of what the in-app dispute process looks like from a user&apos;s perspective:</p>
+<p>
+<img src="https://developers.facebook.com/attachment/user_dispute_oflow.png" width="700px" />
+</p>
+<p>In both the in-app and support center dispute flows, if a user selects an issue that is best handled by the developer, the end result is the following:</p>
+<ol type="1">
+<li>Brings up the order-selection dialog box where the user chooses the orders from the past 30-days that he wants to dispute. The follow-up form requires the user to input a free text reason for the dispute.</li>
+<li>Upon completion, an e-mail is sent to the developer and the user setting expectations that the developer is responsible for responding and resolving the issue.</li>
+</ol>
+<h3>How Developers Resolve User Disputes</h3>
+<p>For both of these dispute flows, when a user disputes an order, a &apos;payments_status_update&apos; notification with &apos;disputed&apos; status is sent to the application&apos;s payments_callback_url.</p>
+<p>This is consistent with other status-update notifications sent to the application on order-state transitions. The application can also query the disputed orders using the /payments API.</p>
+<p>As a developer, you should review the user dispute and issue a refund if appropriate. The developer owns the interaction with the user at this point. You can resolve the dispute in two ways:</p>
+<ul>
+<li>
+<b>To refund</b> - By calling the /[order id] API to refund the order, you must provide the appropriate order_id, status=refunded, in addition to specifying the reason for your refund in the &apos;comment&apos; param.</li>
+<li>
+<b>To settle</b> - If you are satisfied that the user understands the charge, you can resolve the dispute by calling the /[order id] API with the order-id, status=settled, and specify the reason as the comment in the params.</li>
+</ul>
+<p>
+<img src="https://developers.facebook.com/attachment/devdispute3.png" width="700px" />
+</p>
+<p>
+<b>Note:</b>
+</p>
+<ul>
+<li>Specifying the reason is required in this case to provide a record on why you chose to resolve the dispute without refunding the user.</li>
+<li>You can only move an order to status=refunded up to 60 days after the initial transaction is completed.</li>
+</ul>
+<h3>Sample Email from Dispute</h3>
+<p>
+<b>From:</b> developer &lt;noreply@facebookmail.com&gt;</p>
+<pre>
+
+I never received my hat!
+
+***********************************
+User Information:
+User ID: 221159
+User Name: Daniel Schultz
+User Email: foo@bar.com
+Browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:8.0) Gecko/20100101
+Type of Message: Credits Dispute
+***********************************
+</pre>
+<h3>Example Disputed Order Object</h3>
+<p>After order was just placed:</p>
+<pre>
+{
+   &quot;id&quot;: &quot;9006187786070&quot;,
+   &quot;from&quot;: 221159,
+   &quot;to&quot;: 221159,
+   &quot;amount&quot;: 1,
+   &quot;status&quot;: &quot;settled&quot;,
+   &quot;application&quot;: {
+      &quot;name&quot;: &quot;SampleApp&quot;,
+      &quot;canvas_name&quot;: &quot;fbdschultzcredits&quot;,
+      &quot;namespace&quot;: &quot;fbdschultzcredits&quot;,
+      &quot;id&quot;: &quot;128163550571392&quot;
+   },
+   &quot;country&quot;: &quot;US&quot;,
+   &quot;created_time&quot;: &quot;2011-11-16T19:39:52+0000&quot;,
+   &quot;updated_time&quot;: &quot;2011-11-16T19:39:55+0000&quot;
+}
+
+</pre>
+<p>After order was disputed by user:</p>
+<pre>
+{
+   &quot;id&quot;: &quot;9006187786070&quot;,
+   &quot;from&quot;: 221159,
+   &quot;to&quot;: 221159,
+   &quot;amount&quot;: 1,
+   &quot;status&quot;: &quot;disputed&quot;,
+   &quot;application&quot;: {
+      &quot;name&quot;: &quot;SampleApp&quot;,
+      &quot;canvas_name&quot;: &quot;fbdschultzcredits&quot;,
+      &quot;namespace&quot;: &quot;fbdschultzcredits&quot;,
+      &quot;id&quot;: &quot;128163550571392&quot;
+   },
+   &quot;country&quot;: &quot;US&quot;,
+   &quot;created_time&quot;: &quot;2011-11-16T19:39:52+0000&quot;,
+   &quot;updated_time&quot;: &quot;2011-11-16T19:43:52+0000&quot;
+}
+</pre>
+<p>Graph API call used to refund order:</p>
+<pre>
+https://graph.facebook.com/ORDER_ID?access_token=TOKEN&amp;
+     status=refunded&amp;message=refunding%20order&amp;method=post
+</pre>
+<p>After order was refunded by developer:</p>
+<pre>
+{
+   &quot;id&quot;: &quot;9006187786070&quot;,
+   &quot;from&quot;: 221159,
+   &quot;to&quot;: 221159,
+   &quot;amount&quot;: 1,
+   &quot;status&quot;: &quot;refunded&quot;,
+   &quot;application&quot;: {
+      &quot;name&quot;: &quot;SampleApp&quot;,
+      &quot;canvas_name&quot;: &quot;fbdschultzcredits&quot;,
+      &quot;namespace&quot;: &quot;fbdschultzcredits&quot;,
+      &quot;id&quot;: &quot;128163550571392&quot;
+   },
+   &quot;country&quot;: &quot;US&quot;,
+   &quot;created_time&quot;: &quot;2011-11-16T19:39:52+0000&quot;,
+   &quot;updated_time&quot;: &quot;2011-11-16T19:45:18+0000&quot;
+}
+
+</pre>
+<h2>Refunds &amp; Chargebacks</h2>
+<h3>Facebook Initiated Refunds and Affect on Developer Revenue</h3>
+<p>Facebook handles all primary support related to disputes where users request a refund directly back to their credit card.</p>
+<p>For all non-fraud disputes, Facebook reviews a user&apos;s refund request on a case-by-case basis. The two main types of non-fraud disputes are friendly fraud and user confusion. Our qualitative investigation examines factors including previous orders, spending frequency, and account level details. Facebook will refund the charges only if the user&apos;s reason for disputing are deemed appropriate to receive a full reversal. Facebook monitors refund rates to protect against users who might attempt to defraud developers or Facebook by abusing the dispute resolution process.</p>
+<p>Facebook will always refund a user for fraudulent charges made with his funding instrument on our Platform. Doing so prevents chargebacks and builds trust with good users who may fall victim to fraud.</p>
+<p>Below is how we simply classify refunds:</p>
+<ul>
+<li>
+<b>Non-fraud dispute:</b> User request for monetary refund related to mistaken purchase or misuse of financial instrument by family or friend.</li>
+<li>
+<b>Malicious fraud charge dispute:</b> Unauthorized purchase associated with a stolen financial instrument or compromised account.</li>
+</ul>
+<p>Facebook will pass on the cost of refunds to you if they happen within 90 days of the original transaction.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/fbdispute3.png/" width="700px" />
+</p>
+<h3>Chargebacks Affect on Developer Revenue</h3>
+<p>A chargeback occurs when users of your app contact their bank directly (e.g., credit card company or PayPal) to dispute a charge. A chargeback can happen for a variety of reasons, including unauthorized use of a financial instrument, double billing, or non-receipt of a virtual good.</p>
+<p>Facebook will pass on the cost of chargebacks to you if they happen within 90 days of the original transaction. Beyond 90 days, Facebook will be responsible for the chargebacks unless:</p>
+<ol>
+<li>We determine you accepted those Credits after breaching Facebook rules or policies.</li>
+<li>Your chargeback rate for any one of the prior three months exceeds 5% of your total transaction volume for that month.</li>
+</ol>
+<h3>
+<span id="refundcb_tracking">Tracking Chargebacks and Refunds</span>
+</h3>
+<p>You can keep track of the number of chargebacks for which you are held liable through the daily reports we send you. To prevent chargebacks and refunds, we recommend that you log detailed information about each transaction so that you can easily investigate if a problem is reported.</p>
+<p>By accessing the <a href="/docs/reference/api/order" name="https://developers.facebook.com/docs/reference/api/order">Order API</a> for reversed transactions, you can query the reasons for the reversals. We encourage you to look for patterns among these transactions.</p>
+<p>
+<b>Refund Reason Codes</b>
+</p>
+<p>If you issue a <code>HTTP GET</code> request to <code>/ORDER_ID?status=refunded</code> to see the set of orders that have been refunded. If the order has been refunded by Facebook, we will ping your callback with a <code>payments_status_update</code> for the order in questions with a status of <code>refunded</code>. In addition, there will be an additional field returned called <code>refund_reason_code</code> with one of the following values:</p>
+<table>
+<tr>
+<td>Compromised Account</td>
+</tr>
+<tr>
+<td>Stolen Financial Instrument</td>
+</tr>
+<tr>
+<td>Not Fraud</td>
+</tr>
+<tr>
+<td>User Confusion</td>
+</tr>
+<tr>
+<td>Dev System Issue</td>
+</tr>
+<tr>
+<td>FB System Issue</td>
+</tr>
+</table>
+<p>In addition to these extended refund codes Facebook also issues an HTTP request to your callback with a <code>payments_status_update</code> method containing the order ID as well as the <code>refunded</code> status to notify you we have refunded this users order.</p>
+<p>
+<b>Sample callback issued when Facebook refunds an order:</b>
+</p>
+<pre>
+    {
+       &quot;signed_request&quot;:&quot;Fs88anlf3...&quot;,
+       &quot;order_details&quot;:&quot;{
+         &quot;order_id&quot;:9006136047935,
+         &quot;buyer&quot;:221159,
+         &quot;app&quot;:128163550571392,
+         &quot;receiver&quot;:221159,
+         &quot;amount&quot;:1,
+         &quot;time_placed&quot;:1320966823,
+         &quot;update_time&quot;:1323714386,
+         &quot;data&quot;:&quot;&quot;,
+         &quot;items&quot;:[
+           {
+              &quot;item_id&quot;:&quot;0&quot;,
+              &quot;title&quot;:&quot;A Facebook Hat&quot;,
+              &quot;description&quot;:&quot;The coolest hat you\\&apos;ve ever seen.&quot;,
+              &quot;image_url&quot;:&quot;http:\\/\\/www.facebook.com\\/images\\/gifts\\/740.png&quot;,
+              &quot;product_url&quot;:&quot;http:\\/\\/www.facebook.com\\/images\\/gifts\\/740.png&quot;,
+              &quot;price&quot;:1,
+              &quot;data&quot;:&quot;&quot;
+           }
+        ],
+        &quot;status&quot;:&quot;refunded&quot;
+    }&quot;,
+       &quot;status&quot;:&quot;refunded&quot;,
+       &quot;order_id&quot;:&quot;9006136047935&quot;,
+       &quot;method&quot;:&quot;payments_status_update&quot;
+    }
+</pre>
+<p>
+<b>Call getOrder via graph API to get all info around an order ID:</b>
+</p>
+<pre>https://graph.facebook.com/ORDER_ID?status=refunded&amp;access_token=ACCESS_TOKEN</pre>
+<p>
+<b>Example Output:</b>
+</p>
+<pre>
+{
+   &quot;id&quot;: &quot;9003976483685&quot;,
+   &quot;from&quot;: {
+      &quot;name&quot;: &quot;Daniel Schultz&quot;,
+      &quot;id&quot;: &quot;221159&quot;
+   },
+   &quot;to&quot;: {
+      &quot;name&quot;: &quot;Daniel Schultz&quot;,
+      &quot;id&quot;: &quot;221159&quot;
+   },
+   &quot;amount&quot;: 1,
+   &quot;status&quot;: &quot;refunded&quot;,
+   &quot;refund_reason_code&quot;: &quot;FB System Issue&quot;,
+   &quot;application&quot;: {
+      &quot;name&quot;: &quot;credits_new_reg&quot;,
+      &quot;id&quot;: &quot;128163550571392&quot;
+   },
+   &quot;country&quot;: &quot;US&quot;,
+   &quot;created_time&quot;: &quot;2011-02-04T20:23:17+0000&quot;,
+   &quot;updated_time&quot;: &quot;2011-02-08T19:12:03+0000&quot;
+}
+</pre>
+<p>Incurring chargebacks and refunds is part of any successful online business. If there is reason for concern, we will work with you to investigate your application.</p>
+<h3>Fraud</h3>
+<p>Facebook takes fraudulent activity seriously and strives to minimize fraud without impacting your revenue. We employ proactive methods to block fraudulent transactions with very high precision, manually review potentially fraudulent cases, and provide reactive support to users who have unauthorized charges made on their accounts or funding sources.</p>
+<p>We take actions to help good users regain access to their accounts and keep them playing by refunding purchases made on suspected stolen funding sources. We eliminate malicious users by disabling the payments functionality for users who abuse stolen funding sources or have excessive chargebacks.</p>
+<div class="mtm">
+<hr />
+<h2>
+<a href="http://developers.facebook.com/l.php?u=http%3A%2F%2Ffacebook.stackoverflow.com%2Fsearch%3Fq%3D%255Bfacebook%255DDisputes%2B%2526%2BChargebacks&amp;h=NAQFTz9_X" target="_blank" name="http://developers.facebook.com/l.php?u=http%3A%2F%2Ffacebook.stackoverflow.com%2Fsearch%3Fq%3D%255Bfacebook%255DDisputes%2B%2526%2BChargebacks&amp;h=NAQFTz9_X">
+<span>Related Questions</span>
+<img alt="[&gt;]" class="inline icon externalLink" src="https://developers.facebook.com/images/icons/external_link.gif" />
+</a>
+</h2>
+<div data-referrer="pagelet_related_questions" id="pagelet_related_questions">
+<div class="pll stackoverflow">
+</div>
+</div>
+</div>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/credits/disputes/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1323825414" title="2011年12月13日 17:16">約6ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

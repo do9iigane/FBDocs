@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/api/video/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/api/video/">https://developers.facebook.com/docs/reference/api/video/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Concepts</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/batch/" name="http://developers.facebook.com/docs/reference/api/batch/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/permissions/" name="http://developers.facebook.com/docs/reference/api/permissions/">Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/realtime/" name="http://developers.facebook.com/docs/reference/api/realtime/">Real-time Updates</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/achievement/" name="http://developers.facebook.com/docs/reference/api/achievement/">Achievement(Instance)</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/album/" name="http://developers.facebook.com/docs/reference/api/album/">Album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/application/" name="http://developers.facebook.com/docs/reference/api/application/">Application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/checkin/" name="http://developers.facebook.com/docs/reference/api/checkin/">Checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Comment/" name="http://developers.facebook.com/docs/reference/api/Comment/">Comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/domain/" name="http://developers.facebook.com/docs/reference/api/domain/">Domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/event/" name="http://developers.facebook.com/docs/reference/api/event/">Event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/FriendList/" name="http://developers.facebook.com/docs/reference/api/FriendList/">FriendList</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/group/" name="http://developers.facebook.com/docs/reference/api/group/">Group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/insights/" name="http://developers.facebook.com/docs/reference/api/insights/">Insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/link/" name="http://developers.facebook.com/docs/reference/api/link/">Link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/message/" name="http://developers.facebook.com/docs/reference/api/message/">Message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/note/" name="http://developers.facebook.com/docs/reference/api/note/">Note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/offer/" name="http://developers.facebook.com/docs/reference/api/offer/">Offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/order/" name="http://developers.facebook.com/docs/reference/api/order/">Order </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/page/" name="http://developers.facebook.com/docs/reference/api/page/">Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/photo/" name="http://developers.facebook.com/docs/reference/api/photo/">Photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/post/" name="http://developers.facebook.com/docs/reference/api/post/">Post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question/" name="http://developers.facebook.com/docs/reference/api/question/">Question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question_option/" name="http://developers.facebook.com/docs/reference/api/question_option/">QuestionOption</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Review/" name="http://developers.facebook.com/docs/reference/api/Review/">Review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/status/" name="http://developers.facebook.com/docs/reference/api/status/">Status message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/thread/" name="http://developers.facebook.com/docs/reference/api/thread/">Thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/user/" name="http://developers.facebook.com/docs/reference/api/user/">User</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/video/" name="http://developers.facebook.com/docs/reference/api/video/">Video</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Video</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> › <a href="/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">Video</a>
+</div>
+</div>
+</div>
+<p>An individual <code>Video</code> in the Graph API.</p>
+<p>To read a <code>Video</code>, issue an HTTP GET request to <code>/VIDEO_ID</code> with the <code>user_videos</code> <a href="/docs/authentication/permissions/" name="https://developers.facebook.com/docs/authentication/permissions/">permission</a>. This will return videos that the user has uploaded or has been tagged in.</p>
+<p>The <code>User</code>, <code>Application</code>, <code>Event</code>, <code>Group</code>, and <code>Page</code> objects have a <code>videos</code> connection. We support the following formats for uploading videos to these connections:</p>
+<ul>
+<li>3g2 (Mobile Video)</li>
+<li>3gp (Mobile Video)</li>
+<li>3gpp (Mobile Video)</li>
+<li>asf (Windows Media Video)</li>
+<li>avi (AVI Video)</li>
+<li>dat (MPEG Video)</li>
+<li>divx (DIVX Video)</li>
+<li>dv (DV Video)</li>
+<li>f4v (Flash Video)</li>
+<li>flv (Flash Video)</li>
+<li>m2ts (M2TS Video)</li>
+<li>m4v (MPEG-4 Video)</li>
+<li>mkv (Matroska Format)</li>
+<li>mod (MOD Video)</li>
+<li>mov (QuickTime Movie)</li>
+<li>mp4 (MPEG-4 Video)</li>
+<li>mpe (MPEG Video)</li>
+<li>mpeg (MPEG Video)</li>
+<li>mpeg4 (MPEG-4 Video)</li>
+<li>mpg (MPEG Video)</li>
+<li>mts (AVCHD Video)</li>
+<li>nsv (Nullsoft Video)</li>
+<li>ogm (Ogg Media Format)</li>
+<li>ogv (Ogg Video Format)</li>
+<li>qt (QuickTime Movie)</li>
+<li>tod (TOD Video)</li>
+<li>ts (MPEG Transport Stream)</li>
+<li>vob (DVD Video)</li>
+<li>wmv (Windows Media Video)</li>
+</ul>
+<p>The aspect ratio of the video must be between 9x16 and 16x9, and the video cannot exceed 1024MB or 180 minutes in length.</p>
+<h3>Example</h3>
+<p>A video on the <a href="https://www.facebook.com/facebook" name="https://www.facebook.com/facebook">Facebook Page</a>:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=2031763147233" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=2031763147233">https://graph.facebook.com/2031763147233</a>
+</p>
+<h2>Fields</h2>
+<p>The <code>Video</code> object has the following fields.</p>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>
+<p>The video ID</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>from</code>
+</td>
+<td>
+<p>The profile (user or page) that created the video</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>object containing <code>id</code> and <code>name</code> fields</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>tags</code>
+</td>
+<td>
+<p>The users who are tagged in this video</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code> and <code>name</code> fields</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>
+<p>The video title or caption</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>description</code>
+</td>
+<td>
+<p>The description of the video</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>picture</code>
+</td>
+<td>
+<p>The URL for the thumbnail picture for the video</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>embed_html</code>
+</td>
+<td>
+<p>The html element that may be embedded in an Web page to play the video</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing a valid URL</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>icon</code>
+</td>
+<td>
+<p>The icon that Facebook displays when video are published to the Feed</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing a valid URL</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>source</code>
+</td>
+<td>
+<p>A URL to the raw, playable video file</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing a valid URL</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>created_time</code>
+</td>
+<td>
+<p>The time the video was initially published</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing ISO-8601 date-time</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>updated_time</code>
+</td>
+<td>
+<p>The last time the video or its caption were updated</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing ISO-8601 date-time</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>comments</code>
+</td>
+<td>
+<p>All of the comments on this video</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code>, <code>from</code>, <code>message</code>, <code>created_time</code>, and <code>likes</code> fields</p>
+</td>
+</tr>
+</table>
+<h2>Connections</h2>
+<p>The <code>Video</code> object has the following connections.</p>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>likes</td>
+<td>
+<p>All of the likes on this video</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code> and <code>name</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>
+<p>All of the comments on this video</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code>, <code>from</code>, <code>message</code>, <code>created_time</code>, and <code>likes</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>picture</td>
+<td>
+<p>The image which represents the content of the video</p>
+</td>
+<td>
+<p>
+<code>user_videos</code>
+</p>
+</td>
+<td>
+<p>An HTTP 302 to the URL of the album&apos;s cover picture.</p>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="likes">likes</h2>
+<h3>Create</h3>
+<p>You can like a <code>Video</code> by issuing an HTTP POST request to <code>VIDEO_ID/likes</code> with the <code>publish_stream</code> permission. No parameters necessary.</p>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td> If the create succeeded. </td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</table>
+<h3>Delete</h3>
+<p>You can unlike a <code>Video</code> by issuing an HTTP DELETE request to <code>VIDEO_ID/like</code> with the <code>publish_stream</code> permission.</p>
+<p>If the delete is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td> If the unlike succeeded </td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</table>
+<h2 id="comments">comments</h2>
+<h3>Create</h3>
+<p>You can <a href="https://developers.facebook.com/docs/reference/api/comment/" name="https://developers.facebook.com/docs/reference/api/comment/">comment</a> on a <code>Video</code> by issuing an HTTP POST request to <code>VIDEO_ID/comments</code> with the <code>publish_stream</code> permission and following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code>message</code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/comment/" name="https://developers.facebook.com/docs/reference/api/comment/">Comment</a> text </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new comment ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2>How-Tos</h2>
+<p>
+<a href="/blog/post/493/" target="_blank" name="https://developers.facebook.com/blog/post/493/">How to upload a video to a user&apos;s profile using Graph API</a>
+</p>
+<p>
+<a href="/blog/post/515/#video_upload" target="_blank" name="https://developers.facebook.com/blog/post/515/#video_upload">How to upload a video to an Application, Group, or Page&apos;s wall using Graph API</a>
+</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/api/video/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1323303815" title="2011年12月7日 16:23">約6ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/plugins/send/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/plugins/send/">https://developers.facebook.com/docs/reference/plugins/send/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a class="selected" href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/activity/" name="http://developers.facebook.com/docs/reference/plugins/activity/">Activity Feed</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/comments/" name="http://developers.facebook.com/docs/reference/plugins/comments/">Comments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/facepile/" name="http://developers.facebook.com/docs/reference/plugins/facepile/">Facepile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like-box/" name="http://developers.facebook.com/docs/reference/plugins/like-box/">Like Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like/" name="http://developers.facebook.com/docs/reference/plugins/like/">Like Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/live-stream/" name="http://developers.facebook.com/docs/reference/plugins/live-stream/">Live Stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/login/" name="http://developers.facebook.com/docs/reference/plugins/login/">Login Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendations/" name="http://developers.facebook.com/docs/reference/plugins/recommendations/">Recommendations Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/registration/" name="http://developers.facebook.com/docs/reference/plugins/registration/">Registration</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/send/" name="http://developers.facebook.com/docs/reference/plugins/send/">Send Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/subscribe/" name="http://developers.facebook.com/docs/reference/plugins/subscribe/">Subscribe Button</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Beta Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/" name="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/">Recommendations Bar</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Send Button</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">Social Plugins</a> › <a href="/docs/reference/plugins/send/" name="https://developers.facebook.com/docs/reference/plugins/send/">Send Button</a>
+</div>
+</div>
+</div>
+<p>The Send Button allows users to easily send content to their friends. People will have the option to send your URL in a message to their Facebook friends, to the group wall of one of their Facebook groups, and as an email to any email address. While the <a href="https://developers.facebook.com/docs/reference/plugins/like/" name="https://developers.facebook.com/docs/reference/plugins/like/">Like Button</a> allows users to share content with all of their friends, the Send Button allows them to send a private message to just a few friends.</p>
+<p>The message will include a link to the URL specified in the send button, along with a title, image, and short description of the link. You can specify what is shown for the title, image, and description by using <a href="https://developers.facebook.com/docs/opengraphprotocol/" name="https://developers.facebook.com/docs/opengraphprotocol/">Open Graph meta tags</a>.</p>
+<p>The Send button requires the <a href="https://developers.facebook.com/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>.</p>
+<h2>Get a combined Like and Send button</h2>
+<p>You can implement the send button on its own, but if you also want a <a href="https://developers.facebook.com/docs/reference/plugins/like/" name="https://developers.facebook.com/docs/reference/plugins/like/">Like button</a> on your site, you can simply add <code>send=true</code> as an attribute to the XFBML version of the Like button (or <code>data-send=&quot;true&quot;</code> to the HTML5 version). This will render the Like button and Send button next to each other. Find the documentation on the <a href="https://developers.facebook.com/docs/reference/plugins/like/" name="https://developers.facebook.com/docs/reference/plugins/like/">Like button</a> page.</p>
+<h2>Get a Send button</h2>
+<div class="clearfix">
+<div class="plugin_form" id="ucl3vp_2">
+<dl>
+<dt>
+<label for="param_href">URL to Send</label>
+<a data-hover="tooltip" href="#" title="The URL to send." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_href" name="href" type="text" value="http://example.com" />
+</dd>
+<dt>
+<label for="param_font">Font</label>
+<a data-hover="tooltip" href="#" title="The font of the plugin" name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="font" id="param_font">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton uiButtonNoText" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">
+</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="arial">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">arial</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="lucida grande">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">lucida grande</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="segoe ui">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">segoe ui</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="tahoma">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">tahoma</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="trebuchet ms">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">trebuchet ms</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="verdana">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">verdana</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="font">
+<option value="">
+</option>
+<option value="arial">arial</option>
+<option value="lucida grande">lucida grande</option>
+<option value="segoe ui">segoe ui</option>
+<option value="tahoma">tahoma</option>
+<option value="trebuchet ms">trebuchet ms</option>
+<option value="verdana">verdana</option>
+</select>
+</div>
+</dd>
+<dt>
+<label for="param_colorscheme">Color Scheme</label>
+<a data-hover="tooltip" href="#" title="The color scheme of the plugin." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="colorscheme" id="param_colorscheme">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">light</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="light">
+<a aria-checked="true" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">light</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="dark">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">dark</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="colorscheme">
+<option value="">
+</option>
+<option selected="1" value="light">light</option>
+<option value="dark">dark</option>
+</select>
+</div>
+</dd>
+</dl>
+<div class="getCode">
+<a class="uiButton" href="/docs/reference/plugins/send/code/?revision=330533710311758" id="ucl3vp_3" rel="dialog" role="button" name="https://developers.facebook.com/docs/reference/plugins/send/code/?revision=330533710311758">
+<span class="uiButtonText">Get Code</span>
+</a>
+</div>
+</div>
+<div class="plugin_example" id="ucl3vp_1">
+</div>
+</div>
+<h2>Attributes</h2>
+<ul>
+<li>
+<code>href</code> - the URL to send. </li>
+<li>
+<code>font</code> - the font to display in the button. Options: &apos;arial&apos;, &apos;lucida grande&apos;, &apos;segoe ui&apos;, &apos;tahoma&apos;, &apos;trebuchet ms&apos;, &apos;verdana&apos; </li>
+<li>
+<code>colorscheme</code> - the color scheme for the button. Options: &apos;light&apos;, &apos;dark&apos; </li>
+<li>
+<code>ref</code> - a label for tracking referrals; must be less than 50 characters and can contain alphanumeric characters and some punctuation (currently +/=-.:_). The ref attribute causes two parameters to be added to the referrer URL when a user clicks a link from a stream story about a Send action: <ul>
+<li>
+<code>fb_ref</code> - the ref parameter </li>
+<li>
+<code>fb_source</code> - the story type (&apos;message&apos;, &apos;group&apos;, &apos;email&apos;) in which the click occurred.</li>
+</ul>
+</li>
+</ul>
+<h2>FAQ</h2>
+<h3>How do I know when someone sends a message from the plugin?</h3>
+<p>If you use the XFBML version you can subscribe to the &apos;message.send&apos; event through <a href="http://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe/" name="http://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe/">FB.Event.subscribe</a>.</p>
+<h3>How do I display the Send button in different languages?</h3>
+<p>Include the language code when you instantiate the library. Replace ‘en_US’ in this line with the correct locale code:</p>
+<pre>
+<code>&apos;//connect.facebook.net/en_US/all.js&apos;;
+</code>
+</pre>
+<h3>What analytics are available about the Send button?</h3>
+<p>If you visit <a href="http://www.facebook.com/insights" name="http://www.facebook.com/insights">facebook.com/insights</a> and register your domain, you can see the number of sends from your domain each day and the demographics of who is clicking the Send button.</p>
+<h3>What is the best way to know which Send button on my page generated the traffic?</h3>
+<p>Add the &apos;ref&apos; parameter to the plugin (see &quot;Attributes&quot; above).</p>
+<p>Examples:</p>
+<pre>
+<code>&lt;fb:send ref=&quot;top_left&quot;&gt;&lt;/fb:send&gt;
+&lt;iframe src=&quot;...&amp;ref=top_left&quot;&gt;&lt;/iframe&gt;
+</code>
+</pre>
+<p>When a user clicks a link back to your website, we will pass the ref value as a fb_ref parameter in the referrer URL. Example:</p>
+<pre>
+<code>http://www.yoursite.com/home?fb_ref=top_left&amp;fb_source=message
+</code>
+</pre>
+<p>Aggregated stream stories contain all ref parameters, concatenated with commas.</p>
+<h3>When I click the Send button, the popup window (or &quot;flyout&quot;) doesn&apos;t show. Why?</h3>
+<p>If the Send button is placed near the edge of an HTML element with the <code>overflow</code> property set to <code>hidden</code>, the flyout may be clipped or completely hidden when the button is clicked. This can be remedied by setting setting the <code>overflow</code> property to a value other than <code>hidden</code>, such as <code>visible</code>, <code>scroll</code>, or <code>auto</code>.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/plugins/send/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1327301839" title="2012年1月22日 22:57">約5ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

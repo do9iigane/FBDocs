@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/fql/application/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/fql/application/">https://developers.facebook.com/docs/reference/fql/application/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Tables</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/album/" name="http://developers.facebook.com/docs/reference/fql/album/">album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/application/" name="http://developers.facebook.com/docs/reference/fql/application/">application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/apprequest/" name="http://developers.facebook.com/docs/reference/fql/apprequest/">apprequest</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/checkin/" name="http://developers.facebook.com/docs/reference/fql/checkin/">checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comment/" name="http://developers.facebook.com/docs/reference/fql/comment/">comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comments_info/" name="http://developers.facebook.com/docs/reference/fql/comments_info/">comments_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/connection/" name="http://developers.facebook.com/docs/reference/fql/connection/">connection</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/cookies/" name="http://developers.facebook.com/docs/reference/fql/cookies/">cookies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/developer/" name="http://developers.facebook.com/docs/reference/fql/developer/">developer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain/" name="http://developers.facebook.com/docs/reference/fql/domain/">domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain_admin/" name="http://developers.facebook.com/docs/reference/fql/domain_admin/">domain_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event/" name="http://developers.facebook.com/docs/reference/fql/event/">event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event_member/" name="http://developers.facebook.com/docs/reference/fql/event_member/">event_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/family/" name="http://developers.facebook.com/docs/reference/fql/family/">family</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend/" name="http://developers.facebook.com/docs/reference/fql/friend/">friend</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend_request/" name="http://developers.facebook.com/docs/reference/fql/friend_request/">friend_request</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist/" name="http://developers.facebook.com/docs/reference/fql/friendlist/">friendlist</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist_member/" name="http://developers.facebook.com/docs/reference/fql/friendlist_member/">friendlist_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group/" name="http://developers.facebook.com/docs/reference/fql/group/">group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group_member/" name="http://developers.facebook.com/docs/reference/fql/group_member/">group_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/insights/" name="http://developers.facebook.com/docs/reference/fql/insights/">insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/like/" name="http://developers.facebook.com/docs/reference/fql/like/">like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/links/" name="http://developers.facebook.com/docs/reference/fql/links/">link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/link_stat/" name="http://developers.facebook.com/docs/reference/fql/link_stat/">link_stat</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/location_post/" name="http://developers.facebook.com/docs/reference/fql/location_post/">location_post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/mailbox_folder/" name="http://developers.facebook.com/docs/reference/fql/mailbox_folder/">mailbox_folder</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/message/" name="http://developers.facebook.com/docs/reference/fql/message/">message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notes/" name="http://developers.facebook.com/docs/reference/fql/notes/">note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notification/" name="http://developers.facebook.com/docs/reference/fql/notification/">notification</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/object_url/" name="http://developers.facebook.com/docs/reference/fql/object_url/">object_url</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/offer/" name="http://developers.facebook.com/docs/reference/fql/offer/">offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page/" name="http://developers.facebook.com/docs/reference/fql/page/">page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_admin/" name="http://developers.facebook.com/docs/reference/fql/page_admin/">page_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_blocked_user/" name="http://developers.facebook.com/docs/reference/fql/page_blocked_user/">page_blocked_user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_fan/" name="http://developers.facebook.com/docs/reference/fql/page_fan/">page_fan</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/life_event/" name="http://developers.facebook.com/docs/reference/fql/life_event/">page_milestone</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions/" name="http://developers.facebook.com/docs/reference/fql/permissions/">permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions_info/" name="http://developers.facebook.com/docs/reference/fql/permissions_info/">permissions_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo/" name="http://developers.facebook.com/docs/reference/fql/photo/">photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_src/" name="http://developers.facebook.com/docs/reference/fql/photo_src/">photo_src</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_tag/" name="http://developers.facebook.com/docs/reference/fql/photo_tag/">photo_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/place/" name="http://developers.facebook.com/docs/reference/fql/place/">place</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy/" name="http://developers.facebook.com/docs/reference/fql/privacy/">privacy</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy_setting/" name="http://developers.facebook.com/docs/reference/fql/privacy_setting/">privacy_setting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile/" name="http://developers.facebook.com/docs/reference/fql/profile/">profile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile_tab/" name="http://developers.facebook.com/docs/reference/fql/profile_tab/">profile_view</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question/" name="http://developers.facebook.com/docs/reference/fql/question/">question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option/" name="http://developers.facebook.com/docs/reference/fql/question_option/">question_option</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option_votes/" name="http://developers.facebook.com/docs/reference/fql/question_option_votes/">question_option_votes</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/review/" name="http://developers.facebook.com/docs/reference/fql/review/">review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_friend_info/" name="http://developers.facebook.com/docs/reference/fql/standard_friend_info/">standard_friend_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_user_info/" name="http://developers.facebook.com/docs/reference/fql/standard_user_info/">standard_user_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/status/" name="http://developers.facebook.com/docs/reference/fql/status/">status</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream/" name="http://developers.facebook.com/docs/reference/fql/stream/">stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_filter/" name="http://developers.facebook.com/docs/reference/fql/stream_filter/">stream_filter</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_tag/" name="http://developers.facebook.com/docs/reference/fql/stream_tag/">stream_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/subscription/" name="http://developers.facebook.com/docs/reference/fql/subscription/">subscription</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/thread/" name="http://developers.facebook.com/docs/reference/fql/thread/">thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/translation/" name="http://developers.facebook.com/docs/reference/fql/translation/">translation</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_message/" name="http://developers.facebook.com/docs/reference/fql/unified_message/">unified_message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread/" name="http://developers.facebook.com/docs/reference/fql/unified_thread/">unified_thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_action/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_action/">unified_thread_action</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_count/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_count/">unified_thread_count</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/url_like/" name="http://developers.facebook.com/docs/reference/fql/url_like/">url_like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/user/" name="http://developers.facebook.com/docs/reference/fql/user/">user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video/" name="http://developers.facebook.com/docs/reference/fql/video/">video</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video_tag/" name="http://developers.facebook.com/docs/reference/fql/video_tag/">video_tag</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>application</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a> › <a href="/docs/reference/fql/application/" name="https://developers.facebook.com/docs/reference/fql/application/">application</a>
+</div>
+</div>
+</div>
+<p>An application as represented in <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>.</p>
+<p>To read the <code>application</code> table you need</p>
+<ul>
+<li>no <code>access_token</code> for all publicly available properties (indicated in the table below).</li>
+<li>an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app <code>access_token</code>
+</a> for all properties for that app.</li>
+</ul>
+<h2>コラム</h2>
+<table class="params columns">
+<tr>
+<th>インデックス可能</th>
+<th>名前</th>
+<th>タイプ</th>
+<th>説明</th>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">app_id</td>
+<td class="type">int</td>
+<td>
+<p>The ID of the application being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">api_key</td>
+<td class="type">string</td>
+<td>
+<p>The API key of the application being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">namespace</td>
+<td class="type">string</td>
+<td>
+<p>The string appended to apps.facebook.com/ to navigate to the application&apos;s canvas page.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">display_name</td>
+<td class="type">string</td>
+<td>
+<p>The name of the application.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">icon_url</td>
+<td class="type">string</td>
+<td>
+<p>The URL identifying the application&apos;s icon image.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">logo_url</td>
+<td class="type">string</td>
+<td>
+<p>The URL identifying the application&apos;s logo image.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">company_name</td>
+<td class="type">string</td>
+<td>
+<p>The name of the company that built the application.<br />
+<strong>Note:</strong> Only one of company_name and developers will contain data, never both.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">developers</td>
+<td class="type">string</td>
+<td>
+<p>A list of records, where each record identifies a Facebook user who is marked as a developer of the application.<br />
+<strong>Note:</strong> Only one of company_name and developers will contain data, never both.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">description </td>
+<td class="type">string</td>
+<td>
+<p>The description of the application, as provided by the developer.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">daily_active_users</td>
+<td class="type">string</td>
+<td>
+<p>The number of Facebook users who&apos;ve used the application in the last day.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">weekly_active_users</td>
+<td class="type">string</td>
+<td>
+<p>The number of Facebook users who&apos;ve used the application in the last seven days.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">monthly_active_users</td>
+<td class="type">string</td>
+<td>
+<p>The number of Facebook users who&apos;ve used the application in the last 30 days.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">category</td>
+<td class="type">string</td>
+<td>
+<p>The category the application can be found under.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">subcategory</td>
+<td class="type">string</td>
+<td>
+<p>The subcategory the application can be found under.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">is_facebook_app</td>
+<td class="type">bool</td>
+<td>
+<p>Whether or not the application is natively developed by Facebook.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">restriction_info</td>
+<td class="type">object</td>
+<td>
+<p>Returns demographic restrictions for the app in a object with zero or more of the following fields: <code>type</code>, <code>location</code>, <code>age</code>, and <code>age_distr</code>. See <code>restrictions</code> field on the Graph API <a href="/docs/reference/api/application/" name="https://developers.facebook.com/docs/reference/api/application/">Application</a> object for more information.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">app_domains</td>
+<td class="type">array</td>
+<td>
+<p>Domains and subdomains this app can use. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">auth_dialog_data_help_url</td>
+<td class="type">string</td>
+<td>
+<p>The URL of a special landing page that helps users of an app begin publishing Open Graph activity. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">auth_dialog_description</td>
+<td class="type">string</td>
+<td>
+<p>The description of an app that appears in the Auth Dialog. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">auth_dialog_headline</td>
+<td class="type">string</td>
+<td>
+<p>One line description of an app that appears in the Auth Dialog. App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter. <code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">auth_dialog_perms_explanation</td>
+<td class="type">string</td>
+<td>
+<p>The text to explain why an app needs additional permissions that appears in the Auth Dialog. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">auth_referral_user_perms</td>
+<td class="type">array</td>
+<td>
+<p>Basic user permissions that a user must grant when Authenticated Referrals are enabled. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">auth_referral_friend_perms</td>
+<td class="type">array</td>
+<td>
+<p>Basic friends permissions that a user must grant when Authenticated Referrals are enabled. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">auth_referral_default_activity_privacy</td>
+<td class="type">string</td>
+<td>
+<p>The default privacy setting selected for Open Graph activities in the Auth Dialog. App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter. <code>string</code> which is one of, <code>SELF</code>, <code>EVERYONE</code>, <code>ALL_FRIENDS</code> or <code>NONE</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">auth_referral_enabled</td>
+<td class="type">bool</td>
+<td>
+<p>Indicates whether Authenticated Referrals are enabled. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">auth_referral_extended_perms</td>
+<td class="type">array</td>
+<td>
+<p>Extended permissions that a user can choose to grant when Authenticated Referrals are enabled. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">auth_referral_response_type</td>
+<td class="type">string</td>
+<td>
+<p>The format that an app receives the Auth token from the Auth Dialog in. App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter. <code>string</code> which is one of, <code>code</code> or <code>token</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">canvas_fluid_height</td>
+<td class="type">bool</td>
+<td>
+<p>Indicates whether app uses fluid or settable height values for Canvas. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">canvas_fluid_width</td>
+<td class="type">bool</td>
+<td>
+<p>Indicates whether app uses fluid or fixed width values for Canvas. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">canvas_url</td>
+<td class="type">string</td>
+<td>
+<p>The non-secure URL from which Canvas app content is loaded. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">contact_email</td>
+<td class="type">string</td>
+<td>
+<p>Email address listed for users to contact developers. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">created_time</td>
+<td class="type">int</td>
+<td>
+<p>Unix timestamp that indicates when the app was created. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">creator_uid</td>
+<td class="type">int</td>
+<td>
+<p>User ID of the creator of this app. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">deauth_callback_url</td>
+<td class="type">string</td>
+<td>
+<p>URL that is pinged whenever a user removes the app. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">iphone_app_store_id</td>
+<td class="type">string</td>
+<td>
+<p>ID of the app in the iPhone App Store. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">hosting_url</td>
+<td class="type">string</td>
+<td>
+<p>Webspace created with one of our hosting partners for this app. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">mobile_web_url</td>
+<td class="type">string</td>
+<td>
+<p>URL to which Mobile users will be directed when using the app. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">page_tab_default_name</td>
+<td class="type">string</td>
+<td>
+<p>The title of the app when used in a Page Tab. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">page_tab_url</td>
+<td class="type">string</td>
+<td>
+<p>The non-secure URL from which Page Tab app content is loaded. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">privacy_policy_url</td>
+<td class="type">string</td>
+<td>
+<p>The URL that links to a Privacy Policy for the app. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">secure_canvas_url</td>
+<td class="type">string</td>
+<td>
+<p>The secure URL from which Canvas app content is loaded. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">secure_page_tab_url</td>
+<td class="type">string</td>
+<td>
+<p>The secure URL from which Page Tab app content is loaded. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">server_ip_whitelist</td>
+<td class="type">string</td>
+<td>
+<p>App requests must originate from this comma-separated list of IP addresses. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">social_discovery</td>
+<td class="type">bool</td>
+<td>
+<p>Indicates whether app usage stories show up in the Ticker or News Feed. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">terms_of_service_url</td>
+<td class="type">string</td>
+<td>
+<p>URL to Terms of Service which is linked to in Auth Dialog. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">update_ip_whitelist</td>
+<td class="type">string</td>
+<td>
+<p>App settings changes can only be made from an IP address in this comma-separated list. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">user_support_email</td>
+<td class="type">string</td>
+<td>
+<p>Main contact email for this app. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">user_support_url</td>
+<td class="type">string</td>
+<td>
+<p>URL of support for users of an app shown in Canvas footer. App <code>access_token</code> required.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">website_url</td>
+<td class="type">string</td>
+<td>
+<p>URL of a website that integrates with this app. App <code>access_token</code> required.</p>
+</td>
+</tr>
+</table>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/fql/application/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1339080383" title="2012年6月7日 7:46">木曜日に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

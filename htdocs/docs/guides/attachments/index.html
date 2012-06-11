@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/guides/attachments/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/guides/attachments/">https://developers.facebook.com/docs/guides/attachments/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Stream Attachments</h1>
+</div>
+</div>
+<h2>Introduction</h2>
+<p>You can add a lot of rich information to a stream story by including an attachment. The attachment gives you the opportunity to expand on the post by describing what the user did in your application. Attachments are optional, however.</p>
+<p>The attachment is an array of structured data that defines the post. It contains these optional fields:</p>
+<ul>
+<li>
+<p>
+<strong>name:</strong> The title of the post. The post should fit on one line in a user&apos;s stream; make sure you account for the width of any thumbnail.</p>
+</li>
+<li>
+<p>
+<strong>href:</strong> The URL to the source of the post referenced in the name. The URL should not be longer than 1024 characters.</p>
+</li>
+<li>
+<p>
+<strong>caption:</strong> A subtitle for the post that should describe why the user posted the item or the action the user took. This field can contain plain text only, as well as the {*actor*} token, which gets replaced by a link to the profile of the session user. The caption should fit on one line in a user&apos;s stream; make sure you account for the width of any thumbnail.</p>
+</li>
+<li>
+<p>
+<strong>description:</strong> Descriptive text about the story. This field can contain plain text only and should be no longer than is necessary for a reader to understand the story. The description can contain up to 1,000 characters, but Facebook displays the first 300 or so characters of text by default; users can see the remaining text by clicking a &quot;See More&quot; link that we append automatically to long stories, or attachments with more than one image.</p>
+</li>
+<li>
+<p>
+<strong>properties:</strong> A dictionary of key/value pairs that provide more information about the post. The key should be the label of the property (e.g., &quot;Length&quot;). The value can either be a string or an array. If it&apos;s a string, it will be rendered as the value (e.g., if the value is &quot;0:17&quot;, then the full property will be rendered as &quot;Length: 0:17&quot;). If it&apos;s an array, the array can contain two properties -- &quot;text&quot; and &quot;href&quot;. The text key will point to the value (again, &quot;0:17&quot;). The href key will point to a link which will hyperlink the value. The key can have a maximum length of 50 characters. The value can have a maximum length of 70 characters.</p>
+</li>
+<li>
+<p>
+<strong>media:</strong> Rich media that provides visual content for the post. media is an array that contains one of the following types: <code>image</code>, <code>flash</code>, or <code>mp3</code>, which are described below. Make sure you specify only one of these types in your post.</p>
+</li>
+<li>
+<p>
+<strong>comments_xid:</strong> An application-specific xid associated with the stream post. The xid allows you to get comments made to this post using the <a href="/docs/reference/rest/comments.get" name="https://developers.facebook.com/docs/reference/rest/comments.get">comments.get</a>. It also allows you to associate comments made to this post with a <a href="/docs/reference/plugins/comments" name="https://developers.facebook.com/docs/reference/plugins/comments">Comments Box</a> for FBML <a href="/docs/reference/fbml/comments_(XFBML)" name="https://developers.facebook.com/docs/reference/fbml/comments_(XFBML)">fb:comments</a>.</p>
+</li>
+<li>
+<p>
+<strong>Your own key/value pairs:</strong> You can include your own key/value pairs for your own use later on. These key/value pairs won&apos;t appear in any user&apos;s stream when published, but Facebook stores them. When you retrieve the user&apos;s stream later with <a href="/docs/reference/rest/stream.get" name="https://developers.facebook.com/docs/reference/rest/stream.get">stream.get</a>, these key/value pairs get returned with the rest of the user&apos;s stream.<br />
+<br />For example, you might have an application that uses geo-tagging. You could pass through key/value pairs that record the user&apos;s latitude and longitude when the user publishes the post. Then, when you retrieve the streams for many of your users, you can use that data to plot out a geographic distribution of your users and their actions.</p>
+</li>
+</ul>
+<hr />
+<h2>Including Media in the Attachment</h2>
+<p>You can include rich media in the attachment for a post into a user&apos;s stream. The <code>media</code> parameter contains a <code>type</code>, which can be one of the following: <code>image</code>, <code>flash</code>, or <code>mp3</code>; these media types render photos, Flash objects, and music, respectively.</p>
+<p>
+<strong>Note:</strong> If you include more than one media type in the array, Facebook will choose <strong>only one</strong> of these types, in this order:</p>
+<ol>
+<li>
+<p>image</p>
+</li>
+<li>
+<p>flash</p>
+</li>
+<li>
+<p>mp3</p>
+</li>
+</ol>
+<h3>Using the <code>image</code> Media Type</h3>
+<p>The <code>image</code> media type is part an array which itself contains an array of up to five JSON-encoded photo records. Each record must contain a <code>src</code> key, which maps to the photo URL, and an <code>href</code> key, which maps to the URL where a user should be taken if he or she clicks the photo.</p>
+<p>You can include up to 5 photos in the media array. However, only one photo gets displayed in the Feed story; the user can see the remaining photos by clicking a &quot;See More&quot; link that gets appended to the story. Photos can be up to 90 pixels in both height and width.</p>
+<p>Here&quot;s an example of a JSON-encoded array of an <code>image</code> media type in an overall <code>attachment</code> array.</p>
+<pre>
+<code>{&quot;media&quot;: [
+    { 
+        &quot;type&quot;: &quot;image&quot;, 
+        &quot;src&quot;: &quot;http://icanhascheezburger.files.wordpress.com/2009/03/funny-pictures-kitten-finished-his-milk-and-wants-a-cookie.jpg&quot;, 
+        &quot;href&quot;: &quot;http://icanhascheezburger.com/2009/03/30/funny-pictures-awlll-gone-cookie-now/&quot;
+    }, 
+    {
+        &quot;type&quot;: &quot;image&quot;, 
+        &quot;src&quot;: &quot;http://photos.icanhascheezburger.com/completestore/2009/1/18/128768048603560273.jpg&quot;, 
+        &quot;href&quot;: &quot;http://ihasahotdog.com/upcoming/?pid=20869&quot;
+    }]
+}
+</code>
+</pre>
+<p>
+<strong>Note:</strong> Although you pass photos and other images as type <em>image</em>, when you get the attachment by calling <a href="/docs/reference/rest/stream.get" name="https://developers.facebook.com/docs/reference/rest/stream.get">stream.get</a> or querying on the <a href="/docs/reference/fql/stream" name="https://developers.facebook.com/docs/reference/fql/stream">stream (FQL)</a> table, the image gets returned as type <em>photo</em>.</p>
+<p>
+<strong>Note:</strong> Don&apos;t reference images that are hosted on the fbcdn.net domain. The images associated with these URLs aren&apos;t always optimized for stream stories and occasionally resulted in errors, leading to a poor user experience. Make sure your stream attachments don&apos;t reference images with this domain. You should host the images locally.</p>
+<h3>Using the <code>flash</code> Media Type</h3>
+<p>The <code>flash</code> media type is part of an array containing two other required fields:</p>
+<ul>
+<li>
+<p>
+<code>swfsrc</code>, which is the URL of the Flash object to be rendered.</p>
+</li>
+<li>
+<p>
+<code>imgsrc</code>, which is the URL of an photo that should be displayed in place of the Flash object until the user clicks to prompt the Flash object to play.</p>
+</li>
+</ul>
+<p>By default, the photo and the Flash object are rendered in a space up to 90 pixels in both height or width, with an emphasis on scaling the image to be 90 pixels wide.</p>
+<p>The array can include two optional fields, <code>width</code> and <code>height</code>, which can be used to override the default choices. Both the height and width must be an integer between 30 and 90, inclusive.</p>
+<p>The array can also include two optional fields to specify the width and height of the Flash object once the user clicks on it. If you specify both <code>expanded_width</code> and <code>expanded_height</code> in the array, when the user clicks on the Flash object, it will resize to the specified size. The maximum dimensions are 398px in both height or width, and the minimum dimensions are 30px wide and 30px high. If expanded dimensions are not specified, the dimensions of the Flash object will be the same as its thumbnail. Note that these dimensions are subject to change and your content will be scaled accordingly.</p>
+<p>Here&apos;s an example of a JSON-encoded array of a <code>flash</code> media type in an overall <code>attachment</code> array:</p>
+<pre>
+<code>{&quot;media&quot;: [{
+    &quot;type&quot;: &quot;flash&quot;, 
+    &quot;swfsrc&quot;: &quot;http://www.mapsofwar.com/photos/EMPIRE17.swf&quot;, 
+    &quot;imgsrc&quot;: &quot;http://icanhascheezburger.files.wordpress.com/2009/04/funny-pictures-hairless-cat-phones-home.jpg&quot;, 
+    &quot;width&quot;: &quot;80&quot;, 
+    &quot;height&quot;: &quot;60&quot;,
+    &quot;expanded_width&quot;: &quot;160&quot;, 
+    &quot;expanded_height&quot;: &quot;120&quot;
+}]}
+</code>
+</pre>
+<h3>Using the <code>mp3</code> Media Type</h3>
+<p>The <code>mp3</code> media type is part of an array containing one other required field: <code>src</code>, which is the URL of the MP3 file to be rendered within Facebook&apos;s MP3 player plugin.</p>
+<p>The array can optionally include <code>title</code>, <code>artist</code>, and <code>album</code> fields, all of which map to strings.</p>
+<p>Here&quot;s an example of a JSON-encoded array of a <code>mp3</code> media type in an overall <code>attachment</code> array:</p>
+<pre>
+<code>{&quot;media&quot;: [{
+    &quot;type&quot;: &quot;mp3&quot;, 
+    &quot;src&quot;: &quot;http://www.looptvandfilm.com/blog/Radiohead%20-%20In%20Rainbows/01%20-%20Radiohead%20-%2015%20Step.MP3&quot;, 
+    &quot;title&quot;: &quot;15 Step&quot;, 
+    &quot;artist&quot;: &quot;Radiohead&quot;, 
+    &quot;album&quot;: &quot;In Rainbows&quot;
+}]}
+</code>
+</pre>
+<hr />
+<h2>Translating Attachments</h2>
+<p>If your application works with the Facebook <a href="https://wiki.developers.facebook.com/index.php/Internationalization" name="https://wiki.developers.facebook.com/index.php/Internationalization">Translations framework</a>, you can include <a href="../reference/fbml/intl" name="https://developers.facebook.com/reference/fbml/intl">fb:intl</a> and its child tags in your attachments.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/guides/attachments/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1321625069" title="2011年11月18日 6:04">約7ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

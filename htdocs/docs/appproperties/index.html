@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/appproperties/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/appproperties/">https://developers.facebook.com/docs/appproperties/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Application Properties</h1>
+</div>
+</div>
+<table style="background-color: #F2F2F2; margin-bottom: 2em;">
+<tr>
+<td>
+<b>Please note:</b> We are in the process of deprecating the REST API, and have added equivalent support to the <a href="/docs/reference/api/application#props" name="https://developers.facebook.com/docs/reference/api/application#props">Graph API Application object</a> for this method. Please see that doc for more information about getting and setting app properties via the API.</td>
+</tr>
+</table>
+<h2>Introduction</h2>
+<p>This article lists all <a href="/" name="https://developers.facebook.com/">Facebook Developer</a> application properties currently accessible through the <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">REST API</a>.</p>
+<p>You set the properties with <a href="/docs/reference/rest/admin.setAppProperties" name="https://developers.facebook.com/docs/reference/rest/admin.setAppProperties">admin.setAppProperties</a> and get them with <a href="/docs/reference/rest/admin.getAppProperties" name="https://developers.facebook.com/docs/reference/rest/admin.getAppProperties">admin.getAppProperties</a>. Some properties are noted as read-only, so you can get them only, and can set them only in the <a href="/apps" name="https://developers.facebook.com/apps">Developer application</a>.</p>
+<hr />
+<h2>Properties</h2>
+<table style="border:0; border-spacing:0; border-collapse:collapse; margin:auto; margin-top:1.5em; margin-bottom:1.5em">
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>
+<code>about_url</code>
+</td>
+<td>string</td>
+<td>This is the URL to your application&apos;s About page. About pages are Facebook Pages.</td>
+</tr>
+<tr>
+<td>
+<code>app_id</code>
+</td>
+<td>string</td>
+<td>Your application ID. <em>(This is a read-only property that cannot be set.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>application_name</code>
+</td>
+<td>string</td>
+<td>The name of your application.</td>
+</tr>
+<tr>
+<td>
+<code>authorize_url</code>
+</td>
+<td>string</td>
+<td>The URL Facebook pings after a user authorizes your application. The URL cannot be longer than 100 characters.</td>
+</tr>
+<tr>
+<td>
+<code>base_domain</code>
+</td>
+<td>string</td>
+<td>The base domain for a Facebook-enabled website.</td>
+</tr>
+<tr>
+<td>
+<code>base_domains</code>
+</td>
+<td>array</td>
+<td>An array of base domains for a Facebook-enabled website. </td>
+</tr>
+<tr>
+<td>
+<code>callback_url</code>
+</td>
+<td>string</td>
+<td>Your application&apos;s callback URL. The callback URL cannot be longer than 100 characters.</td>
+</tr>
+<tr>
+<td>
+<code>canvas_name</code>
+</td>
+<td>string</td>
+<td>The canvas name of your application.</td>
+</tr>
+<tr>
+<td>
+<code>connect_logo_url</code>
+</td>
+<td>string</td>
+<td>The URL to your site&apos;s logo; which appears in the Facebook login dialog and on Facebook.com.</td>
+</tr>
+<tr>
+<td>
+<code>connect_preview_template</code>
+</td>
+<td>string</td>
+<td>For Facebook-enabled websites, the URL from which Facebook pulls the content to display to the user receiving a Facebook request.</td>
+</tr>
+<tr>
+<td>
+<code>connect_reclaim_url</code>
+</td>
+<td>string</td>
+<td>For Facebook-enabled websites, the URL you can provide to reclaim an account from a user who deactivated his or her Facebook account.</td>
+</tr>
+<tr>
+<td>
+<code>connect_url</code>
+</td>
+<td>string</td>
+<td>The main URL for a Facebook Connect application.</td>
+</tr>
+<tr>
+<td>
+<code>contact_email</code>
+</td>
+<td>string</td>
+<td>The email address through which your users can contact you. <em>(Default value is your Facebook email address.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>creator_uid</code>
+</td>
+<td>string</td>
+<td>The Facebook user ID of the developer who created the application. <em>(This is a read-only property that cannot be set.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>dashboard_url</code>
+</td>
+<td>string</td>
+<td>This is the URL to your application from its bookmark on the Applications menu.</td>
+</tr>
+<tr>
+<td>
+<code>default_column</code>
+</td>
+<td>bool</td>
+<td>Indicates whether your application appears in the wide (1) or narrow (0) column of a user&apos;s Boxes tab. <em>(Default value is 0.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>description</code>
+</td>
+<td>string</td>
+<td>The description of your application.</td>
+</tr>
+<tr>
+<td>
+<code>desktop</code>
+</td>
+<td>bool</td>
+<td>Indicates whether your application is a Facebook canvas page application (0) or if gets installed on a user&apos;s desktop (1). <em>(Default value is 0.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>dev_mode</code>
+</td>
+<td>bool</td>
+<td>Indicates whether sandbox mode is enabled (1) or disabled (0). Only developers can install applications in sandbox mode. <em>(Default value is 0.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>edit_url</code>
+</td>
+<td>string</td>
+<td>The URL to the <b>Edit</b> link displayed on your application&apos;s profile box. An admin of a Facebook Page that has added your application can follow the URL to edit the application settings for the Page.</td>
+</tr>
+<tr>
+<td>
+<code>email</code>
+</td>
+<td>string</td>
+<td>The email address associated with the application; the email address Facebook uses to contact you about your application. <em>(Default value is your Facebook email address.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>email_domain</code>
+</td>
+<td>string</td>
+<td>The domain from where you send email to your users. </td>
+</tr>
+<tr>
+<td>
+<code>help_url</code>
+</td>
+<td>string</td>
+<td>The URL to your application&apos;s help page.</td>
+</tr>
+<tr>
+<td>
+<code>icon_url</code>
+</td>
+<td>string</td>
+<td>The URL to your application&apos;s icon.</td>
+</tr>
+<tr>
+<td>
+<code>iframe_enable_util</code>
+</td>
+<td>bool</td>
+<td>For iframe applications, indicates whether the IFrame is resizable (1) or smartsized (0). <em>(Default value is 0.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>ignore_ip_whitelist_for_ss</code>
+</td>
+<td>bool</td>
+<td>Indicates whether an iframe application or Facebook Connect site can (1) or cannot (0) bypass a server whitelist. <em>(Default value is 1.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>info_changed_url</code>
+</td>
+<td>string</td>
+<td>The URL to ping if a user changes the content of your application info section. Your application can get new content for the section, and set it with <a href="/docs/reference/rest/profile.setInfo" name="https://developers.facebook.com/docs/reference/rest/profile.setInfo">profile.setInfo</a>.</td>
+</tr>
+<tr>
+<td>
+<code>installable</code>
+</td>
+<td>bool</td>
+<td>Indicates whether a user can (1) or cannot (0) install your application. <em>(Default value is 1.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>ip_list</code>
+</td>
+<td>string</td>
+<td>For Web-based applications, these are the IP addresses of your servers that can access Facebook&apos;s servers and serve information to your application.</td>
+</tr>
+<tr>
+<td>
+<code>is_mobile</code>
+</td>
+<td>bool</td>
+<td>Indicates whether your application can run on a mobile device (1) or not (0). <em>(Default value is 0.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>locale</code>
+</td>
+<td>string</td>
+<td>The default <a href="https://www.facebook.com/translations/FacebookLocales.xml" target="_blank" name="https://www.facebook.com/translations/FacebookLocales.xml">locale</a> for your application. <em>(This is a read-only property that cannot be set.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>logo_url</code>
+</td>
+<td>string</td>
+<td>A URL for your application&apos;s logo, as shown in product directory and search listings.</td>
+</tr>
+<tr>
+<td>
+<code>message_action</code>
+</td>
+<td>string</td>
+<td>For applications that can create <a href="/docs/guides/attachments" name="https://developers.facebook.com/docs/guides/attachments">attachments</a>, this is the label for the action that creates the attachment. It cannot be more than 20 characters.</td>
+</tr>
+<tr>
+<td>
+<code>post_authorize_redirect_url</code>
+</td>
+<td>string</td>
+<td>The URL where a user gets redirected after authorizing your application. If not set, the user will continue on to the page that they were originally going to.</td>
+</tr>
+<tr>
+<td>
+<code>preload_fql</code>
+</td>
+<td>string</td>
+<td>A preloaded FQL query.</td>
+</tr>
+<tr>
+<td>
+<code>preload_fql_multiquery</code>
+</td>
+<td>array</td>
+<td>A preloaded FQL multiquery.</td>
+</tr>
+<tr>
+<td>
+<code>privacy_url</code>
+</td>
+<td>string</td>
+<td>The URL to your application&apos;s privacy terms.</td>
+</tr>
+<tr>
+<td>
+<code>private_install</code>
+</td>
+<td>bool</td>
+<td>Indicates whether you want to disable (1) or enable (0) News Feed and Wall stories when a user installs your application. <em>(Default value is 0.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>profile_tab_url</code>
+</td>
+<td>string</td>
+<td>The URL from where Facebook fetches the content for an application tab. The URL should be relative to your canvas page URL at Facebook.</td>
+</tr>
+<tr>
+<td>
+<code>publish_action</code>
+</td>
+<td>string</td>
+<td>The label for the link on a friend&apos;s profile to an application&apos;s Publisher content.</td>
+</tr>
+<tr>
+<td>
+<code>publish_self_action</code>
+</td>
+<td>string</td>
+<td>The label for the link on user&apos;s own profile to an application&apos;s Publisher content.</td>
+</tr>
+<tr>
+<td>
+<code>publish_self_url</code>
+</td>
+<td>string</td>
+<td>The URL from which to fetch your application content for use in the Publisher when the user is publishing on his or her own profile.</td>
+</tr>
+<tr>
+<td>
+<code>publish_url</code>
+</td>
+<td>string</td>
+<td>The URL from which to fetch your application content for use in the Publisher when the user is publishing on a friend&apos;s profile.</td>
+</tr>
+<tr>
+<td>
+<code>quick_transitions</code>
+</td>
+<td>string</td>
+<td>Indicates whether Quick Transitions are enabled (1) or disabled (0). <em>(Default value is 0.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>secure_callback_url</code>
+</td>
+<td>string</td>
+<td>The <code>secure_callback_url</code> must be a fully qualified URL beginning with <code>https://</code> and must point to a directory (i.e., end with a &apos;/&apos;) or a dynamic page (i.e., have a &apos;?&apos; somewhere).</td>
+</tr>
+<tr>
+<td>
+<code>secure_page_tab_url</code>
+</td>
+<td>bool</td>
+<td>The <code>secure_page_tab_url</code> must be a fully qualified URL beginning with <code>https://</code> and must point to a directory (i.e., end with a &apos;/&apos;) or a dynamic page (i.e., have a &apos;?&apos; somewhere).</td>
+</tr>
+<tr>
+<td>
+<code>support_url</code>
+</td>
+<td>string</td>
+<td>The URL to your application&apos;s support page (for those applications that specify a help page instead of an email address).</td>
+</tr>
+<tr>
+<td>
+<code>tab_default_name</code>
+</td>
+<td>string</td>
+<td>The default label for an application tab when a user first adds it to his or her profile.</td>
+</tr>
+<tr>
+<td>
+<code>targeted</code>
+</td>
+<td>bool</td>
+<td>If set to true, indicates that <a href="/docs/reference/rest/admin.setRestrictionInfo" name="https://developers.facebook.com/docs/reference/rest/admin.setRestrictionInfo">Demographic Restrictions</a> have been set for your application; if false, then the restrictions were never set or were removed. <em>(This is a read-only property that can only be set via the <a href="/apps" name="https://developers.facebook.com/apps">Developer application</a>.)</em> <em>(Default value is 0.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>tos_url</code>
+</td>
+<td>string</td>
+<td>The URL to your application&apos;s Terms of Service.</td>
+</tr>
+<tr>
+<td>
+<code>uninstall_url</code>
+</td>
+<td>string</td>
+<td>The URL that Facebook pings after a user removes your application.</td>
+</tr>
+<tr>
+<td>
+<code>use_iframe</code>
+</td>
+<td>bool</td>
+<td>Indicates whether you render your application with FBML (0) or in an IFrame (1). <em>(Default value is 1.)</em>
+</td>
+</tr>
+<tr>
+<td>
+<code>video_rentals</code>
+</td>
+<td>bool</td>
+<td>Indicates whether your application or site publishes Feed stories about video sales (1) or not (0) -- this is for Video Privacy Protection Act conformance. <em>(This is a read-only property that can only be set via the <a href="/apps" name="https://developers.facebook.com/apps">Developer application</a>.)</em>
+</td>
+</tr>
+</table>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/appproperties/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1337284321" title="2012年5月17日 12:52">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

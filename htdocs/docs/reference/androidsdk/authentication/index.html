@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/androidsdk/authentication/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/androidsdk/authentication/">https://developers.facebook.com/docs/reference/androidsdk/authentication/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</li>
+<li>
+<a href="/docs/reference/php" name="https://developers.facebook.com/docs/reference/php">PHP SDK</a>
+</li>
+<li>
+<a href="/docs/reference/iossdk" name="https://developers.facebook.com/docs/reference/iossdk">iOS SDK</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/androidsdk" name="https://developers.facebook.com/docs/reference/androidsdk">Android SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/request/" name="http://developers.facebook.com/docs/reference/androidsdk/request/">API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/" name="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/">Async API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/authentication/" name="http://developers.facebook.com/docs/reference/androidsdk/authentication/">Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialog/" name="http://developers.facebook.com/docs/reference/androidsdk/dialog/">Dialogs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/helper/" name="http://developers.facebook.com/docs/reference/androidsdk/helper/">Helpers</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Interfaces</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/" name="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/">DialogListener</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/" name="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/">RequestListener</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Errors</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/" name="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/">DialogError</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/" name="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/">FacebookError</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Authentication</h1>
+<div class="breadcrumbs">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/androidsdk/" name="https://developers.facebook.com/docs/reference/androidsdk/">Android SDK</a> › <a href="/docs/reference/androidsdk/authentication/" name="https://developers.facebook.com/docs/reference/androidsdk/authentication/">Authentication</a>
+</div>
+</div>
+</div>
+<p>The authentication methods used in the Facebook Android SDK. These methods are defined in <a href="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/Facebook.java" name="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/Facebook.java">Facebook.java</a>.</p>
+<p>You implement these methods to do the following:</p>
+<ul>
+<li>
+<p>Initialize the <code>Facebook</code> instance with your app ID. Once initialized the instance can be used for follow-on method calls.</p>
+</li>
+<li>
+<p>Initiate the user authentication and app authorization flow. Once this is completed successfully you can make additional API calls that require the access token.</p>
+</li>
+<li>
+<p>Handle the Single Sign-On URL (SSO) callback. This is part of the <a href="/docs/mobile/android/sso/" name="https://developers.facebook.com/docs/mobile/android/sso/">SSO implementation</a>.</p>
+</li>
+<li>
+<p>Log out the user from Facebook.</p>
+</li>
+<li>
+<p>Check if the user session is valid. You may do this to check if an <code>access_token</code> is valid so you can handle re-authenticating the user. You may also do this to expose functionality that requires the user to be logged in.</p>
+</li>
+</ul>
+<h2>Instance Method:</h2>
+<hr />
+<h2>Facebook(String appId):</h2>
+<p>Constructor for the Facebook object.</p>
+<ul>
+<li>Creates a Facebook object.</li>
+<li>Returns IllegalArgumentException if no appID is provided.</li>
+</ul>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>appId</code> - The Facebook application id.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method must be called before making any further calls to the Facebook API.</p>
+<h2>Authentication Methods:</h2>
+<hr />
+<h2>void authorize(Activity activity, final DialogListener listener):</h2>
+<p>Starts either an Activity or a dialog which prompts the user to log in to Facebook and grant the requested permissions to the given application.</p>
+<ul>
+<li>Authorizes the app</li>
+<li>Only basic permissions are granted. Refer to <a href="/docs/reference/api/permissions" name="https://developers.facebook.com/docs/reference/api/permissions">Permissions</a> for more info on permissions.</li>
+<li>This method is asynchronous and the callback will be invoked in the original calling thread (not in a background thread).</li>
+<li>Single Sign On is triggered via <code>activity.startActivityForResult()</code>. As such, you will need to implement <code>onActivityResult()</code> method in your calling activity and include a call to the <code>authorizeCallback()</code> for it to work properly.</li>
+</ul>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>activity</code> - Android activity in which we want to display the authorization dialog</p>
+<p>
+<code>listener</code> - Callback <em>
+<i>com.facebook.android.Facebook.DialogListener</i>
+</em> interface for notifying the calling application when the authentication dialog has completed, failed, or been canceled.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None. On completion of authentication flow, appropriate method in the DialogListener interface is called.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method will trigger Single Sign On if the Facebook app is installed on the handset, else will display the Login Dialog in an embedded webview.</p>
+<hr />
+<h2>void authorize(Activity activity, String[] permissions, final DialogListener listener):</h2>
+<p>Another version of the authorize method with an additional parameter - <code>permissions</code>.</p>
+<p>
+<b>Additional parameters</b>
+</p>
+<p>
+<code>permissions</code> - A list of permissions required for this application: e.g. &quot;read_stream&quot;, &quot;publish_stream&quot;, &quot;offline_access&quot;, etc. see <a href="/docs/reference/api/permissions" name="https://developers.facebook.com/docs/reference/api/permissions">Permissions</a>. This parameter should not be null -- if you do not require any permissions, then pass in an empty String array.</p>
+<p>Refer above for more details.</p>
+<hr />
+<h2>void authorize(Activity activity, String[] permissions, int activityCode, final DialogListener listener):</h2>
+<p>Another version of the authorize method with an additional parameter - <code>activityCode</code>.</p>
+<p>
+<b>Additional parameters</b>
+</p>
+<p>
+<code>activityCode</code> - Single sign-on requires an activity result to be called back to the client application. If you are waiting on other activities to return data, pass a custom activity code here to avoid collisions. If you would like to force the use of legacy dialog-based authorization, pass <code>FORCE_DIALOG_AUTH</code> for this parameter. If this parameter is not specified, Facebook will use a suitable default. See <a href="http://developer.android.com/reference/android/app/Activity.html" name="http://developer.android.com/reference/android/app/Activity.html">Android Activity</a> for more information.</p>
+<hr />
+<h2>void authorizeCallback(int requestCode, int resultCode, Intent data):</h2>
+<p>This method must be invoked at the top of the calling activity&apos;s <code>onActivityResult()</code> function for SSO to work properly.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>Single Sign On when finished will call the <code>OnActivityResult(int requestCode, int resultCode, Intent data)</code> in the calling activity. You can use the requestCode to handle collision if needed, and pass back those parameters in call to this method.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>One of the <code>onComplete()</code>, <code>onFacebookError()</code>, <code>onCancel()</code>, or <code>onError()</code> in the DialogListener class will be called at the end of authentication flow.</p>
+<h2>Logout Methods:</h2>
+<hr />
+<h2>String logout(Context context) throws MalformedURLException, IOException :</h2>
+<p>Invalidate the current user session by removing the access token in memory, clearing the browser cookie, and calling (auth.expireSession](/docs/reference/rest/auth.expireSession/) through the API.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>context</code> - The Android context in which the logout should be called, it should be the same context in which the login occurred in order to clear any stored cookies</p>
+<p>
+<b>Exceptions</b>
+</p>
+<p>
+<code>MalformedURLException</code> - if accessing an invalid endpoint</p>
+<p>
+<code>IOException</code> - if a network error occurs</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>JSON string representation of the <a href="/docs/reference/rest/auth.expireSession/" name="https://developers.facebook.com/docs/reference/rest/auth.expireSession/">auth.expireSession</a> response(&quot;true&quot; if successful).</p>
+<p>
+<b>Notes</b>
+</p>
+<p>Note that this method blocks waiting for a network response, so do not call it in a UI thread.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/androidsdk/authentication/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1316384340" title="2011年9月18日 15:19">約9ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

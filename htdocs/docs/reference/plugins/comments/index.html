@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/plugins/comments/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/plugins/comments/">https://developers.facebook.com/docs/reference/plugins/comments/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a class="selected" href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/activity/" name="http://developers.facebook.com/docs/reference/plugins/activity/">Activity Feed</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/comments/" name="http://developers.facebook.com/docs/reference/plugins/comments/">Comments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/facepile/" name="http://developers.facebook.com/docs/reference/plugins/facepile/">Facepile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like-box/" name="http://developers.facebook.com/docs/reference/plugins/like-box/">Like Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like/" name="http://developers.facebook.com/docs/reference/plugins/like/">Like Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/live-stream/" name="http://developers.facebook.com/docs/reference/plugins/live-stream/">Live Stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/login/" name="http://developers.facebook.com/docs/reference/plugins/login/">Login Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendations/" name="http://developers.facebook.com/docs/reference/plugins/recommendations/">Recommendations Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/registration/" name="http://developers.facebook.com/docs/reference/plugins/registration/">Registration</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/send/" name="http://developers.facebook.com/docs/reference/plugins/send/">Send Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/subscribe/" name="http://developers.facebook.com/docs/reference/plugins/subscribe/">Subscribe Button</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Beta Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/" name="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/">Recommendations Bar</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Comments</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">Social Plugins</a> › <a href="/docs/reference/plugins/comments/" name="https://developers.facebook.com/docs/reference/plugins/comments/">Comments</a>
+</div>
+</div>
+</div>
+<p>Comments Box is a social plugin that enables user commenting on your site. Features include moderation tools and distribution.</p>
+<p>
+<strong>Social Relevance:</strong> Comments Box uses social signals to surface the highest quality comments for each user. Comments are ordered to show users the most relevant comments from friends, friends of friends, and the most liked or active discussion threads, while comments marked as spam are hidden from view.</p>
+<p>
+<strong>Distribution:</strong> Comments are easily shared with friends or with people who like your Page on Facebook. If a user leaves the “Post to Facebook” box checked when she posts a comment, a story appears on her friends’ News Feed indicating that she’s made a comment on your website, which will also link back to your site.</p>
+<p>Friends and people who like the Page can then respond to the discussion by liking or replying to the comment directly in the News Feed on Facebook or in the Comments Box on your site. Threads stay synced across Facebook and on the Comments Box on your site regardless of where the comment was made.</p>
+<p>The <strong>mobile</strong> version will automatically show up when a mobile device user agent is detected. You can turn this behavior off by setting the mobile parameter to false. Please note: the mobile version ignores the width parameter, and instead has a fluid width of 100% in order to resize well in portrait/landscape switching situations. You may need to adjust your CSS for your mobile site to take advantage of this behavior. If preferred, you can still control the width via a container element.</p>
+<div class="clearfix">
+<div class="plugin_form" id="ud2vs5_2">
+<dl>
+<dt>
+<label for="param_href">URL to comment on</label>
+<a data-hover="tooltip" href="#" title="The URL for this comments box" name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_href" name="href" type="text" value="http://example.com" />
+</dd>
+<dt>
+<label for="param_num_posts">Number of posts</label>
+<a data-hover="tooltip" href="#" title="the number of posts to display by default." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_num_posts" name="num_posts" size="7" type="text" value="2" />
+</dd>
+<dt>
+<label for="param_width">Width</label>
+<a data-hover="tooltip" href="#" title="the width of the plugin, in pixels" name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_width" name="width" size="7" type="text" value="470" />
+</dd>
+<dt>
+<label for="param_colorscheme">Color Scheme</label>
+<a data-hover="tooltip" href="#" title="The color scheme of the plugin." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="colorscheme" id="param_colorscheme">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">light</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="light">
+<a aria-checked="true" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">light</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="dark">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">dark</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="colorscheme">
+<option value="">
+</option>
+<option selected="1" value="light">light</option>
+<option value="dark">dark</option>
+</select>
+</div>
+</dd>
+</dl>
+<div class="getCode">
+<a class="uiButton" href="/docs/reference/plugins/comments/code/?revision=285348961541573" id="ud2vs5_3" rel="dialog" role="button" name="https://developers.facebook.com/docs/reference/plugins/comments/code/?revision=285348961541573">
+<span class="uiButtonText">Get Code</span>
+</a>
+</div>
+</div>
+<div class="plugin_example nofloat" id="ud2vs5_1">
+</div>
+</div>
+<h2>Attributes</h2>
+<ul>
+<li>
+<code>href</code> - the URL for this Comments plugin. News feed stories on Facebook will link to this URL. </li>
+<li>
+<code>width</code> - the width of the plugin in pixels. Minimum recommended width: 400px. </li>
+<li>
+<code>colorscheme</code> - the color scheme for the plugin. Options: &apos;light&apos;, &apos;dark&apos; </li>
+<li>
+<code>num_posts</code> - the number of comments to show by default. Default: 10. Minimum: 1 </li>
+<li>
+<code>mobile</code> - whether to show the mobile-optimized version. Default: auto-detect. </li>
+</ul>
+<h2>Moderation tools</h2>
+<p>Admins can choose to make the default for new comments entered either “visible to everyone” or “has limited visibility” on the site (i.e., the comment is only visible to the commenter and their friends), to help mitigate irrelevant content.</p>
+<p>Admins can also blacklist words and ban users. If a new comment is published from a banned user or contains a blacklisted word, this comment will automatically have limited visibility.</p>
+<p>To moderate, you need to list yourself as an admin. To do this, simply include open graph meta tags on the URL specified as the href parameter of the plugin. These tags must be included in the &lt;head&gt; of the document. Include:</p>
+<pre>
+<code>&lt;meta property=&quot;fb:admins&quot; content=&quot;{YOUR_FACEBOOK_USER_ID}&quot;/&gt;
+</code>
+</pre>
+<p>To add multiple moderators, separate the uids by comma without spaces.</p>
+<p>If your site has many comments boxes, we strongly recommend you specify a Facebook app id as the administrator (all administrators of the app will be able to moderate comments). Doing this enables a moderator interface on Facebook where comments from all plugins administered by your app id can be easily moderated together. This tag should be specified in the &lt;head&gt;.</p>
+<pre>
+<code>&lt;meta property=&quot;fb:app_id&quot; content=&quot;{YOUR_APPLICATION_ID}&quot;/&gt;
+</code>
+</pre>
+<p>You can moderate comments from just this plugin inline. If you have specified your app id as the admin, you can moderate all your plugins at <a href="http://developers.facebook.com/tools/comments" name="http://developers.facebook.com/tools/comments">http://developers.facebook.com/tools/comments</a>.</p>
+<p>When you implement multiple comments boxes on your site and tie them together using an app_id, the moderation settings you choose will apply to all your comments boxes. For example, changing the moderation setting to &apos;has limited visibility&apos; will affect all comments boxes under the same app_id. If you need to apply different moderation paradigms in different areas of your site, you should use two or more app_ids. You may then apply different moderation settings each group of comments boxes.</p>
+<h2>FAQ</h2>
+<h3>How do I access the number of comments left of my page?</h3>
+<p>The <code>fb:comments-count</code> tag will emit the number of comments on your URL in a <code>&lt;span&gt;</code> tag. You can then style this however appropriate to match your site. Note this is currently not available in HTML5. For example, to show the number of comments on example.com:.</p>
+<pre>
+<code>&lt;fb:comments-count href=http://example.com/&gt;&lt;/fb:comments-count&gt; awesome comments 
+</code>
+</pre>
+<p>Will emit:</p>
+<p>
+<fb:comments-count href="http://example.com/">
+</fb:comments-count> awesome comments</p>
+<p>You can also load an iframe from Facebook which will display the number of comments with a link to your URL. For example, this shows the number of comments for example.com.</p>
+<pre>
+<code>&lt;iframe src=&quot;http://www.facebook.com/plugins/comments.php?href=example.com&amp;permalink=1&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; width:130px; height:16px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt; 
+</code>
+</pre>
+<iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://www.facebook.com/plugins/comments.php?href=example.com&amp;permalink=1" style="border:none; overflow:hidden; width:130px; height:16px;">
+</iframe>
+<p>The number of comments left on a particular URL can be accessed via the Graph API. For example, the number of comments on example.com is the &apos;comments&apos; field of: <a href="https://graph.facebook.com/?ids=http://example.com/" name="https://graph.facebook.com/?ids=http://example.com/">https://graph.facebook.com/?ids=http://example.com/</a>.</p>
+<p>You can also use the <a href="http://developers.facebook.com/docs/reference/fql/comment/" name="http://developers.facebook.com/docs/reference/fql/comment/">comment FQL table</a>.</p>
+<h3>How do I know when someone comments on my site?</h3>
+<p>You can subscribe to the &apos;comment.create&apos; and &apos;comment.remove&apos; events through <a href="http://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe/" name="http://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe/">FB.Event.subscribe</a>.</p>
+<h3>What does the grammar filter do?</h3>
+<ul>
+<li>Adds punctuation (e.g. periods at the end of sentences) </li>
+<li>Trims extra whitespace </li>
+<li>Expands slang words (e.g. plz becomes please) </li>
+<li>Adds a space after punctuation (e.g. Hi,Cat would become Hi, Cat) </li>
+<li>
+<p>Fix common grammar mistakes (e.g. convert ‘dont&apos; to ‘don’t’)</p>
+<p>You can enable the grammar filter from the settings section of the plugin.</p>
+</li>
+</ul>
+<h3>How do I access the comments left on my site?</h3>
+<p>The comments for every URL can be accessed via the graph API. Simply go to: <a href="https://graph.facebook.com/comments/?ids={YOUR_URL}" name="https://graph.facebook.com/comments/?ids=%7BYOUR_URL%7D">https://graph.facebook.com/comments/?ids={YOUR_URL}</a>.</p>
+<p>For example, the comments on this URL can be accessed via: <a href="https://graph.facebook.com/comments/?ids=http://developers.facebook.com/docs/reference/plugins/comments" name="https://graph.facebook.com/comments/?ids=http://developers.facebook.com/docs/reference/plugins/comments">https://graph.facebook.com/comments/?ids=http://developers.facebook.com/docs/reference/plugins/comments</a>.</p>
+<p>Sample code for pulling comments can be found on this <a href="http://developers.facebook.com/blog/post/490" name="http://developers.facebook.com/blog/post/490">blog post</a>.</p>
+<h3>How can I get an SEO boost from the comments left on my site?</h3>
+<p>The Facebook comments box is rendered in an iframe on your page, and most search engines will not crawl content within an iframe. However, you can access all the comments left on your site via the graph API as described above. Simply grab the comments from the API and render them in the body of your page behind the comments box. We recommend you cache the results, as pulling the comments from the graph API on each page load could slow down the rendering time of the page.</p>
+<h3>How do I enable users to comment using other login providers?</h3>
+<p>On the settings section of the plugin, you can choose to enable third party login on your comments boxes. Currently this will enable users to comment using a Yahoo!, AOL or Hotmail account.</p>
+<h3>How does the blacklisting words work?</h3>
+<p>You can enter blacklisted terms from the settings section of the comments box. The content of new comments is checked against the blacklist of terms to see if this comment should have limited visibility. The comment is checked via substring matching. This means if you blacklist the word &apos;at&apos;, if the comment contains the sequence &apos;a&apos; &apos;t&apos; anywhere it will be marked with limited visibility; e.g. if the comment contained the words &apos;bat&apos;, &apos;hat&apos;, &apos;attend&apos;, etc it would be caught.</p>
+<h3>I have the first version of the Facebook Comments box, how do I upgrade?</h3>
+<p>If you are using the original version of the Facebook Comments box, just add &apos;migrated=1&apos; to the <code>&lt;fb:comments&gt;</code> tag, and the comments box will automatically switch to the new version. In this case, you should not specify the <code>href</code> parameter, and you must keep the XID parameter the same. Once you migrate, you can access the comments as described above. Note that the moderation tools only work with the newer version of the comments plugin (with href specified instead of migrated=1).</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/plugins/comments/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1333415331" title="2012年4月2日 18:08">約2ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,2611 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/api/page/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/api/page/">https://developers.facebook.com/docs/reference/api/page/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Concepts</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/batch/" name="http://developers.facebook.com/docs/reference/api/batch/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/permissions/" name="http://developers.facebook.com/docs/reference/api/permissions/">Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/realtime/" name="http://developers.facebook.com/docs/reference/api/realtime/">Real-time Updates</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/achievement/" name="http://developers.facebook.com/docs/reference/api/achievement/">Achievement(Instance)</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/album/" name="http://developers.facebook.com/docs/reference/api/album/">Album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/application/" name="http://developers.facebook.com/docs/reference/api/application/">Application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/checkin/" name="http://developers.facebook.com/docs/reference/api/checkin/">Checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Comment/" name="http://developers.facebook.com/docs/reference/api/Comment/">Comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/domain/" name="http://developers.facebook.com/docs/reference/api/domain/">Domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/event/" name="http://developers.facebook.com/docs/reference/api/event/">Event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/FriendList/" name="http://developers.facebook.com/docs/reference/api/FriendList/">FriendList</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/group/" name="http://developers.facebook.com/docs/reference/api/group/">Group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/insights/" name="http://developers.facebook.com/docs/reference/api/insights/">Insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/link/" name="http://developers.facebook.com/docs/reference/api/link/">Link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/message/" name="http://developers.facebook.com/docs/reference/api/message/">Message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/note/" name="http://developers.facebook.com/docs/reference/api/note/">Note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/offer/" name="http://developers.facebook.com/docs/reference/api/offer/">Offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/order/" name="http://developers.facebook.com/docs/reference/api/order/">Order </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/page/" name="http://developers.facebook.com/docs/reference/api/page/">Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/photo/" name="http://developers.facebook.com/docs/reference/api/photo/">Photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/post/" name="http://developers.facebook.com/docs/reference/api/post/">Post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question/" name="http://developers.facebook.com/docs/reference/api/question/">Question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question_option/" name="http://developers.facebook.com/docs/reference/api/question_option/">QuestionOption</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Review/" name="http://developers.facebook.com/docs/reference/api/Review/">Review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/status/" name="http://developers.facebook.com/docs/reference/api/status/">Status message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/thread/" name="http://developers.facebook.com/docs/reference/api/thread/">Thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/user/" name="http://developers.facebook.com/docs/reference/api/user/">User</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/video/" name="http://developers.facebook.com/docs/reference/api/video/">Video</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Page</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> › <a href="/docs/reference/api/page/" name="https://developers.facebook.com/docs/reference/api/page/">Page</a>
+</div>
+</div>
+</div>
+<p>A <code>Page</code> in the Graph API.</p>
+<p>The fields shown below are some of the common fields of Facebook Pages. <code>Pages</code> may also contain other (or additional) category-specific fields. Access to certain <code>Page</code>s may be restricted based on demographic information such as the current user&apos;s age or location. Access may also be restricted to only a <code>Page</code>&apos;s administrators.</p>
+<p>To read a <code>Page</code> you need:</p>
+<ul>
+<li>no access token for public and non-demographically restricted pages</li>
+<li>a user <code>access_token</code> for restricted pages that the current user is able to view (no special <a href="/docs/authentication/permissions" name="https://developers.facebook.com/docs/authentication/permissions">permissions</a> required)</li>
+</ul>
+<h3>Example</h3>
+<p>The <a href="https://www.facebook.com/platform" name="https://www.facebook.com/platform">Page</a> for Facebook Platform:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=19292868552" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=19292868552">https://graph.facebook.com/19292868552</a>
+</p>
+<hr />
+<h2>Fields</h2>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>
+<p>The Page&apos;s ID</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>
+<p>The Page&apos;s name</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>link</code>
+</td>
+<td>
+<p>Link to the page on Facebook</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing a valid URL</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>category</code>
+</td>
+<td>
+<p>The Page&apos;s category</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>is_published</code>
+</td>
+<td>
+<p>Indicates whether the page is published and visible to non-admins</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>boolean</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>can_post</code>
+</td>
+<td>
+<p>Indicates whether the current session user can post on this Page</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>boolean</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>likes</code>
+</td>
+<td>
+<p>The number of users who like the Page</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>number</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>location</code>
+</td>
+<td>
+<p>The Page&apos;s street address, latitude, and longitude (when available)</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>dictionary</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>phone</code>
+</td>
+<td>
+<p>The phone number (not always normalized for country code) for the Page</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>checkins</code>
+</td>
+<td>
+<p>The total number of users who have checked in to the Page</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>number</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>picture</code>
+</td>
+<td>
+<p>Link to the Page&apos;s profile picture</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>cover</code>
+</td>
+<td>
+<p>The <code>JSON</code> object including <code>cover_id</code> (the ID of the photo), <code>source</code> (the URL for the cover photo), and <code>offset_y</code> (the percentage offset from top [0-100])</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>JSON</code> object</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>website</code>
+</td>
+<td>
+<p>Link to the external website for the page</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>talking_about_count</code>
+</td>
+<td>
+<p>The number of people that are talking about this page (last seven days)</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>number</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>access_token</code>
+</td>
+<td>
+<p>A Page admin <code>access_token</code> for this page; The current user must be an administrator of this page; only returned if specifically requested via the <code>fields</code> URL parameter</p>
+</td>
+<td>
+<p>
+<code>manage_pages</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+</table>
+<h3>Real-Time Subscriptions</h3>
+<p>The <code>Page</code> object supports <a href="/docs/api/realtime" name="https://developers.facebook.com/docs/api/realtime">Real-time Updates</a> for <code>picture</code>, <code>tagged</code> and <code>checkins</code> connections.</p>
+<p>
+<b>Note:</b> Real-time updates are not yet supported for the total number of Page checkins.</p>
+<hr />
+<h2 id="connections">Connections</h2>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=19292868552%2Ffeed" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=19292868552%2Ffeed">feed</a>
+</td>
+<td>
+<p>The Page&apos;s wall.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Post</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://graph.facebook.com/19292868552/picture" name="https://graph.facebook.com/19292868552/picture">picture</a>
+</td>
+<td>
+<p>The Page&apos;s profile picture.</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>.</p>
+</td>
+<td>
+<p>Returns a HTTP 302 with the URL of the user&apos;s profile picture.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=19292868552%2Fsettings" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=19292868552%2Fsettings">settings</a>
+</td>
+<td>
+<p>The settings for this page.</p>
+</td>
+<td>
+<p>page <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>setting</code> and <code>value</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=19292868552%2Ftagged" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=19292868552%2Ftagged">tagged</a>
+</td>
+<td>
+<p>The photos, videos, and posts in which the Page has been tagged.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>a heterogeneous <code>array</code> of <code>Photo</code>, <code>Video</code> or <code>Post</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=19292868552%2Flinks" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=19292868552%2Flinks">links</a>
+</td>
+<td>
+<p>The Page&apos;s posted links.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or user <code>access_token</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>link</code> objects</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=19292868552%2Fphotos" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=19292868552%2Fphotos">photos</a>
+</td>
+<td>
+<p>The Page&apos;s uploaded photos.</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Photo</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=19292868552%2Fgroups" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=19292868552%2Fgroups">groups</a>
+</td>
+<td>
+<p>Groups to which the Page belongs.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> containing <code>group id</code>, <code>version</code>, <code>name</code> and <code>unread</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=19292868552%2Falbums" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=19292868552%2Falbums">albums</a>
+</td>
+<td>
+<p>The photo albums the Page has uploaded.</p>
+</td>
+<td>
+<p>No access token or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Album</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=19292868552%2Fstatuses" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=19292868552%2Fstatuses">statuses</a>
+</td>
+<td>
+<p>The Page&apos;s status updates.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Status message</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=19292868552%2Fvideos" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=19292868552%2Fvideos">videos</a>
+</td>
+<td>
+<p>The videos the Page has uploaded.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Video</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>notes</td>
+<td>
+<p>The Page&apos;s notes.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>An array of <code>Note</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=19292868552%2Fposts" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=19292868552%2Fposts">posts</a>
+</td>
+<td>
+<p>The Page&apos;s own posts.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Post</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#questions" name="https://developers.facebook.com/docs/#questions">questions</a>
+</td>
+<td>
+<p>The Page&apos;s questions.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Question</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=19292868552%2Fevents" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=19292868552%2Fevents">events</a>
+</td>
+<td>
+<p>The events the Page is attending.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> containing <code>event id</code>, <code>name</code>, <code>start_time</code>, <code>end_time</code>, <code>location</code> and <code>rsvp_status</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=19292868552%2Fcheckins" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=19292868552%2Fcheckins">checkins</a>
+</td>
+<td>
+<p>Checkins made to this Place Page by the current user, and friends of the current user.</p>
+</td>
+<td>
+<p>
+<code>user_checkins</code> or <code>friends_checkins</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Checkin</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#admins" name="https://developers.facebook.com/docs/#admins">admins</a>
+</td>
+<td>
+<p>A list of the Page&apos;s Admins.</p>
+</td>
+<td>
+<p>Page admin <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code>, <code>name</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#conversations" name="https://developers.facebook.com/docs/#conversations">conversations</a>
+</td>
+<td>
+<p>A list of the Page&apos;s conversations.</p>
+</td>
+<td>
+<p>Page admin <code>access_token</code> with <code>read_mailbox</code> permission</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing conversation objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#lifeevents" name="https://developers.facebook.com/docs/#lifeevents">milestones</a>
+</td>
+<td>
+<p>A list of the Page&apos;s milestones.</p>
+</td>
+<td>
+<p>Page admin <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Milestone</code> Objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#blocked" name="https://developers.facebook.com/docs/#blocked">blocked</a>
+</td>
+<td>
+<p>A list of users blocked from the Page.</p>
+</td>
+<td>
+<p>Page admin <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code>, <code>name</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#tabs" name="https://developers.facebook.com/docs/#tabs">tabs</a>
+</td>
+<td>
+<p>The Page&apos;s profile tabs.</p>
+</td>
+<td>
+<p>Page admin <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code>, <code>name</code>, <code>link</code>, <code>application</code>, <code>custom_name</code>, <code>is_permanent</code>, <code>position</code>, and <code>is_non_connection_landing_tab</code>.</p>
+</td>
+</tr>
+<tr>
+<td>insights</td>
+<td>
+<p>The Page&apos;s Insights data</p>
+</td>
+<td>
+<p>A valid <code>access_token</code> with <code>read_insights</code> permission for a user authorized to view the Page&apos;s insights.</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Insights</code> objects. See the <a href="/docs/reference/api/insights/" name="https://developers.facebook.com/docs/reference/api/insights/">Insights documentation</a> for more information.</p>
+</td>
+</tr>
+</table>
+<p>
+<strong>NOTE:</strong> For connections that require an access token, you can use any valid access token if the page is public and not restricted. Connections on restricted pages require a user access token and are only visible to users who meet the restriction criteria (e.g. age) set on the page. <a name="page_access_tokens">
+</a>
+</p>
+<h3>Page Access Tokens</h3>
+<p>To perform the following operations as a <code>Page</code>, and not the current user, you must use the <code>Page</code>&apos;s access token, not the user access token commonly used for reading Graph API objects. This access token can be retrieved by issuing an HTTP GET to <code>/USER_ID/accounts</code> with the <code>manage_pages</code> permission. This will return a list of <code>Page</code>s (including application profile <code>Page</code>s) to which the user has administrative access, along with <code>access_token</code>s for those <code>Page</code>s. Alternatively, you can get a page access token for a single, specific, page by issuing an HTTP GET to <code>/PAGE_ID?fields=access_token</code> with the <code>manage_pages</code> permission, as described above. Publishing to a <code>Page</code> also requires the <code>publish_stream</code> permission, unless otherwise noted.</p>
+<p>Page Administrators have different roles, and the functionality available to them is decided based on the following roles:</p>
+<h2>Page Admin roles</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Full Admin</th>
+<th>Content Creator</th>
+<th>Moderator</th>
+<th>Ads Creator</th>
+<th>Insights Manager</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>Manage Admins</code>
+</td>
+<td>Yes</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<code>Edit the Page and add Apps</code>
+</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<code>Create Posts as the Page</code>
+</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<code>Respond to and Delete Comments</code>
+</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<code>Send Messages as the Page</code>
+</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<code>Create Ads</code>
+</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<code>View Insights</code>
+</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attributes">Updating Page Attributes</h2>
+<p>You can update a Page&apos;s basic attributes or <code>About</code> section by issuing an HTTP POST request to <code>PAGE_ID</code> with <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Tokens</a> that has <code>manage_pages</code> permission and following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>about</code>
+</td>
+<td>Text for the about section of a page</td>
+<td>
+<code>string</code>
+</td>
+<td>N</td>
+</tr>
+<tr>
+<td>
+<code>description</code>
+</td>
+<td>The description of a page</td>
+<td>
+<code>string</code>
+</td>
+<td>N</td>
+</tr>
+<tr>
+<td>
+<code>general_info</code>
+</td>
+<td>The general information for a page</td>
+<td>
+<code>string</code>
+</td>
+<td>N</td>
+</tr>
+<tr>
+<td>
+<code>website</code>
+</td>
+<td>The website URL for a page</td>
+<td>
+<code>string</code>
+</td>
+<td>N</td>
+</tr>
+<tr>
+<td>
+<code>phone</code>
+</td>
+<td>The Phone number for a page</td>
+<td>
+<code>string</code>
+</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<h3>Setting a Cover Photo</h3>
+<p>You can set a cover photo for a Page by issuing an HTTP POST to &apos;/PAGE_ID/&apos; with a <a href="page_access_tokens" name="https://developers.facebook.com/docs/page_access_tokens">Page Acces Token</a> and the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>cover</code>
+</td>
+<td>The ID of the photo</td>
+<td>
+<code>integer</code>
+</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>
+<code>offset_y</code>
+</td>
+<td>The percentage offset from top (0-100). The default value is <code>50</code>
+</td>
+<td>
+<code>integer</code>
+</td>
+<td>N</td>
+</tr>
+<tr>
+<td>
+<code>no_feed_story</code>
+</td>
+<td>The flag indicating whether or not to create a story. The default value is <code>false</code>
+</td>
+<td>
+<code>boolean</code>
+</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<h3>Hiding a Page Post</h3>
+<p>You can hide a Page post that is published by a non-admin user by issuing an HTTP POST to <code>/POST_ID</code> with the following parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>is_hidden</code>
+</td>
+<td>Whether a post is hidden</td>
+<td>
+<code>boolean</code>
+</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="events">events</h2>
+<h3>Create</h3>
+<p>You can create an <a href="https://developers.dev.facebook.com/docs/reference/api/event/" name="https://developers.dev.facebook.com/docs/reference/api/event/">event</a> for a page by issuing an HTTP POST request to <code>PAGE_ID/events</code> with the <code>create_event</code> and <code>manage_pages</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> name </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/">Event</a> name </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> start_time </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/">Event</a> start time </td>
+<td> UNIX <code>timestamp</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> end_time </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/">Event</a> end time </td>
+<td> UNIX <code>timestamp</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> description </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/">Event</a> description </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> location </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/"> Event </a> location </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> privacy_type </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/">Event</a> privacy setting </td>
+<td>
+<code>string</code> containing &apos;OPEN&apos; (default), &apos;CLOSED&apos;, or &apos;SECRET&apos; </td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new event ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="feed">feed</h2>
+<p>This connection corresponds to the Page&apos;s Wall. You can create a <code>link</code>, <code>post</code> or <code>status message</code> by issuing an HTTP POST request to the <code>PAGE_ID/feed</code> connection. To see more details please see <a href="#links" name="https://developers.facebook.com/docs/#links">links</a>, <a href="#posts" name="https://developers.facebook.com/docs/#posts">posts</a>, and <a href="#statuses" name="https://developers.facebook.com/docs/#statuses">status messages</a> documentation.</p>
+<p>To impersonate the <code>Page</code> when posting to the wall (i.e. post as the <code>Page</code>, and not the current user), you must use a <code>Page</code> <code>access_token</code> with the <code>manage_pages</code> and <code>publish_stream</code> permissions, as described under <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Tokens</a> above.</p>
+<p>Posts may be targeted to countries, cities, regions or locales using the <code>targeting</code> parameter. Please see <a href="#posts" name="https://developers.facebook.com/docs/#posts">posts</a> for additional information.</p>
+<hr />
+<h2 id="links">links</h2>
+<h3>Create</h3>
+<p>You can post a <a href="https://developers.dev.facebook.com/docs/reference/api/link/" name="https://developers.dev.facebook.com/docs/reference/api/link/">link</a> on a <code>Page</code> by issuing an HTTP POST request to <code>PAGE_ID/feed</code> with the <code>publish_stream</code> and <code>manage_pages</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> link </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/link/" name="https://developers.facebook.com/docs/reference/api/link/">Link</a> URL </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/link/" name="https://developers.facebook.com/docs/reference/api/link/">Link</a> message </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>The other fields are taken from the metadata of the page URL given in the &apos;link&apos; param.</p>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new link ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="notes">notes</h2>
+<h3>Create</h3>
+<p>You can create a <a href="https://developers.dev.facebook.com/docs/reference/api/note/" name="https://developers.dev.facebook.com/docs/reference/api/note/">note</a> on a <code>Page</code> by issuing an HTTP POST request to <code>PAGE_ID/notes</code> with the <code>publish_stream</code> and <code>manage_pages</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type </th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> subject </code>
+</td>
+<td> The subject of the <a href="https://developers.facebook.com/docs/reference/api/note/" name="https://developers.facebook.com/docs/reference/api/note/">Note</a>
+</td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/note/" name="https://developers.facebook.com/docs/reference/api/note/"> Note </a> content </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new note ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="photos">photos</h2>
+<h3>Create</h3>
+<p>You can post <a href="https://developers.dev.facebook.com/docs/reference/api/photo/" name="https://developers.dev.facebook.com/docs/reference/api/photo/">photos</a> to a <code>Page</code>&apos;s Wall by issuing an HTTP POST request to <code>PAGE_ID/photos</code> with the <code>publish_stream</code> and <code>manage_pages</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> source </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/photo/" name="https://developers.facebook.com/docs/reference/api/photo/">Photo</a> content </td>
+<td>
+<code>multipart/form-data</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/photo/" name="https://developers.facebook.com/docs/reference/api/photo/">Photo</a> description </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> targeting </code>
+</td>
+<td> JSON object containing countries, cities, regions or locales <br /> Example: {&apos;countries&apos;:[&apos;US&apos;,&apos;GB&apos;]} </td>
+<td>
+<code>string</code> containing JSON object </td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new photo ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="posts">posts</h2>
+<h3>Create</h3>
+<p>You can create a post on a <code>Page</code> by issuing an HTTP POST request to <code>PAGE_ID/feed</code> with the <code>publish_stream</code> and <code>manage_pages</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> message </td>
+<td>
+<code>string</code>
+</td>
+<td> either <code>message</code> or <code>link</code>
+</td>
+</tr>
+<tr>
+<td>
+<code> link </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> URL </td>
+<td>
+<code>string</code>
+</td>
+<td> either <code>message</code> or <code>link</code>
+</td>
+</tr>
+<tr>
+<td>
+<code> picture </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> thumbnail image (can only be used if <code>link</code> is specified) </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> name </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> name (can only be used if <code>link</code> is specified) </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> caption </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> caption (can only be used if <code>link</code> is specified) </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> description </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> description (can only be used if <code>link</code> is specified) </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> actions </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> actions </td>
+<td>
+<code>array</code> of objects containing <code>name</code> and <code>link</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> targeting </code>
+</td>
+<td> JSON object containing countries, cities, regions or locales <br /> Example: {&apos;countries&apos;:[&apos;US&apos;,&apos;GB&apos;]} </td>
+<td>
+<code>string</code> containing JSON object </td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new post ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="statuses">questions</h2>
+<h3>Create</h3>
+<p>You can post a <a href="https://developers.dev.facebook.com/docs/reference/api/question/" name="https://developers.dev.facebook.com/docs/reference/api/question/">question</a> on behalf of the Page by issuing an HTTP POST request to <code>PROFILE_ID/questions</code> with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code>question</code>
+</td>
+<td> The text of the question </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code>options</code>
+</td>
+<td> Array of answer options </td>
+<td>
+<code>array</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code>allow_new_options</code>
+</td>
+<td> Allows other users to add new options (True by default) </td>
+<td>
+<code>boolean</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<h3>Delete</h3>
+<p>You can delete a <code>question</code> by issuing an HTTP DELETE request to the QUESTION_ID object with the <code>publish_stream</code> permission.</p>
+<hr />
+<h2 id="lifeevents">milestones</h2>
+<h3>Read</h3>
+<p>You can read milestones for a page by issuing an HTTP GET too <code>/PAGE_ID/milestones</code> with a <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>. This will return the following fields.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>The ID of a milestone event</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>title</code>
+</td>
+<td>The title of the milestone</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>from</code>
+</td>
+<td>
+<code>JSON</code> object containing the name, category, and id of the Page</td>
+<td>object</td>
+</tr>
+<tr>
+<td>
+<code>description</code>
+</td>
+<td>The description of the milestone</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>created_time</code>
+</td>
+<td>The creation time of the milestone</td>
+<td>date/time format <code>ISO-8601</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>updated_time</code>
+</td>
+<td>The update time of the milestone</td>
+<td>date/time format <code>ISO-8601</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>start_time</code>
+</td>
+<td>The start time of the milestone</td>
+<td>date/time format <code>ISO-8601</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>end_time</code>
+</td>
+<td>The end time of the milestone. Page&apos;s milestones have the same start and end time</td>
+<td>date/time format <code>ISO-8601</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Create</h3>
+<p>You can add a milestone by issuing an HTTP POST request to <code>PAGE_ID/milestones</code> with a <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a> and the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>title</code>
+</td>
+<td>The title of the milestone</td>
+<td>
+<code>string</code>
+</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>
+<code>description</code>
+</td>
+<td>The description of the milestone</td>
+<td>
+<code>string</code>
+</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>
+<code>start_time</code>
+</td>
+<td>Th start time of the milestone. A Page&apos;s milestones have the same start and end time.</td>
+<td>date/time format <code>ISO-8601</code>
+</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<p>If the edit is successful, you get the following response:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>The ID of the milestone</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Delete</h3>
+<p>You can delete a milestone by issuing an HTTP DELETE request to <code>/milestone_id</code> with a <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>
+</p>
+<p>If the delete is successful, you get the following return.</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>If the delete is successful</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="offers">offers</h2>
+<div class="blueBox">
+<p>Offers is currently in beta and is available to a limited set of Pages in New Zealand, Singapore, Australia, Japan, and Turkey. We plan to launch offers more widely in the next few weeks. To learn more, please see our recent <a href="http://facebook-studio.com/news/item/facebook-offers-is-a-new-way-to-reward-fans" name="http://facebook-studio.com/news/item/facebook-offers-is-a-new-way-to-reward-fans">blog post</a>.</p>
+</div>
+<h3>Read</h3>
+<p>You can read offers of a Page by issuing an HTTP GET to <code>/PAGE_ID/offers</code> with a <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>. This will return the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>The ID of the Offer</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>from</code>
+</td>
+<td>
+<code>JSON</code> object containing <code>name</code>, <code>category</code>, and <code>id</code> of the page that posted the Offer</td>
+<td>
+<code>JSON</code> object</td>
+</tr>
+<tr>
+<td>
+<code>title</code>
+</td>
+<td>The title of the Offer</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>terms</code>
+</td>
+<td>The description of the terms under which the offer can be claimed</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>image_url</code>
+</td>
+<td>The URL of the image for the offer.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>claim_limit</code>
+</td>
+<td>The maximum number of times the offer can be claimed</td>
+<td>
+<code>integer</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>created_time</code>
+</td>
+<td>Time when the Offer was created</td>
+<td>date/time format</td>
+</tr>
+<tr>
+<td>
+<code>expiration_time</code>
+</td>
+<td>The expiration time of the Offer (used when displaying the Offer)</td>
+<td>date/time format <code>ISO-8601</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Create</h3>
+<p>You can create an Offer for a page by issuing an HTTP POST to <code>/PAGE_ID/offers</code> with a <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a> and the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>title</code>
+</td>
+<td>The title of the Offer</td>
+<td>
+<code>string</code>
+</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>
+<code>expiration_time</code>
+</td>
+<td>The expiration time of the Offer (used when displaying the Offer)</td>
+<td>date/time format <code>ISO-8601</code>
+</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>
+<code>terms</code>
+</td>
+<td>The terms of the Offer</td>
+<td>
+<code>string</code>
+</td>
+<td>N</td>
+</tr>
+<tr>
+<td>
+<code>image_url</code>
+</td>
+<td>The URL for the Offer&apos;s image. Either <code>image_url</code> or <code>image</code> parameter should be specified, but not both.</td>
+<td>
+<code>string</code>
+</td>
+<td>N</td>
+</tr>
+<tr>
+<td>
+<code>image</code>
+</td>
+<td>The image for the Offer. Either <code>image_url</code> or <code>image</code> parameter should be specified, but not both.</td>
+<td>
+<code>binary file</code>
+</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<p>If the edit is successful, you get the following response:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>The ID of the Offer</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Delete</h3>
+<p>You can delete a Offer by issuing an HTTP DELETE request to <code>/offer_id</code> with a <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>.</p>
+<p>If the delete is successful, you get the following return.</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>If the delete is successful</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note that you cannot modify an offer.</p>
+<hr />
+<h2 id="conversations">Messages</h2>
+<h3>Read</h3>
+<p>You can read the messages for a page by issuing an HTTP GET request to <code>/PAGE_ID/conversations</code> with a <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a> and <code>read_mailbox</code> <a href="/docs/reference/api/permissions/#extended_perms" name="https://developers.facebook.com/docs/reference/api/permissions/#extended_perms">permission</a>. This will return the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>The ID of a conversation, e.g., <code>t_id.216477638451347</code>
+</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>snippet</code>
+</td>
+<td>The title of a message in the conversation</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>updated_time</code>
+</td>
+<td>Last update time of the conversation</td>
+<td>date/time format <code>ISO-8601</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>message_count</code>
+</td>
+<td>The number of messages in the conversation</td>
+<td>
+<code>integer</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>unread_count</code>
+</td>
+<td>The number of unread messages in the conversation</td>
+<td>
+<code>integer</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>tags</code>
+</td>
+<td>A Set of tags indicating the message folder, and whether the conversation is read and seen.</td>
+<td>
+<code>JSON</code> objects that include a name field.</td>
+</tr>
+<tr>
+<td>
+<code>participants</code>
+</td>
+<td>Users who are on this message conversation</td>
+<td>
+<code>JSON</code> array of objects containing <code>name</code>, <code>email</code>, and <code>id</code> for each participant.</td>
+</tr>
+<tr>
+<td>
+<code>senders</code>
+</td>
+<td>Users who send a message on the conversation</td>
+<td>
+<code>JSON</code> array of objects containing <code>name</code>, <code>email</code>, and <code>id</code> for each participant who sent a message</td>
+</tr>
+<tr>
+<td>
+<code>can_reply</code>
+</td>
+<td>Whether The Page can reply to the conversation</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>is_subscribed</code>
+</td>
+<td>Whether you are subscribed to the conversation</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>messages</code>
+</td>
+<td>List of all messages in the conversation</td>
+<td>
+<code>JSON</code> array of <code>message</code> objects. Each <code>message</code> object contains <code>id</code>, <code>created_time</code>, <code>tags</code>, <code>from</code>, <code>to</code>, and <code>message</code> fields. A message ID look like <code>m_id.388262297854964</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3>Reply</h3>
+<p>Note that a page can only reply to a user&apos;s message. It cannot initiate a private message with a user. Also, a page can respond not more than twice to a user&apos;s message before the user has replied back.</p>
+<p>You can reply to a user&apos;s message by issuing an HTTP POST to <code>/CONVERSATION_ID/messages</code> with the following parameters. A conversation ID look like <code>t_id.216477638451347</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>message</code>
+</td>
+<td>The body of reply</td>
+<td>
+<code>string</code>
+</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<p>If the reply is successful, you get following response.</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>The ID of the reply message, e.g., <code>m_id.325810694131945</code>
+</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="settings">settings</h2>
+<h3>Update</h3>
+<p>You can change whether users can post to the Wall of a page by issuing a POST request to <code>PAGE_ID/settings</code> with the <code>manage_pages</code> permissions and the following parameters.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>setting</code>
+</td>
+<td>Which single setting to update: <code>USERS_CAN_POST</code>, <code>USERS_CAN_POST_PHOTOS</code>, <code>USERS_CAN_TAG_PHOTOS</code>, <code>USERS_CAN_POST_VIDEOS</code>
+</td>
+<td>
+<code>string</code>
+</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>
+<code>value</code>
+</td>
+<td>
+<code>true</code> or <code>false</code>
+</td>
+<td>
+<code>boolean</code>
+</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<p>If the setting has been changed successfully you will get the following return:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>If the setting was successfully set or changed</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="statuses">statuses</h2>
+<h3>Create</h3>
+<p>You can post a <a href="https://developers.dev.facebook.com/docs/reference/api/status/" name="https://developers.dev.facebook.com/docs/reference/api/status/">status message</a> on a <code>Page</code> by issuing an HTTP POST request to <code>PAGE_ID/feed</code> with the <code>publish_stream</code> and <code>manage_pages</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/status/" name="https://developers.facebook.com/docs/reference/api/status/">Status Message</a> content </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new status message ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="videos">videos</h2>
+<h3>Create</h3>
+<p>You can publish a <a href="https://developers.dev.facebook.com/docs/reference/api/video/" name="https://developers.dev.facebook.com/docs/reference/api/video/">video</a> on a <code>Page</code> by issuing an HTTP POST request to <code>https://graph-video.facebook.com/PAGE_ID/videos</code> with the <code>publish_stream</code> and <code>manage_pages</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> source </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">Video</a> content </td>
+<td>
+<code>multipart/form-data</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> title </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">Video</a> title </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> description </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">Video</a> description </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new video ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="tabs">tabs</h2>
+<h3>Read</h3>
+<p>You can read the tabs for a <code>Page</code> by issuing an HTTP GET to <code>/PAGE_ID/tabs</code> with a <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>. This will return the following fields.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>ID of the tab</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>Name of the tab</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>link</code>
+</td>
+<td>Link to the tab on Facebook</td>
+<td>
+<code>string</code> containing the tab&apos;s URL</td>
+</tr>
+<tr>
+<td>
+<code>application</code>
+</td>
+<td>The <code>Application</code> providing the tab</td>
+<td>object containing <code>id</code> and <code>name</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>custom_name</code>
+</td>
+<td>The custom name of the tab. If this is not set, the name of the tab will be determined by the application.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>is_permanent</code>
+</td>
+<td>Whether or not the tab is permanently installed</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>position</code>
+</td>
+<td>The order in which the tab appears on the <code>Page</code>&apos;s profile</td>
+<td>
+<code>integer</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>is_non_connection_landing_tab</code>
+</td>
+<td>Whether this is the default landing tab for users who have not liked and are not admins of this <code>Page</code>
+</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</tbody>
+</table>
+<p>You can also retrieve certain specific tabs by issuing an HTTP GET to <code>/TAB_ID</code>.</p>
+<p>
+<strong>Testing App Installs</strong>
+</p>
+<p>You can test if a specific app is installed on a page profile tab by issuing an HTTP GET to <code>PAGE_ID/tabs/APP_ID</code>. If the app is installed, this will return the following fields.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>ID of the application tab</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>Name of the tab</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>link</code>
+</td>
+<td>Link to the tab on Facebook</td>
+<td>
+<code>string</code> containing the tab&apos;s URL</td>
+</tr>
+<tr>
+<td>
+<code>application</code>
+</td>
+<td>The <code>Application</code> providing the tab</td>
+<td>object containing <code>id</code> and <code>name</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>position</code>
+</td>
+<td>The order in which the tab appears on the <code>Page</code>&apos;s profile</td>
+<td>
+<code>integer</code>
+</td>
+</tr>
+</tbody>
+</table>
+<p>This request will work for any <code>APP_ID</code> and return the above fields is the app is installed on the page. If the app is not installed on the page, this request will return an empty <code>data[]</code> array.</p>
+<p>You can also issue this same query with an <a href="/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">app access token</a>. In this case, you can query any <code>PAGE_ID</code>, and the above fields will be returned if your app is installed on the specified page. An empty <code>data[]</code> array is returned as usual if the app is not installed on the specified page.</p>
+<h3>Create</h3>
+<p>You can install a profile_tab at the end of the current list of installed tabs for a page by issuing an HTTP POST request to <code>PAGE_ID/tabs</code> with a <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>app_id</code>
+</td>
+<td>ID of the application for which to install the tab.</td>
+<td>
+<code>string</code>
+</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<p>If the create is successful, you get the following return:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>If the create succeeded</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Update</h3>
+<p>You can update an installed profile_tab for a page by issuing an HTTP POST request to <code>/PAGE_ID/tabs/TAB_ID</code> with <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a> and the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>position</code>
+</td>
+<td>Order in which the tab will appear on the profile. Must be after permanent tabs and less than the number of installed tabs. Index starts at 0</td>
+<td>
+<code>integer</code>
+</td>
+<td>N</td>
+</tr>
+<tr>
+<td>
+<code>custom_name</code>
+</td>
+<td>Name to be used for the tab. If this is set to an empty string, the tab will use the application’s default tab name.</td>
+<td>
+<code>string</code>
+</td>
+<td>N</td>
+</tr>
+<tr>
+<td>
+<code>is_non_connection_landing_tab</code>
+</td>
+<td>Set this tab as the default landing tab for users who have not liked and are not admins of the Page. If provided, value must be <code>true</code>.</td>
+<td>
+<code>boolean</code>
+</td>
+<td>N</td>
+</tr>
+<tr>
+<td>
+<code>custom_image_url</code>
+</td>
+<td>URL for an image to be used as a custom icon for this Page app. Note that either <code>custom_image_url</code> or <code>custom_image</code> can be set, but not both.</td>
+<td>
+<code>string</code>
+</td>
+<td>N</td>
+</tr>
+<tr>
+<td>
+<code>custom_image</code>
+</td>
+<td>The name of an image file to be used as a custom icon for this Page app. Note that either <code>custom_image_url</code> or <code>custom_image</code> can be set, but not both.</td>
+<td>
+<code>image file</code>
+</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<p>If the edit is successful, you get the following return.</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>If the edit succeeded</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Delete</h3>
+<p>You can delete an installed profile_tab where is_permanent is not true for a page by issuing an HTTP DELETE request to <code>/PAGE_ID/tabs/TAB_ID</code> object with a <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>.</p>
+<p>If the delete is successful, you get the following return.</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>If the delete is successful</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="admins">admins</h2>
+<h3>Belongs</h3>
+<p>To check if a specific user is an admin of the Page, issue an HTTP GET request with the appropriate PAGE_ID, <a href="#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>, and USER_ID to <code>https://graph.facebook.com/PAGE_ID/admins/USER_ID</code>
+</p>
+<p>This returns an <code>array</code> of objects with the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>ID of the user</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>Name of the user</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="blocked">blocked</h2>
+<h3>Read</h3>
+<p>You can get a list of users blocked for a page by issuing an HTTP GET request to <code>PAGE_ID/blocked/</code> with the page admin <code>access_token</code>. This returns an <code>array</code> of objects with the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>ID of the user</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>Name of the user</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Belongs</h3>
+<p>You can check if a user is blocked for a page by issuing an HTTP GET request to <code>PAGE_ID/blocked/USER_ID</code> with the page admin <code>access_token</code>.</p>
+<p>If the user is not blocked from the page, a blank <code>object</code> will be returned. Otherwise, an <code>object</code> with the following fields will be returned.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>ID of the user</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>Name of the user</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Create</h3>
+<p>You can block a user from posting content to your page by issuing an HTTP POST request to <code>PAGE_ID/blocked</code> with the the page admin <code>access_token</code> with the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>uid</code>
+</td>
+<td>Comma-separated list of the user IDs you wish to block</td>
+<td>
+<code>string</code>
+</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p>This returns an <code>array</code> where the keys are the user IDs (<code>string</code>) and the values a <code>boolean</code> of whether or not the block was successful.</p>
+<h3>Delete</h3>
+<p>You can unblock a blocked user for your page by issuing an HTTP DELETE request to <code>PAGE_ID/blocked</code> with the page admin <code>access_token</code> with the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>uid</code>
+</td>
+<td>ID of the user you wish to unblock</td>
+<td>
+<code>string</code>
+</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p>If the delete is successful, you get the following return.</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>If the delete is successful</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>How-Tos</h2>
+<p>
+<a href="/blog/post/465" target="_blank" name="https://developers.facebook.com/blog/post/465">How to: Publish to a Page</a>
+</p>
+<p>
+<a href="/blog/post/515/#video_upload" target="_blank" name="https://developers.facebook.com/blog/post/515/#video_upload">How to upload a video to an Application, Group, or Page&apos;s wall using Graph API</a>
+</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/api/page/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1338437313" title="2012年5月30日 21:08">約1週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

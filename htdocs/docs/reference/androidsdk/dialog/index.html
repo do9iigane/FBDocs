@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/androidsdk/dialog/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/androidsdk/dialog/">https://developers.facebook.com/docs/reference/androidsdk/dialog/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</li>
+<li>
+<a href="/docs/reference/php" name="https://developers.facebook.com/docs/reference/php">PHP SDK</a>
+</li>
+<li>
+<a href="/docs/reference/iossdk" name="https://developers.facebook.com/docs/reference/iossdk">iOS SDK</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/androidsdk" name="https://developers.facebook.com/docs/reference/androidsdk">Android SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/request/" name="http://developers.facebook.com/docs/reference/androidsdk/request/">API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/" name="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/">Async API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/authentication/" name="http://developers.facebook.com/docs/reference/androidsdk/authentication/">Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialog/" name="http://developers.facebook.com/docs/reference/androidsdk/dialog/">Dialogs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/helper/" name="http://developers.facebook.com/docs/reference/androidsdk/helper/">Helpers</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Interfaces</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/" name="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/">DialogListener</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/" name="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/">RequestListener</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Errors</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/" name="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/">DialogError</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/" name="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/">FacebookError</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Dialogs</h1>
+<div class="breadcrumbs">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/androidsdk/" name="https://developers.facebook.com/docs/reference/androidsdk/">Android SDK</a> › <a href="/docs/reference/androidsdk/dialog/" name="https://developers.facebook.com/docs/reference/androidsdk/dialog/">Dialogs</a>
+</div>
+</div>
+</div>
+<p>The dialog methods used in the Facebook Android SDK. These are defined in <a href="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/Facebook.java" name="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/Facebook.java">Facebook.java</a>
+</p>
+<p>You implement these methods to generate a <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Facebook Platform dialog</a>.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/AndroidDialog.png" width="100%" />
+</div>
+<hr />
+<h2>void dialog(Context context, String action, DialogListener listener):</h2>
+<p>Generate a Facebook UI dialog for the request action in the given Android context.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>context</code> - The Android context in which we will generate this dialog.</p>
+<p>
+<code>action</code> - The type of dialog to call. Currently supported methods are <a href="/docs/reference/dialogs/feed/" name="https://developers.facebook.com/docs/reference/dialogs/feed/">feed</a> and <a href="/docs/reference/dialogs/oauth/" name="https://developers.facebook.com/docs/reference/dialogs/oauth/">oauth</a>.</p>
+<p>
+<code>listener</code> - Callback interface to notify the application when the dialog has completed.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None, the callback interface will be notified when the request has completed.</p>
+<p>
+<b>Note</b>
+</p>
+<p>This method is asynchronous and the callback will be invoked in the original calling thread (not in a background thread).</p>
+<hr />
+<h2>void dialog(Context context, String action, Bundle parameters, DialogListener listener):</h2>
+<p>Generate a Facebook UI dialog for the request action in the given Android context.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>context</code> - The Android context in which we will generate this dialog.</p>
+<p>
+<code>action</code> - The type of dialog to call. Currently supported methods are <a href="/docs/reference/dialogs/feed/" name="https://developers.facebook.com/docs/reference/dialogs/feed/">feed</a> and <a href="/docs/reference/dialogs/oauth/" name="https://developers.facebook.com/docs/reference/dialogs/oauth/">oauth</a>.</p>
+<p>
+<code>parameters</code> - String key-value pairs to be passed as URL parameters. E.g. for posting to a friend&apos;s wall, &quot;to&quot;:&quot;friends_uid&quot; :</p>
+<pre>
+    Bundle params = new Bundle();
+    params.putString(&quot;to&quot;, String.valueOf(<friend_id>));
+    mFacebook.dialog(<activity>, &quot;feed&quot;, params, <dialoglistener>);
+</dialoglistener>
+</activity>
+</friend_id>
+</pre>
+<p>
+<code>listener</code> - Callback interface to notify the application when the dialog has completed.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None, the callback interface will be notified when the request has completed.</p>
+<p>
+<b>Note</b>
+</p>
+<p>This method is asynchronous and the callback will be invoked in the original calling thread (not in a background thread).</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/androidsdk/dialog/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1316384365" title="2011年9月18日 15:19">約9ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

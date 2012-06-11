@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/ads-api/adaccount/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/ads-api/adaccount/">https://developers.facebook.com/docs/reference/ads-api/adaccount/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Best Practices</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/batch-requests/" name="http://developers.facebook.com/docs/reference/ads-api/batch-requests/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/etags-reference/" name="http://developers.facebook.com/docs/reference/ads-api/etags-reference/">Using ETags</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/currencies/" name="http://developers.facebook.com/docs/reference/ads-api/currencies/">Currencies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/">Introduction to Action Spec</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/" name="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/">Introduction to Sponsored Stories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/" name="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/">Optimized CPM</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Specs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/" name="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/">Conversion Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/creative-specs/" name="http://developers.facebook.com/docs/reference/ads-api/creative-specs/">Creative Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/">Defining Action Specs </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/">Targeting Specs</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced Targeting</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/">Action Spec Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/">Topic Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/">ZIP Code Targeting</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Queries</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/actionestimate/" name="http://developers.facebook.com/docs/reference/ads-api/actionestimate/">Action Estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/generatepreview/" name="http://developers.facebook.com/docs/reference/ads-api/generatepreview/">Action Spec Ad Previews</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/adstatistics/">Ad Statistics</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/" name="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/">Autocomplete Data</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/" name="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/">Broad Target Categories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/" name="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/">Connection Objects</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/">Conversion Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/keywordstats/" name="http://developers.facebook.com/docs/reference/ads-api/keywordstats/">Keyword Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/reachestimate/" name="http://developers.facebook.com/docs/reference/ads-api/reachestimate/">Reach estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-description/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-description/">Targeting Description</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccount/" name="http://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/">Ad account group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcampaign/" name="http://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcreative/" name="http://developers.facebook.com/docs/reference/ads-api/adcreative/">Ad creative</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adimage/" name="http://developers.facebook.com/docs/reference/ads-api/adimage/">Ad image</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/aduser/" name="http://developers.facebook.com/docs/reference/ads-api/aduser/">Ad user</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Ad account</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api/">Ads API</a> › <a href="/docs/reference/ads-api/adaccount/" name="https://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a>
+</div>
+</div>
+</div>
+<p>An account for managing ads, as represented in the <a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>.</p>
+<p>Before using this object, see <a href="https://developers.facebook.com/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads on the Graph API</a>.</p>
+<p>The <code>adaccount</code> object is a connection of the following objects:</p>
+<ul>
+<li>
+<a href="/docs/reference/ads-api/adaccountgroup" name="https://developers.facebook.com/docs/reference/ads-api/adaccountgroup">
+<code>adaccountgroup</code>
+</a>
+</li>
+<li>
+<a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">
+<code>user</code>
+</a>
+</li>
+</ul>
+<p>To read an <code>adaccount</code> you need the following <a href="/docs/authentication/permissions/" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a>: <code>ads_management</code> and, for use anytime, <code>offline_access</code>.</p>
+<h3>Example</h3>
+<p>Retrieve the information for an account with a URL similar to the following:</p>
+<pre>
+<code>https://graph.facebook.com/act_AccountID?access_token=___
+</code>
+</pre>
+<h2>Fields</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Permissions</th>
+<th align="left">Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<code>account_id</code>
+</td>
+<td align="left">The ID of the ads account</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>long</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>name</code>
+</td>
+<td align="left">Name of the account; note that many accounts are unnamed, so this field may be empty</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>account_status</code>
+</td>
+<td align="left">Status of the account (1 for active, 2 for disabled, or 3 for unsettled)</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>daily_spend_limit</code>
+</td>
+<td align="left">The account&apos;s limit for daily spend, based on the corresponding value in the account settings</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>users</code>
+</td>
+<td align="left">Container for the user ID, permissions, and role (see below)</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>currency</code>
+</td>
+<td align="left">The currency used for the account, based on the corresponding value in the account settings. The list of supported currencies can be found <a href="/docs/reference/ads-api/currencies/" name="https://developers.facebook.com/docs/reference/ads-api/currencies/">here</a>
+</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>timezone_id</code>
+</td>
+<td align="left">ID for the timezone</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>timezone_name</code>
+</td>
+<td align="left">Name for the time zone</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>capabilities</code>
+</td>
+<td align="left">Reserved for future use</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>account_groups</code>
+</td>
+<td align="left">Container for the ID, name, and status of the account&apos;s account groups</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>is_personal</code>
+</td>
+<td align="left">If this is a personal or business account</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>integer</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>business_name</code>
+</td>
+<td align="left">The business name for the account</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>business_street</code>
+</td>
+<td align="left">First line of the business street address for the account</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>business_street2</code>
+</td>
+<td align="left">Second line of the business street address for the account</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>business_city</code>
+</td>
+<td align="left">City for business address</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>business_state</code>
+</td>
+<td align="left">State abbreviation for business address</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>business_zip</code>
+</td>
+<td align="left">Zip code for business address</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>business_country_code</code>
+</td>
+<td align="left">Country code for the business address</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>vat_status</code>
+</td>
+<td align="left">Vat status code for the account. Here are the values for VAT Status: 0: Unknown, 1: VAT not required- US/CA, 2: VAT information required, 3: VAT information submitted, 4: Offline VAT validation failed, 5: Account is a personal account</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>integer</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>agency_client_declaration</code>
+</td>
+<td align="left">Whether this account is an agency advertising on behalf of the client</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>object</code>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Members of the array agency_client_declaration:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Permissions</th>
+<th align="left">Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">agency_representing_client</td>
+<td align="left">Whether this account is for an agency representing a client</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>integer</code>
+</td>
+</tr>
+<tr>
+<td align="left">client_based_in_france</td>
+<td align="left">Whether the client is based in France</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>integer</code>
+</td>
+</tr>
+<tr>
+<td align="left">has_written_mandate_from_advertiser</td>
+<td align="left">Whether the agency has a written mandate to advertise on behalf of this client</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>integer</code>
+</td>
+</tr>
+<tr>
+<td align="left">is_client_paying_invoices</td>
+<td align="left">Whether the client is paying via invoice</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>integer</code>
+</td>
+</tr>
+<tr>
+<td align="left">client_name</td>
+<td align="left">Name of the client</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">client_email_address</td>
+<td align="left">Client&apos;s email address</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">client_street</td>
+<td align="left">First line of client&apos;s street address</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">client_street2</td>
+<td align="left">Second line of client&apos;s street address</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">client_city</td>
+<td align="left">Client&apos;s city</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">client_province</td>
+<td align="left">Client&apos;s province</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">client_postal_code</td>
+<td align="left">Client&apos;s postal code</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">client_country_code</td>
+<td align="left">Client&apos;s country code</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Connections</h2>
+<p>The <code>adaccount</code> object has the following connections.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Permissions</th>
+<th align="left">Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">adcampaigns</td>
+<td align="left">The campaigns in the account</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/adcampaign" name="https://developers.facebook.com/docs/reference/ads-api/adcampaign">
+<code>adcampaign</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">adcreatives</td>
+<td align="left">The creatives in the account&apos;s creative library</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/adcreative" name="https://developers.facebook.com/docs/reference/ads-api/adcreative">
+<code>adcreative</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">adgroups</td>
+<td align="left">The ads of the account</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/adgroup" name="https://developers.facebook.com/docs/reference/ads-api/adgroup">
+<code>adgroup</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">adimages</td>
+<td align="left">The ad images of the account</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/adimage" name="https://developers.facebook.com/docs/reference/ads-api/adimage">
+<code>adimage</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">stats</td>
+<td align="left">The statistics for the account</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/adstatistics" name="https://developers.facebook.com/docs/reference/ads-api/adstatistics">
+<code>adstatistics</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">adcampaignstats</td>
+<td align="left">The statistics for the account by ad campaign</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/adstatistics" name="https://developers.facebook.com/docs/reference/ads-api/adstatistics">
+<code>adstatistics</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">adgroupstats</td>
+<td align="left">The statistics for the account by ad group</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/adstatistics" name="https://developers.facebook.com/docs/reference/ads-api/adstatistics">
+<code>adstatistics</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">users</td>
+<td align="left">The users of the ad account</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/aduser" name="https://developers.facebook.com/docs/reference/ads-api/aduser">
+<code>aduser</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">connectionobjects</td>
+<td align="left">The Connection Objects of the ad account user</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/connectionobjects" name="https://developers.facebook.com/docs/reference/ads-api/connectionobjects">
+<code>connectionobjects</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">reachestimate</td>
+<td align="left">The Reach Estimate of the supplied targeting</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/reachestimate" name="https://developers.facebook.com/docs/reference/ads-api/reachestimate">
+<code>reachestimate</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">broadtargetingcategories</td>
+<td align="left">Array of broad category targeting (BCT) that you can specify for ads</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/broadcategorytargeting" name="https://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting">
+<code>broadcategorytargeting</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">targetingsentencelines</td>
+<td align="left">Can be queried to get a <a href="/docs/reference/ads-api/targeting-description/" name="https://developers.facebook.com/docs/reference/ads-api/targeting-description/">targeting description</a> for a targeting spec</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<a href="/docs/reference/ads-api/targeting-description/" name="https://developers.facebook.com/docs/reference/ads-api/targeting-description/">
+<code>targetingsentencelines</code>
+</a>
+</td>
+</tr>
+<tr>
+<td align="left">adpreviewscss</td>
+<td align="left">The Ad Preview CSS for the account</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<a href="/docs/reference/ads-api/generatepreview/" name="https://developers.facebook.com/docs/reference/ads-api/generatepreview/">
+<code>Ad Preview</code>
+</a> CSS snippet</td>
+</tr>
+<tr>
+<td align="left">genreatepreviews</td>
+<td align="left">Generates a Preview of an <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>
+</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<a href="/docs/reference/ads-api/generatepreview/" name="https://developers.facebook.com/docs/reference/ads-api/generatepreview/">
+<code>Ad Preview</code>
+</a> HTML snippet</td>
+</tr>
+</tbody>
+</table>
+<h2>Limits</h2>
+<p>The following are the limits on ad account</p>
+<ul>
+<li>What is the maximum amount of accounts that a user can have? : 25</li>
+<li>What is the maximum number of users per account? : 25</li>
+<li>How many ads can a regular ad account have? : 5,000 non-deleted ads</li>
+<li>How many ads can a bulk ad account have? : 50,000 non-deleted ads</li>
+<li>How many campaigns can a regular ad account have? : 1,000 non-deleted campaigns</li>
+<li>How many campaigns can a bulk ad account have? : 10,000 non-deleted campaigns</li>
+</ul>
+<h2>Read</h2>
+<h3>Retrieving basic data for an ad account</h3>
+<p>Specify act_AccountID, or <code>/me/adaccounts</code>, to retrieve the basic data for an ad account.</p>
+<p>Thus, a basic example for getting account data is the following, if the account ID is <code>act_368811234</code>:</p>
+<pre>
+<code>https://graph.facebook.com/act_368811234?access_token=_____
+</code>
+</pre>
+<p>The result will be similar to the following:</p>
+<pre>
+<code>{
+   &quot;id&quot;: &quot;act_368811234&quot;,
+   &quot;name&quot;: &quot;My Account Name&quot;,
+   &quot;account_status&quot;: 1,
+   &quot;currency&quot;: &quot;USD&quot;,
+   &quot;timezone_id&quot;: 1,
+   &quot;timezone_name&quot;: &quot;America/Los_Angeles&quot;,
+   &quot;daily_spend_limit&quot;: 25000,
+   &quot;users&quot;: [
+      {
+     &quot;uid&quot;: 545071234,
+     &quot;permissions&quot;: [
+        1,2,3,4,5,7
+     ],
+     &quot;role&quot;: 1002
+      },
+      {
+     &quot;uid&quot;: 1270651234,
+     &quot;permissions&quot;: [
+        1,2,3,4,5,7
+     ],
+     &quot;role&quot;: 1001
+      }],
+   &quot;account_groups&quot;: [
+      {
+     &quot;account_group_id&quot;: 121069936651234,
+     &quot;name&quot;: &quot;name_of_account_group&quot;,
+     &quot;status&quot;: 1
+      }],
+   &quot;capabilities&quot;: []}
+</code>
+</pre>
+<p>The account data includes the account ID (in the &apos;id&apos; field), name, currency, time zone, and daily spend limit. The account data also includes associated account groups and the user IDs of authorized users.</p>
+<p>The account name may be the empty string if the user has never changed the name of their account in the Facebook Ads Manager. The time zone for an account is returned in the <code>timezone_id</code> field; you can download the list of timezone IDs at <a href="https://developers.facebook.com/attachment/AdsTimeZones.txt" name="https://developers.facebook.com/attachment/AdsTimeZones.txt">Ads API Time Zones</a>.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/ads-api/adaccount/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1336662010" title="2012年5月10日 8:00">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

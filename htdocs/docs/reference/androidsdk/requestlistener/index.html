@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/androidsdk/requestlistener/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/androidsdk/requestlistener/">https://developers.facebook.com/docs/reference/androidsdk/requestlistener/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</li>
+<li>
+<a href="/docs/reference/php" name="https://developers.facebook.com/docs/reference/php">PHP SDK</a>
+</li>
+<li>
+<a href="/docs/reference/iossdk" name="https://developers.facebook.com/docs/reference/iossdk">iOS SDK</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/androidsdk" name="https://developers.facebook.com/docs/reference/androidsdk">Android SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/request/" name="http://developers.facebook.com/docs/reference/androidsdk/request/">API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/" name="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/">Async API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/authentication/" name="http://developers.facebook.com/docs/reference/androidsdk/authentication/">Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialog/" name="http://developers.facebook.com/docs/reference/androidsdk/dialog/">Dialogs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/helper/" name="http://developers.facebook.com/docs/reference/androidsdk/helper/">Helpers</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Interfaces</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/" name="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/">DialogListener</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/" name="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/">RequestListener</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Errors</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/" name="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/">DialogError</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/" name="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/">FacebookError</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>RequestListener</h1>
+<div class="breadcrumbs">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/androidsdk/" name="https://developers.facebook.com/docs/reference/androidsdk/">Android SDK</a> › <a href="/docs/reference/androidsdk/requestlistener/" name="https://developers.facebook.com/docs/reference/androidsdk/requestlistener/">RequestListener</a>
+</div>
+</div>
+</div>
+<p>The RequestListener Interface provides the callback methods for <a href="/docs/reference/androidsdk/ayncrequest/" name="https://developers.facebook.com/docs/reference/androidsdk/ayncrequest/">asynchronous request methods</a>. These are defined in <a href="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/AsyncFacebookRunner.java" name="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/AsyncFacebookRunner.java">AsyncFacebookRunner.java</a>.</p>
+<h2>Callback Methods</h2>
+<hr />
+<h2>void onComplete(String response, Object state):</h2>
+<p>Called when a request completes with the given response. Executed by a background thread: do not update the UI in this method.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>response</code> - JSON string representation of the API request response.</p>
+<p>
+<code>state</code> - An arbitrary object used to identify the request that was passed in the original request method.</p>
+<hr />
+<h2>void onFacebookError(FacebookError fbe, Object state):</h2>
+<p>Called when the server-side Facebook method fails. Executed by a background thread: do not update the UI in this method.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>fbe</code> - Encapsulation of a Facebook Error, a Facebook request that could not be fulfilled. This is defined in <a href="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/FacebookError.java" name="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/FacebookError.java">FacebookError.java</a>
+</p>
+<p>
+<code>state</code> - An arbitrary object used to identify the request that was passed in the original request method.</p>
+<hr />
+<h2>void onFileNotFoundException(FileNotFoundException ex, Object state):</h2>
+<p>Called when a request fails because the requested resource is invalid or does not exist. Executed by a background thread: do not update the UI in this method.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>ex</code> - FileNotFoundException pertaining to the invalid or not found resource.</p>
+<p>
+<code>state</code> - An arbitrary object used to identify the request that was passed in the original request method.</p>
+<hr />
+<h2>void onIOException(IOException ex, Object state):</h2>
+<p>Called when a request has a network or request error. Executed by a background thread: do not update the UI in this method.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>ex</code> - Network error IOException.</p>
+<p>
+<code>state</code> - An arbitrary object used to identify the request that was passed in the original request method.</p>
+<hr />
+<h2>void onMalformedURLException(MalformedURLException ex, Object state):</h2>
+<p>Called if an invalid graph path is provided (which may result in a malformed URL). Executed by a background thread: do not update the UI in this method.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>ex</code> - MalformedURLException pertaining to the invalid graph path.</p>
+<p>
+<code>state</code> - An arbitrary object used to identify the request that was passed in the original request method.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1316385556" title="2011年9月18日 15:39">約9ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

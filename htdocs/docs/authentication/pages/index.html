@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/authentication/pages/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/authentication/pages/">https://developers.facebook.com/docs/authentication/pages/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/server-side/" name="http://developers.facebook.com/docs/authentication/server-side/">Server-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/client-side/" name="http://developers.facebook.com/docs/authentication/client-side/">Client-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/ios/" name="http://developers.facebook.com/docs/authentication/ios/">Authentication in native iOS apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/android/" name="http://developers.facebook.com/docs/authentication/android/">Authentication in native Android apps</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/authentication/pages/" name="http://developers.facebook.com/docs/authentication/pages/">Authenticating as a Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/applications/" name="http://developers.facebook.com/docs/authentication/applications/">Authenticating as an App</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/devices/" name="http://developers.facebook.com/docs/authentication/devices/">Authentication for Devices</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/canvas/" name="http://developers.facebook.com/docs/authentication/canvas/">Authentication within a Canvas Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pagetab/" name="http://developers.facebook.com/docs/authentication/pagetab/">Authentication within a Page Tab</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/access-token-expiration/" name="http://developers.facebook.com/docs/authentication/access-token-expiration/">Handling Invalid and Expired Access Tokens</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/permissions/" name="http://developers.facebook.com/docs/authentication/permissions/">Permissions Reference</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/publishing/" name="http://developers.facebook.com/docs/publishing/">Publishing Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/reauthentication/" name="http://developers.facebook.com/docs/authentication/reauthentication/">Re-Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/signed_request/" name="http://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Authenticating as a Page</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">Authentication</a> › <a href="/docs/authentication/pages/" name="https://developers.facebook.com/docs/authentication/pages/">Authenticating as a Page</a>
+</div>
+</div>
+</div>
+<p>Authenticating as a Page enables your application to obtain a Page Access Token. When used in requests to the Graph API, these tokens make the requests appear to come from a Page rather than a User.</p>
+<p>This is useful in scenarios where you want to post stories to a Page&apos;s Timeline as the Page, rather than as a User or retrieve a Page&apos;s insights data.</p>
+<h2>1. Authenticate the user and request the <code>manage_pages</code> permission</h2>
+<p>First you need to authenticate a User, and obtain a User Access Token. To do this, please follow the <a href="/docs/authentication/server-side" name="https://developers.facebook.com/docs/authentication/server-side">server-side</a> or <a href="/docs/authentication/client-side" name="https://developers.facebook.com/docs/authentication/client-side">client-side</a> auth flows for the mobile web and desktop web, or the <a href="/docs/authentication/ios" name="https://developers.facebook.com/docs/authentication/ios">native iOS</a> or <a href="/docs/authentication/android" name="https://developers.facebook.com/docs/authentication/android">native Android</a> authentication flows.</p>
+<p>To request the <code>manage_pages</code> permission, add it as the <code>scope</code> parameter in the user authentication flow.</p>
+<h2>2. Get the list of pages the user manages</h2>
+<p>Perform an HTTP GET with the user access token you obtained in step 1.</p>
+<pre>
+<code>https://graph.facebook.com/me/accounts?access_token=USER_ACCESS_TOKEN
+</code>
+</pre>
+<p>The response will be an array of Pages and Applications that the user manages:</p>
+<pre>
+<code>{
+  &quot;data&quot;: [
+    {
+      &quot;name&quot;: &quot;PAGE_TITLE&quot;, 
+      &quot;access_token&quot;: &quot;PAGE_ACCESS_TOKEN&quot;, 
+      &quot;category&quot;: &quot;PAGE_CATEGORY&quot;, 
+      &quot;id&quot;: &quot;PAGE_ID&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;APPLICATION_TITLE&quot;, 
+      &quot;access_token&quot;: &quot;APP_ACCESS_TOKEN&quot;, 
+      &quot;category&quot;: &quot;Application&quot;, 
+      &quot;id&quot;: &quot;APP_ID&quot;
+    }, 
+
+    ...
+
+ ]
+}
+</code>
+</pre>
+<p>Within each block will be a Page access token or <a href="/docs/authentication/applications" name="https://developers.facebook.com/docs/authentication/applications">Application access token</a> which can be used to make requests to the Graph API. If you see a list of pages and apps, but an access token is not included in each, be sure that you have obtained the <code>manage_pages</code> permission from the user.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/authentication/pages/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1336988917" title="2012年5月14日 2:48">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/fbml/javascript/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/fbml/javascript/">https://developers.facebook.com/docs/reference/fbml/javascript/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+<ul class="subsections">
+<li>
+<a class="selected" href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</li>
+<li>
+<a href="/docs/reference/php" name="https://developers.facebook.com/docs/reference/php">PHP SDK</a>
+</li>
+<li>
+<a href="/docs/reference/iossdk" name="https://developers.facebook.com/docs/reference/iossdk">iOS SDK</a>
+</li>
+<li>
+<a href="/docs/reference/androidsdk" name="https://developers.facebook.com/docs/reference/androidsdk">Android SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Core Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.api/" name="http://developers.facebook.com/docs/reference/javascript/FB.api/">FB.api</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.init/" name="http://developers.facebook.com/docs/reference/javascript/FB.init/">FB.init</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.ui/" name="http://developers.facebook.com/docs/reference/javascript/FB.ui/">FB.ui</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Auth Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.getAuthResponse/" name="http://developers.facebook.com/docs/reference/javascript/FB.getAuthResponse/">FB.getAuthResponse</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.getLoginStatus/" name="http://developers.facebook.com/docs/reference/javascript/FB.getLoginStatus/">FB.getLoginStatus</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.getSession/" name="http://developers.facebook.com/docs/reference/javascript/FB.getSession/">FB.getSession</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.login/" name="http://developers.facebook.com/docs/reference/javascript/FB.login/">FB.login</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.logout/" name="http://developers.facebook.com/docs/reference/javascript/FB.logout/">FB.logout</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Event Handling</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe/" name="http://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe/">FB.Event.subscribe</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Event.unsubscribe/" name="http://developers.facebook.com/docs/reference/javascript/FB.Event.unsubscribe/">FB.Event.unsubscribe</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>XFBML Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.XFBML.parse/" name="http://developers.facebook.com/docs/reference/javascript/FB.XFBML.parse/">FB.XFBML.parse</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Canvas Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.Prefetcher.addStaticResource/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.Prefetcher.addStaticResource/">FB.Canvas.Prefetcher.addStaticResource</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.Prefetcher.setCollectionMode/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.Prefetcher.setCollectionMode/">FB.Canvas.Prefetcher.setCollectionMode</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.getPageInfo/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.getPageInfo/">FB.Canvas.getPageInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.hideFlashElement/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.hideFlashElement/">FB.Canvas.hideFlashElement</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.scrollTo/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.scrollTo/">FB.Canvas.scrollTo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setAutoGrow/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setAutoGrow/">FB.Canvas.setAutoGrow</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading/">FB.Canvas.setDoneLoading</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setSize/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setSize/">FB.Canvas.setSize</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setUrlHandler/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setUrlHandler/">FB.Canvas.setUrlHandler</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.showFlashElement/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.showFlashElement/">FB.Canvas.showFlashElement</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.startTimer/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.startTimer/">FB.Canvas.startTimer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.stopTimer/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.stopTimer/">FB.Canvas.stopTimer</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>JavaScript SDK</h1>
+<div class="breadcrumbs">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</div>
+</div>
+</div>
+<h2>Overview</h2>
+<p>The JavaScript SDK provides a rich set of client-side functionality for accessing Facebook&apos;s server-side API calls. These include all of the features of the <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">REST API</a>, <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a>, and <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>. Further, it provides a mechanism for rendering of the XFBML versions of our <a href="/plugins/" name="https://developers.facebook.com/plugins/">Social Plugins</a>, and a way for <a href="/docs/guides/canvas/" name="https://developers.facebook.com/docs/guides/canvas/">Canvas pages</a> to communicate with Facebook.</p>
+<p>You will need an app ID to initialize the SDK, which you can obtain from the <a href="/apps/" name="https://developers.facebook.com/apps/">App Dashboard</a>.</p>
+<p>For example usage, check out <a href="../../guides/web" name="https://developers.facebook.com/../guides/web">Facebook for Websites</a> and the <a href="../../authentication/" name="https://developers.facebook.com/../authentication/">Authentication guide</a>. We also have a <a href="../../../tools/console" name="https://developers.facebook.com/../../tools/console">JavaScript Test Console</a> which allows you to test and debug common JavaScript SDK methods.</p>
+<p>The JavaScript SDK <a href="https://developers.facebook.com/blog/post/525/" name="https://developers.facebook.com/blog/post/525/">supports OAuth 2.0</a>.</p>
+<h2>Loading</h2>
+<p>The following code will load and initialize the JavaScript SDK with all common options. Replace <code>YOUR_APP_ID</code> and <code>WWW.YOUR_DOMAIN.COM</code> with the appropriate values. The best place to put this code is right after the opening <code>&lt;body&gt;</code> tag.</p>
+<pre>
+<code>&lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : &apos;YOUR_APP_ID&apos;, // App ID
+      channelUrl : &apos;//WWW.YOUR_DOMAIN.COM/channel.html&apos;, // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+    // Additional initialization code here
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = &apos;facebook-jssdk&apos;, ref = d.getElementsByTagName(&apos;script&apos;)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+     js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+&lt;/script&gt;
+</code>
+</pre>
+<p>The JavaScript SDK requires the <code>fb-root</code> element in order to load properly and a call to <code>FB.init</code> to initialize the SDK with your app ID correctly.</p>
+<p>The <code>fb-root</code> element must not be hidden using <code>display: none</code> or <code>visibility: hidden</code>, or some parts of the SDK will not work properly in Internet Explorer.</p>
+<p>The SDK inserts elements into <code>fb-root</code> which expect to be positioned relative to the body or relative to an element close to the top of the page. It is best if the <code>fb-root</code> element is not inside of an element with <code>position: absolute</code> or <code>position: relative</code>. If you must place the <code>fb-root</code> element inside of a positioned element, then you should also give it a position close to the top of the body or some parts of the SDK may not work properly.</p>
+<p>This code loads the SDK asynchronously so it does not block loading other elements of your page. This is particularly important to ensure fast page loads for users and SEO robots.</p>
+<p>The URLs in the above code are protocol relative. This lets the browser to load the SDK over the same protocol (HTTP or HTTPS) as the containing page, which will prevent &quot;Insecure Content&quot; warnings.</p>
+<p>The function assigned to <code>window.fbAsyncInit</code> is run as soon as the SDK is loaded. Any code that you want to run after the SDK is loaded should be placed within this function and after the call to <code>FB.init</code>. For example, this is where you would <a href="./FB.getLoginStatus" name="https://developers.facebook.com/docs/FB.getLoginStatus">test the logged in status</a> of the user or <a href="./FB.Event.subscribe" name="https://developers.facebook.com/docs/FB.Event.subscribe">subscribe to any Facebook events</a> in which your application is interested.</p>
+<p>See the <a href="./FB.init" name="https://developers.facebook.com/docs/FB.init">FB.init documentation</a> for a full list of available initialization options.</p>
+<h3>Channel File</h3>
+<p>The channel file addresses some issues with cross domain communication in certain browsers. The contents of the <code>channel.html</code> file can be just a single line:</p>
+<pre>
+<code> &lt;script src=&quot;//connect.facebook.net/en_US/all.js&quot;&gt;&lt;/script&gt;
+</code>
+</pre>
+<p>It is important for the channel file to be cached for as long as possible. When serving this file, you must send valid <code>Expires</code> headers with a long expiration period. This will ensure the channel file is cached by the browser which is important for a smooth user experience. Without proper caching, cross domain communication will become very slow and users will suffer a severely degraded experience. A simple way to do this in PHP is:</p>
+<pre>
+<code> &lt;?php
+ $cache_expire = 60*60*24*365;
+ header(&quot;Pragma: public&quot;);
+ header(&quot;Cache-Control: max-age=&quot;.$cache_expire);
+ header(&apos;Expires: &apos; . gmdate(&apos;D, d M Y H:i:s&apos;, time()+$cache_expire) . &apos; GMT&apos;);
+ ?&gt;
+ &lt;script src=&quot;//connect.facebook.net/en_US/all.js&quot;&gt;&lt;/script&gt;
+</code>
+</pre>
+<p>The <code>channelUrl</code> parameter is optional, but recommended. Providing a channel file can help address three specific known issues. First, pages that include code to communicate across frames may cause Social Plugins to show up as blank without a <code>channelUrl</code>. Second, if no <code>channelUrl</code> is provided and a page includes auto-playing audio or video, the user may hear two streams of audio because the page has been loaded a second time in the background for cross domain communication. Third, a channel file will prevent inclusion of extra hits in your server-side logs. If you do not specify a <code>channelUrl</code>, you can remove page views containing <code>fb_xd_bust</code> or <code>fb_xd_fragment</code> parameters from your logs to ensure proper counts.</p>
+<p>The <code>channelUrl</code> must be a fully qualified URL matching the page on which you include the SDK. In other words, the channel file domain must include <code>www</code> if your site is served using <code>www</code>, and if you modify <code>document.domain</code> on your page you must make the same <code>document.domain</code> change in the <code>channel.html</code> file as well. The protocols must also match. If your page is served over <code>https</code>, your <code>channelUrl</code> must also be <code>https</code>. Remember to use the matching protocol for the script <code>src</code> as well. The sample code above uses protocol-relative URLs which should handle most <code>https</code> cases properly.</p>
+<h2>Authentication &amp; Authorization</h2>
+<p>The Facebook JavaScript SDK allows your users to register and sign-in to your site using their Facebook accounts. This is done by sharing the logged in user state between facebook.com and your site. A Facebook user remains logged in to your site as long as they are logged in to Facebook and there is a valid access token for your app.</p>
+<p>This means you do not need to create your own registration flow and your users do not have to create new profiles or remember a new username. Best of all, you also get to access the user&apos;s social graph -- allowing you to create a great customized, social experience and the ability to publish user actions back to Facebook.</p>
+<p>In order to use the authentication methods, your app must be configured with an App Domain. App settings can be changed on the <a href="/apps" name="https://developers.facebook.com/apps">settings page</a>.</p>
+<h3>Status &amp; Sessions</h3>
+<p>The first step is figuring out how you identify who the current user is, and how to make API calls on their behalf. The following SDK methods are useful for this purpose:</p>
+<ul>
+<li>
+<a href="https://developers.facebook.com/docs/reference/javascript/FB.login" name="https://developers.facebook.com/docs/reference/javascript/FB.login">FB.login</a> — log in or request extended permissions</li>
+<li>
+<a href="https://developers.facebook.com/docs/reference/javascript/FB.logout" name="https://developers.facebook.com/docs/reference/javascript/FB.logout">FB.logout</a> — log out (only if the user is connected with your application)</li>
+<li>
+<a href="https://developers.facebook.com/docs/reference/javascript/FB.getLoginStatus" name="https://developers.facebook.com/docs/reference/javascript/FB.getLoginStatus">FB.getLoginStatus</a> — asynchronous method to get the current login status from facebook.com</li>
+<li>
+<a href="https://developers.facebook.com/docs/reference/javascript/FB.getAuthResponse" name="https://developers.facebook.com/docs/reference/javascript/FB.getAuthResponse">FB.getAuthResponse</a> — synchronous accessor for the current authorization response record, which for connected users includes an access token, a signed request, and a user ID. Only call this method if you have already called <code>getLoginStatus</code> first.</li>
+</ul>
+<p>In addition to the above methods, there are several relevant events that you can subscribe to using <a href="https://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe" name="https://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe">FB.Event.subscribe</a>:</p>
+<ul>
+<li>
+<code>auth.login</code>
+</li>
+<li>
+<code>auth.logout</code>
+</li>
+<li>
+<code>auth.statusChange</code>
+</li>
+<li>
+<code>auth.authResponseChange</code>
+</li>
+</ul>
+<h2>API Calls</h2>
+<p>The Javascript SDK provides access to our server side APIs. Specifically, they help enable you to integrate data from Facebook into your site, as well as allow you to submit data back to Facebook. The JavaScript SDK makes all this available to you via <a href="https://developers.facebook.com/docs/reference/javascript/FB.api" title="Server-Side API Calls" name="https://developers.facebook.com/docs/reference/javascript/FB.api">FB.api</a>.</p>
+<p>An example of a <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> query to get the logged-in user&apos;s name:</p>
+<pre>
+<code>FB.api(&apos;/me&apos;, function(response) {
+  alert(&apos;Your name is &apos; + response.name);
+});
+</code>
+</pre>
+<p>If you want to make an <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a> query via the legacy <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">REST API</a>:</p>
+<pre>
+<code>FB.api(
+  {
+    method: &apos;fql.query&apos;,
+    query: &apos;SELECT name FROM user WHERE uid=me()&apos;
+  },
+  function(response) {
+    alert(&apos;Your name is &apos; + response[0].name);
+  }
+);
+</code>
+</pre>
+<h2>Platform Dialogs</h2>
+<p>One of the most powerful features of the SDK is to integrate Facebook UI flows into your application. One common example of this is the feed dialog. <a href="https://developers.facebook.com/docs/reference/javascript/FB.ui" title="UI Dialogs (to render dialogs like publish and share)" name="https://developers.facebook.com/docs/reference/javascript/FB.ui">FB.ui</a> is the method that allows you to trigger this and other dialogs. For example:</p>
+<pre>
+<code>FB.ui(
+  {
+   method: &apos;feed&apos;,
+   message: &apos;getting educated about Facebook Connect&apos;,
+   name: &apos;Connect&apos;,
+   caption: &apos;The Facebook Connect JavaScript SDK&apos;,
+      description: (
+      &apos;A small JavaScript library that allows you to harness &apos; +
+      &apos;the power of Facebook, bringing the user\&apos;s identity, &apos; +
+      &apos;social graph and distribution power to your site.&apos;
+   ),
+   link: &apos;http://www.fbrell.com/&apos;,
+   picture: &apos;http://www.fbrell.com/f8.jpg&apos;,
+   actions: [
+        { name: &apos;fbrell&apos;, link: &apos;http://www.fbrell.com/&apos; }
+   ],
+  user_message_prompt: &apos;Share your thoughts about RELL&apos;
+  },
+  function(response) {
+    if (response &amp;&amp; response.post_id) {
+      alert(&apos;Post was published.&apos;);
+    } else {
+      alert(&apos;Post was not published.&apos;);
+    }
+  }
+);
+</code>
+</pre>
+<p>See the <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Platform Dialogs documentation</a> for a full list of available dialogs.</p>
+<h2>Social Plugins</h2>
+<p>The JavaScript SDK lets you use the XFBML implementations of <a href="/plugins/" name="https://developers.facebook.com/plugins/">Social Plugins</a>. Compared to the iframe implementations, XFBML Plugins have additional features and improved performance. In order to use XFBML on your webpage, you must add an XML namespace attribute to the root <code>&lt;html&gt;</code> element of your page. Without this declaration, XFBML tags will not render in Internet Explorer.</p>
+<pre>
+<code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:fb=&quot;http://ogp.me/ns/fb#&quot;&gt;
+</code>
+</pre>
+<p>For example, the following code will add a Like button to your page. For more details, see the <a href="/docs/reference/plugins/like/" name="https://developers.facebook.com/docs/reference/plugins/like/">Like button documentation</a>.</p>
+<pre>
+<code>&lt;fb:like send=&quot;true&quot; width=&quot;450&quot; show_faces=&quot;true&quot; /&gt;
+</code>
+</pre>
+<h2>Canvas Pages on Facebook</h2>
+<p>The JavaScript SDK provides a way for Canvas pages on Facebook to communicate with the parent facebook.com page. This is useful for <a href="/docs/reference/javascript/FB.Canvas.setSize" name="https://developers.facebook.com/docs/reference/javascript/FB.Canvas.setSize">resizing the Canvas iframe</a>, <a href="/docs/reference/javascript/FB.Canvas.setDoneLoading" name="https://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading">collecting performance data</a>, and <a href="/docs/reference/javascript/FB.Canvas.Prefetcher.addStaticResource" name="https://developers.facebook.com/docs/reference/javascript/FB.Canvas.Prefetcher.addStaticResource">optimizing static resources</a>. For more information see the <a href="/docs/guides/canvas/" name="https://developers.facebook.com/docs/guides/canvas/">Apps on Facebook guide</a>.</p>
+<p>
+<a name="hide_flash_callback">
+</a>
+</p>
+<h3>Custom Flash Hiding Callback</h3>
+<p>A special consideration for Flash Developers on Canvas - if you are hosting an Adobe Flash Application it is <a href="/docs/appsonfacebook/tutorial/#flash" name="https://developers.facebook.com/docs/appsonfacebook/tutorial/#flash">recommended</a> that you set the <code>wmode</code> of the Flash object to <code>opaque</code>.</p>
+<p>If you must use <code>wmode</code> values of <code>window</code> or <code>direct</code>, Canvas will automatically hide and display the Flash object when Dialogs, Ticket flyouts, Chat Tabs and Notifications display.</p>
+<p>Developers who wish to provide a custom hide and display experience may pass a JavaScript function in the <code>hideFlashCallback</code> option for <a href="/docs/reference/javascript/FB.init/" name="https://developers.facebook.com/docs/reference/javascript/FB.init/">FB.init</a>. This function will be executed whenever the Flash object is hidden or displayed due to user behavior (clicking on a Notification, etc.) and can be used by a developer to take the appropriate actions: hiding or displaying their Flash object. It receives a parameter of type <code>object</code> that contains two properties:</p>
+<table>
+<tr>
+<td>
+<code>state</code>
+</td>
+<td>Supports values: <code>&apos;opened&apos;</code> or <code>&apos;closed&apos;</code>.</td>
+</tr>
+<tr>
+<td>
+<code>elem</code>
+</td>
+<td>The HTML element that will hidden or displayed.</td>
+</tr>
+</table>
+<p>The custom action must complete within 200ms or the Flash object will be hidden automatically regardless.</p>
+<p>Sample implementation:</p>
+<pre>
+<code>function(params) {
+  if (params.state == &apos;opened&apos;) {
+    // Hide the Flash object
+    FB.Canvas.hideFlashElement(params.elem);
+  } else {
+    // Display the Flash object
+    FB.Canvas.showFlashElement(params.elem);
+}
+</code>
+</pre>
+<p>As displayed in the example above, Flash content can be manually hidden and displayed via <a href="/docs/reference/javascript/FB.Canvas.hideFlashElement/" name="https://developers.facebook.com/docs/reference/javascript/FB.Canvas.hideFlashElement/">FB.Canvas.hideFlashElement</a> and <a href="/docs/reference/javascript/FB.Canvas.showFlashElement/" name="https://developers.facebook.com/docs/reference/javascript/FB.Canvas.showFlashElement/">FB.Canvas.showFlashElement</a>.</p>
+<h2>Localization</h2>
+<p>The JavaScript SDK is available in all locales that are supported by Facebook. This list of supported locales is available as <a href="https://www.facebook.com/translations/FacebookLocales.xml" name="https://www.facebook.com/translations/FacebookLocales.xml">an XML file</a>. To change the locale of the SDK to match the locale of your site, change <code>en_US</code> to a supported locale code when loading the SDK. For example, if your site is in Spanish, using the following code to load the SDK will cause all Social Plugins to be rendered in Spanish.</p>
+<pre>
+<code>&lt;script&gt;
+  (function(d){
+     var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+     js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+     js.src = &quot;//connect.facebook.net/es_LA/all.js&quot;;
+     d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+   }(document));
+&lt;/script&gt;
+</code>
+</pre>
+<h2>Synchronous Loading</h2>
+<p>It is possible to load the SDK synchronously which may be useful for debugging, but this method is not recommended for typical use. Synchronous operations will block the web page, resulting in worse performance and a slower user experience. This may also negatively impact SEO due to the increased slowness perceived by robots and crawlers.</p>
+<p>You can load the SDK using the standard <code>&lt;script&gt;</code> element and calling <code>FB.init</code> afterwards. You must still specify a <code>&lt;div&gt;</code> element named <code>fb-root</code> within the document as well. Below is an example of initializing the SDK with all the common options enabled:</p>
+<pre>
+<code>&lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;//connect.facebook.net/en_US/all.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  FB.init({
+    appId      : &apos;YOUR_APP_ID&apos;,
+    channelUrl : &apos;//WWW.YOUR_DOMAIN.COM/channel.html&apos;, // Channel File
+    status     : true, // check login status
+    cookie     : true, // enable cookies to allow the server to access the session
+    xfbml      : true  // parse XFBML
+  });
+&lt;/script&gt;
+</code>
+</pre>
+<hr />
+<h2>Method Categories</h2>
+<ul>
+<li>
+<a href="#core-methods" name="https://developers.facebook.com/docs/#core-methods">Core Methods</a>
+</li>
+<li>
+<a href="#auth-methods" name="https://developers.facebook.com/docs/#auth-methods">Auth Methods</a>
+</li>
+<li>
+<a href="#event-handling" name="https://developers.facebook.com/docs/#event-handling">Event Handling</a>
+</li>
+<li>
+<a href="#xfbml-methods" name="https://developers.facebook.com/docs/#xfbml-methods">XFBML Methods</a>
+</li>
+<li>
+<a href="#canvas-methods" name="https://developers.facebook.com/docs/#canvas-methods">Canvas Methods</a>
+</li>
+</ul>
+<hr />
+<h2 id="core-methods">Core Methods</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.api/" name="http://developers.facebook.com/docs/reference/javascript/FB.api/">FB.api</a>
+</div>
+<div class="snippet">
+<p>Make an API call to the <a href="/docs/api" name="https://developers.facebook.com/docs/api">Graph API</a>.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.init/" name="http://developers.facebook.com/docs/reference/javascript/FB.init/">FB.init</a>
+</div>
+<div class="snippet">
+<p>Initialize the library.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.ui/" name="http://developers.facebook.com/docs/reference/javascript/FB.ui/">FB.ui</a>
+</div>
+<div class="snippet">
+<p>Method for triggering <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a> with Facebook as iframe dialogs or popups. Examples: publishing to the stream, sharing links, sending friend requests.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="auth-methods">Auth Methods</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.getAuthResponse/" name="http://developers.facebook.com/docs/reference/javascript/FB.getAuthResponse/">FB.getAuthResponse</a>
+</div>
+<div class="snippet">
+<p>
+<em>Synchronous</em> accessor for the current authResponse.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.getLoginStatus/" name="http://developers.facebook.com/docs/reference/javascript/FB.getLoginStatus/">FB.getLoginStatus</a>
+</div>
+<div class="snippet">
+<p>Find out the current status from the server, and get a session if the user is connected.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.getSession/" name="http://developers.facebook.com/docs/reference/javascript/FB.getSession/">FB.getSession</a>
+</div>
+<div class="snippet">
+<p>
+<em>Synchronous</em> accessor for the current Session.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.login/" name="http://developers.facebook.com/docs/reference/javascript/FB.login/">FB.login</a>
+</div>
+<div class="snippet">
+<p>Login/Authorize/Permissions.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.logout/" name="http://developers.facebook.com/docs/reference/javascript/FB.logout/">FB.logout</a>
+</div>
+<div class="snippet">
+<p>Logout the user in the background.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="event-handling">Event Handling</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe/" name="http://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe/">FB.Event.subscribe</a>
+</div>
+<div class="snippet">
+<p>Subscribe to a given event name, invoking your callback function whenever the event is fired.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Event.unsubscribe/" name="http://developers.facebook.com/docs/reference/javascript/FB.Event.unsubscribe/">FB.Event.unsubscribe</a>
+</div>
+<div class="snippet">
+<p>Removes subscribers, inverse of <a href="FB.Event.subscribe" name="https://developers.facebook.com/docs/FB.Event.subscribe">FB.Event.subscribe</a>.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="xfbml-methods">XFBML Methods</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.XFBML.parse/" name="http://developers.facebook.com/docs/reference/javascript/FB.XFBML.parse/">FB.XFBML.parse</a>
+</div>
+<div class="snippet">
+<p>Parse and render XFBML markup in the document.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="canvas-methods">Canvas Methods</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.Prefetcher.addStaticResource/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.Prefetcher.addStaticResource/">FB.Canvas.Prefetcher.addStaticResource</a>
+</div>
+<div class="snippet">
+<p>Controls which static resources are flushed to the browser early.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.Prefetcher.setCollectionMode/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.Prefetcher.setCollectionMode/">FB.Canvas.Prefetcher.setCollectionMode</a>
+</div>
+<div class="snippet">
+<p>Controls how statistics are collected on resources used by your application, with the intent to influence whether those resources will be fetched to the browser early, or to turn off Prefetching completely.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.getPageInfo/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.getPageInfo/">FB.Canvas.getPageInfo</a>
+</div>
+<div class="snippet">
+<p>Returns a Javascript object containing information about your app&apos;s canvas page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.hideFlashElement/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.hideFlashElement/">FB.Canvas.hideFlashElement</a>
+</div>
+<div class="snippet">
+<p>Hides a Flash Element, used in conjunction with hideFlashCallback.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.scrollTo/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.scrollTo/">FB.Canvas.scrollTo</a>
+</div>
+<div class="snippet">
+<p>Tells Facebook to scroll to a specific location in the iframe of your canvas page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setAutoGrow/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setAutoGrow/">FB.Canvas.setAutoGrow</a>
+</div>
+<div class="snippet">
+<p>Starts or stops a timer which resizes your iframe every few milliseconds.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading/">FB.Canvas.setDoneLoading</a>
+</div>
+<div class="snippet">
+<p>Reports that the page is now usable by the user, for collecting performance metrics.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setSize/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setSize/">FB.Canvas.setSize</a>
+</div>
+<div class="snippet">
+<p>Tells Facebook to resize your iframe.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setUrlHandler/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setUrlHandler/">FB.Canvas.setUrlHandler</a>
+</div>
+<div class="snippet">
+<p>Registers the callback for inline processing (i.e. without page reload) of user actions, such as clicks on Live Ticker game stories.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.showFlashElement/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.showFlashElement/">FB.Canvas.showFlashElement</a>
+</div>
+<div class="snippet">
+<p>Display a Flash Element, used in conjunction with hideFlashCallback.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.startTimer/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.startTimer/">FB.Canvas.startTimer</a>
+</div>
+<div class="snippet">
+<p>When using <a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading">setDoneLoading</a>, controls the page load timer.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.stopTimer/" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.stopTimer/">FB.Canvas.stopTimer</a>
+</div>
+<div class="snippet">
+<p>When using <a href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading" name="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading">setDoneLoading</a>, controls the page load timer.</p>
+</div>
+</div>
+</div>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/javascript/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1337185505" title="2012年5月16日 9:25">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/oauth2-https-migration/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/oauth2-https-migration/">https://developers.facebook.com/docs/oauth2-https-migration/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a class="selected" href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/server-side/" name="http://developers.facebook.com/docs/authentication/server-side/">Server-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/client-side/" name="http://developers.facebook.com/docs/authentication/client-side/">Client-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/ios/" name="http://developers.facebook.com/docs/authentication/ios/">Authentication in native iOS apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/android/" name="http://developers.facebook.com/docs/authentication/android/">Authentication in native Android apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pages/" name="http://developers.facebook.com/docs/authentication/pages/">Authenticating as a Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/applications/" name="http://developers.facebook.com/docs/authentication/applications/">Authenticating as an App</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/devices/" name="http://developers.facebook.com/docs/authentication/devices/">Authentication for Devices</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/canvas/" name="http://developers.facebook.com/docs/authentication/canvas/">Authentication within a Canvas Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pagetab/" name="http://developers.facebook.com/docs/authentication/pagetab/">Authentication within a Page Tab</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/access-token-expiration/" name="http://developers.facebook.com/docs/authentication/access-token-expiration/">Handling Invalid and Expired Access Tokens</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/permissions/" name="http://developers.facebook.com/docs/authentication/permissions/">Permissions Reference</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/publishing/" name="http://developers.facebook.com/docs/publishing/">Publishing Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/reauthentication/" name="http://developers.facebook.com/docs/authentication/reauthentication/">Re-Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/signed_request/" name="http://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Authentication</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">Authentication</a>
+</div>
+</div>
+</div>
+<div class="blueBox">
+<p>
+<b>Please note:</b> On <a href="/roadmap/#may-2012" name="https://developers.facebook.com/roadmap/#may-2012">May 2, 2012</a>, the <code>offline_access</code> <a href="/docs/authentication/permissions/" name="https://developers.facebook.com/docs/authentication/permissions/">permission</a> will be removed. If you are building a new application you shouldn&apos;t use this permission. Instead please check the <a href="/docs/offline-access-deprecation/" name="https://developers.facebook.com/docs/offline-access-deprecation/">Deprecation of Offline Access Permission</a> document which explains how to start using access tokens that are valid for up to 60 days.</p>
+</div>
+<p>Authentication gives your app the ability to know the identity of a Facebook user, and to read and write data via <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Facebook&apos;s APIs</a>. The Facebook Platform uses <a href="http://tools.ietf.org/pdf/draft-ietf-oauth-v2-12.pdf" name="http://tools.ietf.org/pdf/draft-ietf-oauth-v2-12.pdf">OAuth 2.0</a> for authentication and authorization.</p>
+<div style="text-align:center">
+<img alt="The OAuth dialog on web and mobile web" src="https://developers.facebook.com/attachment/auth-web-mobileweb.jpg" />
+</div>
+<p>A successful authentication flow results in your application obtaining a <strong>user access token</strong> which can be used to make requests to Facebook&apos;s APIs. There are several authentication flows - each is applicable to a different platform or context:</p>
+<ul>
+<li>
+<a href="/docs/authentication/android" name="https://developers.facebook.com/docs/authentication/android">Authentication in native Android apps</a>
+</li>
+<li>
+<a href="/docs/authentication/ios" name="https://developers.facebook.com/docs/authentication/ios">Authentication in native iOS apps</a>
+</li>
+<li>
+<a href="/docs/authentication/pagetab" name="https://developers.facebook.com/docs/authentication/pagetab">Authentication within a Page Tab on www.facebook.com</a>
+</li>
+<li>
+<a href="/docs/authentication/canvas" name="https://developers.facebook.com/docs/authentication/canvas">Authentication within a Canvas Page on apps.facebook.com</a>
+</li>
+<li>
+<a href="/docs/authentication/client-side" name="https://developers.facebook.com/docs/authentication/client-side">Authentication for Websites &amp; Mobile Web apps using Javascript</a> (client-side flow)</li>
+<li>
+<a href="/docs/authentication/server-side" name="https://developers.facebook.com/docs/authentication/server-side">Authentication for Websites &amp; Mobile Web apps using a Server</a> (server-side flow)</li>
+<li>
+<a href="/docs/authentication/devices" name="https://developers.facebook.com/docs/authentication/devices">Authentication for devices without access to a browser</a>
+</li>
+</ul>
+<p>In addition to obtaining User access tokens, it&apos;s possible to obtain <a href="/docs/authentication/applications" name="https://developers.facebook.com/docs/authentication/applications">App access tokens</a> and <a href="/docs/authentication/pages" name="https://developers.facebook.com/docs/authentication/pages">Page access tokens</a>. App and Page access tokens allow you to use the Graph API on behalf of an App or a Page in order to modify your <a href="/docs/reference/api/application/" name="https://developers.facebook.com/docs/reference/api/application/">application&apos;s properties</a>, create <a href="/docs/test_user" name="https://developers.facebook.com/docs/test_user">test users</a> or to read <a href="/docs/insights" name="https://developers.facebook.com/docs/insights">Insights</a> data for example.</p>
+<h3>Permissions</h3>
+<p>By default, when authorizing your application, a user only grants your app access to their <a href="/docs/reference/api/permissions/#basic_info" name="https://developers.facebook.com/docs/reference/api/permissions/#basic_info">basic information</a>. If you want to read additional data or write data to Facebook, you need to request <a href="/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">additional permissions</a>. In the various authentication flows, you should specify the additional permissions you require using the <code>scope</code> parameter.</p>
+<p>To see which additional permissions you can request, and the access they offer you, see the <a href="/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">Permissions reference</a>.</p>
+<p>It&apos;s possible to programmatically check which permissions a user has granted your application by performing an HTTP GET on:</p>
+<pre>
+<code>https://graph.facebook.com/me/permissions?
+    access_token=USER_ACCESS_TOKEN
+</code>
+</pre>
+<p>Its also possible to programmatically revoke a permission which a user has previously granted your application by performing an HTTP DELETE on:</p>
+<pre>
+<code>https://graph.facebook.com/me/permissions/PERMISSION_NAME?
+    access_token=USER_ACCESS_TOKEN
+</code>
+</pre>
+<h3>Access Token Validity &amp; Expiration</h3>
+<p>When you obtain an access token from Facebook, it will be valid immediately and usable in requests to the API for some time period defined by Facebook. After that period has elapsed, the access token is considered to have expired and the user will need to be authenticated again in order for your app to obtain a fresh access token. The duration for which a given access token is valid depends on how it was generated.</p>
+<p>There are also events which may cause an access token to become invalid before its expected expiry time. Such events include the user changing their password, an application refreshing it&apos;s App Secret. Dealing with varying access token expiry times, and handling the case when an access token becomes invalid before its expected expiry time is essential for building robust social experiences.</p>
+<p>See how to <a href="/docs/authentication/access-token-expiration" name="https://developers.facebook.com/docs/authentication/access-token-expiration">Handle Invalid and Expired access tokens</a>.</p>
+<h3>Application De-authorization</h3>
+<p>When a user removes your app in their <a href="https://www.facebook.com/settings?tab=applications" name="https://www.facebook.com/settings?tab=applications">account settings</a> or blocks the app in the News Feed, you can be notified by specifying a value for the <strong>Deauthorize Callback URL</strong> property in your <a href="https://developers.facebook.com/apps/" name="https://developers.facebook.com/apps/">app&apos;s settings</a>.</p>
+<p>Upon app removal we will send an HTTP POST request containing a single parameter, <a href="/docs/authentication/signed_request/" name="https://developers.facebook.com/docs/authentication/signed_request/">
+<code>signed_request</code>
+</a>, which, once decoded, will yield a JSON object containing the <code>user_id</code> of the user who just deauthorized your app. You will not receive an user access token in this request and all existing user access tokens that were previously issues on behalf of that user will <a href="/docs/authentication/access-token-expiration" name="https://developers.facebook.com/docs/authentication/access-token-expiration">become invalid</a>.</p>
+<p>Upon receiving this request, you can perform any cleanup scripts which, for example, remove that user&apos;s personal information from your servers.</p>
+<h3>Logging the user out of Facebook</h3>
+<p>You can programmatically log the user our of Facebook by redirecting the user to</p>
+<pre>
+<code>https://www.facebook.com/logout.php?
+    next=YOUR_REDIRECT_URL
+   &amp;access_token=USER_ACCESS_TOKEN
+</code>
+</pre>
+<p>The URL supplied in the <code>next</code> parameter must be a URL with the same base domain as your application as defined in your <a href="/apps" name="https://developers.facebook.com/apps">app&apos;s settings</a>.</p>
+<p>You can also log the user out of Facebook on the client-side using the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">Javascript SDK</a> by calling <a href="/docs/reference/javascript/FB.logout/" name="https://developers.facebook.com/docs/reference/javascript/FB.logout/">
+<code>FB.logout()</code>
+</a>.</p>
+<h3>Windows, OS X and Linux native apps</h3>
+<p>Our OAuth 2.0 implementation does not include explicit support for application built for desktop operating systems. However, if your app can embed a web browser (most desktop frameworks such as <a href="http://msdn.microsoft.com/en-us/library/system.windows.forms.webbrowser.asp" name="http://msdn.microsoft.com/en-us/library/system.windows.forms.webbrowser.asp">.NET</a>, <a href="http://livedocs.adobe.com/flex/3/langref/mx/controls/HTML.html" name="http://livedocs.adobe.com/flex/3/langref/mx/controls/HTML.html">AIR</a> and <a href="http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/DisplayWebContent/DisplayWebContent.html" name="http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/DisplayWebContent/DisplayWebContent.html">Cocoa</a> support embedding browsers), you can use the <a href="#client-side-flow" name="https://developers.facebook.com/docs/#client-side-flow">client-side flow</a> with one modification: a specific <strong>redirect_uri</strong>. Rather than requiring desktop apps to host a web server and populate the Site URL in the App Dashboard, we provide a specific URL you can use with desktop apps: <code>https://www.facebook.com/connect/login_success.html</code>.</p>
+<h4>1. Embed a web browser and implement the <a href="/docs/authentication/client-side" name="https://developers.facebook.com/docs/authentication/client-side">client-side authentication flow</a>:</h4>
+<pre>
+<code>https://www.facebook.com/dialog/oauth?
+    client_id=YOUR_APP_ID
+   &amp;redirect_uri=https://www.facebook.com/connect/login_success.html
+   &amp;response_type=token
+</code>
+</pre>
+<h4>2. After the user authorizes your app, Facebook will redirect the user to that URL and pass an the access token in the URI fragment:</h4>
+<pre>
+<code>https://www.facebook.com/connect/login_success.html#
+    access_token=USER_ACCESS_TOKEN
+</code>
+</pre>
+<p>You should detect this redirect and then read the access token out of the URI using whatever mechanisms provided by your OS and development framework of choice.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/authentication/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1335818686" title="2012年4月30日 13:44">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

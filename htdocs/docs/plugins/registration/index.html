@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/plugins/registration/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/plugins/registration/">https://developers.facebook.com/docs/plugins/registration/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Plugins</h5>
+<ul>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/plugins/registration/" name="http://developers.facebook.com/docs/plugins/registration/">Registration</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/plugins/registration/advanced/" name="http://developers.facebook.com/docs/plugins/registration/advanced/">Registration Advanced Uses</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/user_registration/flows/" name="http://developers.facebook.com/docs/user_registration/flows/">User Registration Flows</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Beta Plugins</h5>
+<ul>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Registration</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">Social Plugins</a> › <a href="/docs/plugins/registration/" name="https://developers.facebook.com/docs/plugins/registration/">Registration</a>
+</div>
+</div>
+</div>
+<h2>Introduction</h2>
+<p>The Registration plugin allows users to easily sign up for your website with their Facebook account. The plugin is a simple iframe that you can drop into your page. When logged into Facebook, users see a form that is pre-filled with their Facebook information where appropriate.</p>
+<p>The registration plugin gives you the flexibility to ask for additional information which is not available through the Facebook API (e.g. favorite movie). The plugin also allows users who do not have a Facebook account, or do not wish to sign up for your site using Facebook to use the same form as those who are connecting with Facebook. This eliminates the need to provide two separate login experiences.</p>
+<hr />
+<h2>Example</h2>
+<iframe allowtransparency="true" frameborder="no" height="330" scrolling="auto" src="https://www.facebook.com/plugins/registration?client_id=113869198637480&amp;redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fecho%2F&amp;fields=name,birthday,gender,location,email" style="border:none" width="100%">
+</iframe>
+<pre>
+<code>&lt;iframe src=&quot;https://www.facebook.com/plugins/registration?
+             client_id=113869198637480&amp;
+             redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fecho%2F&amp;
+             fields=name,birthday,gender,location,email&quot;
+        scrolling=&quot;auto&quot;
+        frameborder=&quot;no&quot;
+        style=&quot;border:none&quot;
+        allowTransparency=&quot;true&quot;
+        width=&quot;100%&quot;
+        height=&quot;330&quot;&gt;
+&lt;/iframe&gt;
+</code>
+</pre>
+<hr />
+<h2>Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>client_id</td>
+<td>Your App ID.</td>
+</tr>
+<tr>
+<td>redirect_uri</td>
+<td>The URI that will process the <code>signed_request</code>. It must be prefixed by your <a href="https://www.facebook.com/developers/" name="https://www.facebook.com/developers/">Site URL</a>.</td>
+</tr>
+<tr>
+<td>fields</td>
+<td>Comma separated list of <a href="#named_fields" name="https://developers.facebook.com/docs/#named_fields">Named Fields</a>, or JSON of <a href="#custom_fields" name="https://developers.facebook.com/docs/#custom_fields">Custom Fields</a>.</td>
+</tr>
+<tr>
+<td>fb_only</td>
+<td>Optional. <strong>(boolean)</strong> Only allow users to register by linking their Facebook profile. Use this if you do not have your own registration system. Default: false.</td>
+</tr>
+<tr>
+<td>fb_register</td>
+<td>Optional. <strong>(boolean)</strong> Allow users to register for Facebook during the registration process. Use this if you do not have your own registration system. Default: false.</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Optional. <strong>(int)</strong> The width of the iframe in pixels. If the width is &lt; 520 the plugin will render in a small layout.</td>
+</tr>
+<tr>
+<td>border_color</td>
+<td>Optional. The border color of the plugin.</td>
+</tr>
+<tr>
+<td>target</td>
+<td>Optional. The target of the form submission: _top (default), _parent, or _self.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>
+<a name="named_fields">
+</a>
+</p>
+<h2>Named Fields</h2>
+<p>Specify these in the order you want them to appear in the form. The <code>name</code> field must always be the first field.</p>
+<table>
+<thead>
+<tr>
+<th>Field type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>Full name of the user</td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>Returned as mm/dd/yyyy</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Email address of user (if the user registers with her Facebook account, this will be a verified email address)</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>Gender of user</td>
+</tr>
+<tr>
+<td>location</td>
+<td>Name and ID of the user&apos;s current city</td>
+</tr>
+<tr>
+<td>password</td>
+<td>A newly created password (not their Facebook password)</td>
+</tr>
+<tr>
+<td>captcha</td>
+<td>A <a href="http://en.wikipedia.org/wiki/CAPTCHA" name="http://en.wikipedia.org/wiki/CAPTCHA">test</a> to stop automatic registration</td>
+</tr>
+</tbody>
+</table>
+<p>Less common fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>first_name</td>
+<td>The first name of the user. Useful with view=<code>not_prefilled</code>.</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>The last name of the user.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>
+<a name="custom_fields">
+</a>
+</p>
+<h2>Custom Fields</h2>
+<p>You may also request data from users that isn&apos;t present on Facebook. To do this, you can use a JSON string in the fields attribute instead of the CSV. For example:</p>
+<!--  &fields= made with 
+urlencode(json_encode(json_decode($a)));
+ -->
+<p>
+<fb:registration fields="[
+ {&apos;name&apos;:&apos;name&apos;},
+ {&apos;name&apos;:&apos;email&apos;},
+ {&apos;name&apos;:&apos;location&apos;},
+ {&apos;name&apos;:&apos;gender&apos;},
+ {&apos;name&apos;:&apos;birthday&apos;},
+ {&apos;name&apos;:&apos;password&apos;},
+ {&apos;name&apos;:&apos;like&apos;,       &apos;description&apos;:&apos;Do you like this plugin?&apos;, &apos;type&apos;:&apos;checkbox&apos;,  &apos;default&apos;:&apos;checked&apos;},
+ {&apos;name&apos;:&apos;phone&apos;,      &apos;description&apos;:&apos;Phone Number&apos;,             &apos;type&apos;:&apos;text&apos;},
+ {&apos;name&apos;:&apos;anniversary&apos;,&apos;description&apos;:&apos;Anniversary&apos;,              &apos;type&apos;:&apos;date&apos;},
+ {&apos;name&apos;:&apos;captain&apos;,    &apos;description&apos;:&apos;Best Captain&apos;,             &apos;type&apos;:&apos;select&apos;,    &apos;options&apos;:{&apos;P&apos;:&apos;Jean-Luc Picard&apos;,&apos;K&apos;:&apos;James T. Kirk&apos;}},
+ {&apos;name&apos;:&apos;force&apos;,      &apos;description&apos;:&apos;Which side?&apos;,              &apos;type&apos;:&apos;select&apos;,    &apos;options&apos;:{&apos;jedi&apos;:&apos;Jedi&apos;,&apos;sith&apos;:&apos;Sith&apos;}, &apos;default&apos;:&apos;sith&apos;},
+ {&apos;name&apos;:&apos;live&apos;,       &apos;description&apos;:&apos;Best Place to Live&apos;,       &apos;type&apos;:&apos;typeahead&apos;, &apos;categories&apos;:[&apos;city&apos;,&apos;country&apos;,&apos;state_province&apos;]},
+ {&apos;name&apos;:&apos;captcha&apos;}
+]" redirect-uri="https://developers.facebook.com/tools/echo/">
+</fb:registration>
+</p>
+<p>Which has <code>fields</code> set to</p>
+<pre>
+<code>[
+ {&apos;name&apos;:&apos;name&apos;},
+ {&apos;name&apos;:&apos;email&apos;},
+ {&apos;name&apos;:&apos;location&apos;},
+ {&apos;name&apos;:&apos;gender&apos;},
+ {&apos;name&apos;:&apos;birthday&apos;},
+ {&apos;name&apos;:&apos;password&apos;},
+ {&apos;name&apos;:&apos;like&apos;,       &apos;description&apos;:&apos;Do you like this plugin?&apos;, &apos;type&apos;:&apos;checkbox&apos;,  &apos;default&apos;:&apos;checked&apos;},
+ {&apos;name&apos;:&apos;phone&apos;,      &apos;description&apos;:&apos;Phone Number&apos;,             &apos;type&apos;:&apos;text&apos;},
+ {&apos;name&apos;:&apos;anniversary&apos;,&apos;description&apos;:&apos;Anniversary&apos;,              &apos;type&apos;:&apos;date&apos;},
+ {&apos;name&apos;:&apos;captain&apos;,    &apos;description&apos;:&apos;Best Captain&apos;,             &apos;type&apos;:&apos;select&apos;,    &apos;options&apos;:{&apos;P&apos;:&apos;Jean-Luc Picard&apos;,&apos;K&apos;:&apos;James T. Kirk&apos;}},
+ {&apos;name&apos;:&apos;force&apos;,      &apos;description&apos;:&apos;Which side?&apos;,              &apos;type&apos;:&apos;select&apos;,    &apos;options&apos;:{&apos;jedi&apos;:&apos;Jedi&apos;,&apos;sith&apos;:&apos;Sith&apos;}, &apos;default&apos;:&apos;sith&apos;},
+ {&apos;name&apos;:&apos;live&apos;,       &apos;description&apos;:&apos;Best Place to Live&apos;,       &apos;type&apos;:&apos;typeahead&apos;, &apos;categories&apos;:[&apos;city&apos;,&apos;country&apos;,&apos;state_province&apos;]},
+ {&apos;name&apos;:&apos;captcha&apos;}
+]
+</code>
+</pre>
+<p>
+<code>fields</code> is a <a href="http://json.org" name="http://json.org/">JSON</a> Array of Objects. Any <a href="#named_fields" name="https://developers.facebook.com/docs/#named_fields">built in fields</a> only have a <code>name</code> field. Custom fields have:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>The <code>name</code> on the HTML <code>&lt;input&gt;</code> element. This will be the name of the attribute when you decode the <code>signed_request</code>.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>The label to show the user.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>The field type. Supported values are <code>text</code>, <code>date</code>, <code>select</code>, <code>checkbox</code>, <code>typeahead</code>, and <code>hidden</code>.</td>
+</tr>
+<tr>
+<td>view</td>
+<td>When to show this field. There are two views: <code>prefilled</code> and <code>not_prefilled</code>. <code>prefilled</code> means the user is registering using her Facebook account, <code>not_prefilled</code> means the user is not registering with her Facebook account. This parameter is useful if, for example, you only require a password for users not registering using their Facebook account. <strong>Default:</strong> Display this field in both views.</td>
+</tr>
+</tbody>
+</table>
+<p>Some attributes only apply to fields of a certain type:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>options</td>
+<td>For <code>type:select</code>. An object of &quot;submit value&quot; to &quot;user description &quot;.</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>For <code>type:typeahead</code>. An array of <a href="http://opengraphprotocol.org/" name="http://opengraphprotocol.org/">Open Graph protocol</a> types that are valid for this field.</td>
+</tr>
+<tr>
+<td>default</td>
+<td>For <code>type:select</code> and <code>type:checkbox</code>. Contains the key to select by default instead of showing &quot;Select on&quot; for <code>type:select</code>. Contains the word <code>checked</code> to make a <code>type:checkbox</code> checked by default.</td>
+</tr>
+</tbody>
+</table>
+<p>There are <a href="https://developers.facebook.com/docs/plugins/registration/advanced" name="https://developers.facebook.com/docs/plugins/registration/advanced">advanced features</a> if you are asking for custom fields, including custom client side validation, async validation, and a <code>no_submit</code> feature if you don&apos;t want to pass fields through Facebook.</p>
+<hr />
+<h2>XFBML</h2>
+<p>There is also an <a href="/docs/reference/javascript/FB.XFBML.parse" name="https://developers.facebook.com/docs/reference/javascript/FB.XFBML.parse">XFBML</a> tag for use with the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">Javascript SDK</a>. It will resize the iframe fluidly as its size changes.</p>
+<p>
+<fb:registration fields="name,birthday,gender,location,email" redirect-uri="https://developers.facebook.com/tools/echo/" width="530">
+</fb:registration>
+</p>
+<pre>
+<code>&lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;https://connect.facebook.net/en_US/all.js#appId={YOUR_APP_ID}&amp;xfbml=1&quot;&gt;&lt;/script&gt;
+
+&lt;fb:registration 
+  fields=&quot;name,birthday,gender,location,email&quot; 
+  redirect-uri=&quot;https://developers.facebook.com/tools/echo/&quot;
+  width=&quot;530&quot;&gt;
+&lt;/fb:registration&gt;
+</code>
+</pre>
+<hr />
+<p>
+<a name="login">
+</a>
+</p>
+<h2>Login + Registration Flows</h2>
+<p>When prompting your users to login or register, there is an XFBML button that you will probably find useful.</p>
+<p>
+<fb:login-button registration-url="https://developers.facebook.com/docs/plugins/registration">
+</fb:login-button>
+</p>
+<pre>
+<code>&lt;fb:login-button
+registration-url=&quot;https://developers.facebook.com/docs/plugins/registration&quot; /&gt;
+</code>
+</pre>
+<p>If the user arrives at your site logged out of Facebook, the button will say <strong>Login</strong>. When the user clicks it, she will be prompted to enter her Facebook username and password. If she has not registered for your site, she will be redirected to the URL you specify in the <code>registration-url</code> parameter. If she has already registered for your site, the button will fire an onlogin() Javascript event. When this event is fired you should login the user to your site.</p>
+<p>If the user arrives logged into Facebook, but has not registered for your site, the button will say <strong>Register</strong> and clicking it will take the user to your <code>registration-url</code>.</p>
+<p>Lastly, if the user is logged into Facebook and already connected to your application, the button will say <strong>Login</strong> and won&apos;t do anything when clicked (but your application should detect this state using the <a href="https://developers.facebook.com/docs/reference/javascript/FB.getLoginStatus" name="https://developers.facebook.com/docs/reference/javascript/FB.getLoginStatus">getLoginStatus</a> method and not show the button).</p>
+<p>See our <a href="/docs/user_registration/flows" name="https://developers.facebook.com/docs/user_registration/flows">best practices and diagrams</a> of how all of this fits together, for an overview of how to structure your application.</p>
+<hr />
+<h2>Reading the data</h2>
+<p>The data is passed to your application as a signed request. The <code>signed_request</code> parameter is a simple way to make sure that the data you&apos;re receiving is the actual data sent by Facebook. It is signed using your application secret which is only known by you and Facebook. If someone were to make a change to the data, the signature would no longer validate as they wouldn&apos;t know your application secret to also update the signature.</p>
+<p>Read more about signed requests on the <a href="https://developers.facebook.com/docs/authentication/canvas" name="https://developers.facebook.com/docs/authentication/canvas">canvas authentication documentation</a>.</p>
+<p>The result of decoding the <code>signed_request</code> will be a JSON Object with the following format:</p>
+<pre>
+<code>{
+   &quot;oauth_token&quot;: &quot;...big long string...&quot;,
+   &quot;algorithm&quot;: &quot;HMAC-SHA256&quot;,
+   &quot;expires&quot;: 1291840400,
+   &quot;issued_at&quot;: 1291836800,
+   &quot;registration&quot;: {
+      &quot;name&quot;: &quot;Paul Tarjan&quot;,
+      &quot;email&quot;: &quot;fb@paulisageek.com&quot;,
+      &quot;location&quot;: {
+         &quot;name&quot;: &quot;San Francisco, California&quot;,
+         &quot;id&quot;: 114952118516947
+      },
+      &quot;gender&quot;: &quot;male&quot;,
+      &quot;birthday&quot;: &quot;12/16/1985&quot;,
+      &quot;like&quot;: true,
+      &quot;phone&quot;: &quot;555-123-4567&quot;,
+      &quot;anniversary&quot;: &quot;2/14/1998&quot;,
+      &quot;captain&quot;: &quot;K&quot;,
+      &quot;force&quot;: &quot;jedi&quot;,
+      &quot;live&quot;: {
+         &quot;name&quot;: &quot;Denver, Colorado&quot;,
+         &quot;id&quot;: 115590505119035
+      }
+   },
+   &quot;registration_metadata&quot;: {
+      &quot;fields&quot;: &quot;[\n {&apos;name&apos;:&apos;name&apos;},\n {&apos;name&apos;:&apos;email&apos;},\n {&apos;name&apos;:&apos;location&apos;},\n {&apos;name&apos;:&apos;gender&apos;},\n {&apos;name&apos;:&apos;birthday&apos;},\n {&apos;name&apos;:&apos;password&apos;},\n {&apos;name&apos;:&apos;like&apos;,       &apos;description&apos;:&apos;Do you like this plugin?&apos;, &apos;type&apos;:&apos;checkbox&apos;,  &apos;default&apos;:&apos;checked&apos;},\n {&apos;name&apos;:&apos;phone&apos;,      &apos;description&apos;:&apos;Phone Number&apos;,             &apos;type&apos;:&apos;text&apos;},\n {&apos;name&apos;:&apos;anniversary&apos;,&apos;description&apos;:&apos;Anniversary&apos;,              &apos;type&apos;:&apos;date&apos;},\n {&apos;name&apos;:&apos;captain&apos;,    &apos;description&apos;:&apos;Best Captain&apos;,             &apos;type&apos;:&apos;select&apos;,    &apos;options&apos;:{&apos;P&apos;:&apos;Jean-Luc Picard&apos;,&apos;K&apos;:&apos;James T. Kirk&apos;}},\n {&apos;name&apos;:&apos;force&apos;,      &apos;description&apos;:&apos;Which side?&apos;,              &apos;type&apos;:&apos;select&apos;,    &apos;options&apos;:{&apos;jedi&apos;:&apos;Jedi&apos;,&apos;sith&apos;:&apos;Sith&apos;}, &apos;default&apos;:&apos;sith&apos;},\n {&apos;name&apos;:&apos;live&apos;,       &apos;description&apos;:&apos;Best Place to Live&apos;,       &apos;type&apos;:&apos;typeahead&apos;, &apos;categories&apos;:[&apos;city&apos;,&apos;country&apos;,&apos;state_province&apos;]},\n {&apos;name&apos;:&apos;captcha&apos;}\n]&quot;
+   },
+   &quot;user_id&quot;: &quot;218471&quot;
+}
+</code>
+</pre>
+<p>This format is designed to very closely resemble the output of the <a href="/docs/api" name="https://developers.facebook.com/docs/api">Graph API</a>. The signed request includes a <code>registration_metadata</code> field. You should verify this field exactly matches the <code>field</code> param you specified in the registration plugin to ensure the data is from your registration form. An example of the importance of checking this field is on the <a href="https://developers.facebook.com/docs/plugins/registration/advanced" name="https://developers.facebook.com/docs/plugins/registration/advanced">advanced page</a>.</p>
+<p>If the user chooses to register without using her Facebook account, the <code>oauth_token</code>, <code>user_id</code>, and <code>expires</code> parameters will not be included in the signed request.</p>
+<hr />
+<h2>PHP Example reading signed_request</h2>
+<p>
+<strong>Note:</strong> Replace your_app_id with your own application id and your_app_secret with your own application secret key</p>
+<pre>
+<code>&lt;?php
+define(&apos;FACEBOOK_APP_ID&apos;, &apos;your_app_id&apos;);
+define(&apos;FACEBOOK_SECRET&apos;, &apos;your_app_secret&apos;);
+
+function parse_signed_request($signed_request, $secret) {
+  list($encoded_sig, $payload) = explode(&apos;.&apos;, $signed_request, 2); 
+
+  // decode the data
+  $sig = base64_url_decode($encoded_sig);
+  $data = json_decode(base64_url_decode($payload), true);
+
+  if (strtoupper($data[&apos;algorithm&apos;]) !== &apos;HMAC-SHA256&apos;) {
+    error_log(&apos;Unknown algorithm. Expected HMAC-SHA256&apos;);
+    return null;
+  }
+
+  // check sig
+  $expected_sig = hash_hmac(&apos;sha256&apos;, $payload, $secret, $raw = true);
+  if ($sig !== $expected_sig) {
+    error_log(&apos;Bad Signed JSON signature!&apos;);
+    return null;
+  }
+
+  return $data;
+}
+
+function base64_url_decode($input) {
+    return base64_decode(strtr($input, &apos;-_&apos;, &apos;+/&apos;));
+}
+
+if ($_REQUEST) {
+  echo &apos;&lt;p&gt;signed_request contents:&lt;/p&gt;&apos;;
+  $response = parse_signed_request($_REQUEST[&apos;signed_request&apos;], 
+                                   FACEBOOK_SECRET);
+  echo &apos;&lt;pre&gt;&apos;;
+  print_r($response);
+  echo &apos;&lt;/pre&gt;&apos;;
+} else {
+  echo &apos;$_REQUEST is empty&apos;;
+}
+?&gt;
+</code>
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/plugins/registration/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1330650518" title="2012年3月1日 17:08">約3ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

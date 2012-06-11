@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/bestpractices/multiple-objects/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/bestpractices/multiple-objects/">https://developers.facebook.com/docs/bestpractices/multiple-objects/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Guide: Working With Multiple Objects </h1>
+</div>
+</div>
+<p>In our last guide, <a href="https://developers.facebook.com/docs/bestpractices/creating-actions-objects/" name="https://developers.facebook.com/docs/bestpractices/creating-actions-objects/">Creating Open Graph Stories</a>, we talked about creating interesting open graph stories using <a href="https://developers.facebook.com/docs/opengraph/objects/" name="https://developers.facebook.com/docs/opengraph/objects/">objects</a> (nouns) and <a href="https://developers.facebook.com/docs/opengraph/actions/" name="https://developers.facebook.com/docs/opengraph/actions/">actions</a> (verbs) in the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps">App Dashboard</a>.</p>
+<p>In this guide, we’ll explain how defining multiple objects can:</p>
+<p>• Lead to even more interesting stories<br /> • Create more frequent aggregations in news feed<br /> • Help showcase aggregations on users’ <a href="https://developers.facebook.com/docs/opengraph/define-units/" name="https://developers.facebook.com/docs/opengraph/define-units/">timelines</a>
+</p>
+<h3>1. Defining multiple objects</h3>
+<p>Objects are things in your app that people can connect or do something with. For example, people can <em>watch</em> (action) a <em>video</em> (object) on Hulu, or <em>listen</em> (action) to a <em>station</em> (object) on iHeartRadio:</p>
+<p>
+<table>
+<tr>
+<td align="center">
+<img src="https://developers.facebook.com/attachment/iheartradio_newsfeed.png" width="70%" />
+</td>
+</tr>
+</table>
+</p>
+<p>To create more diverse stories and opportunities for aggregation, you can <strong>associate objects with each other</strong> in the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps">App Dashboard</a>. This lets users share richer stories about your app, and creates more ways to aggregate these stories in news feed and timeline.</p>
+<p>To figure out how best to associate your objects, you need to:</p>
+<p>
+<strong>1. Map out the relationships between your objects</strong>
+</p>
+<p>First, you need to make sure your objects have a logical hierarchy and are linked to one another. To do this, write down all the objects people use in your app, and map out the relationships between them.</p>
+<p>For example, an app that helps people share the music they listen to might map their actions and objects to create a relationship between the song, artist, release date and genre:</p>
+<p>
+<table>
+<tr>
+<td align="center">
+<img src="https://developers.facebook.com/attachment/multiple_objects_music.png" width="50%" />
+</td>
+</tr>
+</table>
+</p>
+<p>The way the objects above are mapped defines the hierarchy of relationships between objects for Facebook. For example, by understanding the relationship between song and artist, Facebook can determine that when someone listens to a song, they’re listening to a specific artist. From this, Facebook can aggregate a story about Austin listening to Bad Romance with similar stories of friends listening to other songs by Lady Gaga or listening to pop music. Then we could show an <em>aggregated news feed story</em> about Austin and 3 friends listening to Lady Gaga.:</p>
+<p>
+<a href="#" name="https://developers.facebook.com/docs/#">Austin Haugen</a> and <a href="#" name="https://developers.facebook.com/docs/#">3 friends</a> listened to <a href="#" name="https://developers.facebook.com/docs/#">Lady Gaga</a>
+</p>
+<p>Note: Facebook only reads object relationships three deep, so there’s no need to map out more than 3 relationships for each object.</p>
+<p>
+<strong>2. Define objects for “categories” of content in your app</strong>
+</p>
+<p>Objects don’t always have to be physical things like books or movies. They can also be categories, such as a genre of music or a type of cuisine. While you will always pass stories to Facebook about the user performing an action on a specific object, for example - <em>Austin Haugen read The Hound of the Baskervilles</em> - defining categories for objects allows Facebook to aggregate stories around general topics of interest (ex: <em>mystery novels</em>). Since more people are likely to be reading mystery novels than a specific book at any given time, this creates more frequent news feed aggregations for your app.</p>
+<ul>
+<li>
+<a href="#" name="https://developers.facebook.com/docs/#">Tiffani Jones Brown</a> and <a href="#" name="https://developers.facebook.com/docs/#">4 others</a> are reading <a href="#" name="https://developers.facebook.com/docs/#">mystery novels</a>.</li>
+<li>
+<a href="#" name="https://developers.facebook.com/docs/#">Eddie O&apos;Neil</a> and <a href="#" name="https://developers.facebook.com/docs/#">Carl Sjogreen</a> are listening to <a href="#" name="https://developers.facebook.com/docs/#">jazz</a>.</li>
+<li>
+<a href="#" name="https://developers.facebook.com/docs/#">Jen Taylor</a> cooked <a href="#" name="https://developers.facebook.com/docs/#">5 desserts</a>.</li>
+</ul>
+<p>If you think your app would benefit from categories, you should create them now—even if you’re early in implementation. This way, if you decide that you want to present stories by category in the future, you’ll have a rich inventory to work with.</p>
+<p>
+<strong>3. Define your actions and objects</strong>
+</p>
+<p>Once you’ve mapped out your actions and objects, you’ll need to define and associate them in the App Dashboard. To do this, enter the names of the action and the primary object it’s associated with in the <strong>connected object type field</strong>.</p>
+<p>You then associate objects with each other by making them custom properties. See our guides, <a href="/docs/bestpractices/custom_properties/" name="https://developers.facebook.com/docs/bestpractices/custom_properties/">Working with Custom Properties</a> to learn more about working with custom properties.</p>
+<p>Note: An object for a category should only be associated with another object. For example, if you define an object for the genre category, you would associate that with the objects for song not with the action listen.</p>
+<h3>2. Aggregating stories in news feed</h3>
+<p>Defining multiple objects and the relationship between them allows stories from your app to be aggregated in news feed, and lets you <a href="https://developers.facebook.com/docs/opengraph/define-units/" name="https://developers.facebook.com/docs/opengraph/define-units/">build your own aggregations for timeline</a>. While you define the specific structure of your timeline aggregations, news feed aggregations are created by Facebook based on the relationships you define between objects in the App Dashboard. Facebook aggregates stories in news feed both when friends take action on the same object and when friends take actions on different objects within the same category. For example, if two friends listen to two different songs, but both are from 2009, Facebook may create an aggregation saying: <em>Austin and Alex listened to songs from 2009</em>:</p>
+<p>• <a href="#" name="https://developers.facebook.com/docs/#">Jenny Smith</a> and <a href="#" name="https://developers.facebook.com/docs/#">4 others</a> listed to <a href="#" name="https://developers.facebook.com/docs/#">Lady Gaga</a> (object.artist).<br /> • <a href="#" name="https://developers.facebook.com/docs/#">Mike Vernal</a> listened to <a href="#" name="https://developers.facebook.com/docs/#">Bad Romance</a> (object.song) 3 times.<br /> • <a href="#" name="https://developers.facebook.com/docs/#">Austin Haugen</a> and <a href="#" name="https://developers.facebook.com/docs/#">Paul Tarjan</a> listened to <a href="#" name="https://developers.facebook.com/docs/#">Pop</a> (object.genre).</p>
+<p>Aggregated stories can be grouped together based on any of the related objects.</p>
+<h3>3. Deciding where your objects link to</h3>
+<p>All objects show up as links in news feed and timeline. To get the most out of your stories, link people to destinations that are:</p>
+<p>• <strong>Relevant:</strong> Send people to a page that directly relates what they clicked. For example, if someone clicks a link about a movie their friend watched, the page they link to should say something about the friend and the movie. If someone clicks on a link about pop music, the page they link to should say something about the friend and the genre.<br /> • <strong>Social:</strong> Where possible, include social information about the person whose activity generated the story (ex: their picture or how they were using the app). People usually click links to your app because they’re interested in how their friends are using it.<br /> • <strong>Engaging:</strong> Where appropriate, prompt people with a lightweight call to action that invites a response (ex: “What do you think of Lady Gaga? Rate the artist now.”). This encourages others to engage with your app and share stories about it back to Facebook.</p>
+<p>
+<strong>Examples</strong>
+</p>
+<p>
+<strong>Good:</strong>
+<center>
+</center>
+</p>
+<table>
+<tr>
+<td width="40%">
+<a href="url" name="https://developers.facebook.com/docs/url">Austin Haugen</a> listened to <a href="url" name="https://developers.facebook.com/docs/url">Bad Romance</a>.</td>
+<td align="center">
+<img src="https://developers.facebook.com/attachment/arrow_174.png" />
+</td>
+<td width="40%">Page about “Bad Romance” that includes ratings by Austin’s friends and encourages the visitor to rate the song.</td>
+</tr>
+</table>
+<p>
+</p>
+<p>
+<strong>Bad:</strong>
+<center>
+</center>
+</p>
+<table>
+<tr>
+<td width="40%">
+<a href="url" name="https://developers.facebook.com/docs/url">Austin Haugen</a> listened to <a href="url" name="https://developers.facebook.com/docs/url">Bad Romance</a>.</td>
+<td align="center">
+<img src="https://developers.facebook.com/attachment/arrow_174.png" />
+</td>
+<td width="40%">Page that includes basic information about Bad Romance, such as artist and release date.</td>
+</tr>
+</table>
+<p>
+</p>
+<p>Learn more about encouraging sharing in our <a href="https://developers.facebook.com/docs/bestpractices/grow-app-open-graph/" name="https://developers.facebook.com/docs/bestpractices/grow-app-open-graph/">Guide: Complete the loop to grow your app with Open Graph</a>.</p>
+<h3>Common Mistakes</h3>
+<p>When creating multiple objects for your app, there are a few things you should avoid:</p>
+<p>• <strong>Don&apos;t get objects and description text mixed up.</strong> In other words, don’t include information that could be an object (ex: artist or genre) as a string of text. Presenting valuable information as text limits the ways your content can be aggregated and distributed across Facebook.</p>
+<p>
+<center>
+</center>
+</p>
+<table>
+<tr>
+<td width="50%">
+<b>Good</b>
+</td>
+<td width="50%">
+<b>Bad</b>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<a href="url" name="https://developers.facebook.com/docs/url">Austin Haugen</a> listened to <a href="url" name="https://developers.facebook.com/docs/url">Bad Romance</a>.<br />
+<a href="url" name="https://developers.facebook.com/docs/url">Austin Haugen</a> listened to <a href="url" name="https://developers.facebook.com/docs/url">Lady Gaga</a>.<br />
+</td>
+<td width="50%">
+<a href="url" name="https://developers.facebook.com/docs/url">Austin Haugen</a> listened to <a href="url" name="https://developers.facebook.com/docs/url">Bad Romance</a> by Lady Gaga.</td>
+</tr>
+<tr>
+<td width="50%">
+<i>Can be aggregated with other stories about Bad Romance or Lady Gaga, or, if defined, the genre (pop) or release date.</i>
+</td>
+<td width="50%">
+<i>Can only be aggregated with other stories about Bad Romance.</i>
+</td>
+</tr>
+</table>
+<p>
+</p>
+<p>In our next guide, <a href="https://developers.facebook.com/docs/bestpractices/custom_properties/" name="https://developers.facebook.com/docs/bestpractices/custom_properties/">Working with Custom Properties</a>, we’ll discuss how to include objects in the attachments of stories. This will let you include info you capture in multiple objects in your news feed stories, like so:</p>
+<p>
+<a href="#" name="https://developers.facebook.com/docs/#">Austin Haugen</a> listened to <a href="#" name="https://developers.facebook.com/docs/#">Bad Romance</a>
+<br /> By <a href="#" name="https://developers.facebook.com/docs/#">Lady Gaga</a>
+</p>
+<p>• <strong>Don&apos;t collapse multiple objects into one.</strong> Don’t merge information that could be presented as an object (ex: a book and an author) with other objects. Presenting multiple pieces of valuable information in a single object limits the ways your content can be aggregated and distributed across Facebook.</p>
+<p>
+<center>
+</center>
+</p>
+<table>
+<tr>
+<td width="50%">
+<b>Good</b>
+</td>
+<td width="50%">
+<b>Bad</b>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<a href="url" name="https://developers.facebook.com/docs/url">Mike Vernal</a> read <a href="url" name="https://developers.facebook.com/docs/url">The Adventures of Huckleberry Finn</a>.<br />
+<a href="url" name="https://developers.facebook.com/docs/url">Mike Vernal</a> read books by <a href="url" name="https://developers.facebook.com/docs/url">Mark Twain</a>.</td>
+<td width="50%">
+<a href="url" name="https://developers.facebook.com/docs/url">Mike Vernal</a> read <a href="url" name="https://developers.facebook.com/docs/url">The Adventures of Huckleberry Finn by Mark Twain</a>.</td>
+</tr>
+<tr>
+<td width="50%">
+<i>Can be aggregated with other stories about people reading The Adventures of Huckleberry Finn, people reading books by Mark Twain.</i>
+</td>
+<td width="50%">
+<i>Can only be aggregated with other stories about people reading Huckleberry Finn by Mark Twain.</i>
+</td>
+</tr>
+</table>
+<p>
+</p>
+<h3>Next up</h3>
+<p>In our next guide, we’ll talk about how to <a href="https://developers.facebook.com/docs/bestpractices/custom_properties/" name="https://developers.facebook.com/docs/bestpractices/custom_properties/">work with custom properties</a> to create more informative news feed stories and richer timeline aggregations.</p>
+<p>To learn more about the open graph, read our <a href="https://developers.intern.facebook.com/docs/opengraph/" name="https://developers.intern.facebook.com/docs/opengraph/">core open graph concepts</a> or get started with an <a href="https://developers.intern.facebook.com/docs/opengraph/tutorial/" name="https://developers.intern.facebook.com/docs/opengraph/tutorial/">open graph tutorial</a>.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/bestpractices/multiple-objects/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1335819118" title="2012年4月30日 13:51">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

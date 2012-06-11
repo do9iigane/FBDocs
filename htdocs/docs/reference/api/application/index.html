@@ -1,0 +1,2371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/api/application/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/api/application/">https://developers.facebook.com/docs/reference/api/application/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Concepts</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/batch/" name="http://developers.facebook.com/docs/reference/api/batch/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/permissions/" name="http://developers.facebook.com/docs/reference/api/permissions/">Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/realtime/" name="http://developers.facebook.com/docs/reference/api/realtime/">Real-time Updates</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/achievement/" name="http://developers.facebook.com/docs/reference/api/achievement/">Achievement(Instance)</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/album/" name="http://developers.facebook.com/docs/reference/api/album/">Album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/application/" name="http://developers.facebook.com/docs/reference/api/application/">Application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/checkin/" name="http://developers.facebook.com/docs/reference/api/checkin/">Checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Comment/" name="http://developers.facebook.com/docs/reference/api/Comment/">Comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/domain/" name="http://developers.facebook.com/docs/reference/api/domain/">Domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/event/" name="http://developers.facebook.com/docs/reference/api/event/">Event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/FriendList/" name="http://developers.facebook.com/docs/reference/api/FriendList/">FriendList</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/group/" name="http://developers.facebook.com/docs/reference/api/group/">Group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/insights/" name="http://developers.facebook.com/docs/reference/api/insights/">Insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/link/" name="http://developers.facebook.com/docs/reference/api/link/">Link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/message/" name="http://developers.facebook.com/docs/reference/api/message/">Message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/note/" name="http://developers.facebook.com/docs/reference/api/note/">Note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/offer/" name="http://developers.facebook.com/docs/reference/api/offer/">Offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/order/" name="http://developers.facebook.com/docs/reference/api/order/">Order </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/page/" name="http://developers.facebook.com/docs/reference/api/page/">Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/photo/" name="http://developers.facebook.com/docs/reference/api/photo/">Photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/post/" name="http://developers.facebook.com/docs/reference/api/post/">Post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question/" name="http://developers.facebook.com/docs/reference/api/question/">Question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question_option/" name="http://developers.facebook.com/docs/reference/api/question_option/">QuestionOption</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Review/" name="http://developers.facebook.com/docs/reference/api/Review/">Review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/status/" name="http://developers.facebook.com/docs/reference/api/status/">Status message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/thread/" name="http://developers.facebook.com/docs/reference/api/thread/">Thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/user/" name="http://developers.facebook.com/docs/reference/api/user/">User</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/video/" name="http://developers.facebook.com/docs/reference/api/video/">Video</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Application</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> › <a href="/docs/reference/api/application/" name="https://developers.facebook.com/docs/reference/api/application/">Application</a>
+</div>
+</div>
+</div>
+<p>An application registered on Facebook Platform as represented in the <a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>. Applications a user administers can be retrieved via the <code>/accounts</code> connection on the <code>User</code> object.</p>
+<p>To create, administer or delete applications developers must go to the <a href="/apps/" name="https://developers.facebook.com/apps/">App Dashboard</a>.</p>
+<h3>Example</h3>
+<p>The <a href="https://www.facebook.com/graffitiwall" name="https://www.facebook.com/graffitiwall">Graffiti</a> application:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=2439131959" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=2439131959">https://graph.facebook.com/2439131959</a>
+</p>
+<hr />
+<h2 id="fields">Fields</h2>
+<p>The <code>application</code> object has the following fields:</p>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>
+<p>The application ID</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>
+<p>The title of the application</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>description</code>
+</td>
+<td>
+<p>The description of the application written by the 3rd party developers</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>category</code>
+</td>
+<td>
+<p>The category of the application</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>company</code>
+</td>
+<td>
+<p>The company the application belongs to</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>icon_url</code>
+</td>
+<td>
+<p>The URL of the application&apos;s icon</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>subcategory</code>
+</td>
+<td>
+<p>The subcategory of the application</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>link</code>
+</td>
+<td>
+<p>A link to the <code>Application</code>&apos;s profile page</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>logo_url</code>
+</td>
+<td>
+<p>The URL of the application&apos;s logo</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>daily_active_users</code>
+</td>
+<td>
+<p>The number of daily active users the application has</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>weekly_active_users</code>
+</td>
+<td>
+<p>The number of weekly active users the application has</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>monthly_active_users</code>
+</td>
+<td>
+<p>The number of monthly active users the application has</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>migrations</code>
+</td>
+<td>
+<p>Migrations settings for app profile <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>array</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>namespace</code>
+</td>
+<td>
+<p>The namespace for the app <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>restrictions</code>
+</td>
+<td>
+<p>Demographic restrictions set for this app <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>Object with one or more of the following fields: <code>type</code>, <code>location</code>, <code>age</code>, and <code>age_distr</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>app_domains</code>
+</td>
+<td>
+<p>Domains and subdomains this app can use <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>array</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>auth_dialog_data_help_url</code>
+</td>
+<td>
+<p>The URL of a special landing page that helps users of an app begin publishing Open Graph activity <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>auth_dialog_description</code>
+</td>
+<td>
+<p>The description of an app that appears in the Auth Dialog <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>auth_dialog_headline</code>
+</td>
+<td>
+<p>One line description of an app that appears in the Auth Dialog <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>auth_dialog_perms_explanation</code>
+</td>
+<td>
+<p>The text to explain why an app needs additional permissions that appears in the Auth Dialog <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>auth_referral_user_perms</code>
+</td>
+<td>
+<p>Basic user permissions that a user must grant when Authenticated Referrals are enabled <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>array</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>auth_referral_friend_perms</code>
+</td>
+<td>
+<p>Basic friends permissions that a user must grant when Authenticated Referrals are enabled <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>array</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>auth_referral_default_activity_privacy</code>
+</td>
+<td>
+<p>The default privacy setting selected for Open Graph activities in the Auth Dialog <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code> which is one of: <code>SELF</code>, <code>EVERYONE</code>, <code>ALL_FRIENDS</code> or <code>NONE</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>auth_referral_enabled</code>
+</td>
+<td>
+<p>Indicates whether Authenticated Referrals are enabled <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>bool</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>auth_referral_extended_perms</code>
+</td>
+<td>
+<p>Extended permissions that a user can choose to grant when Authenticated Referrals are enabled <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>array</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>auth_referral_response_type</code>
+</td>
+<td>
+<p>The format that an app receives the Auth token from the Auth Dialog in <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code> which is one of: <code>code</code> or <code>token</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>canvas_fluid_height</code>
+</td>
+<td>
+<p>Indicates whether app uses fluid or settable height values for Canvas <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>bool</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>canvas_fluid_width</code>
+</td>
+<td>
+<p>Indicates whether app uses fluid or fixed width values for Canvas <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>bool</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>canvas_url</code>
+</td>
+<td>
+<p>The non-secure URL from which Canvas app content is loaded <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>contact_email</code>
+</td>
+<td>
+<p>Email address listed for users to contact developers <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>created_time</code>
+</td>
+<td>
+<p>Unix timestamp that indicates when the app was created</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>int</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>creator_uid</code>
+</td>
+<td>
+<p>User ID of the creator of this app</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>int</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>deauth_callback_url</code>
+</td>
+<td>
+<p>URL that is pinged whenever a user removes the app <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>iphone_app_store_id</code>
+</td>
+<td>
+<p>ID of the app in the iPhone App Store</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>hosting_url</code>
+</td>
+<td>
+<p>Webspace created with one of our hosting partners for this app</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>mobile_web_url</code>
+</td>
+<td>
+<p>URL to which Mobile users will be directed when using the app <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>page_tab_default_name</code>
+</td>
+<td>
+<p>The title of the app when used in a Page Tab <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>page_tab_url</code>
+</td>
+<td>
+<p>The non-secure URL from which Page Tab app content is loaded <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>privacy_policy_url</code>
+</td>
+<td>
+<p>The URL that links to a Privacy Policy for the app <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>secure_canvas_url</code>
+</td>
+<td>
+<p>The secure URL from which Canvas app content is loaded <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>secure_page_tab_url</code>
+</td>
+<td>
+<p>The secure URL from which Page Tab app content is loaded <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>server_ip_whitelist</code>
+</td>
+<td>
+<p>App requests must originate from this comma-separated list of IP addresses <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>social_discovery</code>
+</td>
+<td>
+<p>Indicates whether app usage stories show up in the Ticker or News Feed <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>bool</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>terms_of_service_url</code>
+</td>
+<td>
+<p>URL to Terms of Service which is linked to in Auth Dialog <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>user_support_email</code>
+</td>
+<td>
+<p>Main contact email for this app <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>user_support_url</code>
+</td>
+<td>
+<p>URL of support for users of an app shown in Canvas footer <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>website_url</code>
+</td>
+<td>
+<p>URL of a website that integrates with this app <strong>(Editable via API)</strong>
+</p>
+</td>
+<td>
+<p>App <code>access_token</code> required; only returned if specifically requested via the fields URL parameter</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+</table>
+<p>You can choose the properties you want returned using the <code>fields</code> query parameter <code>https://graph.facebook.com/APP_ID?fields=id,name</code>
+</p>
+<h3 id="migrations">Migrations</h3>
+<h3>Read</h3>
+<p>To retrieve a list of migration settings from an app, issue an HTTP GET with an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app access token</a> to <code>https://graph.facebook.com/APP_ID?fields=migrations</code>
+</p>
+<p>You get the following returned: <table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>migrations</code>
+</td>
+<td>Array of all migrations and enabled/disabled</td>
+<td>
+<code>array</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>App ID</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<h3>Create</h3>
+<p>To set a list of migrations for an app, issue an HTTP POST with an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app access token</a> to <code>https://graph.facebook.com/APP_ID?migrations={&quot;MIGRATION_NAME&quot;:1/0}</code>
+</p>
+<p>This returns <code>true</code> if successful.</p>
+<p>See examples <a href="/blog/post/553" name="https://developers.facebook.com/blog/post/553">here</a>.</p>
+<h3 id="restrictions">Restrictions</h3>
+<h3>Read</h3>
+<p>To retrieve a list of demographic restrictions on an app, issue an HTTP GET with an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app access token</a> to <code>https://graph.facebook.com/APP_ID?fields=restrictions</code>
+</p>
+<p>This will return a object with zero or more of the following fields, depending on which restrictions are set:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>location</code>
+</td>
+<td>Restriction based on location, such as &apos;DE&apos; for apps restricted to Germany</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>age</code>
+</td>
+<td>Minimum age restriction</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>age_distribution</code>
+</td>
+<td>Restriction based on an age range</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>App ID; read-only field.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>type</code>
+</td>
+<td>Always <code>application</code> for apps; read-only field.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Create</h3>
+<p>To set a list of restrictions for an app, issue an HTTP POST with an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app access token</a> to <code>https://graph.facebook.com/APP_ID?restrictions={&quot;RESTRICTION&quot;:&quot;VALUE&quot;}</code>. More than one value can be set at a time in the JSON object for the value of there <code>restrictions</code> parameter.</p>
+<p>This returns <code>true</code> if successful.</p>
+<p>See examples <a href="/blog/post/574" name="https://developers.facebook.com/blog/post/574">here</a>.</p>
+<h3 id="props">Properties</h3>
+<h3>Read</h3>
+<p>To retrieve a list of properties from an app, issue an HTTP GET with an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app access token</a> to <code>https://graph.facebook.com/APP_ID?fields=PROPERTY_NAME</code> using the property values above in a comma-separated list. The returned values for all properties are listed in the table above.</p>
+<h3>Create</h3>
+<p>To set properties for an app, issue an HTTP POST with an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app access token</a> to <code>https://graph.facebook.com/APP_ID?PROPERTY_1=PROPERTY_VALUE&amp;PROPERTY_2=PROPERTY_VALUE2</code> using the same properties and formats as in the table above. <strong>Not all app properties can be edited via the API, please refer to the <a href="#fields" name="https://developers.facebook.com/docs/#fields">properties in the table above</a> for an indication of whether a property can be edited or not.</strong> Array properties can be unset by passing an empty array.</p>
+<p>This returns <code>true</code> if successful.</p>
+<hr />
+<h2>Connections</h2>
+<p>The <code>application</code> object has the following connections:</p>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#accounts" name="https://developers.facebook.com/docs/#accounts">accounts</a>
+</td>
+<td>
+<p>Test User accounts associated with the app.</p>
+</td>
+<td>
+<p>App <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code>, <code>access_token</code> and <code>login_url</code> for the test users</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#banned" name="https://developers.facebook.com/docs/#banned">banned</a>
+</td>
+<td>
+<p>Banned users from your app</p>
+</td>
+<td>
+<p>Any valid app <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>name</code> and <code>id</code> for the banned user.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=2439131959%2Finsights" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=2439131959%2Finsights">insights</a>
+</td>
+<td>
+<p>Usage metrics for this application.</p>
+</td>
+<td>
+<p>
+<code>read_insights</code> for an admin, or App <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Insight</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/order/" name="https://developers.facebook.com/docs/reference/api/order/">payments</a>
+</td>
+<td>
+<p>The list of Facebook Credits orders associated with the application.</p>
+</td>
+<td>
+<p>app <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>order</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://graph.facebook.com/2439131959/picture" name="https://graph.facebook.com/2439131959/picture">picture</a>
+</td>
+<td>
+<p>The application&apos;s profile picture with maximum dimensions of 75x75 pixels suitable for embedding as the source of an image tag.</p>
+</td>
+<td>
+<p>Publicly available</p>
+</td>
+<td>
+<p>An HTTP 302 with the location set to the picture URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#roles" name="https://developers.facebook.com/docs/#roles">roles</a>
+</td>
+<td>
+<p>The developer roles defined for this application.</p>
+</td>
+<td>
+<p>App <code>access_token</code> to read roles, app owner <code>access_token</code> to modify roles</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>app_id</code>, <code>user</code> and <code>role</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=2439131959%2Fstaticresources" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=2439131959%2Fstaticresources">staticresources</a>
+</td>
+<td>
+<p>Usage stats about the canvas application&apos;s static resources, such as javascript and CSS, and which ones are being flushed to browsers early.</p>
+</td>
+<td>
+<p>Application owner <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>usage_stats</code> and <code>flushed_resources</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=2439131959%2Fsubscriptions" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=2439131959%2Fsubscriptions">subscriptions</a>
+</td>
+<td>
+<p>All of the subscriptions this application has for real-time notifications.</p>
+</td>
+<td>
+<p>application <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing the <code>object</code>, <code>fields</code>, and <code>callback_url</code> fields. <code>object</code> is one of <code>user</code>, <code>page</code>, or <code>permissions</code>. The value of <code>fields</code> is a string containing a comma-separated list of subscribed field names</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=2439131959%2Ftranslations" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=2439131959%2Ftranslations">translations</a>
+</td>
+<td>
+<p>The translated strings for this application.</p>
+</td>
+<td>
+<p>application <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>native_string</code>, <code>description</code> for a given locale.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#scores" name="https://developers.facebook.com/docs/#scores">scores</a>
+</td>
+<td>
+<p>Scores for the user and their friends.</p>
+</td>
+<td>
+<p>user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>user</code>, <code>score</code>, <code>application</code> and <code>type</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#achievements" name="https://developers.facebook.com/docs/#achievements">achievements</a>
+</td>
+<td>
+<p>Achievements registered for the app.</p>
+</td>
+<td>
+<p>app <code>access_token</code>
+</p>
+</td>
+<td>
+<p>Not yet implemented</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#videos" name="https://developers.facebook.com/docs/#videos">videos</a>
+</td>
+<td>
+<p>The videos uploaded to an application.</p>
+</td>
+<td>
+<p>
+<code>publish_stream</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Video</code> objects.</p>
+</td>
+</tr>
+</table>
+<h3 id="application_access_tokens">Application Page Access Tokens</h3>
+<p>To perform the following operations as an <code>Application</code> Page, and not the current user, you must use the <code>Application</code>&apos;s Page access token, not the user access token commonly used for modifying Graph API objects nor the <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">Application access token</a>. This access token can be retrieved by issuing an HTTP GET to <code>/USER_ID/accounts</code> with the <code>manage_pages</code> permission. This will return a list of <code>Page</code>s (including <code>Application</code> profile pages) to which the user has administrative access, along with an <code>access_token</code> for each <code>Page</code>.</p>
+<p>
+<b>Note:</b> Applications that are configured as Native/Desktop apps will not be able to make API calls that require an application <code>access_token</code>.</p>
+<hr />
+<h2 id="accounts">accounts</h2>
+<h3>Create</h3>
+<p>You can create a test <a href="/docs/test_users/" name="https://developers.facebook.com/docs/test_users/">account</a> for an application by issuing an HTTP POST request to <code>APP_ID/accounts/test-users</code> with an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">application access token</a> (i.e. a token created using the app secret, <strong>not</strong> an application Page access token as described above). You can specify the following parameters.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>installed</code>
+</td>
+<td>Install app for the test user upon creation</td>
+<td>
+<code>boolean</code>
+</td>
+<td>no</td>
+</tr>
+<tr>
+<td>
+<code>permissions</code>
+</td>
+<td>List of extended permissions app granted for the new test user if <code>installed</code> is <code>true</code>
+</td>
+<td>
+<code>string</code>
+</td>
+<td>no</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>A name for the test user. The specified name will also be used in the email address assigned to the test user.</td>
+<td>
+<code>string</code>
+</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>The new test user ID</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>access_token</code>
+</td>
+<td>Test user access token to make API calls</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>login_url</code>
+</td>
+<td>Test user automatic login URL. Expires after first use or within an hour for security reasons.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>email</code>
+</td>
+<td>The new test user email</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>password</code>
+</td>
+<td>The new test user password</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Delete</h3>
+<p>You can delete a test account by issuing an HTTP DELETE request to <code>TEST_USER_ID</code> with a user or application access token.</p>
+<p>If the delete is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td> If the delete succeeded </td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</table>
+<p>See <a href="/docs/test_users/" name="https://developers.facebook.com/docs/test_users/">Test User accounts</a> for more details on managing test accounts.</p>
+<hr />
+<h2 id="banned">banned</h2>
+<h3>Read</h3>
+<h4>Get list</h4>
+<p>You can retrieve a list of banned users for an app by issuing an HTTP GET request to <code>APP_ID/banned</code> with an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">application access token</a> (i.e. a token created using the app secret, <strong>not</strong> an application Page access token as described above).</p>
+<p>You get the following return.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>Name of banned user</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>uid</code>
+</td>
+<td>User id of banned user</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Test whether user is banned</h4>
+<p>You can test if a given user is banned for an app by issuing an HTTP GET request to <code>APP_ID/banned/USER_ID</code> with an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">application access token</a> (i.e. a token created using the app secret, <strong>not</strong> an application Page access token as described above).</p>
+<p>You get the following return.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>Name of banned user</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>uid</code>
+</td>
+<td>User id of banned user</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Create/Ban</h3>
+<p>You can ban a user for an app by issuing an HTTP POST request to <code>APP_ID/banned?uid=USER_ID1,USER_ID2</code> with an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">application access token</a> (i.e. a token created using the app secret, <strong>not</strong> an application Page access token as described above). You can specify the following parameters.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>uid</code>
+</td>
+<td>User ID of user account</td>
+<td>
+<code>string</code>
+</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p>If the ban is successful, you get the following return.</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>If ban succeeded</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Delete/Un-ban</h3>
+<p>You can un-ban a user account by issuing an HTTP DELETE request to <code>USER_ID</code> with an application access token.</p>
+<p>If the un-banning is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td> If un-ban succeeded </td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</table>
+<p>See <a href="/blog/post/553" name="https://developers.facebook.com/blog/post/553">this blog post</a> for more details on retrieving, banning, testing, and un-banning users.</p>
+<hr />
+<h2 id="feed">feed</h2>
+<h3>Create</h3>
+<p>You can create a <code>link</code>, <code>post</code> or <code>status message</code> by issuing an HTTP POST request to the <code>APP_ID/feed</code> connection. To see more details please see <a href="#links" name="https://developers.facebook.com/docs/#links">links</a>, <a href="#posts" name="https://developers.facebook.com/docs/#posts">posts</a>, and <a href="#statuses" name="https://developers.facebook.com/docs/#statuses">status messages</a> documentation.</p>
+<p>To impersonate the <code>Application</code> when posting to the wall (i.e. post as the <code>Application</code>, and not the current user), you must use an <code>Application</code> <code>Page</code> <code>access_token</code> with the <code>manage_pages</code> and <code>publish_stream</code> permissions, as described under <a href="#application_access_tokens" name="https://developers.facebook.com/docs/#application_access_tokens">Application Access Tokens</a> above.</p>
+<hr />
+<h2 id="links">links</h2>
+<h3>Create</h3>
+<p>You can post a <a href="/docs/reference/api/link/" name="https://developers.facebook.com/docs/reference/api/link/">link</a> on the application&apos;s profile page by issuing an HTTP POST request to <code>APP_ID/feed</code> with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> link </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/link/" name="https://developers.facebook.com/docs/reference/api/link/">Link</a> URL </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/link/" name="https://developers.facebook.com/docs/reference/api/link/">Link</a> message </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>The other fields are taken from the metadata of the page URL given in the &apos;link&apos; param.</p>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new link ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="posts">posts</h2>
+<h3>Create</h3>
+<p>You can create a post on an application&apos;s profile page by issuing an HTTP POST request to <code>APP_ID/feed</code> (<b>not</b> <code>PROFILE_ID/posts</code>) with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> message </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> link </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> URL </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> picture </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> thumbnail image </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> name </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> name </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> caption </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> caption </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> description </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> description </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> actions </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> actions </td>
+<td>
+<code>array</code> of objects containing <code>name</code> and <code>link</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> privacy </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> privacy settings </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new post ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="roles">roles</h2>
+<h3>Read</h3>
+<p>You can retrieve a list of all users who have a role defined for an application by issuing an <code>HTTP GET</code> request to <code>APP_ID/roles</code> with an <code>app access token</code>. This will return an <code>array</code> of objects with the following fields.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>app_id</code>
+</td>
+<td>Application ID being queried</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>user</code>
+</td>
+<td>User ID</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>role</code>
+</td>
+<td>User&apos;s defined role for this application</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Create</h3>
+<p>You can define a role for a user by issuing an <code>HTTP POST</code> request to <code>APP_ID/roles</code> with a <code>user access token</code> for an administrator of the app, specifying the following fields.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>user</code>
+</td>
+<td>User ID to have a role added to the app</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>role</code>
+</td>
+<td>Role the user should assume, one of &apos;administrators&apos;, &apos;developers&apos;, &apos;testers&apos; or &apos;insights users&apos;</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Response:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>true or error depending on whether the role creation was successful.</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The user that has been added will be sent a request via the <a href="/apps" name="https://developers.facebook.com/apps">App Dashboard</a>.</p>
+<h3>Delete</h3>
+<p>You can remove a defined user role from an app by issuing an <code>HTTP DELETE</code> request to <code>/APP_ID/roles</code> with a <code>user access token</code> for an administrator of the app, specifying the following parameter.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>user</code>
+</td>
+<td>User ID whose role should be removed</td>
+<td>
+<code>string</code>
+</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p>Response:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>true or error depending on whether the delete was successful.</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="staticresources">staticresources</h2>
+<h3>Get</h3>
+<p>Gets usage statistics for the static resources used by your Canvas IFrame application. These statistics are collected for the purpose of flushing some of them to the browser early, to improve application performance.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>usage_stats</code>
+</td>
+<td> An array, keyed by static resource URL, whose values are fractions of page loads that used each static resource. </td>
+<td>
+<code>array</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>flushed_resources</code>
+</td>
+<td> An array of static resource URLs, which is a subset of those in the usage_stats array, that are currently being flushed early for users who are using the application. </td>
+<td>
+<code>array</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="statuses">statuses</h2>
+<h3>Create</h3>
+<p>You can post a <a href="https://developers.dev.facebook.com/docs/reference/api/status/" name="https://developers.dev.facebook.com/docs/reference/api/status/">status message</a> on an application&apos;s profile page by issuing an HTTP POST request to <code>APP_ID/feed</code> with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/status/" name="https://developers.facebook.com/docs/reference/api/status/">Status Message</a> content </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new status message ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="subscriptions">subscriptions</h2>
+<h3>Create / Update</h3>
+<p>You can set up a <a href="/docs/reference/api/subscription/" name="https://developers.facebook.com/docs/reference/api/subscription/">subscription</a> by issuing an HTTP POST request to <code>APP_ID/subscriptions</code> with an <a href="#application_access_tokens" name="https://developers.facebook.com/docs/#application_access_tokens">application page access token</a> and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> object </code>
+</td>
+<td> Object to monitor - <code>user</code>, <code>permissions</code>, or <code>page</code>. </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> fields </code>
+</td>
+<td> List of properties for the object to monitor. </td>
+<td>
+<code>string</code>
+</td>
+<td> array </td>
+</tr>
+<tr>
+<td>
+<code> callback_url </code>
+</td>
+<td> A callback URL to which Facebook will post subscription updates. </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> verify_token </code>
+</td>
+<td> Token sent in the verification request. </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>Note that you must first set up an endpoint URL to handle subscription verification and updates. For details see the Real-time API <a href="/docs/reference/api/realtime/" name="https://developers.facebook.com/docs/reference/api/realtime/">subscriptions</a> documentation.</p>
+<p>Your create is successful if you do not get an error.</p>
+<h3>Delete</h3>
+<p>You can delete subscriptions by issuing an HTTP DELETE request to <code>APP_ID/subscriptions</code> with an application access token.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> object </code>
+</td>
+<td> Object to monitor - <code>user</code>, <code>permissions</code>, or <code>page</code>. If no object is specified all subscriptions are deleted. </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>Your create is successful if you do not get an error.</p>
+<p>See the <a href="/docs/reference/api/realtime/" name="https://developers.facebook.com/docs/reference/api/realtime/">Real-time API</a> documentation for more details on managing subscriptions.</p>
+<hr />
+<h2 id="translations">translations</h2>
+<h3>Create</h3>
+<p>You can upload application strings for translation by issuing an HTTP POST request to <code>APP_ID/translations</code> with an application access token.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> native_strings </code>
+</td>
+<td> A JSON-encoded array of strings to translate. Each element of the string array is an object, with <code>text</code> storing the actual string, <code>description</code> storing the description of the text. </td>
+<td>
+<code>array</code>
+</td>
+<td> yes </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The number of strings uploaded </td>
+<td>
+<code>number</code>
+</td>
+</tr>
+</table>
+<h3>Delete</h3>
+<p>You can delete a translation string by issuing an HTTP DELETE request to <code>APP_ID/translations</code> with an application access token.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> native_hashes </code>
+</td>
+<td> An array of native hashes. The native hash is a unique identifier of the native string and a description and is generated by the Translations application. </td>
+<td>
+<code>array</code>
+</td>
+<td> yes </td>
+</tr>
+</table>
+<p>If the delete is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The number of strings deleted </td>
+<td>
+<code>number</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="scores">scores</h2>
+<h3>Read</h3>
+<p>You can read the scores for the user and their friends for your app by issuing an <code>HTTP GET</code> request to <code>/APP_ID/scores</code> with the user <code>access_token</code> for that app. This returns the list of scores for the user and their friends who have a uthorized the app. You can use this api to create leaderboard for the user and their friends.</p>
+<p>The API returns an <code>array</code> of objects containing the following data:</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>user</td>
+<td>User associated with the scores.</td>
+<td>object containing the <code>name</code> and <code>id</code> for the user.</td>
+</tr>
+<tr>
+<td>score</td>
+<td>Numeric score.</td>
+<td>
+<code>integer</code>
+</td>
+</tr>
+<tr>
+<td>application</td>
+<td>App associated with the score.</td>
+<td>object containing the <code>name</code> and <code>id</code> of the app.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>type of the data which is &quot;score&quot;.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<h3>Delete</h3>
+<p>You can <strong>delete all the scores</strong> for your app by issuing an <code>HTTP DELETE</code> request to <code>/APP_ID/scores</code> with the app <code>access_token</code> for that app. This will reset the scores for your app. Use this if you&apos;d like to periodically reset your game&apos;s scores and leaderboards.</p>
+<p>Response</p>
+<table>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>true or error depending on whether the delete was successful.</td>
+<td>
+<code>boolean<code>
+</code>
+</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="achievements">achievements</h2>
+<h3>Read</h3>
+<p>You can get all achievements for an app by issuing an <code>HTTP GET</code> request to <code>/APP_ID/achievements</code> with an <code>app access_token</code>. This will return an <code>array</code> of achievement objects where each achievement object has the following fields.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>id</td>
+<td>ID of the achievement object.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>type</td>
+<td>The value should be <code>games.achievement</code>.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>title</td>
+<td>Achievement’s title.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>url</td>
+<td>The unique URL of the achievement.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>description</td>
+<td>An achievement’s description. </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>image</td>
+<td>image for the achievement.</td>
+<td>an array of objects, containing a <code>URL</code> for the image.</td>
+</tr>
+<tr>
+<td>points</td>
+<td>Number of points that this achievement is worth. Total points per game may not exceed 1000 points limit, which we enforce.</td>
+<td>an object containing <code>points</code>
+</td>
+</tr>
+<tr>
+<td>updated_time</td>
+<td>Time when the achievement was last updated.</td>
+<td>
+<code>string</code> containing an ISO-8601 datetime</td>
+</tr>
+<tr>
+<td>context</td>
+<td>contains context of the achievement for the associated app.</td>
+<td>
+<code>array</code> containing the <code>display_order</code>
+</td>
+</tr>
+</table>
+<h3>Create</h3>
+<p>You can register an achievement for a game by issuing an <code>HTTP POST</code> to <code>APP_ID/achievements</code> with an <code>app access_token</code> and the following parameters.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+<tr>
+<td>achievement</td>
+<td>Unique URL to the achievement.</td>
+<td>
+<code>string</code>
+</td>
+<td> yes</td>
+</tr>
+<tr>
+<td>display_order</td>
+<td>Order of this achievement as it shows up in the achievement stories UI (low to high). For example a display order of 100 will be displayed in the UI before 200. We use this value to surface achievements according to the order the developer has specified. Please make sure this value is unique and increments in the correct order for your achievements.</td>
+<td>
+<code>integer</code>
+</td>
+<td>no</td>
+</tr>
+</table>
+<p>Response:</p>
+<table>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>true or error depending on whether the registration was successful.</td>
+<td>
+<code>boolean<code>
+</code>
+</code>
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>100</td>
+<td>Service error</td>
+</tr>
+<tr>
+<td>3401</td>
+<td>If an app tries to register more than the maximum number(1000) of achievements.</td>
+</tr>
+<tr>
+<td>3402</td>
+<td>When the app tries to register an achievement that would raise the app’s point total above the 1000-point limit.</td>
+</tr>
+</table>
+<h3>Delete</h3>
+<p>You can un-register an achievement for a game by issuing an <code>HTTP DELETE</code> request to <code>/APP_ID/achievements</code> with an <code>app access_token</code> and the following parameter.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+<tr>
+<td>achievement</td>
+<td>The unique URL to the achievement.</td>
+<td>
+<code>string</code>
+</td>
+<td>yes</td>
+</tr>
+</table>
+<p>Response</p>
+<table>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>true or error depending on whether the delete was successful.</td>
+<td>
+<code>boolean<code>
+</code>
+</code>
+</td>
+</tr>
+</table>
+<p>When a developer deletes an achievement, it un-registers it from the app which means</p>
+<ul>
+<li>The app will no longer be able to publish that achievement for a user.</li>
+<li>The point value of the achievement is deducted from the app’s achievements point total.</li>
+<li>All existing user achievements for that achievement will not show up in the UI though they will still be available via the API.</li>
+</ul>
+<h3>Update</h3>
+<p>A developer may update the <code>&lt;meta&gt;</code> tag property values of their achievement by forcing a re-scrape of it’s <code>Open Graph URL</code> using the <a href="/tools/lint" name="https://developers.facebook.com/tools/lint">Facebook Linter</a>. Please note that after a significant number of publishes, the property values are locked and cannot be edited.</p>
+<p>A developer may update the custom properties of an achievement registration (e.g. display_order) by re-<code>POST</code>ing with the same achievement parameter value, but with an updated custom registration property value.</p>
+<hr />
+<h2 id="videos">videos</h2>
+<h3>Create</h3>
+<p>You can publish a <a href="https://developers.dev.facebook.com/docs/reference/api/video/" name="https://developers.dev.facebook.com/docs/reference/api/video/">video</a> to an <code>Application</code> by issuing an HTTP POST request to <code>https://graph-video.facebook.com/PAGE_ID/videos</code> with the <code>publish_stream</code> permission and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> source </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">Video</a> content </td>
+<td>
+<code>multipart/form-data</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> title </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">Video</a> title </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> description </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">Video</a> description </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new video ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/api/application/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1337119618" title="2012年5月15日 15:06">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

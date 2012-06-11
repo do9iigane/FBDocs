@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/ads-api/start-action-specs/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/ads-api/start-action-specs/">https://developers.facebook.com/docs/reference/ads-api/start-action-specs/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Best Practices</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/batch-requests/" name="http://developers.facebook.com/docs/reference/ads-api/batch-requests/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/etags-reference/" name="http://developers.facebook.com/docs/reference/ads-api/etags-reference/">Using ETags</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/currencies/" name="http://developers.facebook.com/docs/reference/ads-api/currencies/">Currencies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/">Introduction to Action Spec</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/" name="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/">Introduction to Sponsored Stories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/" name="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/">Optimized CPM</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Specs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/" name="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/">Conversion Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/creative-specs/" name="http://developers.facebook.com/docs/reference/ads-api/creative-specs/">Creative Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/">Defining Action Specs </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/">Targeting Specs</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced Targeting</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/">Action Spec Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/">Topic Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/">ZIP Code Targeting</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Queries</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/actionestimate/" name="http://developers.facebook.com/docs/reference/ads-api/actionestimate/">Action Estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/generatepreview/" name="http://developers.facebook.com/docs/reference/ads-api/generatepreview/">Action Spec Ad Previews</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/adstatistics/">Ad Statistics</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/" name="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/">Autocomplete Data</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/" name="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/">Broad Target Categories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/" name="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/">Connection Objects</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/">Conversion Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/keywordstats/" name="http://developers.facebook.com/docs/reference/ads-api/keywordstats/">Keyword Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/reachestimate/" name="http://developers.facebook.com/docs/reference/ads-api/reachestimate/">Reach estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-description/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-description/">Targeting Description</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccount/" name="http://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/">Ad account group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcampaign/" name="http://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcreative/" name="http://developers.facebook.com/docs/reference/ads-api/adcreative/">Ad creative</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adimage/" name="http://developers.facebook.com/docs/reference/ads-api/adimage/">Ad image</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/aduser/" name="http://developers.facebook.com/docs/reference/ads-api/aduser/">Ad user</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Defining Action Specs </h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api/">Ads API</a> › <a href="/docs/reference/ads-api/start-action-specs/" name="https://developers.facebook.com/docs/reference/ads-api/start-action-specs/">Defining Action Specs </a>
+</div>
+</div>
+</div>
+<h1>Action Specs</h1>
+<p>
+<a href="https://developers.facebook.com/docs/reference/ads-api/intro-action-specs/" name="https://developers.facebook.com/docs/reference/ads-api/intro-action-specs/">Action specs</a> are used to describe actions people have taken on Open Graph objects via an application or an on-Facebook object directly. Actions can be any verb e.g &quot;Listen&quot;, &quot;Watch&quot;, &quot;Comment&quot;, &quot;Played&quot;, &quot;Purchase&quot;, &quot;Drive&quot;, &quot;Fly&quot;, &quot;Drink&quot; etc. Object can be any Open Graph object such as a song, book, product, virtual good etc. For background information about Open Graph actions, see the <a href="https://developers.facebook.com/docs/beta/opengraph/tutorial" name="https://developers.facebook.com/docs/beta/opengraph/tutorial">Open Graph tutorial</a>
+</p>
+<p>
+<strong>Note</strong>: Action specs are limited to be a maximum of 4096 characters in length.</p>
+<p>Action specs are comprised of Actions and Objects each of which is a key value pair.</p>
+<h3>Action Spec action</h3>
+<p>The Action Spec action specifies the action being performed. The key to the action is always &quot;action.type&quot; and the value is the action being performed. The action being performed is comprised of two pieces of information; the namespace of the verb and the verb itself. e.g. myreaderapp:read, og:watch, incarapp:drive etc. There is always at least one action per action spec. The format of the action is as follows:</p>
+<pre>
+<code>&quot;action.type&quot;:[&quot;&lt;namespace&gt;:&lt;verb&gt;&quot;]
+</code>
+</pre>
+<p>Examples of actions are:</p>
+<pre>
+<code> &quot;action.type&quot;:[&quot;flightsim:fly&quot;]
+ &quot;action.type&quot;:[&quot;og:video.watch&quot;]
+ &quot;action.type&quot;:[&quot;fashionapp:wear&quot;]
+</code>
+</pre>
+<p>Flightsim:fly and fashion app:wear are custom actions defined by the developer of those apps. For more details on defining custom actions please review the <a href="https://developers.facebook.com/docs/beta/opengraph/tutorial" name="https://developers.facebook.com/docs/beta/opengraph/tutorial">Open Graph Tutorial</a>
+</p>
+<p>og:video.watch is a built in action. Read more about <a href="https://developers.facebook.com/docs/opengraph/actions/builtin/" name="https://developers.facebook.com/docs/opengraph/actions/builtin/">Built in action types</a>.</p>
+<h3>Action Spec object</h3>
+<p>The Action spec object specifies one or more objects involved in the Action Spec. This object could be the application performing the action, an object the action is being performed on or a combination of the two. The object is comprised of two sections, the <code>selector</code> and the value. The <code>selector</code> defines the object and/or the field of the object to match and the value is used to match object instances based on the <code>selector</code>. There is always at least one object per action spec. The format of object is as follows</p>
+<pre>
+<code>&quot;&lt;selector&gt;&quot;:[&lt;value&gt;]
+</code>
+</pre>
+<p>Examples of selector and values are:</p>
+<pre>
+<code> &quot;song.musician&quot;:[68764758347] : This selects all songs where the musician is represented by ID 68764758347
+ &quot;application&quot;:[67568576783] : This selects the application with ID 67568576783
+ &quot;book.author&quot;:[66787648454] : This selects any book where the author is represented by the ID 66787648454
+</code>
+</pre>
+<p>Objects in Action Spec can also be defined by URLs, for example:</p>
+<pre>
+<code>  &quot;book.author&quot;:[&quot;http://og.mybookapp.com/author.php?id=34342&quot;] : Where http://og.mybookapp.com/author.php?id=34342 is the url of an Open Graph object identifying the author.
+</code>
+</pre>
+<h3>Example: Performing an action via an app</h3>
+<p>When a user flies a plane via a fight simulator app the user is said to have performed an action via that app. For example a user flying a plane in a flight simulator with an app ID of 174829001234 would be described as:</p>
+<pre>
+<code>{&quot;action.type&quot;:[&quot;flightsim:fly&quot;], &quot;application&quot;:[174829001234]}
+</code>
+</pre>
+<p>In this case flightsim:fly is the name of the action being performed and 174829001234 is the app ID of the app the user is using fly the pane.</p>
+<h3>Example: Performing an action on an object</h3>
+<p>When a user flies a plane in a flight simulator app the user is said to have performed an action on the plane object. For example a user flying a Boeing 747 (Object ID 68764758347) in a flight simulator app would be described as:</p>
+<pre>
+<code>{&quot;action.type&quot;:[&quot;flightsim:fly&quot;], &quot;plane&quot;:[68764758347]}
+</code>
+</pre>
+<p>In this case flightsim:fly is the name of the action being performed,&quot;plane&quot; is the <code>selector</code> of the object and 68764758347 is the object ID of the plane the user is flying.</p>
+<h3>Example: Performing an action on an object with an app</h3>
+<p>When a user flies a plane in a flight simulator app the user is said to have performed an action on the plane object. For example a user flying a Boeing 747 (Object ID 68764758347) in a flight simulator app (app Id of 174829001234) would be described as:</p>
+<pre>
+<code>{&quot;action.type&quot;:[&quot;flightsim:fly&quot;], &quot;plane&quot;:[68764758347], &quot;application&quot;:[174829001234]}
+</code>
+</pre>
+<p>In this case flightsim:fly is the name of the action being performed,&quot;plane&quot; is the <code>selector</code> of the object, 68764758347 is the object ID of the plane the user is flying and 174829001234 is the app ID of the app the user is using fly the pane .</p>
+<h3>Example: Grouping together actions and objects.</h3>
+<p>It is valid to have multiple actions and objects within a single action spec.</p>
+<pre>
+<code>{&quot;action.type&quot;:[&quot;flightsim:fly&quot;,&quot;flightsim:land&quot;,&quot;flightsim:crash&quot;], 
+&quot;plane&quot;:[68764758347,68764712345,68764723424], 
+&quot;application&quot;:[174829001234, 174829001234]}
+</code>
+</pre>
+<p>This example selects every valid combination of action, object and app.</p>
+<p>It is also valid to group multiple action specs together, this will OR all of the action specs together. For example</p>
+<pre>
+<code>[{&quot;action.type&quot;:[&quot;flightsim:fly&quot;],&quot;plane&quot;:[68764758347], 
+&quot;application&quot;:[174829001234]},
+{&quot;action.type&quot;:[&quot;flightsim:land&quot;], &quot;plane&quot;:[68764712345], 
+&quot;application&quot;:[174829001234]}, 
+{&quot;action.type&quot;:[&quot;flightsim:crash&quot;],  &quot;plane&quot;:[68764723424], 
+&quot;application&quot;:[174829001234]}]
+</code>
+</pre>
+<h3>Restrictions for action specs</h3>
+<p>Please note the following restrictions for using action specs:</p>
+<ul>
+<li>Every action spec must have at least one action type. </li>
+<li>Every action spec must have at least one object reference. This reference can be an app or Open Graph object.</li>
+<li>The action spec has two reserved keywords: &quot;action.type&quot; and &quot;application&quot;. All other keys can come from an Open Graph definition.</li>
+</ul>
+<h2>Using Action Specs</h2>
+<h3>Ad Targeting</h3>
+<p>Action spec can be used to target ads to users who have performed certain actions and to friends of those users. For more information on Action Spec Targeting, see the <a href="/docs/reference/ads-api/action-specs-targeting/" name="https://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/">Action Spec Targeting</a> Reference.</p>
+<h3>Sponsored Story Definition</h3>
+<p>Action spec can be used to create Sponsored Stories from actions taken by users. For more information on defining Sponsored Stories by action spec, see the <a href="/docs/reference/ads-api/adcreative/" name="https://developers.facebook.com/docs/reference/ads-api/adcreative/">Ad Creative</a> Reference.</p>
+<h3>Conversion Specs Definition</h3>
+<p>Action spec can be used to define conversion spec for an ad group. For more information on defining conversion specs, see the <a href="/docs/reference/ads-api/conversion-specs/" name="https://developers.facebook.com/docs/reference/ads-api/conversion-specs/">Conversion Spec</a> Reference.</p>
+<p>
+<a name="on-site-action-spec">
+</a>
+</p>
+<h2>Action Specs for Facebook Objects</h2>
+<p>This section details the action spec formats for various Facebook actions and objects that are referred to as on-site Action Spec here.</p>
+<p>Examples of on-site actions are</p>
+<ul>
+<li>Publishing a post</li>
+<li>Sharing a post</li>
+<li>Commenting on a post</li>
+<li>Liking a post</li>
+</ul>
+<p>Examples of on-site objects are</p>
+<ul>
+<li>Page</li>
+<li>Page (or user) post</li>
+<li>Event</li>
+<li>Video</li>
+<li>Photo</li>
+</ul>
+<p>Action spec models on-site objects and actions similar to <a href="https://developers.facebook.com/docs/beta/opengraph/tutorial" name="https://developers.facebook.com/docs/beta/opengraph/tutorial">Open Graph</a> objects and actions. That is, on-site objects, like Open Graph objects, may have one or more attributes, and on-site actions, Open Graph actions, may have one or more connected object types.</p>
+<p>This tables explain on-site objects, actions, and their attribute so that you can see how to mix and match on-site objects and actions for selecting a set of stories.</p>
+<h3>On-site Objects</h3>
+<p>Below table lists all on-site objects and their attributes.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Object</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+<th align="left">Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<code>application</code>
+</td>
+<td align="left">Specifies an app Object</td>
+<td align="left">The ID of the app</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">
+<code>offer</code>
+</td>
+<td align="left">Specifies an Offer object</td>
+<td align="left">The ID of the Offer</td>
+<td align="left">
+<code>creator</code>: The ID of the Page that posted the Offer</td>
+</tr>
+<tr>
+<td align="left">
+<code>event</code>
+</td>
+<td align="left">Specifies an event object</td>
+<td align="left">The ID Of the Event</td>
+<td align="left">
+<code>creator</code>: The ID of the Page that posted created the Event</td>
+</tr>
+<tr>
+<td align="left">
+<code>domain</code> (<strong>deprecated</strong>)</td>
+<td align="left">Specifies an external domain</td>
+<td align="left">The ID or URL of the domain</td>
+<td align="left">
+<strong>this selector is being replaced by <code>object.domain</code>.</strong>
+<br />
+<code>domain</code>: The ID of the domain that is claimed by an admin (see <a href="https://developers.facebook.com/docs/insights/#claiming_a_domain" name="https://developers.facebook.com/docs/insights/#claiming_a_domain">claiming your domain</a>)</td>
+</tr>
+<tr>
+<td align="left">
+<code>object</code>
+</td>
+<td align="left">Specifies an external web page that implements <a href="https://developers.facebook.com/docs/opengraphprotocol/" name="https://developers.facebook.com/docs/opengraphprotocol/">Open Graph</a>
+</td>
+<td align="left">The URL of the web page</td>
+<td align="left">
+<code>domain</code>: The URL of the domain e.g., <code>http://www.my-domain-name.com</code> or the name of the domain, e.g., <code>www.my-domain-name.com</code>, or the ID of a domain if it is claimed by an admin (see <a href="https://developers.facebook.com/docs/insights/#claiming_a_domain" name="https://developers.facebook.com/docs/insights/#claiming_a_domain">claiming your domain</a>). Note that you no longer need to be an admin of a domain in order to boost its stories</td>
+</tr>
+<tr>
+<td align="left">
+<code>question</code>
+</td>
+<td align="left">Specifies a question object</td>
+<td align="left">The ID of a question-poll</td>
+<td align="left">
+<code>creator</code>: The ID of the Page that posted this question</td>
+</tr>
+<tr>
+<td align="left">
+<code>page</code>
+</td>
+<td align="left">Specifies a Page object</td>
+<td align="left">The ID of the Page</td>
+<td align="left">
+<code>parent</code>: The ID of the parent Page of this Page (if any) <br />
+<code>tab.name</code>: The name of the Page app</td>
+</tr>
+<tr>
+<td align="left">
+<code>post</code>
+</td>
+<td align="left">Specifies a Page or a user&apos;s post object. Note that a user&apos;s post is not available for boosting unless it is a user&apos;s sharing of a Page post</td>
+<td align="left">The ID of a Page post</td>
+<td align="left">
+<code>author</code>: The ID of the Page that published the post <br />
+<code>wall</code>: The ID of the Page or Event that the post was published on its wall <br />
+<code>object</code>: The ID of an object that is attached to this post (e.g., a photo, a post, an event, etc.) or the URL of an external web page <br />
+<code>domain</code> (<strong>deprecated</strong>): the ID of a domain that implements Open Graph. Note that the domain should be claimed by an admin (see <a href="https://developers.facebook.com/docs/insights/#claiming_a_domain" name="https://developers.facebook.com/docs/insights/#claiming_a_domain">claiming your domain</a>) <br />
+<strong>this selector is being replaced by <code>object.domain</code> (see above)</strong>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>On-site Actions</h3>
+<p>Below table lists all on-site actions and attributes along with their connected object types.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Action</th>
+<th align="left">Description</th>
+<th align="left">Connected Object Types</th>
+<th align="left">Attributes</th>
+<th align="left">Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<code>receive_offer</code>
+</td>
+<td align="left">Claiming an Offer</td>
+<td align="left">
+<code>offer</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>story_spec</code>
+<br />
+<code>targeting_spec</code>
+<br />
+<code>conversion_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>rsvp</code>
+</td>
+<td align="left">Rsvping into an Event</td>
+<td align="left">
+<code>event</code>
+</td>
+<td align="left">
+<code>response</code>: valid values are <code>yes</code>, <code>maybe</code>, and <code>no</code>
+</td>
+<td align="left">
+<code>story_spec</code>
+<br />
+<code>targeting_spec</code>
+<br />
+<code>conversion_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>like</code>
+</td>
+<td align="left">Liking an object</td>
+<td align="left">
+<code>page</code>
+<br />
+<code>post</code>
+<br />
+<code>object</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>story_spec</code>
+<br />
+<code>targeting_spec</code>
+<br />
+<code>conversion_spec</code> (available only for <code>page</code> and <code>post</code>)</td>
+</tr>
+<tr>
+<td align="left">
+<code>checkin</code>
+</td>
+<td align="left">Checking in to a Place</td>
+<td align="left">
+<code>page</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>story_spec</code>
+<br />
+<code>targeting_spec</code>
+<br />
+<code>conversion_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>comment</code>
+</td>
+<td align="left">Commenting on a Page post</td>
+<td align="left">
+<code>post</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>story_spec</code>
+<br />
+<code>targeting_spec</code>
+<br />
+<code>conversion_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>post</code>
+</td>
+<td align="left">Sharing a story</td>
+<td align="left">
+<code>application</code>
+<br />
+<code>post</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>story_spec</code>
+<br />
+<code>targeting_spec</code>
+<br />
+<code>conversion_spec</code> (available only for <code>post</code>)</td>
+</tr>
+<tr>
+<td align="left">
+<code>photo_view</code>
+</td>
+<td align="left">Viewing a photo</td>
+<td align="left">
+<code>post</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>conversion_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>video_play</code>
+</td>
+<td align="left">Watching a video</td>
+<td align="left">
+<code>post</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>conversion_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>link_click</code>
+</td>
+<td align="left">Clicking on a link</td>
+<td align="left">
+<code>post</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>conversion_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>vote</code>
+</td>
+<td align="left">Voting on a question</td>
+<td align="left">
+<code>question</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>story_spec</code>
+<br />
+<code>targeting_spec</code>
+<br />
+<code>conversion_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>follow</code>
+</td>
+<td align="left">Following a question</td>
+<td align="left">
+<code>question</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>conversion_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>games.plays</code>
+</td>
+<td align="left">Playing a game</td>
+<td align="left">
+<code>application</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>story_spec</code>
+<br />
+<code>targeting_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>apps.uses</code>
+</td>
+<td align="left">Using an App</td>
+<td align="left">
+<code>application</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>story_spec</code>
+<br />
+<code>targeting_spec</code>
+<br />
+<code>conversion_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>mention</code>
+</td>
+<td align="left">Mentioning of a Page</td>
+<td align="left">
+<code>page</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>conversion_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>app_install</code>
+</td>
+<td align="left">Installing an app</td>
+<td align="left">
+<code>application</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>conversion_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>credit_spent</code>
+</td>
+<td align="left">Instances of spending credit in an app</td>
+<td align="left">
+<code>application</code>
+</td>
+<td align="left">None</td>
+<td align="left">
+<code>conversion_spec</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>tab_view</code>
+</td>
+<td align="left">Viewing a page tab</td>
+<td align="left">
+<code>page</code> (specifying a page object is mandatory while specifying page.tab.name is optional)</td>
+<td align="left">None</td>
+<td align="left">
+<code>conversion_spec</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Examples</h3>
+<p>Select likes of a Page post whose ID is <code>12345</code>
+</p>
+<pre>
+<code>{&apos;action.type&apos;:&apos;like&apos;, &apos;post`:12345}
+</code>
+</pre>
+<p>Select likes of a domain</p>
+<pre>
+<code>{&apos;action.type&apos;:&apos;like&apos;, &apos;object.domain&apos;:&apos;http://my-domain-name.com&apos;}
+</code>
+</pre>
+<p>Selects likes of a web page that implements <a href="https://developers.facebook.com/docs/opengraphprotocol/" name="https://developers.facebook.com/docs/opengraphprotocol/">Open Graph</a>
+</p>
+<pre>
+<code>{&apos;action.type&apos;:&apos;like&apos;, &apos;object&apos;:&apos;http://my-example-domin.com/path-to-webpage&apos;}
+</code>
+</pre>
+<p>Select shares of a story about a domain whose ID is <code>12345</code> (e.g. a feed dialog on a website)</p>
+<pre>
+<code>{&apos;action.type&apos;:&apos;post&apos;, &apos;post.object.domain&apos;: 12345}
+</code>
+</pre>
+<p>Select shares of a story about a web page</p>
+<pre>
+<code>{&apos;action.type&apos;:&apos;post&apos;, &apos;post.object&apos;:&apos;http://my-example-domin.com/path-to-webpage&apos;}
+</code>
+</pre>
+<p>Select RSVPs responses of <code>yes</code> and <code>maybe</code> an Event whose ID is <code>1234456</code>
+</p>
+<pre>
+<code>{&apos;action.type&apos;:&apos;rsvp&apos; , &apos;response&apos;:[&apos;yes&apos;,&apos;maybe&apos;], &apos;event&apos;:123456}
+</code>
+</pre>
+<p>Select shares of any story that was posted by a Page admin on a Page whose ID is <code>1234567</code>.</p>
+<pre>
+<code>{&apos;action.type&apos;:&apos;post&apos;, &apos;post.object.author&apos;: 1234567}
+</code>
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1338440818" title="2012年5月30日 22:06">約1週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

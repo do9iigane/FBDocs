@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/chat/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/chat/">https://developers.facebook.com/docs/chat/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a class="selected" href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Facebook Chat API</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/chat/" name="https://developers.facebook.com/docs/chat/">Facebook Chat API</a>
+</div>
+</div>
+</div>
+<p>You can integrate Facebook Chat into your Web-based, desktop, or mobile instant messaging products. Your instant messaging client connects to Facebook Chat via the Jabber/XMPP service. This document describes the features and limitations of Facebook Chat&apos;s XMPP protocol for the developer who intends to implement a Facebook Chat client.</p>
+<p>Before reading this document, you should be familiar with the terms and concepts involved in <a href="http://xmpp.org/" name="http://xmpp.org/">XMPP</a> chat clients and servers.</p>
+<p>Please do not use this API to send spammy messages to users. Facebook takes user experience and spam extremely seriously and if users report your app as using the Chat API to spam them, we will disable your app.</p>
+<p>
+<img src="http://sphotos.ak.fbcdn.net/hphotos-ak-ash2/hs016.ash2/34156_142606822423061_109700069047070_407590_1912553_n.jpg" />
+</p>
+<p>
+<a name="features">
+</a>
+</p>
+<h2>Features and Limitations</h2>
+<p>Facebook Chat currently supports the following features:</p>
+<ul>
+<li>
+<a href="#platauth" name="https://developers.facebook.com/docs/#platauth">Facebook Platform authentication</a> using the X-FACEBOOK-PLATFORM <a href="http://asg.web.cmu.edu/sasl/" name="http://asg.web.cmu.edu/sasl/">SASL</a> authentication mechanism</li>
+<li>
+<a href="#jabber" name="https://developers.facebook.com/docs/#jabber">Username/password authentication</a> using the DIGEST-MD5 authentication mechanism</li>
+<li>Sending and receiving plain-text messages (not HTML messages)</li>
+<li>Sending and receiving typing notifications using the <a href="http://xmpp.org/extensions/xep-0085.html" name="http://xmpp.org/extensions/xep-0085.html">XEP-0085</a> protocol extension (<em>not</em> the XEP-0022 extension)</li>
+<li>Setting the user idle using a show element in presence stanzas (there will be a delay before the user appears idle)</li>
+<li>Receiving vCards using the <a href="http://xmpp.org/extensions/xep-0054.html" name="http://xmpp.org/extensions/xep-0054.html">XEP-0054</a> extension</li>
+<li>Retrieving friends&apos; photos (either with vCard or XMPP presence)</li>
+</ul>
+<h3>Limitations</h3>
+<p>Facebook Chat should be compatible with every XMPP client, but is not a full XMPP server. It should be thought of as a proxy into the world of Facebook Chat on www.facebook.com. As a result, it has several behaviors that differ slightly from what you would expect from a traditional XMPP service:</p>
+<ul>
+<li>Your client cannot send or receive HTML messages</li>
+<li>Because roster items and presence subscriptions are based on the user&apos;s Facebook friends, they cannot be created or deleted using the standard XMPP mechanisms.</li>
+<li>Facebook Chat is terse when sending updates for new friends, because the negotiation happens outside of XMPP. Future versions of Facebook Chat may be more conformant.</li>
+<li>The user&apos;s own Jabber ID (JID) is different from the Jabber ID that their contacts will see because the translation is done internally.</li>
+<li>Arbitrary IQ stanzas cannot be passed between clients.</li>
+<li>Presence probes do not currently work.</li>
+<li>Non-SASL authentication with the <code>jabber:iq:auth</code> namespace as described in XEP-0078 is not currently supported.</li>
+<li>The XML parser does not yet fully handle XML namespaces. Please stick to the same style as the examples in <a href="http://xmpp.org/rfcs/" name="http://xmpp.org/rfcs/">XMPP RFCs</a> 3920 and 3921 when using XML namespaces.</li>
+</ul>
+<p>
+<a name="auth">
+</a>
+</p>
+<h2>Configuring Chat Authentication</h2>
+<p>You can authenticate your chat client users with one of two authentication mechanisms: X-FACEBOOK-PLATFORM (Facebook Platform) and DIGEST-MD5 (username/password). Facebook recommends you use the X-FACEBOOK-PLATFORM mechanism to connect to Facebook Chat whenever possible, because it provides a better user experience using simple Facebook Platform authentication.</p>
+<p>
+<a name="platauth">
+</a>
+</p>
+<h3>Authenticating with Facebook Platform</h3>
+<p>We support a custom <a href="http://asg.web.cmu.edu/sasl/" name="http://asg.web.cmu.edu/sasl/">SASL</a> mechanism called X-FACEBOOK-PLATFORM that allows clients to connect to chat using Facebook authentication. This mechanism is preferred for any application that is oriented toward social media in general or Facebook in particular, especially applications that are already integrated with Facebook Platform.</p>
+<p>In order to connect using this mechanism, the user must first log in to your application and grant the <code>xmpp_login</code> <a href="../authentication/permissions" name="https://developers.facebook.com/authentication/permissions">extended permission</a>. Follow the <a href="/docs/authentication/#client-side-flow" name="https://developers.facebook.com/docs/authentication/#client-side-flow">client side flow</a> to get a valid access_token for the user with the <code>xmpp_login</code> extended permission.</p>
+<p>Your application may now log in to Facebook Chat via Jabber using the X-FACEBOOK-PLATFORM mechanism. The user&apos;s Jabber ID will be assigned during the resource binding step of XMPP. Please keep in mind that while all of the messages defined by the X-FACEBOOK-PLATFORM mechanism are UTF-8 strings, XMPP specifies that they should be Base64-encoded before being sent over the wire.</p>
+<p>The mechanism starts with a server challenge, in the form of a common HTTP query string: an ampersand-separated sequence of equals-sign-delimited key/value pairs. The keys and values are UTF-8-encoded and URL-encoded. The query string contains two items: <code>method</code> and <code>nonce</code>.</p>
+<p>The client&apos;s reply should be a similarly-encoded query string prepared as if it were going to call a method against the Facebook API. The call should contain the following parameters:</p>
+<ul>
+<li>
+<code>string method</code>: Should be the same as the method specified by the server.</li>
+<li>
+<code>string api_key</code>: The application key associated with the calling application.</li>
+<li>
+<code>string access_token</code>: The access_token obtained in the above step.</li>
+<li>
+<code>float call_id</code>: The request&apos;s sequence number.</li>
+<li>
+<code>string v</code>: This must be set to 1.0 to use this version of the API.</li>
+<li>
+<code>string format</code>: Optional - Ignored.</li>
+<li>
+<code>string cnonce</code>: Optional - Client-selected nonce. Ignored.</li>
+<li>
+<code>string nonce</code>: Should be the same as the nonce specified by the server.</li>
+</ul>
+<p>The server will then respond with a success or failure message. Note that this needs to be over TLS or you&apos;ll get an error.</p>
+<p>
+<a name="jabber">
+</a>
+</p>
+<h3>Authenticating with Username/Password</h3>
+<p>The DIGEST-MD5 SASL mechanism is available to support traditional XMPP or multi-protocol IM clients that are not customized for (or even aware of) Facebook. This mechanism requires prompting the user for his or her password; therefore, it should only be used when necessary. In particular, it <strong>MUST NOT</strong> be used for any client that:</p>
+<ul>
+<li>Proxies the XMPP connection (the connection must be directly from the user&apos;s computer to Facebook).</li>
+<li>Reports messages or any other information about user activity to a third party (including the client developer).</li>
+<li>Integrates with Facebook, or has a Facebook Application ID.</li>
+</ul>
+<p>If your application does any of the above, you must use <a href="#platauth" name="https://developers.facebook.com/docs/#platauth">Facebook Platform authentication</a> instead.</p>
+<p>The user&apos;s Jabber ID is simply his or her Facebook user name with <code>@chat.facebook.com</code> appended. A user must have a Facebook username to use DIGEST-MD5. After the user gets his or her username, he or she must log out of and into Facebook once for us to store the special hash of the password.</p>
+<p>Clients should retrieve their user&apos;s vCard from the server according to XEP-0054 in order to be able to display a more natural name to the user. For example:</p>
+<pre>
+<code>&lt;iq id=&apos;1&apos; type=&apos;get&apos;&gt;&lt;vCard xmlns=&apos;vcard-temp&apos;/&gt;&lt;/iq&gt;
+</code>
+</pre>
+<p>
+<a name="best">
+</a>
+</p>
+<h2>Best Practices</h2>
+<p>In order to provide the best user experience, we recommend your chat integration do the following:</p>
+<ul>
+<li>Your Facebook Chat integration should only be used for applications facilitating real time conversation or interaction between users. Links or advertisements should not be sent via chat, unless the sending user types in this message.</li>
+<li>Your Facebook Chat integration should only be used for sessions that are expected to be long-lived. Clients should not rapidly churn on and off.</li>
+<li>vCards retrieved through Facebook Chat will contain profile pictures if available. Clients should cache these pictures using the content hash, not the user ID, as the key. vCards should only be fetched if the client does not already have that user&apos;s picture cached.</li>
+<li>Clients should not automatically reconnect if they receive a stream-error of type <code>conflict</code>.</li>
+<li>Clients should be able to handle a single contact with multiple <code>group</code> elements.</li>
+<li>Incoming messages from the JIDs <code>chat.facebook.com</code> or <code>facebook.com</code> should be displayed as administrative messages.</li>
+</ul>
+<h2>Sample code</h2>
+<p>Below is a sample code that shows you how to authenticate a user and connect with XMPP.</p>
+<pre>
+&lt;?php
+// Copyright 2004-present Facebook. All Rights Reserved.
+
+$STREAM_XML = &apos;&lt;stream:stream &apos;.
+  &apos;xmlns:stream=&quot;http://etherx.jabber.org/streams&quot; &apos;.
+  &apos;version=&quot;1.0&quot; xmlns=&quot;jabber:client&quot; to=&quot;chat.facebook.com&quot; &apos;.
+  &apos;xml:lang=&quot;en&quot; xmlns:xml=&quot;http://www.w3.org/XML/1998/namespace&quot;&gt;&apos;;
+
+$AUTH_XML = &apos;&lt;auth xmlns=&quot;urn:ietf:params:xml:ns:xmpp-sasl&quot; &apos;.
+  &apos;mechanism=&quot;X-FACEBOOK-PLATFORM&quot;&gt;&lt;/auth&gt;&apos;;
+
+$CLOSE_XML = &apos;&lt;/stream:stream&gt;&apos;;
+
+$RESOURCE_XML = &apos;&lt;iq type=&quot;set&quot; id=&quot;3&quot;&gt;&apos;.
+  &apos;&lt;bind xmlns=&quot;urn:ietf:params:xml:ns:xmpp-bind&quot;&gt;&apos;.
+  &apos;&lt;resource&gt;fb_xmpp_script&lt;/resource&gt;&lt;/bind&gt;&lt;/iq&gt;&apos;;
+
+$SESSION_XML = &apos;&lt;iq type=&quot;set&quot; id=&quot;4&quot; to=&quot;chat.facebook.com&quot;&gt;&apos;.
+  &apos;&lt;session xmlns=&quot;urn:ietf:params:xml:ns:xmpp-session&quot;/&gt;&lt;/iq&gt;&apos;;
+
+$START_TLS = &apos;&lt;starttls xmlns=&quot;urn:ietf:params:xml:ns:xmpp-tls&quot;/&gt;&apos;;
+
+
+function open_connection($server) {
+  print &quot;[INFO] Opening connection... &quot;;
+
+  $fp = fsockopen($server, 5222, $errno, $errstr);
+  if (!$fp) {
+    print &quot;$errstr ($errno)&lt;br&gt;&quot;;
+  } else {
+    print &quot;connnection open&lt;br&gt;&quot;;
+  }
+
+  return $fp;
+}
+
+function send_xml($fp, $xml) {
+  fwrite($fp, $xml);
+}
+
+function recv_xml($fp,  $size=4096) {
+  $xml = fread($fp, $size);
+  if ($xml === &quot;&quot;) {
+     return null;
+  }
+
+  // parses xml
+  $xml_parser = xml_parser_create();
+  xml_parse_into_struct($xml_parser, $xml, $val, $index);
+  xml_parser_free($xml_parser);
+
+  return array($val, $index);
+}
+
+function find_xmpp($fp,  $tag, $value=null, &amp;$ret=null) {
+  static $val = null, $index = null;
+
+  do {
+    if ($val === null &amp;&amp; $index === null) {
+      list($val, $index) = recv_xml($fp);
+      if ($val === null || $index === null) {
+        return false;
+      }
+    }
+
+    foreach ($index as $tag_key =&gt; $tag_array) {
+      if ($tag_key === $tag) {
+        if ($value === null) {
+          if (isset($val[$tag_array[0]][&apos;value&apos;])) {
+            $ret = $val[$tag_array[0]][&apos;value&apos;];
+          }
+          return true;
+        }
+        foreach ($tag_array as $i =&gt; $pos) {
+          if ($val[$pos][&apos;tag&apos;] === $tag &amp;&amp; isset($val[$pos][&apos;value&apos;]) &amp;&amp;
+            $val[$pos][&apos;value&apos;] === $value) {
+              $ret = $val[$pos][&apos;value&apos;];
+              return true;
+          }
+        }
+      }
+    }
+    $val = $index = null;
+  } while (!feof($fp));
+
+  return false;
+}
+
+
+function xmpp_connect($options, $access_token) {
+  global $STREAM_XML, $AUTH_XML, $RESOURCE_XML, $SESSION_XML, $CLOSE_XML, $START_TLS;
+
+  $fp = open_connection($options[&apos;server&apos;]);
+  if (!$fp) {
+    return false;
+  }
+ 
+  // initiates auth process (using X-FACEBOOK_PLATFORM)
+  send_xml($fp,  $STREAM_XML);
+  if (!find_xmpp($fp, &apos;STREAM:STREAM&apos;)) {
+    return false;
+  }
+  if (!find_xmpp($fp,  &apos;MECHANISM&apos;, &apos;X-FACEBOOK-PLATFORM&apos;)) {
+    return false;
+  }
+
+  // starting tls - MANDATORY TO USE OAUTH TOKEN!!!!
+  send_xml($fp,  $START_TLS);
+  if (!find_xmpp($fp, &apos;PROCEED&apos;, null, $proceed)) {
+    return false;
+  }
+  stream_socket_enable_crypto($fp, true, STREAM_CRYPTO_METHOD_TLS_CLIENT);
+
+  send_xml($fp, $STREAM_XML);
+  if (!find_xmpp($fp, &apos;STREAM:STREAM&apos;)) {
+    return false;
+  }
+  if (!find_xmpp($fp, &apos;MECHANISM&apos;, &apos;X-FACEBOOK-PLATFORM&apos;)) {
+    return false;
+  }
+
+  // gets challenge from server and decode it
+  send_xml($fp, $AUTH_XML);
+  if (!find_xmpp($fp,  &apos;CHALLENGE&apos;, null, $challenge)) {
+    return false;
+  }
+  $challenge = base64_decode($challenge);
+  $challenge = urldecode($challenge);
+  parse_str($challenge, $challenge_array);
+
+  // creates the response array
+  $resp_array = array(
+    &apos;method&apos; =&gt; $challenge_array[&apos;method&apos;],
+    &apos;nonce&apos; =&gt; $challenge_array[&apos;nonce&apos;],
+    &apos;access_token&apos; =&gt; $access_token,
+    &apos;api_key&apos; =&gt; $options[&apos;app_id&apos;],
+    &apos;call_id&apos; =&gt; 0,
+    &apos;v&apos; =&gt; &apos;1.0&apos;,
+  );
+  // creates signature
+  $response = http_build_query($resp_array);
+
+  // sends the response and waits for success
+  $xml = &apos;&lt;response xmlns=&quot;urn:ietf:params:xml:ns:xmpp-sasl&quot;&gt;&apos;.
+    base64_encode($response).&apos;&lt;/response&gt;&apos;;
+  send_xml($fp, $xml);
+  if (!find_xmpp($fp, &apos;SUCCESS&apos;)) {
+    return false;
+  }
+  
+  // finishes auth process
+  send_xml($fp, $STREAM_XML);
+  if (!find_xmpp($fp,&apos;STREAM:STREAM&apos;)) {
+    return false;
+  }
+  if (!find_xmpp($fp, &apos;STREAM:FEATURES&apos;)) {
+    return false;
+  }
+ send_xml($fp, $RESOURCE_XML);
+  if (!find_xmpp($fp, &apos;JID&apos;)) {
+    return false;
+  }
+  send_xml($fp, $SESSION_XML);
+  if (!find_xmpp($fp, &apos;SESSION&apos;)) {
+    return false;
+  }
+
+  // we made it!
+  send_xml($fp, $CLOSE_XML);
+  print (&quot;Authentication complete&lt;br&gt;&quot;);
+  fclose($fp);
+
+  return true;
+}
+
+
+
+//Gets access_token with xmpp_login permission
+function get_access_token($app_id, $app_secret, $my_url){ 
+    
+  $code = $_REQUEST[&quot;code&quot;];
+
+  if(empty($code)) {
+    $dialog_url = &quot;https://www.facebook.com/dialog/oauth?scope=xmpp_login&quot;.
+     &quot;&amp;client_id=&quot; . $app_id . &quot;&amp;redirect_uri=&quot; . urlencode($my_url) ;
+    echo(&quot;&lt;script&gt;top.location.href=&apos;&quot; . $dialog_url . &quot;&apos;&lt;/script&gt;&quot;);
+  }
+   $token_url = &quot;https://graph.facebook.com/oauth/access_token?client_id=&quot;
+    . $app_id . &quot;&amp;redirect_uri=&quot; . urlencode($my_url) 
+    . &quot;&amp;client_secret=&quot; . $app_secret 
+    . &quot;&amp;code=&quot; . $code;
+   $access_token = file_get_contents($token_url);
+    parse_str($access_token, $output);
+    
+    return($output[&apos;access_token&apos;]);
+}
+
+function _main() {
+  print &quot;Test platform connect for XMPP&lt;br&gt;&quot;;
+  $app_id=&apos;YOUR_APP_ID&apos;;
+  $app_secret=&apos;YOUR-APP_SECRET&apos;;
+  $my_url = &quot;YOUR_APP_URL&quot;;
+  $uid = &apos;USER_ID&apos;;
+  $access_token = get_access_token($app_id,$app_secret,$my_url);
+  print &quot;access_token: &quot;.$access_token.&quot;&lt;br&gt;&quot;;
+
+  $options = array(
+    &apos;uid&apos; =&gt; $uid,
+    &apos;app_id&apos; =&gt; $app_id,
+    &apos;server&apos; =&gt; &apos;chat.facebook.com&apos;,
+   );
+
+  // prints options used
+  print &quot;server: &quot;.$options[&apos;server&apos;].&quot;&lt;br&gt;&quot;;
+  print &quot;uid: &quot;.$options[&apos;uid&apos;].&quot;&lt;br&gt;&quot;;
+  print &quot;app id: &quot;.$options[&apos;app_id&apos;].&quot;&lt;br&gt;&quot;;
+
+  if (xmpp_connect($options, $access_token)) {
+    print &quot;Done&lt;br&gt;&quot;;
+  } else {
+    print &quot;An error ocurred&lt;br&gt;&quot;;
+  }
+
+}
+
+_main();
+
+
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/chat/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1325072231" title="2011年12月28日 3:37">約5ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

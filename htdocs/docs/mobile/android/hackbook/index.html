@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/mobile/android/hackbook/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/mobile/android/hackbook/">https://developers.facebook.com/docs/mobile/android/hackbook/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Getting Started</h5>
+<ul>
+</ul>
+</li>
+<li>
+<h5>Mobile Web</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/mobile/web/build/" name="http://developers.facebook.com/docs/mobile/web/build/">Mobile Web App Tutorial</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>iOS</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/mobile/ios/sdk/" name="http://developers.facebook.com/docs/mobile/ios/sdk/">iOS SDK</a>
+</li>
+</ul>
+</li>
+<li class="active">
+<h5>Android</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/mobile/android/sdk/" name="http://developers.facebook.com/docs/mobile/android/sdk/">Android SDK</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/mobile/android/hackbook/" name="http://developers.facebook.com/docs/mobile/android/hackbook/">Hackbook for Android</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Hackbook for Android</h1>
+</div>
+</div>
+<p>The <code>Hackbook for Android</code> app includes <a href="/docs/mobile/android/sso/" name="https://developers.facebook.com/docs/mobile/android/sso/">Single Sign On implementation (SSO)</a>, sample API calls and <a href="https://developers.facebook.com/tools/explorer/" name="https://developers.facebook.com/tools/explorer/">Graph API Explorer</a> and is for android developers who want to make their apps social using Facebook Social Graph. If you have any questions or comments related to this sample app, please post them on <a href="http://facebook.stackoverflow.com/questions/tagged/hackbook-for-android" name="http://facebook.stackoverflow.com/questions/tagged/hackbook-for-android">Facebook Stackoverflow</a>
+</p>
+<p>The source code is included in the <code>examples</code> folder in the <a href="https://github.com/facebook/facebook-android-sdk" name="https://github.com/facebook/facebook-android-sdk">Facebook Android SDK</a>. Get it here:</p>
+<pre>
+<code> git clone https://github.com/facebook/facebook-android-sdk/
+</code>
+</pre>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/android_hackbook.png" />
+</div>
+<ol>
+<li>
+<a href="#start" name="https://developers.facebook.com/docs/#start">Getting Started</a>
+</li>
+<li>
+<a href="#login" name="https://developers.facebook.com/docs/#login">Login button</a>
+</li>
+<li>
+<a href="#status" name="https://developers.facebook.com/docs/#status">Update Status</a>
+</li>
+<li>
+<a href="#requests" name="https://developers.facebook.com/docs/#requests">App Requests</a>
+</li>
+<li>
+<a href="#friends" name="https://developers.facebook.com/docs/#friends">Get Friends</a>
+</li>
+<li>
+<a href="#photo" name="https://developers.facebook.com/docs/#photo">Upload Photo</a>
+</li>
+<li>
+<a href="#place" name="https://developers.facebook.com/docs/#place">Place Check-in</a>
+</li>
+<li>
+<a href="#fql" name="https://developers.facebook.com/docs/#fql">Run FQL Query</a>
+</li>
+<li>
+<a href="#graph" name="https://developers.facebook.com/docs/#graph">Graph API Explorer</a>
+</li>
+</ol>
+<hr />
+<h2 id="start">Getting Started</h2>
+<p>See <a href="/docs/mobile/android/build/" name="https://developers.facebook.com/docs/mobile/android/build/">Android Getting Started</a>
+</p>
+<h2>Configuring the app</h2>
+<ul>
+<li>Launch Eclipse</li>
+<li>Ensure you have installed the Android plugin.</li>
+<li>Create Facebook SDK Project - follow the Step-1 instructions in the tutorial</li>
+<li>Create the Hackbook Project : <ul>
+<li>Select <strong>File</strong> -&gt; <strong>New</strong> -&gt; <strong>Project</strong>, choose <strong>Android Project</strong>, and then click <strong>Next</strong>.</li>
+<li>Select &quot;Create project from existing source&quot;.</li>
+<li>Choose facebook-android-sdk/examples/Hackbook. You should see the project properties populated.</li>
+<li>Click Finish to continue.</li>
+</ul>
+</li>
+<li>Add reference to the Facebook SDK - follow the Step-3 instructions in the tutorial</li>
+<li>
+<a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps">Create a Facebook app</a> if you don&apos;t have one already and add the app id in the Hackbook.java-&gt;APP_ID</li>
+</ul>
+<h2>Build the app</h2>
+<ul>
+<li>And you are done and ready to compile the project: <ul>
+<li>From the Project menu, select &quot;Build Project&quot;.</li>
+</ul>
+</li>
+</ul>
+<h2>Run the app</h2>
+<ul>
+<li>Hopefully project would compile fine. Next run the app on the emulator or on the phone (See http://developer.android.com/guide/developing/eclipse-adt.html#RunConfig for more details.)</li>
+<li>
+<p>If you plan to run on emulator, ensure you have created an Android Virtual Device (AVD):</p>
+<ul>
+<li>Go to Window -&gt; Android SDK and AVD Manager -&gt; Click New</li>
+<li>Provide a Name (AVD 2.3 e.g.) and choose the Target (Android 2.3 if available).</li>
+<li>Click &apos;Create AVD&apos; at the bottom and that should create an AVD which you can run the app on described next.</li>
+</ul>
+</li>
+<li>
+<p>Go to Run-&gt;Run Configurations-&gt;Android Application-&gt;create a new run configuration by clicking the icon with + button on it.</p>
+</li>
+<li>Name it &apos;Hackbook&apos;</li>
+<li>Under the Project, Browse and choose Hackbook</li>
+<li>Go to Target tab -&gt; Choose manual if you wish to run on the phone, else choose Automatic and select an AVD created in step 8.1</li>
+<li>Click Run and your &apos;Hackbook for Android&apos; app should be up and running.</li>
+</ul>
+<h2>Install the Facebook app</h2>
+<p>You will need to have the Facebook application on the handset or the emulator to test the Single Sign On. The SDK includes a developer release of the Facebook application that can be side-loaded for testing purposes. On an actual device, you can just download the latest version of the app from the Android Market, but on the emulator you will have to install it yourself:</p>
+<pre>
+<code>  adb install FBAndroid.apk
+</code>
+</pre>
+<hr />
+<h2>What&apos;s in there</h2>
+<p>Note: The source tags are provided through out the code base to facilitate easy search for the relevant code. Do a project-wide search for the source tags to get straight to the relevant code. Refer below for source tags for each feature.</p>
+<h2 id="login">Login button</h2>
+<p>This uses SSO to authorize the app. Clicking on Login should activate SSO (if the app is installed) or show OAuth dialog. When authorizing, no permissions are requested and the app will get basic permission by default.</p>
+<div class="fcol" style="width:355px;margin-right:20px;">
+<p>
+<img height="480px" src="https://developers.facebook.com/attachment/android_hackbook_authorize.png" width="100%" />
+</p>
+</div>
+<div class="fcol" style="width:355px;">
+<p>
+<img height="480px" src="https://developers.facebook.com/attachment/android_hackbook_loggedin.png" width="100%" />
+</p>
+</div>
+<p>Source Tag - <code>login_tag</code>
+</p>
+<ul>
+<li>
+<code>Hackbook.java</code> - this layout the login button and initialize it. Since this is also the calling activity, this overrides the onActivityResult() method.</li>
+<li>
+<code>LoginButton.java</code> - this calls the <code>mFb.authorize(mActivity, mPermissions, mActivityCode, new LoginDialogListener())</code> which authorizes the app via SSO or OAuth.</li>
+<li>
+<code>SessionStore.java</code> - stores the access token and access expiry time for future app launch. This is important that you save the access token, else user will need to authorize your app each time they launch it which is annoying and user is likely to churn out.</li>
+<li>
+<code>SessionEvents.java</code> - Authorization state tracker, calls the listener on login/logout success or error.</li>
+</ul>
+<hr />
+<h2 id="status">Update Status</h2>
+<p>This allows user to update his status by calling the &apos;feed&apos; dialog. More info on <a href="/docs/reference/dialogs/feed/" name="https://developers.facebook.com/docs/reference/dialogs/feed/">feed dialog.</a>
+</p>
+<div class="fcol" style="width:355px;margin-right:20px;">
+<p>
+<img height="480px" src="https://developers.facebook.com/attachment/android_hackbook_update_status.png" width="100%" />
+</p>
+</div>
+<div class="fcol" style="width:355px;">
+<p>
+<img height="480px" src="https://developers.facebook.com/attachment/android_hackbook_update_status_done.png" width="100%" />
+</p>
+</div>
+<div class="clearcols">
+</div>
+<p>Source Tag - <code>update_status_tag</code>, <code>view_post_tag</code>, <code>delete_post_tag</code>
+</p>
+<ul>
+<li>
+<code>Hackbook.java</code> - Case 0: update status by calling the feed dialog.</li>
+<li>
+<code>UpdateStatusResultDialog.java</code> - shows the object-id returned in the dialog response. You can view or delete the post here.</li>
+</ul>
+<hr />
+<h2 id="requests">App Requests</h2>
+<p>This allows to send app requests to user&apos;s friends by calling the <a href="/docs/reference/dialogs/requests/" name="https://developers.facebook.com/docs/reference/dialogs/requests/">apprequests dialog.</a>
+</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/android_hackbook_apprequests.png" />
+</div>
+<p>Source Tag - app_requests_tag</p>
+<ul>
+<li>
+<code>Hackbook.java</code> - Case 1: send the app requests by calling the the <code>apprequests</code> dialog.</li>
+</ul>
+<hr />
+<h2 id="friends">Get Friends</h2>
+<p>Get user&apos;s friends via Graph API or FQL Query. User must be logged-in to use this. Also post on a friend&apos;s wall by clicking on his name in the list.</p>
+<div class="fcol" style="width:355px;margin-right:20px;">
+<p>
+<img height="480px" src="https://developers.facebook.com/attachment/android_hackbook_get_friends.png" width="100%" />
+</p>
+</div>
+<div class="fcol" style="width:355px;">
+<p>
+<img height="480px" src="https://developers.facebook.com/attachment/android_hackbook_friends_list.png" width="100%" />
+</p>
+</div>
+<div class="clearcols">
+</div>
+<p>Source Tag - <code>get_friends_tag</code>, <code>friend_wall_tag</code>
+</p>
+<ul>
+<li>
+<code>Hackbook.java</code> - Case 2: Use Graph API <code>me/friends</code> which returns friends sorted by UID, currently it&apos;s not possible to sort any other way in the Graph API. Use the FQL Query to sort by name - <code>select name, current_location, uid, pic_square from user where uid in (select uid2 from friend where uid1=me())</code> order by name</li>
+<li>
+<code>FriendsList.java</code> - displays the friends profile pic and names as returned by the api. Also post on friend&apos;s wall by clicking on the friend.</li>
+<li>
+<code>FriendsModel.java</code> - run async tasks to fetch the profile picture limited to 15 tasks at any given time.</li>
+<li>Post on a friend&apos;s wall - You can post on a friend&apos;s wall by tapping on his name:</li>
+</ul>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/android_hackbook_friends_post_wall.png" />
+</div>
+<hr />
+<h2 id="photo">Upload Photo</h2>
+<p>Upload a photo either from the media gallery or from a remote server. You require <code>photo_upload</code> to upload photos on user profile.</p>
+<div class="fcol" style="width:355px;margin-right:20px;">
+<p>
+<img height="480px" src="https://developers.facebook.com/attachment/android_hackbook_upload_photo.png" width="100%" />
+</p>
+</div>
+<div class="fcol" style="width:355px;">
+<p>
+<img height="480px" src="https://developers.facebook.com/attachment/android_hackbook_view_photo.png" width="100%" />
+</p>
+</div>
+<div class="clearcols">
+</div>
+<p>Source Tag - <code>upload_photo</code>, <code>view_photo_tag</code>, <code>tag_photo_tag</code>
+</p>
+<ul>
+<li>
+<p>
+<code>Hackbook.java</code> - Case 3: Photo is uploaded by posting byte-array or url to <code>me/photos</code> endpoint. Media Gallery is launched by invoking the <code>MediaStore.Images.Media.EXTERNAL_CONTENT_URI</code> intent and overriding the <code>OnActivityResult()</code> to get the picture from the media gallery. Photo from remote server is uploaded by simply providing the image url in the &apos;url&apos; param in the <code>graph.facebook.com/me/photos</code> endpoint.</p>
+</li>
+<li>
+<p>
+<code>UploadPhotoResultDialog.java</code> - shows the object-id returned after uploaded the photo. You can view or tag the photo here.</p>
+</li>
+</ul>
+<hr />
+<h2 id="place">Place Check-in</h2>
+<p>Fetch user&apos;s current location or use Times Square as the current location and get nearby places which user can check-in at.</p>
+<div class="fcol" style="width:355px;margin-right:20px;">
+<p>
+<img height="480px" src="https://developers.facebook.com/attachment/android_hackbook_location.png" width="100%" />
+</p>
+</div>
+<div class="fcol" style="width:355px;">
+<p>
+<img height="480px" src="https://developers.facebook.com/attachment/android_hackbook_location_list.png" width="100%" />
+</p>
+</div>
+<div class="clearcols">
+</div>
+<p>Source Tag - <code>fetch_places_tag</code>, <code>check_in_tag</code>
+</p>
+<ul>
+<li>
+<code>Hackbook.java</code> - Case 4: Ask to fetch current location or use Times Square as the current location.</li>
+<li>
+<code>Places.java</code> - Get user&apos;s current location and fetch the nearby places by calling the <code>graph.facebook.com/search?type=places&amp;distance=1000&amp;center=lat,lon</code>. Check-in user at a place by calling the <code>graph.facebook.com/me/checkins&amp;place=&lt;place_id_&gt;&amp;message=&lt;message&gt;&amp;coordinates={&quot;latitude&quot;: &lt;lat&gt;, &quot;longitude:&quot;: &lt;lon&gt;}</code>
+</li>
+<li>Check-in to a place - You can check-in to a place by tapping on the place:</li>
+</ul>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/android_hackbook_location_checkin.png" />
+</div>
+<hr />
+<h2 id="fql">Run FQL Query</h2>
+<p>Type and run any FQL Query and see the results.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/android_hackbook_fql_query.png" />
+</div>
+<p>Source Tag - <code>fql_query_tag</code>
+</p>
+<ul>
+<li>
+<code>FQLQuery.java</code> - Layout the FQL Query Dialog and run the query and show the results.</li>
+</ul>
+<hr />
+<h2 id="graph">Graph API Explorer</h2>
+<p>Explore user&apos;s social graph, see his and friends&apos; connections and get new permissions. This is similar to the <a href="https://developers.facebook.com/tools/explorer/" name="https://developers.facebook.com/tools/explorer/">Graph Explorer dev tool.</a> The ObjectIDs in the API response are linkified and can be clicked to fetch object specific data.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/android_hackbook_graph_explorer.png" />
+</div>
+<ul>
+<li>Click the <code>x</code> button to clear the textfield</li>
+<li>Click the green up arrow button in the textfield to get the <code>me</code> object data.</li>
+<li>Click on <code>Fields/Connections</code> to see current object&apos;s fields and connections.</li>
+<li>On the Fields &amp; Connections dialog, in the Fields tab, select the fields to view or in the Connections tab, click the connection to view it&apos;s content.</li>
+</ul>
+<div class="fcol" style="width:355px;margin-right:20px;">
+<p>
+<img height="480px" src="https://developers.facebook.com/attachment/android_hackbook_graph_explorer_fields.png" width="100%" />
+</p>
+</div>
+<div class="fcol" style="width:355px;">
+<p>
+<img height="480px" src="https://developers.facebook.com/attachment/android_hackbook_graph_explorer_connections.png" width="100%" />
+</p>
+</div>
+<div class="clearcols">
+</div>
+<ul>
+<li>Click on <code>Get Permissions</code> to get new permissions including user&apos;s, his friends or extended permissions.</li>
+</ul>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/android_hackbook_permissions.png" />
+</div>
+<p>Source Tag - <code>graph_explorer</code>
+</p>
+<ul>
+<li>
+<code>Hackbook.java</code> - Case 5: Launch the GraphExplorer intent</li>
+<li>
+<code>GraphExplorer.java</code> - Layout and execute the graph explorer</li>
+<li>
+<code>IntentUriHandler.java</code> - Handle the <code>fbgraphex:</code> schema generated while linkifying the Object IDs in the graph explorer output</li>
+</ul>
+<hr />
+<h2>Report Issues/Bugs</h2>
+<p>Please report issues on <a href="http://facebook.stackoverflow.com/questions/tagged/hackbook-for-android" name="http://facebook.stackoverflow.com/questions/tagged/hackbook-for-android">Facebook Stackoverflow</a>
+</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="clear">
+<abbr class="timestamp" data-utime="1331073488" title="2012年3月6日 14:38">約3ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

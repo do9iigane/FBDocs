@@ -1,0 +1,3032 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/api/user/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/api/user/">https://developers.facebook.com/docs/reference/api/user/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Concepts</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/batch/" name="http://developers.facebook.com/docs/reference/api/batch/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/permissions/" name="http://developers.facebook.com/docs/reference/api/permissions/">Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/realtime/" name="http://developers.facebook.com/docs/reference/api/realtime/">Real-time Updates</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/achievement/" name="http://developers.facebook.com/docs/reference/api/achievement/">Achievement(Instance)</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/album/" name="http://developers.facebook.com/docs/reference/api/album/">Album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/application/" name="http://developers.facebook.com/docs/reference/api/application/">Application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/checkin/" name="http://developers.facebook.com/docs/reference/api/checkin/">Checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Comment/" name="http://developers.facebook.com/docs/reference/api/Comment/">Comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/domain/" name="http://developers.facebook.com/docs/reference/api/domain/">Domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/event/" name="http://developers.facebook.com/docs/reference/api/event/">Event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/FriendList/" name="http://developers.facebook.com/docs/reference/api/FriendList/">FriendList</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/group/" name="http://developers.facebook.com/docs/reference/api/group/">Group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/insights/" name="http://developers.facebook.com/docs/reference/api/insights/">Insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/link/" name="http://developers.facebook.com/docs/reference/api/link/">Link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/message/" name="http://developers.facebook.com/docs/reference/api/message/">Message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/note/" name="http://developers.facebook.com/docs/reference/api/note/">Note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/offer/" name="http://developers.facebook.com/docs/reference/api/offer/">Offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/order/" name="http://developers.facebook.com/docs/reference/api/order/">Order </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/page/" name="http://developers.facebook.com/docs/reference/api/page/">Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/photo/" name="http://developers.facebook.com/docs/reference/api/photo/">Photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/post/" name="http://developers.facebook.com/docs/reference/api/post/">Post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question/" name="http://developers.facebook.com/docs/reference/api/question/">Question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question_option/" name="http://developers.facebook.com/docs/reference/api/question_option/">QuestionOption</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Review/" name="http://developers.facebook.com/docs/reference/api/Review/">Review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/status/" name="http://developers.facebook.com/docs/reference/api/status/">Status message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/thread/" name="http://developers.facebook.com/docs/reference/api/thread/">Thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/user/" name="http://developers.facebook.com/docs/reference/api/user/">User</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/video/" name="http://developers.facebook.com/docs/reference/api/video/">Video</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>User</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> › <a href="/docs/reference/api/user/" name="https://developers.facebook.com/docs/reference/api/user/">User</a>
+</div>
+</div>
+</div>
+<p>A user profile as represented in the <a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>.</p>
+<h3>Example</h3>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=me" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me">https://graph.facebook.com/me</a> (the <a href="https://www.facebook.com/profile.php" name="https://www.facebook.com/profile.php">current user</a>)</p>
+<hr />
+<h2>Fields</h2>
+<p>The <code>User</code> object has the following fields:</p>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>
+<p>The user&apos;s Facebook ID</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>
+<p>The user&apos;s full name</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>first_name</code>
+</td>
+<td>
+<p>The user&apos;s first name</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>middle_name</code>
+</td>
+<td>
+<p>The user&apos;s middle name</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>last_name</code>
+</td>
+<td>
+<p>The user&apos;s last name</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>gender</code>
+</td>
+<td>
+<p>The user&apos;s gender: <code>female</code> or <code>male</code>
+</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>locale</code>
+</td>
+<td>
+<p>The user&apos;s locale</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code> containing the ISO Language Code and ISO Country Code</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>languages</code>
+</td>
+<td>
+<p>The user&apos;s languages</p>
+</td>
+<td>
+<p>
+<code>user_likes</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing language <code>id</code> and <code>name</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>link</code>
+</td>
+<td>
+<p>The URL of the profile for the user on Facebook</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code> containing a valid URL</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>username</code>
+</td>
+<td>
+<p>The user&apos;s Facebook username</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>third_party_id</code>
+</td>
+<td>
+<p>An anonymous, but unique identifier for the user; only returned if specifically requested via the <code>fields</code> URL parameter</p>
+</td>
+<td>
+<p>Requires <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>installed</code>
+</td>
+<td>
+<p>Specifies whether the user has installed the application associated with the app access token that is used to make the request; only returned if specifically requested via the <code>fields</code> URL parameter</p>
+</td>
+<td>
+<p>Requires app <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>object</code> containing <code>type</code> (this is always &quot;user&quot;), <code>id</code> (the ID of the user), and optional <code>installed</code> field (always <code>true</code> if returned); The <code>installed</code> field is only returned if the user has installed the application, otherwise it is not part of the returned object</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>timezone</code>
+</td>
+<td>
+<p>The user&apos;s timezone offset from UTC</p>
+</td>
+<td>
+<p>Available only for the current user</p>
+</td>
+<td>
+<p>
+<code>number</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>updated_time</code>
+</td>
+<td>
+<p>The last time the user&apos;s profile was updated; changes to the <code>languages</code>, <code>link</code>, <code>timezone</code>, <code>verified</code>, <code>interested_in</code>, <code>favorite_athletes</code>, <code>favorite_teams</code>, and <code>video_upload_limits</code> are not not reflected in this value</p>
+</td>
+<td>
+<p>Requires <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing an ISO-8601 datetime</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>verified</code>
+</td>
+<td>
+<p>The user&apos;s account verification status, either <code>true</code> or <code>false</code> (see below)</p>
+</td>
+<td>
+<p>Requires <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>boolean</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>bio</code>
+</td>
+<td>
+<p>The user&apos;s biography</p>
+</td>
+<td>
+<p>
+<code>user_about_me</code> or <code>friends_about_me</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>birthday</code>
+</td>
+<td>
+<p>The user&apos;s birthday</p>
+</td>
+<td>
+<p>
+<code>user_birthday</code> or <code>friends_birthday</code>
+</p>
+</td>
+<td>
+<p>Date <code>string</code> in <code>MM/DD/YYYY</code> format</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>cover</code>
+</td>
+<td>
+<p>The user&apos;s cover photo (must be explicitly requested using <code>fields=cover</code> parameter)</p>
+</td>
+<td>
+<p>No access token required</p>
+</td>
+<td>
+<p>
+<code>array</code> of fields <code>id</code>, <code>source</code>, and <code>offset_y</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>education</code>
+</td>
+<td>
+<p>A list of the user&apos;s education history</p>
+</td>
+<td>
+<p>
+<code>user_education_history</code> or <code>friends_education_history</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>year</code> and <code>type</code> fields, and <code>school</code> object (<code>name</code>, <code>id</code>, <code>type</code>, and optional <code>year</code>, <code>degree</code>, <code>concentration</code> array, <code>classes</code> array, and <code>with</code> array )</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>email</code>
+</td>
+<td>
+<p>The proxied or contact email address granted by the user</p>
+</td>
+<td>
+<p>
+<code>email</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing a valid RFC822 email address</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>hometown</code>
+</td>
+<td>
+<p>The user&apos;s hometown</p>
+</td>
+<td>
+<p>
+<code>user_hometown</code> or <code>friends_hometown</code>
+</p>
+</td>
+<td>
+<p>object containing <code>name</code> and <code>id</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>interested_in</code>
+</td>
+<td>
+<p>The genders the user is interested in</p>
+</td>
+<td>
+<p>
+<code>user_relationship_details</code> or <code>friends_relationship_details</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> containing strings</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>location</code>
+</td>
+<td>
+<p>The user&apos;s current city</p>
+</td>
+<td>
+<p>
+<code>user_location</code> or <code>friends_location</code>
+</p>
+</td>
+<td>
+<p>object containing <code>name</code> and <code>id</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>political</code>
+</td>
+<td>
+<p>The user&apos;s political view</p>
+</td>
+<td>
+<p>
+<code>user_religion_politics</code> or <code>friends_religion_politics</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>favorite_athletes</code>
+</td>
+<td>
+<p>The user&apos;s favorite athletes; this field is deprecated and will be removed in the near future</p>
+</td>
+<td>
+<p>
+<code>user_likes</code> or <code>friends_likes</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code> and <code>name</code> fields</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>favorite_teams</code>
+</td>
+<td>
+<p>The user&apos;s favorite teams; this field is deprecated and will be removed in the near future</p>
+</td>
+<td>
+<p>
+<code>user_likes</code> or <code>friends_likes</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code> and <code>name</code> fields</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>picture</code>
+</td>
+<td>
+<p>The URL of the user&apos;s profile pic (only returned if you explicitly specify a &apos;fields=picture&apos; param)</p>
+</td>
+<td>
+<p>No <code>access_token</code> required</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>quotes</code>
+</td>
+<td>
+<p>The user&apos;s favorite quotes</p>
+</td>
+<td>
+<p>
+<code>user_about_me</code> or <code>friends_about_me</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>relationship_status</code>
+</td>
+<td>
+<p>The user&apos;s relationship status: <code>Single</code>, <code>In a relationship</code>, <code>Engaged</code>, <code>Married</code>, <code>It&apos;s complicated</code>, <code>In an open relationship</code>, <code>Widowed</code>, <code>Separated</code>, <code>Divorced</code>, <code>In a civil union</code>, <code>In a domestic partnership</code>
+</p>
+</td>
+<td>
+<p>
+<code>user_relationships</code> or <code>friends_relationships</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>religion</code>
+</td>
+<td>
+<p>The user&apos;s religion</p>
+</td>
+<td>
+<p>
+<code>user_religion_politics</code> or <code>friends_religion_politics</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>significant_other</code>
+</td>
+<td>
+<p>The user&apos;s significant other</p>
+</td>
+<td>
+<p>
+<code>user_relationships</code> or <code>friends_relationships</code>
+</p>
+</td>
+<td>
+<p>object containing <code>name</code> and <code>id</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>video_upload_limits</code>
+</td>
+<td>
+<p>The size of the video file and the length of the video that a user can upload; only returned if specifically requested via the <code>fields</code> URL parameter</p>
+</td>
+<td>
+<p>Requires <code>access_token</code>
+</p>
+</td>
+<td>
+<p>object containing <code>length</code> and <code>size</code> of video</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>website</code>
+</td>
+<td>
+<p>The URL of the user&apos;s personal website</p>
+</td>
+<td>
+<p>
+<code>user_website</code> or <code>friends_website</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing a valid URL</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>work</code>
+</td>
+<td>
+<p>A list of the user&apos;s work history</p>
+</td>
+<td>
+<p>
+<code>user_work_history</code> or <code>friends_work_history</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>employer</code>, <code>location</code>, <code>position</code>, <code>start_date</code> and <code>end_date</code> fields</p>
+</td>
+</tr>
+</table>
+<p>You can choose the fields you want returned using the <code>fields</code> query parameter:</p>
+<p>
+<code>https://graph.facebook.com/me?fields=id,name</code>
+</p>
+<h4>Verified Users</h4>
+<p>
+<br /> A user is considered verified if she takes any of the following actions:</p>
+<ul>
+<li>Registers for mobile</li>
+<li>Confirms her account via SMS</li>
+<li>Enters a valid credit card</li>
+</ul>
+<h4>Real-Time Subscriptions</h4>
+<p>The <code>User</code> object supports <a href="https://developers.facebook.com/docs/api/realtime" name="https://developers.facebook.com/docs/api/realtime">Real-Time Updates</a> for all fields except the <code>verified</code> property.</p>
+<hr />
+<h2>Connections</h2>
+<p>The <code>User</code> object has the following connections:</p>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Faccounts" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Faccounts">accounts</a>
+</td>
+<td>
+<p>The Facebook apps and pages owned by the current user.</p>
+</td>
+<td>
+<p>
+<code>manage_pages</code> yields <code>access_token</code>s that can be used to query the Graph API on behalf of the app/page</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing account <code>name</code>, <code>access_token</code>, <code>category</code>, <code>id</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#achievements" name="https://developers.facebook.com/docs/#achievements">achievements</a>
+</td>
+<td>
+<p>The achievements for the user.</p>
+</td>
+<td>
+<p>
+<code>user_games_activity</code> or <code>friends_games_activity</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>achievement(instance)</code> objects</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Factivities" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Factivities">activities</a>
+</td>
+<td>
+<p>The activities listed on the user&apos;s profile.</p>
+</td>
+<td>
+<p>
+<code>user_activities</code> or <code>friends_activities</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing activity <code>id</code>, <code>name</code>, <code>category</code> and <code>create_time</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Falbums" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Falbums">albums</a>
+</td>
+<td>
+<p>The photo albums this user has created.</p>
+</td>
+<td>
+<p>
+<code>user_photos</code> or <code>friends_photos</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Album</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#apprequests" name="https://developers.facebook.com/docs/#apprequests">apprequests</a>
+</td>
+<td>
+<p>The user&apos;s outstanding requests from an app.</p>
+</td>
+<td>
+<p>Requires app <code>access_token</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of app requests for the user within that app.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fbooks" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fbooks">books</a>
+</td>
+<td>
+<p>The books listed on the user&apos;s profile.</p>
+</td>
+<td>
+<p>
+<code>user_likes</code> or <code>friends_likes</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing book <code>id</code>, <code>name</code>, <code>category</code> and <code>create_time</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fcheckins" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fcheckins">checkins</a>
+</td>
+<td>
+<p>The places that the user has checked-into.</p>
+</td>
+<td>
+<p>
+<code>user_checkins</code> or <code>friends_checkins</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Checkin</code> objects</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fevents" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fevents">events</a>
+</td>
+<td>
+<p>The events this user is attending.</p>
+</td>
+<td>
+<p>
+<code>user_events</code> or <code>friends_events</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing event <code>id</code>, <code>name</code>, <code>start_time</code>, <code>end_time</code>, <code>location</code> and <code>rsvp_status</code> defaulting to the past two weeks.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Ffamily" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Ffamily">family</a>
+</td>
+<td>
+<p>The user&apos;s family relationships</p>
+</td>
+<td>
+<p>
+<code>user_relationships</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code>, <code>name</code>, and <code>relationship</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Ffeed" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Ffeed">feed</a>
+</td>
+<td>
+<p>The user&apos;s wall.</p>
+</td>
+<td>
+<p>
+<code>read_stream</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Post</code> objects containing (up to) the last 25 posts.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Ffriendlists" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Ffriendlists">friendlists</a>
+</td>
+<td>
+<p>The user&apos;s friend lists.</p>
+</td>
+<td>
+<p>
+<code>read_friendlists</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code> and <code>name</code> fields of the friendlist.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#friendrequests" name="https://developers.facebook.com/docs/#friendrequests">friendrequests</a>
+</td>
+<td>
+<p>The user&apos;s incoming friend requests.</p>
+</td>
+<td>
+<p>
+<code>user_requests</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>to</code>, <code>from</code>, <code>message</code>, <code>created_time</code> and <code>unread</code> fields of the friend request</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#friends" name="https://developers.facebook.com/docs/#friends">friends</a>
+</td>
+<td>
+<p>The user&apos;s friends.</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> of the current session user.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing friend <code>id</code> and <code>name</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fgames" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fgames">games</a>
+</td>
+<td>
+<p>Games the user has added to the Arts and Entertainment section of their profile.</p>
+</td>
+<td>
+<p>
+<code>user_likes</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code>, <code>name</code>, <code>category</code>, and <code>created_time</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fgroups" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fgroups">groups</a>
+</td>
+<td>
+<p>The Groups that the user belongs to.</p>
+</td>
+<td>
+<p>
+<code>user_groups</code> or <code>friends_groups</code>.</p>
+</td>
+<td>
+<p>An <code>array</code> of objects containing the <code>version</code>(old-0 or new Group-1), <code>name</code>, <code>id</code>, <code>administrator</code> (if user is the administrator of the Group) and <code>bookmark_order</code>(at what place in the list of group bookmarks on the homepage, the group shows up for the user).</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#home" name="https://developers.facebook.com/docs/#home">home</a>
+</td>
+<td>
+<p>The user&apos;s news feed.</p>
+</td>
+<td>
+<p>
+<code>read_stream</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Post</code> objects containing (up to) the last 25 posts.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Finbox" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Finbox">inbox</a>
+</td>
+<td>
+<p>The <a href="/docs/reference/api/thread/" name="https://developers.facebook.com/docs/reference/api/thread/">Threads</a> in this user&apos;s inbox.</p>
+</td>
+<td>
+<p>
+<code>read_mailbox</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of <a href="/docs/reference/api/thread/" name="https://developers.facebook.com/docs/reference/api/thread/">
+<code>thread</code>
+</a> objects</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Finterests" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Finterests">interests</a>
+</td>
+<td>
+<p>The interests listed on the user&apos;s profile.</p>
+</td>
+<td>
+<p>
+<code>user_interests</code> or <code>friends_interests</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing interest <code>id</code>, <code>name</code>, <code>category</code> and <code>create_time</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#likes" name="https://developers.facebook.com/docs/#likes">likes</a>
+</td>
+<td>
+<p>All the pages this user has liked.</p>
+</td>
+<td>
+<p>
+<code>user_likes</code> or <code>friends_likes</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing like <code>id</code>, <code>name</code>, <code>category</code> and <code>create_time</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Flinks" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Flinks">links</a>
+</td>
+<td>
+<p>The user&apos;s posted links.</p>
+</td>
+<td>
+<p>
+<code>read_stream</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Link</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Flocations" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Flocations">locations</a>
+</td>
+<td>
+<p>Posts, statuses, and photos in which the user has been tagged at a location, or where the user has authored content (i.e. this excludes objects with no location information, and objects in which the user is not tagged). See documentation of the <a href="/docs/reference/fql/location_post/" name="https://developers.facebook.com/docs/reference/fql/location_post/">
+<code>location_post</code>
+</a> table for more detailed information on permissions.</p>
+</td>
+<td>
+<p>
+<code>user_photos</code>, <code>friend_photos</code>, <code>user_status</code>, <code>friends_status</code>, <code>user_checkins</code>, or <code>friends_checkins</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing the <code>id</code>, <code>type</code>, <code>place</code>, <code>created_time</code>, and optional <code>application</code> and <code>tags</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fmovies" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fmovies">movies</a>
+</td>
+<td>
+<p>The movies listed on the user&apos;s profile.</p>
+</td>
+<td>
+<p>
+<code>user_likes</code> or <code>friends_likes</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing movie <code>id</code>, <code>name</code>, <code>category</code> and <code>create_time</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fmusic" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fmusic">music</a>
+</td>
+<td>
+<p>The music listed on the user&apos;s profile.</p>
+</td>
+<td>
+<p>
+<code>user_likes</code> or <code>friends_likes</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing music <code>id</code>, <code>name</code>, <code>category</code> and <code>create_time</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fmutualfriends%2F1207059" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fmutualfriends%2F1207059">mutualfriends</a>
+</td>
+<td>
+<p>The mutual friends between two users.</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> of the current session user.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing friend <code>id</code> and <code>name</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fnotes" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fnotes">notes</a>
+</td>
+<td>
+<p>The user&apos;s notes.</p>
+</td>
+<td>
+<p>
+<code>read_stream</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Note</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#notifications" name="https://developers.facebook.com/docs/#notifications">notifications</a>
+</td>
+<td>
+<p>The notifications for the user.</p>
+</td>
+<td>
+<p>
+<code>manage_notifications</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code>, <code>from</code>, <code>to</code>, <code>created_time</code>,<code>updated_time</code>, <code>title</code>, <code>link</code>, <code>application</code>, <code>unread</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Foutbox" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Foutbox">outbox</a>
+</td>
+<td>
+<p>The messages in this user&apos;s outbox.</p>
+</td>
+<td>
+<p>
+<code>read_mailbox</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of messages</p>
+</td>
+</tr>
+<tr>
+<td>payments</td>
+<td>
+<p>The Facebook Credits orders the user placed with an application. See the <a href="/docs/creditsapi" name="https://developers.facebook.com/docs/creditsapi">Credits API</a> for more information.</p>
+</td>
+<td>
+<p>app <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>order</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fpermissions" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fpermissions">permissions</a>
+</td>
+<td>
+<p>The permissions that user has granted the application.</p>
+</td>
+<td>
+<p>None.</p>
+</td>
+<td>
+<p>
+<code>array</code> containing a single object which has the keys as the permission names and the values as the permission values (1/0) - Permissions with value 0 are omitted from the object by default; also includes a <code>type</code> field which is always <code>permissions</code> if the query param <code>metadata=1</code> is passed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fphotos" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fphotos">photos</a>
+</td>
+<td>
+<p>Photos the user (or friend) is tagged in.</p>
+</td>
+<td>
+<p>
+<code>user_photo_video_tags</code> or <code>friends_photo_video_tags</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Photo</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>picture</td>
+<td>
+<p>The user&apos;s profile picture.</p>
+</td>
+<td>
+<p>No <code>access_token</code> required.</p>
+</td>
+<td>
+<p>HTTP 302 redirect to URL of the user&apos;s profile picture (use ?type=square | small | normal | large to request a different photo).</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fpokes" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fpokes">pokes</a>
+</td>
+<td>
+<p>The user&apos;s pokes.</p>
+</td>
+<td>
+<p>
+<code>read_mailbox</code>.</p>
+</td>
+<td>
+<p>an <code>array</code> of objects containing <code>to</code>, <code>from</code>, <code>created_time</code> and <code>type</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fposts" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fposts">posts</a>
+</td>
+<td>
+<p>The user&apos;s own posts.</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>read_stream</code> to see non-public posts.</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Post</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#questions" name="https://developers.facebook.com/docs/#questions">questions</a>
+</td>
+<td>
+<p>The user&apos;s questions.</p>
+</td>
+<td>
+<p>
+<code>user_questions</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Question</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#scores" name="https://developers.facebook.com/docs/#scores">scores</a>
+</td>
+<td>
+<p>The current <a href="/docs/score/" name="https://developers.facebook.com/docs/score/">scores</a> for the user in games.</p>
+</td>
+<td>
+<p>
+<code>user_games_activity</code> or <code>friends_games_activity</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>user</code>, <code>application</code>, <code>score</code> and <code>type</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fstatuses" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fstatuses">statuses</a>
+</td>
+<td>
+<p>The user&apos;s status updates.</p>
+</td>
+<td>
+<p>
+<code>read_stream</code>.</p>
+</td>
+<td>
+<p>An <code>array</code> of <code>Status message</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#subscribedto" name="https://developers.facebook.com/docs/#subscribedto">subscribedto</a>
+</td>
+<td>
+<p>People you&apos;re subscribed to.</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing user <code>id</code> and <code>name</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#subscribers" name="https://developers.facebook.com/docs/#subscribers">subscribers</a>
+</td>
+<td>
+<p>The user&apos;s subscribers.</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing user <code>id</code> and <code>name</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Ftagged" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Ftagged">tagged</a>
+</td>
+<td>
+<p>Posts the user is tagged in.</p>
+</td>
+<td>
+<p>
+<code>read_stream</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code>, <code>from</code>, <code>to</code>, <code>picture</code>, <code>link</code>, <code>name</code>, <code>caption</code>, <code>description</code>, <code>properties</code>, <code>icon</code>, <code>actions</code>, <code>type</code>, <code>application</code>, <code>created_time</code>, and <code>updated_time</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Ftelevision" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Ftelevision">television</a>
+</td>
+<td>
+<p>The television listed on the user&apos;s profile.</p>
+</td>
+<td>
+<p>
+<code>user_likes</code> or <code>friends_likes</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing television <code>id</code>, <code>name</code>, <code>category</code> and <code>create_time</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fupdates" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fupdates">updates</a>
+</td>
+<td>
+<p>The updates in this user&apos;s inbox.</p>
+</td>
+<td>
+<p>
+<code>read_mailbox</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of messages</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=me%2Fvideos" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fvideos">videos</a>
+</td>
+<td>
+<p>The videos this user has been tagged in.</p>
+</td>
+<td>
+<p>
+<code>user_videos</code> or <code>friends_videos</code>.</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Video</code> objects.</p>
+</td>
+</tr>
+</table>
+<p>This object supports <a href="https://developers.facebook.com/docs/api/realtime" name="https://developers.facebook.com/docs/api/realtime">Real-Time Updates</a> for the following connections: <code>feed</code>, <code>friends</code>, <code>activities</code>, <code>interests</code>, <code>music</code>, <code>books</code>, <code>movies</code>, <code>television</code>, <code>likes</code>, <code>checkins</code>.</p>
+<hr />
+<h2 id="albums">albums</h2>
+<h3>Create</h3>
+<p>You can create an <a href="https://developers.dev.facebook.com/docs/reference/api/album/" name="https://developers.dev.facebook.com/docs/reference/api/album/">album</a> for a user by issuing an HTTP POST request to <code>PROFILE_ID/albums</code> with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>
+<a href="docs/reference/api/album/" name="https://developers.facebook.com/docs/docs/reference/api/album/">Album</a> name</td>
+<td>
+<code>string</code>
+</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>
+<code>message</code>
+</td>
+<td>
+<a href="docs/reference/api/album/" name="https://developers.facebook.com/docs/docs/reference/api/album/">Album</a> description</td>
+<td>
+<code>string</code>
+</td>
+<td>no</td>
+</tr>
+<tr>
+<td>
+<code>privacy</code>
+</td>
+<td>Privacy settings for the Album</td>
+<td>A JSON-encoded object that defines the privacy setting for the album, for example: <code>{&quot;value&quot;:&quot;SELF&quot;}</code> (see details below). Only the user can specify the privacy settings for the post.<br />
+<br />
+<strong>Privacy Policy:</strong> Any non-default privacy setting must be intentionally chosen by the user. You may not set a custom privacy setting unless the user has proactively specified that they want this non-default setting.</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>privacy</code> parameter is a JSON-encoded object that contains one or more of the following <code>string</code> fields:</p>
+<ul>
+<li>
+<code>value</code>: The privacy value for the object, specify one of <code>EVERYONE</code>, <code>CUSTOM</code>, <code>ALL_FRIENDS</code>, <code>NETWORKS_FRIENDS</code>, <code>FRIENDS_OF_FRIENDS</code>, <code>SELF</code>.</li>
+<li>
+<code>friends</code>: For <code>CUSTOM</code> settings, this indicates which users can see the object. Can be one of <code>EVERYONE</code>, <code>NETWORKS_FRIENDS</code> (when the object can be seen by networks and friends), <code>FRIENDS_OF_FRIENDS</code>, <code>ALL_FRIENDS</code>, <code>SOME_FRIENDS</code>, <code>SELF</code>, or <code>NO_FRIENDS</code> (when the object can be seen by a network only).</li>
+<li>
+<code>networks</code>: For <code>CUSTOM</code> settings, specify a comma-separated list of network IDs that can see the object, or 1 for all of a user&apos;s networks.</li>
+<li>
+<code>allow</code>: When friends is set to <code>SOME_FRIENDS</code>, specify a comma-separated list of user IDs and friend list IDs that <strong>can</strong> see the post.</li>
+<li>
+<code>deny</code>: When friends is set to <code>SOME_FRIENDS</code>, specify a comma-separated list of user IDs and friend list IDs that <strong>cannot</strong> see the post.</li>
+</ul>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>The new album ID</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="apprequests">apprequests</h2>
+<h3>Read</h3>
+<p>You can read the <a href="/docs/reference/dialogs/requests/" name="https://developers.facebook.com/docs/reference/dialogs/requests/">apprequests</a> sent to a user by your app by issuing an <code>HTTP GET</code> request to <code>/USER_ID/apprequests</code> with user <code>access_token</code>.</p>
+<p>The API returns an <code>array</code> of objects containing the following data:</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>id</td>
+<td>The full request ID.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>application</td>
+<td>App associated with the request.</td>
+<td>object containing the <code>name</code>, <code>canvas_name</code>, <code>namespace</code> and <code>id</code> of the app.</td>
+</tr>
+<tr>
+<td>to</td>
+<td>The recipient user associated with the request.</td>
+<td>object containing the <code>name</code> and <code>id</code> for the user.</td>
+</tr>
+<tr>
+<td>from</td>
+<td>The sender user associated with the request.</td>
+<td>object containing the <code>name</code> and <code>id</code> for the user.</td>
+</tr>
+<tr>
+<td>message</td>
+<td>A string describing the request.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>created_time</td>
+<td>Timestamp when the request was created.</td>
+<td>UNIX <code>timestamp</code>
+</td>
+</tr>
+<tr>
+<td>type</td>
+<td>type of the data which is &quot;apprequest&quot;.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<h3>Create</h3>
+<p>You can post a <a href="/docs/reference/dialogs/requests/" name="https://developers.facebook.com/docs/reference/dialogs/requests/">apprequest</a> for a user by issuing an <code>HTTP POST</code> request to <code>/USER_ID/apprequests</code> with the <code>app access_token</code>.</p>
+<p>Note: POSTing to the Graph API endpoint of <code>/USER_ID/apprequests</code> is considered an <a href="/docs/requests/#app_to_user" name="https://developers.facebook.com/docs/requests/#app_to_user">App to User</a> Request. App-Generated Requests do not receive notifications and get limited distribution in comparison to <a href="/docs/requests/#user_to_user" name="https://developers.facebook.com/docs/requests/#user_to_user">User to User</a> Requests sent with the <a href="/docs/reference/dialogs/requests/" name="https://developers.facebook.com/docs/reference/dialogs/requests/">Request Dialog</a>
+</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+<tr>
+<td>message</td>
+<td>A UTF-8 string which describes the request.</td>
+<td>
+<code>string</code>
+</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Additional data a developer may pass for tracking. This will be stored as part of the request objects created. The maximum length is 255 characters.</td>
+<td>
+<code>string</code>
+</td>
+<td>no</td>
+</tr>
+</table>
+<p>If the create is successful, you get the following response</p>
+<table>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>request</td>
+<td>
+<p>The Request Object ID. To get the full request ID, concatenate this with a User ID from the <code>to</code> field: <code>‘&lt;request_object_id&gt;_&lt;user_id&gt;’</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>to</td>
+<td>
+<p>An <code>array</code> of the recipient user IDs for the request that was created.</p>
+</td>
+</tr>
+</table>
+<h3>Delete</h3>
+<p>You can delete the current <a href="/docs/reference/dialogs/requests/" name="https://developers.facebook.com/docs/reference/dialogs/requests/">Request</a> for a user for your app by issuing an <code>HTTP DELETE</code> request to <code>/&lt;request_object_id&gt;_&lt;user_id&gt;</code> with the <code>user access token</code> or <code>app access_token</code>. For more information see <a href="/docs/reference/dialogs/requests/#deleting" name="https://developers.facebook.com/docs/reference/dialogs/requests/#deleting">Deleting Requests</a>.</p>
+<p>Response</p>
+<table>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>True if the delete succeeded and error otherwise.</td>
+<td>
+<code>boolean<code>
+</code>
+</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="checkins">checkins</h2>
+<h3>Create</h3>
+<p>You can <a href="https://developers.dev.facebook.com/docs/reference/api/checkin/" name="https://developers.dev.facebook.com/docs/reference/api/checkin/">checkin</a> a user by issuing an HTTP POST request to <code>PROFILE_ID/checkins</code> with the <code>publish_checkins</code> permissions and the following parameters.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>place</code>
+</td>
+<td>
+<a href="/docs/reference/api/checkin/" name="https://developers.facebook.com/docs/reference/api/checkin/">Checkin</a> Place ID</td>
+<td>
+<code>string</code> containing the ID of the Place Page, for example <code>110506962309835</code> for Facebook HQ</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>
+<code>coordinates</code>
+</td>
+<td>The user&apos;s location</td>
+<td>
+<code>string</code> containing latitude and longitude: <code>{&quot;latitude&quot;:&quot;...&quot;, &quot;longitude&quot;: &quot;...&quot;}</code>
+</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>
+<code>tags</code>
+</td>
+<td>List of tagged friends</td>
+<td>Comma separated list of <code>USER_ID</code>s</td>
+<td>no</td>
+</tr>
+<tr>
+<td>
+<code>message</code>
+</td>
+<td>
+<a href="/docs/reference/api/checkin/" name="https://developers.facebook.com/docs/reference/api/checkin/">Checkin</a> description</td>
+<td>
+<code>string</code>
+</td>
+<td>no</td>
+</tr>
+<tr>
+<td>
+<code>link</code>
+</td>
+<td>
+<a href="/docs/reference/api/checkin/" name="https://developers.facebook.com/docs/reference/api/checkin/">Checkin</a> link</td>
+<td>
+<code>string</code>
+</td>
+<td>no</td>
+</tr>
+<tr>
+<td>
+<code>picture</code>
+</td>
+<td>
+<a href="/docs/reference/api/checkin/" name="https://developers.facebook.com/docs/reference/api/checkin/">Checkin</a> picture</td>
+<td>
+<code>string</code>
+</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>The new checkin ID</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="events">events</h2>
+<h3>Create</h3>
+<p>You can create an <a href="https://developers.dev.facebook.com/docs/reference/api/event/" name="https://developers.dev.facebook.com/docs/reference/api/event/">event</a> for a user by issuing an HTTP POST request to <code>PROFILE_ID/event</code> with the <code>create_event</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> name </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/">Event</a> name </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> start_time </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/">Event</a> start time </td>
+<td> UNIX <code>timestamp</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> end_time </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/">Event</a> end time </td>
+<td> UNIX <code>timestamp</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> description</code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/">Event</a> description </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> location </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/"> Event </a> location </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> location_id </code>
+</td>
+<td> Facebook Place ID of the place the <a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/"> Event </a> is taking place </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> city </code>
+</td>
+<td> Name of the city where the <a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/"> Event </a> is taking place </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> state </code>
+</td>
+<td> Name of the state where the <a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/"> Event </a> is taking place. Can only be used if a <code>city</code> is specified. </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> country </code>
+</td>
+<td> Name of the country where the <a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/"> Event </a> is taking place. Can only be used if a <code>city</code> is specified. </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> privacy_type </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/">Event</a> privacy setting </td>
+<td>
+<code>string</code> containing &apos;OPEN&apos; (default), &apos;CLOSED&apos;, or &apos;SECRET&apos; </td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new event ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<h3>Edit</h3>
+<p>You can edit an event by issuing an HTTP POST to <code>/EVENT_ID</code> with the <code>create_event</code> permission. Note that only the application that created the event can edit the event. Any of the fields listed above as being available when creating an event can be edited by specifying a new value for that field. You don&apos;t need to specify values for fields you are not editing. Note that the name and time cannot be changed if the event is old, or if it has over 5000 attendees.</p>
+<p>If the edit is successful, you get the following return.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>boolean</code>
+</td>
+<td>True if the delete succeeded and error otherwise.</td>
+</tr>
+</tbody>
+</table>
+<h3>Delete</h3>
+<p>You can delete an event by issuing an HTTP DELETE to <code>/EVENT_ID</code> with the <code>create_event</code> permission. Note that only the application that created the event can delete the event.</p>
+<p>If the delete is successful, you get the following return.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>boolean</code>
+</td>
+<td>True if the delete succeeded and error otherwise.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="feed">feed</h2>
+<p>This connection corresponds to the user&apos;s Wall. You can create a <code>link</code>, <code>post</code> or <code>status message</code> by issuing an HTTP POST request to the <code>PROFILE_ID/feed</code> connection. To see more details please see <a href="#links" name="https://developers.facebook.com/docs/#links">links</a>, <a href="#posts" name="https://developers.facebook.com/docs/#posts">posts</a>, and <a href="#statuses" name="https://developers.facebook.com/docs/#statuses">status messages</a> documentation.</p>
+<p>When retrieving Wall <a href="#posts" name="https://developers.facebook.com/docs/#posts">posts</a>, you can get only those <a href="/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> objects with a location attached by adding <code>with=location</code> to the URL parameters:</p>
+<p>
+<a href="https://developers.facebook.com/tools/explorer?method=GET&amp;path=me%2Ffeed%3Fwith%3Dlocation" name="https://developers.facebook.com/tools/explorer?method=GET&amp;path=me%2Ffeed%3Fwith%3Dlocation">https://graph.facebook.com/me/feed?with=location</a>
+</p>
+<hr />
+<h2 id="friends">friends</h2>
+<h3>Read</h3>
+<p>You can read the list of a User&apos;s friends by issuing an <code>HTTP GET</code> to <code>/PROFILE_ID/friends</code> with any valid <code>access_token</code> of the current session user. For example:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=me/friends" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me/friends">https://graph.facebook.com/me/friends</a>
+</p>
+<h3>Belongs</h3>
+<p>You can also see if a User is a friend of the current session User by issuing an <code>HTTP GET</code> to <code>/PROFILE_ID/friends/FRIEND_ID</code>. This will return, in the <code>data</code> array, an object with the following fields if the current user is friends with the User represented by <code>FRIEND_ID</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>Facebook ID of the friend</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>Name of friend of current user</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If the current user is not a friend with the User represented by <code>FRIEND_ID</code>, the <code>data</code> array will be empty.</p>
+<p>For example, to see if you are friends with <a href="https://www.facebook.com/dhirenp" name="https://www.facebook.com/dhirenp">Dhiren Patel</a>, issue an <code>HTTP GET</code> to:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=me/friends/1207059" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me/friends/1207059">https://graph.facebook.com/me/friends/1207059</a>
+</p>
+<hr />
+<h2 id="friendlists">friendlists</h2>
+<h3>Create</h3>
+<p>You can create a <a href="https://developers.dev.facebook.com/docs/reference/api/FriendList/" name="https://developers.dev.facebook.com/docs/reference/api/FriendList/">friend list</a> for a user by issuing an HTTP POST request to <code>PROFILE_ID/friendlists</code> with the <code>manage_friendlists</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> name </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/FriendList/" name="https://developers.facebook.com/docs/reference/api/FriendList/">Friend list</a> name. Maximum 25 characters </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new friend list ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="friendrequests">friendrequests</h2>
+<h3>Read</h3>
+<p>You can read the outstanding friend requests for a user by issuing an <code>HTTP GET</code> request to <code>USER_ID/friendrequests</code> with the <code>read_requests</code> permission.</p>
+<p>
+<a href="/tools/explorer?method=GET&amp;path=me%2Ffriendrequests%2F" name="https://developers.facebook.com/tools/explorer?method=GET&amp;path=me%2Ffriendrequests%2F">https://graph.facebook.com/me/friendrequests</a>
+</p>
+<p>This returns an <code>array</code> of objects of the following type:</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>
+<code>from</code>
+</td>
+<td>The name and id of the user who sent the friend request</td>
+<td>object containing <code>string</code> name and <code>string</code> id.</td>
+</tr>
+<tr>
+<td>
+<code>to</code>
+</td>
+<td>The name and id of the user to whom the friend request was sent</td>
+<td>object containing <code>string</code> name and <code>string</code> id.</td>
+</tr>
+<tr>
+<td>
+<code>created_time</code>
+</td>
+<td>Time at which the friend request was created</td>
+<td>
+<code>ISO 8601 datetime</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>message</code>
+</td>
+<td>Message provided the friend request sender when they sent the request</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>unread</code>
+</td>
+<td>Whether the user has read the friend request or not.</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="home">home</h2>
+<p>This connection corresponds to the News Feed. See the <a href="#feed" name="https://developers.facebook.com/docs/#feed">feed</a> connection for information on how to create and delete objects that show up in the News Feed.</p>
+<p>You can retrieve the News Feed filtered by user&apos;s stream filters:</p>
+<ul>
+<li>friend lists</li>
+<li>applications: For example, to retrive your News Feed filtered by photos <code>GET me/home?filter=app_2305272732</code>
+</li>
+<li>networks</li>
+<li>the home page stream (News Feed, this is the default view)</li>
+</ul>
+<p>To retrieve a user&apos;s stream filters, you will need to access the the <a href="/docs/reference/fql/stream_filter/" name="https://developers.facebook.com/docs/reference/fql/stream_filter/">stream_filter</a> table.</p>
+<p>You can retrieve only posts with a location attached by adding <code>with=location</code> to the URL parameters:</p>
+<p>
+<a href="https://developers.facebook.com/tools/explorer?method=GET&amp;path=me%2Fhome%3Fwith%3Dlocation" name="https://developers.facebook.com/tools/explorer?method=GET&amp;path=me%2Fhome%3Fwith%3Dlocation">https://graph.facebook.com/me/home?with=location</a>
+</p>
+<hr />
+<h2 id="likes">likes</h2>
+<h3>Read</h3>
+<p>You can read the pages that a User has liked by issuing an <code>HTTP GET</code> to <code>/PROFILE_ID/likes</code> with the <code>user_likes</code> or <code>friends_likes</code> permissions. For example:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=me/likes" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me/likes">https://graph.facebook.com/me/likes</a>
+</p>
+<h3>Belongs</h3>
+<p>You can check if a User likes a specific page by issuing an <code>HTTP GET</code> to <code>/PROFILE_ID/likes/PAGE_ID</code>. This requires the <code>user_likes</code> (current user) or <code>friends_likes</code> (current user&apos;s friend) permission. This will return, in the <code>data</code> array, an object with the following fields if the user is connected to the page:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>Facebook ID of the page</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>Name of the <a href="/docs/reference/api/page/" name="https://developers.facebook.com/docs/reference/api/page/">Page</a>
+</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>category</code>
+</td>
+<td>Category of the <a href="/docs/reference/api/page/" name="https://developers.facebook.com/docs/reference/api/page/">Page</a>, e.g. &apos;Website&apos;, &apos;Product/Service&apos;, etc.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>created_time</code>
+</td>
+<td>ISO-8601 datetime representing when the User was connected to the Page</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If the user is not connected to the page, the <code>data</code> array will be empty.</p>
+<p>For example to see if you like the <a href="https://www.facebook.com/platform" name="https://www.facebook.com/platform">Facebook Platform</a> Page, <code>HTTP GET</code> the following:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=me/likes/19292868552" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me/likes/19292868552">https://graph.facebook.com/me/likes/19292868552</a>
+</p>
+<hr />
+<h2 id="links">links</h2>
+<h3>Create</h3>
+<p>You can post a <a href="https://developers.dev.facebook.com/docs/reference/api/link/" name="https://developers.dev.facebook.com/docs/reference/api/link/">link</a> on the user&apos;s behalf by issuing an HTTP POST request to <code>PROFILE_ID/feed</code> with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> link </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/link/" name="https://developers.facebook.com/docs/reference/api/link/">Link</a> URL </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/link/" name="https://developers.facebook.com/docs/reference/api/link/">Link</a> message </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>The other fields are taken from the metadata of the page URL given in the &apos;link&apos; param.</p>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new link ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="mutualfriends">mutualfriends</h2>
+<h3>Read</h3>
+<p>You can read the list of two Users mutual friends by issuing an <code>HTTP GET</code> to <code>/PROFILE_ID/mutualfriends/FRIEND_ID</code> with any valid <code>access_token</code> of the current session user. For example, to see the friends you and <a href="https://www.facebook.com/dhirenp" name="https://www.facebook.com/dhirenp">Dhiren Patel</a> have in common, issue an <code>HTTP GET</code> to:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=me/mutualfriends/1207059" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me/mutualfriends/1207059">https://graph.facebook.com/me/mutualfriends/1207059</a>
+</p>
+<hr />
+<h2 id="notes">notes</h2>
+<h3>Create</h3>
+<p>You can create a <a href="https://developers.dev.facebook.com/docs/reference/api/note/" name="https://developers.dev.facebook.com/docs/reference/api/note/">note</a> on behalf of the user by issuing an HTTP POST request to <code>PROFILE_ID/notes</code> with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> subject </code>
+</td>
+<td> The subject of the <a href="https://developers.facebook.com/docs/reference/api/note/" name="https://developers.facebook.com/docs/reference/api/note/">Note</a>
+</td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/note/" name="https://developers.facebook.com/docs/reference/api/note/"> Note </a> content </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new note ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="notifications">notifications</h2>
+<h3>Read</h3>
+<p>You can read the unread notifications for a user by issuing an <code>HTTP GET</code> request to <code>USER_ID/notifications</code> with the <code>manage_notifications</code> permission.</p>
+<p>
+<a href="/tools/explorer?method=GET&amp;path=me%2Fnotifications%2F" name="https://developers.facebook.com/tools/explorer?method=GET&amp;path=me%2Fnotifications%2F">https://graph.facebook.com/me/notifications</a>
+</p>
+<p>To see unread notifications you can issue the <code>HTTP GET</code> request with the <code>include_read</code> parameter:</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required</th>
+</tr>
+<tr>
+<td>
+<code>include_read</code>
+</td>
+<td>Enables you to see notifications that the user has already read in addition to the ones which are unread</td>
+<td>
+<code>boolean</code>
+</td>
+<td> No </td>
+</tr>
+</table>
+<p>For example:</p>
+<p>
+<a href="/tools/explorer?method=GET&amp;path=me%2Fnotifications%2F%3Finclude_read%3D1" name="https://developers.facebook.com/tools/explorer?method=GET&amp;path=me%2Fnotifications%2F%3Finclude_read%3D1">https://graph.facebook.com/me/notifications?include_read=1</a>
+</p>
+<p>This returns an <code>array</code> of objects of the following type:</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>id of the notification</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>from</code>
+</td>
+<td>name and id of the user who sent the notification</td>
+<td>object containing <code>string</code> name and <code>string</code> id.</td>
+</tr>
+<tr>
+<td>
+<code>to</code>
+</td>
+<td>name and id of the user to whom the notification was sent</td>
+<td>object containing <code>string</code> name and <code>string</code> id.</td>
+</tr>
+<tr>
+<td>
+<code>created_time</code>
+</td>
+<td>Time at which the notification was created</td>
+<td>
+<code>ISO 8601 datetime</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>updated_time</code>
+</td>
+<td>Time at which the notifications was last updated</td>
+<td>
+<code>ISO 8601</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>title</code>
+</td>
+<td>Title of the notification</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>link</code>
+</td>
+<td>The link for the notification</td>
+<td>URL <code>string</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>application</code>
+</td>
+<td>name and id of application via which the notification was sent</td>
+<td>object containing <code>string</code> name and <code>string</code> id.</td>
+</tr>
+<tr>
+<td>
+<code>unread</code>
+</td>
+<td>Whether the user has read the notification or not.</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</table>
+<p>
+<b>Intended usage:</b> the notifications connection should be used to let users read and act on their notifications. You may not use this API for the purposes of modeling user behavior or data mining. Applications misusing this API may be banned from using it.</p>
+<h3>Update</h3>
+<p>You can mark a notification as read by issuing an <code>HTTP POST</code> request to <code>/NOTIFICATION_ID?unread=0</code> with the <code>manage_notifications</code> permission.</p>
+<hr />
+<h2 id="photos">photos</h2>
+<h3>Create</h3>
+<p>You can post <a href="https://developers.dev.facebook.com/docs/reference/api/photo/" name="https://developers.dev.facebook.com/docs/reference/api/photo/">photos</a> to a user&apos;s Wall on their behalf by issuing an HTTP POST request to <code>PROFILE_ID/photos</code> with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> source </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/photo/" name="https://developers.facebook.com/docs/reference/api/photo/">Photo</a> content </td>
+<td>
+<code>multipart/form-data</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/photo/" name="https://developers.facebook.com/docs/reference/api/photo/">Photo</a> description </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> place </code>
+</td>
+<td> Facebook ID of the place associated with the <a href="https://developers.facebook.com/docs/reference/api/photo/" name="https://developers.facebook.com/docs/reference/api/photo/">Photo</a>
+</td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> no_story</code>
+</td>
+<td> If set to 1, optionally suppresses the feed story that is automatically generated on a user’s profile when they upload a photo using your application. </td>
+<td>
+<code> boolean </code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new photo ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="permissions">permissions</h2>
+<h3>Delete</h3>
+<p>You can de-authorize an application or revoke a specific extended permissions on behalf of a user by issuing an <code>HTTP DELETE</code> request to <code>PROFILE_ID/permissions</code> with a user <code>access_token</code> for that app.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> permission </code>
+</td>
+<td> The permission you wish to revoke. If you don&apos;t specify a permission then this will de-authorize the application completely. </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>You get the following result.</p>
+<table>
+<tr>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td> True if the delete succeeded and error otherwise.</td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="posts">posts</h2>
+<h3>Read</h3>
+<p>You can read <a href="/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">
+<code>Post</code>
+</a> published by a user by issuing an HTTP GET to <code>/USER_ID/posts</code>. This will return an array of <a href="/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">
+<code>Post</code>
+</a> objects:</p>
+<p>
+<a href="https://developers.facebook.com/tools/explorer?method=GET&amp;path=me%2Fposts" name="https://developers.facebook.com/tools/explorer?method=GET&amp;path=me%2Fposts">https://graph.facebook.com/me/posts</a>
+</p>
+<p>You can retrieve only posts with a location attached by adding <code>with=location</code> to the URL parameters:</p>
+<p>
+<a href="https://developers.facebook.com/tools/explorer?method=GET&amp;path=me%2Fposts%3Fwith%3Dlocation" name="https://developers.facebook.com/tools/explorer?method=GET&amp;path=me%2Fposts%3Fwith%3Dlocation">https://graph.facebook.com/me/posts?with=location</a>
+</p>
+<h3>Create</h3>
+<p>You can create a post on behalf of the user by issuing an HTTP POST request to <code>PROFILE_ID/feed</code> (<b>not</b> <code>PROFILE_ID/posts</code>) with the <code>publish_stream</code> permissions and the following parameters. Note that you can only delete the post if it was created by your app.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> message </td>
+<td>
+<code>string</code>
+</td>
+<td> either <code>message</code> or <code>link</code>
+</td>
+</tr>
+<tr>
+<td>
+<code> link </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> URL </td>
+<td>
+<code>string</code>
+</td>
+<td> either <code>message</code> or <code>link</code>
+</td>
+</tr>
+<tr>
+<td>
+<code> picture </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> thumbnail image (can only be used if <code>link</code> is specified) </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> name </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> name (can only be used if <code>link</code> is specified) </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> caption </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> caption (can only be used if <code>link</code> is specified) </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> description </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> description (can only be used if <code>link</code> is specified) </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> actions </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> actions </td>
+<td>
+<code>array</code> of objects containing <code>name</code> and <code>link</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> place </code>
+</td>
+<td> Facebook Page ID of the location associated with this <a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a>
+</td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> tags </code>
+</td>
+<td> Comma-separated list of Facebook IDs of people tagged in this <a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a>. For example: <code>1207059,701732</code>. This field is returned as the <code>with_tags</code> field when the Post is read. <b>NOTE:</b> You cannot specify this field without also specifying a <code>place</code>. </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> privacy </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> privacy settings (can only be specified if the Timeline being posted on belongs to the <a href="/docs/reference/api/user/" name="https://developers.facebook.com/docs/reference/api/user/">User</a> creating the Post)</td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> object_attachment </code>
+</td>
+<td> Facebook ID for an existing picture in the User&apos;s photo albums to use as the thumbnail image. The User must be the owner of the photo, and the photo cannot be part of a message attachment. </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new post ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="questions">questions</h2>
+<h3>Read</h3>
+<p>To read a Question, you need the following <a href="/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">permissions</a>:</p>
+<ul>
+<li>
+<code>user_questions</code> for questions asked by the current user.</li>
+<li>
+<code>friends_questions</code> for questions asked by friends of the current user.</li>
+</ul>
+<h3>Example</h3>
+<p>Questions that the current user has asked:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=me/questions" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me/questions">https://graph.facebook.com/me/questions</a>
+</p>
+<h3>Create</h3>
+<p>You can post a <a href="https://developers.dev.facebook.com/docs/reference/api/question/" name="https://developers.dev.facebook.com/docs/reference/api/question/">question</a> on behalf of the user by issuing an HTTP POST request to <code>PROFILE_ID/questions</code> with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code>question</code>
+</td>
+<td> The text of the question </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code>options</code>
+</td>
+<td> Array of answer options </td>
+<td>
+<code>array</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code>allow_new_options</code>
+</td>
+<td> Allows other users to add new options (True by default) </td>
+<td>
+<code>boolean</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<h3>Delete</h3>
+<p>You can delete a <code>question</code> by issuing an HTTP DELETE request to the QUESTION_ID object with the <code>publish_stream</code> permission.</p>
+<hr />
+<h2 id="statuses">statuses</h2>
+<h3>Create</h3>
+<p>You can post a <a href="https://developers.dev.facebook.com/docs/reference/api/status/" name="https://developers.dev.facebook.com/docs/reference/api/status/">status message</a> on behalf of the user by issuing an HTTP POST request to <code>PROFILE_ID/feed</code> with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/status/" name="https://developers.facebook.com/docs/reference/api/status/">Status Message</a> content </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new status message ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="subscribedto">subscribedto</h2>
+<h3>Read</h3>
+<p>You can read the people the user is subscribed to by issuing an <code>HTTP GET</code> request to <code>/USER_ID/subscribedto</code> with a user <code>access_token</code> with the <code>user_subscriptions</code> or <code>friends_subscriptions</code> permission.</p>
+<h3>Example</h3>
+<p>People you&apos;re subscribed to:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=me/subscribedto" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me/subscribedto">https://graph.facebook.com/me/subscribedto</a>
+</p>
+<hr />
+<h2 id="subscribers">subscribers</h2>
+<h3>Read</h3>
+<p>You can read the subscribers for a user for your app by issuing an <code>HTTP GET</code> request to <code>/USER_ID/subscribers</code> with the user <code>access_token</code> with the <code>user_subscriptions</code> or <code>friends_subscriptions</code> permission.</p>
+<h3>Example</h3>
+<p>A person&apos;s list of subscribers:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=me/subscribers" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me/subscribers">https://graph.facebook.com/me/subscribers</a>
+</p>
+<hr />
+<h2 id="videos">videos</h2>
+<h3>Create</h3>
+<p>You can publish a <a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">video</a> on behalf of a user by issuing an HTTP POST request to <code>PROFILE_ID/videos</code> with the <code>publish_stream</code> permission and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> source </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">Video</a> content </td>
+<td>
+<code>multipart/form-data</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> title </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">Video</a> title </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> description </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">Video</a> description </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new video ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="scores">Scores</h2>
+<h3>Read</h3>
+<p>You can read the <a href="/docs/score/" name="https://developers.facebook.com/docs/score/">scores</a> for a user for your app by issuing an <code>HTTP GET</code> request to <code>/USER_ID/scores</code> with user or app <code>access_token</code> for that app.</p>
+<ul>
+<li>If the user has granted your app with the <code>user_games_activity</code> permission then this api will give you scores for all apps for that user. Otherwise it will give you scores only for your app.</li>
+<li>The <code>friends_games_activity</code> permission will enable you to access scores for users&apos; friends for all apps by issuing an HTTP GET request to <code>/FRIEND_ID/scores</code>. </li>
+</ul>
+<p>The API returns an <code>array</code> of objects containing the following data:</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>user</td>
+<td>User associated with the scores.</td>
+<td>object containing the <code>name</code> and <code>id</code> for the user.</td>
+</tr>
+<tr>
+<td>score</td>
+<td>Numeric score.</td>
+<td>
+<code>integer</code>
+</td>
+</tr>
+<tr>
+<td>application</td>
+<td>App associated with the score.</td>
+<td>object containing the <code>name</code> and <code>id</code> of the app.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>type of the data which is &quot;score&quot;.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<h3>Create</h3>
+<p>You can post a <a href="/docs/score/" name="https://developers.facebook.com/docs/score/">score</a> for a user by issuing an <code>HTTP POST</code> request to <code>/USER_ID/scores</code> with the <code>app access_token</code> as long as you have the <code>publish_actions</code> permission.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+<tr>
+<td>score</td>
+<td>numeric score with value &lt; 0.</td>
+<td>
+<code>integer</code>
+</td>
+<td>yes</td>
+</tr>
+</table>
+<p>Return value</p>
+<table>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>Whether the write succeeded. </td>
+<td>
+<code>boolean<code>
+</code>
+</code>
+</td>
+</tr>
+</table>
+<h3>Delete</h3>
+<p>You can delete the current <a href="/docs/score/" name="https://developers.facebook.com/docs/score/">score</a> for a user for your app by issuing an <code>HTTP DELETE</code> request to <code>/USER_ID/scores</code> with the <code>app access_token</code> as long as your app has the <code>publish_actions</code> permission.</p>
+<p>Response</p>
+<table>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>true or error depending on whether the delete was successful.</td>
+<td>
+<code>boolean<code>
+</code>
+</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="achievements">Achievements</h2>
+<h3>Read</h3>
+<p>You can read the set of achievements for a user by issuing an <code>HTTP GET</code> request to <code>/USER_ID/achievements</code> with a an app or user <code>access_token</code>. This returns an <code>array</code> of <a href="docs/reference/api/achievement/" name="https://developers.facebook.com/docs/docs/reference/api/achievement/">
+<code>achievement(instance)</code>
+</a> objects where each <code>achievement(instance)</code> represents the instance of the achievement achieved by the user.</p>
+<ul>
+<li>If the user has authorized your app with the <code>user_games_activity</code> permission then this returns the achievements for all games. Otherwise it returns achievements only for your app. </li>
+<li>If the user has authorized your app with the <code>friends_games_activity</code> permission then you can also access achievements for the user&apos;s friends by issuing a <code>HTTP GET</code> request to <code>/FRIEND_ID/achievements</code>. </li>
+</ul>
+<h3>Create</h3>
+<p>You can post an achievement for a user by issuing an <code>HTTP POST</code> request to <code>/USER_ID/achievements</code> with an <code>app access_token</code> as long as the user has given the app the <code>publish_actions</code> permission. The API takes the following parameters:</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+<tr>
+<td>achievement</td>
+<td>The unique URL of the achievement which the user achieved.</td>
+<td>
+<code>string</code>
+</td>
+<td>yes</td>
+</tr>
+</table>
+<p>Response</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>id</td>
+<td>achievement (instance) id for that user.</td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>3403</td>
+<td>If the app tries to post an achievement which isn&apos;t registered.</td>
+</tr>
+<tr>
+<td>3501</td>
+<td>If the app tries to post an achievement which the user already has. </td>
+</tr>
+</table>
+<h3>Delete</h3>
+<p>You can delete an achievement for a user by issuing an <code>HTTP DELETE</code> request to <code>USER_ID/achievements</code> with the <code>app access_token</code> as long as you have the <code>publish_actions</code> permission.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+<tr>
+<td>achievement</td>
+<td>The unique URL of the achievement you wish to delete.</td>
+<td>
+<code>string</code>
+</td>
+<td>yes</td>
+</tr>
+</table>
+<p>Response</p>
+<table>
+<tr>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>true or error depending on whether the delete was successful.</td>
+<td>
+<code>boolean<code>
+</code>
+</code>
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>3404</td>
+<td>If the app tries to delete an achievement that the user doesn&apos;t have.</td>
+</tr>
+</table>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/api/user/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1338504515" title="2012年5月31日 15:48">約1週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

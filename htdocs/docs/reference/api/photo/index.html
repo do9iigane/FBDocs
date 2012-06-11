@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/api/photo/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/api/photo/">https://developers.facebook.com/docs/reference/api/photo/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Concepts</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/batch/" name="http://developers.facebook.com/docs/reference/api/batch/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/permissions/" name="http://developers.facebook.com/docs/reference/api/permissions/">Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/realtime/" name="http://developers.facebook.com/docs/reference/api/realtime/">Real-time Updates</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/achievement/" name="http://developers.facebook.com/docs/reference/api/achievement/">Achievement(Instance)</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/album/" name="http://developers.facebook.com/docs/reference/api/album/">Album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/application/" name="http://developers.facebook.com/docs/reference/api/application/">Application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/checkin/" name="http://developers.facebook.com/docs/reference/api/checkin/">Checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Comment/" name="http://developers.facebook.com/docs/reference/api/Comment/">Comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/domain/" name="http://developers.facebook.com/docs/reference/api/domain/">Domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/event/" name="http://developers.facebook.com/docs/reference/api/event/">Event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/FriendList/" name="http://developers.facebook.com/docs/reference/api/FriendList/">FriendList</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/group/" name="http://developers.facebook.com/docs/reference/api/group/">Group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/insights/" name="http://developers.facebook.com/docs/reference/api/insights/">Insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/link/" name="http://developers.facebook.com/docs/reference/api/link/">Link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/message/" name="http://developers.facebook.com/docs/reference/api/message/">Message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/note/" name="http://developers.facebook.com/docs/reference/api/note/">Note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/offer/" name="http://developers.facebook.com/docs/reference/api/offer/">Offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/order/" name="http://developers.facebook.com/docs/reference/api/order/">Order </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/page/" name="http://developers.facebook.com/docs/reference/api/page/">Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/photo/" name="http://developers.facebook.com/docs/reference/api/photo/">Photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/post/" name="http://developers.facebook.com/docs/reference/api/post/">Post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question/" name="http://developers.facebook.com/docs/reference/api/question/">Question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question_option/" name="http://developers.facebook.com/docs/reference/api/question_option/">QuestionOption</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Review/" name="http://developers.facebook.com/docs/reference/api/Review/">Review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/status/" name="http://developers.facebook.com/docs/reference/api/status/">Status message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/thread/" name="http://developers.facebook.com/docs/reference/api/thread/">Thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/user/" name="http://developers.facebook.com/docs/reference/api/user/">User</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/video/" name="http://developers.facebook.com/docs/reference/api/video/">Video</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Photo</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> › <a href="/docs/reference/api/photo/" name="https://developers.facebook.com/docs/reference/api/photo/">Photo</a>
+</div>
+</div>
+</div>
+<p>An individual photo as represented in the <a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>.</p>
+<p>To read the &apos;photo&apos; object you need</p>
+<ul>
+<li>any valid <code>access_token</code> if it is public</li>
+<li>
+<code>user_photos</code> permission to access photos and albums uploaded by the user, and photos in which the user has been tagged</li>
+<li>
+<code>friends_photos</code> permission to access friends&apos; photos and photos in which the user&apos;s friends have been tagged</li>
+</ul>
+<p>To publish a &apos;photo&apos; object you need</p>
+<ul>
+<li>a valid <code>access token</code>
+</li>
+<li>
+<code>publish_stream</code> permission</li>
+</ul>
+<p>With that granted, you can upload a photo by issuing an HTTP POST request with the photo content and an optional description to one these to Graph API connections:</p>
+<ul>
+<li>
+<p>https://graph.facebook.com/USER_ID/photos - The photo will be published to an album created for your app. We automatically create an album for your app if it does not already exist. All photos uploaded this way will then be added to this same album.</p>
+</li>
+<li>
+<p>https://graph.facebook.com/ALBUM_ID/photos - The photo will be published to a specific, existing photo album, represented by the ALBUM_ID. Regular albums have a size limit of 200 photos. Default application albums currently do not have a size limit, but please adhere to our policies to not abuse this feature.</p>
+</li>
+</ul>
+<p>You can also publish a photo by providing a <code>url</code> param with the photo&apos;s URL.</p>
+<h3>Example</h3>
+<p>A photo from a <a href="https://www.facebook.com/album.php?aid=324257&amp;id=20531316728" name="https://www.facebook.com/album.php?aid=324257&amp;id=20531316728">Facebook Page album</a>: <br />
+</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=20531316728" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=20531316728">https://graph.facebook.com/20531316728</a>
+</p>
+<hr />
+<h2>Fields</h2>
+<p>The <code>Photo</code> object has the following fields.</p>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>
+<p>The photo ID</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>from</code>
+</td>
+<td>
+<p>The profile (user or page) that posted this photo</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>object containing <code>id</code> and <code>name</code> fields</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>tags</code>
+</td>
+<td>
+<p>The tagged users and their positions in this photo</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects, the x and y coordinates are percentages from the left and top edges of the photo, respectively</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>
+<p>The user provided caption given to this photo - do not include advertising in this field</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>icon</code>
+</td>
+<td>
+<p>The icon that Facebook displays when photos are published to the Feed</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> representing a valid URL</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>picture</code>
+</td>
+<td>
+<p>The thumbnail-sized source of the photo</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> representing a valid URL</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>source</code>
+</td>
+<td>
+<p>The source image of the photo - currently this can have a maximum width or height of 720px, <a href="/roadmap/" name="https://developers.facebook.com/roadmap/">increasing to 960px on 1st March 2012</a>
+</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> representing a valid URL</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>height</code>
+</td>
+<td>
+<p>The height of the photo in pixels</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>number</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>width</code>
+</td>
+<td>
+<p>The width of the photo in pixels</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>number</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>images</code>
+</td>
+<td>
+<p>The 4 different stored representations of the photo</p>
+</td>
+<td>
+<p>Requires <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects, containing <code>height</code>, <code>width</code>, and <code>source</code> fields</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>link</code>
+</td>
+<td>
+<p>A link to the photo on Facebook</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> representing a valid URL</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>place</code>
+</td>
+<td>
+<p>Location associated with a Photo, if any</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>object</code> containing <code>id</code> and <code>name</code> of Page associated with this location, and a <code>location</code> field containing geographic information such as <code>latitude</code>, <code>longitude</code>, <code>country</code>, and other fields (fields will vary based on geography and availability of information)</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>created_time</code>
+</td>
+<td>
+<p>The time the photo was initially published</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing ISO-8601 date-time</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>updated_time</code>
+</td>
+<td>
+<p>The last time the photo or its caption was updated</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing ISO-8601 date-time</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>position</code>
+</td>
+<td>
+<p>The position of this photo in the album</p>
+</td>
+<td>
+<p>generic <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>number</code>
+</p>
+</td>
+</tr>
+</table>
+<hr />
+<h2>Connections</h2>
+<p>The <code>Photo</code> object has the following connections.</p>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=10150146071831729%2Fcomments" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=10150146071831729%2Fcomments">comments</a>
+</td>
+<td>
+<p>All of the comments on this photo.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>id</code>, <code>from</code>, <code>message</code> and <code>created_time</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=10150146071831729%2Flikes" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=10150146071831729%2Flikes">likes</a>
+</td>
+<td>
+<p>Users who like this photo.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing the <code>id</code> and <code>name</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://graph.facebook.com/10150146071831729/picture" name="https://graph.facebook.com/10150146071831729/picture">picture</a>
+</td>
+<td>
+<p>The album-sized view of the photo.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>HTTP 302 redirect to the URL of the picture</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=10150146071831729%2Ftags" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=10150146071831729%2Ftags">tags</a>
+</td>
+<td>
+<p>The Users tagged in the photo.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code> or <code>user_photos</code> or <code>friends_photos</code>
+</p>
+</td>
+<td>
+<p>Tags with names and IDs (if available).</p>
+</td>
+</tr>
+</table>
+<h2 id="comments">comments</h2>
+<h3>Create</h3>
+<p>You can write to the <code>PHOTO_ID/comments</code> connection to post a <a href="https://developers.facebook.com/docs/reference/api/comment/" name="https://developers.facebook.com/docs/reference/api/comment/">comment</a> to the photo by issuing an HTTP POST request with the <code>publish_stream</code> permission and following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code>message</code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/comment/" name="https://developers.facebook.com/docs/reference/api/comment/">Comment</a> text </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+</table>
+<p>If the write is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new comment ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<h2 id="likes">likes</h2>
+<h3>Create</h3>
+<p>You can like a photo by issuing a HTTP POST request to <code>PHOTO_ID/likes</code> connection with the <code>publish_stream</code> permission. No parameters necessary.</p>
+<p>If the write is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td> If the like succeeded </td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</table>
+<h3>Delete</h3>
+<p>You can unlike an photo by issuing an HTTP DELETE request to the <code>PHOTO_ID/likes</code> connection with the <code>publish_stream</code> permission.</p>
+<p>If the delete is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td> If the unlike succeeded </td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</table>
+<h2 id="tags">tags</h2>
+<h3>Create</h3>
+<p>You can create a tag on the photo by issuing an <code>HTTP POST</code> request to the tags connection, <code>PHOTO_ID/tags</code>.</p>
+<p>
+<b>Note</b>: This feature is intended to help users tag their friends in real photos. You should not use this feature to encourage users to tag their friends if their friends are not actually in that photo, or to tag friends in composite photos. If your app is found to be encouraging this behavior, your usage of this feature may be disabled.</p>
+<p>You can specify which user to tag using two methods: in the URL path as <code>PHOTO_ID/tags/USER_ID</code>, or in a URL parameter as <code>PHOTO_ID/tags?to=USER_ID</code>. To add several tags at once, you can specify a <code>tags</code> property which contains an array of tags like so <code>PHOTO_ID/tags?tags=[{&quot;id&quot;:&quot;1234&quot;}, {&quot;id&quot;:&quot;12345&quot;}]</code>. Currently, you cannot tag a <a href="/docs/reference/api/page/" name="https://developers.facebook.com/docs/reference/api/page/">Page</a> in a photo using this API.</p>
+<p>Tagging a photo requires the <code>user_photos</code> and <code>publish_stream</code> <a href="/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">permissions</a>, <code>publish_stream</code> is optional - if not present, the tag will go through Tag Review of the tagged person if s/he has this privacy setting enabled. Tagging a photo supports the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code>to</code>
+</td>
+<td> USER_ID of the User to tag; can also be provided in URL path (see above). </td>
+<td>
+<code>string</code>
+</td>
+<td> One of <code>to</code> or <code>tag_text</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>tag_text</code>
+</td>
+<td> A text string to tag. </td>
+<td>
+<code>string</code>
+</td>
+<td> One of <code>to</code> or <code>tag_text</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>x</code>
+</td>
+<td> x coordinate of tag, as a percentage offset from the left edge of the picture </td>
+<td>
+<code>number</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code>y</code>
+</td>
+<td> y coordinate of tag, as a percentage offset from the top edge of the picture </td>
+<td>
+<code>number</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>If the write is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td> If the update succeeded </td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</table>
+<h3>Update</h3>
+<p>You can update the position of a tag for a particular user in the photo by issuing a <code>HTTP POST</code> request to <code>/PHOTO_ID/tags/USER_ID</code> or <code>PHOTO_ID/tags?to=USER_ID</code> with updated <code>x</code> and <code>y</code> coordinates.</p>
+<p>Updating a tag on a photo requires the <code>publish_stream</code> permission and supports the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code>to</code>
+</td>
+<td> USER_ID of the User to tag; can also be provided in URL path (see above). </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code>x</code>
+</td>
+<td> x coordinate of tag, as a percentage offset from the left edge of the picture </td>
+<td>
+<code>number</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code>y</code>
+</td>
+<td> y coordinate of tag, as a percentage offset from the top edge of the picture </td>
+<td>
+<code>number</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>If the update is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td> If the update succeeded </td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</table>
+<h2>How-Tos</h2>
+<ul>
+<li>
+<a href="https://developers.facebook.com/blog/post/498/" name="https://developers.facebook.com/blog/post/498/">How to upload a photo to a user&apos; profile (php)</a>
+</li>
+<li>
+<a href="https://developers.intern.facebook.com/blog/post/509/" name="https://developers.intern.facebook.com/blog/post/509/">How to get access to, add new and update tags on A Photo (php)]</a>
+</li>
+</ul>
+<h2>例</h2>
+<p>
+<a href="https://graph.facebook.com/10150146071831729" name="https://graph.facebook.com/10150146071831729">https://graph.facebook.com/10150146071831729</a> (<a href="http://www.facebook.com/photo.php?pid=7844072&amp;id=20531316728" name="http://www.facebook.com/photo.php?pid=7844072&amp;id=20531316728">A photo from a Facebook Page album</a>) </p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/api/photo/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1338846257" title="2012年6月4日 14:44">先週月曜日に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

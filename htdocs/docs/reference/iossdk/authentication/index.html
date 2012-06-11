@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/iossdk/authentication/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/iossdk/authentication/">https://developers.facebook.com/docs/reference/iossdk/authentication/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</li>
+<li>
+<a href="/docs/reference/php" name="https://developers.facebook.com/docs/reference/php">PHP SDK</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/iossdk" name="https://developers.facebook.com/docs/reference/iossdk">iOS SDK</a>
+</li>
+<li>
+<a href="/docs/reference/androidsdk" name="https://developers.facebook.com/docs/reference/androidsdk">Android SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/authentication/" name="http://developers.facebook.com/docs/reference/iossdk/authentication/">Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/dialog/" name="http://developers.facebook.com/docs/reference/iossdk/dialog/">Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/request/" name="http://developers.facebook.com/docs/reference/iossdk/request/">Request</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Protocols</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/FBDialogDelegate/" name="http://developers.facebook.com/docs/reference/iossdk/FBDialogDelegate/">FBDialogDelegate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/" name="http://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/">FBRequestDelegate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/" name="http://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/">FBSessionDelegate</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Authentication</h1>
+<div class="breadcrumbs">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/iossdk/" name="https://developers.facebook.com/docs/reference/iossdk/">iOS SDK</a> › <a href="/docs/reference/iossdk/authentication/" name="https://developers.facebook.com/docs/reference/iossdk/authentication/">Authentication</a>
+</div>
+</div>
+</div>
+<p>The authentication methods used in the Facebook iOS SDK. These methods are defined in <code>Facebook.h</code>.</p>
+<p>You implement these methods to do the following:</p>
+<ul>
+<li>
+<p>Initialize the <code>Facebook</code> instance with your app ID. Once initialized the instance can be used for follow-on method calls.</p>
+</li>
+<li>
+<p>Initiate the user authentication and app authorization flow. Once this is completed successfully you can make additional API calls that require the user authorization.</p>
+</li>
+<li>
+<p>Refresh the current <code>access_token</code>. The <code>access_token</code> is automatically refreshed when a Facebook API call is made but you may also want to manually do this for active users when your app is re-activated.</p>
+</li>
+<li>
+<p>Log out the user from Facebook.</p>
+</li>
+<li>
+<p>Handle the Single Sign-On URL (SSO) callback. This is part of the <a href="/docs/guides/mobile/ios/#implementsso" name="https://developers.facebook.com/docs/guides/mobile/ios/#implementsso">SSO implementation</a>.</p>
+</li>
+<li>
+<p>Check if the user session is valid. You may do this to check if an <code>access_token</code> is valid so you can handle re-authenticating the user. You may also do this to expose functionality that requires the user to be logged in.</p>
+</li>
+</ul>
+<h2>Instance Methods</h2>
+<hr />
+<h3>initWithAppId:andDelegate:</h3>
+<p>Convenience method for initializing a <code>Facebook</code> instance.</p>
+<pre>
+<code>- (id)initWithAppId:(NSString *)app_id
+    andDelegate:(id&lt;FBSessionDelegate&gt;)delegate;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>app_id</code> - The Facebook application id.</p>
+<p>
+<code>delegate</code> - The receiver&apos;s delegate or <code>nil</code> if it doesn&apos;t have a delegate. See <a href="/docs/reference/iossdk/FBSessionDelegate/" name="https://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/">FBSessionDelegate</a> for information on the delegate protocol.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>Newly initialized <code>Facebook</code> instance.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You must call this method before making any further calls to the Facebook API. You should set up your delegate to handle the any follow-on authorization callbacks using the newly created instance.</p>
+<hr />
+<h3>initWithAppId:urlSchemeSuffix:andDelegate:</h3>
+<p>Convenience method for initializing a <code>Facebook</code> instance.</p>
+<pre>
+<code>- (id)initWithAppId:(NSString *)app_id
+    urlSchemeSuffix:(NSString *)urlSchemeSuffix
+    andDelegate:(id&lt;FBSessionDelegate&gt;)delegate;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>app_id</code> - The Facebook application id.</p>
+<p>
+<code>urlSchemeSuffix</code> - A string that will be appended to your base URL scheme for Single Sign-On flows. This parameter is useful in scenarios where you want to share a single Facebook app id across multiple apps.</p>
+<p>
+<code>delegate</code> - The receiver&apos;s delegate or <code>nil</code> if it doesn&apos;t have a delegate. See <a href="/docs/reference/iossdk/FBSessionDelegate/" name="https://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/">FBSessionDelegate</a> for information on the delegate protocol.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>Newly initialized <code>Facebook</code> instance.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You must call this method before making any further calls to the Facebook API. You should set up your delegate to handle the any follow-on authorization callbacks using the newly created instance.</p>
+<hr />
+<h3>authorize:</h3>
+<p>Starts the authorization flow for the user with the requested permissions.</p>
+<pre>
+<code>- (void)authorize:(NSArray *)permissions;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>permissions</code> - A list of the requested permissions. Pass an empty string if you do not wish to ask for permissions.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You call this method to prompt the user to log in to Facebook and grant the requested permissions to the application. Your current FBSessionDelegate delegate should be set up to handle the scenarios where the user grants or denies permissions, as well as any error scenarios.</p>
+<hr />
+<h3>extendAccessTokenIfNeeded</h3>
+<p>Attempts to extend the <code>access_token</code>.</p>
+<pre>
+<code>- (void)extendAccessTokenIfNeeded;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>None.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>The <code>access_token</code> expires after a certain amount of time and when you call this method it will be refreshed if it is still active and only after some time has passed since the last refresh. To ensure that you keep the <code>access_token</code> fresh for active users, call this method in your UIApplicationDelegate&apos;s <code>applicationDidBecomeActive:</code> method.</p>
+<hr />
+<h3>handleOpenURL:</h3>
+<p>Handles the processing of the URL used in the Single Sign-On (SSO) flow.</p>
+<pre>
+<code>- (BOOL)handleOpenURL:(NSURL *)url;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>url</code> - The URL that was passed to the application delegate&apos;s <code>handleOpenURL</code> method.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>
+<code>YES</code> if the URL starts with fb[app_id]://authorize and hence was handled by SDK, <code>NO</code> otherwise.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You must call this method from your UIApplicationDelegate&apos;s <code>handleOpenURL</code> method. This ensures that the SSO flow is properly handled when the user is directed back to your app from Facebook application or Safari.</p>
+<hr />
+<h3>logout:</h3>
+<p>Invalidate the current user session.</p>
+<pre>
+<code>- (void)logout:(id&lt;FBSessionDelegate&gt;)delegate;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>delegate</code> - The receiver&apos;s delegate or <code>nil</code> if it doesn&apos;t have a delegate. See <a href="/docs/reference/iossdk/FBSessionDelegate/" name="https://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/">FBSessionDelegate</a> for information on the delegate protocol.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method does not unauthorized the application, it simply invalidates the <code>access_token</code>. The user can unauthorized the application through the app settings page on the <a href="https://www.facebook.com" name="https://www.facebook.com/">Facebook website</a>.</p>
+<hr />
+<h3>isSessionValid</h3>
+<p>Check if the <code>access_token</code> is available and has not expired.</p>
+<pre>
+<code>- (BOOL)isSessionValid;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>None.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>
+<code>YES</code> if the <code>access_token</code> is valid, <code>NO</code> if it is invalid.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/iossdk/authentication/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1327364111" title="2012年1月23日 16:15">約5ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

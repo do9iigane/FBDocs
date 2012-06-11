@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/fql/stream/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/fql/stream/">https://developers.facebook.com/docs/reference/fql/stream/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Tables</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/album/" name="http://developers.facebook.com/docs/reference/fql/album/">album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/application/" name="http://developers.facebook.com/docs/reference/fql/application/">application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/apprequest/" name="http://developers.facebook.com/docs/reference/fql/apprequest/">apprequest</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/checkin/" name="http://developers.facebook.com/docs/reference/fql/checkin/">checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comment/" name="http://developers.facebook.com/docs/reference/fql/comment/">comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comments_info/" name="http://developers.facebook.com/docs/reference/fql/comments_info/">comments_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/connection/" name="http://developers.facebook.com/docs/reference/fql/connection/">connection</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/cookies/" name="http://developers.facebook.com/docs/reference/fql/cookies/">cookies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/developer/" name="http://developers.facebook.com/docs/reference/fql/developer/">developer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain/" name="http://developers.facebook.com/docs/reference/fql/domain/">domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain_admin/" name="http://developers.facebook.com/docs/reference/fql/domain_admin/">domain_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event/" name="http://developers.facebook.com/docs/reference/fql/event/">event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event_member/" name="http://developers.facebook.com/docs/reference/fql/event_member/">event_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/family/" name="http://developers.facebook.com/docs/reference/fql/family/">family</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend/" name="http://developers.facebook.com/docs/reference/fql/friend/">friend</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend_request/" name="http://developers.facebook.com/docs/reference/fql/friend_request/">friend_request</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist/" name="http://developers.facebook.com/docs/reference/fql/friendlist/">friendlist</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist_member/" name="http://developers.facebook.com/docs/reference/fql/friendlist_member/">friendlist_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group/" name="http://developers.facebook.com/docs/reference/fql/group/">group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group_member/" name="http://developers.facebook.com/docs/reference/fql/group_member/">group_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/insights/" name="http://developers.facebook.com/docs/reference/fql/insights/">insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/like/" name="http://developers.facebook.com/docs/reference/fql/like/">like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/links/" name="http://developers.facebook.com/docs/reference/fql/links/">link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/link_stat/" name="http://developers.facebook.com/docs/reference/fql/link_stat/">link_stat</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/location_post/" name="http://developers.facebook.com/docs/reference/fql/location_post/">location_post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/mailbox_folder/" name="http://developers.facebook.com/docs/reference/fql/mailbox_folder/">mailbox_folder</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/message/" name="http://developers.facebook.com/docs/reference/fql/message/">message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notes/" name="http://developers.facebook.com/docs/reference/fql/notes/">note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notification/" name="http://developers.facebook.com/docs/reference/fql/notification/">notification</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/object_url/" name="http://developers.facebook.com/docs/reference/fql/object_url/">object_url</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/offer/" name="http://developers.facebook.com/docs/reference/fql/offer/">offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page/" name="http://developers.facebook.com/docs/reference/fql/page/">page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_admin/" name="http://developers.facebook.com/docs/reference/fql/page_admin/">page_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_blocked_user/" name="http://developers.facebook.com/docs/reference/fql/page_blocked_user/">page_blocked_user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_fan/" name="http://developers.facebook.com/docs/reference/fql/page_fan/">page_fan</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/life_event/" name="http://developers.facebook.com/docs/reference/fql/life_event/">page_milestone</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions/" name="http://developers.facebook.com/docs/reference/fql/permissions/">permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions_info/" name="http://developers.facebook.com/docs/reference/fql/permissions_info/">permissions_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo/" name="http://developers.facebook.com/docs/reference/fql/photo/">photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_src/" name="http://developers.facebook.com/docs/reference/fql/photo_src/">photo_src</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_tag/" name="http://developers.facebook.com/docs/reference/fql/photo_tag/">photo_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/place/" name="http://developers.facebook.com/docs/reference/fql/place/">place</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy/" name="http://developers.facebook.com/docs/reference/fql/privacy/">privacy</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy_setting/" name="http://developers.facebook.com/docs/reference/fql/privacy_setting/">privacy_setting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile/" name="http://developers.facebook.com/docs/reference/fql/profile/">profile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile_tab/" name="http://developers.facebook.com/docs/reference/fql/profile_tab/">profile_view</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question/" name="http://developers.facebook.com/docs/reference/fql/question/">question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option/" name="http://developers.facebook.com/docs/reference/fql/question_option/">question_option</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option_votes/" name="http://developers.facebook.com/docs/reference/fql/question_option_votes/">question_option_votes</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/review/" name="http://developers.facebook.com/docs/reference/fql/review/">review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_friend_info/" name="http://developers.facebook.com/docs/reference/fql/standard_friend_info/">standard_friend_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_user_info/" name="http://developers.facebook.com/docs/reference/fql/standard_user_info/">standard_user_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/status/" name="http://developers.facebook.com/docs/reference/fql/status/">status</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream/" name="http://developers.facebook.com/docs/reference/fql/stream/">stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_filter/" name="http://developers.facebook.com/docs/reference/fql/stream_filter/">stream_filter</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_tag/" name="http://developers.facebook.com/docs/reference/fql/stream_tag/">stream_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/subscription/" name="http://developers.facebook.com/docs/reference/fql/subscription/">subscription</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/thread/" name="http://developers.facebook.com/docs/reference/fql/thread/">thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/translation/" name="http://developers.facebook.com/docs/reference/fql/translation/">translation</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_message/" name="http://developers.facebook.com/docs/reference/fql/unified_message/">unified_message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread/" name="http://developers.facebook.com/docs/reference/fql/unified_thread/">unified_thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_action/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_action/">unified_thread_action</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_count/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_count/">unified_thread_count</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/url_like/" name="http://developers.facebook.com/docs/reference/fql/url_like/">url_like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/user/" name="http://developers.facebook.com/docs/reference/fql/user/">user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video/" name="http://developers.facebook.com/docs/reference/fql/video/">video</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video_tag/" name="http://developers.facebook.com/docs/reference/fql/video_tag/">video_tag</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>stream</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a> › <a href="/docs/reference/fql/stream/" name="https://developers.facebook.com/docs/reference/fql/stream/">stream</a>
+</div>
+</div>
+</div>
+<p>An <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a> table that can be used to return a list of a stream posts.</p>
+<p>The <a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">
+<code>User</code>
+</a>, <a href="/docs/reference/api/page" name="https://developers.facebook.com/docs/reference/api/page">
+<code>Page</code>
+</a>, <a href="/docs/reference/api/application" name="https://developers.facebook.com/docs/reference/api/application">
+<code>Application</code>
+</a> and <a href="/docs/reference/api/group" name="https://developers.facebook.com/docs/reference/api/group">
+<code>Group</code>
+</a> <a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a> objects have equivalent <code>feed</code> connections containing <a href="/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">
+<code>Post</code>
+</a> objects that represent their walls. In addition the <a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">
+<code>User</code>
+</a> and <a href="/docs/reference/api/page" name="https://developers.facebook.com/docs/reference/api/page">
+<code>Page</code>
+</a> objects have a connection named <code>posts</code> containing <code>Post</code> objects made by the User and the Page respectively.</p>
+<p>If you specify a <code>filter_key</code> from the <code>stream_filter</code> FQL table or multiple users, results returned will behave like the user&apos;s homepage news feed. If only one user is specified as the <code>source_id</code>, you will receive the profile view of the user or page. You can filter these profile view posts by specifying <code>filter_key</code> &apos;others&apos; (return only posts that are by someone other than the specified user) or &apos;owner&apos; (return only posts made by the specified user). The profile view, unlike the homepage view, returns older data from our databases. In the case of a <code>Page</code>, the profile view also includes posts by fans.</p>
+<p>Each query of the stream table is limited to the previous 30 days or 50 posts, whichever is greater, however you can use time-specific fields such as <code>created_time</code> along with FQL operators (such as &lt; or &gt;) to retrieve a much greater range of posts.</p>
+<p>To read the <code>stream</code> table you need</p>
+<ul>
+<li>
+<code>read_stream</code> <a href="/docs/authentication/permissions" name="https://developers.facebook.com/docs/authentication/permissions">permissions</a> for all posts that the current session user is able to view</li>
+<li>
+<code>read_insights</code> <a href="/docs/authentication/permissions" name="https://developers.facebook.com/docs/authentication/permissions">permissions</a> to see post <code>impressions</code> for any posts made by a Page owned by the current session user </li>
+</ul>
+<h3>Examples</h3>
+<p>Use a <code>filter_key</code> to retrieve the current session user&apos;s News Feed (<a href="https://api.facebook.com/method/fql.query?query=SELECT%20post_id%2C%20actor_id%2C%20target_id%2C%20message%20FROM%20stream%20WHERE%20filter_key%20in%20(SELECT%20filter_key%20FROM%20stream_filter%20WHERE%20uid%3Dme()%20AND%20type%3D&apos;newsfeed&apos;)%20AND%20is_hidden%20%3D%200&amp;access_token=OAUTH_ACCESS_TOKEN" name="https://api.facebook.com/method/fql.query?query=SELECT%20post_id%2C%20actor_id%2C%20target_id%2C%20message%20FROM%20stream%20WHERE%20filter_key%20in%20(SELECT%20filter_key%20FROM%20stream_filter%20WHERE%20uid%3Dme()%20AND%20type%3D&apos;newsfeed&apos;)%20AND%20is_hidden%20%3D%200&amp;access_token=OAUTH_ACCESS_TOKEN">Try this query</a>):</p>
+<pre>
+<code>SELECT post_id, actor_id, target_id, message FROM stream WHERE filter_key in (SELECT filter_key FROM stream_filter WHERE uid=me() AND type=&apos;newsfeed&apos;) AND is_hidden = 0
+</code>
+</pre>
+<p>Retrieve posts made by the current session user before December 30, 2009 at 12am EST (<a href="https://api.facebook.com/method/fql.query?query=SELECT%20post_id%2C%20actor_id%2C%20target_id%2C%20message%20FROM%20stream%20WHERE%20source_id%20%3D%20me()%20AND%20created_time%20%3C%201262196000%20LIMIT%2050&amp;access_token=OAUTH_ACCESS_TOKEN" name="https://api.facebook.com/method/fql.query?query=SELECT%20post_id%2C%20actor_id%2C%20target_id%2C%20message%20FROM%20stream%20WHERE%20source_id%20%3D%20me()%20AND%20created_time%20%3C%201262196000%20LIMIT%2050&amp;access_token=OAUTH_ACCESS_TOKEN">Try this query</a>):</p>
+<pre>
+<code>SELECT post_id, actor_id, target_id, message FROM stream WHERE source_id = me() AND created_time &lt; 1262196000 LIMIT 50
+</code>
+</pre>
+<p>Retrieve the action links in a user&apos;s stream, and remove any HTML markup and encoding (<a href="https://api.facebook.com/method/fql.query?query=SELECT%20post_id%2C%20actor_id%2C%20target_id%2C%20message%20FROM%20stream%20WHERE%20source_id%20%3D%20me()%20AND%20created_time%20%3C%201262196000%20LIMIT%2050&amp;access_token=OAUTH_ACCESS_TOKEN" name="https://api.facebook.com/method/fql.query?query=SELECT%20post_id%2C%20actor_id%2C%20target_id%2C%20message%20FROM%20stream%20WHERE%20source_id%20%3D%20me()%20AND%20created_time%20%3C%201262196000%20LIMIT%2050&amp;access_token=OAUTH_ACCESS_TOKEN">Try this query</a>):</p>
+<pre>
+<code>SELECT strip_tags(action_links) FROM stream WHERE source_id = me()
+</code>
+</pre>
+<p>Retrieve Insights for <a href="https://graph.facebook.com/platform" name="https://graph.facebook.com/platform">Facebook</a> Page posts (impressions field only available when the current session user is the Page owner) (<a href="https://api.facebook.com/method/fql.query?query=SELECT%20post_id%2C%20actor_id%2C%20message%2C%20impressions%20FROM%20stream%20WHERE%20actor_id%20%3D%2019292868552%20and%20source_id%20%3D%2019292868552&amp;access_token=OAUTH_ACCESS_TOKEN" name="https://api.facebook.com/method/fql.query?query=SELECT%20post_id%2C%20actor_id%2C%20message%2C%20impressions%20FROM%20stream%20WHERE%20actor_id%20%3D%2019292868552%20and%20source_id%20%3D%2019292868552&amp;access_token=OAUTH_ACCESS_TOKEN">Try this query</a>):</p>
+<pre>
+<code>SELECT post_id, actor_id, message, impressions FROM stream WHERE actor_id = 19292868552 and source_id = 19292868552
+</code>
+</pre>
+<p>See posts by others on the current session user&apos;s profile (<a href="https://api.facebook.com/method/fql.query?query=SELECT%20post_id%2C%20actor_id%2C%20target_id%2C%20message%20FROM%20stream%20WHERE%20filter_key%20%3D%20&apos;others&apos;%20AND%20source_id%20%3D%20me()&amp;access_token=OAUTH_ACCESS_TOKEN" name="https://api.facebook.com/method/fql.query?query=SELECT%20post_id%2C%20actor_id%2C%20target_id%2C%20message%20FROM%20stream%20WHERE%20filter_key%20%3D%20&apos;others&apos;%20AND%20source_id%20%3D%20me()&amp;access_token=OAUTH_ACCESS_TOKEN">Try this query</a>):</p>
+<pre>
+<code>SELECT post_id, actor_id, target_id, message FROM stream WHERE filter_key = &apos;others&apos; AND source_id = me()
+</code>
+</pre>
+<h2>コラム</h2>
+<table class="params columns">
+<tr>
+<th>インデックス可能</th>
+<th>名前</th>
+<th>タイプ</th>
+<th>説明</th>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">post_id</td>
+<td class="type">string</td>
+<td>
+<p>The ID of the post</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">viewer_id </td>
+<td class="type">int</td>
+<td>
+<p>The ID of the current session user</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">app_id</td>
+<td class="type">int</td>
+<td>
+<p>For posts published by apps, the ID of that app</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">source_id </td>
+<td class="type">int</td>
+<td>
+<p>The ID of the user, page, group, or event whose wall the post is on</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">updated_time</td>
+<td class="type">time</td>
+<td>
+<p>The time the post was last updated, which occurs when a user comments on the post, expressed as a Unix timestamp</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">created_time</td>
+<td class="type">time</td>
+<td>
+<p>The time the post was published, expressed as a Unix timestamp</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">filter_key</td>
+<td class="type">string</td>
+<td>
+<p>The filter key to fetch data with. This key should be retrieved from by querying the stream_filter FQL table or with the special values &apos;others&apos; or &apos;owner&apos;.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">attribution </td>
+<td class="type">string</td>
+<td>
+<p>For posts published by apps, the full name of that app</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">actor_id</td>
+<td class="type">string</td>
+<td>
+<p>The ID of the user, page, group, or event that published the post</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">target_id</td>
+<td class="type">string</td>
+<td>
+<p>The user, page, group, or event to whom the post was directed</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">message</td>
+<td class="type">string</td>
+<td>
+<p>The message written in the post</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">app_data</td>
+<td class="type">array</td>
+<td>
+<p>An array of app specific information optionally supplied to create the attachment to the post</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">action_links</td>
+<td class="type">array</td>
+<td>
+<p>An array containing the text and URL for each action link</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">attachment</td>
+<td class="type">array</td>
+<td>
+<p>An array of information about the attachment to the post. This is the attachment that Facebook returns</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">impressions</td>
+<td class="type">int</td>
+<td>
+<p>Number of impressions of this post. This data is visible only if you have <a href="/docs/authentication/permissions/" name="https://developers.facebook.com/docs/authentication/permissions/">
+<code>read_insights</code>
+</a> permission from a page owner</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">comments</td>
+<td class="type">array</td>
+<td>
+<p>An array containing the following information about comments for a post:</p>
+<ul>
+<li>
+<code>can_remove</code> (bool): Indicates whether users can remove comments</li>
+<li>
+<code>can_post</code> (bool): Indicates whether users can post comments</li>
+<li>count (int): The total number of comments added to the post </li>
+<li>
+<code>comment_list</code> (array): A sample of comments made on the post, to get the full list of comments, use the <a href="/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">
+<code>Post</code>
+</a> Graph API object or query the <code>comment</code> FQL table</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">likes</td>
+<td class="type">array</td>
+<td>
+<p>An array containing the following information about likes for the post:</p>
+<ul>
+<li>
+<code>href</code> (string): The URL to a page showing the other users who&apos;ve liked this post</li>
+<li>
+<code>count</code> (int): The total number of likes on the post </li>
+<li>
+<code>sample</code> (array): A sample of users who like the post, to get the full list of likes, use the <a href="/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">
+<code>Post</code>
+</a> Graph API object</li>
+<li>
+<code>friends</code> (array): A list of the viewing user&apos;s friends who like the post.</li>
+<li>
+<code>user_likes</code> (bool): Indicates whether the current session user likes the post</li>
+<li>
+<code>can_like</code> (bool): Indicates whether the post can be liked</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">place</td>
+<td class="type">int</td>
+<td>
+<p>Facebook ID of the place associated with the post, if any</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">privacy</td>
+<td class="type">array</td>
+<td>
+<p>The privacy settings for a post</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">permalink</td>
+<td class="type">string</td>
+<td>
+<p>A link to the stream post on Facebook</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">xid</td>
+<td class="type">int</td>
+<td>
+<p>When querying for the feed of a live stream box, this is the xid associated with the Live Stream box (you can provide &apos;default&apos; if one is not available)</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">tagged_ids</td>
+<td class="type">array</td>
+<td>
+<p>An array of IDs tagged in the <code>message</code> of the post.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">message_tags</td>
+<td class="type">array</td>
+<td>
+<p>An array indexed by offset of arrays of the tags in the <code>message</code> of the post, containing the <code>id</code> of the tagged object, the <code>name</code> of the tag, the <code>offset</code> of where the tag occurs in the message and the <code>length</code> of the tag.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">description</td>
+<td class="type">string</td>
+<td>
+<p>Text of stories not intentionally generated by users, such as those generated when two users become friends; you must have the &quot;Include recent activity stories&quot; migration enabled in your app to retrieve this field.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">description_tags</td>
+<td class="type">array</td>
+<td>
+<p>An array indexed by offset of arrays of the tags in the <code>description</code> of the post, containing the <code>id</code> of the tagged object, the <code>name</code> of the tag, the <code>offset</code> of where the tag occurs in the message and the <code>length</code> of the tag; You must have the &quot;Include recent activity stories&quot; migration enabled in your app to retrieve this field.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">type</td>
+<td class="type">int</td>
+<td>
+<p>The type of this story. Possible values are:</p>
+<ul>
+<li>
+<code>11</code> - Group created </li>
+<li>
+<code>12</code> - Event created </li>
+<li>
+<code>46</code> - Status update </li>
+<li>
+<code>56</code> - Post on wall from another user </li>
+<li>
+<code>66</code> - Note created </li>
+<li>
+<code>80</code> - Link posted </li>
+<li>
+<code>128</code> - Video posted </li>
+<li>
+<code>247</code> - Photos posted </li>
+<li>
+<code>237</code> - App story </li>
+<li>
+<code>257</code> - Comment created </li>
+<li>
+<code>272</code> - App story </li>
+<li>
+<code>285</code> - Checkin to a place </li>
+<li>
+<code>308</code> - Post in Group </li>
+</ul>
+</td>
+</tr>
+</table>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/fql/stream/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1336781470" title="2012年5月11日 17:11">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

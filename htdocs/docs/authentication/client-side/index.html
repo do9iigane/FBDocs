@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/authentication/client-side/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/authentication/client-side/">https://developers.facebook.com/docs/authentication/client-side/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/server-side/" name="http://developers.facebook.com/docs/authentication/server-side/">Server-Side Authentication</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/authentication/client-side/" name="http://developers.facebook.com/docs/authentication/client-side/">Client-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/ios/" name="http://developers.facebook.com/docs/authentication/ios/">Authentication in native iOS apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/android/" name="http://developers.facebook.com/docs/authentication/android/">Authentication in native Android apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pages/" name="http://developers.facebook.com/docs/authentication/pages/">Authenticating as a Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/applications/" name="http://developers.facebook.com/docs/authentication/applications/">Authenticating as an App</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/devices/" name="http://developers.facebook.com/docs/authentication/devices/">Authentication for Devices</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/canvas/" name="http://developers.facebook.com/docs/authentication/canvas/">Authentication within a Canvas Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pagetab/" name="http://developers.facebook.com/docs/authentication/pagetab/">Authentication within a Page Tab</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/access-token-expiration/" name="http://developers.facebook.com/docs/authentication/access-token-expiration/">Handling Invalid and Expired Access Tokens</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/permissions/" name="http://developers.facebook.com/docs/authentication/permissions/">Permissions Reference</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/publishing/" name="http://developers.facebook.com/docs/publishing/">Publishing Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/reauthentication/" name="http://developers.facebook.com/docs/authentication/reauthentication/">Re-Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/signed_request/" name="http://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Client-Side Authentication</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">Authentication</a> › <a href="/docs/authentication/client-side/" name="https://developers.facebook.com/docs/authentication/client-side/">Client-Side Authentication</a>
+</div>
+</div>
+</div>
+<p>Client-side authentication allows Desktop Web and Mobile Web apps to authenticate a user without the need for a server. It enables fully-javascript apps to interact with Facebook&apos;s APIs.</p>
+<p>The recommended way to authenticate a user in a fully client-side flow is with the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">Javascript SDK</a>. However, it is also possible to <a href="#no-jssdk" name="https://developers.facebook.com/docs/#no-jssdk">authenticate a user without the use of the JS SDK</a>.</p>
+<h2 id="jssdk">Client-side Authentication with the Javascript SDK</h2>
+<p>In addition to managing the standard login and logout flows, the JS SDK automatically manages the validity of access tokens and ensures as long as the user is present in your app and is logged into Facebook, you always have a valid user access token. In addition, if the user is logged into Facebook, the SDK can automatically return a fresh user session when the user returns to your application - this can be used to automatically log the user in to your application.</p>
+<p>Session information is stored in cookies which can be parsed by the <a href="/docs/reference/php/" name="https://developers.facebook.com/docs/reference/php/">Facebook PHP SDK</a>. See the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">Javascript SDK</a> documentation for more on event handling and the methods available.</p>
+<p>The example below implements the following features:</p>
+<ol>
+<li>loads the Javascript SDK asynchronously</li>
+<li>init&apos;s the SDK with <code>status: true</code> to enable the checking of the user&apos;s authentication status at init-time</li>
+<li>implements an event handler to listen for the <code>auth.statusChange</code> event which responds to user-explicit login and logout events, as well as implicit authentication events. This allows you to automatically get a fresh user access token when a user lands on your application, and can be used to automatically log the user in.</li>
+<li>uses <code>FB.login()</code> to prompt the user to authenticate</li>
+<li>uses <code>FB.logout()</code> to allow the user to logout of both your application and Facebook</li>
+</ol>
+<p>Be sure to replace <code>appId</code> with your own app ID, and update the <code>channelUrl</code> parameter with a path which points to your Channel file - a URL on your domain which returns only the string <code>&lt;script src=&quot;//connect.facebook.net/en_US/all.js&quot;&gt;&lt;/script&gt;</code>. In order to use the authentication methods, your app must be configured with an App Domain. App settings can be changed on the <a href="/apps" name="https://developers.facebook.com/apps">settings page</a>. See the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">Javascript SDK documentation</a> for more detail on initializing the JS SDK.</p>
+<pre>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Facebook Client-side Authentication Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+    &lt;script&gt;
+      // Load the SDK Asynchronously
+      (function(d){
+         var js, id = &apos;facebook-jssdk&apos;, ref = d.getElementsByTagName(&apos;script&apos;)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+         js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+         ref.parentNode.insertBefore(js, ref);
+       }(document));
+
+      // Init the SDK upon load
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : &apos;YOUR_APP_ID&apos;, // App ID
+          channelUrl : &apos;//&apos;+window.location.hostname+&apos;/channel&apos;, // Path to your Channel File
+          status     : true, // check login status
+          cookie     : true, // enable cookies to allow the server to access the session
+          xfbml      : true  // parse XFBML
+        });
+
+        // listen for and handle auth.statusChange events
+        FB.Event.subscribe(&apos;auth.statusChange&apos;, function(response) {
+          if (response.authResponse) {
+            // user has auth&apos;d your app and is logged into Facebook
+            FB.api(&apos;/me&apos;, function(me){
+              if (me.name) {
+                document.getElementById(&apos;auth-displayname&apos;).innerHTML = me.name;
+              }
+            })
+            document.getElementById(&apos;auth-loggedout&apos;).style.display = &apos;none&apos;;
+            document.getElementById(&apos;auth-loggedin&apos;).style.display = &apos;block&apos;;
+          } else {
+            // user has not auth&apos;d your app, or is not logged into Facebook
+            document.getElementById(&apos;auth-loggedout&apos;).style.display = &apos;block&apos;;
+            document.getElementById(&apos;auth-loggedin&apos;).style.display = &apos;none&apos;;
+          }
+        });
+
+        // respond to clicks on the login and logout links
+        document.getElementById(&apos;auth-loginlink&apos;).addEventListener(&apos;click&apos;, function(){
+          FB.login();
+        });
+        document.getElementById(&apos;auth-logoutlink&apos;).addEventListener(&apos;click&apos;, function(){
+          FB.logout();
+        }); 
+      } 
+    &lt;/script&gt;
+
+    &lt;h1&gt;Facebook Client-side Authentication Example&lt;/h1&gt;
+      &lt;div id=&quot;auth-status&quot;&gt;
+        &lt;div id=&quot;auth-loggedout&quot;&gt;
+          &lt;a href=&quot;#&quot; id=&quot;auth-loginlink&quot;&gt;Login&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;auth-loggedin&quot; style=&quot;display:none&quot;&gt;
+          Hi, &lt;span id=&quot;auth-displayname&quot;&gt;&lt;/span&gt;  
+        (&lt;a href=&quot;#&quot; id=&quot;auth-logoutlink&quot;&gt;logout&lt;/a&gt;)
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<hr />
+<h2 id="no-jssdk">Client-side authentication without the JS SDK</h2>
+<p>If you don&apos;t want to embed the Facebook JS SDK in your pages, it is still possible to allow a user to authenticate your application without the use of a server.</p>
+<p>To begin the flow either popup a new window or redirect the user&apos;s browser to:</p>
+<pre>
+<code>https://www.facebook.com/dialog/oauth?
+    client_id=YOUR_APP_ID
+   &amp;redirect_uri=YOUR_REDIRECT_URI
+   &amp;scope=COMMA_SEPARATED_LIST_OF_PERMISSION_NAMES
+   &amp;response_type=token
+</code>
+</pre>
+<p>The user will then be prompted to authorize your application:</p>
+<p>If the user chooses to authorize your application, the user will be redirected to:</p>
+<pre>
+<code>YOUR_REDIRECT_URI#
+    access_token=USER_ACCESS_TOKEN
+   &amp;expires_in=NUMBER_OF_SECONDS_UNTIL_TOKEN_EXPIRES
+</code>
+</pre>
+<p>Note that unlike the <a href="/docs/authentication/server-side" name="https://developers.facebook.com/docs/authentication/server-side">server-side flow</a>, the access token is passed to your <code>redirect_uri</code> in the url fragment and so is only available to your application through Javascript.</p>
+<p>As you&apos;re not using the JS SDK, its up to you to implement a way to persist this token between requests (perhaps using cookies) or pass the token to your backend so it can be persisted in a database.</p>
+<h3>HTTP Sequence Diagram</h3>
+<p>The diagram below illustrates the HTTP calls made through the client-side flow when not making use of the JS SDK:</p>
+<p>
+<img src="https://developers.facebook.com/attachment/clientsideflow.png" width="80%" />
+</p>
+<h3>Client-side authentication - self contained example</h3>
+<p>The following HTML/JavasScript example demonstrates the client-side flow in one self-contained example:</p>
+<pre>
+<code> &lt;html&gt; 
+   &lt;head&gt; 
+     &lt;title&gt;Client-side OAuth Example&lt;/title&gt; 
+   &lt;/head&gt; 
+   &lt;body&gt; 
+   &lt;script&gt; 
+     function displayUser(user) {
+       var userName = document.getElementById(&apos;userName&apos;);
+       var greetingText = document.createTextNode(&apos;Greetings, &apos;
+         + user.name + &apos;.&apos;);
+   userName.appendChild(greetingText);
+     }
+
+     var appID = YOUR_APP_ID;
+     if (window.location.hash.length == 0) {
+       var path = &apos;https://www.facebook.com/dialog/oauth?&apos;;
+   var queryParams = [&apos;client_id=&apos; + appID,
+     &apos;redirect_uri=&apos; + window.location,
+     &apos;response_type=token&apos;];
+   var query = queryParams.join(&apos;&amp;&apos;);
+   var url = path + query;
+   window.open(url);
+     } else {
+       var accessToken = window.location.hash.substring(1);
+       var path = &quot;https://graph.facebook.com/me?&quot;;
+   var queryParams = [accessToken, &apos;callback=displayUser&apos;];
+   var query = queryParams.join(&apos;&amp;&apos;);
+   var url = path + query;
+
+   // use jsonp to call the graph
+       var script = document.createElement(&apos;script&apos;);
+       script.src = url;
+       document.body.appendChild(script);        
+     }
+   &lt;/script&gt; 
+   &lt;p id=&quot;userName&quot;&gt;&lt;/p&gt; 
+   &lt;/body&gt; 
+  &lt;/html&gt;
+</code>
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/authentication/client-side/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1334786052" title="2012年4月18日 14:54">約2ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

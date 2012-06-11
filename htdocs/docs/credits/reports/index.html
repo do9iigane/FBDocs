@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/credits/reports/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/credits/reports/">https://developers.facebook.com/docs/credits/reports/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Getting Started</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/build/" name="http://developers.facebook.com/docs/credits/build/">Credits Tutorial </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/callback/" name="http://developers.facebook.com/docs/credits/callback/">Credits Callback</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/credits/reports/" name="http://developers.facebook.com/docs/credits/reports/">Reports and Payouts</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/disputes/" name="http://developers.facebook.com/docs/credits/disputes/">Disputes &amp; Chargebacks</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Core APIs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/pay_dialog/" name="http://developers.facebook.com/docs/credits/pay_dialog/">Pay Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/orders/" name="http://developers.facebook.com/docs/credits/orders/">Order API</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/errorcodes/" name="http://developers.facebook.com/docs/credits/errorcodes/">Error Codes</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/paymethods/" name="http://developers.facebook.com/docs/credits/paymethods/">Payment methods</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/offers/" name="http://developers.facebook.com/docs/credits/offers/">Using Offers with Credits</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/terms/" name="http://developers.facebook.com/docs/credits/terms/">Credits Terms</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Reports and Payouts</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/credits/" name="https://developers.facebook.com/docs/credits/">Credits</a> › <a href="/docs/credits/reports/" name="https://developers.facebook.com/docs/credits/reports/">Reports and Payouts</a>
+</div>
+</div>
+</div>
+<p>This document provides details about Credits reports provided to developers, payout information as well as dispute and chargeback handling.</p>
+<h2>
+<span id="reporting">Reporting</span>
+</h2>
+<p>Daily digest and detailed reports as well as bi-monthly payout reports will be sent to each company at the email provided during signup from the address <b>Facebook Credits &lt;noreply@fb.com&gt;</b>. Be sure this email is whitelisted from any spam filters to avoid not receiving your reports. Each file contains no more than 100,000 lines. In case more than 100,000 lines of activities are transacted, multiple files will be provided.</p>
+<p>
+<b>Digest Report</b>
+</p>
+<p>The digest report contains a summary of each type of transaction which occurred in the live applications associated with the parent company.</p>
+<p>The subject of the email is in the following format with capitalized variables being unique:</p>
+<pre>
+COMPANY_NAME: Facebook Credits Daily Digest Report for DATE
+
+Example:
+My Sweet Company: Facebook Credits Daily Digest Report for 2011-03-02
+</pre>
+<p>The report is a tab separated values text file (.tsv) contained in an attachment. The name of the attachment is in the following format with capitalized variables being unique:</p>
+<pre>
+Digest_FBFINANCIALID_DATEOFREPORT.tsv
+
+Example:
+Digest_12345678910_2011-03-02.tsv
+</pre>
+<p>The .tsv attachment is delimited tab by &apos;\t&apos; and newline delimited by &apos;\n&apos;. The first line of the report contains the fields for which each value in a line of the report represent. The field titles and an example row are included below.</p>
+<pre>
+app_id  app_name    txn_type    txn_date    settle_date value   credits
+12345678    CreditsApp  S   2011-03-02  2011-03-02  0.0 20.0
+12345678    CreditsApp  S   2011-03-02  2011-03-02  0.1 139.0
+12345678    CreditsApp  R   2011-03-02  2011-03-02  0.1 10.0
+12345678    CreditsApp  D   2011-03-02  2011-03-02  0.1 5.0
+123456789   CreditsAppTwo   S   2011-03-02  2011-03-02  0.0 10.0
+123456789   CreditsAppTwo   S   2011-03-02  2011-03-02  0.1 269.0
+123456789   CreditsAppTwo   R   2011-03-02  2011-03-02  0.1 4.0
+</pre>
+<p>
+<b>Detail Report</b>
+</p>
+<p>The detail report contains all transactions which occurred in the live applications associated with the parent company.</p>
+<p>The subject of the email is in the following format with capitalized variables being unique:</p>
+<pre>
+COMPANY_NAME: Facebook Credits Daily Detail Report for DATE
+
+Example:
+My Sweet Company: Facebook Credits Daily Detail Report for 2011-03-02
+</pre>
+<p>The report is a tab separated values text file (.tsv) contained in a zipped attachment (.zip). The name of the attachment is in the following format with capitalized variables being unique:</p>
+<pre>
+Detail_FBFINANCIALID_DATEOFREPORT_CURRENTNUMEMAILOFTOTAL_TOTALNUMEMAILS.tsv.zip
+
+Example:
+Detail_12345678910_2011-03-02_001_001.tsv.zip
+</pre>
+<p>After the attachment is unzipped, the .tsv file is delimited tab by &apos;\t&apos; and newline delimited by &apos;\n&apos;. The first line of the report contains the fields for which each value in a line of the report represent. The field titles and an example row are included below.</p>
+<pre>
+app_id  txn_type    txn_id  order_id    txn_time    settle_date value   credits
+123456789   S   517433941473201975  9307560877689   2011-03-02 12:06:07 PST 2011-03-02  0.1 1.0
+</pre>
+<p>
+<b>Please note:</b> It is possible to have multiple lines in your report for an order with the same transaction ID and/or order ID. This is due to several possible reasons.</p>
+<p>One possibility is when a user has zero-value credits remaining in their wallet, but not enough to purchase an item. In this case, both zero-value and full-value credits must be used and the transaction could look as follows.</p>
+<pre>
+app_id  txn_type    txn_id  order_id    txn_time    settle_date value   credits
+123456789   S   517433941473201975  9307560877689   2011-03-02 12:06:07 PST 2011-03-02  0.1 1.0
+123456789   S   517433941473201975  9307560877689   2011-03-02 12:06:07 PST 2011-03-02  0.0 9.0
+</pre>
+<p>Another possible explanation for having multiple lines for an order is when the order is refunded. The following example shows what an order that was refunded one minute after the initial transaction should look like.</p>
+<pre>
+app_id  txn_type    txn_id  order_id    txn_time    settle_date value   credits
+123456789   S   517433941473201975  9307560877689   2011-03-02 12:06:07 PST 2011-03-02  0.1 1.0
+123456789   R   517433941473201988  9307560877689   2011-03-02 12:07:07 PST 2011-03-02  0.1 1.0
+</pre>
+<p>
+<b>Payout Summary</b>
+</p>
+<p>The payout summary will be sent on the 5th and 20th of every month. It will contain a zipped attachment will all order details during that payout period in the same format as the daily report. In addition to the detailed report you will also receive a summary of the transactions for each of your apps during that payout period.</p>
+<p>The summary email for that given payout period is formatted as follows:</p>
+<pre>
+app_id  app_name    txn_type    value   credits
+13020537    MyTestApp   S   0.0 156.0
+13020537    MyTestApp   S   0.1 729.0
+</pre>
+<p>
+<b>Possible transaction types:</b>
+</p>
+<table>
+<tr>
+<td>
+<b>txn_type</b>
+</td>
+<td>
+<b>Type of Transaction</b>
+</td>
+</tr>
+<tr>
+<td>S (Spend)</td>
+<td>Credits spent within application</td>
+</tr>
+<tr>
+<td>R (Refund)</td>
+<td>Credits refunded to user by FB or developers, netted from developer payout</td>
+</tr>
+<tr>
+<td>C (Chargeback)</td>
+<td>Credits refunded to user by FB or developers, netted from developer payout</td>
+</tr>
+<tr>
+<td>D (Chargeback)</td>
+<td>Chargeback after 90 days, not counted against net payout</td>
+</tr>
+<tr>
+<td>J (Out of Window Chargeback Reversal)</td>
+<td>The chargeback has been reversed, but out of the standard 90 day window and is still not counted against net payout. This is a reversal of a D type.</td>
+</tr>
+<tr>
+<td>K (Chargeback Reversal)</td>
+<td>Chargeback has been reversed, add order amount back to net developer payout</td>
+</tr>
+<tr>
+<td>L (Deferred payment initiated)</td>
+<td>Item purchased, user defers payment until later date</td>
+</tr>
+<tr>
+<td>P (Deferred payment repayment)</td>
+<td>Repayment completed, FB transfers credits to developer</td>
+</tr>
+<tr>
+<td>F (Deferred payment refund)</td>
+<td>Deferred payment refunded, user does not receive Credits</td>
+</tr>
+<tr>
+<td>Q (Repayment refund)</td>
+<td>Repayment refunded by FB or developer, netted from developer payout</td>
+</tr>
+</table>
+<hr />
+<h2>FAQs</h2>
+<h3>What is the process to ensure timely payout for an app that integrates Facebook Credits, as well as additional apps by the same company?</h3>
+<p>At the registration stage, you will be asked to fill out financial information associated with your app. If you then integrate Facebook Credits in an additional app under the same company, you can make the association when you register that additional app.</p>
+<p>Per the current Facebook Credits Terms, Facebook will issue payments to developers twice per month: one payment for activity between the 1st and the 15th of the month, and a second payment for activity between the 16th and the end of the month. Facebook will issue payments 21 days after the end of each bimonthly period.</p>
+<h3>
+<span id="payout_countries">Which countries can Facebook Credits currently pay out?</span>
+</h3>
+<p>Developers with bank accounts in the following countries can currently receive payouts for Facebook Credits.</p>
+<pre>
+<code>United States
+Canada
+United Kingdom
+Austria
+Belgium
+Czech Republic
+Denmark
+Finland
+France
+Germany
+Greece
+Hong Kong
+Hungary
+Ireland
+Italy
+Luxembourg
+Netherlands
+Poland
+Portugal
+Singapore
+Slovakia
+Spain
+Sweden
+</code>
+</pre>
+<p>In addition, developers with PayPal accounts in one of the countries listed below can also currently receive payouts for Facebook Credits:</p>
+<pre>
+<code>Argentina
+Australia
+Brazil
+China
+French Guiana
+Guadeloupe
+India
+Indonesia
+Israel
+Japan
+Malaysia
+Martinique
+Mexico
+New Zealand
+Norway
+Philippines
+Reunion
+South Korea
+Switzerland
+Taiwan
+Thailand
+Turkey
+</code>
+</pre>
+<h3>I am no longer under the publisher company that I originally worked with to onboard my app(s). How can I make sure that my monthly payouts are no longer sent to the previous publisher company, but a new company that I specify?</h3>
+<p>In order to transition your apps to a different company entity, please give us advanced notice, so that we can ensure a smooth transition. Submit a request through the Facebook Credits Developer Support Form. In addition, previous payments should be reconciled between you and your publisher, per the agreement that you have in place.</p>
+<h3>What fees does 30% revenue share cover?</h3>
+<p>In addition to providing a platform wide currency and alleviating developer concern over fraud and customer support issues, here are some specific fees 30% revenue share covers:</p>
+<ul>
+<li>Payment processing and related fees for all payment options including high cost payment methods such as mobile, local and international gift cards, etc</li>
+<li>Chargeback fees</li>
+<li>Integration costs as we add new payment methods globally</li>
+<li>Additional Facebook Credits that we give to users via bulk discount packages and special promotions</li>
+</ul>
+<h3>Does the 30% fee take the above taxes into consideration?</h3>
+<p>The 30% Facebook service fee does not include any local taxes applicable to Facebook Credits.</p>
+<h3>What tax laws apply to virtual sales made through Facebook Credits?</h3>
+<p>Tax treatment on sale of virtual goods varies significantly from one tax jurisdiction to the other, depending on the country in which a user makes a purchase with Facebook Credits in your app.</p>
+<p>For example in EU markets, in general, sale of virtual and digital goods is subjected to EU VAT. Developers are obligated to collect and remit VAT on the sale of virtual and digital content to users who reside in EU countries, regardless of where developers are locationally based.</p>
+<h3>How does Facebook equip developers to comply with the above tax laws?</h3>
+<p>Developers are responsible for their tax compliance obligations, and it&apos;s up to you to determine how to report location-specific tax payments. We will provide necessary information about users: for example, by calling the Graph API getOrder method, you can get the country of the buyer for a transaction.</p>
+<p>Disclaimer: Facebook is not able to advise you on tax related matters; instead, we suggest that you consult and confirm with your company&apos;s accountant.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/credits/reports/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1331759785" title="2012年3月14日 14:16">約3ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

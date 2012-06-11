@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/plugins/recommendations/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/plugins/recommendations/">https://developers.facebook.com/docs/reference/plugins/recommendations/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a class="selected" href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/activity/" name="http://developers.facebook.com/docs/reference/plugins/activity/">Activity Feed</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/comments/" name="http://developers.facebook.com/docs/reference/plugins/comments/">Comments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/facepile/" name="http://developers.facebook.com/docs/reference/plugins/facepile/">Facepile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like-box/" name="http://developers.facebook.com/docs/reference/plugins/like-box/">Like Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like/" name="http://developers.facebook.com/docs/reference/plugins/like/">Like Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/live-stream/" name="http://developers.facebook.com/docs/reference/plugins/live-stream/">Live Stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/login/" name="http://developers.facebook.com/docs/reference/plugins/login/">Login Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendations/" name="http://developers.facebook.com/docs/reference/plugins/recommendations/">Recommendations Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/registration/" name="http://developers.facebook.com/docs/reference/plugins/registration/">Registration</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/send/" name="http://developers.facebook.com/docs/reference/plugins/send/">Send Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/subscribe/" name="http://developers.facebook.com/docs/reference/plugins/subscribe/">Subscribe Button</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Beta Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/" name="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/">Recommendations Bar</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Recommendations Box</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">Social Plugins</a> › <a href="/docs/reference/plugins/recommendations/" name="https://developers.facebook.com/docs/reference/plugins/recommendations/">Recommendations Box</a>
+</div>
+</div>
+</div>
+<p>The Recommendations Box shows personalized recommendations to your users. Since the content is hosted by Facebook, the plugin can display personalized recommendations whether or not the user has logged into your site. To generate the recommendations, the plugin considers all the social interactions with URLs from your site. For a logged in Facebook user, the plugin will give preference to and highlight objects her friends have interacted with.</p>
+<p>You must specify a domain for which to show recommendations. The domain is matched exactly, so a plugin with site=facebook.com would not include activity from developers.facebook.com or www.facebook.com. You cannot currently aggregate across multiple domains.</p>
+<p>The Recommendations Box can be configured in the following ways:</p>
+<ul>
+<li>App ID</li>
+<li>One or more action types</li>
+<li>Domain </li>
+</ul>
+<p>
+<b>App ID</b>
+<br /> If you specify an App ID for the Recommendations Box, we will display all actions (global and custom) specified by the associated app ID.</p>
+<pre>
+&lt;fb:recommendations 
+  site=&quot;jerrycain.com&quot;
+  app_id=&quot;118280394918580&quot;&gt;
+&lt;/fb:recommendations&gt;
+</pre>
+<p>
+<b>One or more action types</b>
+<br /> To specify one or more action types to display in the Recommendations Box, you can specify a comma separated list of action types. The list of action types can include both global and custom actions.</p>
+<pre>
+&lt;fb:recommendations 
+  site=&quot;jerrycain.com&quot;
+  action=&quot;critiqueapp:despise,critiqueapp:review,critiqueapp:grade&quot;&gt;
+&lt;/fb:recommendations&gt;
+</pre>
+<p>
+<b>Domain</b>
+<br /> By specifying a domain to show activity for, we will display all global actions for the specified domain: like, read, watch, play, listen. The domain is matched exactly, so a plugin with site=facebook.com would not include activity from developers.facebook.com or www.facebook.com. You cannot currently aggregate across multiple domains.</p>
+<pre>
+&lt;fb:recommendations 
+  site=&quot;jerrycain.com&quot;&gt;
+&lt;/fb:recommendations&gt;
+</pre>
+<p>The plugin is available either via a simple iframe you can drop into your page, or if you are using the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>, you can use the <code>&lt;fb:recommendations&gt;</code> XFBML tag.</p>
+<div class="clearfix">
+<div class="plugin_form" id="ud300s_2">
+<dl>
+<dt>
+<label for="param_site">Domain</label>
+<a data-hover="tooltip" href="#" title="The domain for which to show recommendations. Defaults to the domain the plugin is on." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_site" name="site" type="text" />
+</dd>
+<dt>
+<label for="param_app_id">App ID</label>
+<a data-hover="tooltip" href="#" title="Associated App ID" name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_app_id" name="app_id" size="7" type="text" />
+</dd>
+<dt>
+<label for="param_action">Action</label>
+<a data-hover="tooltip" href="#" title="Comma separated list of action of action types" name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_action" name="action" type="text" />
+</dd>
+<dt>
+<label for="param_width">Width</label>
+<a data-hover="tooltip" href="#" title="The width of the plugin in pixels." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_width" name="width" size="7" type="text" value="300" />
+</dd>
+<dt>
+<label for="param_height">Height</label>
+<a data-hover="tooltip" href="#" title="The height of the plugin in pixels." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_height" name="height" size="7" type="text" value="300" />
+</dd>
+<dt>Header <a data-hover="tooltip" href="#" title="Show the Facebook header on the plugin." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input checked="1" class="inputcheckbox" id="param_header" name="header" type="checkbox" value="true" />
+<label for="param_header">Show header</label>
+</dd>
+<dt>
+<label for="param_colorscheme">Color Scheme</label>
+<a data-hover="tooltip" href="#" title="The color scheme of the plugin." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="colorscheme" id="param_colorscheme">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">light</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="light">
+<a aria-checked="true" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">light</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="dark">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">dark</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="colorscheme">
+<option value="">
+</option>
+<option selected="1" value="light">light</option>
+<option value="dark">dark</option>
+</select>
+</div>
+</dd>
+<dt>
+<label for="param_linktarget">Link Target</label>
+<a data-hover="tooltip" href="#" title="The context in which content links are opened" name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="linktarget" id="param_linktarget">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">_blank</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="_blank">
+<a aria-checked="true" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">_blank</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="_top">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">_top</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="_parent">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">_parent</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="linktarget">
+<option value="">
+</option>
+<option selected="1" value="_blank">_blank</option>
+<option value="_top">_top</option>
+<option value="_parent">_parent</option>
+</select>
+</div>
+</dd>
+<dt>
+<label for="param_border_color">Border Color</label>
+<a data-hover="tooltip" href="#" title="The border color of the plugin." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_border_color" name="border_color" size="7" type="text" />
+</dd>
+<dt>
+<label for="param_font">Font</label>
+<a data-hover="tooltip" href="#" title="The font of the plugin." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="font" id="param_font">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton uiButtonNoText" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">
+</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="arial">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">arial</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="lucida grande">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">lucida grande</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="segoe ui">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">segoe ui</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="tahoma">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">tahoma</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="trebuchet ms">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">trebuchet ms</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="verdana">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">verdana</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="font">
+<option value="">
+</option>
+<option value="arial">arial</option>
+<option value="lucida grande">lucida grande</option>
+<option value="segoe ui">segoe ui</option>
+<option value="tahoma">tahoma</option>
+<option value="trebuchet ms">trebuchet ms</option>
+<option value="verdana">verdana</option>
+</select>
+</div>
+</dd>
+</dl>
+<div class="getCode">
+<a class="uiButton" href="/docs/reference/plugins/recommendations/code/?revision=160140780764488" id="ud300s_3" rel="dialog" role="button" name="https://developers.facebook.com/docs/reference/plugins/recommendations/code/?revision=160140780764488">
+<span class="uiButtonText">Get Code</span>
+</a>
+</div>
+</div>
+<div class="plugin_example" id="ud300s_1">
+</div>
+</div>
+<h2>Attributes</h2>
+<ul>
+<li>
+<code>site</code> - the domain to show recommendations for. The XFBML version defaults to the current domain. </li>
+<li>
+<code>action</code> - a comma separated list of actions to show recommendations for. </li>
+<li>
+<code>app_id</code> - will display recommendations for all types of actions, custom and global, associated with this app_id. </li>
+<li>
+<code>width</code> - the width of the plugin in pixels. Default width: 300px. </li>
+<li>
+<code>height</code> - the height of the plugin in pixels. Default height: 300px. </li>
+<li>
+<code>header</code> - specifies whether to show the Facebook header. </li>
+<li>
+<code>colorscheme</code> - the color scheme for the plugin. Options: &apos;light&apos;, &apos;dark&apos; </li>
+<li>
+<code>font</code> - the font to display in the plugin. Options: &apos;arial&apos;, &apos;lucida grande&apos;, &apos;segoe ui&apos;, &apos;tahoma&apos;, &apos;trebuchet ms&apos;, &apos;verdana&apos; </li>
+<li>
+<code>border_color</code> - the border color of the plugin. </li>
+<li>
+<code>linktarget</code> - This specifies the context in which content links are opened. By default all links within the plugin will open a new window. If you want the content links to open in the same window, you can set this parameter to <code>_top</code> or <code>_parent</code>. Links to Facebook URLs will always open in a new window. </li>
+<li>
+<code>ref</code> - a label for tracking referrals; must be less than 50 characters and can contain alphanumeric characters and some punctuation (currently +/=-.:_). Specifying a value for the ref attribute adds the &apos;fb_ref&apos; parameter to the any links back to your site which are clicked from within the plugin. Using different values for the ref parameter for different positions and configurations of this plugin within your pages allows you to track which instances are performing the best. </li>
+<li>
+<code>max_age</code> - a limit on recommendation and creation time of articles that are surfaced in the plugins, the default is 0 (we don’t take age into account). Otherwise the valid values are 1-180, which specifies the number of days. </li>
+</ul>
+<h2>What is the best way to know which plugin on my site generated the traffic?</h2>
+<p>Add the &apos;ref&apos; parameter to the plugin (see &quot;Attributes&quot; above).</p>
+<p>Examples:</p>
+<pre>
+<code>&lt;fb:recommendations ref=&quot;homepage&quot;&gt;&lt;/fb:recommendations&gt;
+&lt;iframe src=&quot;...&amp;ref=homepage&quot;&gt;&lt;/iframe&gt;
+</code>
+</pre>
+<p>When a user clicks a link on the plugin, we will pass back the ref value as a fb_ref parameter in the referrer URL. Example:</p>
+<pre>
+<code>http://www.facebook.com/l.php?fb_ref=homepage
+</code>
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/plugins/recommendations/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1327988282" title="2012年1月30日 21:38">約4ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

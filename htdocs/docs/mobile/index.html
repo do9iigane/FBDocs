@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/mobile/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/mobile/">https://developers.facebook.com/docs/mobile/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li class="active withsubsections">
+<a class="selected" href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/guides/web" name="https://developers.facebook.com/docs/guides/web">Websites</a>
+</li>
+<li>
+<a href="/docs/guides/canvas" name="https://developers.facebook.com/docs/guides/canvas">Apps on Facebook</a>
+</li>
+<li>
+<a class="selected" href="/docs/guides/mobile" name="https://developers.facebook.com/docs/guides/mobile">Mobile</a>
+</li>
+<li>
+<a href="/docs/appcenter/" name="https://developers.facebook.com/docs/appcenter/">App Center</a>
+</li>
+<li>
+<a href="/docs/bestpractices/" name="https://developers.facebook.com/docs/bestpractices/">Best Practices</a>
+</li>
+<li>
+<a href="/docs/samples" name="https://developers.facebook.com/docs/samples">Samples &amp; How-Tos</a>
+</li>
+<li>
+<a href="/videos" name="https://developers.facebook.com/videos">Videos</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Getting Started</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/mobile/support/" name="http://developers.facebook.com/docs/mobile/support/">Mobile Distribution</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Mobile Web</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/guides/mobile/web/" name="http://developers.facebook.com/docs/guides/mobile/web/">Mobile Web Tutorial</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>iOS</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/mobile/ios/build/" name="http://developers.facebook.com/docs/mobile/ios/build/">iOS Tutorial</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/guides/mobile/ios_sdk/" name="http://developers.facebook.com/docs/guides/mobile/ios_sdk/">iOS SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Android</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/mobile/android/build/" name="http://developers.facebook.com/docs/mobile/android/build/">Android Tutorial</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/guides/mobile/android_sdk/" name="http://developers.facebook.com/docs/guides/mobile/android_sdk/">Android SDK</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/guides/mobile/android_hackbook/" name="http://developers.facebook.com/docs/guides/mobile/android_hackbook/">Hackbook for Android</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/mobile/android/deep_linking/" name="http://developers.facebook.com/docs/mobile/android/deep_linking/">Native App Linking for Android</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Mobile</h1>
+<div class="breadcrumbs">
+<a href="/docs/" name="https://developers.facebook.com/docs/">Getting Started</a> › <a href="/docs/guides/mobile/" name="https://developers.facebook.com/docs/guides/mobile/">Mobile</a>
+</div>
+</div>
+</div>
+<div class="titleblock">
+<h3>Over 425 million users access Facebook from a mobile device every month. Facebook Platform lets you bring these users and their friends to your mobile apps, creating a more engaging and personalized experience for your users.</h3>
+</div>
+<h2>Seamless Social Experiences</h2>
+<p>Facebook Platform enables seamless social experiences across a large variety of devices.</p>
+<ul>
+<li>
+<strong>Distribution.</strong> Users can share with their friends using Requests, News Feed, and Open Graph.</li>
+<li>
+<strong>Engagement.</strong> Bring users back to your app through a bookmark or search. Keep them there by letting them connect with their friends.</li>
+<li>
+<strong>Cross-platform.</strong> The same Javascript SDK works across web and mobile, so it&apos;s easy to build one experience that works across multiple devices.</li>
+</ul>
+<p>An overview of Platform on Mobile is below. If you&apos;d like to skip it and go straight to building, <a href="#mobileweb" name="https://developers.facebook.com/docs/#mobileweb">check out the tutorials for iOS, Android, and web</a>.</p>
+<hr />
+<h2 id="login">Login</h2>
+<p>Authenticated referrals is a new authentication mode for Facebook applications that ensures all referral traffic from Facebook to your application is already connected with Facebook.</p>
+<p>This means that visitors arrive on your app already &quot;logged in&quot; and with whatever data permissions (email, likes and interests, etc.) you requested in the Required Permissions section. You can use this information to provide a personalized experience for Facebook visitors the moment they land on your app.</p>
+<p>The flow below shows what happens when a user receives a Request (more on that below) and taps on it.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/mobile_overview_login.png" />
+</div>
+<div style="position: relative; width: 100%; margin-bottom: 15px; clear: both;">
+<div style="margin: 18px 15px 0px 0px; float: left; clear: none; font-weight: bold; color: #9c9c9c;">See it in action:</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/android" name="http://developers.facebook.com/docs/mobile/screenshots/android">
+<strong>Android Phones</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/android" name="http://developers.facebook.com/docs/mobile/screenshots/android">
+<strong>Android Tablets</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/ios" name="http://developers.facebook.com/docs/mobile/screenshots/ios">
+<strong>iPhone and iPod</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/ios" name="http://developers.facebook.com/docs/mobile/screenshots/ios">
+<strong>iPad</strong>
+</a>
+</div>
+</div>
+<p>
+<br />
+<br />
+</p>
+<hr />
+<h2 id="channels">Social Channels</h2>
+<p>One benefit of using Facebook Platform is the potential reach you have when Facebook users share content from your app or website with their friends. Because of the strength of a friend’s endorsement, communication through Facebook Platform can help high-quality products grow tremendously. When users tap on links, they are deep-linked directly into your app.</p>
+<p>All of the screenshots below illustrate a Mobile Web App integration running on iPhone. To understand the availability of each channel across web apps, iOS and Android, view the <a href="/docs/mobile/support/" name="https://developers.facebook.com/docs/mobile/support/">mobile distribution support</a> doc.</p>
+<h3 id="requests">Requests</h3>
+<p>Requests are a great way to enable users to invite specific friends to play a turn in a game, complete a task, or just generally use your app.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/mobile_overview_request.png" />
+</div>
+<div style="position: relative; width: 100%; margin-bottom: 15px; clear: both;">
+<div style="margin: 18px 15px 0px 0px; float: left; clear: none; font-weight: bold; color: #9c9c9c;">See it in action:</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/android" name="http://developers.facebook.com/docs/mobile/screenshots/android">
+<strong>Android Phones</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/android" name="http://developers.facebook.com/docs/mobile/screenshots/android">
+<strong>Android Tablets</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/ios" name="http://developers.facebook.com/docs/mobile/screenshots/ios">
+<strong>iPhone and iPod</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/ios" name="http://developers.facebook.com/docs/mobile/screenshots/ios">
+<strong>iPad</strong>
+</a>
+</div>
+</div>
+<p>
+<br />
+<br />
+</p>
+<h3>Timeline and Open Graph</h3>
+<p>After a user adds your app to their Timeline, app specific actions are shared on Facebook via the Open Graph. As your app becomes an important part of how users express themselves, these actions are more prominently displayed throughout the Facebook Timeline and News Feed.</p>
+<h3 id="newsfeed">News Feed</h3>
+<p>When users log into Facebook, the News Feed is the first thing they see, making it core to the Facebook experience. The screenshots below show you how a user can post to their own wall, which will appear in their friends&apos; News Feeds.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/mobile_overview_news_feed.png" />
+</div>
+<div style="position: relative; width: 100%; margin-bottom: 15px; clear: both;">
+<div style="margin: 18px 15px 0px 0px; float: left; clear: none; font-weight: bold; color: #9c9c9c;">See it in action:</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/android" name="http://developers.facebook.com/docs/mobile/screenshots/android">
+<strong>Android Phones</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/android" name="http://developers.facebook.com/docs/mobile/screenshots/android">
+<strong>Android Tablets</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/ios" name="http://developers.facebook.com/docs/mobile/screenshots/ios">
+<strong>iPhone and iPod</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/ios" name="http://developers.facebook.com/docs/mobile/screenshots/ios">
+<strong>iPad</strong>
+</a>
+</div>
+</div>
+<p>
+<br />
+<br />
+</p>
+<h3 id="bookmarks">Bookmarks</h3>
+<p>Bookmarks are automatically displayed to the user within Facebook once they login to your app. On our mobile web site, users can now navigate to web apps via bookmarks. Similarly, on our iPhone and iPad apps, users are now able to navigate to native iOS apps. This list of bookmarks is in sync across desktop and mobile so the apps you use most frequently are there when you want them.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/mwa_app_bookmarks.png" />
+</div>
+<div style="position: relative; width: 100%; margin-bottom: 15px; clear: both;">
+<div style="margin: 18px 15px 0px 0px; float: left; clear: none; font-weight: bold; color: #9c9c9c;">See it in action:</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/android" name="http://developers.facebook.com/docs/mobile/screenshots/android">
+<strong>Android Phones</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/android" name="http://developers.facebook.com/docs/mobile/screenshots/android">
+<strong>Android Tablets</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/ios" name="http://developers.facebook.com/docs/mobile/screenshots/ios">
+<strong>iPhone and iPod</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/ios" name="http://developers.facebook.com/docs/mobile/screenshots/ios">
+<strong>iPad</strong>
+</a>
+</div>
+</div>
+<p>
+<br />
+<br />
+</p>
+<h3 id="search">Search</h3>
+<p>User can also search for your app within Facebook, whether they have already logged into your app in the past or not.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/mwa_app_search.png" />
+</div>
+<div style="position: relative; width: 100%; margin-bottom: 15px; clear: both;">
+<div style="margin: 18px 15px 0px 0px; float: left; clear: none; font-weight: bold; color: #9c9c9c;">See it in action:</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/android" name="http://developers.facebook.com/docs/mobile/screenshots/android">
+<strong>Android Phones</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/android" name="http://developers.facebook.com/docs/mobile/screenshots/android">
+<strong>Android Tablets</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/ios" name="http://developers.facebook.com/docs/mobile/screenshots/ios">
+<strong>iPhone and iPod</strong>
+</a>
+</div>
+<div style="background-color: #f5f5f5; border: 1px solid #d3d3d3; margin: 2px; padding-top: 15px; height: 30px; text-align: center; width: 128px; float: left; clear: none;">
+<a href="http://developers.facebook.com/docs/mobile/screenshots/ios" name="http://developers.facebook.com/docs/mobile/screenshots/ios">
+<strong>iPad</strong>
+</a>
+</div>
+</div>
+<p>
+<br />
+<br />
+</p>
+<h3>Social Plugins</h3>
+<p>
+<a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">Social plugins</a> let you see what your friends have liked, commented on or shared on sites across the web. The Like button allows your users to easily share interesting content from your app back to Facebook. The <a href="/docs/reference/plugins/comments/" name="https://developers.facebook.com/docs/reference/plugins/comments/">Comments plugin</a> allows users to easily comment on your content. Comments and Likes appear on the user&apos;s Timeline and in their friends&apos; News Feeds which drives more traffic to your site. Currently, the <a href="/docs/reference/plugins/like/" name="https://developers.facebook.com/docs/reference/plugins/like/">Like button</a> and the <a href="/docs/reference/plugins/comments/" name="https://developers.facebook.com/docs/reference/plugins/comments/">Comments plugin</a> are the only <a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">social plugins</a> available for use in mobile web apps.</p>
+<h3>Email</h3>
+<p>When the user authenticates with your app, you can ask them for the <code>email</code> <a href="/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">permission</a>, which grants you access to their email address. You can use this to send them information like important updates to your app or let them know about actions that their friends have been taking in your app.</p>
+<hr />
+<h2>Payments</h2>
+<p>Facebook Credits allows you to accept payments for digital goods or services within your app.</p>
+<p>See our <a href="/docs/credits#mobile_payments" name="https://developers.facebook.com/docs/credits#mobile_payments">Credits API doc</a> for information on how to integrate Credits into your mobile web app. Credits is not supported within iOS native apps or web apps running within the Facebook iOS app.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/mwa_overview_credits.png" />
+</div>
+<p>If your app does not accept or require payments of any form (e.g., a social new reader), then the simplest way to reach the most number of users is to write a mobile web app. We link to these apps from m.facebook.com, Facebook for iPhone, Facebook for iPad, and Facebook for Android.</p>
+<p>If your app requires any form of payment (e.g., for a virtual good), keep in mind accepting payments is different on iOS.</p>
+<ul>
+<li>On the mobile web (including mobile web apps linked from Android), you must use <a href="https://developers.facebook.com/docs/credits/" name="https://developers.facebook.com/docs/credits/">Facebook Credits</a>.</li>
+<li>On iOS, you must build a native app and use iTunes payments.</li>
+</ul>
+<p>On Mobile Web, you can quickly setup Facebook Payments by following the steps found in our <a href="https://developers.facebook.com/docs/credits/#mobile_payments" name="https://developers.facebook.com/docs/credits/#mobile_payments">documentation</a>.</p>
+<p>On iOS, you can quickly build a native app from your web app by using a tool like <a href="http://phonegap.com/" name="http://phonegap.com/">PhoneGap</a>.</p>
+<hr />
+<div style="float: right; clear: none; margin: 0px 0px 0px 25px; padding: 0px; width: 432px; height: 299px;">
+<img src="https://developers.facebook.com/attachment/mwa_device_display.png" />
+</div>
+<h2 id="mobileweb">
+<a href="/docs/guides/mobile/web/" name="https://developers.facebook.com/docs/guides/mobile/web/">Building Mobile Web Apps</a>
+</h2>
+<p>Get maximum distribution by integrating social into your mobile web app across all iOS and Android phones and tablets. It will even run in the Facebook iOS native app.</p>
+<p>You can also ship mobile web apps in native app stores by using the <a href="https://github.com/davejohnson/phonegap-plugin-facebook-connect" name="https://github.com/davejohnson/phonegap-plugin-facebook-connect">PhoneGap Facebook plugin</a>.</p>
+<p>Check out some of the <a href="/showcase/mobile" name="https://developers.facebook.com/showcase/mobile">great mobile experiences</a> that developers have built using Facebook Platform.</p>
+<p>
+<strong>
+<a href="/docs/guides/mobile/web/" name="https://developers.facebook.com/docs/guides/mobile/web/">Click here to get started</a>
+</strong>.</p>
+<p>
+<br />
+</p>
+<h2>
+<a href="/docs/guides/mobile/ios/" name="https://developers.facebook.com/docs/guides/mobile/ios/">Building iOS Native Apps</a>
+</h2>
+<p>If you already have a native iOS app (iPad, iPhone, iPod), then Facebook Platform enables you to integrate with Facebook login and APIs to create personalized experiences for your users and drive engagement and distribution for your app. You can also use Single Sign-on to let users sign into your app using their Facebook identity. They&apos;re signed in immediately, without having to enter their username and password, if they are already signed into the Facebook iOS app.</p>
+<p>
+<strong>
+<a href="/docs/guides/mobile/ios/" name="https://developers.facebook.com/docs/guides/mobile/ios/">Click here to get started.</a>
+</strong>
+</p>
+<h2>
+<a href="/docs/guides/mobile/android/" name="https://developers.facebook.com/docs/guides/mobile/android/">Building Android Native Apps</a>
+</h2>
+<p>If you already have a native Android app (phone or tablet), then Facebook Platform enables you to integrate with Facebook login and APIs to create personalized experiences for your users and drive engagement and distribution for your app. You can also use Single Sign-on to let users sign into your app using their Facebook identity. They&apos;re signed in immediately, without having to enter their username and password, if they are already signed into the Facebook Android app.</p>
+<p>
+<strong>
+<a href="/docs/guides/mobile/android/" name="https://developers.facebook.com/docs/guides/mobile/android/">Click here to get started.</a>
+</strong>
+</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/guides/mobile/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1332744700" title="2012年3月25日 23:51">約3ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

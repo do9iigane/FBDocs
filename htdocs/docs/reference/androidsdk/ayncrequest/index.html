@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/androidsdk/ayncrequest/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/androidsdk/ayncrequest/">https://developers.facebook.com/docs/reference/androidsdk/ayncrequest/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</li>
+<li>
+<a href="/docs/reference/php" name="https://developers.facebook.com/docs/reference/php">PHP SDK</a>
+</li>
+<li>
+<a href="/docs/reference/iossdk" name="https://developers.facebook.com/docs/reference/iossdk">iOS SDK</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/androidsdk" name="https://developers.facebook.com/docs/reference/androidsdk">Android SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/request/" name="http://developers.facebook.com/docs/reference/androidsdk/request/">API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/" name="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/">Async API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/authentication/" name="http://developers.facebook.com/docs/reference/androidsdk/authentication/">Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialog/" name="http://developers.facebook.com/docs/reference/androidsdk/dialog/">Dialogs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/helper/" name="http://developers.facebook.com/docs/reference/androidsdk/helper/">Helpers</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Interfaces</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/" name="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/">DialogListener</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/" name="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/">RequestListener</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Errors</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/" name="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/">DialogError</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/" name="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/">FacebookError</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Async API Requests</h1>
+<div class="breadcrumbs">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/androidsdk/" name="https://developers.facebook.com/docs/reference/androidsdk/">Android SDK</a> › <a href="/docs/reference/androidsdk/ayncrequest/" name="https://developers.facebook.com/docs/reference/androidsdk/ayncrequest/">Async API Requests</a>
+</div>
+</div>
+</div>
+<p>The Asynchronous API request methods which returns immediately without blocking the calling thread. These are defined in <a href="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/AsyncFacebookRunner.java" name="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/AsyncFacebookRunner.java">AsyncFacebookRunner.java</a>. This is necessary when accessing the API in the UI thread, for instance. The request response is returned to the caller via the <a href="/docs/reference/androidsdk/requestlistener/" name="https://developers.facebook.com/docs/reference/androidsdk/requestlistener/">RequestListener interface</a>, which the developer must implement.</p>
+<p>This sample implementation simply spawns a new thread for each request, and makes the API call immediately. This may work in many applications, but more sophisticated users may re-implement this behavior using a thread pool, a network thread, a request queue, or other mechanism. Advanced functionality could be built, such as rate-limiting of requests, as per a specific application&apos;s needs.</p>
+<p>You implement these methods to make asynchronous calls to do the following:</p>
+<ul>
+<li>
+<p>Make a server request using the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a>.</p>
+</li>
+<li>
+<p>Make a server request using <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>.</p>
+</li>
+<li>
+<p>Make a server request using the <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>.</p>
+</li>
+</ul>
+<hr />
+<h2>Instance Methods:</h2>
+<hr />
+<h2>AsyncFacebookRunner(Facebook facebook):</h2>
+<p>Constructor for the AsyncFacebookRunner object.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>facebook</code> - Facebook object created via <code>Facebook(String appId)</code> method.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None</p>
+<hr />
+<h2>Async Request Methods:</h2>
+<hr />
+<h2>void request(String graphPath, RequestListener listener):</h2>
+<p>Make a request to the Facebook <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> without any parameters.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>graphPath</code> - Path to resource in the Facebook graph, e.g., to fetch data about the currently logged authenticated user, provide &quot;me&quot;, which will fetch https://graph.facebook.com/me</p>
+<p>
+<code>listener</code> - Callback interface to notify the application when the request has completed.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None, the callback interface will be notified when the request has completed.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method is asynchronous and the callback will be invoked in a background thread; operations that affect the UI will need to be posted to the UI thread or an appropriate handler.</p>
+<hr />
+<h2>void request(String graphPath, RequestListener listener, final Object state):</h2>
+<p>Make a request to the Facebook <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> without any parameters.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>graphPath</code> - Path to resource in the Facebook graph, e.g., to fetch data about the currently logged authenticated user, provide &quot;me&quot;, which will fetch https://graph.facebook.com/me</p>
+<p>
+<code>listener</code> - Callback interface to notify the application when the request has completed.</p>
+<p>
+<code>state</code> - An arbitrary object used to identify the request when it returns to the callback. This has no effect on the request itself.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None, the callback interface will be notified when the request has completed.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method is asynchronous and the callback will be invoked in a background thread; operations that affect the UI will need to be posted to the UI thread or an appropriate handler.</p>
+<hr />
+<h2>void request(String graphPath, Bundle parameters, RequestListener listener):</h2>
+<p>Make a request to the Facebook Graph API with the given string parameters using an HTTP GET (default method).</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>graphPath</code> - Path to resource in the Facebook graph, e.g., to fetch data about the currently logged authenticated user, provide &quot;me&quot;, which will fetch https://graph.facebook.com/me</p>
+<p>
+<code>parameters</code> - key-value string parameters, e.g. the path &quot;search&quot; with parameters &quot;q&quot; : &quot;facebook&quot; would produce a query for the following graph resource https://graph.facebook.com/search?q=facebook. Example:</p>
+<pre>
+     Bundle parameters = new Bundle();
+     parameters.putString(&quot;method&quot;, &quot;auth.expireSession&quot;, new Listener());
+     String response = request(parameters);
+</pre>
+<p>
+<code>listener</code> - Callback interface to notify the application when the request has completed.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None, the callback interface will be notified when the request has completed.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method is asynchronous and the callback will be invoked in a background thread; operations that affect the UI will need to be posted to the UI thread or an appropriate handler.</p>
+<hr />
+<h2>void request(String graphPath, Bundle parameters, RequestListener listener, final Object state):</h2>
+<p>Make a request to the Facebook Graph API with the given string parameters using an HTTP GET (default method).</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>graphPath</code> - Path to resource in the Facebook graph, e.g., to fetch data about the currently logged authenticated user, provide &quot;me&quot;, which will fetch https://graph.facebook.com/me</p>
+<p>
+<code>parameters</code> - key-value string parameters, e.g. the path &quot;search&quot; with parameters &quot;q&quot; : &quot;facebook&quot; would produce a query for the following graph resource https://graph.facebook.com/search?q=facebook. Example:</p>
+<pre>
+     Bundle parameters = new Bundle();
+     parameters.putString(&quot;method&quot;, &quot;auth.expireSession&quot;, new Listener());
+     String response = request(parameters);
+</pre>
+<p>
+<code>listener</code> - Callback interface to notify the application when the request has completed.</p>
+<p>
+<code>state</code> - An arbitrary object used to identify the request when it returns to the callback. This has no effect on the request itself.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None, the callback interface will be notified when the request has completed.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method is asynchronous and the callback will be invoked in a background thread; operations that affect the UI will need to be posted to the UI thread or an appropriate handler.</p>
+<hr />
+<h2>void request(String graphPath, Bundle parameters, final String httpMethod, RequestListener listener, final Object state):</h2>
+<p>Make a request to the Facebook <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> with the given HTTP method and string parameters</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>graphPath</code> - Path to resource in the Facebook graph, e.g., to fetch data about the currently logged authenticated user, provide &quot;me&quot;, which will fetch https://graph.facebook.com/me</p>
+<p>
+<code>parameters</code> - key-value string parameters, e.g. the path &quot;search&quot; with parameters &quot;q&quot; : &quot;facebook&quot; would produce a query for the following graph resource https://graph.facebook.com/search?q=facebook. Example:</p>
+<pre>
+     Bundle parameters = new Bundle();
+     parameters.putString(&quot;method&quot;, &quot;auth.expireSession&quot;, new Listener());
+     String response = request(parameters);
+</pre>
+<p>
+<code>httpMethod</code> - http verb, e.g. &quot;POST&quot;, &quot;DELETE&quot;</p>
+<p>
+<code>listener</code> - Callback interface to notify the application when the request has completed.</p>
+<p>
+<code>state</code> - An arbitrary object used to identify the request when it returns to the callback. This has no effect on the request itself.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None, the callback interface will be notified when the request has completed.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method is asynchronous and the callback will be invoked in a background thread; operations that affect the UI will need to be posted to the UI thread or an appropriate handler.</p>
+<hr />
+<h2>public void request(Bundle parameters, RequestListener listener):</h2>
+<p>Make a request to Facebook&apos;s old <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">REST API</a> with the given parameters. One of the parameter keys must be &quot;method&quot; and its value should be a valid REST server API method.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>parameters</code> - key-value string parameters. One of the parameters must be &quot;method&quot;. Example:</p>
+<pre>
+     Bundle parameters = new Bundle();
+     parameters.putString(&quot;method&quot;, &quot;auth.expireSession&quot;, new Listener());
+     String response = request(parameters);
+</pre>
+<p>
+<code>listener</code> - Callback interface to notify the application when the request has completed.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None, the callback interface will be notified when the request has completed.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method is asynchronous and the callback will be invoked in a background thread; operations that affect the UI will need to be posted to the UI thread or an appropriate handler.</p>
+<hr />
+<h2>public void request(Bundle parameters, RequestListener listener, final Object state):</h2>
+<p>Make a request to Facebook&apos;s old <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">REST API</a> with the given parameters. One of the parameter keys must be &quot;method&quot; and its value should be a valid REST server API method.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>parameters</code> - key-value string parameters. One of the parameters must be &quot;method&quot;. Example:</p>
+<pre>
+     Bundle parameters = new Bundle();
+     parameters.putString(&quot;method&quot;, &quot;auth.expireSession&quot;, new Listener());
+     String response = request(parameters);
+</pre>
+<p>
+<code>listener</code> - Callback interface to notify the application when the request has completed.</p>
+<p>
+<code>state</code> - An arbitrary object used to identify the request when it returns to the callback. This has no effect on the request itself.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None, the callback interface will be notified when the request has completed.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method is asynchronous and the callback will be invoked in a background thread; operations that affect the UI will need to be posted to the UI thread or an appropriate handler.</p>
+<hr />
+<h2>Async Logout Methods:</h2>
+<hr />
+<h2>void logout(final Context context, final RequestListener listener):</h2>
+<p>Invalidate the current user session by removing the access token in memory, clearing the browser cookies, and calling <a href="/docs/reference/rest/auth.expireSession/" name="https://developers.facebook.com/docs/reference/rest/auth.expireSession/">auth.expireSession</a> through the API. The application will be notified when logout is complete via the <a href="/docs/reference/androidsdk/requestlistener/" name="https://developers.facebook.com/docs/reference/androidsdk/requestlistener/">listener interface</a>.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>context</code> - The Android context in which the logout should be called: it should be the same context in which the login occurred in order to clear any stored cookies</p>
+<p>
+<code>listener</code> - Callback interface to notify the application when the request has completed.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None, the callback interface will be notified when the request has completed.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method is asynchronous and the callback will be invoked in a background thread; operations that affect the UI will need to be posted to the UI thread or an appropriate handler.</p>
+<hr />
+<h2>void logout(final Context context, final RequestListener listener, final Object state):</h2>
+<p>Invalidate the current user session by removing the access token in memory, clearing the browser cookies, and calling <a href="/docs/reference/rest/auth.expireSession/" name="https://developers.facebook.com/docs/reference/rest/auth.expireSession/">auth.expireSession</a> through the API. The application will be notified when logout is complete via the <a href="/docs/reference/androidsdk/requestlistener/" name="https://developers.facebook.com/docs/reference/androidsdk/requestlistener/">listener interface</a>.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>context</code> - The Android context in which the logout should be called: it should be the same context in which the login occurred in order to clear any stored cookies</p>
+<p>
+<code>listener</code> - Callback interface to notify the application when the request has completed.</p>
+<p>
+<code>state</code> - An arbitrary object used to identify the request when it returns to the callback. This has no effect on the request itself</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None, the callback interface will be notified when the request has completed.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method is asynchronous and the callback will be invoked in a background thread; operations that affect the UI will need to be posted to the UI thread or an appropriate handler.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1316384313" title="2011年9月18日 15:18">約9ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/credits/build/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/credits/build/">https://developers.facebook.com/docs/credits/build/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Getting Started</h5>
+<ul>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/credits/build/" name="http://developers.facebook.com/docs/credits/build/">Credits Tutorial </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/callback/" name="http://developers.facebook.com/docs/credits/callback/">Credits Callback</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/reports/" name="http://developers.facebook.com/docs/credits/reports/">Reports and Payouts</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/disputes/" name="http://developers.facebook.com/docs/credits/disputes/">Disputes &amp; Chargebacks</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Core APIs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/pay_dialog/" name="http://developers.facebook.com/docs/credits/pay_dialog/">Pay Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/orders/" name="http://developers.facebook.com/docs/credits/orders/">Order API</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/errorcodes/" name="http://developers.facebook.com/docs/credits/errorcodes/">Error Codes</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/paymethods/" name="http://developers.facebook.com/docs/credits/paymethods/">Payment methods</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/offers/" name="http://developers.facebook.com/docs/credits/offers/">Using Offers with Credits</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/terms/" name="http://developers.facebook.com/docs/credits/terms/">Credits Terms</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Credits Tutorial </h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/credits/" name="https://developers.facebook.com/docs/credits/">Credits</a> › <a href="/docs/credits/build/" name="https://developers.facebook.com/docs/credits/build/">Credits Tutorial </a>
+</div>
+</div>
+</div>
+<p>Facebook Credits is a payment system that offers a safe, easy and fast way to pay for digital and virtual goods in games and apps across Facebook. This document walks through the set of simple steps you can follow to integrate with Facebook Credits on your app.</p>
+<h2>Making your app Credits Enabled</h2>
+<h3>1. Designate your company&apos;s country of operation.</h3>
+<p>To enable your app for Credits, please go to the <a href="https://developers.facebook.com/apps/" name="https://developers.facebook.com/apps/">App Dashboard</a> and click &quot;Edit Settings&quot; for the app you wish to enable. Then, click on &quot;Credits&quot; on the left-hand rail to view the credits information for your app. First, if you haven&apos;t already done so, you will want to select your company&apos;s country from the drop-down, then save those settings.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/credits_reg_country.png" width="750px" />
+</p>
+<h3>2. Register your Company and Payout Method.</h3>
+<p>To do this, click the &apos;register your company&apos; link which will take you to our developer payout application. Fill out the required company and payout information before saving and proceeding, note you may not readily change this information so please ensure it&apos;s accuracy.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/credits_reg_company.png" width="750px" />
+</p>
+<p>We highly recommend that you fill out your Company and Payment information so that Facebook can pay you out. If you fail to do so, then even though users are spending in your application you will not receive any payment from Facebook.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/credits_devapp_1.png" width="750px" />
+</p>
+<p>
+<img src="https://developers.facebook.com/attachment/credits_devapp_3.png" width="750px" />
+</p>
+<p>Finally fill out the payment information and accept our terms. <img src="https://developers.facebook.com/attachment/credits_devapp_2.png" width="750px" />
+</p>
+<p>
+<b>Note:</b> As we continue to grow our payments system we are continually expanding to new countries around the world. However, at this time we are only able to payout to a select set of countries. Please see <a href="https://developers.facebook.com/docs/credits/reports/#payout_countries" name="https://developers.facebook.com/docs/credits/reports/#payout_countries">this </a> section in our <a href="https://developers.facebook.com/docs/credits/reports/" name="https://developers.facebook.com/docs/credits/reports/">reporting and payout</a> docs.</p>
+<h3>3. Associate Your Newly Registered Company to Your App</h3>
+<p>You will now need to associate your company to your app in order to be paid out. You can select this from the dropdown menu after checking the &apos;add your payout information&apos; box, then selecting your company name. If you are just using this app for testing, you may skipp associating your company to your app and just list your test users uids under the <code>test users</code> section. If you plan to test making actual transactions, you must associate your company to your application and remove yourself from the test user section.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/credits_reg_assoc_comp.png" width="750px" />
+</p>
+<h3>4. Set up the Credits callback</h3>
+<p>You also need to define a <a href="https://developers.facebook.com/docs/credits/callback/" name="https://developers.facebook.com/docs/credits/callback/">callback</a> URL for your application which is necessary or the payments API to work as expected. Facebook will call this URL after a user has clicked on the Facebook Credits button in your application. This Callback needs to handle various communications between Facebook and your application. The document <a href="/docs/credits/callback/" name="https://developers.facebook.com/docs/credits/callback/">&quot;Credits Callback&quot;</a> provides detailed information on what logic needs to exist here.</p>
+<p>
+<b>Note</b>: This can be changed by the developer at will, unlike the company information.</p>
+<h3>5. Manage Test settings</h3>
+<p>You can add your Facebook ID as well as ids of other users who you wish to declare as testers for your application. Orders from users declared here are not processed and you will never be charged for any transaction in your app. <br />
+</p>
+<p>
+<b>Please Note: </b> Since test users are never charged for the purchase, they do not generate actual <a href="https://developers.facebook.com/docs/reference/api/order/" name="https://developers.facebook.com/docs/reference/api/order/">Order</a> objects and thus will not show up in your daily reports or through our <a href="https://developers.facebook.com/docs/reference/api/order/" name="https://developers.facebook.com/docs/reference/api/order/">Order</a> API. This will allow you to test that your pay dialog and callback are properly setup - but you will need to generate actual purchases in your game to fully test the <a href="https://developers.facebook.com/docs/credits/reports/" name="https://developers.facebook.com/docs/credits/reports/">reporting mechanisms</a> we offer, which can then easily be refunded.</p>
+<p>Now you can Save the settings. Congratulations, your app is now fully Credits enabled! Once your front-end pay dialog as well as your <a href="https://developers.facebook.com/docs/credits/callback/" name="https://developers.facebook.com/docs/credits/callback/">callback</a> are properly setup, you can immediately start accepting payments in your app with update order.</p>
+<h2>Integrating credits into your app</h2>
+<p>Once your application has been credits-enabled, you can begin setting up your test environment by reviewing the <a href="https://developers.facebook.com/docs/reference/dialogs/pay/" name="https://developers.facebook.com/docs/reference/dialogs/pay/">pay dialog</a> and <a href="https://developers.facebook.com/docs/credits/callback/" name="https://developers.facebook.com/docs/credits/callback/">callback</a> documentation. Links and more information on our Facebook Credits branding assets can be found <a href="https://www.facebook.com/creditsbranding/" name="https://www.facebook.com/creditsbranding/">here</a>. You will need need to setup your front-end code which renders the pay dialog in addition to your <a href="https://developers.facebook.com/docs/credits/callback/" name="https://developers.facebook.com/docs/credits/callback/">callback</a> which is used to communicate necessary order information with Facebook</p>
+<p>Web Sites integrating Facebook (Connect), Native iOS Apps and <a href="/docs/mobile/" name="https://developers.facebook.com/docs/mobile/">Mobile Web Apps</a> running in the Facebook iOS App can not use Facebook Credits.</p>
+<h3>Credits as a Payment</h3>
+<p>Using the <code>pay</code> method, you can open a modal <a href="/docs/reference/dialogs/pay/" name="https://developers.facebook.com/docs/reference/dialogs/pay/">pay dialog</a> that will contain specific information about the item. The modal dialog will contain an item&apos;s title, description, its price in Credits, and an image of the item.</p>
+<p>
+<b>Note:</b> Do not construct your item information (<code>order_info</code>) in your front-end code, as it&apos;s susceptible to user manipulation. It&apos;s best practice to pass in internal reference, usually a string, in the <code>order_info</code> field which is then used by your <a href="https://developers.facebook.com/docs/credits/callback/" name="https://developers.facebook.com/docs/credits/callback/">callback</a> to determine the proper item, and return the array of parameters.</p>
+<p>Below is a code snippet that shows how to call the Facebook Credits API in JavaScript for both canvas iframe applications and mobile web apps. To test this quickly, you should use the <a href="https://github.com/facebook/credits-api-sample" name="https://github.com/facebook/credits-api-sample">Credits Sample App</a> on Github.</p>
+<p>Pay dialog Attributes for Credits as a Payment:</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>method</td>
+<td>set to <code>pay</code>
+</td>
+</tr>
+<tr>
+<td>order_info</td>
+<td>your internal key to associated product information</td>
+</tr>
+<tr>
+<td>action</td>
+<td>set to <code>buy_item</code>
+</td>
+</tr>
+<tr>
+<td>dev_purchase_params</td>
+<td>JSON Object <code>{&apos;oscif&apos;: true}</code>
+</td>
+</tr>
+</table>
+<p>
+<b>Making call using the JS SDK:</b>
+</p>
+<pre>
+// This example requires callback.php to be enabled and coded.
+
+ &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;My Facebook Credits Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+      &lt;script src=&quot;http://connect.facebook.net/en_US/all.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt; &lt;a onclick=&quot;placeOrder(); return false;&quot;&gt;Buy Stuff&lt;/a&gt;&lt;/p&gt;
+
+&lt;script&gt; 
+    FB.init({appId: &lt;your_app_id&gt;, status: true, cookie: true});
+
+    function placeOrder() {
+      // If using mobile, this is where you place the
+      // iOS native app check for credits (see below)
+
+      // Assign an internal ID that points to a database record
+      var order_info = &apos;abc123&apos;;
+
+      // calling the API ...
+      var obj = {
+        method: &apos;pay&apos;,
+        order_info: order_info,
+        action: &apos;buy_item&apos;,
+        dev_purchase_params: {&apos;oscif&apos;: true}
+      };
+
+      FB.ui(obj, callback);
+    }
+    
+    var callback = function(data) {
+      if (data[&apos;order_id&apos;]) {
+        return true;
+      } else {
+        //handle errors here
+        return false;
+      }
+    };
+
+    function writeback(str) {
+      document.getElementById(&apos;output&apos;).innerHTML=str;
+    }
+&lt;/script&gt;
+&lt;/body&gt;
+ &lt;/html&gt;
+</pre>
+<p>The javascript callback also contains order data on success, or an error message when the order is cancelled.</p>
+<p>Here is a sample JSON payload provided to the javascript callback upon successful payment:</p>
+<pre>
+    {
+       &quot;order_id&quot;:9006133015289,
+       &quot;status&quot;:&quot;settled&quot;
+    },
+       &quot;hiding&quot;:1
+    },
+       &quot;onload&quot;:[
+       &quot;GiftCredits.setPurchaseLock(false)&quot;
+    ],
+       &quot;lid&quot;:&quot;5673516601143979556&quot;
+    }
+</pre>
+<p>Here is a sample JSON payload provided to the javascript callback upon a user canceled payment:</p>
+<pre>
+    {
+       &quot;error_code&quot;:&quot;1383010&quot;,
+       &quot;error_message&quot;:&quot;User canceled the order.&quot;
+    }
+</pre>
+<p>We refer to credits as a Payment on Facebook as &apos;oscif&apos; which &apos;Optimized sole cash-in flow&apos;.</p>
+<p>If you need to open the pay dialog in a new page, please refer to the <a href="https://developers.facebook.com/docs/reference/dialogs/pay" name="https://developers.facebook.com/docs/reference/dialogs/pay">pay dialog documentation</a>.</p>
+<p>The user will see a dialog that looks like the following streamlined flow when <code>oscif</code> is set to <code>true</code> in <code>dev_purchase_params</code>:</p>
+<p>
+<img src="https://developers.facebook.com/attachment/pick_method_pay.png" />
+</p>
+<h3>Credits as a Currency</h3>
+<p>The user will see a dialog that looks like the following when <code>oscif</code> is set to <code>false</code> in <code>dev_purchase_params</code>: <br />
+</p>
+<p>Pay Dialog Attributes for Credits as a Currency:</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>method</td>
+<td>set to <code>pay</code>
+</td>
+</tr>
+<tr>
+<td>order_info</td>
+<td>your internal key to associated product information</td>
+</tr>
+<tr>
+<td>action</td>
+<td>set to <code>buy_item</code>
+</td>
+</tr>
+<tr>
+<td>dev_purchase_params</td>
+<td>JSON Object <code>{&apos;oscif&apos;: false}</code>
+</td>
+</tr>
+</table>
+<p>
+<img src="https://developers.facebook.com/attachment/credits_no_oscif.png" />
+<br />
+</p>
+<div id="mobile_credits">
+</div>
+<h3>
+<span id="getmorecredits">Get More Credits</span>
+</h3>
+<p>This feature is an API call that allows users to purchase credits without having to purchase an item with that purchase.</p>
+<p>Pay Dialog Attributes for Getting More credits:</p>
+<ul>
+<table>
+<tr>
+<td>method</td>
+<td> string - new JS SDK method to initiate credits purchase dialog</td>
+</tr>
+</table>
+</ul>
+<p>
+<b>Making call using the JS SDK:</b>
+</p>
+<pre>
+ &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;My Facebook Credits Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+      &lt;script src=&quot;http://connect.facebook.net/en_US/all.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt; &lt;a onclick=&quot;getMore(); return false;&quot;&gt;Get More&lt;/a&gt;&lt;/p&gt;
+
+&lt;script&gt;
+ function getMore(){
+    // Initialization
+    FB.init({appId: &lt;your_app_id&gt;, status: true, cookie: true});
+
+    // calling the API ...
+    var obj = {
+         method: &apos;pay&apos;,
+         action: &apos;buy_credits&apos;
+    };
+
+    FB.ui(obj, callback);
+ }
+&lt;/script&gt;
+&lt;/body&gt;
+ &lt;/html&gt;
+</pre>
+<h3>Credits on Mobile</h3>
+<p>The pay dialog can also be rendered in a mobile environment in the same way as a canvas app. For more information on mobile platform, please see our <a href="https://developers.facebook.com/docs/mobile/" name="https://developers.facebook.com/docs/mobile/">mobile documentation</a>.  Facebook Credits are not supported within iOS native apps. To detect whether your app is running within a native app, please place the following code in your app to properly suppress credits on iOS: </p>
+<pre>
+if (FB.UA.nativeApp()) {
+  // add code to hide your Credits flows
+}
+</pre>
+<p>
+<b>Here is what the payment flow looks like in a mobile browser:</b>   <img src="https://developers.facebook.com/attachment/mwa_overview_credits.png/" />
+</p>
+<hr />
+<h2>
+<span id="addingoffers">Earning Credits Using Offers</span>
+</h2>
+<p>This feature allows your users to earn credits by completing advertiser offers. Download TrialPay&apos;s <a href="http://info.trialpay.com/games/fb_direct_link.pdf" name="http://info.trialpay.com/games/fb_direct_link.pdf">Direct Access to Offers integration guide</a> to learn more.</p>
+<p>
+<b>Making call using the JS SDK:</b>
+</p>
+<pre>
+ &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;My Facebook Credits Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+      &lt;script src=&quot;http://connect.facebook.net/en_US/all.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt; &lt;a onclick=&quot;earnCredits(); return false;&quot;&gt;Earn Credits&lt;/a&gt;&lt;/p&gt;
+
+&lt;script&gt;
+ function earnCredits(){
+    // Initialization
+    FB.init({appId: &lt;your_app_id&gt;, status: true, cookie: true});
+
+    // calling the API ...
+    var obj = {
+         method: &apos;pay&apos;,
+         action: &apos;earn_credits&apos;
+    };
+
+    FB.ui(obj, callback);
+ }
+&lt;/script&gt;
+&lt;/body&gt;
+ &lt;/html&gt;
+</pre>
+<p>
+<b>Note:</b> If you have not yet transitioned to the new JS SDK, please refer to the <a href="http://info.trialpay.com/games/fb_direct_link.pdf" name="http://info.trialpay.com/games/fb_direct_link.pdf">Direct Access to Offers guide</a> for alternate integration instructions.</p>
+<p>Attributes:</p>
+<ul>
+<li>
+<b>method</b>: string - new JS SDK method to initiate credits purchase dialog</li>
+<li>
+<b>dev_purchase_params</b> - JSON object</li>
+</ul>
+<p>Here is a sample flow using offers:</p>
+<p>
+<img src="https://developers.facebook.com/attachment/credits_offers.png" width="750px" />
+</p>
+<hr />
+<h2>
+<span id="dealspot">Earning Credits Using DealSpot</span>
+</h2>
+<p>This feature allows your users to earn credits by completing an exclusive daily offer. Download TrialPay&apos;s <a href="http://info.trialpay.com/games/fb_dealspot.pdf" name="http://info.trialpay.com/games/fb_dealspot.pdf">DealSpot integration guide</a> to learn more.</p>
+<p>
+<b>Making front end call:</b>
+</p>
+<pre>
+http://assets.tp-cdn.com/static3/swf/dealspot.swf?app_id=&amp;mode=fbpayments&amp;sid=
+</pre>
+<p>Parameters:</p>
+<ul>
+<li>
+<b>app_id</b>: Your Facebook application ID number</li>
+<li>
+<b>sid</b>: The user&apos;s unique third-party identifier</li>
+</ul>
+<p>
+<b>Please Note:</b>
+</p>
+<ul>
+<li>DealSpot will automatically rotate (and hide when appropriate) deal icons based on promotion availability </li>
+<li>You must allow the DealSpot SWF to communicate with its host page (eg set trustContent flag to true) . Please refer to the <a href="http://info.trialpay.com/games/fb_dealspot.pdf" name="http://info.trialpay.com/games/fb_dealspot.pdf">DealSpot integration guide</a> to learn more.</li>
+</ul>
+<hr />
+<h2>Get Order information via Graph API</h2>
+<p>You can interact with orders created by the application using the Facebook Credits Graph API to view and update orders as needed. More information about the specifics of the API is available in the Graph API <a href="/docs/reference/api/order" name="https://developers.facebook.com/docs/reference/api/order">order object</a> document.</p>
+<p>
+<b>Note</b>: You must use actual orders when calling the Graph API. Orders from test users will not be processed.</p>
+<pre>GET https://graph.facebook.com/[order id]?access_token=APP_ACCESS_TOKEN</pre>
+<p>
+<b>Returns</b>: a JSON object:</p>
+<pre>
+            {
+               &quot;id&quot;: &quot;<order id="id">&quot;,
+               &quot;from&quot;: {
+                  &quot;name&quot;: &quot;<first and="and" last="last" name="name">&quot;,
+                  &quot;id&quot;: &quot;<user id="id">&quot;
+               },
+               &quot;to&quot;: {
+                  &quot;name&quot;: &quot;<first and="and" last="last" name="name">&quot;,
+                  &quot;id&quot;: &quot;<user id="id">&quot;
+               },
+               &quot;amount&quot;: <integer>,
+               &quot;status&quot;: &quot;<status>&quot;,
+               &quot;application&quot;: {
+                  &quot;name&quot;: &quot;<application name="name">&quot;,
+                  &quot;id&quot;: &quot;<app id="id">&quot;
+               },
+               &quot;country&quot;: &quot;<country code="code">&quot;,
+               &quot;created_time&quot;: &quot;<time>&quot;,
+               &quot;updated_time&quot;: &quot;<time>&quot;
+            }
+        </time>
+</time>
+</country>
+</app>
+</application>
+</status>
+</integer>
+</user>
+</first>
+</user>
+</first>
+</order>
+</pre>
+<p>You can also updates the status and other fields of an existing order using the Graph API <a href="/docs/reference/api/order" name="https://developers.facebook.com/docs/reference/api/order">order object</a>. This API is throttled to 100 calls per minute.</p>
+<h3>Get Orders for your user or app</h3>
+<p>You can access orders for the given application or user by issuing an <code>HTTP GET</code> request to the <code>APP_ID/payments</code> or <code>USER_ID/payments</code> connection with an <code>app access_token</code>. The <code>USER_ID</code> must have added your application.</p>
+<p>
+<b>Note</b>: currently we will only return 100,000 orders for a single date/time range. If you need to pull more than 100,000 orders for a single 24 hour period, then please split the day into multiple dayparts and make multiple queries.</p>
+<p>
+<b>API</b>
+</p>
+<pre>GET https://graph.facebook.com/[app id]/payments?status=STATUS&amp;since=SINCE&amp;until=UNTIL&amp;access_token=ACCESS_TOKEN</pre> <pre>GET https://graph.facebook.com/[user id]/payments?status=STATUS&amp;since=SINCE&amp;until=UNTIL&amp;access_token=ACCESS_TOKEN</pre>
+<p>
+<br />
+<b>Commonly used filters</b>
+</p>
+<p>You can filter the set of orders returned by this API by to list only the orders with a particular status or orders which were placed within a particular time interval. </p>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>status</td>
+<td>Return orders with the specified status. Specify one of &quot;settled&quot;, &quot;refunded&quot;, or &quot;disputed&quot;.</td>
+</tr>
+<tr>
+<td>since</td>
+<td>Unix time</td>
+</tr>
+<tr>
+<td>until</td>
+<td>Unix time. You cannot exceed 24 hours between your start and end times. If you need to pull a full week, simply call your getOrders 7 times, each time for a full 24 hour day</td>
+</tr>
+</table>
+<p>
+<b>Returns</b>:</p>
+<ul>
+<li>A JSON object: <pre>
+            {
+               &quot;data&quot;: [
+                  {
+                     &quot;id&quot;: &quot;<transaction id="id">&quot;,
+                     &quot;from&quot;: {
+                        &quot;name&quot;: &quot;<first and="and" last="last" name="name">&quot;,
+                        &quot;id&quot;: &quot;<user id="id">&quot;
+                     },
+                     &quot;to&quot;: {
+                        &quot;name&quot;: &quot;<first and="and" last="last" name="name">&quot;,
+                        &quot;id&quot;: &quot;<user id="id">&quot;
+                     },
+                     &quot;amount&quot;: <integer>,
+                     &quot;status&quot;: &quot;&quot;,
+                     &quot;application&quot;: {
+                        &quot;name&quot;: &quot;<app name="name">&quot;,
+                        &quot;id&quot;: &quot;<app id="id">&quot;
+                     },
+                     &quot;created_time&quot;: &quot;<time>&quot;,
+                     &quot;updated_time&quot;: &quot;<time>&quot;
+                  },
+               ...
+               ],
+               &quot;paging&quot;: {
+                  &quot;previous&quot;: &quot;<url>&quot;,
+                  &quot;next&quot;: &quot;<url>&quot;
+               }
+            }
+        </url>
+</url>
+</time>
+</time>
+</app>
+</app>
+</integer>
+</user>
+</first>
+</user>
+</first>
+</transaction>
+</pre>
+</li>
+</ul>
+<hr />
+<h2>Next steps</h2>
+<ul>
+<li>Read about setting up the Credits callback <a href="/docs/credits/callback" name="https://developers.facebook.com/docs/credits/callback">here</a>.</li>
+<li>Read more about getting reports and payout for your apps <a href="/docs/credits/reports/" name="https://developers.facebook.com/docs/credits/reports/">here</a>.</li>
+<li>More info on handling disputes, chargebacks and refunds <a href="/docs/credits/disputes" name="https://developers.facebook.com/docs/credits/disputes">here</a>.</li>
+</ul>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/credits/build/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1335820329" title="2012年4月30日 14:12">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

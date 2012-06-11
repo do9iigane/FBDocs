@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/ads-api/adaccountgroup/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/ads-api/adaccountgroup/">https://developers.facebook.com/docs/reference/ads-api/adaccountgroup/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Best Practices</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/batch-requests/" name="http://developers.facebook.com/docs/reference/ads-api/batch-requests/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/etags-reference/" name="http://developers.facebook.com/docs/reference/ads-api/etags-reference/">Using ETags</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/currencies/" name="http://developers.facebook.com/docs/reference/ads-api/currencies/">Currencies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/">Introduction to Action Spec</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/" name="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/">Introduction to Sponsored Stories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/" name="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/">Optimized CPM</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Specs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/" name="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/">Conversion Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/creative-specs/" name="http://developers.facebook.com/docs/reference/ads-api/creative-specs/">Creative Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/">Defining Action Specs </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/">Targeting Specs</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced Targeting</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/">Action Spec Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/">Topic Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/">ZIP Code Targeting</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Queries</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/actionestimate/" name="http://developers.facebook.com/docs/reference/ads-api/actionestimate/">Action Estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/generatepreview/" name="http://developers.facebook.com/docs/reference/ads-api/generatepreview/">Action Spec Ad Previews</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/adstatistics/">Ad Statistics</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/" name="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/">Autocomplete Data</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/" name="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/">Broad Target Categories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/" name="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/">Connection Objects</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/">Conversion Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/keywordstats/" name="http://developers.facebook.com/docs/reference/ads-api/keywordstats/">Keyword Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/reachestimate/" name="http://developers.facebook.com/docs/reference/ads-api/reachestimate/">Reach estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-description/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-description/">Targeting Description</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccount/" name="http://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/">Ad account group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcampaign/" name="http://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcreative/" name="http://developers.facebook.com/docs/reference/ads-api/adcreative/">Ad creative</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adimage/" name="http://developers.facebook.com/docs/reference/ads-api/adimage/">Ad image</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/aduser/" name="http://developers.facebook.com/docs/reference/ads-api/aduser/">Ad user</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Ad account group</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api/">Ads API</a> › <a href="/docs/reference/ads-api/adaccountgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adaccountgroup/">Ad account group</a>
+</div>
+</div>
+</div>
+<p>A group for managing access to Facebook ad accounts, as represented in the <a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>.</p>
+<p>Before using this object, see <a href="https://developers.facebook.com/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads on the Graph API</a>.</p>
+<p>See below for information about <a href="#using" name="https://developers.facebook.com/docs/#using">how to use this object</a>.</p>
+<p>The <code>adaccountgroup</code> object replaces <a href="/docs/reference/ads-api/#migr_quick_ref" name="https://developers.facebook.com/docs/reference/ads-api/#migr_quick_ref">legacy calls involving account groups</a>.</p>
+<p>The <code>adaccountgroup</code> object is a connection of the following objects:</p>
+<ul>
+<li>
+<a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">
+<code>user</code>
+</a>
+</li>
+</ul>
+<p>To read an <code>adaccountgroup</code> you need the following <a href="/docs/authentication/permissions/" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a>: <code>ads_management</code> and, for use anytime, <code>offline_access</code>.</p>
+<h3>Example</h3>
+<p>Retrieve the information for an account group:</p>
+<pre>
+<code>https://graph.facebook.com/AccountGroupID?access_token=___
+</code>
+</pre>
+<h2>Fields</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Permissions</th>
+<th align="left">Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<code>id</code>
+</td>
+<td align="left">The account group ID, required for updating an account group</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>long</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>name</code>
+</td>
+<td align="left">Name for the account group, and required when creating an account group; need not be unique; can be changed</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>status</code>
+</td>
+<td align="left">Determines whether the account has a status of active (1) or deleted (2)</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>users</code>
+</td>
+<td align="left">Users and roles in an account group</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>accounts</code>
+</td>
+<td align="left">The accounts in an account group in which the users have access</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Connections</h2>
+<p>The <code>adaccountgroup</code> object has the following connections.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Permissions</th>
+<th align="left">Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">adaccounts</td>
+<td align="left">The Ad Accounts in the ad account group</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/adaccount" name="https://developers.facebook.com/docs/reference/ads-api/adaccount">
+<code>adaccount</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">user</td>
+<td align="left">The user who owns the ad account group.</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">
+<code>user</code>
+</a> objects</td>
+</tr>
+</tbody>
+</table>
+<p>
+<a name="using">
+</a>
+</p>
+<h2>Using adaccountgroup objects</h2>
+<h3>Retrieving an ad account group</h3>
+<p>Specify an ad account group ID, or <code>/me/adaccountgroups</code>, to retrieve the basic data for ad account groups.</p>
+<p>Thus, a basic example for getting account group data is the following, if the ad account group ID is <code>368121234</code>:</p>
+<pre>
+<code>https://graph.facebook.com/368121234?access_token=_____
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>{
+   &quot;id&quot; : &quot;368121234&quot;,
+   &quot;name&quot; : &quot;Awesome ad account group&quot;,
+   &quot;status&quot; : &quot;1&quot;,
+   &quot;users&quot; : [ { &quot;uid&quot; : 9876554, &quot;role&quot; : 1001 } ],
+   &quot;accounts&quot; : [ { &quot;account_id&quot; : 333444555, &quot;status&quot; : 2 } ]
+}
+</code>
+</pre>
+<h3>Creating an ad account group</h3>
+<p>To create an ad account group, specify the data for the ad account group in a request to the following URL:</p>
+<pre>
+<code>https://graph.facebook.com/me/adaccountgroups
+</code>
+</pre>
+<p>For example, if you specify a request similar to the following</p>
+<pre>
+<code>curl -F &quot;name=Test ad account group&quot;
+&quot;https://graph.facebook.com/me/adaccountgroups?access_token=___&quot;
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>{&quot;id&quot;:88736453}
+</code>
+</pre>
+<h3>Updating and deleting an ad account group</h3>
+<p>To update an ad account group, specify the data for the ad account group in a request to the following URL:</p>
+<pre>
+<code>https://graph.facebook.com/AdAccountGroupID
+</code>
+</pre>
+<p>You could specify an update to an ad account group&apos;s name by specifying a request similar to the following:</p>
+<pre>
+<code>curl -F &quot;name=Even better name!&quot;
+&quot;https://graph.facebook.com/986237642?access_token=___&quot;
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>true
+</code>
+</pre>
+<h4>Deleting an ad account group</h4>
+<p>To delete an ad account group, use the HTTP DELETE method to delete an object, for example:</p>
+<pre>
+<code>curl -XDELETE &quot;https://graph.facebook.com/635356536?access_token=___&quot;
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>true
+</code>
+</pre>
+<h3>Retrieving users of an ad account group</h3>
+<p>To retrieve the list of users in an ad account group, issue a get to the endpoint</p>
+<pre>
+<code>https://graph.facebook.com/AdAccountGroupId/users
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>{
+   &quot;users&quot; : [
+      { &quot;uid&quot; : 98277244, &quot;role&quot; : 1001 },
+      { &quot;uid&quot; : 38738963, &quot;role&quot; : 1001 }
+   ],
+}
+</code>
+</pre>
+<h3>Modifying users in an ad account group</h3>
+<p>To add a user to an ad account group, specify the data for the user in a request to the following URL:</p>
+<pre>
+<code>https://graph.facebook.com/AdAccountGroupID/users
+</code>
+</pre>
+<p>You could specify an update to an ad account group&apos;s users by specifying a request similar to the following:</p>
+<pre>
+<code>curl -d &quot;account_group_roles=[{&apos;uid&apos; : 24243234, &apos;role&apos; : 1001 }]&quot;
+&quot;https://graph.facebook.com/986237642/users?access_token=___&quot;
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>true
+</code>
+</pre>
+<h4>Account group roles</h4>
+<p>After you create an account group, you use related calls to update the account group and give users the desired access to the ad accounts in the account group.</p>
+<p>Account groups enable you to give a user a specific level of access to an entire set of accounts.</p>
+<p>If a user is a member of an account group, they have the given level of access to all the accounts contained in the account group. A user is given the highest level of permission she has for any account in the group. For example, if Mary has reports-only access to Account ABC, but general-user access to an account group that contains Account ABC, Mary has the higher of the two permission levels. In this example, Mary&apos;s permission for all accounts in the account group will be general-user.</p>
+<p>The levels of permission, also known as roles, are the following:</p>
+<ul>
+<li>Level 1001, administrator access</li>
+<li>Level 1002, general-user access</li>
+<li>Level 1003, reports-only access</li>
+</ul>
+<h4>Removing users from an ad account group</h4>
+<p>To delete a user from an ad account group, use the HTTP DELETE method to delete an object, for example:</p>
+<pre>
+<code>curl -XDELETE
+&quot;https://graph.facebook.com/635356536/users/12323434?access_token=___&quot;
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>true
+</code>
+</pre>
+<h3>Retrieving ad accounts from an ad account group</h3>
+<p>To retrieve the list of accounts in an ad account group, issue a get to the endpoint</p>
+<pre>
+<code>https://graph.facebook.com/AdAccountGroupId/adaccounts
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>{
+   &quot;accounts&quot; : [
+      { &quot;account_id&quot; : 98277244, &quot;status&quot; : 2 },
+      { &quot;account_id&quot; : 38738963, &quot;status&quot; : 2 }
+   ],
+}
+</code>
+</pre>
+<h3>Modifying ad accounts in an ad account group</h3>
+<p>To add an ad account to an ad account group, specify the data for the ad account in a request to the following URL:</p>
+<pre>
+<code>https://graph.facebook.com/AdAccountGroupID/adaccounts
+</code>
+</pre>
+<p>The calling user must own the existing account group and have admin access to the ads account intended to be added. You could specify an update to an ad account group&apos;s ad accounts by specifying a request similar to the following:</p>
+<pre>
+<code>curl -d &quot;account_ids=[ 123212214 ]&quot;
+&quot;https://graph.facebook.com/986237642/adaccounts?access_token=___&quot;
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>true
+</code>
+</pre>
+<h4>Removing ad accounts from an ad account group</h4>
+<p>To delete an ad account from an ad account group, use the HTTP DELETE method to delete an object, for example:</p>
+<pre>
+<code>curl -XDELETE
+&quot;https://graph.facebook.com/635356536/adaccounts/12323434?access_token=___&quot;
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>true
+</code>
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1322675124" title="2011年11月30日 9:45">約6ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

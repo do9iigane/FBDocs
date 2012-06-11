@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/fql/photo/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/fql/photo/">https://developers.facebook.com/docs/reference/fql/photo/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Tables</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/album/" name="http://developers.facebook.com/docs/reference/fql/album/">album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/application/" name="http://developers.facebook.com/docs/reference/fql/application/">application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/apprequest/" name="http://developers.facebook.com/docs/reference/fql/apprequest/">apprequest</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/checkin/" name="http://developers.facebook.com/docs/reference/fql/checkin/">checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comment/" name="http://developers.facebook.com/docs/reference/fql/comment/">comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comments_info/" name="http://developers.facebook.com/docs/reference/fql/comments_info/">comments_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/connection/" name="http://developers.facebook.com/docs/reference/fql/connection/">connection</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/cookies/" name="http://developers.facebook.com/docs/reference/fql/cookies/">cookies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/developer/" name="http://developers.facebook.com/docs/reference/fql/developer/">developer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain/" name="http://developers.facebook.com/docs/reference/fql/domain/">domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain_admin/" name="http://developers.facebook.com/docs/reference/fql/domain_admin/">domain_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event/" name="http://developers.facebook.com/docs/reference/fql/event/">event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event_member/" name="http://developers.facebook.com/docs/reference/fql/event_member/">event_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/family/" name="http://developers.facebook.com/docs/reference/fql/family/">family</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend/" name="http://developers.facebook.com/docs/reference/fql/friend/">friend</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend_request/" name="http://developers.facebook.com/docs/reference/fql/friend_request/">friend_request</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist/" name="http://developers.facebook.com/docs/reference/fql/friendlist/">friendlist</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist_member/" name="http://developers.facebook.com/docs/reference/fql/friendlist_member/">friendlist_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group/" name="http://developers.facebook.com/docs/reference/fql/group/">group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group_member/" name="http://developers.facebook.com/docs/reference/fql/group_member/">group_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/insights/" name="http://developers.facebook.com/docs/reference/fql/insights/">insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/like/" name="http://developers.facebook.com/docs/reference/fql/like/">like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/links/" name="http://developers.facebook.com/docs/reference/fql/links/">link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/link_stat/" name="http://developers.facebook.com/docs/reference/fql/link_stat/">link_stat</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/location_post/" name="http://developers.facebook.com/docs/reference/fql/location_post/">location_post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/mailbox_folder/" name="http://developers.facebook.com/docs/reference/fql/mailbox_folder/">mailbox_folder</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/message/" name="http://developers.facebook.com/docs/reference/fql/message/">message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notes/" name="http://developers.facebook.com/docs/reference/fql/notes/">note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notification/" name="http://developers.facebook.com/docs/reference/fql/notification/">notification</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/object_url/" name="http://developers.facebook.com/docs/reference/fql/object_url/">object_url</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/offer/" name="http://developers.facebook.com/docs/reference/fql/offer/">offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page/" name="http://developers.facebook.com/docs/reference/fql/page/">page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_admin/" name="http://developers.facebook.com/docs/reference/fql/page_admin/">page_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_blocked_user/" name="http://developers.facebook.com/docs/reference/fql/page_blocked_user/">page_blocked_user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_fan/" name="http://developers.facebook.com/docs/reference/fql/page_fan/">page_fan</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/life_event/" name="http://developers.facebook.com/docs/reference/fql/life_event/">page_milestone</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions/" name="http://developers.facebook.com/docs/reference/fql/permissions/">permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions_info/" name="http://developers.facebook.com/docs/reference/fql/permissions_info/">permissions_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo/" name="http://developers.facebook.com/docs/reference/fql/photo/">photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_src/" name="http://developers.facebook.com/docs/reference/fql/photo_src/">photo_src</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_tag/" name="http://developers.facebook.com/docs/reference/fql/photo_tag/">photo_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/place/" name="http://developers.facebook.com/docs/reference/fql/place/">place</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy/" name="http://developers.facebook.com/docs/reference/fql/privacy/">privacy</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy_setting/" name="http://developers.facebook.com/docs/reference/fql/privacy_setting/">privacy_setting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile/" name="http://developers.facebook.com/docs/reference/fql/profile/">profile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile_tab/" name="http://developers.facebook.com/docs/reference/fql/profile_tab/">profile_view</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question/" name="http://developers.facebook.com/docs/reference/fql/question/">question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option/" name="http://developers.facebook.com/docs/reference/fql/question_option/">question_option</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option_votes/" name="http://developers.facebook.com/docs/reference/fql/question_option_votes/">question_option_votes</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/review/" name="http://developers.facebook.com/docs/reference/fql/review/">review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_friend_info/" name="http://developers.facebook.com/docs/reference/fql/standard_friend_info/">standard_friend_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_user_info/" name="http://developers.facebook.com/docs/reference/fql/standard_user_info/">standard_user_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/status/" name="http://developers.facebook.com/docs/reference/fql/status/">status</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream/" name="http://developers.facebook.com/docs/reference/fql/stream/">stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_filter/" name="http://developers.facebook.com/docs/reference/fql/stream_filter/">stream_filter</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_tag/" name="http://developers.facebook.com/docs/reference/fql/stream_tag/">stream_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/subscription/" name="http://developers.facebook.com/docs/reference/fql/subscription/">subscription</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/thread/" name="http://developers.facebook.com/docs/reference/fql/thread/">thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/translation/" name="http://developers.facebook.com/docs/reference/fql/translation/">translation</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_message/" name="http://developers.facebook.com/docs/reference/fql/unified_message/">unified_message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread/" name="http://developers.facebook.com/docs/reference/fql/unified_thread/">unified_thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_action/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_action/">unified_thread_action</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_count/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_count/">unified_thread_count</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/url_like/" name="http://developers.facebook.com/docs/reference/fql/url_like/">url_like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/user/" name="http://developers.facebook.com/docs/reference/fql/user/">user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video/" name="http://developers.facebook.com/docs/reference/fql/video/">video</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video_tag/" name="http://developers.facebook.com/docs/reference/fql/video_tag/">video_tag</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>photo</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a> › <a href="/docs/reference/fql/photo/" name="https://developers.facebook.com/docs/reference/fql/photo/">photo</a>
+</div>
+</div>
+</div>
+<p>Query this table to return information about a photo.</p>
+<p>A photo as represented in <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>.</p>
+<p>The <a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">User</a>, <a href="/docs/reference/api/page/" name="https://developers.facebook.com/docs/reference/api/page/">Page</a> and <a href="/docs/reference/api/application/" name="https://developers.facebook.com/docs/reference/api/application/">Application</a> <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> objects have an equivalent <code>photos</code> connection of type <a href="/docs/reference/api/photo/" name="https://developers.facebook.com/docs/reference/api/photo/">Photo</a>.</p>
+<p>If you need to get photos associated with a group or event, query the <a href="photo_tag" name="https://developers.facebook.com/docs/photo_tag">photo_tag</a> table.</p>
+<p>Note: Both <code>object_id</code> and <code>pid</code> uniquely identify a photo, and <code>object_id</code> is the preferred column to use.</p>
+<p>To read the <code>photo</code> table you need</p>
+<ul>
+<li>any valid <code>access_token</code> if it is public and owned by the Page.</li>
+<li>
+<code>user_photos</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to access photos and albums uploaded by the user, and photos in which the user has been tagged.</li>
+<li>
+<code>friends_photos</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to access friends&apos; photos and photos in which the user&apos;s friends have been tagged.</li>
+</ul>
+<h3>Example</h3>
+<p>Photos from the <a href="https://www.facebook.com/facebook" name="https://www.facebook.com/facebook">Facebook Page Album</a>:</p>
+<p>
+<a href="https://www.facebook.com/album.php?aid=324257&amp;id=20531316728" name="https://www.facebook.com/album.php?aid=324257&amp;id=20531316728">The &quot;Happy Lunar New Year 2011&quot; album photos</a> (<a href="https://api.facebook.com/method/fql.query?query=select+pid+FROM+photo+WHERE+aid%3D%2720531316728_324257%27&amp;access_token=OAUTH_ACCESS_TOKEN" name="https://api.facebook.com/method/fql.query?query=select+pid+FROM+photo+WHERE+aid%3D'20531316728_324257'&amp;access_token=OAUTH_ACCESS_TOKEN">Try this query</a>)</p>
+<pre>
+<code>SELECT pid FROM photo WHERE aid=&quot;20531316728_324257&quot;
+</code>
+</pre>
+<h2>コラム</h2>
+<table class="params columns">
+<tr>
+<th>インデックス可能</th>
+<th>名前</th>
+<th>タイプ</th>
+<th>説明</th>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">object_id</td>
+<td class="type">int</td>
+<td>
+<p>The object_id of the photo.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">pid</td>
+<td class="type">string</td>
+<td>
+<p>The ID of the photo being queried. The <code>pid</code> cannot be longer than 50 characters.<br />
+<strong>Note:</strong> Because the pid is a string, you should always wrap the pid in quotes when referenced in a query.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">aid</td>
+<td class="type">string</td>
+<td>
+<p>The ID of the album containing the photo being queried. The <code>aid</code> cannot be longer than 50 characters.<br />
+<strong>Note:</strong> Because the aid is a string, you should always wrap the aid in quotes when referenced in a query.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">owner</td>
+<td class="type">string</td>
+<td>
+<p>The user ID of the owner of the photo being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">src_small</td>
+<td class="type">string</td>
+<td>
+<p>The URL to the thumbnail version of the photo being queried. The image can have a maximum width of 75px and a maximum height of 225px. This URL may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">src_small_width</td>
+<td class="type">int</td>
+<td>
+<p>Width of the thumbnail version, in px. This field may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">src_small_height</td>
+<td class="type">int</td>
+<td>
+<p>Height of the thumbnail version, in px. This field may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">src_big</td>
+<td class="type">string</td>
+<td>
+<p>The URL to the full-sized version of the photo being queried. The image can have a maximum width or height of 720px, <a href="/blog/post/602/" name="https://developers.facebook.com/blog/post/602/">increasing to 960px</a> on 1st March 2012. This URL may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">src_big_width</td>
+<td class="type">int</td>
+<td>
+<p>Width of the full-sized version, in px. This field may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">src_big_height</td>
+<td class="type">int</td>
+<td>
+<p>Height of the full-sized version, in px. This field may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">src</td>
+<td class="type">string</td>
+<td>
+<p>The URL to the album view version of the photo being queried. The image can have a maximum width or height of 130px. This URL may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">src_width</td>
+<td class="type">int</td>
+<td>
+<p>Width of the album view version, in px. This field may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">src_height</td>
+<td class="type">int</td>
+<td>
+<p>Height of the album view version, in px. This field may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">link</td>
+<td class="type">string</td>
+<td>
+<p>The URL to the page containing the photo being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">caption</td>
+<td class="type">string</td>
+<td>
+<p>The caption for the photo being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">created</td>
+<td class="type">time</td>
+<td>
+<p>The date when the photo being queried was added.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">modified</td>
+<td class="type">time</td>
+<td>
+<p>The date when the photo being queried was last modified.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">position</td>
+<td class="type">int</td>
+<td>
+<p>The position of the photo in the album.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">album_object_id</td>
+<td class="type">int</td>
+<td>
+<p>The object_id of the album the photo belongs to.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">place_id</td>
+<td class="type">int</td>
+<td>
+<p>Facebook ID of the place associated with the photo, if any.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">images</td>
+<td class="type">array</td>
+<td>
+<p>An array of objects containing width, height, source each representing the various photo sizes.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">like_info</td>
+<td class="type">object</td>
+<td>
+<p>The like information of the photo being queried. This is an object containing <code>can_like</code>, <code>like_count</code>, and <code>user_likes</code>
+</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">comment_info</td>
+<td class="type">object</td>
+<td>
+<p>The comment information of the photo being queried. This is an object containing <code>can_comment</code> and <code>comment_count</code>
+</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">can_delete</td>
+<td class="type">bool</td>
+<td>
+<p>
+<code>true</code> if the viewer is able to delete the photo</p>
+</td>
+</tr>
+</table>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/fql/photo/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1337640995" title="2012年5月21日 15:56">約2週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/plugins/login/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/plugins/login/">https://developers.facebook.com/docs/reference/plugins/login/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a class="selected" href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/activity/" name="http://developers.facebook.com/docs/reference/plugins/activity/">Activity Feed</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/comments/" name="http://developers.facebook.com/docs/reference/plugins/comments/">Comments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/facepile/" name="http://developers.facebook.com/docs/reference/plugins/facepile/">Facepile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like-box/" name="http://developers.facebook.com/docs/reference/plugins/like-box/">Like Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like/" name="http://developers.facebook.com/docs/reference/plugins/like/">Like Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/live-stream/" name="http://developers.facebook.com/docs/reference/plugins/live-stream/">Live Stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/login/" name="http://developers.facebook.com/docs/reference/plugins/login/">Login Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendations/" name="http://developers.facebook.com/docs/reference/plugins/recommendations/">Recommendations Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/registration/" name="http://developers.facebook.com/docs/reference/plugins/registration/">Registration</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/send/" name="http://developers.facebook.com/docs/reference/plugins/send/">Send Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/subscribe/" name="http://developers.facebook.com/docs/reference/plugins/subscribe/">Subscribe Button</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Beta Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/" name="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/">Recommendations Bar</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Login Button</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">Social Plugins</a> › <a href="/docs/reference/plugins/login/" name="https://developers.facebook.com/docs/reference/plugins/login/">Login Button</a>
+</div>
+</div>
+</div>
+<p>The Login Button shows profile pictures of the user&apos;s friends who have already signed up for your site in addition to a login button.</p>
+<p>You can specify the maximum number of rows of faces to display. The plugin dynamically sizes its height; for example, if you specify a maximum of four rows of faces, and there are only enough friends to fill two rows, the height of the plugin will be only what is needed for two rows of faces.</p>
+<p>Using the new <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>, the plugin is available via the <code>&lt;fb:login-button&gt;</code> XFBML tag or the <code>&lt;div class=&quot;fb-login-button&quot;&gt;</code> HTML tag.</p>
+<p>Note: If the user is already logged in, no login button is shown.</p>
+<div class="clearfix">
+<div class="plugin_form" id="ud2pug_2">
+<dl>
+<dt>Show Faces <a data-hover="tooltip" href="#" title="Show pictures of the user&apos;s friends who have joined your site" name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input checked="1" class="inputcheckbox" id="param_show-faces" name="show-faces" type="checkbox" value="true" />
+<label for="param_show-faces">Show Faces</label>
+</dd>
+<dt>
+<label for="param_width">Width</label>
+<a data-hover="tooltip" href="#" title="The width of the plugin in pixels" name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_width" name="width" size="7" type="text" value="200" />
+</dd>
+<dt>
+<label for="param_max-rows">Max Rows</label>
+<a data-hover="tooltip" href="#" title="The maximum number of rows of profile pictures to show." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_max-rows" name="max-rows" size="7" type="text" value="1" />
+</dd>
+</dl>
+<div class="getCode">
+<a class="uiButton" href="/docs/reference/plugins/login/code/?revision=409009942442962" id="ud2pug_3" rel="dialog" role="button" name="https://developers.facebook.com/docs/reference/plugins/login/code/?revision=409009942442962">
+<span class="uiButtonText">Get Code</span>
+</a>
+</div>
+</div>
+<div class="plugin_example" id="ud2pug_1">
+</div>
+</div>
+<h2>Attributes</h2>
+<ul>
+<li>
+<code>show-faces</code> - specifies whether to show faces underneath the Login button. </li>
+<li>
+<code>width</code> - the width of the plugin in pixels. Default width: 200px. </li>
+<li>
+<code>max-rows</code> - the maximum number of rows of profile pictures to display. Default value: 1. </li>
+<li>
+<code>scope</code> - a comma separated list of extended permissions. By default the Login button prompts users for their public information. If your application needs to access other parts of the user&apos;s profile that may be private, your application can request extended permissions. A complete list of extended permissions can be found <a href="/docs/authentication/permissions/" name="https://developers.facebook.com/docs/authentication/permissions/">here</a>.</li>
+<li>
+<code>registration-url</code> - registration page url. If the user has not registered for your site, they will be redirected to the URL you specify in the registration-url parameter.</li>
+</ul>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/plugins/login/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1334010855" title="2012年4月9日 15:34">約2ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

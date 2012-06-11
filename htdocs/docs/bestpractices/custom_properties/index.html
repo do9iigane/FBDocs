@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/bestpractices/custom_properties/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/bestpractices/custom_properties/">https://developers.facebook.com/docs/bestpractices/custom_properties/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Guide: Working with Custom Properties</h1>
+</div>
+</div>
+<p>In our last guide, <a href="https://developers.facebook.com/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/">Working With Multiple Objects</a>, we talked about using multiple objects to create more interesting stories and aggregations. In this guide, we’ll explain how to create even more interesting stories and aggregations with custom properties.</p>
+<h3>Anatomy of a story</h3>
+<p>An Open Graph story consists of:</p>
+<p>• <strong>The story</strong>, which describes what someone did in a particular app<br /> • <strong>Attachments</strong>, which add detail (ex: location, distance, elevation gain or time) to the story</p>
+<p>
+<table>
+<tr>
+<td align="center">
+<img src="https://developers.facebook.com/attachment/anatomy_story_withnotes.png" width="70%" />
+</td>
+</tr>
+</table>
+</p>
+<p>What a story says is based on the actions and objects you define in the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps">App Dashboard</a>. What’s in the attachment is based on the custom properties (ex: location, distance, elevation gain and time) you define.</p>
+<h3>How custom properties work</h3>
+<p>Custom properties are bits of information that describe <a href="https://developers.facebook.com/docs/opengraph/actions/" name="https://developers.facebook.com/docs/opengraph/actions/">actions</a> and <a href="https://developers.facebook.com/docs/opengraph/objects/" name="https://developers.facebook.com/docs/opengraph/objects/">objects</a>. What city a restaurant is in, the elevation of a ski run, when a friend visited Paris, or how long it took you to finish a run are all examples of custom properties.</p>
+<p>
+<a href="#" name="https://developers.facebook.com/docs/#">Eddie</a> ran (action) <a href="#" name="https://developers.facebook.com/docs/#">The Dish</a> (object)<br /> In 20 minutes (custom property)</p>
+<p>
+<a href="#" name="https://developers.facebook.com/docs/#">David</a> read (action) <a href="#" name="https://developers.facebook.com/docs/#">Great Expectations</a> (object)<br /> by Charles Dickens (custom property)</p>
+<p>Along with providing more context for stories, custom properties include information that can be aggregated on timeline. For example, if Eddie from the story above went on multiple runs, the custom property <i>distance</i> from his news feed stories could be used create the aggregation <i>Total Miles</i> on his timeline. He could use this aggregation to track his progress:</p>
+<p>
+<table>
+<tr>
+<td align="center">
+<img src="https://developers.facebook.com/attachment/anatomy_aggregation.png" width="70%" />
+</td>
+<td>
+<br />
+<i>Timeline aggregation based on distance</i>
+</td>
+</tr>
+</table>
+</p>
+<h3>Why custom properties matter</h3>
+<p>Custom properties make stories about your app more engaging. They get friends of people who use your app interested and can help start conversations. For example, knowing that you visited Paris in February might prompt a friend planning a trip to ask you about weather or packing tips.</p>
+<p>
+<strong>Two kinds of custom properties</strong>
+</p>
+<p>There are two kinds of custom properties: those that apply to objects and those that apply to actions.</p>
+<p>
+<strong>Custom action properties</strong> describe an action someone is currently taking or took in the past. In the sentence <i>Jean ran for 20 minutes</i>, for example, <i>for 20 minutes</i> is an action property that describes the action <i>runs</i>. Custom action properties usually vary per person. Jean may run for 20 minutes but Kevin may run for 25 minutes.</p>
+<p>
+<strong>Custom object properties</strong> describe an object in more detail. For example, in the sentence <i>Kevin read Great Expectations by Charles Dickens</i>, <i>by Charles Dickens</i> is an object property that describes the object <i>Great Expectations</i>.</p>
+<p>Custom object and action properties let people view their app activity in new ways. Using the custom properties above, they could see all the books they read by Charles Dickens or what their average run time is. To get the aggregations you want, make sure you apply the properties to the right actions and objects.</p>
+<h3>Choosing data types for custom properties</h3>
+<p>All custom properties have <strong>data types</strong> that describe them. Data types can be simple, structured or objects:</p>
+<p>
+<center>
+</center>
+</p>
+<table>
+<tr>
+<td width="33%">
+<b>Simple</b>
+</td>
+<td width="center">
+<b>Structured</b>
+</td>
+<td width="33%">
+<b>Object</b>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<ul>
+<li>String</li>
+<li>DateTime</li>
+<li>Float</li>
+<li>Integer</li>
+</ul>
+</td>
+<td width="33%">
+<ul>
+<li>Audio</li>
+<li>ContactInfo</li>
+<li>GeoPoint</li>
+<li>Image</li>
+<li>Profile</li>
+<li>Quantity</li>
+<li>Video</li>
+</ul>
+</td>
+<td width="33%">
+<ul>
+<li>An object you created (ex: <i>Article</i> or <i>Great Expectations</i>)</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>
+</p>
+<p>Data types are important because they:</p>
+<p>• Tell Facebook how stories from your app should appear<br /> • Affect how stories will be aggregated on timeline and other pages<br /> • Determine what you can do with the stories from your app</p>
+<p>To get the most from your data types, make sure they match the custom properties they define. If your custom property is about time, choose <strong>DateTime</strong> from the <strong>datatype selection</strong> dropdown in the App Dashboard. This will let you show aggregations about the total time someone spent doing an activity and more. If your custom property is an audio file, choose <strong>Audio</strong> from the dropdown. This will let people preview audio on Facebook.com.</p>
+<h3>Displaying custom properties</h3>
+<p>Sometimes, you may want to display custom properties differently in news feed and timeline. For example, a dieting app that lets people track their meals and calories may want to show a story every time a user eats a meal in news feed, but show reports of all meals eaten or total calories consumed in timeline.</p>
+<p>You can control how and where custom properties appear in news feed stories in the App Dashboard.</p>
+<ol>
+<li>Go to the <a href="https://developers.facebook.com/apps/" name="https://developers.facebook.com/apps/">App Dashboard</a>
+</li>
+<li>Select your app </li>
+<li>Click <strong>Open Graph</strong> in the sidebar </li>
+<li>Under <strong>Object Types</strong>, click the name of the object you want to preview </li>
+<li>Click <strong>Add Another Property</strong> and type in “Test“ </li>
+<li>You’ll get a preview update at the bottom of your screen. Click it to see your custom object property as it will appear in news feed.</li>
+<li>To hide a custom property from presentation in news feed, select the configuration settings dropdown (the gear icon) and select <strong>Hide from News Feed</strong>
+</li>
+</ol>
+<h3>Common mistakes</h3>
+<p>A common mistake developers make is not using objects they’ve already defined when creating custom properties.</p>
+<p>For example, if you defined <i>Charles Dickens</i> in the example above as an object, Author, make sure you use the defined object when creating the custom property. In other words, don’t create an instance of Author with a data type of string. Instead, <i>point</i> the custom property you want to define (<strong>Author</strong>) at the object you created before by selecting the <strong>Author objects</strong> in the <strong>data type dropdown</strong> (it will be at the bottom).</p>
+<p>The Open Graph will then create a relationship between these objects. So when someone reads <i>Great Expectations</i> (object) and <i>Oliver Twist</i> (object), they could have a timeline aggregation based on the author of these books, Charles Dickens. This will let them see all the books they’ve read by Charles Dickens.</p>
+<h3>Next up</h3>
+<p>In our next guide, we’ll talk about how to build timeline aggregations.</p>
+<p>To learn more about the open graph, read our <a href="https://developers.intern.facebook.com/docs/opengraph/" name="https://developers.intern.facebook.com/docs/opengraph/">core open graph concepts</a> or get started with an <a href="https://developers.intern.facebook.com/docs/opengraph/tutorial/" name="https://developers.intern.facebook.com/docs/opengraph/tutorial/">open graph tutorial</a>.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/bestpractices/custom_properties/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1337331056" title="2012年5月18日 1:50">約3週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

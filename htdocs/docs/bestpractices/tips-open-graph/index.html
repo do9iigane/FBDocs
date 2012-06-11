@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/bestpractices/tips-open-graph/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/bestpractices/tips-open-graph/">https://developers.facebook.com/docs/bestpractices/tips-open-graph/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Tips: Open Graph</h1>
+</div>
+</div>
+<p>The following sections outline tips for implementing a great Open Graph experience. This guidance has been created over the past few months as we have worked with partners on Open Graph integrations, and continues to develop as more applications implement the Open Graph.</p>
+<hr />
+<h2 id="design">Social Design and Open Graph</h2>
+<p>Open Graph applications can create a fundamentally social experience by focusing on the core principles of <a href="/socialdesign/" name="https://developers.facebook.com/socialdesign/">Social Design</a>:</p>
+<ul>
+<li>
+<strong>Identity</strong> - help users express themselves and gain personal value by using your application.</li>
+<li>
+<strong>Conversation</strong> - allow users to share actions and engage with each other.</li>
+<li>
+<strong>Community</strong> - make it easy for users to connect with the people they know and trust.</li>
+</ul>
+<p>Beyond the basics of Social Design, here are some things to keep in mind specific to platform applications using the Open Graph.</p>
+<ul>
+<li>
+<p>
+<strong>Understand how users want to express themselves</strong> - People express who they are and what they care about through their Timelines, so learn what they value most and what they will want to share through your app.</p>
+</li>
+<li>
+<p>
+<strong>Give people the words to tell their stories most effectively</strong> - Create the right actions and objects to best reflect what people do on your app.</p>
+</li>
+<li>
+<p>
+<strong>Create a great user experience to increase your distribution</strong> – The more users engage with your app, the more their actions will be displayed more prominently on Facebook through Timeline, News Feed, Ticker, etc, so you’ll reach more people with more engaging content.</p>
+</li>
+</ul>
+<hr />
+<h2 id="modeling">Modeling Your Data</h2>
+<p>Since the launch of the Open Graph, we have heard questions from developers around how they should translate their application into actions and objects that make up the Open Graph. If you have an existing application, the two main questions that will help you do this mapping are:</p>
+<ol>
+<li>What do users do on your site? These will be the Open Graph actions.</li>
+<li>What things or items do users interact with? These will be the Open Graph objects.</li>
+</ol>
+<p>Answering these questions should give you the first order Open Graph actions and objects within your app.</p>
+<h3>Privacy of Actions and Objects</h3>
+<p>Open Graph actions and objects inherently follow different privacy models. Since objects are just web pages, they should be treated as public information. Any one who could navigate to the web page would be able to view the meta data of that particular object. Actions on the other hand, have a privacy that can be set by the developer.</p>
+<p>For example, if we were modeling an exercise app, there could be some sensitive information like the users’ weight we would want to capture. Since we don’t want this information accessible by anyone, we would want to make this a property on the action. The developer can also scope down the privacy of the action accordingly so the visibility is as restrictive as “only me” or just visible to “friends”.</p>
+<h3>Custom Properties</h3>
+<p>Along with thinking about the privacy model, you should also think about where properties naturally live. For example, lets say we have a cooking app where users are able to perform the “cook” action on “recipe” objects. Now we want to add a rating property the user can provide. If we want to rate how well the user cooked the dish, we would have the property be apart of the action “cook”. If we want to rate how well the recipe was described itself, we would make the property be apart of the object “recipe”.</p>
+<h4>Object References</h4>
+<p>In the Open Graph, not only can properties on objects or actions be static content, but they can also reference other objects. This allows you to be able to create complex structure around objects and actions.</p>
+<p>Using the same cooking app example, if we wanted to add the author to the recipe object, we could simply add a property “author” to the object where we would provide the author’s name as a string. Another way to model this would be to have the “author” property point to a “profile” object that has meta data on the author’s first name, last name, profile picture etc.</p>
+<p>If our cooking app already had a separate web page that has author information, then we can accurately model this through the custom property that points to an object. By modeling this inherent structure, we also get the added benefit of being able to create aggregations around the “author” property since it points to the “profile” object. For example, we would be able to have an aggregation around a user’s favorite author’s simply because we decided to have author point to the profile object instead of having static text.</p>
+<p>As you can see, there is a lot of flexibility in how you can model your actions and objects. There is no “correct” way to do this. Ideally, you can model the data and usage your users are already exhibiting in your applications. Also take into consideration the privacy difference between actions and objects and finally make sure to think about how objects relate to other objects within your applications. Doing so will not only accurately model data in your app but also allow you to create interesting aggregations for your users.</p>
+<hr />
+<h2 id="ux">User Experience</h2>
+<h3>Aggregations and Reports</h3>
+<p>
+<strong>Aggregations</strong> help users express their identity by showcasing the actions they’ve taken in your app. For example, you can show the most recent books read, or favorite recipes. As a user engages more and more frequently with your app, their app-specific actions are displayed more prominently on their Timeline through the positioning of your Aggregated Story.</p>
+<p>
+<strong>Reports</strong> are collections of aggregations and are shown for each time period in which a user has activity present in the Graph. This provides a consistent viewing experience and makes it easier for users to digest data from your app. When you configure Aggregated Stories in the App Dashboard, make sure to order them by priority - placing the most important aggregations first. When a report is generated for your app, the primary Timeline aggregation is in the top position, and the other Timeline aggregations (if there is sufficient data available to produce them) are displayed in the subsequent positions of the report.</p>
+<h3>Best Practices</h3>
+<ul>
+<li>
+<p>
+<strong>Keep it engaging</strong> - Select Timeline aggregations that are most expressive of a user&apos;s identity, and consider which activity in your app users will most want to share.</p>
+</li>
+<li>
+<p>
+<strong>Enable Timeline aggregations to be populated quickly once a user installs your app</strong> - Initially, users won&apos;t see any stories until App activity is written to the Graph. Design your app in such a way that users can quickly benefit from adding it to their Timeline.</p>
+</li>
+<li>
+<p>
+<strong>Incorporate user feedback</strong> - Users will have the ability to provide direct feedback on aggregations that will allow them to &quot;pin&quot;, &quot;hide&quot; or &quot;mark as spam”; use this feedback to iterate and improve your app.</p>
+</li>
+<li>
+<p>
+<strong>Make sure Timeline aggregation titles are true to what the user is actually doing/expressing</strong> - If the Timeline aggregation shows “Routes I run most often”, the title should be “Most common routes”, rather than “My favorite routes”. If you’re using “favorite”, make sure there is an action on your site that clearly indicates the favorite sentiment.</p>
+</li>
+<li>
+<p>
+<strong>Think about what people want to share</strong> - Users will add aggregations to their Timeline that positively reflect their daily activities and add value to their identity. Consider the actions on your application that users will be proud to share with their friends.</p>
+</li>
+</ul>
+<hr />
+<h2 id="activation">Activating Users</h2>
+<p>To drive activation and optimization for your Open Graph application, follow these best practices:</p>
+<h3>Encourage engagement and activation with Timeline Aggregations</h3>
+<p>As a user’s Timeline becomes more and more central to their Facebook experience, be sure you’re maximizing your ability to activate users through Timeline aggregations. When a user adds your Timeline aggregation to their Timeline, a <strong>Perforated aggregation</strong> appears on the user’s Timeline for 1-2 weeks to encourage users to begin engaging with your App. This aggregation is only visible to the user. In order to take advantage of the Perforated aggregation, your app should create a “getting started” flow for new users that is optimized for sharing actions. Perforated aggregation will help to keep your new users engaged.</p>
+<p>By creating the <strong>optimized new user flow</strong>, your Timeline aggregations will also get an “Add to My Timeline” link which will be visible to the user’s friends. If the user hasn’t authorized your app, the “Add to My Timeline” link will trigger an in-line permission dialog and the new user will be sent to the “Getting Started” URL for your app.</p>
+<h3>Analyze with Facebook Insights and promote with Sponsored Stories</h3>
+<p>
+<strong>Facebook Insights</strong>
+</p>
+<p>Insights enables Facebook Platform developers to measure and optimize the performance of their apps on Facebook. Using Insights, you’ll be able to measure user feedback on the stories published based on:</p>
+<ul>
+<li>All actions published</li>
+<li>Action Types and Object Types</li>
+<li>Timeline aggregations</li>
+</ul>
+<p>To see metrics on your Facebook Page or Platform app, go to the Insights Dashboard. Only Page administrators, app owners, and domain administrators can view Insights data for the properties they own or administer.</p>
+<p>Read more about <a href="/docs/beta/opengraph/analytics/" name="https://developers.facebook.com/docs/beta/opengraph/analytics/">Analytics for Open Graph</a>.</p>
+<p>
+<strong>Sponsored Stories</strong>
+</p>
+<p>When someone interacts with an app on Facebook, a story about their activity is generated and appears on News Feed and Ticker on their friends’ Timelines, which will drive new users to discover your app. Given the volume of sharing on Facebook, those stories may or may not be seen by some users.</p>
+<p>To drive additional distribution for your app and trigger more viral action, consider supplementing your app’s natural distribution with Sponsored Stories. Sponsored Stories is a Facebook product that helps you promote the organic interactions between people and your business by increasing their visibility within News Feed.</p>
+<p>Your app generates a myriad of stories, from Page Likes and Page Post Likes to Apps used/game played to Apps shared. With Sponsored Stories APIs, you can boost any story of your choosing and ensure distribution.</p>
+<p>To learn more about Sponsored Stories and benefits, visit our <a href="https://www.facebook.com/business/sponsoredstories" name="https://www.facebook.com/business/sponsoredstories">Sponsored Stories Center</a>.</p>
+<hr />
+<h2 id="user-controls">User Controls</h2>
+<p>To create the best possible experience for users, consider the following best practices for publishing and creating appropriate user controls in your app.</p>
+<h3>User Controls for Publishing</h3>
+<ul>
+<li>
+<p>
+<strong>Be clear about how and when you’ll publish to a user’s Timeline</strong> - Publish users’ actions on your site the moment they happen. Be sure you are very clear which information will be published and when. After actions are published, give users the option to remove the action or manage their sharing settings on your website.</p>
+</li>
+<li>
+<p>
+<strong>Ask permission to share especially sensitive content</strong> - If your app will generate content that you anticipate some users may find sensitive (for example, an exercise app that involves weight or calories consumed), ask users to confirm before publishing that specific piece of content or limit the privacy of those posts to the user only.</p>
+</li>
+<li>
+<p>
+<strong>Accurately convey the functionality of Timeline aggregations to your users</strong> - Make sure that users are aware that a Timeline aggregation can share actions and metadata from your application to their Timeline after they grant permission, and give users granular control on what exactly will be shared.</p>
+</li>
+</ul>
+<h3>User controls in your app</h3>
+<p>We expect partners to create ways for people to control their data. It’s important that users understand when they’re sharing their activity, and how you implement sharing controls depends on your website and users’ expectations. For example:</p>
+<ul>
+<li>
+<p>
+<strong>Social apps where sharing is part of the core experience</strong> - Sharing controls might be not be needed or might be most applicable in an account settings area. For example, a site might not need controls if all activity is understood to be public. However, if a site lets people customize the visibility of certain types of content like photos and check-ins, perhaps the sharing control should be implemented at an account-level.</p>
+</li>
+<li>
+<p>
+<strong>Established applications now incorporating Open Graph</strong> - More explicit sharing controls may be more important in these cases. For example, a website that creates a story every time a user reads an article or watches a video may want to show a sharing toggle to remind users that they’re connected to Facebook and give them the ability to temporarily disable sharing.</p>
+</li>
+</ul>
+<p>Certain types of apps may want to give users the option to temporarily enter an “incognito” mode where their activity isn’t posted to their Timeline. Sharing controls can take a variety of forms (e.g. green/red indicators, toggles, radio buttons, etc.), and they should always reflect your website’s design, not the design of Facebook.</p>
+<p>If a user turns off sharing on your site, you should carefully consider the user’s objectives to determine if you should give them the ability to delete the last action and the state of the feature the next time the user returns.</p>
+<p>Some apps build a way for users to see all the actions published from the app and give users the ability to delete or change the privacy of specific posts. If you choose to do this, you must update Facebook so the changes are properly reflected on user Timelines.</p>
+<p>Developers are responsible for respecting the privacy of users’ posts in their applications (e.g., surfacing friends-only posts to only a users’ friends) and restricting personal information from being scraped by search engines.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/bestpractices/tips-open-graph/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1335819063" title="2012年4月30日 13:51">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

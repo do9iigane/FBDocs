@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/authentication/reauthentication/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/authentication/reauthentication/">https://developers.facebook.com/docs/authentication/reauthentication/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/server-side/" name="http://developers.facebook.com/docs/authentication/server-side/">Server-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/client-side/" name="http://developers.facebook.com/docs/authentication/client-side/">Client-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/ios/" name="http://developers.facebook.com/docs/authentication/ios/">Authentication in native iOS apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/android/" name="http://developers.facebook.com/docs/authentication/android/">Authentication in native Android apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pages/" name="http://developers.facebook.com/docs/authentication/pages/">Authenticating as a Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/applications/" name="http://developers.facebook.com/docs/authentication/applications/">Authenticating as an App</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/devices/" name="http://developers.facebook.com/docs/authentication/devices/">Authentication for Devices</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/canvas/" name="http://developers.facebook.com/docs/authentication/canvas/">Authentication within a Canvas Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pagetab/" name="http://developers.facebook.com/docs/authentication/pagetab/">Authentication within a Page Tab</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/access-token-expiration/" name="http://developers.facebook.com/docs/authentication/access-token-expiration/">Handling Invalid and Expired Access Tokens</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/permissions/" name="http://developers.facebook.com/docs/authentication/permissions/">Permissions Reference</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/publishing/" name="http://developers.facebook.com/docs/publishing/">Publishing Permissions</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/authentication/reauthentication/" name="http://developers.facebook.com/docs/authentication/reauthentication/">Re-Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/signed_request/" name="http://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Re-Authentication</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">Authentication</a> › <a href="/docs/authentication/reauthentication/" name="https://developers.facebook.com/docs/authentication/reauthentication/">Re-Authentication</a>
+</div>
+</div>
+</div>
+<p>In some applications, you may want to double-check the user&apos;s identity - perhaps before they make a purchase, or change some personal data. Re-authentication allows you to force the user to re-enter their Facebook password before they&apos;re passed back to your app.</p>
+<p>You can build re-authentication into both the <a href="#server-side" name="https://developers.facebook.com/docs/#server-side">server-side</a> and <a href="#client-side" name="https://developers.facebook.com/docs/#client-side">client-side</a> web-based authentication flows.</p>
+<h2 id="server-side">Server-side flow</h2>
+<p>This method is to be used alongside the full <a href="/docs/authentication/server-side" name="https://developers.facebook.com/docs/authentication/server-side">server-side authentication flow</a>.</p>
+<p>We have added two additional parameters that you can pass into the authentication request (at <code>https://www.facebook.com/dialog/oauth</code> or <code>https://graph.facebook.com/oauth/authorize</code>) to prompt this dialog:</p>
+<p>
+<code>auth_type</code>: this parameter specifies the requested authentication features (as a comma-separated list). Valid options are:</p>
+<ul>
+<li>
+<code>https</code> - checks for the presence of the secure cookie and asks for re-authentication if it is not present</li>
+<li>
+<code>reauthenticate</code> - asks the user to re-authenticate unconditionally</li>
+</ul>
+<p>
+<code>auth_nonce</code>: specifies an app-generated <a href="http://en.wikipedia.org/wiki/Cryptographic_nonce" name="http://en.wikipedia.org/wiki/Cryptographic_nonce">alphanumeric nonce</a> which can be used to provide replay protection. This parameter is optional, but apps are strongly encouraged to use it especially when requesting <code>reauthenticate</code> as <code>auth_type</code>
+</p>
+<pre>
+<code>&lt;?php 
+
+$app_id = &quot;YOUR_APP_ID&quot;;
+$app_secret = &quot;YOUR_APP_SECRET&quot;;
+$my_url = &quot;YOUR_APP_URL&quot;;
+$auth_nonce = &quot;YOUR_AUTH_NONCE&quot;;
+
+$code = $_REQUEST[&quot;code&quot;];  
+
+// Check to see if reauth button was clicked, 
+// if so prompt re-auth dialog
+if(!empty($_REQUEST[&apos;reauth&apos;]))
+{
+    $dialog_url = &quot;https://www.facebook.com/dialog/oauth?client_id=&quot;
+                . $app_id . &quot;&amp;redirect_uri=&quot; . urlencode($my_url) 
+                . &apos;&amp;auth_type=reauthenticate&amp;auth_nonce=&apos; . $auth_nonce;
+     echo(&quot;&lt;script&gt; top.location.href=&apos;&quot; . $dialog_url . &quot;&apos;&lt;/script&gt;&quot;);
+}
+
+if($_REQUEST[&apos;error&apos;]) { 
+    // User did not reauthenticate successfully
+    echo $_REQUEST[&apos;error&apos;] . &quot;: &quot; . $_REQUEST[&apos;error_description&apos;];
+    echo &apos;&lt;p&gt;&apos;;
+    return;
+}
+
+$token_url = &quot;https://graph.facebook.com/oauth/access_token?&quot;
+           . &quot;client_id=&quot; . $app_id . &quot;&amp;redirect_uri=&quot; . urlencode($my_url)
+           . &quot;&amp;client_secret=&quot; . $app_secret . &quot;&amp;code=&quot; . $code;
+
+$access_token = file_get_contents($token_url);
+
+$params = null;
+parse_str($access_token, $params);
+
+if($params[&apos;auth_nonce&apos;]==$auth_nonce) {    
+    echo(&quot;Hello again! You were re-authenticated.&quot;);
+    echo &apos;&lt;p&gt;&apos;;
+    return;
+}
+
+$graph_url = &quot;https://graph.facebook.com/me?&quot; . $access_token;
+
+$user = json_decode(file_get_contents($graph_url));
+
+echo(&quot;Hello &quot; . $user-&gt;name);
+echo &apos;&lt;p&gt;&apos;; 
+
+// Check if code is empty (when user first hits page) 
+// Prompt user to auth
+if(empty($code)) {
+    $dialog_url = &quot;https://www.facebook.com/dialog/oauth?client_id=&quot; 
+                . $app_id . &quot;&amp;redirect_uri=&quot; . urlencode($my_url);
+
+    echo(&quot;&lt;script&gt; top.location.href=&apos;&quot; . $dialog_url . &quot;&apos;&lt;/script&gt;&quot;);
+}
+
+?&gt;
+
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form action=&quot;YOUR_APP_URL&quot;&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;reauth&quot; value=&quot;true&quot; /&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Re-authenticate&quot; /&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<h2 id="client-side">Client-side flow</h2>
+<p>This method is to be used alongside the full <a href="/docs/authentication/client-side" name="https://developers.facebook.com/docs/authentication/client-side">client-side authentication flow</a>.</p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+&lt;button id=&quot;fb-login&quot; onclick=&quot;login()&quot;&gt;Login&lt;/button&gt;
+&lt;script&gt;
+  var button = document.getElementById(&apos;fb-login&apos;);
+
+  // For help with AJAX, see http://www.w3schools.com/Ajax/Default.Asp
+  function checkNonce(access_token) {
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+      {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+      }
+    else
+      {// code for IE6, IE5
+      xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+      }
+    xmlhttp.onreadystatechange=function() {
+      if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)
+        {
+          if (xmlhttp.responseText == 1) {
+            console.log(&apos;The user has been successfully &apos; +
+                               &apos;re-authenticated.&apos;);
+          } else {
+            console.log(&apos;The nonce has been used before. &apos; +
+                               &apos;Re-authentication failed.&apos;);
+          }
+        }
+    }
+    xmlhttp.open(&apos;POST&apos;,&apos;checkNonce.php&apos;,true);
+    xmlhttp.setRequestHeader(&apos;Content-type&apos;,
+      &apos;application/x-www-form-urlencoded&apos;);
+    xmlhttp.send(&apos;access_token=&apos; + access_token);
+  }
+
+  function login(){
+    FB.login(function(response) {
+      if (response) {
+        console.log(&apos;Login success. Checking auth_nonce...&apos;);
+        checkNonce(response.session.access_token);
+      } else {
+          console.log(&apos;Login cancelled.&apos;)
+      }
+    }, { auth_type: &apos;reauthenticate&apos;, auth_nonce: &apos;abcd1234&apos; });
+  }
+
+  window.fbAsyncInit = function() {
+    FB.init({appId: &apos;YOUR_APP_ID&apos;, status: true, cookie: true,
+             xfbml: true});
+    FB.getLoginStatus(function(response) {
+      if (response.session) {
+        button.innerHTML = &apos;Re-Authenticate&apos;;
+        console.log(&apos;User is logged in.&apos;);
+      } else {
+          console.log(&apos;User is not logged in.&apos;);
+      }
+    });
+  };
+  (function() {
+    var e = document.createElement(&apos;script&apos;); e.async = true;
+    e.src = document.location.protocol +
+      &apos;//connect.facebook.net/en_US/all.js&apos;;
+    document.getElementById(&apos;fb-root&apos;).appendChild(e);
+  }());
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>
+<i>checkNonce.php</i>
+</p>
+<pre>
+&lt;?php
+
+    $access_token = $_REQUEST[&apos;access_token&apos;];
+    $graph_url = &apos;https://graph.facebook.com/oauth/access_token_info?&apos;
+        . &apos;client_id=YOUR_APP_ID&amp;access_token=&apos; . $access_token;
+    $access_token_info = json_decode(file_get_contents($graph_url));
+
+    function nonceHasBeenUsed($auth_nonce) {
+        // Here you would check your database to see if the nonce
+        // has been used before. For the sake of this example, we&apos;ll
+        // just assume the answer is &quot;no&quot;.
+        return false;
+    }
+
+    if (nonceHasBeenUsed($access_token_info-&gt;auth_nonce) != true) {
+        echo &apos;1&apos;;
+     } else {
+        echo &apos;0&apos;;
+     }
+?&gt;
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/authentication/reauthentication/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1332174725" title="2012年3月19日 9:32">約3ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

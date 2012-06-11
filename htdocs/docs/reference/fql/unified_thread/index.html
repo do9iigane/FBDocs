@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/fql/unified_thread/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/fql/unified_thread/">https://developers.facebook.com/docs/reference/fql/unified_thread/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Tables</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/album/" name="http://developers.facebook.com/docs/reference/fql/album/">album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/application/" name="http://developers.facebook.com/docs/reference/fql/application/">application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/apprequest/" name="http://developers.facebook.com/docs/reference/fql/apprequest/">apprequest</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/checkin/" name="http://developers.facebook.com/docs/reference/fql/checkin/">checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comment/" name="http://developers.facebook.com/docs/reference/fql/comment/">comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comments_info/" name="http://developers.facebook.com/docs/reference/fql/comments_info/">comments_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/connection/" name="http://developers.facebook.com/docs/reference/fql/connection/">connection</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/cookies/" name="http://developers.facebook.com/docs/reference/fql/cookies/">cookies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/developer/" name="http://developers.facebook.com/docs/reference/fql/developer/">developer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain/" name="http://developers.facebook.com/docs/reference/fql/domain/">domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain_admin/" name="http://developers.facebook.com/docs/reference/fql/domain_admin/">domain_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event/" name="http://developers.facebook.com/docs/reference/fql/event/">event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event_member/" name="http://developers.facebook.com/docs/reference/fql/event_member/">event_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/family/" name="http://developers.facebook.com/docs/reference/fql/family/">family</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend/" name="http://developers.facebook.com/docs/reference/fql/friend/">friend</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend_request/" name="http://developers.facebook.com/docs/reference/fql/friend_request/">friend_request</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist/" name="http://developers.facebook.com/docs/reference/fql/friendlist/">friendlist</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist_member/" name="http://developers.facebook.com/docs/reference/fql/friendlist_member/">friendlist_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group/" name="http://developers.facebook.com/docs/reference/fql/group/">group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group_member/" name="http://developers.facebook.com/docs/reference/fql/group_member/">group_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/insights/" name="http://developers.facebook.com/docs/reference/fql/insights/">insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/like/" name="http://developers.facebook.com/docs/reference/fql/like/">like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/links/" name="http://developers.facebook.com/docs/reference/fql/links/">link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/link_stat/" name="http://developers.facebook.com/docs/reference/fql/link_stat/">link_stat</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/location_post/" name="http://developers.facebook.com/docs/reference/fql/location_post/">location_post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/mailbox_folder/" name="http://developers.facebook.com/docs/reference/fql/mailbox_folder/">mailbox_folder</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/message/" name="http://developers.facebook.com/docs/reference/fql/message/">message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notes/" name="http://developers.facebook.com/docs/reference/fql/notes/">note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notification/" name="http://developers.facebook.com/docs/reference/fql/notification/">notification</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/object_url/" name="http://developers.facebook.com/docs/reference/fql/object_url/">object_url</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/offer/" name="http://developers.facebook.com/docs/reference/fql/offer/">offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page/" name="http://developers.facebook.com/docs/reference/fql/page/">page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_admin/" name="http://developers.facebook.com/docs/reference/fql/page_admin/">page_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_blocked_user/" name="http://developers.facebook.com/docs/reference/fql/page_blocked_user/">page_blocked_user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_fan/" name="http://developers.facebook.com/docs/reference/fql/page_fan/">page_fan</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/life_event/" name="http://developers.facebook.com/docs/reference/fql/life_event/">page_milestone</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions/" name="http://developers.facebook.com/docs/reference/fql/permissions/">permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions_info/" name="http://developers.facebook.com/docs/reference/fql/permissions_info/">permissions_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo/" name="http://developers.facebook.com/docs/reference/fql/photo/">photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_src/" name="http://developers.facebook.com/docs/reference/fql/photo_src/">photo_src</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_tag/" name="http://developers.facebook.com/docs/reference/fql/photo_tag/">photo_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/place/" name="http://developers.facebook.com/docs/reference/fql/place/">place</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy/" name="http://developers.facebook.com/docs/reference/fql/privacy/">privacy</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy_setting/" name="http://developers.facebook.com/docs/reference/fql/privacy_setting/">privacy_setting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile/" name="http://developers.facebook.com/docs/reference/fql/profile/">profile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile_tab/" name="http://developers.facebook.com/docs/reference/fql/profile_tab/">profile_view</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question/" name="http://developers.facebook.com/docs/reference/fql/question/">question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option/" name="http://developers.facebook.com/docs/reference/fql/question_option/">question_option</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option_votes/" name="http://developers.facebook.com/docs/reference/fql/question_option_votes/">question_option_votes</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/review/" name="http://developers.facebook.com/docs/reference/fql/review/">review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_friend_info/" name="http://developers.facebook.com/docs/reference/fql/standard_friend_info/">standard_friend_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_user_info/" name="http://developers.facebook.com/docs/reference/fql/standard_user_info/">standard_user_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/status/" name="http://developers.facebook.com/docs/reference/fql/status/">status</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream/" name="http://developers.facebook.com/docs/reference/fql/stream/">stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_filter/" name="http://developers.facebook.com/docs/reference/fql/stream_filter/">stream_filter</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_tag/" name="http://developers.facebook.com/docs/reference/fql/stream_tag/">stream_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/subscription/" name="http://developers.facebook.com/docs/reference/fql/subscription/">subscription</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/thread/" name="http://developers.facebook.com/docs/reference/fql/thread/">thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/translation/" name="http://developers.facebook.com/docs/reference/fql/translation/">translation</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_message/" name="http://developers.facebook.com/docs/reference/fql/unified_message/">unified_message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread/" name="http://developers.facebook.com/docs/reference/fql/unified_thread/">unified_thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_action/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_action/">unified_thread_action</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_count/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_count/">unified_thread_count</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/url_like/" name="http://developers.facebook.com/docs/reference/fql/url_like/">url_like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/user/" name="http://developers.facebook.com/docs/reference/fql/user/">user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video/" name="http://developers.facebook.com/docs/reference/fql/video/">video</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video_tag/" name="http://developers.facebook.com/docs/reference/fql/video_tag/">video_tag</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>unified_thread</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a> › <a href="/docs/reference/fql/unified_thread/" name="https://developers.facebook.com/docs/reference/fql/unified_thread/">unified_thread</a>
+</div>
+</div>
+</div>
+<table style="background-color: #F2F2F2; margin-bottom: 2em;">
+<tr>
+<td>
+<b>Please note:</b> We are in the process of making the new messages system available to all users, at which point this table will replace the existing thread table. We are providing early access to this API <b>for registered developer accounts only</b> until the new messaging system is broadly available. You should use the thread table for production applications at the current time.</td>
+</tr>
+</table>
+<p>Access information about threads in the new Facebook messaging system.</p>
+<p>Access to this table requires the <code>read_mailbox</code> extended permission.</p>
+<h2>コラム</h2>
+<table class="params columns">
+<tr>
+<th>インデックス可能</th>
+<th>名前</th>
+<th>タイプ</th>
+<th>説明</th>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">action_id</td>
+<td class="type">string</td>
+<td>
+<p>Unique numeric version identifier for the thread. Guaranteed to increase as the thread is modified.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">archived</td>
+<td class="type">bool</td>
+<td>
+<p>Flag indicating whether the thread is archived.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">can_reply</td>
+<td class="type">bool</td>
+<td>
+<p>Flag indicating whether the user can reply to the thread.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">folder</td>
+<td class="type">string</td>
+<td>
+<p>Folder name (‘inbox’, ‘other’ or ‘spam’).</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">former_participants</td>
+<td class="type">array</td>
+<td>
+<p>List of former participants who have unsubscribed from the thread. Each element of the list is an object with properties <code>name</code> (string), <code>email</code> (string) and <code>user_id</code> (string).</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">has_attachments</td>
+<td class="type">bool</td>
+<td>
+<p>Flag indicating whether the thread contains a message which includes an attachment.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">is_subscribed</td>
+<td class="type">bool</td>
+<td>
+<p>Flag indicating whether user is subscribed to the thread. Only applicable to threads with multiple participants where user can leave the conversation.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">last_visible_add_action_id</td>
+<td class="type">string</td>
+<td>
+<p>Version identifier corresponding to one of the following actions: new message in thread, new thread participant, participant left the thread.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">name</td>
+<td class="type">string</td>
+<td>
+<p>Name of the thread. Only applicable to threads with more than two participants.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">num_messages</td>
+<td class="type">int</td>
+<td>
+<p>Total number of messages in the thread.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">num_unread</td>
+<td class="type">int</td>
+<td>
+<p>Number of unread messages.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">object_participants</td>
+<td class="type">array</td>
+<td>
+<p>List of participants who represent a Facebook page, group or event. Each element of the list is an object with properties <code>object_address_type</code> (int) and <code>id</code> (string).</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">participants</td>
+<td class="type">array</td>
+<td>
+<p>List of participants who are currently subscribed to the thread. Each element of the list is an object with properties <code>name</code> (string), <code>email</code> (string) and <code>user_id</code> (string).</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">senders</td>
+<td class="type">array</td>
+<td>
+<p>List of participants who have sent a message in the thread. Each element of the list is an object with properties <code>name</code> (string), <code>email</code> (string) and <code>user_id</code> (string).</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">single_recipient</td>
+<td class="type">string</td>
+<td>
+<p>For threads representing a two-person conversation this is the user ID of the other thread participant.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">snippet</td>
+<td class="type">string</td>
+<td>
+<p>Fragment of the thread for use in thread lists.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">snippet_sender</td>
+<td class="type">array</td>
+<td>
+<p>An object with properties <code>name</code> (string), <code>email</code> (string) and <code>user_id</code> (string) of the sender.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">snippet_message_has_attachment</td>
+<td class="type">bool</td>
+<td>
+<p>Flag indicating whether the thread contains a message which includes an attachment.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">subject</td>
+<td class="type">string</td>
+<td>
+<p>Subject of the thread.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">tags</td>
+<td class="type">array</td>
+<td>
+<p>Thread tags. See below.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">thread_id</td>
+<td class="type">string</td>
+<td>
+<p>Unique identifier of the thread.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">thread_participants</td>
+<td class="type">array</td>
+<td>
+<p>List of participants who are currently subscribed to the thread. Each element of the list is an object with properties name (string), email (string) and user_id (string).</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">timestamp</td>
+<td class="type">string</td>
+<td>
+<p>Last update time of the thread (Unix-type timestamp with millisecond resolution).</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">unread</td>
+<td class="type">bool</td>
+<td>
+<p>Flag indicating whether the thread contains unread messages.</p>
+</td>
+</tr>
+</table>
+<h2>導入例</h2>
+<div class="fql_example">
+<div class="description">
+<p>Get threads from the user&apos;s inbox</p>
+</div>
+<div class="code">
+<pre>SELECT ... FROM unified_thread WHERE has_tags(&apos;inbox&apos;)</pre>
+</div>
+</div>
+<div class="fql_example">
+<div class="description">
+<p>Get unread threads from the user&apos;s &apos;other&apos; folder</p>
+</div>
+<div class="code">
+<pre>SELECT ... FROM unified_thread WHERE has_tags(&apos;other&apos;) AND unread=1</pre>
+</div>
+</div>
+<div class="fql_example">
+<div class="description">
+<p>Get threads containing the word &apos;hey&apos;</p>
+</div>
+<div class="code">
+<pre>SELECT ... FROM unified_thread WHERE CONTAINS(&apos;hey&apos;)</pre>
+</div>
+</div>
+<div class="fql_example">
+<div class="description">
+<p>Get the two person conversation thread with user 1234</p>
+</div>
+<div class="code">
+<pre>SELECT ... FROM unified_thread WHERE single_recipient=1234</pre>
+</div>
+</div>
+<div class="fql_example">
+<div class="description">
+<p>Get inbox threads updated since the beginning of 2010</p>
+</div>
+<div class="code">
+<pre>SELECT ... FROM unified_thread WHERE has_tags(&apos;inbox&apos;) and timestamp &gt;= 1262332800000</pre>
+</div>
+</div>
+<div class="fql_example">
+<div class="description">
+<p>Get inbox threads using folder name</p>
+</div>
+<div class="code">
+<pre>select ... from unified_thread where folder=&apos;inbox&apos;</pre>
+</div>
+</div>
+<h2>利用時の注意事項</h2>
+<p>Not all syntactically valid queries are supported. The constraints are:</p>
+<ul>
+<li>the WHERE clause must specify a value for thread_id or single_recipient or contain a `has_tags` call with one of the folder tags (‘inbox’, ‘other’, ‘spam’) or contain a CONTAINS predicate</li>
+<li>the WHERE clause must be a conjunction (boolean AND) of constraints on the fields marked as indexable (e.g. you cannot specify constraints based on the subject, etc.)</li>
+<li>the results can only be ordered by timestamp (ascending or descending)</li>
+<li>you should always specify a limit. If unspecified the default is to return at most 20 results</li>
+</ul>
+<h3>Tags</h3>
+<p>Each thread has a set of tags which contain information about the thread. Tags can denote a messaging folder (<code>inbox</code>, <code>other</code>, <code>spam</code>), the source of the thread (<code>source:web</code>, <code>source:mobile</code>, <code>source:chat</code>, <code>source:email</code>), whether the thread is archived (<code>archived</code>), whether all of the messages in the thread have been read (<code>read</code>), whether the viewer has sent a message in the thread (<code>sent</code>).</p>
+<h3>Functions</h3>
+<p>This table supports the special function <code>has_tags</code>. This function takes one or more parameters and evaluates to true for threads which contain all of the tags specified as parameters. Negated tags can be specified by prepending the ! (exclamation mark) character to the tag name.</p>
+<h2>参考情報:</h2>
+<ul>
+<li>
+<p>
+<a href="/docs/reference/fql/unified_thread_message" name="https://developers.facebook.com/docs/reference/fql/unified_thread_message">unified_thread_message</a>
+</p>
+</li>
+<li>
+<p>
+<a href="/docs/reference/fql/unified_thread_count" name="https://developers.facebook.com/docs/reference/fql/unified_thread_count">unified_thread_count</a>
+</p>
+</li>
+<li>
+<p>
+<a href="/docs/reference/fql/unified_thread_action" name="https://developers.facebook.com/docs/reference/fql/unified_thread_action">unified_thread_action</a>
+</p>
+</li>
+</ul>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/fql/unified_thread/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1318549678" title="2011年10月13日 16:47">約8ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/channels/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/channels/">https://developers.facebook.com/docs/channels/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a class="selected" href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Social Channels</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/channels/" name="https://developers.facebook.com/docs/channels/">Social Channels</a>
+</div>
+</div>
+</div>
+<p>One benefit of using Facebook Platform is the potential reach you have when Facebook users share content from your app or website with their friends. Because of the strength of a friend’s endorsement, communication through Facebook Platform can help high-quality products grow tremendously. This document provides an overview of the available channels, so you can choose the ones which make the most sense for your user experience. Unless noted, all channels will work for Websites, mobile and Apps on Facebook.com.</p>
+<p>
+<a name="feed">
+</a>
+</p>
+<h2>News Feed</h2>
+<p>The News Feed is shown immediately to users upon logging into Facebook, making it core to the Facebook experience. There are several ways you can publish content to the stream: <a href="#feeddialog" name="https://developers.facebook.com/docs/#feeddialog">Feed Dialog</a>, <a href="#feedobject" name="https://developers.facebook.com/docs/#feedobject">Feed Graph object</a> and <a href="#likebutton" name="https://developers.facebook.com/docs/#likebutton">Like Button</a>.</p>
+<p>
+<a name="feeddialog">
+</a> <b>Feed Dialog: Prompt Users to Publish</b>
+</p>
+<p>The recommended way to publish to the stream is with the <a href="/docs/reference/dialogs/feed" name="https://developers.facebook.com/docs/reference/dialogs/feed">Feed Dialog</a>. Without requiring users to log into your application or grant any special permission, you can prompt users to publish stories about what they are doing in your application. If a user chooses to publish, the story will appear on the user’s profile and may appear to the user’s friends’ News Feeds.</p>
+<p>Stories published from your application will include a link to your application, and can optionally include a rich attachment. Here is a basic example of how to prompt a user to publish a story:</p>
+<pre>
+<code>&lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;My Great Website&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+      &lt;script src=&quot;http://connect.facebook.net/en_US/all.js&quot;&gt;
+      &lt;/script&gt;
+      &lt;script&gt;
+         FB.init({ 
+            appId:&apos;YOUR_APP_ID&apos;, cookie:true, 
+            status:true, xfbml:true 
+         });
+
+         FB.ui({ method: &apos;feed&apos;, 
+            message: &apos;Facebook for Websites is super-cool&apos;});
+      &lt;/script&gt;
+     &lt;/body&gt;
+ &lt;/html&gt; 
+</code>
+</pre>
+<p>When this page is loaded in the user&apos;s browser, the JavaScript SDK will render the below dialog that the user can use to post to their feed. Read more about <a href="/docs/reference/dialogs/feed" name="https://developers.facebook.com/docs/reference/dialogs/feed">Feed Dialog</a> options including other defaults for the dialog, which the user can then modify or override prior to posting.</p>
+<p>The code above prompts the user with this dialog:</p>
+<p>
+<img alt="Web Dialog" src="https://developers.facebook.com/attachment/web_dialog.png" />
+</p>
+<p>
+<a name="feedobject">
+</a> <b>Feed Graph Object: Publish via the Graph API</b>
+</p>
+<p>There are some cases when you may want to provide a customized experience for publishing to the user&apos;s news feed. You can publish via the Graph API for users who have authorized your application and who have granted you the ‘publish_stream’ <a href="docs/reference/api/permissions/#extended_perms" name="https://developers.facebook.com/docs/docs/reference/api/permissions/#extended_perms">permission</a>. The available fields are the same as the feed dialog fields. The following POST action will render the same story as in the example above.</p>
+<p>For example, you can publish to a user&apos;s wall by issuing a POST request to <code>https://graph.facebook.com/&lt;username&gt;/feed</code>:</p>
+<pre>
+<code>curl -F &apos;access_token=...&apos; \
+     -F &apos;message=Facebook for Websites is super-cool.&apos; \
+     https://graph.facebook.com/&lt;username&gt;/feed
+</code>
+</pre>
+<p>Read the complete documentation on <a href="/docs/reference/api/post" name="https://developers.facebook.com/docs/reference/api/post">posting</a> and <a href="/docs/guides/attachments" name="https://developers.facebook.com/docs/guides/attachments">attachments</a> and also the <a href="/policy/" name="https://developers.facebook.com/policy/">Facebook Platform Policies</a>.</p>
+<p>
+<a name="likebutton">
+</a> <b>Like button</b>
+</p>
+<p>The <a href="/docs/reference/plugins/like" name="https://developers.facebook.com/docs/reference/plugins/like">Like button</a> lets your users easily share interesting content from your application or website back to Facebook. Like stories appear on users’ Wall and their friends’ News Feeds.</p>
+<p>In addition, if you specify meta information via the <a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph protocol</a>, your pages becomes equivalent to Facebook Pages. This means when a user clicks a Like button on your page, a connection is made between your page and the user. Your page will appear in the &quot;Likes and Interests&quot; section of the user&apos;s profile, and you have the ability to publish updates to the user’s News Feed.</p>
+<p>There are two Like button implementations: XFBML and Iframe. The XFBML version is more versatile, but requires use of the JavaScript SDK.</p>
+<p>
+<a name="requests">
+</a>
+</p>
+<h2>Requests</h2>
+<p>If you have built a Canvas or Mobile Web application, Requests are a great way to enable users to invite their friends to use your app. Requests integrate with Facebook notifications and dashboards, ensuring that a user will see the requests from their friends whenever they are on Facebook. You can also use requests to have a user notify their friends to take a specific action in your app, such as accepting a gift or helping the user complete a quest.</p>
+<p>There are two types of requests that can be sent from an app:</p>
+<ul>
+<li>
+<p>User-generated requests: These requests are confirmed by a user’s explicit action on a request dialog. These requests update the bookmark count for the recipient. You send requests by using the <a href="https://developers.facebook.com/blog/post/453" name="https://developers.facebook.com/blog/post/453">Request Dialog</a>.</p>
+</li>
+<li>
+<p>App-generated requests: These requests can be initiated and sent only to users who have authorized your app. Developers can send these requests using the Graph API. You should use these requests to update the bookmark count to encourage a user to re-engage in the app (e.g., your friend finished her move in a game and it’s now your turn).</p>
+</li>
+</ul>
+<p>The following HTML/JavaScript example shows how to create a User-generated request:</p>
+<pre>
+<code> &lt;html&gt;
+   &lt;head&gt;
+   &lt;title&gt;My Great Canvas app&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+   &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+   &lt;script src=&quot;http://connect.facebook.net/en_US/all.js&quot;&gt;
+   &lt;/script&gt;
+   &lt;script&gt;
+     FB.init({ 
+       appId:&apos;YOUR_APP_ID&apos;, cookie:true, 
+       status:true, xfbml:true 
+     });
+
+     FB.ui({ method: &apos;apprequests&apos;, 
+       message: &apos;Here is a new Requests dialog...&apos;});
+   &lt;/script&gt;
+   &lt;/body&gt;
+ &lt;/html&gt;
+</code>
+</pre>
+<p>This example uses the <a href="https://developers.facebook.com/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a> to render a <a href="https://developers.facebook.com/docs/reference/dialogs/requests/" name="https://developers.facebook.com/docs/reference/dialogs/requests/">Request Form</a>. When the above example is loaded, it results in the following request experience:</p>
+<p>
+<img alt="Request image" src="https://developers.facebook.com/attachment/new-requests.jpg" />
+</p>
+<p>If you prefer to have your app send requests directly to the user (an App-generated request), you post a request to the <code>apprequest</code> connection of the <code>User</code> Graph object:</p>
+<pre>
+<code>&lt;?php 
+
+  $app_id = YOUR_APP_ID;
+  $app_secret = YOUR_APP_SECRET;
+
+  $token_url = &quot;https://graph.facebook.com/oauth/access_token?&quot; .
+    &quot;client_id=&quot; . $app_id .
+    &quot;&amp;client_secret=&quot; . $app_secret .
+    &quot;&amp;grant_type=client_credentials&quot;;
+
+  $app_access_token = file_get_contents($token_url);
+
+  $user_id = THE_CURRENT_USER_ID;
+
+  $apprequest_url =&quot;https://graph.facebook.com/&quot; .
+    $user_id .
+    &quot;/apprequests?message=&apos;INSERT_UT8_STRING_MSG&apos;&quot; . 
+    &quot;&amp;data=&apos;INSERT_STRING_DATA&apos;&amp;&quot;  .   
+    $app_access_token . &quot;&amp;method=post&quot;;
+
+  $result = file_get_contents($apprequest_url);
+  echo(&quot;App Request sent?&quot;, $result);
+?&gt;
+</code>
+</pre>
+<p>The message parameter is a UTF-8 string which describes the request. The data parameter is a string which the app can use to store any relevant data in order to process the request.</p>
+<p>Once sent, new requests a user has received are visible as a counter on your application&apos;s <a href="#bookmarks" name="https://developers.facebook.com/docs/#bookmarks">bookmark</a> and it also increments the counter next to the appropriate <a href="#dashboards" name="https://developers.facebook.com/docs/#dashboards">Dashboard</a>.</p>
+<p>
+<img alt="Bookmark Counter" src="https://developers.facebook.com/attachment/bookmark_counter.png" />
+</p>
+<p>When the user clicks on the bookmark to load your Canvas or Mobile Web application, we are passed two parameters in the URL querystring: <code>ref</code> and <code>count</code> (i.e. ref=bookmarks&amp;count=1). The <code>ref</code> parameter contains the value &quot;bookmark&quot;. The <code>count</code> parameter will contain the total count set on the bookmark.</p>
+<p>When the user accepts your request via the dashboard, we pass the request id that they are acting on via the <code>request_ids</code> parameter. <a name="handling_requests">
+</a>
+</p>
+<p>A good common practice for Canvas Apps is to detect if a user has any requests pending when your application loads and then prompt the user to complete the actions associated with the requests before continuing. This way users don&apos;t have to process your requests out of the context of your app. You can determining all the pending requests for a given user by accessing the <code>apprequests</code> connection of the <a href="https://developers.facebook.com/docs/reference/api/user/" name="https://developers.facebook.com/docs/reference/api/user/">User Object</a> in the <a href="https://developers.facebook.com/docs/api/" name="https://developers.facebook.com/docs/api/">Graph API</a>.</p>
+<p>The following PHP example demonstrates how to access the pending requests for a user and then delete the requests once you have completed any associated actions:</p>
+<pre>
+<code> &lt;?php 
+
+   $app_id = &apos;YOUR_APP_ID&apos;;
+   $app_secret = &apos;YOUR_APP_SECRET&apos;;
+
+   $token_url = &quot;https://graph.facebook.com/oauth/access_token?&quot; .
+     &quot;client_id=&quot; . $app_id .
+     &quot;&amp;client_secret=&quot; . $app_secret .
+     &quot;&amp;grant_type=client_credentials&quot;;
+
+   $access_token = file_get_contents($token_url);
+
+   $signed_request = $_REQUEST[&quot;signed_request&quot;]; 
+   list($encoded_sig, $payload) = explode(&apos;.&apos;, $signed_request, 2);
+   $data = json_decode(base64_decode(strtr($payload, &apos;-_&apos;, &apos;+/&apos;)), true);
+   $user_id = $data[&quot;user_id&quot;];
+
+   //Get all app requests for user
+   $request_url =&quot;https://graph.facebook.com/&quot; .
+     $user_id .
+     &quot;/apprequests?&quot; .
+     $access_token;
+   $requests = file_get_contents($request_url);
+
+   //Print all outstanding app requests
+   echo &apos;&lt;pre&gt;&apos;;
+   print_r($requests);
+   echo &apos;&lt;/pre&gt;&apos;;
+
+   //Process and delete app requests
+   $data = json_decode($requests);
+   foreach($data-&gt;data as $item) {
+    $id = $item-&gt;id;
+    $delete_url = &quot;https://graph.facebook.com/&quot; .
+    $id . &quot;?&quot; . $access_token;
+
+    $delete_url = $delete_url . &quot;&amp;method=delete&quot;;
+    $result = file_get_contents($delete_url);
+    echo(&quot;Requests deleted? &quot; . $result);
+   }
+ ?&gt;
+</code>
+</pre>
+<p>
+<a name="automatic">
+</a>
+</p>
+<h2>Automatic Channels</h2>
+<p>To drive more traffic to Facebook Platform applications and websites, in addition to the channels above, we enable some distribution automatically as people use your applications. You do not need to do anything extra to enable this distribution. Each automatic channel is designed to help engage users and our algorithms help surface the best content for each user. As Facebook evolves as a product, expect these channels to change and improve. The current automatic channels include:</p>
+<ul>
+<li>
+<a herf="#bookmarks">Bookmarks</a>
+</li>
+<li>
+<a href="#notifications" name="https://developers.facebook.com/docs/#notifications">Notifications</a>
+</li>
+<li>
+<a href="#dashboards" name="https://developers.facebook.com/docs/#dashboards">Dashboards</a>
+</li>
+<li>
+<a href="#stories" name="https://developers.facebook.com/docs/#stories">Usage Stories</a>
+</li>
+<li>
+<a href="#profiles" name="https://developers.facebook.com/docs/#profiles">Search</a>
+</li>
+</ul>
+<p>
+<a name="bookmarks">
+</a> <b>Bookmarks</b>
+</p>
+<p>Bookmarks enable users to easily navigate back to your application from within Facebook. If your app has a Canvas URL set, a bookmark will appear in the left column of the homepage as well as on the top right of a Canvas page itself. If your app has a Mobile Web URL set, a bookmark will appear within the navigation of Facebook&apos;s iOS and Android native apps, as well as on m.facebook.com. If your app has an iOS bundle set, and your iOS app is enabled with Facebook SSO, the bookmark within Facebook&apos;s iOS app will provide distribution to your iOS native app directly.</p>
+<p>
+<img alt="Bookmark" src="https://developers.facebook.com/attachment/bookmark.png" />
+</p>
+<p>
+<a name="notifications">
+</a> <b>Notifications</b>
+</p>
+<p>Notifications on Facebook are meant to provide prominent but lightweight heads-up about interesting changes to content relevant to users. Requests send from within your Canvas, Mobile Web or native mobile app may trigger a notification to users who will find it relevant.</p>
+<p>
+<img alt="Request notification" src="https://developers.facebook.com/attachment/requests_notification.png" />
+</p>
+<p>
+<a name="dashboards">
+</a> <b>Dashboards</b>
+</p>
+<p>Apps on Facebook.com (Canvas apps) have the opportunity to appear on one of two dashboards -- the <a href="https://www.facebook.com/?sk=apps" name="https://www.facebook.com/?sk=apps">Apps Dashboards</a> and the <a href="https://www.facebook.com/games" name="https://www.facebook.com/games">Games Dashboard</a>. Dashboards appear as bookmarked links on Facebook&apos;s homepage and shows users outstanding requests, apps they&apos;ve recently used and apps their friends have recently used. The <a href="https://www.facebook.com/apps" name="https://www.facebook.com/apps">Application Directory</a> is also accessible from the Dashboard.</p>
+<p>
+<a name="stories">
+</a> <b>Usage Stories</b>
+</p>
+<p>Many actions on Facebook are shared with friends. Similarly, a variety of feed stories may be published to share with users the popular Canvas applications their friends are using. These stories are typically targeted at people who have not used your application to provide a way for new users to discover your application.</p>
+<p>
+<a name="profiles">
+</a> <b>Search</b>
+</p>
+<p>When over 10 people have used your application, it will automatically be submitted to Facebook&apos;s search index. This allows new users who have heard of your application to find it, and gives existing users a quick way to get back to your app again.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/channels/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1327926149" title="2012年1月30日 4:22">約4ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

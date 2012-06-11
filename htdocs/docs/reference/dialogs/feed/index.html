@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/dialogs/feed/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/dialogs/feed/">https://developers.facebook.com/docs/reference/dialogs/feed/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a class="selected" href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Dialogs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/add_to_page/" name="http://developers.facebook.com/docs/reference/dialogs/add_to_page/">Add Page Tab Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/feed/" name="http://developers.facebook.com/docs/reference/dialogs/feed/">Feed Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/friends/" name="http://developers.facebook.com/docs/reference/dialogs/friends/">Friends Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/oauth/" name="http://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/pay/" name="http://developers.facebook.com/docs/reference/dialogs/pay/">Pay Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/requests/" name="http://developers.facebook.com/docs/reference/dialogs/requests/">Requests Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/send/" name="http://developers.facebook.com/docs/reference/dialogs/send/">Send Dialog</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Feed Dialog</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a> › <a href="/docs/reference/dialogs/feed/" name="https://developers.facebook.com/docs/reference/dialogs/feed/">Feed Dialog</a>
+</div>
+</div>
+</div>
+<h2>Overview</h2>
+<p>The Feed Dialog prompts the user to publish an individual story to a profile&apos;s feed. This does not require any extended permissions.</p>
+<p>Your application can also publish directly to a profile&apos;s feed without user interaction, use the corresponding <a href="#graphapicall" name="https://developers.facebook.com/docs/#graphapicall">Graph API call</a>.</p>
+<h2>JavaScript Example</h2>
+<p>The following simple JavaScript example demonstrates using the <code>FB.ui</code> method in the JavaScript SDK to use the Feed Dialog:</p>
+<pre>
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+  xmlns:fb=&quot;https://www.facebook.com/2008/fbml&quot;&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Feed Dialog Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&apos;fb-root&apos;&gt;&lt;/div&gt;
+    &lt;script src=&apos;http://connect.facebook.net/en_US/all.js&apos;&gt;&lt;/script&gt;
+    &lt;p&gt;&lt;a onclick=&apos;postToFeed(); return false;&apos;&gt;Post to Feed&lt;/a&gt;&lt;/p&gt;
+    &lt;p id=&apos;msg&apos;&gt;&lt;/p&gt;
+
+    &lt;script&gt; 
+      FB.init({appId: &quot;YOUR_APP_ID&quot;, status: true, cookie: true});
+
+      function postToFeed() {
+
+        // calling the API ...
+        var obj = {
+          method: &apos;feed&apos;,
+          link: &apos;https://developers.facebook.com/docs/reference/dialogs/&apos;,
+          picture: &apos;http://fbrell.com/f8.jpg&apos;,
+          name: &apos;Facebook Dialogs&apos;,
+          caption: &apos;Reference Documentation&apos;,
+          description: &apos;Using Dialogs to interact with users.&apos;
+        };
+
+        function callback(response) {
+          document.getElementById(&apos;msg&apos;).innerHTML = &quot;Post ID: &quot; + response[&apos;post_id&apos;];
+        }
+
+        FB.ui(obj, callback);
+      }
+    
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>Note that the above example assumes that the user is already logged in and has authorized your application.</p>
+<h2>Direct URL Example</h2>
+<p>You can also bring up a Feed Dialog by explicitly directing the user to the <code>/dialog/feed</code> endpoint:</p>
+<pre>
+https://www.facebook.com/dialog/feed?
+  app_id=123050457758183&amp;
+  link=https://developers.facebook.com/docs/reference/dialogs/&amp;
+  picture=http://fbrell.com/f8.jpg&amp;
+  name=Facebook%20Dialogs&amp;
+  caption=Reference%20Documentation&amp;
+  description=Using%20Dialogs%20to%20interact%20with%20users.&amp;
+  redirect_uri=http://www.example.com/response
+</pre>
+<p>Click <a href="https://www.facebook.com/dialog/feed?app_id=123050457758183&amp;link=https://developers.facebook.com/docs/reference/dialogs/&amp;picture=http://fbrell.com/f8.jpg&amp;name=Facebook%20Dialogs&amp;caption=Reference%20Documentation&amp; description=Using%20Dialogs%20to%20interact%20with%20users&amp;redirect_uri=http://www.example.com/response" name="https://www.facebook.com/dialog/feed?app_id=123050457758183&amp;link=https://developers.facebook.com/docs/reference/dialogs/&amp;picture=http://fbrell.com/f8.jpg&amp;name=Facebook%20Dialogs&amp;caption=Reference%20Documentation&amp;%20description=Using%20Dialogs%20to%20interact%20with%20users&amp;redirect_uri=http://www.example.com/response">here</a> to try the url yourself. The user will see a dialog that looks like the following:</p>
+<p>
+<img src="https://developers.facebook.com/attachment/Feed%20Dialog.png" />
+</p>
+<p>If the user clicks &quot;Share&quot;, the browser will redirect to</p>
+<pre>
+<code>http://www.example.com/response/?post_id=12345
+</code>
+</pre>
+<p>The published story will look like this:</p>
+<p>
+<img src="https://developers.facebook.com/attachment/Feed%20Dialog%20Post.png" />
+</p>
+<p>If the user clicks &quot;Cancel&quot;, the browser will redirect to</p>
+<pre>
+<code>http://www.example.com/response/
+</code>
+</pre>
+<h3 id="graphapicall">Graph API Equivalent</h3>
+<p>Using the Feed Dialog is equivalent to doing an HTTP POST to the <code>/USER_ID/feed</code> Graph API endpoint:</p>
+<pre>
+https://graph.facebook.com/brent/feed?
+  link=https://developers.facebook.com/docs/reference/dialogs/&amp;
+  picture=http://fbrell.com/f8.jpg&amp;
+  name=Facebook%20Dialogs&amp;
+  caption=Reference%20Documentation&amp;
+  description=Using%20Dialogs%20to%20interact%20with%20users.&amp;
+</pre>
+<h2>Mobile Feed Dialog</h2>
+<p>On an iPhone, the following code makes an equivalent dialog:</p>
+<pre>
+NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+  kAppId, @&quot;app_id&quot;,
+  @&quot;https://developers.facebook.com/docs/reference/dialogs/&quot;, @&quot;link&quot;,
+  @&quot;http://fbrell.com/f8.jpg&quot;, @&quot;picture&quot;,
+  @&quot;Facebook Dialogs&quot;, @&quot;name&quot;,
+  @&quot;Reference Documentation&quot;, @&quot;caption&quot;,
+  @&quot;Using Dialogs to interact with users.&quot;, @&quot;description&quot;,
+  nil];
+
+[_facebook dialog:@&quot;feed&quot; andParams:params andDelegate:self];
+</pre>
+<p>The above code generates the following dialog:</p>
+<p>
+<img src="https://developers.facebook.com/attachment/feed-dialog-iphone-1.png" />
+</p>
+<h2>プロパティ</h2>
+<table>
+<tr>
+<td>
+<code>app_id</code>
+</td>
+<td>
+<p>Your application&apos;s identifier. Required, but automatically specified by most SDKs.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>redirect_uri</code>
+</td>
+<td>
+<p>The URL to redirect to after the user clicks a button on the dialog. Required, but automatically specified by most SDKs.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>display</code>
+</td>
+<td>
+<p>The <a href="http://developers.facebook.com/docs/reference/dialogs/#display" name="http://developers.facebook.com/docs/reference/dialogs/#display">display mode</a> in which to render the dialog. The default is <code>page</code> on the www subdomain. <code>display=wap</code> is currently not supported. This is automatically specified by most SDKs.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>from</code>
+</td>
+<td>
+<p>The ID or username of the user posting the message. If this is unspecified, it defaults to the current user. If specified, it must be the ID of the user or of a page that the user administers.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>to</code>
+</td>
+<td>
+<p>The ID or username of the profile that this story will be published to. If this is unspecified, it defaults to the the value of <code>from</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>link</code>
+</td>
+<td>
+<p>The link attached to this post</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>picture</code>
+</td>
+<td>
+<p>The URL of a picture attached to this post. The picture must be at least 50px by 50px and have a maximum aspect ratio of 3:1</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>source</code>
+</td>
+<td>
+<p>The URL of a media file (either SWF or MP3) attached to this post. If both <code>source</code> and <code>picture</code> are specified, only <code>source</code> is used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>
+<p>The name of the link attachment.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>caption</code>
+</td>
+<td>
+<p>The caption of the link (appears beneath the link name). If not specified, this field is automatically populated with the URL of the link.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>description</code>
+</td>
+<td>
+<p>The description of the link (appears beneath the link caption). If not specified, this field is automatically populated by information scraped from the link, typically the title of the page.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>properties</code>
+</td>
+<td>
+<p>A JSON object of key/value pairs which will appear in the stream attachment beneath the description, with each property on its own line. Keys must be strings, and values can be either strings or JSON objects with the keys <code>text</code> and <code>href</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>actions</code>
+</td>
+<td>
+<p>A JSON array containing a single object describing the action link which will appear next to the &quot;Comment&quot; and &quot;Like&quot; link under posts. The contained object must have the keys <code>name</code> and <code>link</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>ref</code>
+</td>
+<td>
+<p>A text reference for the category of feed post. This category is used in <a href="//www.facebook.com/insights/" name="https://www.facebook.com/insights/">Facebook Insights</a> to help you measure the performance of different types of post</p>
+</td>
+</tr>
+</table>
+<h2>データの返送</h2>
+<table>
+<tr>
+<td>
+<code>post_id</code>
+</td>
+<td>
+<p>The ID of the posted story, if the user chose to publish.</p>
+</td>
+</tr>
+</table>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/dialogs/feed/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1335814253" title="2012年4月30日 12:30">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

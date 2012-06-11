@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/guides/mobile/ios/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/guides/mobile/ios/">https://developers.facebook.com/docs/guides/mobile/ios/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li class="active withsubsections">
+<a class="selected" href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/guides/web" name="https://developers.facebook.com/docs/guides/web">Websites</a>
+</li>
+<li>
+<a href="/docs/guides/canvas" name="https://developers.facebook.com/docs/guides/canvas">Apps on Facebook</a>
+</li>
+<li>
+<a href="/docs/guides/mobile" name="https://developers.facebook.com/docs/guides/mobile">Mobile</a>
+</li>
+<li>
+<a href="/docs/appcenter/" name="https://developers.facebook.com/docs/appcenter/">App Center</a>
+</li>
+<li>
+<a href="/docs/bestpractices/" name="https://developers.facebook.com/docs/bestpractices/">Best Practices</a>
+</li>
+<li>
+<a href="/docs/samples" name="https://developers.facebook.com/docs/samples">Samples &amp; How-Tos</a>
+</li>
+<li>
+<a href="/videos" name="https://developers.facebook.com/videos">Videos</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Getting Started</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/mobile/support/" name="http://developers.facebook.com/docs/mobile/support/">Mobile Distribution</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Mobile Web</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/guides/mobile/web/" name="http://developers.facebook.com/docs/guides/mobile/web/">Mobile Web Tutorial</a>
+</li>
+</ul>
+</li>
+<li class="active">
+<h5>iOS</h5>
+<ul>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/mobile/ios/build/" name="http://developers.facebook.com/docs/mobile/ios/build/">iOS Tutorial</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/guides/mobile/ios_sdk/" name="http://developers.facebook.com/docs/guides/mobile/ios_sdk/">iOS SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Android</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/mobile/android/build/" name="http://developers.facebook.com/docs/mobile/android/build/">Android Tutorial</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/guides/mobile/android_sdk/" name="http://developers.facebook.com/docs/guides/mobile/android_sdk/">Android SDK</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/guides/mobile/android_hackbook/" name="http://developers.facebook.com/docs/guides/mobile/android_hackbook/">Hackbook for Android</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/mobile/android/deep_linking/" name="http://developers.facebook.com/docs/mobile/android/deep_linking/">Native App Linking for Android</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>iOS Tutorial</h1>
+<div class="breadcrumbs">
+<a href="/docs/" name="https://developers.facebook.com/docs/">Getting Started</a> › <a href="/docs/guides/mobile/" name="https://developers.facebook.com/docs/guides/mobile/">Mobile</a> › <a href="/docs/mobile/ios/build/" name="https://developers.facebook.com/docs/mobile/ios/build/">iOS Tutorial</a>
+</div>
+</div>
+</div>
+<div style="float: right; clear: both; margin-top: 100px;">
+<img src="https://developers.facebook.com/attachment/mwa_iphone_splash.png" />
+</div>
+<p>This document will guide you through Facebook Platform integration for iOS. We will walk you through a tutorial to show the key steps to building a social iOS app. This will include showing you how to enable Single Sign-On. We will also cover additional topics around integrating with Facebook Platform.</p>
+<p>
+<strong>Getting Started:</strong>
+</p>
+<p>     1.  <a href="#register" name="https://developers.facebook.com/docs/#register">Registering your iOS App with Facebook</a>
+<br />      2.  <a href="#sdk" name="https://developers.facebook.com/docs/#sdk">Installing the iOS SDK</a>
+<br />      3.  <a href="#implementsso" name="https://developers.facebook.com/docs/#implementsso">Implementing Single Sign-On</a>
+<br />      4.  <a href="#logout" name="https://developers.facebook.com/docs/#logout">Adding Log Out to your App</a>
+<br />      5.  <a href="#additionalpermissions" name="https://developers.facebook.com/docs/#additionalpermissions">Requesting Additional Permissions</a>
+<br />
+</p>
+<p>
+<strong>Adding Social Context:</strong>
+</p>
+<p>     6.  <a href="#graph" name="https://developers.facebook.com/docs/#graph">Using the Graph API</a>
+<br />      7.  <a href="#socialchannels" name="https://developers.facebook.com/docs/#socialchannels">Integrating with Social Channels</a>
+<br />
+</p>
+<p>
+<strong>Advanced Configuration:</strong>
+</p>
+<p>     8.  <a href="#multipleapps" name="https://developers.facebook.com/docs/#multipleapps">Sharing an App ID across Multiple Apps</a>
+<br />      9.  <a href="#linktoapp" name="https://developers.facebook.com/docs/#linktoapp">Setting up for Facebook iOS App Distribution and Deep Linking</a>
+<br />
+</p>
+<p>
+<strong>Additional Topics:</strong>
+</p>
+<ul>
+<li>
+<a href="#errors" name="https://developers.facebook.com/docs/#errors">Handle Errors</a>
+</li>
+<li>
+<a href="#extend_token" name="https://developers.facebook.com/docs/#extend_token">Extending the Access Token</a>
+</li>
+<li>
+<a href="#samples" name="https://developers.facebook.com/docs/#samples">Sample Apps</a>
+</li>
+</ul>
+<hr />
+<h2>Getting Started</h2>
+<h2 id="register">Step 1: Registering your iOS App with Facebook</h2>
+<p>To begin integrating with the Facebook Platform, <a href="https://developers.facebook.com/apps/" name="https://developers.facebook.com/apps/">register your mobile website with Facebook</a> and enter your app&apos;s basic information.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/ios_devapp_basic_2.png" width="700px" />
+</div>
+<p>
+<br />
+</p>
+<p>Note your App ID. You are going to need it when setting up your app in Xcode.</p>
+<p>You application is now set up and you’re ready to begin integrating with Facebook!</p>
+<hr />
+<h2 id="sdk">Step 2: Installing the iOS SDK</h2>
+<p>Before you begin development with the Facebook iOS SDK, you will need to install the iOS dev tools, Git (the source control client we use for this SDK) and then clone the latest version of the SDK from <a href="http://github.com" name="http://github.com/">GitHub</a>:</p>
+<ul>
+<li>
+<p>Install <a href="http://developer.apple.com/devcenter/ios/index.action" name="http://developer.apple.com/devcenter/ios/index.action">Xcode</a>
+</p>
+</li>
+<li>
+<p>Install <a href="http://git-scm.com/" name="http://git-scm.com/">Git</a>
+</p>
+</li>
+<li>
+<p>Clone the <a href="https://github.com/facebook/facebook-ios-sdk" name="https://github.com/facebook/facebook-ios-sdk">GitHub repository</a>: <code>git clone git://github.com/facebook/facebook-ios-sdk.git</code>
+</p>
+</li>
+</ul>
+<p>Once you have everything installed you are now ready to set up your iOS app. First we will discuss Single Sign-On (SSO) which is a key implementation feature you should provide. After that section we will walk you through the steps of setting up an iOS app and enabling SSO.</p>
+<hr />
+<h2 id="implementsso">Step 3: Implementing Single Sign-On (SSO)</h2>
+<p>One of the most compelling features of the iOS SDK is <strong>Single Sign-On (SSO)</strong>. SSO lets users sign into your app using their Facebook identity. If they are already signed into the Facebook iOS app on their device, they do not have to type a username and password. Furthermore, you can get permission from users to access their Facebook profile information and social graph.</p>
+<p>SSO primarily works by redirecting users to the Facebook app on their devices. Since users are already logged into Facebook, they will not need to enter their username and password to identify themselves. They will see the Auth Dialog with the permissions that your app has asked for, and will be redirected to your mobile app with the appropriate <code>access_token</code>.</p>
+<p>Developers should be aware that Facebook SSO will behave slightly differently depending on what is installed on a user&apos;s device. This is what happens in certain iOS configurations:</p>
+<ul>
+<li>
+<p>If the app is running in a version of iOS that supports multitasking, and if the device has the Facebook app of version 3.2.3 or greater installed, the SDK attempts to open the Auth Dialog within the Facebook app. After the user grants or declines, the Facebook app redirects back to the calling app, passing the access token, expiration, and any other parameters the Facebook OAuth server may return.</p>
+</li>
+<li>
+<p>If the app is running in a version of iOS that supports multitasking, but the device doesn&apos;t have the Facebook app of version 3.2.3 or greater installed, the SDK will open the Auth Dialog in the Safari mobile browser. After the user grants or revokes the authorization, Safari redirects back to the calling app. Similar to the Facebook app based authorization, this allows multiple apps to share the same Facebook user <code>access_token</code> through the Safari cookie.</p>
+</li>
+<li>
+<p>If the app is running in a version of iOS that does not support multitasking, the SDK uses the old mechanism of popping up an inline UIWebView, prompting the user to log in to Facebook and grant access. The <code>FBSessionDelegate</code> is a callback interface that your app should implement: The delegate methods will be invoked when the app successful logs in or logs out. Read the <a href="/docs/reference/iossdk/FBSessionDelegate/" name="https://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/">iOS SDK documentation</a> for more details on this delegate.</p>
+</li>
+</ul>
+<p>We recommend that users update to the latest Facebook App whenever possible.</p>
+<p>Adding SSO support to your app is easy to do. So let&apos;s walk through this.</p>
+<h3>Create your iOS Project</h3>
+<p>Open Xcode and create a new iOS project using the <strong>View-based Application</strong> project template. For the sake of simplicity, SSO functionality will be added to the application delegate that was created by Xcode when your app project was created.</p>
+<p>In order to use the iOS Facebook SDK, the source files from that SDK project must be brought into the app project. This can be done a number of different ways, but the easiest way is to just drag the src folder from the local Git repository for the SDK (e.g. ~/facebook-ios-sdk/src) into the app Xcode project. If you have problems dragging the src folder in then simply include the src directory into your project. Additionally, you may exclude the .pch and .xcodeproj files.</p>
+<p>
+<strong>Creating an iOS Facebook SDK Static Library</strong>
+</p>
+<p>If you create an iOS app that has Automatic Reference Counting (ARC) enabled then you should use a static library version of the iOS Facebook SDK instead of dragging in the files from the src folder. The latest release of the iOS Facebook SDK includes a shell script you can run to build the static library. You would do this through the command line by calling the <code>build_facebook_ios_sdk_static_lib.sh</code> build script found under the <code>scripts</code> directory, for example:</p>
+<pre>
+<code>% ~/facebook-ios-sdk/scripts/build_facebook_ios_sdk_static_lib.sh
+</code>
+</pre>
+<p>This will create the static library under the &lt;PROJECT_HOME&gt;/lib/facebook-ios-sdk folder (e.g. ~/facebook-ios-sdk/lib/facebook-ios-sdk). You may then drag the facebook-ios-sdk folder into the app Xcode project to include the iOS Facebook SDK static library.</p>
+<h3>Modify the application delegate header file</h3>
+<p>
+<b>Step 1</b>. Add an <code>#import</code> declaration to the application delegate header file to ensure that that the app can reference the SDK types in the app source files:</p>
+<pre>
+<code>#import &quot;FBConnect.h&quot;
+</code>
+</pre>
+<p>
+<b>Step 2</b>. Set the application delegate class to handle the Facebook session delegate callback by modifying the header file to add FBSessionDelegate to the list of delegates. For example for the MyGreatIOSApp:</p>
+<pre>
+@interface MyGreatIOSAppAppDelegate : NSObject 
+    &lt;UIApplicationDelegate, FBSessionDelegate&gt;
+</pre>
+<p>
+<b>Step 3</b>. Set up the application delegate header file by creating instance variable:</p>
+<pre>Facebook *facebook;</pre>
+<p>
+<b>Step 4</b>. Add a property for an instance of the <strong>Facebook</strong> class:</p>
+<pre>@property (nonatomic, retain) Facebook *facebook;</pre>
+<p>
+<img alt="iOS Header" src="https://developers.facebook.com/attachment/ios_header_2.png" />
+</p>
+<h3>Modify the application delegate implementation file</h3>
+<p>
+<b>Step 1</b>. Synthesize the <code>facebook</code> property (this creates getter and setter methods):</p>
+<pre>@synthesize facebook;</pre>
+<p>
+<b> Step 2</b>. Within the body of the <code>application:didFinishLaunchingWithOptions:</code> method create instance of the Facebook class using your app ID (available from the <a href="https://www.facebook.com/developers" name="https://www.facebook.com/developers">App Dashboard</a>):</p>
+<pre>facebook = [[Facebook alloc] initWithAppId:@&quot;YOUR_APP_ID&quot; andDelegate:self];</pre>
+<p>This instance is used to invoke SSO, as well as the Graph API and Platform Dialogs from within the app.</p>
+<p>
+<b>Step 3</b>. Once the instance is created, check for previously saved access token information (We will show you how to save this information in <b>Step 6</b>). Use the saved information to set up a &quot;session valid&quot; check by assigning the saved information to the <code>facebook</code> access token and expiration date properties. This ensures that your app does not redirect to the Facebook app and invoke the Auth Dialog if the app already has a valid <code>access_token</code>. If you have asked for <code>offline_access</code> extended permission, then your access token will not expire, but can still get invalidated if the user changes their password or uninstalls your app. Read more on <a href="https://developers.facebook.com/blog/post/500/" name="https://developers.facebook.com/blog/post/500/">How-To: Handle expired access tokens</a>.</p>
+<p>
+<b>Note: <code>offline_access</code> is deprecated!</b> See the <a href="#extend_token" name="https://developers.facebook.com/docs/#extend_token">Extending the access token</a> section for information on how to extend the expiration time of an access token for active users of your app.</p>
+<pre>
+NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+if ([defaults objectForKey:@&quot;FBAccessTokenKey&quot;] 
+        &amp;&amp; [defaults objectForKey:@&quot;FBExpirationDateKey&quot;]) {
+        facebook.accessToken = [defaults objectForKey:@&quot;FBAccessTokenKey&quot;];
+        facebook.expirationDate = [defaults objectForKey:@&quot;FBExpirationDateKey&quot;];
+}
+</pre>
+<p>
+<b> Step 4</b>. Check for a valid session and if it is not valid call the <code>authorize</code> method which will both log the user in and prompt the user to authorize the app:</p>
+<pre>
+if (![facebook isSessionValid]) {
+    [facebook authorize:nil];
+}
+</pre>
+<p>
+<b>Step 5</b>. Add the <code>application:handleOpenURL:</code> and <code>application:openURL:</code> methods with a call to the <code>facebook</code> instance:</p>
+<pre>
+// Pre iOS 4.2 support
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [facebook handleOpenURL:url]; 
+}
+
+// For iOS 4.2+ support
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+    sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [facebook handleOpenURL:url]; 
+}
+</pre>
+<p>The relevant method is called by iOS when the Facebook App redirects to the app during the SSO process. The call to <code>Facebook::handleOpenURL:</code> provides the app with the user&apos;s credentials.</p>
+<p>
+<b>Step 6</b>. Implement the <code>fbDidLogin</code> method from the <code>FBSessionDelegate</code> implementation. In this method you will save the user&apos;s credentials specifically the access token and corresponding expiration date. For simplicity you will save this in the user&apos;s preferences - <code>NSUserDefaults</code>:</p>
+<pre>
+- (void)fbDidLogin {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[facebook accessToken] forKey:@&quot;FBAccessTokenKey&quot;];
+    [defaults setObject:[facebook expirationDate] forKey:@&quot;FBExpirationDateKey&quot;];
+    [defaults synchronize];
+
+}
+</pre>
+<p>
+<img alt="iOS Impl" src="https://developers.facebook.com/attachment/ios_impl_3.png" />
+</p>
+<h3>Modify the app property list file</h3>
+<p>The last thing that needs to be accomplished to enable SSO support is a change to the <code>.plist</code> file that handles configuration for the app. Xcode creates this file automatically when the project is created. A specific URL needs to be registered in this file that uniquely identifies the app with iOS. Create a new row named <strong>URL types</strong> with a single item, <strong>URL Schemes</strong>, containing a single value, <strong>fb[YOUR_APP_ID]</strong> (the literal characters <strong>fb</strong> followed by your app ID). The following shows exactly how the row should appear in the .plist file:</p>
+<p>
+<img alt="iOS Impl" src="https://developers.facebook.com/attachment/ios_config.png" />
+</p>
+<p>That is it. SSO is ready to go. All that remains is to build and debug the app to ensure anything is setup up correctly.</p>
+<h3>Test your app</h3>
+<p>You can test SSO using either your simulator or a device. If you use a simulator, you should make sure you log in to Facebook on the mobile browser. To test on the device, make sure you are currently logged in to the Facebook app. Initially you can test on a simulator.</p>
+<p>Build and run your app from Xcode. When the app starts in the emulator, you should see the following dialog:</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/ios_authz_screen_2.png" />
+</div>
+<p>This screen is known as the Facebook Auth Dialog. It allows users to grant your app permission to access their Facebook information. When a user presses <strong>Allow</strong>, your app is authorized to access the user&apos;s Facebook profile info and social graph through the <code>facebook</code> instance. If the user presses <strong>Don&apos;t Allow</strong>, your app is not authorized and you will not have access to the user&apos;s Facebook data.</p>
+<hr />
+<h2 id="logout">Step 4: Adding Log Out to your App</h2>
+<p>When the user wants to stop using the Facebook integration of your app, you can call the <code>logout</code> method to clear the app state and make a server request to invalidate the current <code>access_token</code>.</p>
+<pre>
+<code>[facebook logout];
+</code>
+</pre>
+<p>You may implement the <code>fbDidLogout</code> method of the <code>FBSessionDelegate</code> protocol to handle any post-logout actions you wish to take.</p>
+<p>Note that logging out will not revoke your application&apos;s permissions, but will simply clear your application&apos;s <code>access_token</code>. If a user that has previously logged out of your app returns, they will simply see a notification that they are logging into your app, not a notification to grant permissions. To modify or revoke an application&apos;s permissions, the user can visit the <a href="https://www.facebook.com/settings/?tab=privacy" name="https://www.facebook.com/settings/?tab=privacy">&quot;Applications, Games, and Websites&quot; tab of their Facebook privacy settings dashboard</a>. You can also revoke an app&apos;s permissions programmatically using a <a href="/docs/reference/api/user/#permissions" name="https://developers.facebook.com/docs/reference/api/user/#permissions">Graph API call</a>.</p>
+<p>Now add a logout button and handler to your sample app.</p>
+<p>
+<strong>Step 1</strong>. Add the logout button and handler:</p>
+<p>Modify MyGreatIOSAppAppDelegate.m file from the tutorial and add the following code to the beginning of the <code>application:didFinishLaunchingWithOptions:</code> method:</p>
+<pre>
+<code>// Add the logout button
+UIButton *logoutButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+logoutButton.frame = CGRectMake(40, 40, 200, 40);
+[logoutButton setTitle:@&quot;Log Out&quot; forState:UIControlStateNormal];
+[logoutButton addTarget:self action:@selector(logoutButtonClicked)
+    forControlEvents:UIControlEventTouchUpInside];
+[self.viewController.view addSubview:logoutButton];
+</code>
+</pre>
+<p>Now add logic to call the <code>logout</code> method when the button is tapped. Modify MyGreatIOSAppAppDelegate.m file from the previous tutorial and add the following new method:</p>
+<pre>
+<code>// Method that gets called when the logout button is pressed
+- (void) logoutButtonClicked:(id)sender {
+    [facebook logout];
+}
+</code>
+</pre>
+<p>
+<strong>Step 2</strong>. Add the logout callback handler:</p>
+<p>Modify MyGreatIOSAppAppDelegate.m file from the previous tutorial and add the <code>FBSessionDelegate</code> callback method for a successful logout:</p>
+<pre>
+<code>- (void) fbDidLogout {
+    // Remove saved authorization information if it exists
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@&quot;FBAccessTokenKey&quot;]) {
+        [defaults removeObjectForKey:@&quot;FBAccessTokenKey&quot;];
+        [defaults removeObjectForKey:@&quot;FBExpirationDateKey&quot;];
+        [defaults synchronize];
+    }
+}
+</code>
+</pre>
+<p>Save, build, and run your application. Tap on the logout button. In this simple example we have not implemented a visual cue that log out was successful. However, if you relaunch your app you should be asked to authorize it once again.</p>
+<hr />
+<h2 id="additionalpermissions">Step 5: Requesting Additional Permissions</h2>
+<p>By default, the user is asked to authorize the app to access basic information that is available publicly or by default on Facebook. If your app needs more than this basic information to function, you must request specific permissions from the user. This is accomplished by passing a <code>NSArray</code> of permissions to the <code>authorize</code> method. The following example shows how to ask for access to pages a user has liked and to their News Feed:</p>
+<pre>
+NSArray *permissions = [[NSArray alloc] initWithObjects:
+        @&quot;user_likes&quot;, 
+        @&quot;read_stream&quot;,
+        nil];
+[facebook authorize:permissions];
+[permissions release];
+</pre>
+<p>Permissions related to the user and friends will be shown in the first authorization screen. In our example this is the <code>user_likes</code> permission. Extended permissions will be requested in the second authorization screen. In our example this is the <code>read_stream</code> permissions. You can refer to the <a href="/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">permissions guide</a> for more information.</p>
+<div align="center">
+<table cellpadding="5" cellspacing="5" class="uiGrid">
+<tr>
+<td width="50%">
+<img src="https://developers.facebook.com/attachment/ios_perms_app_user.png" />
+</td>
+<td width="50%">
+<img src="https://developers.facebook.com/attachment/ios_perms_app_extended.png" />
+</td>
+</tr>
+</table>
+</div>
+<p>A full list of permissions is available in our <a href="https://developers.facebook.com/docs/authentication/permissions" name="https://developers.facebook.com/docs/authentication/permissions">permissions reference</a>. There is a strong inverse correlation between the number of permissions your app requests and the number of users that will allow those permissions. The greater the number of permissions you ask for, the lower the number of users that will grant them; so we recommend that you only request the permissions you absolutely need for your app.</p>
+<p>Let&apos;s go ahead and test this out. Modify the tutorial&apos;s app delegate implementation file to see this in action. In the <code>authorize</code> method, pass in a permissions array:</p>
+<pre>
+if (![facebook isSessionValid]) {
+    NSArray *permissions = [[NSArray alloc] initWithObjects:
+            @&quot;user_likes&quot;, 
+            @&quot;read_stream&quot;,
+            nil];
+        [facebook authorize:permissions];
+        [permissions release];
+}
+</pre>
+<p>Save, build, and run your application. Verify that you get the authorization dialogs for the permissions you have requested.</p>
+<hr />
+<h2>Adding Social Context</h2>
+<h2 id="graph">Step 6: Using the Graph API</h2>
+<p>The Facebook <a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a> presents a simple, consistent view of the Facebook social graph, uniformly representing objects in the graph (e.g., people, photos, events, and fan pages) and the connections between them (e.g., friend relationships, shared content, and photo tags).</p>
+<p>You can access the Graph API by passing the Graph Path to the request method. For example, to access information about the logged in user, call:</p>
+<pre>
+<code>// get information about the currently logged in user
+[facebook requestWithGraphPath:@&quot;me&quot; andDelegate:self];
+
+// get the posts made by the &quot;platform&quot; page
+[facebook requestWithGraphPath:@&quot;platform/posts&quot; andDelegate:self];
+
+// get the logged-in user&apos;s friends
+[facebook requestWithGraphPath:@&quot;me/friends&quot; andDelegate:self];
+</code>
+</pre>
+<p>Your delegate object should implement the <code>FBRequestDelegate</code> interface to handle your request responses.</p>
+<p>Note that the server response will be in JSON string format. The SDK uses an open source JSON library <a href="https://github.com/stig/json-framework/" name="https://github.com/stig/json-framework/">https://github.com/stig/json-framework/</a> to parse the result. If a parsing error occurs, the SDK will callback <code>request:didFailWithError:</code> in your delegate.</p>
+<p>A successful request will callback <code>request:didLoad:</code> in your delegate. The result passed to your delegate can be an <code>NSArray</code>, if there are multiple results, or an <code>NSDictionary</code> if there is only a single result.</p>
+<p>Advanced apps may want to provide their own custom parsing and/or error handling, depending on their individual needs.</p>
+<p>Read the <a href="/docs/reference/iossdk/FBRequestDelegate/" name="https://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/">iOS SDK documentation</a> for more details on the <code>FBRequestDelegate</code> delegate.</p>
+<hr />
+<h2 id="socialchannels">Step 7: Integrating with Social Channels</h2>
+<p>Social Channels enable users to post to their friends&apos; News Feed or send a Request to their friends. The iOS SDK provides a method for integrating social channels through <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Facebook Platform dialogs</a>. The currently supported dialogs are:</p>
+<ul>
+<li>
+<p>
+<a href="/docs/reference/dialogs/feed/" name="https://developers.facebook.com/docs/reference/dialogs/feed/">Feed Dialog</a> - the dialog used for publishing posts to a user&apos;s News Feed.</p>
+</li>
+<li>
+<p>
+<a href="/docs/reference/dialogs/requests/" name="https://developers.facebook.com/docs/reference/dialogs/requests/">Requests Dialog</a> - the dialog used to send a request to one or more friends.</p>
+</li>
+</ul>
+<p>This allows you to provide basic Facebook functionality in your app with a few lines of code -- no need to build native dialogs, make API calls, or handle responses. Refer to the <a href="/docs/mobile/support/" name="https://developers.facebook.com/docs/mobile/support/">mobile distribution guide</a> for details on supported Social Channels.</p>
+<h3 id="requests">Requests</h3>
+<p>Requests are a great way to enable users to invite their friends to your mobile web app or to take specific action like accepting a gift. Your mobile web app can send requests by using the <a href="/docs/reference/dialogs/requests" name="https://developers.facebook.com/docs/reference/dialogs/requests">Request dialog</a>. If the user’s device supports it, they will receive a Push Notification via the Facebook native app whenever a friend sends them a request, in addition to the notification they normally get within Facebook.</p>
+<p>An example requests dialog that allows you to send requests to any of your friends:</p>
+<pre>
+<code>    NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                               @&quot;Come check out my app.&quot;,  @&quot;message&quot;,
+                               nil];
+
+    [facebook dialog:@&quot;apprequests&quot;
+                  andParams:params
+                andDelegate:self];
+</code>
+</pre>
+<h3 id="newsfeed">News Feed</h3>
+<p>The News Feed is shown immediately to users upon logging in to Facebook, making it core to the Facebook experience. Your mobile web app can post to the user&apos;s news feed by using the <a href="/docs/reference/dialogs/feed" name="https://developers.facebook.com/docs/reference/dialogs/feed">Feed Dialog</a>.</p>
+<p>To invoke the feed dialog:</p>
+<pre>
+<code>    [facebook dialog:@&quot;feed&quot; andDelegate:self];
+</code>
+</pre>
+<h3 id="timeline">Timeline and Open Graph</h3>
+<p>Historically, Facebook has managed this graph and has expanded it over time as we launch new products (photos, places, etc.). In 2010, we extended the social graph, via the Open Graph protocol, to include 3rd party web sites and pages that people liked throughout the web. We are now extending the Open Graph to include arbitrary actions and objects created by 3rd party apps and enabling these apps to integrate deeply into the Facebook experience.</p>
+<p>After a user adds your app to their Timeline, app specific actions are shared on Facebook via the Open Graph. As your app becomes an important part of how users express themselves, these actions are more prominently displayed throughout the Facebook Timeline and News Feed. This enables your app to become a key part of the user&apos;s and their friend&apos;s experience on Facebook.</p>
+<p>Timeline is coming to mobile soon. In preparation, you can start integrating now.</p>
+<p>To learn more about how you can integrate your app into Open Graph and Timeline, <a href="https://developers.facebook.com/docs/beta/" name="https://developers.facebook.com/docs/beta/">learn more</a> or dive right into <a href="https://developers.facebook.com/docs/beta/opengraph/tutorial/" name="https://developers.facebook.com/docs/beta/opengraph/tutorial/">the tutorial</a>.</p>
+<hr />
+<h2>Advanced Configuration</h2>
+<h2 id="multipleapps">Step 8: Sharing an App ID across Multiple Apps</h2>
+<p>You can use one app ID across multiple apps. One scenario where you may want to do this is if you have a free and paid version of your iOS app. Facebook allows you to define a URL Scheme Suffix parameter, <code>urlSchemeSuffix</code>, that you pass on to the app <code>initWithAppId:urlSchemeSuffix:andDelegate:</code> method. The second and last step you do is append this <code>urlSchemeSuffix</code> to the SSO callback URL defined in the <code>.plist</code> file.</p>
+<p>
+<strong>Note:</strong> The URL Scheme Suffix must be lowercase and contain only letters.</p>
+<p>To show you how to do this let&apos;s modify the previous. We will define a URL Scheme Suffix named &apos;&apos;foo&apos;&apos;.</p>
+<p>
+<strong>Step 1</strong>. When calling the <code>initWithAppId:urlSchemeSuffix:andDelegate:</code> method, pass in the URL Scheme Suffix.</p>
+<pre>
+facebook = [[Facebook alloc] initWithAppId:@&quot;YOUR_APP_ID&quot; 
+                           urlSchemeSuffix:@&quot;foo&quot; 
+                               andDelegate:self];
+</pre>
+<p>
+<strong>Step 2</strong>. Modify the unique URL in the <code>.plist</code> file</p>
+<p>Modify the URL Schemes entry from <strong>fbYOUR_APP_ID</strong> to <strong>fbYOUR_APP_IDYOUR_URL_SCHEME_SUFFIX</strong> (the literal characters fb followed by your app ID then by your URL Scheme Suffix). For example, if your app ID is &quot;1234&quot; your new URL should be fb1234foo.</p>
+<p>
+<img alt="iOS Impl" src="https://developers.facebook.com/attachment/ios_config_localappid.png" />
+</p>
+<p>That is all you have to do to support SSO from multiple iOS apps with the same Facebook app ID. Build and run the app to ensure that your app works as before with the new SSO URL.</p>
+<p>When you have properly set up and configured SSO you can get <a href="#linktoapp" name="https://developers.facebook.com/docs/#linktoapp">Facebook distribution</a> to your app. If you have multiple apps using a single Facebook app ID you will need to add a configuration to the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps">App Dashboard</a> to list the URL Scheme Suffix information for the apps that share one ID.</p>
+<p>
+<img alt="iOS Impl" src="https://developers.facebook.com/attachment/ios_devapp_urlscheme_suffix.png" />
+</p>
+<p>The order in which you list the suffixes determines the order that the Facebook app will search for the installed app when linking to your app. For example, if you list two URL Scheme Suffix entries, &apos;&apos;freeapp&apos;&apos; (for your free app) and &apos;&apos;paidapp&apos;&apos; (for your paid app), then the Facebook app will first look for the free app then the paid app. If you want the Facebook app to look for the paid app first, then put the corresponding suffix first in the list.</p>
+<hr />
+<h2 id="linktoapp">Step 9: Setting up for Facebook iOS App Distribution and Deep Linking</h2>
+<p>If your app is SSO-enabled then you can get distribution through the Facebook iOS app. The following diagram shows how this distribution flows from when a user first interacts with a 3rd party app, publishes a news story or sends an app request, to how these stories and request notifications drive back to your app. The diagram also shows how app search and bookmarks can drive distribution from the Facebook app.</p>
+<p>
+<img alt="iOS Header" src="https://developers.facebook.com/attachment/ios-app-flow.png" />
+</p>
+<p>When a user taps on an app notification or clicks on a story that links to the 3rd party app will be provided with the original URL. This can be used to deep link into the 3rd party app. The notification URL or News Feed URL is sent to the app in the <code>target_url</code> parameter of the callback link. You can modify the <code>application:handleOpenURL:</code> or <code>application:openURL:sourceApplication:annotation:</code> methods in the app delegate implementation file to customize how your app will handle these notifications.<a name="deeplink">
+</a>
+</p>
+<p>If the user has your application installed, and has authenticated your app with Facebook, here is the URL we open:</p>
+<pre>
+fb[app id]://authorize#expires_in=0&amp;access_token=[token]&amp;target_url=[Linked URL]
+</pre>
+<p>If the app is installed, but the user has not authenticated it with Facebook, the URL format is:</p>
+<pre>
+fb[app id]://authorize#target_url=[Linked URL]
+</pre>
+<p>To summarize, these are the channels that can drive distribution back to your app:</p>
+<ul>
+<li>
+<a href="#appsearch" name="https://developers.facebook.com/docs/#appsearch">App search</a>: your app will be visible if it passes an active usage threshold.</li>
+<li>
+<a href="#appbookmarks" name="https://developers.facebook.com/docs/#appbookmarks">App bookmarks</a>: your app will be visible to users who have previously used it and based on a usage threshold.</li>
+<li>
+<a href="#appnotifications" name="https://developers.facebook.com/docs/#appnotifications">App request notifications</a>: requests 2.0 notifications sent to a friend will link back to your app. </li>
+<li>
+<a href="#appattribution" name="https://developers.facebook.com/docs/#appattribution">Story attribution</a>: your app source attribution will be visible if you set up your app with a namespace.</li>
+<li>
+<a href="#applinks" name="https://developers.facebook.com/docs/#applinks">Story links</a>: you can configure links in your News Feed stories that will point back to your app.</li>
+</ul>
+<p>Let&apos;s walk through a tutorial of setting up and verifying Facebook app distribution.</p>
+<p>
+<strong>Step 1</strong>. Configure your app settings in the <a href="/apps" name="https://developers.facebook.com/apps">App Dashboard</a>:</p>
+<p>
+<img alt="iOS Bookmarks" src="https://developers.facebook.com/attachment/ios-apps-devapp-settings-1.png" />
+</p>
+<p>
+<img alt="iOS Bookmarks" src="https://developers.facebook.com/attachment/ios-apps-devapp-settings-3.png" />
+</p>
+<p>Make the following changes to your app&apos;s basic settings:</p>
+<ol>
+<li>
+<code>App Namespace</code> - Set a unique namespace for your app. This namespace can be used for configuring story links back to your site.</li>
+<li>
+<code>iPhone App Store ID</code> - If you have an iPhone app that is listed in the iTunes App Store enter the ID here, e.g. 123456. If Facebook links out to your app and finds that the user does not have your app installed, then it will take the user to your app in the store. The user can then install your app. If your app is not in the iTunes App Store you can enter any valid app&apos;s ID but be sure to update this when your app is approved in the App Store.</li>
+<li>
+<code>iPad App Store ID</code> - If you have a separate iPad app that is listed in the iTunes App Store enter the ID here, e.g. 123456. If Facebook links out to your app and finds that the user does not have your app installed, then it will take the user to your app in the store. The user can then install your app. If your app is not in the iTunes App Store you can enter any valid app&apos;s ID but be sure to update this when your app is approved in the App Store.</li>
+<li>
+<code>Configured for iOS SSO</code> - you must enable this setting if you want your app to be visible in bookmarks and through search results. Make sure that you turn this on after you have properly <a href="#implementsso" name="https://developers.facebook.com/docs/#implementsso">implemented SSO</a>. </li>
+<li>
+<code>iOS native deep linking</code> - you must enable this setting if you want your app to be linked to from News Stories. You must also enable the <code>Configured for iOS SSO</code> setting to turn on this feature. If you wish to handle your own News Story links then disable this setting.</li>
+<li>
+<code>URL Scheme Suffix</code> - you should enter this information if you have <a href="#multipleapps" name="https://developers.facebook.com/docs/#multipleapps">multiple apps sharing</a> the same Facebook app ID. The entries here should contain the URL Scheme Suffix set up for each of your iOS apps. To handle the case where the user may have installed multiple versions of your app, you want to order the entries based on the order in which you want the Facebook app to search for the apps.</li>
+<li>
+<code>iOS Bundle ID</code> - <strong>(Optional)</strong> You may set this to match the bundle ID for your iOS app. If you add this setting then the bundle ID of your app will be checked before authorizing the user. The benefit of this setting for SSO is if the user has already authorized your app they will not be asked to authorize it when they access your app from a new device.</li>
+</ol>
+<p>When Facebook iOS app launches your app it will check if the user has already authorized your app. If the user is authorized then an <code>access_token</code> will be passed to your app which means that the user will be authenticated when your app is launched. If the user has not authorized your app then no <code>access_token</code> will be passed to your app and the user will not be authenticated when your app is launched.</p>
+<p>
+<a name="appsearch">
+</a> <strong>Step 2</strong>. Check the app search flow:</p>
+<p>When a user does a search in the Facebook app your app will be visible if it passes a usage threshold. The search results will display apps that have been configured for SSO support. When the user selects your app from the search results they will be directed to your app. If the user had previously authorized your app they will be authenticated when your app is launched.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/ios-app-search.png" />
+</div>
+<p>Test out app search results results by launching the Facebook iOS app. Search for the name of your app as specified in the Facebook App Dashboard settings. If your app shows up in the results tap on the link and make sure that your app is launched. Verify that you are authenticated (<code>access_token</code> valid) if you had previously authorized the app.</p>
+<p>
+<a name="appbookmarks">
+</a> <strong>Step 3</strong>. Check the app bookmarks flow:</p>
+<p>A user who has previously installed your app may see it listed under the App section in the main menu for the app if the app has been actively used. When the user selects your app they will be directed to your app. If the user had previously authorized your app they will be authenticated when your app is launched.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/ios-app-bookmarks.png" />
+</div>
+<p>Use the app actively for a while first. Test out app bookmarks by launching the Facebook iOS app and check that your app is listed in the App section.. Tap on your app and make sure that it is launched. Verify that you are authenticated (<code>access_token</code> valid) if you had previously authorized the app.</p>
+<p>
+<a name="appnotifications">
+</a> <strong>Step 4</strong>. Exercise the app request notification flow:</p>
+<p>You can send app requests to friends that will show up as notifications. Tapping the notification will launch your app.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/ios-app-notifications.png" />
+</div>
+<ul>
+<li>
+<p>Modify MyGreatIOSAppAppDelegate.h file from the previous tutorial and add <code>FBDialogDelegate</code> to the list of supported protocols:</p>
+<pre>
+<code>@interface MyGreatIOSAppAppDelegate : NSObject 
+    &lt;UIApplicationDelegate, 
+    FBSessionDelegate, FBDialogDelegate&gt; {
+    Facebook *facebook;    
+}
+</code>
+</pre>
+</li>
+<li>
+<p>Modify MyGreatIOSAppAppDelegate.m file from the previous tutorial and add the following code to the beginning of the <code>application:didFinishLaunchingWithOptions:</code> method:</p>
+<pre>
+<code>// Add the requests dialog button
+UIButton *requestDialogButton = [UIButton 
+                                    buttonWithType:UIButtonTypeRoundedRect];
+requestDialogButton.frame = CGRectMake(40, 150, 200, 40);
+[requestDialogButton setTitle:@&quot;Send Request&quot; forState:UIControlStateNormal];
+[requestDialogButton addTarget:self 
+    action:@selector(requestDialogButtonClicked)
+    forControlEvents:UIControlEventTouchUpInside];
+[self.viewController.view addSubview:requestDialogButton];
+</code>
+</pre>
+</li>
+<li>
+<p>Modify MyGreatIOSAppAppDelegate.m file from the previous tutorial and add the following new method:</p>
+<pre>
+<code>// Method that gets called when the request dialog button is pressed
+- (void) requestDialogButtonClicked {
+    NSMutableDictionary* params = 
+        [NSMutableDictionary dictionaryWithObjectsAndKeys:
+            @&quot;invites you to check out cool stuff&quot;,  @&quot;message&quot;,
+            @&quot;Check this out&quot;, @&quot;notification_text&quot;,
+            nil];  
+    [facebook dialog:@&quot;apprequests&quot;
+           andParams:params
+         andDelegate:self];
+}
+
+// FBDialogDelegate
+- (void)dialogDidComplete:(FBDialog *)dialog {
+    NSLog(@&quot;dialog completed successfully&quot;);
+}
+</code>
+</pre>
+</li>
+<li>
+<p>Build and run your sample app.</p>
+</li>
+<li>Send an app request to a friend who has your app installed and has authorized the app.</li>
+<li>Have your friend launch Facebook iOS app and check that they have received your notification.</li>
+<li>They should click on the notification and verify that your app launches.</li>
+</ul>
+<p>
+<a name="applinks">
+</a> <strong>Step 5</strong>. Exercise the app story link flow:</p>
+<p>When you have enabled <code>iOS native deep linking</code> in the App Dashboard, published stories on <a href="https://www.facebook.com/iphone" name="https://www.facebook.com/iphone">Facebook for iOS</a> will link back to your app if they have it installed, or the Apple App Store if they do not. Facebook will apply re-writing rules to redirect these links back to your app. See <a href="#deeplink" name="https://developers.facebook.com/docs/#deeplink">here</a> to see how you can implement deep linking so users go to the correct content in your app.</p>
+<ul>
+<li>
+<p>Modify MyGreatIOSAppAppDelegate.m file from the previous tutorial and add the following code to the beginning of the <code>application:didFinishLaunchingWithOptions:</code> method:</p>
+<pre>
+<code>// Add the feed dialog button
+UIButton *feedDialogButton = [UIButton 
+                                 buttonWithType:UIButtonTypeRoundedRect];
+feedDialogButton.frame = CGRectMake(40, 260, 200, 40);
+[feedDialogButton setTitle:@&quot;Publish Feed&quot; forState:UIControlStateNormal];
+[feedDialogButton addTarget:self 
+    action:@selector(feedDialogButtonClicked) 
+    forControlEvents:UIControlEventTouchUpInside];
+    [self.viewController.view addSubview:feedDialogButton];
+</code>
+</pre>
+</li>
+<li>
+<p>Modify MyGreatIOSAppAppDelegate.m file from the previous tutorial and add the following new method:</p>
+<pre>
+<code>// Method that gets called when the feed dialog button is pressed
+- (void) feedDialogButtonClicked {
+    NSMutableDictionary *params = 
+        [NSMutableDictionary dictionaryWithObjectsAndKeys:
+            @&quot;Testing Feed Dialog&quot;, @&quot;name&quot;,
+            @&quot;Feed Dialogs are Awesome.&quot;, @&quot;caption&quot;,
+            @&quot;Check out how to use Facebook Dialogs.&quot;, @&quot;description&quot;,
+            @&quot;http://www.example.com/&quot;, @&quot;link&quot;,
+            @&quot;http://fbrell.com/f8.jpg&quot;, @&quot;picture&quot;,
+            nil];  
+    [facebook dialog:@&quot;feed&quot;
+            andParams:params
+          andDelegate:self];
+}
+</code>
+</pre>
+</li>
+<li>
+<p>In your code, replace <strong>www.example.com</strong> with a link to your website.</p>
+</li>
+<li>Build and run your sample app.</li>
+<li>Publish a feed story.</li>
+<li>Open up Facebook iOS app and check the feed story.</li>
+<li>Click on the story link and verify that your app launches.</li>
+</ul>
+<p>
+<a name="appattribution">
+</a> <strong>Step 6</strong>. Exercise the app story attribution flow:</p>
+<p>When you publish a News Story there will be an app attribution linked to it. If you have configured SSO support then if a user clicks on the &quot;via YOUR_APP&quot; link they will be directed to your app.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/ios-app-newsfeed.png" />
+</div>
+<p>If you completed the previous New Feed publishing step, do the following:</p>
+<ul>
+<li>Publish a feed story.</li>
+<li>Open up Facebook iOS app and check the feed story.</li>
+<li>Click on the story attribution link and verify that your app is opened up.</li>
+</ul>
+<p>Those are all the steps you need to take to set up and verify distribution through Facebook iOS app.</p>
+<hr />
+<h2>Additional Topics</h2>
+<h2 id="errors">Handle Errors</h2>
+<p>Errors are handled by the <code>FBRequestDelegate</code> and <code>FBDialogDelegate</code> interfaces. Apps can implement these interfaces and specify delegates as necessary to handle any errors.</p>
+<p>Read more about error handling in the <a href="/docs/reference/iossdk/" name="https://developers.facebook.com/docs/reference/iossdk/">iOS reference documentation</a>.</p>
+<hr />
+<h2 id="extend_token">Extending the Access Token</h2>
+<p>
+<strong>Step 1</strong>. Implement FBSessionDelegate delegate method fbDidExtendToken and save the new token and expiration time. Here is an example:</p>
+<pre>
+-(void)fbDidExtendToken:(NSString *)accessToken expiresAt:(NSDate *)expiresAt {
+    NSLog(@&quot;token extended&quot;);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:accessToken forKey:@&quot;FBAccessTokenKey&quot;];
+    [defaults setObject:expiresAt forKey:@&quot;FBExpirationDateKey&quot;];
+    [defaults synchronize];
+}
+</pre>
+<p>
+<strong>Step 2</strong>. Call [facebook extendAccessTokenIfNeeded] in your AppDelegate method applicationDidBecomeActive. The SDK attempts to refresh its access tokens when it makes API calls, but it&apos;s a good practice to refresh the access token also when the app becomes active.</p>
+<pre>
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [facebook extendAccessTokenIfNeeded];
+}
+</pre>
+<p>Note: Make sure you have the latest iOS SDK that includes support for extending access tokens.</p>
+<hr />
+<h2 id="samples">Sample Apps</h2>
+<p>The Github repository contains a sample applications that showcase Facebook Platform integration:</p>
+<ul>
+<li>
+<p>
+<a href="https://github.com/facebook/facebook-ios-sdk/tree/master/sample/Hackbook" name="https://github.com/facebook/facebook-ios-sdk/tree/master/sample/Hackbook">Hackbook for iOS</a>: includes SSO and sample API calls. This sample is targeted towards iOS developers who want to build social apps.</p>
+</li>
+<li>
+<p>
+<a href="https://github.com/facebook/wishlist-mobile-sample" name="https://github.com/facebook/wishlist-mobile-sample">Wishlist</a>: Open Graph sample to demonstrate the use of custom objects and actions in a mobile application.</p>
+</li>
+</ul>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/mobile/ios/build/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1337624681" title="2012年5月21日 11:24">約2週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

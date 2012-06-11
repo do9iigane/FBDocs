@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/dialogs/pay/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/dialogs/pay/">https://developers.facebook.com/docs/reference/dialogs/pay/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a class="selected" href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Dialogs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/add_to_page/" name="http://developers.facebook.com/docs/reference/dialogs/add_to_page/">Add Page Tab Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/feed/" name="http://developers.facebook.com/docs/reference/dialogs/feed/">Feed Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/friends/" name="http://developers.facebook.com/docs/reference/dialogs/friends/">Friends Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/oauth/" name="http://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/pay/" name="http://developers.facebook.com/docs/reference/dialogs/pay/">Pay Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/requests/" name="http://developers.facebook.com/docs/reference/dialogs/requests/">Requests Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/send/" name="http://developers.facebook.com/docs/reference/dialogs/send/">Send Dialog</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Pay Dialog</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a> › <a href="/docs/reference/dialogs/pay/" name="https://developers.facebook.com/docs/reference/dialogs/pay/">Pay Dialog</a>
+</div>
+</div>
+</div>
+<h2>Overview</h2>
+<p>The Pay Dialog prompts users to initiate Facebook Credits orders. Developers integrating this dialog can enable their users to pay for digital goods and to <a href="https://developers.facebook.com/docs/credits/offers/" name="https://developers.facebook.com/docs/credits/offers/">earn virtual currencies</a>.</p>
+<p>Additional notes:</p>
+<ul>
+<li>
+<p>Only <a href="https://developers.facebook.com/docs/guides/canvas/" name="https://developers.facebook.com/docs/guides/canvas/">apps on Facebook</a> can open the this dialog.</p>
+</li>
+<li>
+<p>This dialog only supports <a href="https://developers.facebook.com/docs/reference/dialogs/#display" name="https://developers.facebook.com/docs/reference/dialogs/#display">desktop display modes</a>: <code>page</code>.</p>
+</li>
+<li>
+<p>This dialog only supports <a href="https://developers.facebook.com/docs/reference/dialogs/#display" name="https://developers.facebook.com/docs/reference/dialogs/#display">mobile display mode</a>: <code>touch</code>.</p>
+</li>
+<li>
+<p>Use of this dialog does not require <a href="https://developers.facebook.com/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">extended permissions</a>.</p>
+</li>
+<li>
+<p>Before integrating the Pay Dialog, developers must <a href="https://developers.facebook.com/docs/credits/build/" name="https://developers.facebook.com/docs/credits/build/">register their company information</a> and implement the <a href="https://developers.facebook.com/docs/credits/callback/" name="https://developers.facebook.com/docs/credits/callback/">server-side Credits Callbacks</a>. The contents of the Pay Dialog depend on it&apos;s <a href="#usage_notes" name="https://developers.facebook.com/docs/#usage_notes">use</a> and on how the developer implements the Credits Callbacks if applicable.</p>
+</li>
+</ul>
+<p>
+<a name="js_example"> </a>
+</p>
+<h2>JavaScript Example</h2>
+<p>The following simple JavaScript example demonstrates invoking the <a href="https://developers.facebook.com/docs/reference/javascript/FB.ui/" name="https://developers.facebook.com/docs/reference/javascript/FB.ui/">
+<code>FB.ui</code>
+</a> method using the <a href="https://developers.facebook.com/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a> to open a Pay Dialog for <a href="#buy_item_localcurrency" name="https://developers.facebook.com/docs/#buy_item_localcurrency">item purchases priced in local currency (e.g. USD)</a>.</p>
+<p>For <code>buy_item</code> orders,</p>
+<ul>
+<li>
+<p>The Pay Dialog only opens if you&apos;ve responded to the Credits Callback <code>payments_get_items</code> request.</p>
+</li>
+<li>
+<p>The <code>order_info</code> parameter and value are passed back to your Credits Callback URL when Facebook issues a <code>payments_get_items</code> request. Use this information to determine your <code>payments_get_items</code> response.</p>
+</li>
+</ul>
+<p>For other usages, click <a href="#usage_notes" name="https://developers.facebook.com/docs/#usage_notes">here</a>.</p>
+<pre>
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+      xmlns:fb=&quot;https://www.facebook.com/2008/fbml&quot;&gt;
+  &lt;head&gt;
+    &lt;title&gt;Facebook Credits Demo&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;Buy something...&lt;/h2&gt;
+    &lt;button onclick=&quot;buy()&quot;&gt;Buy&lt;/button&gt;
+    &lt;div id=&quot;fb-ui-return-data&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+
+    &lt;script src=&quot;http://connect.facebook.net/en_US/all.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt; 
+      FB.init({appId: &quot;YOUR_APP_ID&quot;, status: true, cookie: true});
+
+      // The dialog only opens if you&apos;ve implemented the
+      // Credits Callback payments_get_items.
+      function buy() {
+        var obj = {
+          method: &apos;pay&apos;,
+          action: &apos;buy_item&apos;,
+          // You can pass any string, but your payments_get_items must
+          // be able to process and respond to this data.
+          order_info: {&apos;item_id&apos;: &apos;1a&apos;},
+          dev_purchase_params: {&apos;oscif&apos;: true}
+        };
+
+        FB.ui(obj, js_callback);
+      }
+
+      // This JavaScript callback handles FB.ui&apos;s return data and differs
+      // from the Credits Callbacks.
+      var js_callback = function(data) {
+        if (data[&apos;order_id&apos;]) {
+          // Facebook only returns an order_id if you&apos;ve implemented
+          // the Credits Callback payments_status_update and settled
+          // the user&apos;s placed order.
+
+          // Notify the user that the purchased item has been delivered
+          // without a complete reload of the game.
+          write_callback_data(
+                    &quot;&lt;br&gt;&lt;b&gt;Transaction Completed!&lt;/b&gt; &lt;/br&gt;&lt;/br&gt;&quot;
+                    + &quot;Data returned from Facebook: &lt;/br&gt;&quot;
+                    + &quot;Order ID: &quot; + data[&apos;order_id&apos;] + &quot;&lt;/br&gt;&quot;
+                    + &quot;Status: &quot; + data[&apos;status&apos;]);
+        } else if (data[&apos;error_code&apos;]) {
+          // Appropriately alert the user.
+          write_callback_data(
+                    &quot;&lt;br&gt;&lt;b&gt;Transaction Failed!&lt;/b&gt; &lt;/br&gt;&lt;/br&gt;&quot;
+                    + &quot;Error message returned from Facebook:&lt;/br&gt;&quot;
+                    + data[&apos;error_code&apos;] + &quot; - &quot;
+                    + data[&apos;error_message&apos;]);
+        } else {
+          // Appropriately alert the user.
+          write_callback_data(&quot;&lt;br&gt;&lt;b&gt;Transaction failed!&lt;/b&gt;&quot;);
+        }
+      };
+
+      function write_callback_data(str) {
+        document.getElementById(&apos;fb-ui-return-data&apos;).innerHTML=str;
+      }
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>
+<a name="directurl_example"> </a>
+</p>
+<h2>Direct URL Example</h2>
+<p>You can also open a Pay Dialog by issuing an HTTP GET request to the <code>/dialog/pay</code> endpoint.</p>
+<p>For <code>buy_item</code> orders,</p>
+<ul>
+<li>
+<p>The Pay Dialog only opens if you&apos;ve responded to the Credits Callback <code>payments_get_items</code> request.</p>
+</li>
+<li>
+<p>The <code>order_info</code> parameter and value are passed back to your Credits Callback URL when Facebook issues a <code>payments_get_items</code> request. Use this information to determine your <code>payments_get_items</code> response.</p>
+</li>
+</ul>
+<p>For other usages, click <a href="#usage_notes" name="https://developers.facebook.com/docs/#usage_notes">here</a>.</p>
+<pre>
+https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
+                                    redirect_uri=YOUR_REDIRECT_URI&amp;
+                                    action=buy_item&amp;
+                                    order_info={&quot;item_id&quot;:&quot;1a&quot;}&amp;
+                                    dev_purchase_params={&quot;oscif&quot;:true}
+</pre>
+<p>
+<a name="usage_notes"> </a>
+</p>
+<h2>Usage Notes</h2>
+<p>The Pay Dialog can be used for the following circumstances:</p>
+<ul>
+<li>
+<p>
+<a href="#buy_item_localcurrency" name="https://developers.facebook.com/docs/#buy_item_localcurrency">Buy item priced in local currency (e.g. USD).</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#buy_item_credits" name="https://developers.facebook.com/docs/#buy_item_credits">Buy item priced in credits as a currency.</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#buy_credits_localcurrency" name="https://developers.facebook.com/docs/#buy_credits_localcurrency">Buy credits priced in local currency (e.g. USD).</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#earn_credits" name="https://developers.facebook.com/docs/#earn_credits">Earn credits by completing advertiser offers.</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#earn_appcurrency" name="https://developers.facebook.com/docs/#earn_appcurrency">Earn in-app currency by completing advertiser offers.</a>
+</p>
+</li>
+</ul>
+<p>
+<a name="buy_item_localcurrency"> </a>
+</p>
+<h3>Buy item priced in local currency (e.g. USD).</h3>
+<p>To prompt users to purchase an item priced in <i>local currency (e.g. USD)</i>, developers should invoke <code>FB.ui</code> with the following properties and values.</p>
+<p>Note that Facebook considers app currency (e.g. Fred&apos;s App&apos;s Cash) to be an item.</p>
+<p>The contents of the dialog depend on how the developer has implemented the Credits Callback <code>payments_get_items</code> request and it&apos;s processing of <code>order_info</code>.</p>
+<p>If Facebook&apos;s <a href="#return_data" name="https://developers.facebook.com/docs/#return_data">return data</a> to the app&apos;s JavaScript callback contains an <code>order_id</code>, please notify the user that the purchased item has been delivered without a complete reload of the game.</p>
+<pre>
+function buy() {
+  var obj = {
+    method: &apos;pay&apos;,
+    action: &apos;buy_item&apos;,
+    order_info: SOME_DEV_JS_OBJECT_ORDER_INFO,
+    dev_purchase_params: {&apos;oscif&apos;: true}
+  };
+
+  FB.ui(obj, js_callback);
+}
+</pre>
+<p>The <a href="#js_example" name="https://developers.facebook.com/docs/#js_example">JavaScript example</a> demonstrates this dialog.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/js_buy_item_localcurrency.png" />
+</p>
+<p>Developers can also open this dialog by direct URL by issuing an HTTP GET request to the <code>/dialog/pay</code> endpoint.</p>
+<pre>
+https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
+                                    redirect_uri=YOUR_REDIRECT_URI&amp;
+                                    action=buy_item&amp;
+                                    order_info=SOME_DEV_JSON_ORDER_INFO&amp;
+                                    dev_purchase_params={&quot;oscif&quot;:true}
+</pre>
+<p>The <a href="#directurl_example" name="https://developers.facebook.com/docs/#directurl_example">direct URL example</a> demonstrates this dialog.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/directurl_buy_item_localcurrency.png" />
+</p>
+<p>
+<a name="buy_item_credits"> </a>
+</p>
+<h3>Buy item priced in credits as a currency.</h3>
+<p>To prompt users to purchase an item priced in <i>credits</i>, developers should invoke <code>FB.ui</code> with the following properties and values.</p>
+<p>Note that Facebook considers app currency (e.g. Fred&apos;s App&apos;s Cash) to be an item.</p>
+<p>The contents of the dialog depend on how the developer has implemented the Credits Callback <code>payments_get_items</code> request and it&apos;s processing of <code>order_info</code>.</p>
+<p>If Facebook&apos;s <a href="#return_data" name="https://developers.facebook.com/docs/#return_data">return data</a> to the app&apos;s JavaScript callback contains an <code>order_id</code>, please notify the user that the purchased item has been delivered without a complete reload of the game.</p>
+<pre>
+function buy() {
+  var obj = {
+    method: &apos;pay&apos;,
+    action: &apos;buy_item&apos;,
+    order_info: SOME_DEV_JS_OBJECT_ORDER_INFO
+  };
+
+  FB.ui(obj, js_callback);
+}
+</pre>
+<p>
+<img src="https://developers.facebook.com/attachment/js_buy_item_creditscurrency.png" />
+</p>
+<p>Developers can also open this dialog by direct URL by issuing an HTTP GET request to the <code>/dialog/pay</code> endpoint.</p>
+<pre>
+https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
+                                    redirect_uri=YOUR_REDIRECT_URI&amp;
+                                    action=buy_item&amp;
+                                    order_info=SOME_DEV_JSON_ORDER_INFO
+</pre>
+<p>
+<img src="https://developers.facebook.com/attachment/directurl_buy_item_creditscurrency.png" />
+</p>
+<p>
+<a name="buy_credits_localcurrency"> </a>
+</p>
+<h3>Buy credits priced in local currency (e.g. USD).</h3>
+<p>To prompt users to purchase credits priced in local currency (e.g. USD), developers should invoke <code>FB.ui</code> with the following properties and values.</p>
+<p>Since the user is purchasing credits from Facebook,</p>
+<ul>
+<li>
+<p>There are no items to get from the developer, and therefore Facebook will <i>not</i> issue a Credits Callback <code>payments_get_items</code> request.</p>
+</li>
+<li>
+<p>There is no placed order with the developer, and therefore Facebook will <i>not</i> issue a Credits Callback <code>payments_status_update</code> request.</p>
+</li>
+</ul>
+<p>Since there&apos;s no placed order with the developer, an <code>order_id</code> is <i>never</i> returned to the app&apos;s JavaScript callback. The app&apos;s callback <i>only</i> receives the <a href="#return_data" name="https://developers.facebook.com/docs/#return_data">return data</a> parameter <code>error_code</code> with value <code>1383010</code> indicating that the user has closed the Pay Dialog. While it&apos;s possible that the user purchased credits from Facebook, it&apos;s <i>not</i> possible for the developer to determine the number of credits purchased.</p>
+<pre>
+function buy() {
+  var obj = {
+    method: &apos;pay&apos;,
+    action: &apos;buy_credits&apos;
+  };
+
+  FB.ui(obj, js_callback);
+}
+</pre>
+<p>
+<img src="https://developers.facebook.com/attachment/js_buy_credits_localcurrency.png" />
+</p>
+<p>Developers can also open this dialog by direct URL by issuing an HTTP GET request to the <code>/dialog/pay</code> endpoint.</p>
+<pre>
+https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
+                                    redirect_uri=YOUR_REDIRECT_URI&amp;
+                                    action=buy_credits
+</pre>
+<p>
+<img src="https://developers.facebook.com/attachment/directurl_buy_credits_localcurrency.png" />
+</p>
+<p>
+<a name="earn_credits"> </a>
+</p>
+<h3>Earn credits by completing advertiser offers.</h3>
+<p>For more details, visit the <a href="https://developers.facebook.com/docs/credits/offers/#credits_offers" name="https://developers.facebook.com/docs/credits/offers/#credits_offers">Credits Offers documentation</a>.</p>
+<p>To prompt users to earn credits, developers should invoke <code>FB.ui</code> with the following properties and values.</p>
+<p>Since the user is earning credits from Facebook,</p>
+<ul>
+<li>
+<p>There are no items to get from the developer, and therefore Facebook will <i>not</i> issue a Credits Callback <code>payments_get_items</code> request.</p>
+</li>
+<li>
+<p>There is no placed order with the developer, and therefore Facebook will <i>not</i> issue a Credits Callback <code>payments_status_update</code> request.</p>
+</li>
+</ul>
+<p>Since there&apos;s no placed order with the developer, an <code>order_id</code> is <i>never</i> returned to the app&apos;s JavaScript callback. The app&apos;s callback <i>only</i> receives the <a href="#return_data" name="https://developers.facebook.com/docs/#return_data">return data</a> parameter <code>error_code</code> with value <code>1383010</code> indicating that the user has closed the Pay Dialog. While it&apos;s possible that the user earned credits from Facebook, it&apos;s <i>not</i> possible for the developer to determine the number of credits earned.</p>
+<pre>
+function earn() {
+  var obj = {
+    method: &apos;pay&apos;,
+    action: &apos;earn_credits&apos;
+  };
+
+  FB.ui(obj, js_callback);
+}
+</pre>
+<p>
+<img src="https://developers.facebook.com/attachment/offerwall-credits.png" />
+</p>
+<p>Developers can also open this dialog by direct URL by issuing an HTTP GET request to the <code>/dialog/pay</code> endpoint.</p>
+<pre>
+https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
+                                    redirect_uri=YOUR_REDIRECT_URI&amp;
+                                    action=earn_credits
+</pre>
+<p>
+<img src="https://developers.facebook.com/attachment/direct_url_credits_offers.png" />
+</p>
+<p>
+<a name="earn_appcurrency"> </a>
+</p>
+<h3>Earn in-app currency by completing advertiser offers.</h3>
+<p>For more details, visit the <a href="https://developers.facebook.com/docs/credits/offers/#app_currency_offers" name="https://developers.facebook.com/docs/credits/offers/#app_currency_offers">In-app Currency Offers documentation</a>.</p>
+<p>To prompt users to earn in app currency, developers should invoke <code>FB.ui</code> with the following properties and values.</p>
+<p>Facebook will <i>not</i> issue a Credits Callback <code>payments_get_items</code> request, but <i>will</i> issue a Credits Callback <code>payments_status_update</code> request. For details, visit the <a href="https://developers.facebook.com/docs/credits/offers/#update_payments_status_update" name="https://developers.facebook.com/docs/credits/offers/#update_payments_status_update">In-App Currency Offers <code>payments_status_update</code> documentation</a>.</p>
+<p>If Facebook&apos;s <a href="#return_data" name="https://developers.facebook.com/docs/#return_data">return data</a> to the app&apos;s JavaScript callback contains an <code>order_id</code>, please notify the user that the earned app currency has been delivered without a complete reload of the game. It’s possible for a user to complete multiple offers in a single Pay Dialog. Facebook only returns the last completed <code>order_id</code>.</p>
+<p>To test various <a href="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance" name="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance">app currency object instances</a>, select an object instance to pass when invoking the Pay Dialog.</p>
+<p>Facebook uses the data associated with the last scape of the passed app currency object instance.</p>
+<pre>
+function earn() {
+  var obj = {
+    method: &apos;pay&apos;,
+    action: &apos;earn_currency&apos;,
+    product: &apos;URL_TO_APP_CURR_WEBPAGE&apos;
+  };
+
+  FB.ui(obj, js_callback);
+}
+</pre>
+<p>
+<img src="https://developers.facebook.com/attachment/offerwall-appcurrency.png" />
+</p>
+<p>Developers can also open this dialog by direct URL by issuing an HTTP GET request to the <code>/dialog/pay</code> endpoint.</p>
+<pre>
+https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
+                                    redirect_uri=YOUR_REDIRECT_URI&amp;
+                                    action=earn_currency&amp;
+                                    product=URL_TO_APP_CURR_WEBPAGE
+</pre>
+<p>
+<img src="https://developers.facebook.com/attachment/direct_url_app_currency_offers.png" />
+</p>
+<p>
+<a name="properties"> </a>
+</p>
+<h2>Properties</h2>
+<table>
+<tr>
+<td>
+<code>method</code>
+</td>
+<td>The value <code>pay</code>. If using a <i>direct URL</i>, this property and value are <i>not</i> required because the <code>pay</code> value is retrieved from the HTTP GET request to the <code>/dialog/pay</code> endpoint. </td>
+</tr>
+<tr>
+<td>
+<code>app_id</code>
+</td>
+<td>The developer&apos;s app id. If using the <i>JavaScript SDK</i>, this property and value are provided when initing the JavaScript SDK.</td>
+</tr>
+<tr>
+<td>
+<code>redirect_uri</code>
+</td>
+<td>After the user interacts with the Pay Dialog, redirect the browser to this URI. If using the <i>JavaScript SDK</i>, the value is supplied by the JavaScript SDK.</td>
+</tr>
+<tr>
+<td>
+<code>action</code>
+</td>
+<td>One of the values <a href="#buy_item_localcurrency" name="https://developers.facebook.com/docs/#buy_item_localcurrency">
+<code>buy_item</code>
+</a>, <a href="#buy_credits_localcurrency" name="https://developers.facebook.com/docs/#buy_credits_localcurrency">
+<code>buy_credits</code>
+</a>, <a href="#earn_credits" name="https://developers.facebook.com/docs/#earn_credits">
+<code>earn_credits</code>
+</a>, <a href="#earn_appcurrency" name="https://developers.facebook.com/docs/#earn_appcurrency">
+<code>earn_currency</code>
+</a>. </td>
+</tr>
+<tr>
+<td>
+<code>order_info</code>
+</td>
+<td>Developer provided data containing order information and is passed from the user&apos;s client to the developer&apos;s server via Facebook&apos;s <code>payments_get_items</code> request. Note not all <a href="#usage_notes" name="https://developers.facebook.com/docs/#usage_notes">usages</a> result in Facebook issuing <code>payments_get_items</code> requests. If using the <i>JavaScript SDK</i>, the data format is a <i>JavaScript object</i>. If using a <i>direct URL</i>, the data format is a <i>JSON string</i>.</td>
+</tr>
+<tr>
+<td>
+<code>dev_purchase_params</code>
+</td>
+<td>Configures whether the Pay Dialog displays prices in local currency (e.g. USD). If <code>{&apos;oscif&apos;: true}</code> is provided using the <i>JavaScript SDK</i> or <code>{&quot;oscif&quot;: true}</code> is provided is provided using a <i>direct URL</i>, the Pay Dialog displays prices in local currency. If using the <i>JavaScript SDK</i>, the data format is a <i>JavaScript object</i>. If using a <i>direct URL</i>, the data format is a <i>JSON string</i>.</td>
+</tr>
+<tr>
+<td>
+<code>product</code>
+</td>
+<td>A <a href="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance" name="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance">url to an app currency object instance</a> used for <a href="#earn_appcurrency" name="https://developers.facebook.com/docs/#earn_appcurrency">
+<code>earn_currency</code>
+</a> orders.</td>
+</tr>
+</table>
+<p>
+<a name="return_data"> </a>
+</p>
+<h2>Return Data</h2>
+<p>After a developer settled order, the following data is returned.</p>
+<table>
+<tr>
+<td>
+<code>order_id</code>
+</td>
+<td>A Facebook order id.</td>
+</tr>
+<tr>
+<td>
+<code>status</code>
+</td>
+<td>The value <code>settled</code>.</td>
+</tr>
+</table>
+<p>After an error, the following data is returned.</p>
+<table>
+<tr>
+<td>
+<code>error_code</code>
+</td>
+<td>An error code identifying the error.</td>
+</tr>
+<tr>
+<td>
+<code>error_message</code>
+</td>
+<td>An error message describing the error.</td>
+</tr>
+</table>
+<p>
+<b>If you&apos;re using the JavaScript SDK,</b> the return data is a <i>JavaScript object</i>. This object is passed into the JavaScript callback function specified when you invoked <code>FB.ui</code>.</p>
+<p>An example JavaScript object returned for a settled order.</p>
+<pre>
+{
+  order_id: 9006529929647,
+  status: &apos;settled&apos;
+}
+</pre>
+<p>An example JavaScript object returned for an error.</p>
+<pre>
+{
+  error_code: 1383010,
+  error_message: &apos;User canceled the order.&apos;
+}
+</pre>
+<p>
+<b>If you&apos;re using a direct URL,</b> the return data is <i>appended as query parameters</i> to the provided <code>redirect_uri</code>.</p>
+<p>An example <code>redirect_uri</code> with the appended query parameters for a settled order.</p>
+<pre>
+http://example.com/response?order_id=9006529936904&amp;status=settled
+</pre>
+<p>An example <code>redirect_uri</code> with the appended query parameters for an error.</p>
+<pre>
+http://example.com/response?error_code=1383010&amp;
+                            error_message=User+canceled+the+order.
+</pre>
+<p>A complete list of client error codes and messages can be found <a href="https://developers.facebook.com/docs/credits/errorcodes/" name="https://developers.facebook.com/docs/credits/errorcodes/">here</a>.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/dialogs/pay/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1328553299" title="2012年2月6日 10:34">約4ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

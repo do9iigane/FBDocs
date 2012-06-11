@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/iossdk/request/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/iossdk/request/">https://developers.facebook.com/docs/reference/iossdk/request/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</li>
+<li>
+<a href="/docs/reference/php" name="https://developers.facebook.com/docs/reference/php">PHP SDK</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/iossdk" name="https://developers.facebook.com/docs/reference/iossdk">iOS SDK</a>
+</li>
+<li>
+<a href="/docs/reference/androidsdk" name="https://developers.facebook.com/docs/reference/androidsdk">Android SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/authentication/" name="http://developers.facebook.com/docs/reference/iossdk/authentication/">Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/dialog/" name="http://developers.facebook.com/docs/reference/iossdk/dialog/">Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/request/" name="http://developers.facebook.com/docs/reference/iossdk/request/">Request</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Protocols</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/FBDialogDelegate/" name="http://developers.facebook.com/docs/reference/iossdk/FBDialogDelegate/">FBDialogDelegate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/" name="http://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/">FBRequestDelegate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/" name="http://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/">FBSessionDelegate</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Request</h1>
+<div class="breadcrumbs">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/iossdk/" name="https://developers.facebook.com/docs/reference/iossdk/">iOS SDK</a> › <a href="/docs/reference/iossdk/request/" name="https://developers.facebook.com/docs/reference/iossdk/request/">Request</a>
+</div>
+</div>
+</div>
+<p>The API request methods used in the Facebook iOS SDK. These are defined in <code>Facebook.h</code>.</p>
+<p>You implement these methods to do the following:</p>
+<ul>
+<li>
+<p>Make a server request using the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a>.</p>
+</li>
+<li>
+<p>Make a server request using <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">REST API and FQL</a>.</p>
+</li>
+<li>
+<p>Make a server request using the <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>.</p>
+</li>
+</ul>
+<h2>Instance Methods</h2>
+<hr />
+<h3>requestWithParams:andDelegate:</h3>
+<p>Call this method to make a request to the REST API with specified parameters.</p>
+<pre>
+<code>- (FBRequest*)requestWithParams:(NSMutableDictionary *)params
+                   andDelegate:(id &lt;FBRequestDelegate&gt;)delegate;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>params</code> - Key-value string pairs representing the API call parameters.</p>
+<p>
+<code>delegate</code> - The receiver&apos;s delegate or <code>nil</code> if it doesn&apos;t have a delegate. See <a href="/docs/reference/iossdk/FBRequestDelegate/" name="https://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/">FBRequestDelegate</a> for information on the delegate protocol.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>The <code>FBRequest</code> object corresponding to this API call.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>One of the parameters to this call must be <code>method</code> and it&apos;s value must be a valid REST server API method. If you are using FQL your <code>method</code> parameter should be set to &apos;&apos;fql.query&apos;&apos;. You should set up your delegate to handle the API results including error scenarios.</p>
+<hr />
+<h3>requestWithMethodName:andParams:andHttpMethod:andDelegate:</h3>
+<p>Call this method to make a request to the REST API with a given API method, specified parameters, and an HTTP method.</p>
+<pre>
+<code>- (FBRequest*)requestWithMethodName:(NSString *)methodName
+                   andParams:(NSMutableDictionary *)params
+                   andHttpMethod:(NSString *)httpMethod
+                   andDelegate:(id &lt;FBRequestDelegate&gt;)delegate;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>methodName</code> - Valid REST API method.</p>
+<p>
+<code>params</code> - Key-value string pairs representing the API call parameters.</p>
+<p>
+<code>httpMethod</code> - HTTP method.</p>
+<p>
+<code>delegate</code> - The receiver&apos;s delegate or <code>nil</code> if it doesn&apos;t have a delegate. See <a href="/docs/reference/iossdk/FBRequestDelegate/" name="https://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/">FBRequestDelegate</a> for information on the delegate protocol.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>The <code>FBRequest</code> object corresponding to this API call.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You may use this method if you want control over the type of HTTP method used in the API call. You should set up your delegate to handle the API results including error scenarios.</p>
+<hr />
+<h3>requestWithGraphPath:andDelegate:</h3>
+<p>Call this method to make a request to the Graph API.</p>
+<pre>
+<code>- (FBRequest*)requestWithGraphPath:(NSString *)graphPath
+                   andDelegate:(id &lt;FBRequestDelegate&gt;)delegate;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>graphPath</code> - The path to the Graph API endpoint. For example, to fetch data about the currently logged in user this parameter should be &apos;&apos;me&apos;&apos;, representing a call to the https://graph.facebook.com/me endpoint.</p>
+<p>
+<code>delegate</code> - The receiver&apos;s delegate or <code>nil</code> if it doesn&apos;t have a delegate. See <a href="/docs/reference/iossdk/FBRequestDelegate/" name="https://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/">FBRequestDelegate</a> for information on the delegate protocol.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>The <code>FBRequest</code> object corresponding to this API call.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You should set up your delegate to handle the API results including error scenarios.</p>
+<hr />
+<h3>requestWithGraphPath:andParams:andDelegate:</h3>
+<p>Call this method to make a request to the Graph API with specified parameters.</p>
+<pre>
+<code>- (FBRequest*)requestWithGraphPath:(NSString *)graphPath
+                   andParams:(NSMutableDictionary *)params
+                   andDelegate:(id &lt;FBRequestDelegate&gt;)delegate;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>graphPath</code> - The path to the Graph API endpoint. For example, to fetch data about the currently logged in user this parameter should be &apos;&apos;me&apos;&apos;, representing a call to the https://graph.facebook.com/me endpoint.</p>
+<p>
+<code>params</code> - Key-value string pairs representing the API call parameters.</p>
+<p>
+<code>delegate</code> - The receiver&apos;s delegate or <code>nil</code> if it doesn&apos;t have a delegate. See <a href="/docs/reference/iossdk/FBRequestDelegate/" name="https://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/">FBRequestDelegate</a> for information on the delegate protocol.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>The <code>FBRequest</code> object corresponding to this API call.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You may use this method if you want to send parameters with the API call. You should set up your delegate to handle the API results including error scenarios.</p>
+<hr />
+<h3>requestWithGraphPath:andParams:andHttpMethod:andDelegate:</h3>
+<p>Call this method to make a request to the Graph API with specified parameters and an HTTP method.</p>
+<pre>
+<code>- (FBRequest*)requestWithGraphPath:(NSString *)graphPath
+                   andParams:(NSMutableDictionary *)params
+                   andHttpMethod:(NSString *)httpMethod
+                   andDelegate:(id &lt;FBRequestDelegate&gt;)delegate;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>graphPath</code> - The path to the Graph API endpoint, e.g. to fetch data about the currently logged in user this parameter should be &apos;&apos;me&apos;&apos;, representing a call to https://graph.facebook.com/me endpoint.</p>
+<p>
+<code>params</code> - Key-value string pairs representing the API call parameters.</p>
+<p>
+<code>httpMethod</code> - HTTP method.</p>
+<p>
+<code>delegate</code> - The receiver&apos;s delegate or <code>nil</code> if it doesn&apos;t have a delegate. See <a href="/docs/reference/iossdk/FBRequestDelegate/" name="https://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/">FBRequestDelegate</a> for information on the delegate protocol.</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>The <code>FBRequest</code> object corresponding to this API call.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You may use this method if you want control over the type of HTTP method used in the API call. You should set up your delegate to handle the API results including error scenarios.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/iossdk/request/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1316385061" title="2011年9月18日 15:31">約9ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

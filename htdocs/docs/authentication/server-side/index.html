@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/authentication/server-side/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/authentication/server-side/">https://developers.facebook.com/docs/authentication/server-side/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Reference</h5>
+<ul>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/authentication/server-side/" name="http://developers.facebook.com/docs/authentication/server-side/">Server-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/client-side/" name="http://developers.facebook.com/docs/authentication/client-side/">Client-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/ios/" name="http://developers.facebook.com/docs/authentication/ios/">Authentication in native iOS apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/android/" name="http://developers.facebook.com/docs/authentication/android/">Authentication in native Android apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pages/" name="http://developers.facebook.com/docs/authentication/pages/">Authenticating as a Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/applications/" name="http://developers.facebook.com/docs/authentication/applications/">Authenticating as an App</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/devices/" name="http://developers.facebook.com/docs/authentication/devices/">Authentication for Devices</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/canvas/" name="http://developers.facebook.com/docs/authentication/canvas/">Authentication within a Canvas Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pagetab/" name="http://developers.facebook.com/docs/authentication/pagetab/">Authentication within a Page Tab</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/access-token-expiration/" name="http://developers.facebook.com/docs/authentication/access-token-expiration/">Handling Invalid and Expired Access Tokens</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/permissions/" name="http://developers.facebook.com/docs/authentication/permissions/">Permissions Reference</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/publishing/" name="http://developers.facebook.com/docs/publishing/">Publishing Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/reauthentication/" name="http://developers.facebook.com/docs/authentication/reauthentication/">Re-Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/signed_request/" name="http://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Server-Side Authentication</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">Authentication</a> › <a href="/docs/authentication/server-side/" name="https://developers.facebook.com/docs/authentication/server-side/">Server-Side Authentication</a>
+</div>
+</div>
+</div>
+<p>On the Desktop Web and Mobile Web, to authenticate a user using a server-side flow, follow these steps:</p>
+<h3>1. Redirect the user to the OAuth Dialog</h3>
+<pre>
+<code>https://www.facebook.com/dialog/oauth?
+    client_id=YOUR_APP_ID
+   &amp;redirect_uri=YOUR_REDIRECT_URI
+   &amp;scope=COMMA_SEPARATED_LIST_OF_PERMISSION_NAMES
+   &amp;state=SOME_ARBITRARY_BUT_UNIQUE_STRING
+</code>
+</pre>
+<p>The <code>scope</code> parameter is optional, but allows you to specify an array of <a href="/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">additional permissions</a> which you would like the user to grant your app.</p>
+<p>For security, the <code>redirect_uri</code> must have the same base domain as that specified in the App Domain property of <a href="/apps" name="https://developers.facebook.com/apps">your app&apos;s settings</a>, or be a URL of the form <code>https://apps.facebook.com/YOUR_APP_NAMESPACE</code>.</p>
+<p>The <code>state</code> parameter should be set to some arbitrary string you generate uniquely for each authentication request. This value will be passed back as a parameter to your <code>redirect_uri</code> once the user has authorized your app and you should check that the returned value matched the value you passed in at the start of the flow. This guards against <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" name="http://en.wikipedia.org/wiki/Cross-site_request_forgery">Cross-site Request Forgery</a> by ensuring the incoming redirect is part of the authentication flow which you initiated.</p>
+<p>For a full list of parameters, see the <a href="/docs/reference/dialogs/oauth/" name="https://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog documentation</a>.</p>
+<h3>2. The user is prompted to authorize your application</h3>
+<div style="text-align:center">
+<img alt="The OAuth dialog on web and mobile web" src="https://developers.facebook.com/attachment/auth-web-mobileweb.jpg" />
+</div>
+<p>If the user is not logged into Facebook, they&apos;ll be prompted to Login. If the user has already authorized your app and has already granted the permissions requested in <code>scope</code>, the user will be immediately redirected to your <code>redirect_uri</code>. If the user has already authorized your app, but you are requesting additional <a href="/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">permissions</a> in the <code>scope</code> parameter, the user will be presented with a dialog which shows only the requested permissions that the user has not already granted your application.</p>
+<h3>3. The user is redirected back to your app</h3>
+<p>If the user authorized your application, the user will be redirected to:</p>
+<pre>
+<code>YOUR_REDIRECT_URI?
+    state=YOUR_STATE_VALUE
+   &amp;code=CODE_GENERATED_BY_FACEBOOK
+</code>
+</pre>
+<p>If the user declined to authorize your application, the user will be redirected to:</p>
+<pre>
+<code>YOUR_REDIRECT_URI?
+    error_reason=user_denied
+   &amp;error=access_denied
+   &amp;error_description=The+user+denied+your+request.
+   &amp;state=YOUR_STATE_VALUE
+</code>
+</pre>
+<h3>4. Exchange the code for a user access token</h3>
+<p>Once the user has authorized your app, you should make a <strong>server side</strong> request to exchange the code returned above for a user access token.</p>
+<pre>
+<code>https://graph.facebook.com/oauth/access_token?
+    client_id=YOUR_APP_ID
+   &amp;redirect_uri=YOUR_REDIRECT_URI
+   &amp;client_secret=YOUR_APP_SECRET
+   &amp;code=CODE_GENERATED_BY_FACEBOOK
+</code>
+</pre>
+<p>The <code>client_secret</code> parameter must be the App Secret as shows in <a href="(/apps)" name="https://developers.facebook.com/docs/(/apps)">your app&apos;s settings</a>. The body of the response to this request will be a url encoded string of the form:</p>
+<pre>
+<code>access_token=USER_ACESS_TOKEN&amp;expires=NUMBER_OF_SECONDS_UNTIL_TOKEN_EXPIRES
+</code>
+</pre>
+<p>You should parse this string and use the <code>access_token</code> value to make requests to the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a>. You should also persist the access token in your database in order to make further requests to the API without having to re-authenticate the user.</p>
+<p>Once the access token expiry time is reached, the token will become invalid and can no longer be used in requests to the API. To obtain a new user access token, you must pass the user through this flow again. However, if the user has not deauthorized your app and you&apos;re asking for no permissions beyond those which the user has already granted your application, then no dialog will be displayed and the user will be transparently redirected to your <code>redirect_uri</code> with a fresh code which can be exchanged for a fresh user access token.</p>
+<p>If there is an issue exchanging the code for a user access token, the authorization server will issue an HTTP 400 and return the error as a JSON object in the body of the response:</p>
+<pre>
+<code>{
+   &quot;error&quot;: {
+      &quot;type&quot;: &quot;OAuthException&quot;,
+      &quot;message&quot;: &quot;Error validating verification code.&quot;
+   }
+}
+</code>
+</pre>
+<h3>5. Make requests to the Graph API</h3>
+<p>With a valid user access token, you can make requests to read and write data from the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a>. A common first request would be to get the basic information (including the <code>id</code> and <code>name</code>) of the user who just authenticated your app:</p>
+<pre>
+<code>https://graph.facebook.com/me?access_token=YOUR_USER_ACCESS_TOKEN
+</code>
+</pre>
+<h2>HTTP Sequence Diagram</h2>
+<p>The diagram below illustrates the sequence of HTTP calls required to implement the server-side auth flow:</p>
+<p>
+<img src="https://developers.facebook.com/attachment/serversideflow.png" width="80%/" />
+</p>
+<hr />
+<h2>Example</h2>
+<p>The following PHP example demonstrates an implementation of the server-side flow including <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" name="http://en.wikipedia.org/wiki/Cross-site_request_forgery">CSRF protection</a> using the <code>state</code> parameter:</p>
+<pre>
+<code> &lt;?php 
+
+   $app_id = &quot;YOUR_APP_ID&quot;;
+   $app_secret = &quot;YOUR_APP_SECRET&quot;;
+   $my_url = &quot;YOUR_URL&quot;;
+
+   session_start();
+   $code = $_REQUEST[&quot;code&quot;];
+
+   if(empty($code)) {
+     $_SESSION[&apos;state&apos;] = md5(uniqid(rand(), TRUE)); //CSRF protection
+     $dialog_url = &quot;https://www.facebook.com/dialog/oauth?client_id=&quot; 
+       . $app_id . &quot;&amp;redirect_uri=&quot; . urlencode($my_url) . &quot;&amp;state=&quot;
+       . $_SESSION[&apos;state&apos;];
+
+     echo(&quot;&lt;script&gt; top.location.href=&apos;&quot; . $dialog_url . &quot;&apos;&lt;/script&gt;&quot;);
+   }
+
+   if($_SESSION[&apos;state&apos;] &amp;&amp; ($_SESSION[&apos;state&apos;] === $_REQUEST[&apos;state&apos;])) {
+     $token_url = &quot;https://graph.facebook.com/oauth/access_token?&quot;
+       . &quot;client_id=&quot; . $app_id . &quot;&amp;redirect_uri=&quot; . urlencode($my_url)
+       . &quot;&amp;client_secret=&quot; . $app_secret . &quot;&amp;code=&quot; . $code;
+
+     $response = file_get_contents($token_url);
+     $params = null;
+     parse_str($response, $params);
+
+     $graph_url = &quot;https://graph.facebook.com/me?access_token=&quot; 
+       . $params[&apos;access_token&apos;];
+
+     $user = json_decode(file_get_contents($graph_url));
+     echo(&quot;Hello &quot; . $user-&gt;name);
+   }
+   else {
+     echo(&quot;The state does not match. You may be a victim of CSRF.&quot;);
+   }
+
+ ?&gt;
+</code>
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/authentication/server-side/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1338828936" title="2012年6月4日 9:55">先週月曜日に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

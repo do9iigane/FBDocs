@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/ads-api/adcampaign/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/ads-api/adcampaign/">https://developers.facebook.com/docs/reference/ads-api/adcampaign/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Best Practices</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/batch-requests/" name="http://developers.facebook.com/docs/reference/ads-api/batch-requests/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/etags-reference/" name="http://developers.facebook.com/docs/reference/ads-api/etags-reference/">Using ETags</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/currencies/" name="http://developers.facebook.com/docs/reference/ads-api/currencies/">Currencies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/">Introduction to Action Spec</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/" name="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/">Introduction to Sponsored Stories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/" name="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/">Optimized CPM</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Specs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/" name="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/">Conversion Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/creative-specs/" name="http://developers.facebook.com/docs/reference/ads-api/creative-specs/">Creative Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/">Defining Action Specs </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/">Targeting Specs</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced Targeting</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/">Action Spec Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/">Topic Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/">ZIP Code Targeting</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Queries</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/actionestimate/" name="http://developers.facebook.com/docs/reference/ads-api/actionestimate/">Action Estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/generatepreview/" name="http://developers.facebook.com/docs/reference/ads-api/generatepreview/">Action Spec Ad Previews</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/adstatistics/">Ad Statistics</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/" name="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/">Autocomplete Data</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/" name="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/">Broad Target Categories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/" name="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/">Connection Objects</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/">Conversion Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/keywordstats/" name="http://developers.facebook.com/docs/reference/ads-api/keywordstats/">Keyword Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/reachestimate/" name="http://developers.facebook.com/docs/reference/ads-api/reachestimate/">Reach estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-description/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-description/">Targeting Description</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccount/" name="http://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/">Ad account group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcampaign/" name="http://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcreative/" name="http://developers.facebook.com/docs/reference/ads-api/adcreative/">Ad creative</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adimage/" name="http://developers.facebook.com/docs/reference/ads-api/adimage/">Ad image</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/aduser/" name="http://developers.facebook.com/docs/reference/ads-api/aduser/">Ad user</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Ad campaign</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api/">Ads API</a> › <a href="/docs/reference/ads-api/adcampaign/" name="https://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a>
+</div>
+</div>
+</div>
+<p>A campaign for managing ads, as represented in the <a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>.</p>
+<p>Before using this object, see <a href="https://developers.facebook.com/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads on the Graph API</a>.</p>
+<p>See below for information about <a href="#using" name="https://developers.facebook.com/docs/#using">how to use this object</a>.</p>
+<p>The <code>adcampaign</code> object has the following connection:</p>
+<ul>
+<li>
+<a href="/docs/reference/ads-api/adgroup" name="https://developers.facebook.com/docs/reference/ads-api/adgroup">
+<code>adgroup</code>
+</a>
+</li>
+</ul>
+<p>The <code>adcampaign</code> object is a connection of the following object:</p>
+<ul>
+<li>
+<a href="/docs/reference/ads-api/adaccount" name="https://developers.facebook.com/docs/reference/ads-api/adaccount">
+<code>adaccount</code>
+</a>
+</li>
+</ul>
+<p>To read an <code>adcampaign</code> object you need the following <a href="/docs/authentication/permissions/" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a>: <code>ads_management</code> and, for use anytime, <code>offline_access</code>.</p>
+<p>The <code>adCampaign</code> object replaces <a href="/docs/reference/ads-api/#migr_quick_ref" name="https://developers.facebook.com/docs/reference/ads-api/#migr_quick_ref">legacy calls involving campaigns</a>.</p>
+<h3>Example</h3>
+<p>Retrieve the information for a campaign with a URL similar to the following:</p>
+<pre>
+<code>https://graph.facebook.com/CampaignID?access_token=___
+</code>
+</pre>
+<p>To retrieve information for multiple campaigns use the ids parameter as follows:</p>
+<pre>
+<code>https://graph.facebook.com?ids=60036768798069,60047687098847,6004657687980&amp;access_token=___
+</code>
+</pre>
+<h2>Fields</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Permissions</th>
+<th align="left">Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<code>id</code>
+</td>
+<td align="left">The campaign ID</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>long</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>account_id</code>
+</td>
+<td align="left">Used to create another campaign with the same account ID</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>long</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>name</code>
+</td>
+<td align="left">Campaign name of 100 characters or less; required to create a new campaign</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>start_time</code>
+</td>
+<td align="left">A unix timestamp; optional when creating and updating campaigns</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>end_time</code>
+</td>
+<td align="left">A unix timestamp; optional when creating and updating campaigns. Must always be in the future. If using a <code>daily_budget</code>, you can set <code>end_time=0</code> to update the campaign to be &quot;ongoing&quot;</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>daily_budget</code>
+</td>
+<td align="left">Defined in cents, minimum 100; daily or lifetime budget must be set when creating a a campaign; can be updated</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>campaign_status</code>
+</td>
+<td align="left">A campaign status is active (status 1), paused (status 2), or deleted (status 3). Note when a timed campaign completes it remains in state 1. A completed campaign can be restarted by editing the end_time to be a time in the future.</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>lifetime_budget</code>
+</td>
+<td align="left">Defined in cents, minimum 100; can be updated; either a <code>lifetime_budget</code>, or a <code>daily_budget</code> , or both can be set, and an updated budget begins spending from zero (if there&apos;s a switch in budget types, the entire campaign-spend, to date, is set to zero); if money already was spent on the campaign today, that money is not counted towards the new budget; an advertiser may be charged up to the sum of the old spend, plus any new spend that occurs in the campaign; for more information, see the Facebook Help. If you specify only a <code>lifetime_budget</code>, you should also specify an <code>end_time</code> for the campaign. Note <code>lifetime_budget</code> campaign must have a fixed <code>end_time</code> and cannot be ongoing.</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Connections</h2>
+<p>The <code>adcampaign</code> object has the following connections.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Permissions</th>
+<th align="left">Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">adgroups</td>
+<td align="left">The ads in this campaign</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/adgroup" name="https://developers.facebook.com/docs/reference/ads-api/adgroup">
+<code>adgroup</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">stats</td>
+<td align="left">The statistics for campaign</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code> of <a href="/docs/reference/ads-api/adstatistics" name="https://developers.facebook.com/docs/reference/ads-api/adstatistics">
+<code>adstatistics</code>
+</a> objects</td>
+</tr>
+<tr>
+<td align="left">adcreatives</td>
+<td align="left">The creatives for the campaigns</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<a href="/docs/reference/ads-api/adcreative/" name="https://developers.facebook.com/docs/reference/ads-api/adcreative/">
+<code>adcreative</code>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+<a name="using">
+</a>
+</p>
+<h2>Using Ad Campaign objects</h2>
+<p>A campaign is a group of ads that share the same daily or lifetime budget and schedule. The individual ads have separate bids and targeting. Campaigns enable you to group ads according to your criteria, and you can retrieve the ad-related statistics that apply to a campaign.</p>
+<h3>Retrieving campaigns</h3>
+<p>You can retrieve the basic data for all the campaigns in an account.</p>
+<p>Alternatively, you can retrieve the basic data for a specific campaign when you specify the campaign ID (unique in the Graph API).</p>
+<h4>Retrieving campaigns for an account</h4>
+<p>To retrieve the basic data for the campaigns in an entire account, specify the account number as act_AccountNumber. Then specify the <code>adCampaign</code> object as a connection to act_AccountNumber. For example, if you specify a request similar to the following:</p>
+<pre>
+<code>curl  &quot;https://graph.facebook.com/act_368811234/adcampaigns?
+date_format=U&amp;access_token=___&quot;    
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>{&quot;data&quot;: [
+      {
+     &quot;id&quot;: &quot;6003266501234&quot;,
+     &quot;account_id&quot;: 368811234,
+     &quot;campaign_id&quot;: 6003266501234,
+     &quot;name&quot;: &quot;Acme&quot;,
+     &quot;start_time&quot;: 1302027273,
+     &quot;end_time&quot;: 0,
+     &quot;updated_time&quot;: 1302027509,
+     &quot;daily_budget&quot;: 500,
+     &quot;campaign_status&quot;: 3,
+     &quot;daily_imps&quot;: &quot;0&quot;,
+     &quot;topline_id&quot;: 0,
+     &quot;inflation&quot;: 0
+      },
+      {
+     &quot;id&quot;: &quot;6003266531123&quot;,
+     &quot;account_id&quot;: 368811234,
+     &quot;campaign_id&quot;: 6003266531123,
+     &quot;name&quot;: &quot;Champ&quot;,
+     &quot;start_time&quot;: 1302028741,
+     &quot;end_time&quot;: 1310668740,
+     &quot;updated_time&quot;: 1308178443,
+     &quot;campaign_status&quot;: 1,
+     &quot;lifetime_budget&quot;: 10000,
+     &quot;daily_imps&quot;: &quot;0&quot;,
+     &quot;topline_id&quot;: 0,
+     &quot;inflation&quot;: 0
+      }
+   ]}
+</code>
+</pre>
+<p>Note: At most 500 campaigns can be retrieved in a single call. Any campaigns in excess of this must be paged through.</p>
+<p>When retrieving adcampaigns from a account level you can filter deleted campaigns by using the include_deleted parameter</p>
+<pre>
+<code>https://graph.facebook.com/act_368811234/adcampaigns?include_deleted=true&amp;access_token=____
+</code>
+</pre>
+<p>If the include_deleted parameter is not supplied the default &quot;false&quot; is used.</p>
+<p>If you use the include_deleted parameter while specifying specific adcampaign IDs, as described in the next section, the include_deleted parameter will be ignored and all of the requested adcampaigns will be returned.</p>
+<h4>Retrieving basic data for one or more specific campaigns</h4>
+<p>Retrieving the basic data for one campaign is similar to retrieving data for any object in the Graph API. The campaign ID is a unique ID so you can specify a request similar to the following:</p>
+<pre>
+<code>curl  &quot;https://graph.facebook.com/6003266501234?
+date_format=U&amp;access_token=___&quot;    
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>{
+   &quot;id&quot;: &quot;6003266501234&quot;,
+   &quot;account_id&quot;: 368811234,
+   &quot;campaign_id&quot;: 6003266501234,
+   &quot;name&quot;: &quot;Champ&quot;,
+   &quot;start_time&quot;: 1302027273,
+   &quot;end_time&quot;: 0,
+   &quot;updated_time&quot;: 1308881905,
+   &quot;daily_budget&quot;: 500,
+   &quot;campaign_status&quot;: 3,
+   &quot;daily_imps&quot;: &quot;0&quot;,
+   &quot;topline_id&quot;: 0,
+   &quot;inflation&quot;: 0
+}
+</code>
+</pre>
+<p>If you want to retrieve the basic data for multiple campaigns, specify their IDs as follows:</p>
+<pre>
+<code>curl  &quot;https://graph.facebook.com?
+ids=6003417013123,6003266531123&amp;date_format=U&amp;access_token=___&quot;    
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>{&quot;6003417013123&quot;: {
+    &quot;id&quot;: &quot;6003417013123&quot;,
+    &quot;account_id&quot;: 368811234,
+    &quot;campaign_id&quot;: 6003417013123,
+    &quot;name&quot;: &quot;Champ&quot;,
+    &quot;start_time&quot;: 1308876042,
+    &quot;end_time&quot;: 0,
+    &quot;updated_time&quot;: 1308876042,
+    &quot;daily_budget&quot;: 1000,
+    &quot;campaign_status&quot;: 1,
+    &quot;daily_imps&quot;: &quot;0&quot;,
+    &quot;topline_id&quot;: 0,
+    &quot;inflation&quot;: 0
+   },
+   &quot;6003266531123&quot;: {
+    &quot;id&quot;: &quot;6003266531123&quot;,
+    &quot;account_id&quot;: 368811234,
+    &quot;campaign_id&quot;: 6003266531123,
+    &quot;name&quot;: &quot;NewChamp&quot;,
+    &quot;start_time&quot;: 1302028741,
+    &quot;end_time&quot;: 1310668740,
+    &quot;updated_time&quot;: 1308884751,
+    &quot;campaign_status&quot;: 1,
+    &quot;lifetime_budget&quot;: 10000,
+    &quot;daily_imps&quot;: &quot;0&quot;,
+    &quot;topline_id&quot;: 0,
+    &quot;inflation&quot;: 0
+   }}
+</code>
+</pre>
+<h4>Getting the Remaining Budget</h4>
+<p>The remaining budget (spend) is included in the response if you specify the following in the request:</p>
+<pre>
+<code>include_budget_remaining=1 
+</code>
+</pre>
+<h2>Creating Campaigns</h2>
+<p>You can create campaigns. To create a campaign, include a daily budget of at least $10 and a campaign name. See above for descriptions of the input parameters (e.g. daily budget, lifetime budget, start time, and active/paused/deleted status).</p>
+<p>To create a campaign, specify the data for the campaign in a request to the following URL:</p>
+<pre>
+<code>https://graph.facebook.com/act_AccountID/adcampaigns
+</code>
+</pre>
+<p>For example, if you specify a request similar to the following:</p>
+<pre>
+<code>curl -d  &quot;name=Chm&amp;daily_budget=1000&amp;lifetime_budget=10000
+&amp;campaign_status=1&quot; &quot;https://graph.facebook.com/
+act_368811234/adcampaigns?access_token=___&quot;
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>{&quot;id&quot;:6003417011234}
+</code>
+</pre>
+<p>If you want to create a campaign that is not in an active state, then instead of specifying campaign_status=1, specify the following to indicate paused status:</p>
+<pre>
+<code>campaign_status=2  
+</code>
+</pre>
+<h3>Redownloading campaign after creation</h3>
+<p>You can request the newly created adcampaign to be returned to you after creation. For example, you could specify a request similar to the following to create an adcampaign and have it returned:</p>
+<p>If you specify the following:</p>
+<pre>
+<code>curl -d  &quot;name=Chm&amp;daily_budget=1000&amp;lifetime_budget=10000
+&amp;campaign_status=1&amp;redownload=1&quot; &quot;https://graph.facebook.com/
+act_368811234/adcampaigns?access_token=___&quot;
+</code>
+</pre>
+<p>The result would be similar to the following:</p>
+<pre>
+<code>{&quot;id&quot;:&quot;6003826063039&quot;,&quot;data&quot;:{&quot;campaigns&quot;:{&quot;6003826063039&quot;:{&quot;account_id&quot;:19643108,&quot;campaign_id&quot;:6003826063039,&quot;name&quot;:&quot;Chm&quot;,&quot;daily_budget&quot;:1000,&quot;campaign_status&quot;:1,&quot;daily_imps&quot;:0,&quot;id&quot;:&quot;6003826063039&quot;,&quot;start_time&quot;:1319727249,&quot;end_time&quot;:null,&quot;updated_time&quot;:1319727249}}}}
+</code>
+</pre>
+<h2>Updating and Deleting Campaigns</h2>
+<p>To update a campaign, specify the data for the campaign in a request to the following URL:</p>
+<pre>
+<code>https://graph.facebook.com/CampaignID
+</code>
+</pre>
+<p>You could specify an update to a campaign’s daily budget by specifying a request similar to the following:</p>
+<pre>
+<code>curl -d &quot;daily_budget=1100&quot; &quot;https://graph.facebook.com/
+6003417011234?access_token=___&quot;
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>true
+</code>
+</pre>
+<p>If you want to update the campaign status, specify campaign_status=1 for active, or campaign_status=2 for paused.</p>
+<h4>Note: Specifying <code>end_time</code>=0 unsets the campaign&apos;s end time (if any) and will make it an ongoing campaign with no end date.</h4>
+<h3>Redownloading campaign after updating</h3>
+<p>You can request the newly updated adcampaign to be returned to you after updating. For example, you could specify a request similar to the following to update an adcampaign and have it returned:</p>
+<p>If you specify the following:</p>
+<pre>
+<code>curl -d &quot;daily_budget=1100&amp;redownload=1&quot; &quot;https://graph.facebook.com/
+6003417011234?access_token=___&quot;
+</code>
+</pre>
+<p>The result would be similar to the following:</p>
+<pre>
+<code>{&quot;result&quot;:true,&quot;data&quot;:{&quot;campaigns&quot;:{&quot;6003826063039&quot;:{&quot;account_id&quot;:19643108,&quot;campaign_id&quot;:6003826063039,&quot;name&quot;:&quot;Chm&quot;,&quot;daily_budget&quot;:1100,&quot;campaign_status&quot;:1,&quot;daily_imps&quot;:0,&quot;id&quot;:&quot;6003826063039&quot;,&quot;start_time&quot;:1319727249,&quot;end_time&quot;:null,&quot;updated_time&quot;:1319727249}}}}
+</code>
+</pre>
+<h3>Deleting a campaign</h3>
+<p>In the legacy Ads API, to delete a campaign, a campaign status of 3 was specified; see <a href="/docs/adsapi/campaign_specs" name="https://developers.facebook.com/docs/adsapi/campaign_specs">campaign_specs array</a>.</p>
+<p>In the Graph API, use the HTTP DELETE method to delete an object, such as an <code>adCampaign</code> object:</p>
+<pre>
+<code>curl  -XDELETE &quot;https://graph.facebook.com/6003417011234?access_token=___&quot;    
+</code>
+</pre>
+<p>Also note that in the Graph API, you can specify the name of an HTTP method in a URL, as a shortcut for some operations. Thus, you could delete a campaign by specifying its ID as part of a URL similar to the following:</p>
+<pre>
+<code>https://graph.facebook.com/6003386561234?method=DELETE&amp;access_token=___
+</code>
+</pre>
+<p>The result could be similar to the following:</p>
+<pre>
+<code>true
+</code>
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/ads-api/adcampaign/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1334832000" title="2012年4月19日 3:40">約2ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

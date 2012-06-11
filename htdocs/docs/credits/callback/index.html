@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/credits/callback/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/credits/callback/">https://developers.facebook.com/docs/credits/callback/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Getting Started</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/build/" name="http://developers.facebook.com/docs/credits/build/">Credits Tutorial </a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/credits/callback/" name="http://developers.facebook.com/docs/credits/callback/">Credits Callback</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/reports/" name="http://developers.facebook.com/docs/credits/reports/">Reports and Payouts</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/disputes/" name="http://developers.facebook.com/docs/credits/disputes/">Disputes &amp; Chargebacks</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Core APIs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/pay_dialog/" name="http://developers.facebook.com/docs/credits/pay_dialog/">Pay Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/orders/" name="http://developers.facebook.com/docs/credits/orders/">Order API</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/errorcodes/" name="http://developers.facebook.com/docs/credits/errorcodes/">Error Codes</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/paymethods/" name="http://developers.facebook.com/docs/credits/paymethods/">Payment methods</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/offers/" name="http://developers.facebook.com/docs/credits/offers/">Using Offers with Credits</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/terms/" name="http://developers.facebook.com/docs/credits/terms/">Credits Terms</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Credits Callback</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/credits/" name="https://developers.facebook.com/docs/credits/">Credits</a> › <a href="/docs/credits/callback/" name="https://developers.facebook.com/docs/credits/callback/">Credits Callback</a>
+</div>
+</div>
+</div>
+<h2>Overview</h2>
+<p>Facebook issues two types of HTTP POST requests to the URL specified at Credits Callback URL. To configure the app&apos;s Credits Callback URL, visit this <a href="https://developers.facebook.com/docs/credits/build/" name="https://developers.facebook.com/docs/credits/build/">documentation</a>. The two types of app server requests compliment the <a href="https://developers.facebook.com/docs/reference/dialogs/pay/" name="https://developers.facebook.com/docs/reference/dialogs/pay/">Pay Dialog</a> by:</p>
+<ul>
+<li>
+<p>
+<a href="#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">Getting item information for display in the Pay Dialog.</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#payments_status_update" name="https://developers.facebook.com/docs/#payments_status_update">Notifying the app of Facebook order status updates.</a>
+</p>
+</li>
+</ul>
+<p>In both cases, the developer will need to <a href="https://developers.facebook.com/docs/authentication/signed_request/" name="https://developers.facebook.com/docs/authentication/signed_request/">parse the signed request</a> to authenticate and process Facebook&apos;s requests.</p>
+<p>In addition to standard <code>signed_request</code> fields, the developer is required to process an additional field named <code>credits</code> whose value is an array. The contents of the array will depend on the Facebook request type.</p>
+<p>Not all Pay Dialogs result in both types of app sever requests. The following table articulates the relationship.</p>
+<table>
+<tr>
+<th>Pay Dialog <code>action</code> value</th>
+<th>Facebook sends<br />
+<code>payments_get_items</code> request?</th>
+<th>Facebook sends<br />
+<code>payments_status_update</code> request?</th>
+</tr>
+<tr>
+<td>
+<a href="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency">
+<code>buy_item</code>
+</a>
+</td>
+<td>
+<i>Yes</i>.<br />When a user buys an item from the developer, Facebook needs the developer to provide the order information. As a result, Facebook sends a <code>payments_get_items</code> request to the developer&apos;s Credits Callback URL containing the <a href="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency">Pay Dialog&apos;s <code>order_info</code> value</a>. The developer&apos;s response must contain the order information because this information is then displayed in the Pay Dialog. <a href="#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">Details on this request can be found here</a>.</td>
+<td>
+<i>Yes</i>.<br />After a user places an order and Facebook reserves the user&apos;s funds to purchase this order, Facebook sends a <code>payments_status_update</code> request to the developer&apos;s Credits Callback URL. Assuming the developer fulfills the order based on the <code>order_details</code> value, the developer should settle the order by responding so that Facebook can transfer the funds from the user to the developer. <a href="#payments_status_update_placed_item_order" name="https://developers.facebook.com/docs/#payments_status_update_placed_item_order">Details on this request can be found here</a>.</td>
+</tr>
+<tr>
+<td>
+<a href="https://developers.facebook.com/docs/reference/dialogs/pay/#earn_appcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#earn_appcurrency">
+<code>earn_currency</code>
+</a>
+</td>
+<td>
+<i>No</i>.<br />Facebook does <i>not</i> send a <code>payments_get_items</code> request because the order information is <a href="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance" name="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance">calculated</a> based on the <a href="https://developers.facebook.com/docs/reference/dialogs/pay/#earn_appcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#earn_appcurrency">Pay Dialog&apos;s <code>product</code> value</a> which is an <a href="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance" name="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance">app&apos;s currency OG object URL</a>.</td>
+<td>
+<i>Yes</i>.<br />After a user completes an <i>offer</i>, an item order for the app&apos;s currency is placed, and Facebook reserves the user&apos;s funds to purchase this order. Then Facebook sends a <code>payments_status_update</code> request to the developer&apos;s Credits Callback URL to inform the developer that the user has placed an order. Assuming the developer fulfills the order based on the <code>modified</code> value, the developer should settle the order by responding so that Facebook can transfer the funds from the user to the developer. <a href="#payments_status_update_earn_app_currency" name="https://developers.facebook.com/docs/#payments_status_update_earn_app_currency">Details on this request can be found here</a>.</td>
+</tr>
+<tr>
+<td>
+<a href="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_credits_localcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_credits_localcurrency">
+<code> buy_credits </code>
+</a>
+</td>
+<td>
+<i>No</i>.<br />Since the user purchases credits and Facebook understands credits&apos; orders, Facebook does <i>not</i> send a <code>payments_get_items</code> request to the developer&apos;s Credits Callback URL.</td>
+<td>
+<i>No</i>.<br />Since the user is purchasing credits <i>from</i> Facebook and Facebook is responsible for fulfilling orders for credits, Facebook does <i>not</i> send a <code>payments_status_update</code> to the developer&apos;s Credits Callback URL indicating that orders for credits have been placed.</td>
+</tr>
+</table>
+<p>A PHP example can be found <a href="#php_example" name="https://developers.facebook.com/docs/#php_example">here</a>.</p>
+<p>
+<a name="payments_get_items"> </a>
+</p>
+<h2>Get Item Information</h2>
+<p>To <i>open</i> an <a href="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency">item order in the Pay Dialog</a>, Facebook issues an app server request for the item information. Facebook uses the developers response to this request to populate the Pay Dialog.</p>
+<p>Note that Facebook considers app currencies orders (e.g. Fred&apos;s App&apos;s Cash) as item orders.</p>
+<h3>Facebook Request</h3>
+<p>To identify the type of request, inspect the POST parameter <code>method</code> for the value <code>payments_get_items</code>.</p>
+<p>An example POST request body,</p>
+<pre>
+signed_request=rb6-VQP3uFb8y3rAgOuVR9SiOMUaWqk1NJGt...&amp;
+buyer=409697&amp;
+receiver=409697&amp;
+order_id=9006597900959&amp;
+order_info={&quot;item_id&quot;:&quot;1a&quot;}&amp;
+method=payments_get_items
+</pre>
+<p>After parsing the POST parameter <code>signed_request</code> value, the <code>credits</code> field contains an array with the following fields.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>
+<code>buyer</code>
+</td>
+<td>Integer</td>
+<td>The UID of the buyer.</td>
+</tr>
+<tr>
+<td>
+<code>receiver</code>
+</td>
+<td>Integer</td>
+<td>The UID of the order recipient.</td>
+</tr>
+<tr>
+<td>
+<code>order_id</code>
+</td>
+<td>Integer</td>
+<td>
+<i>64-bit</i> Facebook order id. If the app server is not configured for 64-bit integers, the value can be cast into a <i>string</i>.</td>
+</tr>
+<tr>
+<td>
+<code>order_info</code>
+</td>
+<td>String</td>
+<td>The order information passed when the <a href="https://developers.facebook.com/docs/reference/dialogs/pay/#properties" name="https://developers.facebook.com/docs/reference/dialogs/pay/#properties">
+<code>FB.ui</code> is invoked</a>
+</td>
+</tr>
+</table>
+<p>An example parsed and JSON decoded <code>signed_request</code>,</p>
+<pre>
+Array(
+  [algorithm] =&gt; HMAC-SHA256
+  [credits] =&gt; Array(
+                 [buyer] =&gt; 409697
+                 [receiver] =&gt; 409697
+                 [order_id] =&gt; 9006597900959
+                 [order_info] =&gt; {&quot;item_id&quot;:&quot;1a&quot;}
+  )
+  [expires] =&gt; 1325210400
+  [issued_at] =&gt; 1325203762
+  [oauth_token] =&gt; AAABhWGUwIE8BABlFo...
+  [user] =&gt; Array(
+              [country] =&gt; us
+              [locale] =&gt; en_US
+              [age] =&gt; Array(
+                        [min] =&gt; 21
+                       )
+
+            )
+  [user_id] =&gt; 409697
+)
+</pre>
+<h3>Developer Response</h3>
+<p>Developers should use the <code>order_info</code> passed from <code>FB.ui</code> and parsed from the <code>signed_request</code> value to determine the actual item information.</p>
+<p>Since invoking <code>FB.ui</code> occurs on the client, anyone with access to the client can mutate <code>order_info</code>.</p>
+<p>As a result, Facebook issues this request to the developer&apos;s app server so that the developer can validate and utilize <code>order_info</code> to determine the actual item information.</p>
+<p>After validating the <code>order_info</code> and using it to lookup the actual item information, the developer should respond with the following information.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+<tr>
+<td>
+<code>method</code>
+</td>
+<td>String</td>
+<td>The value <code>payments_get_items</code>.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<code>title</code>
+</td>
+<td>String</td>
+<td>The name of the product. String length must be <i>&lt;= 50 characters</i>.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<code>description</code>
+</td>
+<td>String</td>
+<td> A description of the product. String length must be <i>&lt;= 175 characters</i>.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<code>image_url</code>
+</td>
+<td>String</td>
+<td>The URL for the image to display to the user.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<code>product_url</code>
+</td>
+<td>String</td>
+<td>A permalink to the product&apos;s URL.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<code>price</code>
+</td>
+<td>Integer</td>
+<td>The product cost based in <i>credits</i>. All product costs must be based in credits. Integer value must be <i>&gt; 0</i>.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<code>item_id</code>
+</td>
+<td>String</td>
+<td>A developer specific id for the product. Not used by Facebook.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>
+<code>data</code>
+</td>
+<td>String</td>
+<td>The name of the product. String length must be <i>&lt;= 50 characters</i>.</td>
+<td>No</td>
+</tr>
+</table>
+<p>The structure of the response is a JSON string whose contents contain an object with two fields.</p>
+<ul>
+<li>
+<p>The <code>content</code> field contains <i>all</i> of the above attributes <i>except</i> <code>method</code> and is represented as the <i>0th element</i> of an array.</p>
+</li>
+<li>
+<p>The <code>method</code> field contains the string <code>payments_get_items</code>.</p>
+</li>
+</ul>
+<p>An example developer JSON string response,</p>
+<pre>
+{
+  &quot;content&quot;:[
+              {
+                &quot;title&quot;:&quot;BFF Locket&quot;,
+                &quot;description&quot;:&quot;Best friend locket&quot;,
+                &quot;price&quot;:1,
+                &quot;image_url&quot;:&quot;http:\/\/www.facebook.com\/images\/gifts\/21.png&quot;
+              }
+            ],
+  &quot;method&quot;:&quot;payments_get_items&quot;
+}
+</pre>
+<p>After receiving the developer&apos;s response containing the item information, Facebook <a href="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency">opens the Pay Dialog</a> displaying the provided item information.</p>
+<p>
+<a name="payments_status_update"> </a>
+</p>
+<h2>Order Status Updates</h2>
+<p>Facebook issues order status update requests under the following circumstances:</p>
+<ul>
+<li>
+<p>
+<a href="#payments_status_update_placed_item_order" name="https://developers.facebook.com/docs/#payments_status_update_placed_item_order">A user places an item order.</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#payments_status_update_earn_app_currency" name="https://developers.facebook.com/docs/#payments_status_update_earn_app_currency">A user earns app currency.</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#payments_status_update_disputed_item_order" name="https://developers.facebook.com/docs/#payments_status_update_disputed_item_order">A user disputes an item order.</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#payments_status_update_refunded_item_order" name="https://developers.facebook.com/docs/#payments_status_update_refunded_item_order">Facebook refunds an item order.</a>
+</p>
+</li>
+</ul>
+<p>
+<b>Note:</b> Facebook sometimes issues a second <code>payments_status_update</code> request with the <code>settled</code> status. Developers should ignore this request. Facebook will be removing this second request on <i>March 1, 2012</i> so developers should not depend on it.</p>
+<p>
+<a name="payments_status_update_placed_item_order"> </a>
+</p>
+<h2>Order Status Update - Placed Item Order</h2>
+<p>Facebook issues an order status update request <i>after</i> the user confirms the <a href="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency">item order in from the Pay Dialog</a>.</p>
+<p>This notifies the app that a user&apos;s order is ready to be processed.</p>
+<h3>Facebook Request</h3>
+<p>To identify the type of request, inspect the POST parameter <code>method</code> for the value <code>payments_status_update</code>.</p>
+<p>An example POST request body,</p>
+<pre>
+signed_request=IdUotyZ7b-bT1gCJx8ClnCIPx742ldxUtlvZ...&amp;
+order_details={&quot;order_id&quot;:9007076736544,&quot;buyer&quot;:409697,
+  &quot;app&quot;:107032282669135,&quot;receiver&quot;:409697,&quot;amount&quot;:1,
+  &quot;time_placed&quot;:1329243276,&quot;update_time&quot;:1329243277,
+  &quot;data&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;item_id&quot;:&quot;0&quot;,&quot;title&quot;:&quot;100 FredCoins&quot;,
+    &quot;description&quot;:&quot;Spend FredCoins for all things in FredLand.&quot;,
+    &quot;image_url&quot;:&quot;http:\/\/www.inexpensivegold.com\/wp-content\/uploads\/2009\/12\/20-liberty-double-eagle.jpg&quot;,
+    &quot;product_url&quot;:&quot;&quot;,&quot;price&quot;:1,&quot;data&quot;:&quot;&quot;}],
+  &quot;status&quot;:&quot;placed&quot;}&amp;
+status=placed&amp;
+order_id=9007076736544&amp;
+method=payments_status_update
+</pre>
+<p>After parsing the POST parameter <code>signed_request</code> value, the <code>credits</code> field contains an array with the following fields.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>
+<code>order_details</code>
+</td>
+<td>JSON string</td>
+<td>Contains the developer&apos;s <a href="#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">
+<code>payments_get_items</code> response</a> information. See below for an example.</td>
+</tr>
+<tr>
+<td>
+<code>status</code>
+</td>
+<td>String</td>
+<td>The value <code>placed</code>. This indicates that the user has placed the order and that Facebook has reserved the funds from the user for this order.</td>
+</tr>
+<tr>
+<td>
+<code>order_id</code>
+</td>
+<td>Integer</td>
+<td>
+<i>64-bit</i> Facebook order id. Parsing the <code>signed_request</code> can garble this value. Use the <code>order_id</code> in the above <code>order_details</code> field.</td>
+</tr>
+</table>
+<p>An example parsed and JSON decoded <code>signed_request</code>,</p>
+<pre>
+Array(
+  [algorithm] =&gt; HMAC-SHA256
+  [credits] =&gt; Array(
+                 [order_details] =&gt; {&quot;order_id&quot;:9007076736544,&quot;buyer&quot;:409697,&quot;app&quot;:107032282669135,&quot;receiver&quot;:409697,&quot;amount&quot;:1,&quot;time_placed&quot;:1329243276,&quot;update_time&quot;:1329243277,&quot;data&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;item_id&quot;:&quot;0&quot;,&quot;title&quot;:&quot;100 FredCoins&quot;,&quot;description&quot;:&quot;Spend FredCoins for all things in FredLand.&quot;,&quot;image_url&quot;:&quot;http:\/\/www.inexpensivegold.com\/wp-content\/uploads\/2009\/12\/20-liberty-double-eagle.jpg&quot;,&quot;product_url&quot;:&quot;&quot;,&quot;price&quot;:1,&quot;data&quot;:&quot;&quot;}],&quot;status&quot;:&quot;placed&quot;}
+                 [status] =&gt; placed
+                 [order_id] =&gt; 9007076736544
+               )
+  [expires] =&gt; 1329249600
+  [issued_at] =&gt; 1329243278
+  [oauth_token] =&gt; AAABhWGUwIE8BALBqO...
+  [user] =&gt; Array(
+              [country] =&gt; us
+              [locale] =&gt; en_US
+              [age] =&gt; Array(
+                         [min] =&gt; 21
+                       )
+
+            )
+  [user_id] =&gt; 409697
+)
+</pre>
+<p>JSON decoding the above example <code>order_details</code> value yields:</p>
+<pre>
+Array(
+  [order_id] =&gt; 9007076736544
+  [buyer] =&gt; 409697
+  [app] =&gt; 107032282669135
+  [receiver] =&gt; 409697
+  [amount] =&gt; 1
+  [time_placed] =&gt; 1329243276
+  [update_time] =&gt; 1329243277
+  [data] =&gt; 
+  [items] =&gt; Array(
+               [0] =&gt; Array(
+                        [item_id] =&gt; 0
+                        [title] =&gt; 100 FredCoins
+                        [description] =&gt; Spend FredCoins for all things in FredLand.
+                        [image_url] =&gt; http://www.inexpensivegold.com/wp-content/uploads/2009/12/20-liberty-double-eagle.jpg
+                        [product_url] =&gt; 
+                        [price] =&gt; 1
+                        [data] =&gt; 
+                      )
+
+             )
+  [status] =&gt; placed
+)
+</pre>
+<h3>Developer Response</h3>
+<p>Developers should respond with the following information.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+<tr>
+<td>
+<code>method</code>
+</td>
+<td>String</td>
+<td>The value <code>payments_status_update</code>.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<code>order_id</code>
+</td>
+<td>String</td>
+<td>The order id for the order which was <code>placed</code> by the user.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<code>status</code>
+</td>
+<td>String</td>
+<td>The value <code>settled</code> or <code>canceled</code>. See below for details.</td>
+<td>Yes</td>
+</tr>
+</table>
+<p>The structure of the response is a JSON string whose contents contain an object with two fields.</p>
+<ul>
+<li>
+<p>The <code>content</code> field contains <i>all</i> of the above attributes <i>except</i> <code>method</code> and is represented as the <i>0th element</i> of an array.</p>
+</li>
+<li>
+<p>The <code>method</code> field contains the string <code>payments_get_items</code>.</p>
+</li>
+</ul>
+<p>More specifically, developers have two options:</p>
+<p>
+<b>1. Settle the placed order by:</b>
+</p>
+<ul>
+<li>
+<p>Fulfilling the order by depositing the appropriate amount of virtual currency or item. Developers can use the <code>order_details</code> to determine what goods to deliver.</p>
+</li>
+<li>
+<p>Responding to this <code>payments_status_update</code> with <code>settled</code>. An example developer <code>settled</code> JSON string response,</p>
+</li>
+</ul>
+<pre>
+{
+  &quot;content&quot;:{
+              &quot;status&quot;:&quot;settled&quot;,
+              &quot;order_id&quot;:9006195253076
+            },
+  &quot;method&quot;:&quot;payments_status_update&quot;
+}
+</pre>
+<ul>
+<li>The developer is paid the <code>price</code> for the order and these transactions are represented as type <code>S</code> in the <a href="https://developers.facebook.com/docs/credits/reports/" name="https://developers.facebook.com/docs/credits/reports/">developer payout reports</a>.</li>
+</ul>
+<p>
+<b>2. Or cancel the placed order by:</b>
+</p>
+<ul>
+<li>Responding to this <code>payments_status_update</code> with <code>canceled</code>. An example developer <code>canceled</code> JSON string response,</li>
+</ul>
+<pre>
+{
+  &quot;content&quot;:{
+              &quot;status&quot;:&quot;canceled&quot;,
+              &quot;order_id&quot;:9006203669116
+            },
+  &quot;method&quot;:&quot;payments_status_update&quot;
+}
+</pre>
+<ul>
+<li>If the order is cancelled, Facebook releases the user&apos;s reserved funds for this order.</li>
+</ul>
+<p>If the developer <code>settles</code> the order, Facebook will open an appropriate order confirmation dialog.</p>
+<p>For both the <code>settled</code> and <code>canceled</code> response options, Facebook will <a href="https://developers.facebook.com/docs/reference/dialogs/pay/#return_data" name="https://developers.facebook.com/docs/reference/dialogs/pay/#return_data">return data to the client</a>.</p>
+<p>
+<a name="payments_status_update_earn_app_currency"> </a>
+</p>
+<h2>Order Status Update - Earned App Currency</h2>
+<p>Facebook issues an order status update request <i>after</i> the user completes an <a href="https://developers.facebook.com/docs/credits/offers/#app_currency_offers" name="https://developers.facebook.com/docs/credits/offers/#app_currency_offers">In-app Currency Offer</a>.</p>
+<p>This notifies the app that a user&apos;s order is ready to be processed.</p>
+<h3>Facebook Request</h3>
+<p>To identify the type of request, inspect the POST parameter <code>method</code> for the value <code>payments_status_update</code>.</p>
+<p>An example POST request body,</p>
+<pre>
+signed_request=lqk6mXAGGhmUvsZ_jbKezG1bGq7whh7Ecmvj...&amp;
+order_details={&quot;order_id&quot;:9007080443022,&quot;buyer&quot;:409697,
+  &quot;app&quot;:107032282669135,&quot;receiver&quot;:409697,&quot;amount&quot;:1,
+  &quot;time_placed&quot;:1329408828,&quot;update_time&quot;:1329408830,
+  &quot;data&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;item_id&quot;:&quot;0&quot;,&quot;title&quot;:&quot;3 Fred Currency&quot;,
+    &quot;description&quot;:&quot;Make it rain!&quot;,
+    &quot;image_url&quot;:&quot;URL_TO_SOME_IMAGE&quot;,
+    &quot;product_url&quot;:&quot;&quot;,&quot;price&quot;:1,
+    &quot;data&quot;:&quot;{\&quot;modified\&quot;:{\&quot;product\&quot;:\&quot;URL_TO_APP_CURR_WEBPAGE\&quot;,
+      \&quot;product_title\&quot;:\&quot;Fred Currency\&quot;,\&quot;product_amount\&quot;:3,\&quot;credits_amount\&quot;:1}}&quot;}],
+  &quot;status&quot;:&quot;placed&quot;}&amp;
+status=placed&amp;
+order_id=9007080443022&amp;
+method=payments_status_update
+</pre>
+<p>After parsing the POST parameter <code>signed_request</code> value, the <code>credits</code> field contains an array with the following fields.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>
+<code>order_details</code>
+</td>
+<td>JSON string</td>
+<td>Contains the developer&apos;s <a href="#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">
+<code>payments_get_items</code> response</a> information. See below for an example.</td>
+</tr>
+<tr>
+<td>
+<code>status</code>
+</td>
+<td>String</td>
+<td>The value <code>placed</code>. This indicates that the user has placed the order and that Facebook has reserved the funds from the user for this order.</td>
+</tr>
+<tr>
+<td>
+<code>order_id</code>
+</td>
+<td>Integer</td>
+<td>
+<i>64-bit</i> Facebook order id. Parsing the <code>signed_request</code> can garble this value. Use the <code>order_id</code> in the above <code>order_details</code> field.</td>
+</tr>
+</table>
+<p>An example parsed and JSON decoded <code>signed_request</code>,</p>
+<pre>
+Array(
+  [algorithm] =&gt; HMAC-SHA256
+  [credits] =&gt; Array(
+                 [order_details] =&gt; {&quot;order_id&quot;:9007080443022,&quot;buyer&quot;:409697,&quot;app&quot;:107032282669135,&quot;receiver&quot;:409697,&quot;amount&quot;:1,&quot;time_placed&quot;:1329408828,&quot;update_time&quot;:1329408830,&quot;data&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;item_id&quot;:&quot;0&quot;,&quot;title&quot;:&quot;3 Fred Currency&quot;,&quot;description&quot;:&quot;Make it rain!&quot;,&quot;image_url&quot;:&quot;URL_TO_SOME_IMAGE&quot;,&quot;product_url&quot;:&quot;&quot;,&quot;price&quot;:1,&quot;data&quot;:&quot;{\&quot;modified\&quot;:{\&quot;product\&quot;:\&quot;URL_TO_APP_CURR_WEBPAGE\&quot;,\&quot;product_title\&quot;:\&quot;Fred Currency\&quot;,\&quot;product_amount\&quot;:3,\&quot;credits_amount\&quot;:1}}&quot;}],&quot;status&quot;:&quot;placed&quot;}
+                 [status] =&gt; placed
+                 [order_id] =&gt; 534023310
+               )
+  [expires] =&gt; 1329415200
+  [issued_at] =&gt; 1329408831
+  [oauth_token] =&gt; AAABhWGUwIE8BAAB6g...
+  [user] =&gt; Array(
+              [country] =&gt; us
+              [locale] =&gt; en_US
+              [age] =&gt; Array(
+                         [min] =&gt; 21
+                       )
+
+            )
+  [user_id] =&gt; 409697
+)
+</pre>
+<p>JSON decoding the above example <code>order_details</code> value yields:</p>
+<pre>
+Array(
+  [order_id] =&gt; 9007080443022
+  [buyer] =&gt; 409697
+  [app] =&gt; 107032282669135
+  [receiver] =&gt; 409697
+  [amount] =&gt; 1
+  [time_placed] =&gt; 1329408828
+  [update_time] =&gt; 1329408830
+  [data] =&gt; 
+  [items] =&gt; Array(
+               [0] =&gt; Array(
+                        [item_id] =&gt; 0
+                        [title] =&gt; 3 Fred Currency
+                        [description] =&gt; Make it rain!
+                        [image_url] =&gt; URL_TO_SOME_IMAGE
+                        [product_url] =&gt; 
+                        [price] =&gt; 1
+                        [data] =&gt; {&quot;modified&quot;:{&quot;product&quot;:&quot;URL_TO_APP_CURR_WEBPAGE&quot;,&quot;product_title&quot;:&quot;Fred Currency&quot;,&quot;product_amount&quot;:3,&quot;credits_amount&quot;:1}}
+                      )
+
+             )
+  [status] =&gt; placed
+)
+</pre>
+<p>Unlike <a href="#payments_status_update_placed_item_order" name="https://developers.facebook.com/docs/#payments_status_update_placed_item_order">
+<code>payments_status_update</code> for placed item orders</a> which have a preceding <a href="#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">
+<code>payments_get_items</code> for the developer&apos;s item information</a>, <code>payments_status_update</code> for earned app currency does <i>not</i> have a preceding <code>payments_get_items</code>.</p>
+<p>As a result, the developer must JSON decode the <code>order_details</code>&apos; <code>items</code>&apos; <code>0</code>th element&apos;s <code>data</code> field&apos;s value to understand the contents of the order.</p>
+<p>JSON decoding the <code>data</code> value yields an array with the <code>modified</code> element.</p>
+<p>The <code>modified</code> element contains an array following information:</p>
+<ul>
+<li>
+<p>
+<code>product</code>: A URL to app&apos;s currency object instance. The user is purchasing this app currency.</p>
+</li>
+<li>
+<p>
+<code>product_title</code>: The title of app&apos;s currency.</p>
+</li>
+<li>
+<p>
+<code>product_amount</code>: The integer amount of app currency to deposit into the user’s balance.</p>
+</li>
+<li>
+<p>
+<code>credits_amount</code>: The integer credits amount which will be paid to the developer for fulfilling and settling the order.</p>
+</li>
+</ul>
+<p>JSON decoding the above example <code>data</code> value yields:</p>
+<pre>
+Array(
+  [modified] =&gt; Array(
+                  [product] =&gt; URL_TO_APP_CURR_WEBPAGE
+                  [product_title] =&gt; Fred Currency
+                  [product_amount] =&gt; 3
+                  [credits_amount] =&gt; 1
+                )
+)
+</pre>
+<h3>Developer Response</h3>
+<p>Developers should respond with the following information.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+<tr>
+<td>
+<code>method</code>
+</td>
+<td>String</td>
+<td>The value <code>payments_status_update</code>.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<code>order_id</code>
+</td>
+<td>String</td>
+<td>The order id for the order which was <code>placed</code> by the user.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<code>status</code>
+</td>
+<td>String</td>
+<td>The value <code>settled</code> or <code>canceled</code>. See below for details.</td>
+<td>Yes</td>
+</tr>
+</table>
+<p>The structure of the response is a JSON string whose contents contain an object with two fields.</p>
+<ul>
+<li>
+<p>The <code>content</code> field contains <i>all</i> of the above attributes <i>except</i> <code>method</code> and is represented as the <i>0th element</i> of an array.</p>
+</li>
+<li>
+<p>The <code>method</code> field contains the string <code>payments_get_items</code>.</p>
+</li>
+</ul>
+<p>Developers have two options:</p>
+<p>
+<b>1. Settle the placed order by:</b>
+</p>
+<ul>
+<li>
+<p>Depositing the <code>product_amount</code> of the <code>product</code> into the user’s app currency balance.</p>
+</li>
+<li>
+<p>Responding to this <code>payments_status_update</code> with <code>settled</code>. An example developer <code>settled</code> JSON string response,</p>
+</li>
+</ul>
+<pre>
+{
+  &quot;content&quot;:{
+              &quot;status&quot;:&quot;settled&quot;,
+              &quot;order_id&quot;:9006195253076
+            },
+  &quot;method&quot;:&quot;payments_status_update&quot;
+}
+</pre>
+<ul>
+<li>The developer is paid the <code>credits_amount</code> for the order and these transactions are represented as type <code>S</code> in the <a href="https://developers.facebook.com/docs/credits/reports/" name="https://developers.facebook.com/docs/credits/reports/">developer payout reports</a>.</li>
+</ul>
+<p>
+<b>2. Or cancel the placed order by:</b>
+</p>
+<ul>
+<li>If the order is cancelled because of the order’s implicit exchange rate, developer are <i>required</i> to pass the parameter <code>code</code> and the value <code>131</code>. An example developer <code>canceled</code> JSON string response,</li>
+</ul>
+<pre>
+{
+  &quot;content&quot;:{
+              &quot;status&quot;:&quot;canceled&quot;,
+              &quot;code&quot;:131,
+              &quot;order_id&quot;:9006203669116
+            },
+  &quot;method&quot;:&quot;payments_status_update&quot;
+}
+</pre>
+<ul>
+<li>The user’s Facebook balance is credited with the <code>credits_amount</code> for the canceled order.</li>
+</ul>
+<p>For both the <code>settled</code> and <code>canceled</code> response options, Facebook will <a href="https://developers.facebook.com/docs/reference/dialogs/pay/#return_data" name="https://developers.facebook.com/docs/reference/dialogs/pay/#return_data">return data to the client</a>.</p>
+<p>It’s possible for a user to complete multiple offers in a single Facebook offerwall dialog. Facebook only returns the last completed order_id to the client.</p>
+<p>
+<a name="payments_status_update_disputed_item_order"> </a>
+</p>
+<h2>Order Status Update - Disputed Item Order</h2>
+<p>Facebook issues an order status update request <i>after</i> the user disputes an item order. An illustration describing the user dispute experience can be found <a href="https://developers.facebook.com/docs/credits/disputes/" name="https://developers.facebook.com/docs/credits/disputes/">here</a>.</p>
+<p>This notifies the app that a user&apos;s disputed item order is ready to be processed.</p>
+<h3>Facebook Request</h3>
+<p>To identify the type of request, inspect the POST parameter <code>method</code> for the value <code>payments_status_update</code>.</p>
+<p>An example POST request body,</p>
+<pre>
+signed_request=qxvRyt82FDTSipYTu0CEnYp4aNDDGAci4jmQ...&amp;
+order_details={&quot;order_id&quot;:9007249182704,&quot;buyer&quot;:409697,
+  &quot;app&quot;:107032282669135,&quot;receiver&quot;:409697,&quot;amount&quot;:1,
+  &quot;time_placed&quot;:1330641001,&quot;update_time&quot;:1330646619,
+  &quot;data&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;item_id&quot;:&quot;0&quot;,&quot;title&quot;:&quot;100 FredCoins&quot;,
+    &quot;description&quot;:&quot;Spend FredCoins for all things in FredLand.&quot;,
+    &quot;image_url&quot;:&quot;http:\/\/www.inexpensivegold.com\/wp-content\/uploads\/2009\/12\/20-liberty-double-eagle.jpg&quot;,
+    &quot;product_url&quot;:&quot;&quot;,&quot;price&quot;:1,&quot;data&quot;:&quot;&quot;}],
+    &quot;status&quot;:&quot;disputed&quot;}&amp;
+status=disputed&amp;
+order_id=9007249182704&amp;
+method=payments_status_update
+</pre>
+<p>After parsing the POST parameter <code>signed_request</code> value, the <code>credits</code> field contains an array with the following fields.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>
+<code>order_details</code>
+</td>
+<td>JSON string</td>
+<td>Contains the developer&apos;s <a href="#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">
+<code>payments_get_items</code> response</a> information. See below for an example.</td>
+</tr>
+<tr>
+<td>
+<code>status</code>
+</td>
+<td>String</td>
+<td>The value <code>disputed</code>. This indicates that the user has placed the order and that Facebook has reserved the funds from the user for this order.</td>
+</tr>
+<tr>
+<td>
+<code>order_id</code>
+</td>
+<td>Integer</td>
+<td>
+<i>64-bit</i> Facebook order id. Parsing the <code>signed_request</code> can garble this value. Use the <code>order_id</code> in the above <code>order_details</code> field.</td>
+</tr>
+</table>
+<p>An example parsed and JSON decoded <code>signed_request</code>,</p>
+<pre>
+Array(
+  [algorithm] =&gt; HMAC-SHA256
+  [credits] =&gt; Array(
+                 [order_details] =&gt; {&quot;order_id&quot;:9007249182704,&quot;buyer&quot;:409697,&quot;app&quot;:107032282669135,&quot;receiver&quot;:409697,&quot;amount&quot;:1,&quot;time_placed&quot;:1330641001,&quot;update_time&quot;:1330646619,&quot;data&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;item_id&quot;:&quot;0&quot;,&quot;title&quot;:&quot;100 FredCoins&quot;,&quot;description&quot;:&quot;Spend FredCoins for all things in FredLand.&quot;,&quot;image_url&quot;:&quot;http:\/\/www.inexpensivegold.com\/wp-content\/uploads\/2009\/12\/20-liberty-double-eagle.jpg&quot;,&quot;product_url&quot;:&quot;&quot;,&quot;price&quot;:1,&quot;data&quot;:&quot;&quot;}],&quot;status&quot;:&quot;disputed&quot;}
+                 [status] =&gt; disputed
+                 [order_id] =&gt; 9007249182704
+               )
+  [expires] =&gt; 1330653600
+  [issued_at] =&gt; 1330646620
+  [oauth_token] =&gt; AAABhWGUwIE8BAH8cd...
+  [user] =&gt; Array(
+              [country] =&gt; us
+              [locale] =&gt; en_US
+              [age] =&gt; Array(
+                         [min] =&gt; 21
+                       )
+            )
+  [user_id] =&gt; 409697
+)
+</pre>
+<p>JSON decoding the above example <code>order_details</code> value yields:</p>
+<pre>
+Array(
+  [order_id] =&gt; 9007249182704
+  [buyer] =&gt; 409697
+  [app] =&gt; 107032282669135
+  [receiver] =&gt; 409697
+  [amount] =&gt; 1
+  [time_placed] =&gt; 1330641001
+  [update_time] =&gt; 1330646619
+  [data] =&gt; 
+  [items] =&gt; Array(
+               [0] =&gt; Array(
+                        [item_id] =&gt; 0
+                        [title] =&gt; 100 FredCoins
+                        [description] =&gt; Spend FredCoins for all things in FredLand.
+                        [image_url] =&gt; http://www.inexpensivegold.com/wp-content/uploads/2009/12/20-liberty-double-eagle.jpg
+                        [product_url] =&gt; 
+                        [price] =&gt; 1
+                        [data] =&gt; 
+                      )
+             )
+  [status] =&gt; disputed
+)
+</pre>
+<h3>Developer Response</h3>
+<p>Developers <i>cannot synchronously</i> respond to <code>payments_status_update</code> requests with <code>disputed</code> status.</p>
+<p>Developers must investigate the user&apos;s item order dispute and respond <i>asynchronously</i> using the Graph API.</p>
+<p>After investigating a user&apos;s dispute, developers have two options:</p>
+<p>
+<b>1. Settle the disputed order after the developer has satisfactorily resolved the user&apos;s dispute.</b>
+</p>
+<p>To update the order status, developers should issue a POST request to the Graph API order id payments endpoint <code>[order_id]/payments</code> with the following parameters.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>
+<code>status</code>
+</td>
+<td>String</td>
+<td>
+<code>settled</code>.</td>
+</tr>
+<tr>
+<td>
+<code>message</code>
+</td>
+<td>String</td>
+<td>The reason for settling a user&apos;s disputed order.</td>
+</tr>
+<tr>
+<td>
+<code>accees_token</code>
+</td>
+<td>String</td>
+<td>An <a href="https://developers.facebook.com/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app access token</a>.</td>
+</tr>
+</table>
+<p>For example,</p>
+<pre>
+curl -F &apos;status=settled&apos; -F &apos;message=the reason for settling a disputed order&apos; 
+  &apos;https://graph.facebook.com/[order_id]?access_token=[<a href="https://developers.facebook.com/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app_access_token</a>]&apos;
+</pre>
+<p>These transactions are represented as type <code>S</code> in the <a href="https://developers.facebook.com/docs/credits/reports/" name="https://developers.facebook.com/docs/credits/reports/">developer payout reports</a>.</p>
+<p>
+<b>2. Or refund the disputed order. The user cannot be made whole so refund the credits spent.</b>
+</p>
+<p>To update the order status, developers should issue a POST request to the Graph API order id payments endpoint <code>[order_id]/payments</code> with the following parameters.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>
+<code>status</code>
+</td>
+<td>String</td>
+<td>
+<code>refunded</code>.</td>
+</tr>
+<tr>
+<td>
+<code>message</code>
+</td>
+<td>String</td>
+<td>The reason for refunding a user&apos;s disputed order.</td>
+</tr>
+<tr>
+<td>
+<code>accees_token</code>
+</td>
+<td>String</td>
+<td>An <a href="https://developers.facebook.com/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app access token</a>.</td>
+</tr>
+</table>
+<p>For example,</p>
+<pre>
+curl -F &apos;status=refunded&apos; -F &apos;message=the reason for refunding a disputed order&apos;
+  &apos;https://graph.facebook.com/[order_id]?access_token=[<a href="https://developers.facebook.com/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app_access_token</a>]&apos;
+</pre>
+<p>These transactions are represented as type <code>R</code> in the <a href="https://developers.facebook.com/docs/credits/reports/" name="https://developers.facebook.com/docs/credits/reports/">developer payout reports</a>.</p>
+<p>
+<a name="payments_status_update_refunded_item_order"> </a>
+</p>
+<h2>Order Status Update - Refunded Item Order</h2>
+<p>Facebook occasionally refunds item orders. The <a href="https://developers.facebook.com/docs/credits/disputes/" name="https://developers.facebook.com/docs/credits/disputes/">disputes and chargebacks documentation</a> describes the circumstances of Facebook initiated refunds.</p>
+<p>This request notifies the developer that Facebook has refunded a user&apos;s item order and is purely for notification purposes. No developer response is required.</p>
+<h3>Facebook Request</h3>
+<p>To identify the type of request, inspect the POST parameter <code>method</code> for the value <code>payments_status_update</code>.</p>
+<p>An example POST request body,</p>
+<pre>
+signed_request=JKGO2cquBoKG-ZPt_P5EEqrI8wUGgPmZUdcM...&amp;
+order_details={&quot;order_id&quot;:9007142886185,&quot;buyer&quot;:409697,
+  &quot;app&quot;:107032282669135,&quot;receiver&quot;:409697,&quot;amount&quot;:1,
+  &quot;time_placed&quot;:1329866240,&quot;update_time&quot;:1329868837,
+  &quot;data&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;item_id&quot;:&quot;0&quot;,&quot;title&quot;:&quot;100 FredCoins&quot;,
+    &quot;description&quot;:&quot;Spend FredCoins for all things in FredLand.&quot;,
+    &quot;image_url&quot;:&quot;http:\/\/www.inexpensivegold.com\/wp-content\/uploads\/2009\/12\/20-liberty-double-eagle.jpg&quot;,
+    &quot;product_url&quot;:&quot;&quot;,&quot;price&quot;:1,&quot;data&quot;:&quot;&quot;}],
+  &quot;status&quot;:&quot;refunded&quot;}&amp;
+status=refunded&amp;
+order_id=9007142886185&amp;
+method=payments_status_update
+</pre>
+<p>After parsing the POST parameter <code>signed_request</code> value, the <code>credits</code> field contains an array with the following fields.</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>
+<code>order_details</code>
+</td>
+<td>JSON string</td>
+<td>Contains the developer&apos;s <a href="#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">
+<code>payments_get_items</code> response</a> information. See below for an example.</td>
+</tr>
+<tr>
+<td>
+<code>status</code>
+</td>
+<td>String</td>
+<td>The value <code>refunded</code>. This indicates that the user has placed the order and that Facebook has reserved the funds from the user for this order.</td>
+</tr>
+<tr>
+<td>
+<code>order_id</code>
+</td>
+<td>Integer</td>
+<td>
+<i>64-bit</i> Facebook order id. Parsing the <code>signed_request</code> can garble this value. Use the <code>order_id</code> in the above <code>order_details</code> field.</td>
+</tr>
+</table>
+<p>An example parsed and JSON decoded <code>signed_request</code>,</p>
+<pre>
+Array(
+  [algorithm] =&gt; HMAC-SHA256
+  [credits] =&gt; Array(
+                 [order_details] =&gt; {&quot;order_id&quot;:9007142886185,&quot;buyer&quot;:409697,&quot;app&quot;:107032282669135,&quot;receiver&quot;:409697,&quot;amount&quot;:1,&quot;time_placed&quot;:1329866240,&quot;update_time&quot;:1329868837,&quot;data&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;item_id&quot;:&quot;0&quot;,&quot;title&quot;:&quot;100 FredCoins&quot;,&quot;description&quot;:&quot;Spend FredCoins for all things in FredLand.&quot;,&quot;image_url&quot;:&quot;http:\/\/www.inexpensivegold.com\/wp-content\/uploads\/2009\/12\/20-liberty-double-eagle.jpg&quot;,&quot;product_url&quot;:&quot;&quot;,&quot;price&quot;:1,&quot;data&quot;:&quot;&quot;}],&quot;status&quot;:&quot;refunded&quot;}
+                 [status] =&gt; refunded
+                 [order_id] =&gt; 9007142886185
+               )
+  [expires] =&gt; 1329876000
+  [issued_at] =&gt; 1329868837
+  [oauth_token] =&gt; AAABhWGUwIE8BAKGqI...
+  [user] =&gt; Array(
+              [country] =&gt; us
+              [locale] =&gt; en_US
+              [age] =&gt; Array(
+                         [min] =&gt; 21
+                       )
+
+            )
+  [user_id] =&gt; 409697
+)
+</pre>
+<p>JSON decoding the above example <code>order_details</code> value yields:</p>
+<pre>
+Array(
+  [order_id] =&gt; 9007142886185
+  [buyer] =&gt; 409697
+  [app] =&gt; 107032282669135
+  [receiver] =&gt; 409697
+  [amount] =&gt; 1
+  [time_placed] =&gt; 1329866240
+  [update_time] =&gt; 1329868837
+  [data] =&gt; 
+  [items] =&gt; Array(
+               [0] =&gt; Array(
+                        [item_id] =&gt; 0
+                        [title] =&gt; 100 FredCoins
+                        [description] =&gt; Spend FredCoins for all things in FredLand.
+                        [image_url] =&gt; http://www.inexpensivegold.com/wp-content/uploads/2009/12/20-liberty-double-eagle.jpg
+                        [product_url] =&gt; 
+                        [price] =&gt; 1
+                        [data] =&gt; 
+                      )
+
+             )
+  [status] =&gt; refunded
+)
+</pre>
+<h3>Developer Response</h3>
+<p>A <code>payments_status_update</code> with <code>refunded</code> status is purely for developer notification purposes. No developer response is required.</p>
+<p>Developers may use these notifications to inform their internal representation of the order status.</p>
+<p>
+<a name="php_example"> </a>
+</p>
+<h2>PHP Example</h2>
+<pre>
+&lt;?php
+
+$app_secret = &apos;APP_SECRET&apos;;
+
+// Validate request is from Facebook and parse contents for use.
+$request = parse_signed_request($_POST[&apos;signed_request&apos;], $app_secret);
+
+// Get request type.
+// Two types:
+//   1. payments_get_items.
+//   2. payments_status_update.
+$request_type = $_POST[&apos;method&apos;];
+
+// Setup response.
+$response = &apos;&apos;;
+
+if ($request_type == &apos;payments_get_items&apos;) {
+  // Get order info from Pay Dialog&apos;s order_info.
+  // Assumes order_info is a JSON encoded string.
+  $order_info = json_decode($request[&apos;credits&apos;][&apos;order_info&apos;], true);
+
+  // Get item id.
+  $item_id = $order_info[&apos;item_id&apos;];
+
+  // Simulutates item lookup based on Pay Dialog&apos;s order_info.
+  if ($item_id == &apos;1a&apos;) {
+    $item = array(
+      &apos;title&apos; =&gt; &apos;100 some game cash&apos;,
+      &apos;description&apos; =&gt; &apos;Spend cash in some game.&apos;,
+      // Price must be denominated in credits.
+      &apos;price&apos; =&gt; 1,
+      &apos;image_url&apos; =&gt; &apos;http://some_image_url/coin.jpg&apos;,
+    );
+
+    // Construct response.
+    $response = array(
+                  &apos;content&apos; =&gt; array(
+                                 0 =&gt; $item,
+                               ),
+                  &apos;method&apos; =&gt; $request_type,
+                );
+    // Response must be JSON encoded.
+    $response = json_encode($response);
+  }
+
+} else if ($request_type == &quot;payments_status_update&quot;) {
+  // Get order details.
+  $order_details = json_decode($request[&apos;credits&apos;][&apos;order_details&apos;], true);
+
+  // Determine if this is an earned currency order.
+  $item_data = json_decode($order_details[&apos;items&apos;][0][&apos;data&apos;], true);
+  $earned_currency_order = (isset($item_data[&apos;modified&apos;])) ?
+                             $item_data[&apos;modified&apos;] : null;
+
+  // Get order status.
+  $current_order_status = $order_details[&apos;status&apos;];
+
+  if ($current_order_status == &apos;placed&apos;) {
+    // Fulfill order based on $order_details unless...
+
+    if ($earned_currency_order) {
+      // Fulfill order based on the information below...
+      // URL to the application&apos;s currency webpage.
+      $product = $earned_currency_order[&apos;product&apos;];
+      // Title of the application currency webpage.
+      $product_title = $earned_currency_order[&apos;product_title&apos;];
+      // Amount of application currency to deposit.
+      $product_amount = $earned_currency_order[&apos;product_amount&apos;];
+      // If the order is settled, the developer will receive this
+      // amount of credits as payment.
+      $credits_amount = $earned_currency_order[&apos;credits_amount&apos;];
+    }
+
+    $next_order_status = &apos;settled&apos;;
+
+    // Construct response.
+    $response = array(
+                  &apos;content&apos; =&gt; array(
+                                 &apos;status&apos; =&gt; $next_order_status,
+                                 &apos;order_id&apos; =&gt; $order_details[&apos;order_id&apos;],
+                               ),
+                  &apos;method&apos; =&gt; $request_type,
+                );
+    // Response must be JSON encoded.
+    $response = json_encode($response);
+
+  } else if ($current_order_status == &apos;disputed&apos;) {
+    // 1. Track disputed item orders.
+    // 2. Investigate user&apos;s dispute and resolve by settling or refunding the order.
+    // 3. Update the order status asychronously using Graph API.
+
+  } else if ($current_order_status == &apos;refunded&apos;) {
+    // Track refunded item orders initiated by Facebook. No need to respond.
+
+  } else {
+    // Track other order statuses.
+
+  }
+}
+
+// Send response.
+echo $response;
+
+// These methods are documented here:
+// https://developers.facebook.com/docs/authentication/signed_request/
+function parse_signed_request($signed_request, $secret) {
+  list($encoded_sig, $payload) = explode(&apos;.&apos;, $signed_request, 2);
+
+  // decode the data
+  $sig = base64_url_decode($encoded_sig);
+  $data = json_decode(base64_url_decode($payload), true);
+
+  if (strtoupper($data[&apos;algorithm&apos;]) !== &apos;HMAC-SHA256&apos;) {
+    error_log(&apos;Unknown algorithm. Expected HMAC-SHA256&apos;);
+    return null;
+  }
+
+  // check sig
+  $expected_sig = hash_hmac(&apos;sha256&apos;, $payload, $secret, $raw = true);
+  if ($sig !== $expected_sig) {
+    error_log(&apos;Bad Signed JSON signature!&apos;);
+    return null;
+  }
+
+  return $data;
+}
+
+function base64_url_decode($input) {
+  return base64_decode(strtr($input, &apos;-_&apos;, &apos;+/&apos;));
+}
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/credits/callback/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1330725166" title="2012年3月2日 13:52">約3ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

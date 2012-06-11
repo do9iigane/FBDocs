@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/offline-access-deprecation/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/offline-access-deprecation/">https://developers.facebook.com/docs/offline-access-deprecation/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Removal of offline_access permission</h1>
+</div>
+</div>
+<p>Access_tokens allow users to interact with your apps in secure and social ways. While we are removing the use of the offline_access permission, through a migration setting in the Developer App, we are now allowing the option to use access_tokens with a long-lived expiration time that can be renewed each time the user revists your app (see exceptions below). For existing apps that are not using the offline_access permission, there are no changes required for your app, but you should consider using the new endpoint that allows the longer expiration time.</p>
+<h2>Extending the expiration of existing short-lived user access_tokens</h2>
+<p>When a user visits your site with an existing, valid, short-lived user access_token, you have the option to extend the expiration time of that access token. Our platform will only extend the expiration time once per day, so even if a user revists your site multiple times a day, the token will be extended the first time requested. You must make sure to call the new endpoint below before the short-lived access_token expires. Currently the long-lived user access_token will be valid for 60 days while the short-lived user access_tokens are currently valid from 1 to 2 hours.</p>
+<h2>Some Exceptions</h2>
+<h3>Exception 1: Desktop Apps</h3>
+<p>Once the migration setting has been enabled, Desktop applications will automatically get user access_tokens returned that have the longer expiration time. However, there is no way to get a long-lived user access_token without having the user login to your app again.</p>
+<h3>Exception 2: Native Mobile Apps using older SDKs (iOS and Android)</h3>
+<p>We released an update to our SDKs for iPhone and Android that will allow access_token expiration to be extended. If you continue to use an older version, and do not implement changes to extend the token, the user will have to re-login to your app periodically when the access_token expires. See the iOS and Android doc pages for more information:</p>
+<ul>
+<li>
+<strong>iOS:</strong> <a href="https://developers.facebook.com/docs/mobile/ios/build/#extend_token" name="https://developers.facebook.com/docs/mobile/ios/build/#extend_token">https://developers.facebook.com/docs/mobile/ios/build/#extend_token</a>
+</li>
+<li>
+<strong>Android:</strong> <a href="https://developers.facebook.com/docs/mobile/android/build/#extend_token" name="https://developers.facebook.com/docs/mobile/android/build/#extend_token">https://developers.facebook.com/docs/mobile/android/build/#extend_token</a>
+</li>
+</ul>
+<h3>Exception 3: Native Mobile Apps using newer SDKs (iOS and Android)</h3>
+<p>Once the migration setting has been enabled, mobile applications using our newer SDKs will automatically be granted a user access_token with the longer expiration, you do not have to do anything to get this extended. Also, each day a user revisits your app, you will be granted a new user access_token with a fresh expiration time. Note: Each day, the access_token returned may or may not be the same access_token as the previous day.</p>
+<h2>Getting started with the new migration setting</h2>
+<p>You will see a new migration called &quot;deprecate offline_access&quot; in your Advanced settings of the Developer App. Enable it and click &quot;Save Changes&quot; for the migration to take effect for that app. After the migration is enabled, apps can create and extend access tokens under the new token model. Additionally, if you were previously requesting the offline_access permission, that permission will no longer be displayed in the Auth Dialog to new users.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/deprecate%20offline_access.png" />
+</p>
+<h3>Scenario 1: If you were NOT previously asking for offline_access</h3>
+<p>There are no required changes needed for your app to continue functioning. If you were obtaining user access_tokens through the signed_requests or those returned in a browser hash-tag (client-side), those tokens will have short expirations. You should consider using our <a href="#extend_token" name="https://developers.facebook.com/docs/#extend_token">new endpoint</a> to exchange them for new access_tokens that have a longer expiration time. When you do the exchange, your short-lived access_token will continue to function until it expires, however, the new endpoint will return a second access_token that will have a much longer expiration and this is what you should use going forward.</p>
+<h3>Scenario 2: If you have been previously requesting offline_access - updated 4/30/2012</h3>
+<p>Once the migration has been enabled, existing use access_tokens, with the offline_access permission, <b>will continue to work without any change to their expiration time</b>. However, new users to your app will not be prompted for the offline_access permission in the Auth Dialog and will receive either a short-lived or long-lived access_token depending on your environment and how you are requesting the access_token (client or server-side OAuth, see Scenario 3 and 4 below).</p>
+<p>After the offline_access removal date, currently set for 7/5/2012 <a href="https://developers.facebook.com/roadmap/" name="https://developers.facebook.com/roadmap/">(see roadmap for exact date)</a>, all existing offline_access access_tokens will have their expiration time truncated to 60 days. This truncation will be transparent to the user and your app will continue functioning normally; Facebook will send an updated message through the weekly developer round-up when this truncation will occur.</p>
+<h3>Scenario 3: Server-side OAuth Developers</h3>
+<p>Once the migration is enabled, if the access_token is generated from a <a href="https://developers.facebook.com/docs/authentication/server-side/" name="https://developers.facebook.com/docs/authentication/server-side/">server-side</a> OAuth call, the resulting access_token will have the longer expiration time by default. If the call is made while there is still a valid long-lived user access_token for that user, the returned user access_token from this second call may be the same or may have changed, but in either case the expiration time will be set to a long expiration time.<br />
+<b>Note:</b> The user must access your application before you&apos;re able to get a valid &quot;authorization Code&quot; to be able to make the server-side OAuth call again. Apps will not be able to setup a background/cron job that tries to automatically extend the expiration time, because the &quot;authorization code&quot; is short-lived and will have expired.</p>
+<h3 id="extend_token">Scenario 4: Client-side OAuth and Extending Access_Token Expiration Time through New Endpoint</h3>
+<p>Using the new endpoint below, you will be able to extend the expiration time of an existing, non-expired, short-lived user access_token. Please note, the endpoint can only be used to extend the short-lived user access_tokens. If you pass an access_token that had a long-lived expiration time, the endpoint will simply pass that same access_token back to you without altering or extending the expiration time.</p>
+<p>To get the long-lived user access_token simply pass your own client_id (your app_id), your app_secret, and the non-expired, short-lived access_token to the endpoint below. You will be returned a new long-lived user access_token; this access_token will exist in addition to the short-lived access_token that was passed into the endpoint. If you would like to refresh a still valid long-lived access_token, you will have to get a new short-lived user access_token first and then call the same endpoint below. The returned access_token will have a fresh long-lived expiration time, however, the access_token itself may or may not be the same as the previously granted long-lived access_token.</p>
+<pre>
+<code>https://graph.facebook.com/oauth/access_token?             
+    client_id=APP_ID&amp;
+    client_secret=APP_SECRET&amp;
+    grant_type=fb_exchange_token&amp;
+    fb_exchange_token=EXISTING_ACCESS_TOKEN 
+</code>
+</pre>
+<p>
+<a name="page_access_token">
+</a>
+</p>
+<h3>Scenario 5: Page Access Tokens</h3>
+<p>When a user grants an app the <code>manage_pages</code> permission, the app is able to obtain page access tokens for pages that the user administers by querying the <code>[User ID]/accounts</code> Graph API endpoint. With the migration enabled, when using a short-lived user access token to query this endpoint, the page access tokens obtained are short-lived as well.</p>
+<p>Exchange the short-lived user access token for a long-lived access token using the endpoint and steps explained earlier. By using a long-lived user access token, querying the <code>[User ID]/accounts</code> endpoint will now provide page access tokens that do not expire for pages that a user manages. This will also apply when querying with a non-expiring user access token obtained through the deprecated <code>offline_access</code> permission.</p>
+<h2>Handling expired tokens, user password changes, uninstalled apps, and user logout</h2>
+<p>Regardless if your app requested the offline_access permission, apps should gracefully handle an expired access tokens in situations where a user changes their password, deauthorizes an app, or logs out. More information on these cases including a simple code solution that leads to a uniform user experience can be found in this <a href="https://developers.facebook.com/blog/post/500/" name="https://developers.facebook.com/blog/post/500/">blog post</a>.</p>
+<p>We&apos;re excited for this new migration and know that it will be great for both developers and users. We look forward to seeing your great applications as we continue to give you the tools and features that help you build and innovate on the Facebook platform.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/roadmap/offline-access-removal/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1336715867" title="2012年5月10日 22:57">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

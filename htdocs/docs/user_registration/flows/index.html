@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/user_registration/flows/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/user_registration/flows/">https://developers.facebook.com/docs/user_registration/flows/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/plugins/registration/" name="http://developers.facebook.com/docs/plugins/registration/">Registration</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/plugins/registration/advanced/" name="http://developers.facebook.com/docs/plugins/registration/advanced/">Registration Advanced Uses</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/user_registration/flows/" name="http://developers.facebook.com/docs/user_registration/flows/">User Registration Flows</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Beta Plugins</h5>
+<ul>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>User Registration Flows</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">Social Plugins</a> › <a href="/docs/user_registration/flows/" name="https://developers.facebook.com/docs/user_registration/flows/">User Registration Flows</a>
+</div>
+</div>
+</div>
+<h2>Introduction</h2>
+<p>Facebook provides tools to quickly register users for your website. With the addition of the Registration, Facebook will facilitate user registration for Facebook and non-Facebook users. Facebook can replace or supplement your user account system with to help drive signups and improve data quality.</p>
+<p>Configuring registration on a website for the first time, or supplementing an existing registration requires planning to ensure the optimal user experience. This document will highlight common registration scenarios, and provide best practices to detect the state of returning users.</p>
+<hr />
+<h2>Terms and Common Tasks</h2>
+<ul>
+<li>
+<code>UID</code> - Facebook user account number, a unique identifier for a user</li>
+<li>
+<code>on-login Callback</code> - When a user logs into Facebook with the <a href="https://developers.facebook.com/docs/reference/plugins/login" name="https://developers.facebook.com/docs/reference/plugins/login">Login Button</a>, and the user has already authorized your application, the function specified for <code>on-login</code> will be called. Otherwise the user will be redirected to the specified registration URL. </li>
+</ul>
+<pre>
+<code>&lt;fb:login-button
+   registration-url=&quot;https://developers.facebook.com/docs/user_registration&quot; 
+   on-login=&quot;console.log(arguments)&quot;
+/&gt;
+</code>
+</pre>
+<ul>
+<li>
+<code>Login Status</code> - Use <a href="https://developers.facebook.com/docs/reference/javascript/FB.getLoginStatus" name="https://developers.facebook.com/docs/reference/javascript/FB.getLoginStatus">FB.getLoginStatus</a>, a Javacript SDK method that returns the status of the user with the following states:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>
+<code>response.status</code>
+</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>connected</code>
+</td>
+<td>user is logged into Facebook, has authorized your app</td>
+</tr>
+<tr>
+<td>
+<code>notConnected</code>
+</td>
+<td>user is logged into Facebook, has not authorized your app</td>
+</tr>
+<tr>
+<td>
+<code>unknown</code>
+</td>
+<td>user is logged out of Facebook.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Scenarios</h2>
+<h3>My site only uses Facebook for Registration</h3>
+<p>If you do not currently have any existing registered users, or you are starting a brand new website, we recommend this approach for simplicity. The Registration Plugin will streamline the Registration process for Facebook users by pre-filling many fields, and for all non-Facebook users, provide a simple form that can be easily integrated into your website.</p>
+<p>
+<img alt="Facebook Only Registration Diagram" src="https://developers.facebook.com/attachment/flow1.png" />
+</p>
+<h3>My site uses Facebook and my own Registration</h3>
+<p>Adding Facebook to your own registration/authentication system can add a few complexities. Specifically, if a user registers with Facebook, and you already have an account for that user (detected via identical e-mail address or browser cookie), those accounts should immediately be merged.</p>
+<p>
+<img alt="Mixed Registration Diagram" src="https://developers.facebook.com/attachment/flow2.png" />
+</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/user_registration/flows/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1296045928" title="2011年1月26日 4:45">1年以上前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

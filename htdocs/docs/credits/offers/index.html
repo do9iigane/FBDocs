@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/credits/offers/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/credits/offers/">https://developers.facebook.com/docs/credits/offers/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Getting Started</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/build/" name="http://developers.facebook.com/docs/credits/build/">Credits Tutorial </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/callback/" name="http://developers.facebook.com/docs/credits/callback/">Credits Callback</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/reports/" name="http://developers.facebook.com/docs/credits/reports/">Reports and Payouts</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/disputes/" name="http://developers.facebook.com/docs/credits/disputes/">Disputes &amp; Chargebacks</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Core APIs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/pay_dialog/" name="http://developers.facebook.com/docs/credits/pay_dialog/">Pay Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/orders/" name="http://developers.facebook.com/docs/credits/orders/">Order API</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/errorcodes/" name="http://developers.facebook.com/docs/credits/errorcodes/">Error Codes</a>
+</li>
+</ul>
+</li>
+<li class="active">
+<h5>Advanced</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/paymethods/" name="http://developers.facebook.com/docs/credits/paymethods/">Payment methods</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/credits/offers/" name="http://developers.facebook.com/docs/credits/offers/">Using Offers with Credits</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/terms/" name="http://developers.facebook.com/docs/credits/terms/">Credits Terms</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Using Offers with Credits</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/credits/" name="https://developers.facebook.com/docs/credits/">Credits</a> › <a href="/docs/credits/offers/" name="https://developers.facebook.com/docs/credits/offers/">Using Offers with Credits</a>
+</div>
+</div>
+</div>
+<p>Facebook Credits enables users to earn credits or in-game virtual currency by completing engaging advertiser offers. By integrating this feature, developers gain access to an additional revenue channel targeted towards users who are not yet willing to pay for virtual currency.</p>
+<p>Facebook has partnered with TrialPay to provide developers with the following implementation types:</p>
+<ul>
+<li>
+<b>Offerwall</b>. This implementation enables your app to open a Facebook dialog containing an interactive list of compelling advertiser offers. Learn more about TrialPay’s offers <a href="http://www.trialpay.com/custom/facebook_credits_resource/tools/offer_shortcut/" name="http://www.trialpay.com/custom/facebook_credits_resource/tools/offer_shortcut/">here</a>.</li>
+</ul>
+<p>
+<img src="https://developers.facebook.com/attachment/ncp_offer.gif" />
+</p>
+<ul>
+<li>
+<b>TrialPay&apos;s DealSpot</b>. This implementation enables your app to spotlight one offer in-game. Learn more about TrialPay’s DealSpot <a href="http://www.trialpay.com/custom/facebook_credits_resource/tools/dealspot/" name="http://www.trialpay.com/custom/facebook_credits_resource/tools/dealspot/">here</a>.</li>
+</ul>
+<p>
+<img src="https://developers.facebook.com/attachment/dealspot-credits.png" />
+</p>
+<p>
+<b>New Payer Promotion</b>
+</p>
+<p>Facebook is sponsoring promotions to help developers convert game players into paying users. We are currently running an offer to encourage game players to make a first-time purchase using their credit card or PayPal account. This offers allows the user to earn $4 of value for free by purchasing 10 Facebook Credits at the regular price of $1. Users outside the US will see the same offer expressed in their local currency.</p>
+<p>You can create a dedicated placement in your game to highlight this promotion. Learn more about this <a href="http://help.trialpay.com/credits/?p=642" name="http://help.trialpay.com/credits/?p=642">here</a>.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/NPP-cartown_overlay_fb.gif/" />
+</p>
+<p>For both implementation types, developers can choose:</p>
+<ul>
+<li>
+<p>
+<a href="#credits_offers" name="https://developers.facebook.com/docs/#credits_offers">Credits Offers</a>. Offers are denominated in credits.</p>
+</li>
+<li>
+<p>
+<a href="#app_currency_offers" name="https://developers.facebook.com/docs/#app_currency_offers">In-app Currency Offers</a>. Offers are denominated in the app&apos;s currency.</p>
+</li>
+</ul>
+<p>
+<a name="credits_offers"> </a>
+</p>
+<h2>Credits Offers</h2>
+<p>This feature allows your users to earn credits by completing advertiser offers.</p>
+<p>
+<b>Offerwall</b>
+</p>
+<p>A best practice is to spotlight offers independently from payment methods in some distint UI element (e.g. a tab). It&apos;s important to clearly articulate to users that offers provide an opportunity to earn virtual currency which is distinctly different than paying for virtual currency using a payment method.</p>
+<p>To implement an Offerwall containing Credits Offers, you simply need to invoke the <a href="https://developers.facebook.com/docs/reference/dialogs/pay/" name="https://developers.facebook.com/docs/reference/dialogs/pay/">Pay Dialog</a> with the following parameters.</p>
+<ol>
+<li>
+<p>An object containing the following required attributes:</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+<th>Required</th>
+</tr>
+<tr>
+<td>
+<code>method</code>
+</td>
+<td>String</td>
+<td>
+<code>pay</code>
+</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<code>action</code>
+</td>
+<td>String</td>
+<td>
+<code>earn_credits</code>
+</td>
+<td>Yes</td>
+</tr>
+</table>
+</li>
+<li>
+<p>A callback pointing to a function which handles Facebook’s response. Since the user is earning credits from Facebook, an <code>order_id</code> is <i>never</i> returned to your JavaScript callback. Your callback <i>only</i> receives the return data parameter <code>error_code</code> with value <code>1383010</code> indicating that the user has closed the Offerwall. While it&apos;s possible that the user completed an offer, it&apos;s <i>not</i> possible for you to determine the number of credits earned.</p>
+</li>
+</ol>
+<p>An example code snippet using Facebook&apos;s JavaScript SDK,</p>
+<pre>
+function earn_credits() {
+  var obj = {
+    method: &apos;pay&apos;,
+    action: &apos;earn_credits&apos;
+  };
+ 
+  FB.ui(obj, js_callback);
+}
+ 
+var js_callback = function(data) {
+  if (data[&apos;order_id&apos;]) {
+    // For earn credits orders, Facebook never returns an order id.
+  } else if (data[&apos;error_code&apos;]) {
+    // Handle error.
+  } else {
+    // Handle unknown error.
+  }
+};
+</pre>
+<p>
+<img src="https://developers.facebook.com/attachment/offerwall-credits.png" />
+</p>
+<p>
+<b>TrialPay&apos;s DealSpot</b>
+</p>
+<p>To implement DealSpot refer to <a href="http://help.trialpay.com/credits/?p=255" name="http://help.trialpay.com/credits/?p=255">TrialPay&apos;s DealSpot documentation</a>.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/dealspot-credits.png" />
+</p>
+<p>To implement the New Payer Promotion only Dealspot refer to <a href="http://help.trialpay.com/credits/?p=642" name="http://help.trialpay.com/credits/?p=642">TrialPay&apos;s New Payer Promotion DealSpot Documentation.</a>. <img src="https://developers.facebook.com/attachment/NPP_credits.gif" />
+</p>
+<p>
+<a name="app_currency_offers"> </a>
+</p>
+<h2>In-app Currency Offers</h2>
+<p>This feature allows your users to earn in app currency by completing advertiser offers. Since users earn your in app currency, you&apos;ll need to implement the following steps to ensure proper settlement of In-app Currency Offer orders.</p>
+<ul>
+<li>
+<a href="#create_og_object_instance" name="https://developers.facebook.com/docs/#create_og_object_instance">Create an in app currency Open Graph object instance</a> which contains the conversion rate from credits to your in app currency. </li>
+<li>
+<a href="#update_payments_status_update" name="https://developers.facebook.com/docs/#update_payments_status_update">Update your payment_status_update callback</a> to support fulfillment of the In-app Currency Offer orders.</li>
+<li>
+<a href="#implement_offerwall_or_dealspot" name="https://developers.facebook.com/docs/#implement_offerwall_or_dealspot">Implement an Offerwall or TrialPay&apos;s DealSpot </a> which utilizes an in app currency Open Graph object instance.</li>
+<li>
+<a href="#test" name="https://developers.facebook.com/docs/#test">Test your integration</a> to make sure it works correctly. </li>
+</ul>
+<p>
+<a name="create_og_object_instance"> </a>
+</p>
+<h3>Create an app currency <a href="https://developers.facebook.com/docs/beta/opengraph/define-objects/" name="https://developers.facebook.com/docs/beta/opengraph/define-objects/">Open Graph</a> object instance.</h3>
+<p>To enable users to earn your in app currency you need to first provide the conversion rate from credits to your in app currency. You can do this by creating an app currency Open Graph object instance. Here is an example of the Open Graph meta tags for the app currency object instance.</p>
+<pre>
+&lt;head prefix=&quot;og: http://ogp.me/ns#
+              fb: http://ogp.me/ns/fb#
+              fbpayment:http://ogp.me/ns/fb/fbpayment#&quot;&gt;
+     &lt;meta property=&quot;fb:app_id&quot;      content=&quot;YOUR_APP_ID&quot; &gt;
+     &lt;meta property=&quot;og:type&quot;        content=&quot;fbpayment:currency&quot; &gt;
+     &lt;meta property=&quot;og:url&quot;         content=&quot;URL_TO_THIS_WEBPAGE&quot; &gt;
+     &lt;meta property=&quot;og:title&quot;       content=&quot;CURRENCY_PLURAL_NAME&quot; &gt;
+     &lt;meta property=&quot;og:description&quot; content=&quot;CURRENCY_DESCRIPTION&quot; &gt;
+     &lt;meta property=&quot;og:image&quot;       content=&quot;IMAGE_URL_50x50px&quot; &gt;
+     &lt;meta property=&quot;fbpayment:rate&quot; content=&quot;CURRENCY_FX_RATE&quot; &gt;
+&lt;/head&gt;
+</pre>
+<p>The Open Graph meta property <code>fbpayment:rate</code> is a decimal representing the number of app currency per one credit. For example, <code>fbpayment:rate</code> = 0.5 if 1 app currency = 2 credits =&gt; 1 / 2 = 0.5.</p>
+<p>TrialPay uses the following equation to determine the raw app currency value of an offer:</p>
+<p>
+<b>[raw app currency value of an offer] = <code>fbpayment:rate</code> * [credits value of an offer]</b>
+</p>
+<p>Consider the following scenarios:</p>
+<ol>
+<li>
+<p>If the raw app currency value is &gt;= 1, TrialPay rounds <em>down</em> to the nearest app currency unit. For example, assume an app currency exchange rate of 0.3333 and an offer with value = 11 credits so 0.3333 * 11 = 3.6665 = round down (3.6665) = 3 app currency.</p>
+</li>
+<li>
+<p>If the raw app currency value is (0, 1), TrialPay rounds <em>up</em> to one app currency unit. For example, assume the same exchange rate from above and an offer with value = 1 credit so 0.3333 * 1 = 0.3333 = round up (0.3333) = 1 app currency.</p>
+</li>
+</ol>
+<p>Facebook does not support customized rounding rules, but you may <a href="#update_payments_status_update" name="https://developers.facebook.com/docs/#update_payments_status_update">cancel the order</a> if you are unhappy with rounding applied to a specific order.</p>
+<p>Additional notes:</p>
+<ul>
+<li>
+<p>You must create an Open Graph object instance for each app currency. For example if an app has two currencies, the app should have two app currency Open Graph object instances. You may create additional app currency object instances for purposes like testing various exchange rates. Each app currency object instance must have a unique URL.</p>
+</li>
+<li>
+<p>Facebook <i>only</i> supports plural app currency titles. For example assume a your app currency is “coin”, then the <code>og:title</code> must be “coins”. As a result, users may see offers worth “1 coins”.</p>
+</li>
+<li>
+<p>Facebook supports the <a href="https://developers.facebook.com/docs/beta/opengraph/internationalization/" name="https://developers.facebook.com/docs/beta/opengraph/internationalization/">internationalization</a> of your app currency object instances. Facebook determines the locale of the user and passes the appropriate information (e.g. <code>og:title</code>, <code>fbpayment:rate</code>) to the offer aggregator.</p>
+</li>
+<li>
+<p>You can force a scrape by entering your app currency object instance into <a href="https://developers.facebook.com/tools/debug" name="https://developers.facebook.com/tools/debug">Facebook’s Debugger Tool</a>. Please resolve all debugging errors/warnings. If you need to update your app currency object instance, you can force a re-scrape using the tool describe above or via API. For example,</p>
+</li>
+</ul>
+<pre>
+POST https://graph.facebook.com?id=URL_TO_APP_CURR_WEBPAGE&amp;scrape=true
+</pre>
+<ul>
+<li>Your app currency object instance is public so please ensure it’s something you’d be proud to surface to users.</li>
+</ul>
+<p>
+<a name="update_payments_status_update"> </a>
+</p>
+<h3>Update <code>payments_status_update</code> to support In-app Currency Offer orders.</h3>
+<p>You also need to update your Credits Callback <code>payment_status_update</code> to process In-app Currency Offers. The <code>payments_status_update</code> requests for these offers differ from other similarly named requests in that they contain item-level data critical to fulfilling and settling such orders.</p>
+<p>Specifically, In-app Currency Offer <code>payments_status_update</code> requests contain a JSON encoded item-level data element called <code>modified</code>. This element name is now reserved for Facebook purposes.</p>
+<p>The <code>modified</code> element contains the following information:</p>
+<ul>
+<li>
+<p>
+<code>product</code>: A URL to your app currency object instance. The user is purchasing this app currency.</p>
+</li>
+<li>
+<p>
+<code>product_title</code>: The title of your app currency.</p>
+</li>
+<li>
+<p>
+<code>product_amount</code>: The integer amount of app currency to deposit into the user’s balance.</p>
+</li>
+<li>
+<p>
+<code>credits_amount</code>: The integer credits amount which will be paid to the developer for fulfilling and settling the order.</p>
+</li>
+</ul>
+<p>For example a JSON encoded value for the <code>payments_status_update</code> POST parameter <code>order_details</code>,</p>
+<pre>
+{&quot;order_id&quot;:9006316682257,&quot;buyer&quot;:409697,&quot;app&quot;:107032282669135,&quot;receiver&quot;:409697,
+&quot;amount&quot;:1,&quot;time_placed&quot;:1322622026,&quot;update_time&quot;:1322622027,&quot;data&quot;:&quot;&quot;,
+&quot;items&quot;:[{&quot;item_id&quot;:&quot;0&quot;,&quot;title&quot;:&quot;3 Fred Currency&quot;,&quot;description&quot;:&quot;Make it rain!&quot;,
+&quot;image_url&quot;:&quot;http:\/\/external.ak.fbcdn.net\/safe_image.php?d=AQDldsPcWsejAJdC&amp;url=http\u00253A\u00252F\u00252Fwww.etftrends.com\u00252Fwp-content\u00252Fuploads\u00252F2011\u00252F10\u00252Fcurrency-trading.jpg&quot;,
+&quot;product_url&quot;:&quot;&quot;,&quot;price&quot;:1,&quot;data&quot;:&quot;{\&quot;modified\&quot;:{\&quot;product\&quot;:\&quot;URL_TO_APP_CURR_WEBPAGE\&quot;,
+\&quot;product_title\&quot;:\&quot;Fred Currency\&quot;,\&quot;product_amount\&quot;:3,\&quot;credits_amount\&quot;:1}}&quot;}],&quot;status&quot;:&quot;placed&quot;}
+</pre>
+<p>JSON decoding <code>order_details</code> into an array, you’ll notice that the <code>items</code> element contains the <code>0</code> element which contains the <code>data</code> element which contains the JSON encoded <code>modified</code> order information. For example,</p>
+<pre>
+Array (
+  [order_id] =&gt; 9006316682257
+  [buyer] =&gt; 409697
+  [app] =&gt; 107032282669135
+  [receiver] =&gt; 409697
+  [amount] =&gt; 1
+  [time_placed] =&gt; 1322622026
+  [update_time] =&gt; 1322622027
+  [data] =&gt;
+  [items] =&gt; Array (
+               [0] =&gt; Array (
+                        [item_id] =&gt; 0
+                        [title] =&gt; 3 Fred Currency
+                        [description] =&gt; Make it rain!
+                        [image_url] =&gt; http://external.ak.fbcdn.net/safe_image.php?d=AQDldsPcWsejAJdC&amp;url=http%3A%2F%2Fwww.etftrends.com%2Fwp-content%2Fuploads%2F2011%2F10%2Fcurrency-trading.jpg
+                        [product_url] =&gt;
+                        [price] =&gt; 1
+                        [data] =&gt; {&quot;modified&quot;:{&quot;product&quot;:&quot;URL_TO_APP_CURR_WEBPAGE&quot;,&quot;product_title&quot;:&quot;Fred Currency&quot;,&quot;product_amount&quot;:3,&quot;credits_amount&quot;:1}}
+                      )
+             )
+  [status] =&gt; placed
+)
+</pre>
+<p>JSON decoding the <code>data</code> element yields the following array containing the <code>modified</code> order information. For example,</p>
+<pre>
+Array (
+  [modified] =&gt; Array (
+                  [product] =&gt; URL_TO_APP_CURR_WEBPAGE
+                  [product_title] =&gt; Fred Currency
+                  [product_amount] =&gt; 3
+                  [credits_amount] =&gt; 1
+                )
+)
+</pre>
+<p>Developers have two options:</p>
+<p>
+<b>1. Settle the placed order by:</b>
+</p>
+<ul>
+<li>
+<p>Depositing the <code>product_amount</code> of the <code>product</code> into the user’s app currency balance.</p>
+</li>
+<li>
+<p>Responding to this <code>payments_status_update</code> with <code>settled</code>. An example developer settle response,</p>
+</li>
+</ul>
+<pre>
+{&quot;content&quot;:{&quot;status&quot;:&quot;settled&quot;,&quot;order_id&quot;:9006195253076},
+&quot;method&quot;:&quot;payments_status_update&quot;}
+</pre>
+<ul>
+<li>The developer is paid the <code>credits_amount</code> for the order and these transactions are represented as type <code>S</code> in the <a href="https://developers.facebook.com/docs/credits/reports/" name="https://developers.facebook.com/docs/credits/reports/">developer payout reports</a>.</li>
+</ul>
+<p>
+<b>2. Or cancel the placed order by:</b>
+</p>
+<ul>
+<li>If the order is cancelled because of the order’s implicit exchange rate, developer are <i>required</i> to pass the parameter <code>code</code> and the value <code>131</code>. An example developer cancel response,</li>
+</ul>
+<pre>
+{&quot;content&quot;:{&quot;status&quot;:&quot;canceled&quot;,&quot;code&quot;:131,&quot;order_id&quot;:9006203669116},
+&quot;method&quot;:&quot;payments_status_update&quot;}
+</pre>
+<ul>
+<li>The user’s Facebook balance is credited with the <code>credits_amount</code> for the canceled order.</li>
+</ul>
+<p>Since these orders originate from Facebook (i.e. users agree to complete an offer selected on Facebook dialogs rather than on in-game dialogs), developers <em>will not</em> see the preceding <code>payments_get_items</code> requests to their Credits Callback URL. Unlike <a href="https://developers.facebook.com/docs/credits/callback/" name="https://developers.facebook.com/docs/credits/callback/">other payment flows</a>, developers <em>only</em> see the <code>payments_status_update</code> requests to their Credits Callback URL.</p>
+<p>In other words, Facebook doesn&apos;t issue a <code>payments_get_items</code> requests to the developer&apos;s callback because there are no items to get from the developer. Since there are no <code>payments_get_items</code> requests, the developer&apos;s order flow cannot rely on data passed back in the <code>payments_get_items</code> (e.g. <code>order_info</code>) requests. Previously, developers may have relied on <code>order_info</code> to pass custom information from the client to the server. Please understand that this is no longer possible with this feature.</p>
+<p>Note that users can dispute offer orders and that the normal <a href="https://developers.facebook.com/docs/credits/disputes/" name="https://developers.facebook.com/docs/credits/disputes/">Dispute Flow</a> applies. If a developer refunds a disputed offer order, the user is credited with the <code>credits_amount</code> for the refunded order. It&apos;s impossible to reverse completed offers.</p>
+<p>
+<a name="implement_offerwall_or_dealspot"> </a>
+</p>
+<h3>Implement an Offerwall or TrialPay&apos;s Dealspot.</h3>
+<p>
+<b>Offerwall</b>
+</p>
+<p>A best practice is to spotlight offers independently from payment methods in some distint UI element (e.g. a tab). It&apos;s important to clearly articulate to users that offers provide an opportunity to earn virtual currency which is distinctly different than paying for virtual currency using a payment method.</p>
+<p>To implement an Offerwall containing In-app Currency Offers, you simply need to invoke the <a href="https://developers.facebook.com/docs/reference/dialogs/pay/" name="https://developers.facebook.com/docs/reference/dialogs/pay/">Pay Dialog</a> with the following parameters.</p>
+<ol>
+<li>
+<p>An object containing the following required attributes:</p>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Value</th>
+<th>Required</th>
+</tr>
+<tr>
+<td>
+<code>method</code>
+</td>
+<td>String</td>
+<td>
+<code>pay</code>
+</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<code>action</code>
+</td>
+<td>String</td>
+<td>
+<code>earn_currency</code>
+</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<code>product</code>
+</td>
+<td>String</td>
+<td>URL to the app currency Open Graph object instance</td>
+<td>Yes</td>
+</tr>
+</table>
+</li>
+<li>
+<p>A callback pointing to a function which handles Facebook’s response. If Facebook responds with an <code>order_id</code>, please display the user’s updated app currency balance without a complete reload of the game.</p>
+</li>
+</ol>
+<p>Additional notes:</p>
+<ul>
+<li>
+<p>It’s possible for a user to complete multiple offers in a single Facebook offerwall dialog. Facebook only returns the last completed <code>order_id</code>.</p>
+</li>
+<li>
+<p>If you’d like to test various app currency object instances, you can determine which object instance to pass when you invoke the Pay Dialog.</p>
+</li>
+<li>
+<p>Facebook uses the data associated with our last scape of the passed app currency object instance.</p>
+</li>
+</ul>
+<p>An example code snippet using Facebook&apos;s JavaScript SDK,</p>
+<pre>
+function earn_currency() {
+  var obj = {
+    method: &apos;pay&apos;,
+    action: &apos;earn_currency&apos;,
+    product: &apos;URL_TO_APP_CURR_WEBPAGE&apos;
+  };
+ 
+  FB.ui(obj, js_callback);
+}
+ 
+var js_callback = function(data) {
+  if (data[&apos;order_id&apos;]) {
+    // Display the user&apos;s updated app currency balance.
+  } else if (data[&apos;error_code&apos;]) {
+    // Handle error.
+  } else {
+    // Handle unknown error.
+  }
+};
+</pre>
+<p>
+<img src="https://developers.facebook.com/attachment/offerwall-appcurrency.png" />
+</p>
+<p>
+<b>TrialPay&apos;s DealSpot</b>
+</p>
+<p>To implement DealSpot refer to <a href="http://help.trialpay.com/credits/?p=255" name="http://help.trialpay.com/credits/?p=255">TrialPay&apos;s DealSpot documentation</a>.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/dealspot-appcurrency.png" />
+</p>
+<p>To implement New Payer Promotion only DealSpot refer to <a href="http://help.trialpay.com/credits/?p=642://help.trialpay.com/credits/?p=642" name="http://help.trialpay.com/credits/?p=642://help.trialpay.com/credits/?p=642">TrialPay&apos;s New Payer Promotion DealSpot Documentation</a>.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/NPP-cartown_overlay_fb.gif/" />
+</p>
+<p>The pay dialog that users will see when they click on the New Payer promotion looks something like this.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/npp_pay_dialog.png" />
+</p>
+<p>The title, image and description you provide for your in-app currency in this Open Graph object will be shown to the user at time of purchase. We highly recommend that you specify a good image, title and description of the currency.</p>
+<p>For example in the above dialog, the description of Farmcash is &quot;Use Farm Cash to get premium animals, trees and farm aides for your farm&quot;.</p>
+<p>
+<b>Note:</b> The more you can make the description suggest the value that users can get by buying that currency, the more likely the user will redeem the promotion.</p>
+<p>
+<a name="test"> </a>
+</p>
+<h3>Test In-app Currency Offers integration.</h3>
+<p>Setup your app with TrialPay. Please refer to <a href="http://help.trialpay.com/credits " name="http://help.trialpay.com/credits">TrialPay&apos;s Developer Help Center</a> for more information. If you have further questions, contact your TrialPay account manager or send an email to <a href="mailto:merchantsupport@trialpay.com" name="mailto:merchantsupport@trialpay.com">merchantsupport@trialpay.com</a>.</p>
+<p>Note that In-app Currency Offers are unavailable for:</p>
+<ul>
+<li>
+<p>Users are <a href="https://developers.facebook.com/docs/test_users/" name="https://developers.facebook.com/docs/test_users/">Platform Test Users</a>.</p>
+</li>
+<li>
+<p>Users are listed in the <a href="https://developers.facebook.com/apps/" name="https://developers.facebook.com/apps/">App Dashboard</a> as Edit Settings -&gt; Credits -&gt; Credits Testers.</p>
+</li>
+</ul>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/credits/offers/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1336767601" title="2012年5月11日 13:20">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

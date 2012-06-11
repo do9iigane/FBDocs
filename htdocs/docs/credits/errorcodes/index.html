@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/credits/errorcodes/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/credits/errorcodes/">https://developers.facebook.com/docs/credits/errorcodes/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Getting Started</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/build/" name="http://developers.facebook.com/docs/credits/build/">Credits Tutorial </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/callback/" name="http://developers.facebook.com/docs/credits/callback/">Credits Callback</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/reports/" name="http://developers.facebook.com/docs/credits/reports/">Reports and Payouts</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/disputes/" name="http://developers.facebook.com/docs/credits/disputes/">Disputes &amp; Chargebacks</a>
+</li>
+</ul>
+</li>
+<li class="active">
+<h5>Core APIs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/pay_dialog/" name="http://developers.facebook.com/docs/credits/pay_dialog/">Pay Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/orders/" name="http://developers.facebook.com/docs/credits/orders/">Order API</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/credits/errorcodes/" name="http://developers.facebook.com/docs/credits/errorcodes/">Error Codes</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/credits/paymethods/" name="http://developers.facebook.com/docs/credits/paymethods/">Payment methods</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/offers/" name="http://developers.facebook.com/docs/credits/offers/">Using Offers with Credits</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/credits/terms/" name="http://developers.facebook.com/docs/credits/terms/">Credits Terms</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Error Codes</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/credits/" name="https://developers.facebook.com/docs/credits/">Credits</a> › <a href="/docs/credits/errorcodes/" name="https://developers.facebook.com/docs/credits/errorcodes/">Error Codes</a>
+</div>
+</div>
+</div>
+<p>The following section covers the respective errors with the Frontend API and Backend API.</p>
+<h3>Front End Error Codes</h3>
+<table>
+<tr>
+<td>
+<b>Error_code</b>
+</td>
+<td>
+<b>Error_message</b>
+</td>
+<td>
+<b>Note</b>
+</td>
+</tr>
+<tr>
+<td>1383001</td>
+<td>Unknown</td>
+<td>Facebook system issue.</td>
+</tr>
+<tr>
+<td>1383002</td>
+<td>InvalidParameters</td>
+<td>Developer called with the incorrect parameters.</td>
+</tr>
+<tr>
+<td>1383003</td>
+<td>PaymentFailure</td>
+<td>Processor decline.</td>
+</tr>
+<tr>
+<td>1383004</td>
+<td>InvalidOperation</td>
+<td>Developer attempted an operation Facebook does not allow.</td>
+</tr>
+<tr>
+<td>1383005</td>
+<td>PermissionDenied</td>
+<td>Facebook system issue.</td>
+</tr>
+<tr>
+<td>1383006</td>
+<td>DatabaseError</td>
+<td>Facebook system issue.</td>
+</tr>
+<tr>
+<td>1383007</td>
+<td>InvalidApp</td>
+<td>App is not whitelisted. Or while in test mode, Developer attempted to debit a user that was not whitelisted.</td>
+</tr>
+<tr>
+<td>1383008</td>
+<td>AppNoResponse</td>
+<td>App is not responding; perhaps a server timeout issue.</td>
+</tr>
+<tr>
+<td>1383009</td>
+<td>AppErrorResponse</td>
+<td>App responded to Facebook with an error code.</td>
+</tr>
+<tr>
+<td>1383010</td>
+<td>UserCanceled</td>
+<td>User explicitly cancelled out of flow.</td>
+</tr>
+<tr>
+<td>1383011</td>
+<td>Disabled</td>
+<td>Facebook system issue.</td>
+</tr>
+<tr>
+<td>1383013</td>
+<td>OrderFailureAfterPurchaseCredit</td>
+<td>Facebook system issue.</td>
+</tr>
+<tr>
+<td>1383014</td>
+<td>DisputeFlow</td>
+<td>Facebook system issue.</td>
+</tr>
+<tr>
+<td>1383015</td>
+<td>AccountNotCharged</td>
+<td>Your application cancelled the order.</td>
+</tr>
+<tr>
+<td>1383017</td>
+<td>ExceedCreditBalanceLimit</td>
+<td>Reached maximum number of credits the user is allowed to keep as a stored balance. This is a Facebook controlled limit and can vary from user to user.</td>
+</tr>
+<tr>
+<td>1383018</td>
+<td>ExceedCreditDailyPurchaseLimit</td>
+<td>Occurs when a user has reached a predefined daily maximum</td>
+</tr>
+<tr>
+<td>1383019</td>
+<td>ExceedCreditDailySpendLimit</td>
+<td>Occurs when the credit amount user spends in a single day exceeds a pre-defined threshold.</td>
+</tr>
+<tr>
+<td>1383040</td>
+<td>UserThrottled</td>
+<td>Application Temporarily Unavailable</td>
+</tr>
+<tr>
+<td>1383041</td>
+<td>BuyerPaymentFailure</td>
+<td>User&apos;s financial instrument could not be charged.</td>
+</tr>
+<tr>
+<td>1383042</td>
+<td>LoggedOutUser</td>
+<td>Login Required</td>
+</tr>
+<tr>
+<td>1383043</td>
+<td>AppInfoFetchFailure</td>
+<td>Facebook system error.</td>
+</tr>
+<tr>
+<td>1383044</td>
+<td>InvalidAppInfo</td>
+<td>Application needs to have a valid callback url.</td>
+</tr>
+<tr>
+<td>1383045</td>
+<td>AppInvalidEncodedResponse</td>
+<td>The application didn&apos;t return a valid json encoded response..</td>
+</tr>
+<tr>
+<td>1383046</td>
+<td>AppInvalidDecodedResponse</td>
+<td>The application return value was invalid after json_decoding the return value.</td>
+</tr>
+<tr>
+<td>1383047</td>
+<td>AppInvalidMethodResponse</td>
+<td>The application response contains a &apos;method&apos; parameter that didn&apos;t match the request.</td>
+</tr>
+<tr>
+<td>1383048</td>
+<td>AppMissingContentResponse</td>
+<td> The application response didn&apos;t contain the &apos;content&apos; field. </td>
+</tr>
+<tr>
+<td>1383049</td>
+<td>AppUnknownResponseError</td>
+<td>The application returned an unknown response.</td>
+</tr>
+<tr>
+<td>1383050</td>
+<td>AppUserValidationFailedResponse</td>
+<td>Failure to verify the user when sending application callback.</td>
+</tr>
+<tr>
+<td>1383051</td>
+<td>AppInvalidItemParam</td>
+<td>The application is sending invalid item parameters (For example, price or quantity of the items is invalid).</td>
+</tr>
+<tr>
+<td>1383052</td>
+<td>EmptyAppId</td>
+<td>Empty App ID.</td>
+</tr>
+</table>
+<h3>Back End Error Codes</h3>
+<p>The following errors can be returned in addition to the regular API exceptions:<br />
+</p>
+<table>
+<tr>
+<td>
+<b>Error Code</b>
+</td>
+<td>
+<b>Error Name</b>
+</td>
+<td>
+<b>Note</b>
+</td>
+</tr>
+<tr>
+<td>1150</td>
+<td>API_EC_PAYMENTS_UNKNOWN</td>
+<td>Unknown error</td>
+</tr>
+<tr>
+<td>1151</td>
+<td>API_EC_PAYMENTS_APP_INVALID</td>
+<td>Application is not enabled for using Facebook Credits.</td>
+</tr>
+<tr>
+<td>1152</td>
+<td>API_EC_PAYMENTS_DATABASE</td>
+<td>A database error occurred.</td>
+</tr>
+<tr>
+<td>1153</td>
+<td>API_EC_PAYMENTS_PERMISSION_DENIED</td>
+<td>Permission denied to check order details.</td>
+</tr>
+<tr>
+<td>1154</td>
+<td>API_EC_PAYMENTS_APP_NO_RESPONSE</td>
+<td>Payments callback to the application failed.</td>
+</tr>
+<tr>
+<td>1155</td>
+<td>API_EC_PAYMENTS_APP_ERROR_RESPONSE</td>
+<td>Payments callback to the application received error response.</td>
+</tr>
+<tr>
+<td>1156</td>
+<td>API_EC_PAYMENTS_INVALID_ORDER</td>
+<td>The supplied order ID is invalid.</td>
+</tr>
+<tr>
+<td>1157</td>
+<td>API_EC_PAYMENTS_INVALID_PARAM</td>
+<td>One of the Payments parameters is invalid.</td>
+</tr>
+<tr>
+<td>1158</td>
+<td>API_EC_PAYMENTS_INVALID_OPERATION</td>
+<td>The operation is invalid.</td>
+</tr>
+<tr>
+<td>1159</td>
+<td>API_EC_PAYMENTS_PAYMENT_FAILED</td>
+<td>Failed in processing the payment.</td>
+</tr>
+<tr>
+<td>1160</td>
+<td>API_EC_PAYMENTS_DISABLED</td>
+<td>Facebook Credits system is disabled.</td>
+</tr>
+<tr>
+<td>1161</td>
+<td>API_EC_PAYMENTS_INSUFFICIENT_BALANCE</td>
+<td>Insufficient balance.</td>
+</tr>
+<tr>
+<td>1162</td>
+<td>API_EC_PAYMENTS_EXCEED_CREDIT_BALANCE_LIMIT</td>
+<td>Exceed credit balance limit.</td>
+</tr>
+<tr>
+<td>1163</td>
+<td>API_EC_PAYMENTS_EXCEED_CREDIT_DAILY_PURCHASE_LIMIT</td>
+<td>Exceed daily credit purchase limit.</td>
+</tr>
+<tr>
+<td>1164</td>
+<td>API_EC_PAYMENTS_EXCEED_CREDIT_DAILY_SPEND_LIMIT</td>
+<td>Exceed daily credit spend limit.</td>
+</tr>
+<tr>
+<td>1166</td>
+<td>API_EC_PAYMENTS_INVALID_FUNDING_AMOUNT</td>
+<td>Credits purchased from funding source do not match the spend order amount.</td>
+</tr>
+<tr>
+<td>1167</td>
+<td>API_EC_PAYMENTS_NON_REFUNDABLE_PAYMENT_METHOD</td>
+<td>The funding source is a non-refundable payment method.</td>
+</tr>
+<tr>
+<td>1168</td>
+<td>API_EC_PAYMENTS_USER_THROTTLED</td>
+<td>Application is configured to throttle some users.</td>
+</tr>
+<tr>
+<td>1169</td>
+<td>API_EC_PAYMENTS_LOGIN_REQUIRED</td>
+<td>User is not logged in.</td>
+</tr>
+<tr>
+<td>1170</td>
+<td>API_EC_APP_INFO_FETCH_FAILURE</td>
+<td>Error retrieving application information.</td>
+</tr>
+<tr>
+<td>1171</td>
+<td>API_EC_INVALID_APP_INFO</td>
+<td>Invalid application information returned.</td>
+</tr>
+<tr>
+<td>1172</td>
+<td>API_EC_PAYMENTS_APP_INSUFFICIENT_BALANCE</td>
+<td>Application has insufficient balance (app2user).</td>
+</tr>
+</table>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/credits/errorcodes/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1321483946" title="2011年11月16日 14:52">約7ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

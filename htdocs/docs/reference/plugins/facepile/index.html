@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/plugins/facepile/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/plugins/facepile/">https://developers.facebook.com/docs/reference/plugins/facepile/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a class="selected" href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/activity/" name="http://developers.facebook.com/docs/reference/plugins/activity/">Activity Feed</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/comments/" name="http://developers.facebook.com/docs/reference/plugins/comments/">Comments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/facepile/" name="http://developers.facebook.com/docs/reference/plugins/facepile/">Facepile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like-box/" name="http://developers.facebook.com/docs/reference/plugins/like-box/">Like Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like/" name="http://developers.facebook.com/docs/reference/plugins/like/">Like Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/live-stream/" name="http://developers.facebook.com/docs/reference/plugins/live-stream/">Live Stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/login/" name="http://developers.facebook.com/docs/reference/plugins/login/">Login Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendations/" name="http://developers.facebook.com/docs/reference/plugins/recommendations/">Recommendations Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/registration/" name="http://developers.facebook.com/docs/reference/plugins/registration/">Registration</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/send/" name="http://developers.facebook.com/docs/reference/plugins/send/">Send Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/subscribe/" name="http://developers.facebook.com/docs/reference/plugins/subscribe/">Subscribe Button</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Beta Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/" name="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/">Recommendations Bar</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Facepile</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">Social Plugins</a> › <a href="/docs/reference/plugins/facepile/" name="https://developers.facebook.com/docs/reference/plugins/facepile/">Facepile</a>
+</div>
+</div>
+</div>
+<p>The Facepile plugin displays the Facebook profile pictures of users who have connected with your page via a global or custom action, or can also be configured to display users that have signed up for your site.</p>
+<p>If you want to display users who have connected to your page via an action, specify with the <code>action</code> parameter</p>
+<pre>
+<code>&lt;fb:facepile href=&quot;http://zhen.myfbse.com/rb-roastchicken.html&quot; 
+action=&quot;og_recipebox:planning_to_make&quot; width=&quot;300&quot; max_rows=&quot;1&quot;&gt;&lt;/fb:facepile&gt;
+</code>
+</pre>
+<p>To display users who have liked your page, specify the URL of your page as the <code>href</code> parameter. To display users who have signed up for your site, specify your application id as the <code>app_id</code> parameter.</p>
+<p>The plugin is available either via a simple iframe you can drop into your page, or if you are using the new <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>, you can use the <code>&lt;fb:facepile&gt;</code> XFBML tag.</p>
+<div class="clearfix">
+<div class="plugin_form" id="ud2xg3_2">
+<dl>
+<dt>
+<label for="param_href">URL</label>
+<a data-hover="tooltip" href="#" title="If you want the Facepile to display friends who have liked your page, specify the URL of the page here." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_href" name="href" type="text" value="http://developers.facebook.com" />
+</dd>
+<dt>
+<label for="param_action">Action</label>
+<a data-hover="tooltip" href="#" title="Comma separated list of action of action types" name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_action" name="action" type="text" />
+</dd>
+<dt>
+<label for="param_size">Size</label>
+<a data-hover="tooltip" href="#" title="Determines the size of the images and social context in the facepile." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="size" id="param_size">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">medium</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="small">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">small</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="medium">
+<a aria-checked="true" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">medium</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="large">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">large</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="size">
+<option value="">
+</option>
+<option value="small">small</option>
+<option selected="1" value="medium">medium</option>
+<option value="large">large</option>
+</select>
+</div>
+</dd>
+<dt>
+<label for="param_max_rows">Num rows</label>
+<a data-hover="tooltip" href="#" title="The maximum number of rows of profile pictures to show." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_max_rows" name="max_rows" size="7" type="text" value="1" />
+</dd>
+<dt>
+<label for="param_width">Width</label>
+<a data-hover="tooltip" href="#" title="The width of the plugin in pixels." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_width" name="width" size="7" type="text" value="300" />
+</dd>
+<dt>
+<label for="param_colorscheme">Color Scheme</label>
+<a data-hover="tooltip" href="#" title="The color scheme of the plugin." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="colorscheme" id="param_colorscheme">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">light</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="light">
+<a aria-checked="true" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">light</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="dark">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">dark</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="colorscheme">
+<option value="">
+</option>
+<option selected="1" value="light">light</option>
+<option value="dark">dark</option>
+</select>
+</div>
+</dd>
+</dl>
+<div class="getCode">
+<a class="uiButton" href="/docs/reference/plugins/facepile/code/?revision=376724855700243" id="ud2xg3_3" rel="dialog" role="button" name="https://developers.facebook.com/docs/reference/plugins/facepile/code/?revision=376724855700243">
+<span class="uiButtonText">Get Code</span>
+</a>
+</div>
+</div>
+<div class="plugin_example" id="ud2xg3_1">
+</div>
+</div>
+<h2>Attributes</h2>
+<ul>
+<li>
+<code>href</code> - the URL of the page. The plugin will display photos of users who have liked this page. </li>
+<li>
+<code>action</code> - an action type. The plugin will display photos of users who have connected to your app via this action. </li>
+<li>
+<code>app_id</code> - if you want the plugin to display users who have connected to your site, specify your application id as this parameter. This parameter is only available in the iframe version of the Facepile. If you are using the XFBML version of the plugin, specify your application id when you initialize the Javascript library. </li>
+<li>
+<code>max_rows</code> - the maximum number of rows of faces to display. The XFBML version will dynamically size its height; if you specify a maximum of four rows of faces, but there are only enough friends to fill two rows, the XFBML version of the plugin will set its height for two rows of faces. Default: 1. </li>
+<li>
+<code>width</code> - width of the plugin in pixels. Default width: 300px. </li>
+<li>
+<code>size</code> - size of the photos and social context. Default size: medium. </li>
+<li>
+<code>colorscheme</code> - the color scheme for the like button. Options: &apos;light&apos;, &apos;dark&apos;.</li>
+</ul>
+<h2>Why is nothing displaying?</h2>
+<p>The plugin only displays friends photos. If the user does not have friends who have liked your page or have connected to your site, no faces will be shown.</p>
+<p>If you are displaying users who have liked your page, and no users have liked it yet, the plugin will render nothing. If some users have liked your page, but none of the viewing users friends have liked it, the plugin will display the total number of users who have liked your page.</p>
+<p>If you are displaying users who have connected to your site, and none of the users friends have connected yet, the plugin will render nothing.</p>
+<h2>How to show users who have connected to your site</h2>
+<p>You need to specify your application id. If you are using the iframe version simply include it as another query parameter. Example:</p>
+<pre>
+<code>&lt;iframe src=&quot;http://www.facebook.com/plugins/facepile.php? 
+app_id={YOUR_APP_ID}&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none;  
+overflow:hidden; width:200px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt; 
+</code>
+</pre>
+<p>If you are using the XFBML version specify your application id when you initialize the Javascript library. Example:</p>
+<pre>
+<code>&lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;&lt;script src=&quot;http://connect.facebook.net/en_US/all.js
+#appId={YOUR_APP_ID}&amp;amp;xfbml=1&quot;&gt;&lt;/script&gt;&lt;fb:facepile&gt;&lt;/fb:facepile&gt;
+</code>
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/plugins/facepile/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1335373967" title="2012年4月25日 10:12">約2ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

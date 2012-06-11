@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/authentication/android/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/authentication/android/">https://developers.facebook.com/docs/authentication/android/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Android Single Sign-On</h1>
+</div>
+</div>
+<p>Before you begin development with the Facebook Android SDK, you will need to install the Android SDK and dev tools, Git (the source control client we use for this SDK) and then clone the lastest version of the SDK from <a href="http://github.com" name="http://github.com/">GitHub</a>:</p>
+<ul>
+<li>Install <a href="http://developer.android.com/sdk/index.html" name="http://developer.android.com/sdk/index.html">Android SDK</a> &amp; the <a href="http://developer.android.com/sdk/eclipse-adt.html" name="http://developer.android.com/sdk/eclipse-adt.html">Eclipse Plugin</a>
+</li>
+<li>Install <a href="http://git-scm.com/" name="http://git-scm.com/">Git</a>
+</li>
+<li>Clone the <a href="https://github.com/facebook/facebook-android-sdk" name="https://github.com/facebook/facebook-android-sdk">GitHub repository</a>: <code>git clone git://github.com/facebook/facebook-android-sdk.git</code>
+</li>
+<li>
+<p>For Emulator testing, create Virtual devices by going to Eclipse-&gt;Window-&gt;Android SDK and AVD Manager-&gt;Virtual devices</p>
+<ol>
+<li>
+<a href="#facebooksdk" name="https://developers.facebook.com/docs/#facebooksdk">Create Facebook SDK Project</a>
+</li>
+<li>
+<a href="#sdk" name="https://developers.facebook.com/docs/#sdk">Create New Sample Project</a>
+</li>
+<li>
+<a href="#ref" name="https://developers.facebook.com/docs/#ref">Add reference to the Facebook SDK</a>
+</li>
+<li>
+<a href="#sig" name="https://developers.facebook.com/docs/#sig">Add app signature to the Facebook App</a>
+</li>
+<li>
+<a href="#xml" name="https://developers.facebook.com/docs/#xml">Modified the AndroidManifest.xml for the Network calls</a>
+</li>
+<li>
+<a href="#sso" name="https://developers.facebook.com/docs/#sso">Single-Sign-On (SSO)</a>
+</li>
+<li>
+<a href="#install" name="https://developers.facebook.com/docs/#install">Installing the Facebook Android App</a>
+</li>
+<li>
+<a href="#build" name="https://developers.facebook.com/docs/#build">Build and run the project</a>
+</li>
+<li>
+<a href="#save" name="https://developers.facebook.com/docs/#save">Saving access token</a>
+</li>
+<li>
+<a href="#perms" name="https://developers.facebook.com/docs/#perms">More permissions</a>
+</li>
+<li>
+<a href="#shoot" name="https://developers.facebook.com/docs/#shoot">Troubleshoot</a>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="facebooksdk">Step 1: Create Facebook SDK Project</h2>
+<p>Once you have everything installed, open Eclipse and create a new Android Project (File | New | Project ...). We will use this project for the Facebook Android SDK source and then reference it from our app. As such, we need to get the content by selecting <strong>Create project from existing source</strong> and specifying the facebook directory from your git repository (<b>~/facebook-android-sdk/facebook</b>).</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/AndroidSSO_SDKWizard.png" />
+</div>
+<h2 id="sdk">Step 2: Create New Sample Project</h2>
+<p>With the SDK project created, we can create the app. Create a new Android Project (the Facebook SDK project created in the previous step should stay open in the Eclipse Workspace) from File | New | Project..., using the defaults and populating the require fields.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/AndroidSSO_SampleWizard.png" />
+</div>
+<h2 id="ref">Step 3: Add reference to the Facebook SDK</h2>
+<p>Once your app project is created, you will need to add a reference to the Facebook SDK project. You do this by opening the properties window for our app (File | Properties | Android), pressing the <b>Add...</b> button in the Library area and selecting the Facebook SDK project created above.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/app_properties.png" />
+</div>
+<h2 id="sig">Step 4: Add app signature to the Facebook App</h2>
+<p>We now need to export the signature for your app so that Facebook can use to ensure users are only communicating with your app on the Android. This is done by running the <strong>keytool</strong> that comes with the Android SDK. The following shows how to export the key for your app using the debug defaults specified by the Android SDK and Eclipse.</p>
+<p>
+<strong>Warning</strong> - the keytool.exe silently generates keyhash even if it can&apos;t find the debug.keystore or if the password is incorrect. Make sure that you have provided the correct path to the debug.keystore and are using the correct password. For Windows, it&apos;s generally at C:\Users{user}.android. General Rule: If the tool doesn&apos;t ask for password, your keystore path is incorrect. Password: &apos;android&apos;. More info under &apos;Signing in Debug Mode&apos; on the <a href="http://developer.android.com/guide/publishing/app-signing.html" name="http://developer.android.com/guide/publishing/app-signing.html">Signing Your Applications</a>. Refer to Troubleshoot section below for more tips on keyhash.</p>
+<pre>
+keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | openssl sha1 -binary | openssl base64
+</pre>
+<p>This tool generates a string that must be registered in the <strong>Mobile</strong> section of the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps">App Dashboard</a> for your app. Remember to click &apos;Save Changes&apos; to save the keyhash.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/AndroidSSO_keyhash.png" width="100%" />
+</div>
+<h2 id="xml">Step 5: Modified the AndroidManifest.xml for the Network calls</h2>
+<p>Once the Facebook SDK is referenced, the app <strong>manifest</strong> needs to be modified to allow the app to make network calls to Facebook. This is accomplished by adding the following to the AndroidManifest.xml file in the app project (Note that by default the Eclipse may open the <strong>Manifest</strong> tab. Click on the <strong>AndroidManifest.xml</strong> tab in the editor&apos;s bottom bar to open the editor view):</p>
+<pre>
+&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;
+</pre>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/AndroidSSO_Manifest.png" width="100%" />
+</div>
+<h2 id="sso">Step 6: Single-Sign-On (SSO)</h2>
+<p>As with the iOS SDK, one of the most compelling features of the Android SDK is <strong>Single-Sign-On (SSO)</strong>. SSO lets users sign into your app using their Facebook identity. If they are already signed into the Facebook Android app on their device they do not have to even type a username and password. Further, because they are signing to your app with their Facebook identity, you will have access to their profile information and social graph.</p>
+<p>Adding SSO to your app is very simple with the Facebook SDK. The below example outlines what code must be written to enable this feature. For the sake of simplicity, SSO functionality will be added to the Activity that was created by Eclipse when the app project was created. Open the MyGreatApp project -&gt; src -&gt; com.greatapp -&gt; MyGreatActivity.java. Replace the existing code by Copy-paste the code below while <strong>replacing the &quot;YOUR_APP_ID&quot; with the &quot;APP_ID&quot;</strong> of your app and save the file:</p>
+<pre>
+package com.greatapp;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import com.facebook.android.*;
+import com.facebook.android.Facebook.*;
+
+public class MyGreatActivity extends Activity {
+
+    Facebook facebook = new Facebook(&quot;YOUR_APP_ID&quot;);
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+
+        facebook.authorize(this, new DialogListener() {
+            @Override
+            public void onComplete(Bundle values) {}
+
+            @Override
+            public void onFacebookError(FacebookError error) {}
+
+            @Override
+            public void onError(DialogError e) {}
+
+            @Override
+            public void onCancel() {}
+        });
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        facebook.authorizeCallback(requestCode, resultCode, data);
+    }
+}
+
+</pre>
+<h2 id="install">Step 7: Installing the Facebook Android App</h2>
+<p>To help with debugging your app in the Android emulator, we provide a binary image of the Facebook Android that you can install with the <code>adb</code> tool in the Android SDK. Launch the emulator for the Android 2.2 (the target selected when creating the project) by going to Window -&gt; Android SDK and AVD Manager):</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/Android_Emulator.png" width="100%" />
+</div>
+<p>Run the following command. The adb tool is part of the standard android SDK and located in the android_sdk/platform-tools/ folder.</p>
+<pre>
+adb install ~/facebook-android-sdk/Facebook.apk
+</pre>
+<p>Your app will still work without installing this image, but we will default to using Platform Dialogs for sign-in rather than using the Facebook App requiring user to sign-in every time you run your app in the emulator.</p>
+<h2 id="build">Step 8: Build and run the project</h2>
+<p>Build and run the &apos;MyGreatApp&apos; project. This should launch in the same emulator where you install the Facebook.apk. You will be prompted with the user authorization dialog (You may have to login to the Facebook app if not already done so):</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/AndroidSSO_basicperm.png" width="100%" />
+</div>
+<p>This dialog allows the user to grant your app permission to access their information. If the user presses <strong>Allow</strong>, your app is authorized and you will have access to the user&apos;s profile and social graph through the <code>facebook</code> instance. If the user presses <strong>Don&apos;t Allow</strong>, your app is not authorized and you will not have access to the user&apos;s data.</p>
+<h2 id="save">Step 9: Saving access token</h2>
+<p>If you run the project again (after user has initially authorized your app), you will notice that user is presented with the following dialog:</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/AndroidSSO_secondrun.png" width="100%" />
+</div>
+<p>This dialog is displayed to mask the abrupt app-switching between your app and the Facebook app while Facebook SDK gets the access token for your app. This is not an optimal user experience and can be avoided by persistently saving the access token for your app. Let&apos;s rework on the previous code by using the <a href="http://developer.android.com/guide/topics/data/data-storage.html#pref" name="http://developer.android.com/guide/topics/data/data-storage.html#pref">Shared Preferences</a>.</p>
+<pre>
+package com.greatapp;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import com.facebook.android.*;
+import com.facebook.android.Facebook.*;
+
+public class MyGreatActivity extends Activity {
+
+    Facebook facebook = new Facebook(&quot;YOUR_APP_ID&quot;);
+    String FILENAME = &quot;AndroidSSO_data&quot;;
+    private SharedPreferences mPrefs;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        /*
+         * Get existing access_token if any
+         */
+        mPrefs = getPreferences(MODE_PRIVATE);
+        String access_token = mPrefs.getString(&quot;access_token&quot;, null);
+        long expires = mPrefs.getLong(&quot;access_expires&quot;, 0);
+        if(access_token != null) {
+            facebook.setAccessToken(access_token);
+        }
+        if(expires != 0) {
+            facebook.setAccessExpires(expires);
+        }
+        
+        /*
+         * Only call authorize if the access_token has expired.
+         */
+        if(!facebook.isSessionValid()) {
+
+            facebook.authorize(this, new String[] {}, new DialogListener() {
+                @Override
+                public void onComplete(Bundle values) {
+                    SharedPreferences.Editor editor = mPrefs.edit();
+                    editor.putString(&quot;access_token&quot;, facebook.getAccessToken());
+                    editor.putLong(&quot;access_expires&quot;, facebook.getAccessExpires());
+                    editor.commit();
+                }
+    
+                @Override
+                public void onFacebookError(FacebookError error) {}
+    
+                @Override
+                public void onError(DialogError e) {}
+    
+                @Override
+                public void onCancel() {}
+            });
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        facebook.authorizeCallback(requestCode, resultCode, data);
+    }
+}
+</pre>
+<p>If you save and run this (remember to replace &quot;YOUR_APP_ID&quot; with your app_id, you will notice that no authorization or confirmation dialog is displayed and user stays within your app. So, what&apos;s changed:</p>
+<ul>
+<li>The access token is saved using SharedPreferences in the <b>onComplete()</b> method</li>
+<li>The saved access token is fetched from persistent storage and set as the facebook object&apos;s access token via <b>facebook.setAccessToken()</b>
+</li>
+<li>facebook.authorize() is called only if the session is invalid. (checked by calling the <b>facebook.isSessionValid()</b>).</li>
+</ul>
+<p>However, note that this doesn&apos;t account for the situation where user may have revoked access to your app or if user has changed his password. You will need to always look out for the invalid access_token and redirect user to re-authorize your app. For invalid access token, following error is returned in the &apos;response&apos; parameter of the onComplete() method:</p>
+<pre>
+User revoked access to your app:
+{&quot;error&quot;:{&quot;type&quot;:&quot;OAuthException&quot;,&quot;message&quot;:&quot;Error validating access token: User 1053947411 has not authorized application 157111564357680.&quot;}}
+
+OR when password changed:
+{&quot;error&quot;:{&quot;type&quot;:&quot;OAuthException&quot;,&quot;message&quot;:&quot;Error validating access token: The session is invalid because the user logged out.&quot;}}
+</pre>
+<h2 id="perms">Step 10: More permissions</h2>
+<p>By default, the user is asked to authorize the app to access basic information that is available publicly or by default on Facebook. If your app needs more than this basic information to function, you must request specific permissions from the user. This is accomplished by passing <code>String[]</code> of permissions to the <code>authorize</code> method. The following example shows how to ask for access to user&apos;s email address and their news feed:</p>
+<pre>
+facebook.authorize(this, new String[] { &quot;email&quot;, &quot;read_stream&quot; },
+
+      new DialogListener() {
+           @Override
+           public void onComplete(Bundle values) {}
+
+           @Override
+           public void onFacebookError(FacebookError error) {}
+
+           @Override
+           public void onError(DialogError e) {}
+
+           @Override
+           public void onCancel() {}
+      }
+);
+</pre>
+<p>This results in asking users to allow &apos;Send me email&apos; and &apos;Access News Feed Posts&apos; permissions:</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/AndroidSSO_moreperm.png" width="100%" />
+</div>
+<p>A full list of permissions is available in our <a href="https://developers.facebook.com/docs/authentication/permissions" name="https://developers.facebook.com/docs/authentication/permissions">permissions reference</a>. There is a strong inverse correlation between the number of permissions your app requests and the number of users that will allow those permissions. The greater the number of permissions you ask for, the lower the number of users that will grant them; so we recommend that you only request the permissions you absolutely need for your app.</p>
+<h3 id="shoot">Troubleshoot</h3>
+<ul>
+<li>
+<p>
+<b>Key Hash Reference Doc</b>: <a href="http://developer.android.com/guide/publishing/app-signing.html" name="http://developer.android.com/guide/publishing/app-signing.html">Signing Your Applications</a>.</p>
+</li>
+<li>
+<p>
+<b>Keytool command not found error</b>: Keytool is provided by the standard Android SDK. if you get &apos;Command not found&apos; error, you need to either add its path to your global &apos;PATH&apos; or go to the folder to run this command. Standard location on Windows is C:\Program Files (x86)\Java\jdk1.6.0\bin and for MAC, its /usr/bin</p>
+</li>
+<li>
+<p>
+<b>Openssl</b>: If you don&apos;t have openssl, install it from here: <a href="http://www.slproweb.com/products/Win32OpenSSL.html" name="http://www.slproweb.com/products/Win32OpenSSL.html">Windows</a>, <a href="http://www.openssl.org/source/" name="http://www.openssl.org/source/">MAC</a>. For Mac, follow the instructions <a href="http://www.itechtalk.com/thread7108.html" name="http://www.itechtalk.com/thread7108.html">here</a>.</p>
+</li>
+<li>
+<p>
+<b>Invalid Key Hash</b>: The keytool silently generates keyhash regardless of unknown debug.keystore location or wrong password. When running the sample app, use adb logcat to track errors. The error returned for invalid key is <i>Facebook-authorize( 2631): Login failed: invalid_key</i>. Visual indication of invalid keyhash is when SSO slides in and out of the Facebook app without prompting any screen or GDP dialog. If you get this error, there are few possibilities:</p>
+<ul>
+<li>
+<p>keytool couldn&apos;t find your debug.keystore location. Make sure you provide the correct path. One way to know is keytool should always ask for password when it has the correct location.</p>
+</li>
+<li>
+<p>The password you entered is incorrect. The default Keystore password: &quot;android&quot;.</p>
+</li>
+<li>
+<p>You need to click &apos;Save Changes&apos; when adding keyhash to the App Dashboard on Facebook.</p>
+</li>
+<li>
+<p>If this all fails, try using cygwin or linux box to generate hashkey.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>
+<b>Installation [INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES] error</b>: Uninstall the app and try installing again.</p>
+</li>
+<li>
+<p>
+<b>onActivityResult() function is not called</b>: Make sure <i>&apos;Intent.FLAG_ACTIVITY_NO_HISTORY&apos;</i> is not defined for this intent in the AndroidManifest file.</p>
+</li>
+<li>
+<p>
+<b>App type <i>Web vs Native/Desktop</i>. Does it matter?</b>: No, it does not matter. However it&apos;s recommended to use the type &apos;Native/Desktop&apos; for your app.</p>
+</li>
+</ul>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="clear">
+<abbr class="timestamp" data-utime="1335819413" title="2012年4月30日 13:56">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/authentication/permissions/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/authentication/permissions/">https://developers.facebook.com/docs/authentication/permissions/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/server-side/" name="http://developers.facebook.com/docs/authentication/server-side/">Server-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/client-side/" name="http://developers.facebook.com/docs/authentication/client-side/">Client-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/ios/" name="http://developers.facebook.com/docs/authentication/ios/">Authentication in native iOS apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/android/" name="http://developers.facebook.com/docs/authentication/android/">Authentication in native Android apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pages/" name="http://developers.facebook.com/docs/authentication/pages/">Authenticating as a Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/applications/" name="http://developers.facebook.com/docs/authentication/applications/">Authenticating as an App</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/devices/" name="http://developers.facebook.com/docs/authentication/devices/">Authentication for Devices</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/canvas/" name="http://developers.facebook.com/docs/authentication/canvas/">Authentication within a Canvas Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pagetab/" name="http://developers.facebook.com/docs/authentication/pagetab/">Authentication within a Page Tab</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/access-token-expiration/" name="http://developers.facebook.com/docs/authentication/access-token-expiration/">Handling Invalid and Expired Access Tokens</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/authentication/permissions/" name="http://developers.facebook.com/docs/authentication/permissions/">Permissions Reference</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/publishing/" name="http://developers.facebook.com/docs/publishing/">Publishing Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/reauthentication/" name="http://developers.facebook.com/docs/authentication/reauthentication/">Re-Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/signed_request/" name="http://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Permissions Reference</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">Authentication</a> › <a href="/docs/authentication/permissions/" name="https://developers.facebook.com/docs/authentication/permissions/">Permissions Reference</a>
+</div>
+</div>
+</div>
+<p>When a user <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">authenticates</a> your application, by default, your app gets the ability to read only the user&apos;s <a href="#basic_info" name="https://developers.facebook.com/docs/#basic_info">basic information</a>. If you want to read additional data or publish data back to Facebook, you need to request additional <strong>permissions</strong>.</p>
+<p>These fall into the following groups:</p>
+<ul>
+<li>
+<a href="#basic_info" name="https://developers.facebook.com/docs/#basic_info">Basic Information</a> (no permissions)</li>
+<li>
+<a href="#user_friends_perms" name="https://developers.facebook.com/docs/#user_friends_perms">User and Friend Permissions</a>
+</li>
+<li>
+<a href="#extended_perms" name="https://developers.facebook.com/docs/#extended_perms">Extended Permissions</a>
+</li>
+<li>
+<a href="#open_graph_perms" name="https://developers.facebook.com/docs/#open_graph_perms">Open Graph Permissions</a>
+</li>
+<li>
+<a href="#page_perms" name="https://developers.facebook.com/docs/#page_perms">Page Permissions</a>
+</li>
+</ul>
+<p>For more on how to request these permissions from a user, please read our <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">authentication documentation</a>, and see how we <a href="#token_terminology" name="https://developers.facebook.com/docs/#token_terminology">refer to these permissions in the rest of the documentation</a>.</p>
+<p>
+<a name="basic_info">
+</a>
+</p>
+<div style="height: 3px;">
+</div>
+<hr />
+<h2>Basic Information</h2>
+<p>When a user auths your app and you request no additional permissions, your application will have access to only the user&apos;s basic information. By default, this includes certain properties of the User object such as <code>id</code>, <code>name</code>, <code>picture</code>, <code>gender</code>, and their <code>locale</code>. Certain connections of the <a href="/docs/reference/api/user/" name="https://developers.facebook.com/docs/reference/api/user/">User</a> object such as the <a href="/docs/reference/api/user/#friends" name="https://developers.facebook.com/docs/reference/api/user/#friends">Friends connection</a> are also available. If the user has made more of their data public, more information will be available.</p>
+<p>If a user who has auth&apos;d your app loads your application in a Canvas or Page Tab context, you will additionally be passed the user&apos;s age range. This is useful, for example, for gating access to apps related to alcohol promotion.</p>
+<p>
+<a name="user_friends_perms">
+</a>
+</p>
+<div style="height: 3px;">
+</div>
+<hr />
+<h2>User and Friends Permissions</h2>
+<p>You can ask for the following permissions for users and friends in the <code>scope</code> parameter as part of the <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">authentication process</a>.</p>
+<p>If you are using the <a href="/docs/opengraph/authentication/" name="https://developers.facebook.com/docs/opengraph/authentication/">Enhanced Auth Dialog</a>, the following permissions are not user-revokable within the authentication flow. If you request these permissions from the user as part of first-time authentication, the user must grant these permissions in order to continue and authorize your application.</p>
+<table>
+<thead>
+<tr>
+<th>User permission</th>
+<th>Friends permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>user_about_me</code>
+</td>
+<td>
+<code>friends_about_me</code>
+</td>
+<td>Provides access to the &quot;About Me&quot; section of the profile in the <code>about</code> property</td>
+</tr>
+<tr>
+<td>
+<code>user_activities</code>
+</td>
+<td>
+<code>friends_activities</code>
+</td>
+<td>Provides access to the user&apos;s list of activities as the <code>activities</code> connection</td>
+</tr>
+<tr>
+<td>
+<code>user_birthday</code>
+</td>
+<td>
+<code>friends_birthday</code>
+</td>
+<td>Provides access to the birthday with year as the <code>birthday</code> property</td>
+</tr>
+<tr>
+<td>
+<code>user_checkins</code>
+</td>
+<td>
+<code>friends_checkins</code>
+</td>
+<td>Provides read access to the authorized user&apos;s check-ins or a friend&apos;s check-ins that the user can see. This permission is superseded by user_status for new applications as of March, 2012.</td>
+</tr>
+<tr>
+<td>
+<code>user_education_history</code>
+</td>
+<td>
+<code>friends_education_history</code>
+</td>
+<td>Provides access to education history as the <code>education</code> property</td>
+</tr>
+<tr>
+<td>
+<code>user_events</code>
+</td>
+<td>
+<code>friends_events</code>
+</td>
+<td>Provides access to the list of events the user is attending as the <code>events</code> connection</td>
+</tr>
+<tr>
+<td>
+<code>user_groups</code>
+</td>
+<td>
+<code>friends_groups</code>
+</td>
+<td>Provides access to the list of groups the user is a member of as the <code>groups</code> connection</td>
+</tr>
+<tr>
+<td>
+<code>user_hometown</code>
+</td>
+<td>
+<code>friends_hometown</code>
+</td>
+<td>Provides access to the user&apos;s hometown in the <code>hometown</code> property</td>
+</tr>
+<tr>
+<td>
+<code>user_interests</code>
+</td>
+<td>
+<code>friends_interests</code>
+</td>
+<td>Provides access to the user&apos;s list of interests as the <code>interests</code> connection</td>
+</tr>
+<tr>
+<td>
+<code>user_likes</code>
+</td>
+<td>
+<code>friends_likes</code>
+</td>
+<td>Provides access to the list of all of the pages the user has liked as the <code>likes</code> connection</td>
+</tr>
+<tr>
+<td>
+<code>user_location</code>
+</td>
+<td>
+<code>friends_location</code>
+</td>
+<td>Provides access to the user&apos;s current location as the <code>location</code> property</td>
+</tr>
+<tr>
+<td>
+<code>user_notes</code>
+</td>
+<td>
+<code>friends_notes</code>
+</td>
+<td>Provides access to the user&apos;s notes as the <code>notes</code> connection</td>
+</tr>
+<tr>
+<td>
+<code>user_photos</code>
+</td>
+<td>
+<code>friends_photos</code>
+</td>
+<td>Provides access to the photos the user has uploaded, and photos the user has been tagged in</td>
+</tr>
+<tr>
+<td>
+<code>user_questions</code>
+</td>
+<td>
+<code>friends_questions</code>
+</td>
+<td>Provides access to the questions the user or friend has asked</td>
+</tr>
+<tr>
+<td>
+<code>user_relationships</code>
+</td>
+<td>
+<code>friends_relationships</code>
+</td>
+<td>Provides access to the user&apos;s family and personal relationships and relationship status</td>
+</tr>
+<tr>
+<td>
+<code>user_relationship_details</code>
+</td>
+<td>
+<code>friends_relationship_details</code>
+</td>
+<td>Provides access to the user&apos;s relationship preferences</td>
+</tr>
+<tr>
+<td>
+<code>user_religion_politics</code>
+</td>
+<td>
+<code>friends_religion_politics</code>
+</td>
+<td>Provides access to the user&apos;s religious and political affiliations</td>
+</tr>
+<tr>
+<td>
+<code>user_status</code>
+</td>
+<td>
+<code>friends_status</code>
+</td>
+<td>Provides access to the user&apos;s status messages and checkins. Please see the documentation for the <a href="/docs/reference/fql/location_post/" name="https://developers.facebook.com/docs/reference/fql/location_post/">location_post</a> table for information on how this permission may affect retrieval of information about the locations associated with posts.</td>
+</tr>
+<tr>
+<td>
+<code>user_subscriptions</code>
+</td>
+<td>
+<code>friends_subscriptions</code>
+</td>
+<td>Provides access to the user&apos;s subscribers and subscribees</td>
+</tr>
+<tr>
+<td>
+<code>user_videos</code>
+</td>
+<td>
+<code>friends_videos</code>
+</td>
+<td>Provides access to the videos the user has uploaded, and videos the user has been tagged in</td>
+</tr>
+<tr>
+<td>
+<code>user_website</code>
+</td>
+<td>
+<code>friends_website</code>
+</td>
+<td>Provides access to the user&apos;s web site URL</td>
+</tr>
+<tr>
+<td>
+<code>user_work_history</code>
+</td>
+<td>
+<code>friends_work_history</code>
+</td>
+<td>Provides access to work history as the <code>work</code> property</td>
+</tr>
+<tr>
+<td>
+<code>email</code>
+</td>
+<td>N/A</td>
+<td>Provides access to the user&apos;s primary email address in the <code>email</code> property. Do not spam users. Your use of email must comply both with <a href="https://www.facebook.com/terms.php" name="https://www.facebook.com/terms.php">Facebook policies</a> and with the <a href="http://www.ftc.gov/bcp/edu/pubs/business/ecommerce/bus61.shtm" name="http://www.ftc.gov/bcp/edu/pubs/business/ecommerce/bus61.shtm">CAN-SPAM Act</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>
+<a name="extended_perms">
+</a>
+</p>
+<div style="height: 3px;">
+</div>
+<hr />
+<h2>Extended Permissions</h2>
+<p>If you are using the <a href="https://developers.facebook.com/docs/opengraph/authentication/" name="https://developers.facebook.com/docs/opengraph/authentication/">Enhanced Auth Dialog</a>, extended permissions are presented on the second page of the dialog and are individually user-revocable. If you request these permissions, the user can choose to not grant one or more of them. Your application should not expect the user to always grant these permissions if requested.</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>read_friendlists</code>
+</td>
+<td>Provides access to any friend lists the user created. All user&apos;s friends are provided as part of basic data, this extended permission grants access to the lists of friends a user has created, and should only be requested if your application utilizes lists of friends.</td>
+</tr>
+<tr>
+<td>
+<code>read_insights</code>
+</td>
+<td>Provides read access to the Insights data for pages, applications, and domains the user owns.</td>
+</tr>
+<tr>
+<td>
+<code>read_mailbox</code>
+</td>
+<td>Provides the ability to read from a user&apos;s Facebook Inbox.</td>
+</tr>
+<tr>
+<td>
+<code>read_requests</code>
+</td>
+<td>Provides read access to the user&apos;s friend requests</td>
+</tr>
+<tr>
+<td>
+<code>read_stream</code>
+</td>
+<td>Provides access to all the posts in the user&apos;s News Feed and enables your application to perform searches against the user&apos;s News Feed</td>
+</tr>
+<tr>
+<td>
+<code>xmpp_login</code>
+</td>
+<td>Provides applications that integrate with Facebook Chat the ability to log in users.</td>
+</tr>
+<tr>
+<td>
+<code>ads_management</code>
+</td>
+<td>Provides the ability to manage ads and call the Facebook Ads API on behalf of a user.</td>
+</tr>
+<tr>
+<td>
+<code>create_event</code>
+</td>
+<td>Enables your application to create and modify events on the user&apos;s behalf</td>
+</tr>
+<tr>
+<td>
+<code>manage_friendlists</code>
+</td>
+<td>Enables your app to create and edit the user&apos;s friend lists.</td>
+</tr>
+<tr>
+<td>
+<code>manage_notifications</code>
+</td>
+<td>Enables your app to read notifications and mark them as read. <b>Intended usage:</b> This permission should be used to let users read and act on their notifications; it should not be used to for the purposes of modeling user behavior or data mining. Apps that misuse this permission may be banned from requesting it.</td>
+</tr>
+<tr>
+<td>
+<code>user_online_presence</code>
+</td>
+<td>Provides access to the user&apos;s online/offline presence</td>
+</tr>
+<tr>
+<td>
+<code>friends_online_presence</code>
+</td>
+<td>Provides access to the user&apos;s friend&apos;s online/offline presence</td>
+</tr>
+<tr>
+<td>
+<code>publish_checkins</code>
+</td>
+<td>Enables your app to perform checkins on behalf of the user.</td>
+</tr>
+<tr>
+<td>
+<code>publish_stream</code>
+</td>
+<td>Enables your app to post content, comments, and likes to a user&apos;s stream and to the streams of the user&apos;s friends. This is a superset <a href="https://developers.facebook.com/docs/publishing/" name="https://developers.facebook.com/docs/publishing/">publishing permission</a> which also includes <code>publish_actions</code>. However, please note that Facebook recommends a user-initiated sharing model. Please read the <a href="/policy/" name="https://developers.facebook.com/policy/">Platform Policies</a> to ensure you understand how to properly use this permission. Note, you do <strong>not</strong> need to request the <code>publish_stream</code> permission in order to use the <a href="/docs/reference/dialogs/feed/" name="https://developers.facebook.com/docs/reference/dialogs/feed/">Feed Dialog</a>, the <a href="/docs/reference/dialogs/requests/" name="https://developers.facebook.com/docs/reference/dialogs/requests/">Requests Dialog</a> or the <a href="/docs/reference/dialogs/send/" name="https://developers.facebook.com/docs/reference/dialogs/send/">Send Dialog</a>.</td>
+</tr>
+<tr>
+<td>
+<code>rsvp_event</code>
+</td>
+<td>Enables your application to RSVP to events on the user&apos;s behalf</td>
+</tr>
+</tbody>
+</table>
+<p>
+<a name="open_graph_perms">
+</a>
+</p>
+<div style="height: 3px;">
+</div>
+<hr />
+<h2>Open Graph Permissions</h2>
+<p>Open Graph permissions allow your app to publish <a href="/docs/opengraph/actions/" name="https://developers.facebook.com/docs/opengraph/actions/">actions</a> to the Open Graph and also to retrieve actions published by other applications. To request these permissions, you must enable the <a href="/docs/opengraph/authentication/" name="https://developers.facebook.com/docs/opengraph/authentication/">Enhanced Auth Dialog</a>. The Open Graph permissions all appear on the first screen of the auth dialog. As with <a href="#user_friends_perms" name="https://developers.facebook.com/docs/#user_friends_perms">User and Friend permissions</a>, if you request these permissions, the user must grant them before authorizing your app.</p>
+<table>
+<thead>
+<tr>
+<th>User Permission</th>
+<th>Friends Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>publish_actions</code>
+</td>
+<td>N/A</td>
+<td>Allows your app to publish to the Open Graph using <a href="/docs/opengraph/actions/builtin/" name="https://developers.facebook.com/docs/opengraph/actions/builtin/">Built-in Actions</a>, <a href="/docs/achievements/" name="https://developers.facebook.com/docs/achievements/">Achievements</a>, <a href="/docs/score/" name="https://developers.facebook.com/docs/score/">Scores</a>, or <a href="/docs/opengraph/define-actions/" name="https://developers.facebook.com/docs/opengraph/define-actions/">Custom Actions</a>. Your app can also publish other activity which is detailed in the <a href="https://developers.facebook.com/docs/publishing/" name="https://developers.facebook.com/docs/publishing/">Publishing Permissions</a> doc. Note: The user-prompt for this permission will be displayed in the first screen of the <a href="/docs/opengraph/authentication/" name="https://developers.facebook.com/docs/opengraph/authentication/">Enhanced Auth Dialog</a> and cannot be revoked as part of the authentication flow. However, a user can later revoke this permission in their Account Settings. If you want to be notified if this happens, you should subscribe to the <code>permissions</code> object within the <a href="/docs/reference/api/realtime/" name="https://developers.facebook.com/docs/reference/api/realtime/">Realtime API</a>.</td>
+</tr>
+<tr>
+<td>
+<code>user_actions.music</code>
+</td>
+<td>
+<code>friends_actions.music</code>
+</td>
+<td>Allows you to retrieve the actions published by all applications using the built-in <code>music.listens</code> action.</td>
+</tr>
+<tr>
+<td>
+<code>user_actions.news</code>
+</td>
+<td>
+<code>friends_actions.news</code>
+</td>
+<td>Allows you to retrieve the actions published by all applications using the built-in <code>news.reads</code> action.</td>
+</tr>
+<tr>
+<td>
+<code>user_actions.video</code>
+</td>
+<td>
+<code>friends_actions.video</code>
+</td>
+<td>Allows you to retrieve the actions published by all applications using the built-in <code>video.watches</code> action.</td>
+</tr>
+<tr>
+<td>
+<code>user_actions:APP_NAMESPACE</code>
+</td>
+<td>
+<code>friends_actions:APP_NAMESPACE</code>
+</td>
+<td>Allows you retrieve the actions published by another application as specified by the app namespace. For example, to request the ability to retrieve the actions published by an app which has the namespace <code>awesomeapp</code>, prompt the user for the <code>users_actions:awesomeapp</code> and/or <code>friends_actions:awesomeapp</code> permissions.</td>
+</tr>
+<tr>
+<td>
+<code>user_games_activity</code>
+</td>
+<td>
+<code>friends_games_activity</code>
+</td>
+<td>Allows you post and retrieve game achievement activity.</td>
+</tr>
+</tbody>
+</table>
+<p>
+<a name="page_perms">
+</a>
+</p>
+<div style="height: 3px;">
+</div>
+<hr />
+<h2>Page Permissions</h2>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>manage_pages</code>
+</td>
+<td>Enables your application to retrieve access_tokens for Pages and Applications that the user administrates. The access tokens can be queried by calling <code>/&lt;user_id&gt;/accounts</code> via the Graph API. This permission is only compatible with the Graph API, not the deprecated REST API. <br /> See <a href="https://developers.facebook.com/roadmap/offline-access-removal/#page_access_token" name="https://developers.facebook.com/roadmap/offline-access-removal/#page_access_token">here</a> for generating long-lived Page access tokens that do not expire after 60 days.</td>
+</tr>
+</tbody>
+</table>
+<p>
+<a name="token_terminology">
+</a>
+</p>
+<div style="height: 3px;">
+</div>
+<hr />
+<h2>Access Token terminology</h2>
+<p>Within the Facebook Platform, there are User access tokens, Page access tokens and App access tokens. Permissions are applicable only to User access tokens. However, some data may be available with no access token at all (public data), with any access token or a specific type of access token. When referring to access tokens and permissions in our documentation, we use the following terms to describe the kinds of tokens and permissions you need to perform particular operations:</p>
+<h4>Publicly available</h4>
+<p>No <code>access_token</code> or permission is required for this operation.</p>
+<h4>Any valid access_token</h4>
+<p>A valid User, Page or App access token with no special permissions is required for this operation. An access token may not be valid if, for example, it has expired. No special permissions are required. Occasionally, this is referred to as a generic <code>access_token</code>.</p>
+<h4>App access_token</h4>
+<p>An access token for an application is required for this operation. This is obtained by authenticating the application with the <code>APP_ID</code> and <code>APP_SECRET</code>, as described in <a href="/docs/authentication/#applogin" name="https://developers.facebook.com/docs/authentication/#applogin">Application Authentication</a> page.</p>
+<h4>User access_token</h4>
+<p>An <code>access_token</code> for a User, with no special permissions required for this operation. This is the access token returned by the standard <a href="/docs/authentication/#client-side-flow" name="https://developers.facebook.com/docs/authentication/#client-side-flow">Client-side</a> and <a href="/docs/authentication/#server-side-flow" name="https://developers.facebook.com/docs/authentication/#server-side-flow">Server-side</a> authentication flows.</p>
+<h4>Page access_token</h4>
+<p>An <code>access_token</code> used to manage a Page is required for this operation. Page access tokens are retrieved by calling <code>/PAGE_ID?fields=access_token</code> with a User access token which has been granted the <code>manage_pages</code> permission. You can call <code>/USER_ID/accounts</code> to get a list of all the Pages the users manages, along with a Page access token for each Page.</p>
+<h4>A specific permission</h4>
+<p>A User access token which has been granted a permission, from the list above is required to perform a particular operation. For example: the <code>user_checkins</code> permission is required to read a user&apos;s checkins.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/authentication/permissions/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1336762059" title="2012年5月11日 11:47">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

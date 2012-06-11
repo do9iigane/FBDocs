@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/mobile/android/deep_linking/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/mobile/android/deep_linking/">https://developers.facebook.com/docs/mobile/android/deep_linking/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li class="active withsubsections">
+<a class="selected" href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/guides/web" name="https://developers.facebook.com/docs/guides/web">Websites</a>
+</li>
+<li>
+<a href="/docs/guides/canvas" name="https://developers.facebook.com/docs/guides/canvas">Apps on Facebook</a>
+</li>
+<li>
+<a href="/docs/guides/mobile" name="https://developers.facebook.com/docs/guides/mobile">Mobile</a>
+</li>
+<li>
+<a href="/docs/appcenter/" name="https://developers.facebook.com/docs/appcenter/">App Center</a>
+</li>
+<li>
+<a href="/docs/bestpractices/" name="https://developers.facebook.com/docs/bestpractices/">Best Practices</a>
+</li>
+<li>
+<a href="/docs/samples" name="https://developers.facebook.com/docs/samples">Samples &amp; How-Tos</a>
+</li>
+<li>
+<a href="/videos" name="https://developers.facebook.com/videos">Videos</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Getting Started</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/mobile/support/" name="http://developers.facebook.com/docs/mobile/support/">Mobile Distribution</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Mobile Web</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/guides/mobile/web/" name="http://developers.facebook.com/docs/guides/mobile/web/">Mobile Web Tutorial</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>iOS</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/mobile/ios/build/" name="http://developers.facebook.com/docs/mobile/ios/build/">iOS Tutorial</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/guides/mobile/ios_sdk/" name="http://developers.facebook.com/docs/guides/mobile/ios_sdk/">iOS SDK</a>
+</li>
+</ul>
+</li>
+<li class="active">
+<h5>Android</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/mobile/android/build/" name="http://developers.facebook.com/docs/mobile/android/build/">Android Tutorial</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/guides/mobile/android_sdk/" name="http://developers.facebook.com/docs/guides/mobile/android_sdk/">Android SDK</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/guides/mobile/android_hackbook/" name="http://developers.facebook.com/docs/guides/mobile/android_hackbook/">Hackbook for Android</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/mobile/android/deep_linking/" name="http://developers.facebook.com/docs/mobile/android/deep_linking/">Native App Linking for Android</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Native App Linking for Android</h1>
+<div class="breadcrumbs">
+<a href="/docs/" name="https://developers.facebook.com/docs/">Getting Started</a> › <a href="/docs/guides/mobile/" name="https://developers.facebook.com/docs/guides/mobile/">Mobile</a> › <a href="/docs/mobile/android/deep_linking/" name="https://developers.facebook.com/docs/mobile/android/deep_linking/">Native App Linking for Android</a>
+</div>
+</div>
+</div>
+<p>As part of <a href="https://play.google.com/store/apps/details?id=com.facebook.katana" name="https://play.google.com/store/apps/details?id=com.facebook.katana">Facebook for Android 1.9</a>, you have granular controls to set where Bookmarks, Requests, Feed Stories, and Timeline Stories link to for your mobile Android App. You options include:</p>
+<ol>
+<li>All bookmarks and requests link to your <strong>Mobile Web URL</strong>
+</li>
+<li>All bookmarks and requests link to your <strong>Android Native App</strong> or to a <strong>Market URL</strong> if the app is not installed</li>
+<li>All News Feed and Timeline Stories link to the story&apos;s <strong>Web URL</strong>
+</li>
+<li>All News Feed and Timeline Stories link to your <strong>Android Native App</strong> or to a <strong>Market URL</strong> if the app is not installed (with the story&apos;s Web URL passed to your app)</li>
+</ol>
+<p>Jump to the following section to learn how to configure you app:</p>
+<ul>
+<li>
+<a href="#weburls" name="https://developers.facebook.com/docs/#weburls">Web URL Linking only - All social channels link to Web URLs</a>
+</li>
+<li>
+<a href="#native_bookmarks" name="https://developers.facebook.com/docs/#native_bookmarks">Native Linking On, Deep Linking Off - Bookmarks and Requests to native app, stories to Web URLs</a>
+</li>
+<li>
+<a href="#deeplink" name="https://developers.facebook.com/docs/#deeplink">Native Linking On, Deep Linking On - All taps go to native app</a>
+</li>
+<li>
+<a href="#troubleshoot" name="https://developers.facebook.com/docs/#troubleshoot">Troubleshooting Tips</a> <a name="weburls">
+</a>
+</li>
+</ul>
+<h2>Web URL Linking only</h2>
+<p>If you would like all Bookmarks, Requests, and Stories to link to URLs, you will need to configure a Mobile Web URL for your app (note, this can be the same as your Desktop URL, but we recommend creating an optimized mobile landing page for your app):<br />
+</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/mobile_web_url.png" />
+</div>
+<p>
+<br /> If you do not configure Native Linking (detailed below), all Bookmarks, Requests, and App Attribution links will now go to this specified Mobile Web URL in the Android Browser:<br />
+</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/web_bookmark_android.png" />
+</div>
+<p>
+<br />
+</p>
+<p>All Open Graph, Timeline, and Feed stories will link to the URL provided in the story by default, unless you enable <a href="#deeplink" name="https://developers.facebook.com/docs/#deeplink">Native Deep Linking</a>.</p>
+<p>
+<strong>Note:</strong> You can still configure SSO for your Android App, while retaining Web URL linking within Facebook for Android. To do this, configure SSO as detailed <a href="https://developers.facebook.com/docs/mobile/android/build/#sso" name="https://developers.facebook.com/docs/mobile/android/build/#sso">here</a>, but do not configure the additional settings for Native Linking. <a name="native_bookmarks">
+</a>
+</p>
+<h2>Native Linking on, Deep Linking off</h2>
+<p>To configure your app for Native Linking, you must first configure your Android app for Single Sign-On (SSO). Follow the <a href="https://developers.facebook.com/docs/mobile/android/build/" name="https://developers.facebook.com/docs/mobile/android/build/">Android Tutorial</a> to configure your app for SSO.</p>
+<p>Once you have your app configured for SSO, you need to configure all the following settings in your Android App Settings configuration:<br />
+</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/android_settings.png" />
+</div>
+<p>
+<br />
+</p>
+<ol>
+<li>
+<strong>Enabled for SSO</strong> - This tells us that your app is configured for SSO, so we can natively link to it.</li>
+<li>
+<strong>Android Key Hash</strong> - Your app signature is required for SSO for a security check. More info <a href="https://developers.facebook.com/docs/mobile/android/build/#sig" name="https://developers.facebook.com/docs/mobile/android/build/#sig">here</a>
+</li>
+<li>
+<strong>Android Package Name</strong> - The unique app identifier used by Android that we call to open your app if it is installed. This is often of the format <em>com.domain.appname</em>. You can quickly find this in your AndroidManifest.xml file:look for the <em>package=</em> attribute of the <em>manifest</em> element. This is a required field for native linking.</li>
+<li>
+<strong>Android Class Name</strong> - The class name of the Main Activity that you want Facebook to launch. Include the namespace of your app (e.g <em>com.domain.appname.activity</em>). This is a required field for native linking.</li>
+<li>
+<strong>Android Market URI</strong> - The URI Facebook for Android should open for native linking if your app is not installed. This will most likely be your Google Play App URL, but you can link the user elsewhere if you choose.</li>
+</ol>
+<p>
+<strong>Note</strong>: If you have your app set to <strong>Configured for Android SSO</strong> but do not fill out the other required fields, we will always link to Web URLs for your app.</p>
+<p>Now, all Bookmarks and Requests will link to your native app:<br />
+</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/native_bookmark_android.png" />
+</div>
+<p>
+<a name="deeplink">
+</a>
+<br />
+</p>
+<h2>Native Linking On, Deep Linking On</h2>
+<p>By default, all Feed and Open Graph stories on News Feed, Timeline, and in Aggregations will link to the URL associated with the story. If you want to drive people directly to your native Android App, you can enable <strong>Android Native Deep Linking</strong> after you have configured <a href="#native_bookmarks" name="https://developers.facebook.com/docs/#native_bookmarks">Native Linking</a>. This will redirect all stories to your Android App, if it is installed, or to the <strong>Android Market URI</strong> you provide, if the app is not installed.</p>
+<p>To Enable <strong>Android Native Deep Linking</strong>, set it to <strong>Enabled</strong> in your App Settings under <strong>Native Android App</strong>:<br />
+</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/android_deep_link_enabled.png" />
+</div>
+<p>
+<br />
+</p>
+<p>Now links from stories will open up your app.</p>
+<p>
+<strong>Important</strong>: You&apos;re app will now open, but your users might not be taken to the appropriate content within your app. You therefore need to enable <em>deep linking</em> within your application. We pass the full URL from the clicked story to your app as part of the Intent&apos;s data. You will need to change your native app to call <code>getIntent().getData</code> in the Activity subclass you configured for launch to get the URL, and redirect the user to that content. Sample Code:<br />
+</p>
+<pre>
+Uri target = getIntent().getData();
+if (target != null) {
+    // target is the deep-link Uri
+} else {
+    // launched with no deep-link Uri
+}
+</pre>
+<p>Now all Feed and Timeline stories will link directly to your app:</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/feed_deep_link.png" />
+</div>
+<p>
+<br />
+<a name="troubleshoot">
+</a>
+</p>
+<h2>Troubleshooting Tips</h2>
+<p>Here are some tips when troubleshooting Native Linking for Android:</p>
+<ul>
+<li>When you make app settings changes, be sure to &apos;force quit&apos; the Facebook App so it will reload the Bookmark from its cache</li>
+<li>By default, the main activity is automatically configured with the MAIN/LAUNCHER intent filter by Eclipse when you create the project. If you are having any issues, make sure in AndroidManifest.xml, there is a section under the activity that has the following configuration:</li>
+</ul>
+<pre>
+    &lt;intent-filter&gt;
+      &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
+      &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
+    &lt;/intent-filter&gt;
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/mobile/android/deep_linking/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1335298876" title="2012年4月24日 13:21">約2ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

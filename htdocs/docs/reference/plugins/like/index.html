@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/plugins/like/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/plugins/like/">https://developers.facebook.com/docs/reference/plugins/like/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a class="selected" href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/activity/" name="http://developers.facebook.com/docs/reference/plugins/activity/">Activity Feed</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/comments/" name="http://developers.facebook.com/docs/reference/plugins/comments/">Comments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/facepile/" name="http://developers.facebook.com/docs/reference/plugins/facepile/">Facepile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like-box/" name="http://developers.facebook.com/docs/reference/plugins/like-box/">Like Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like/" name="http://developers.facebook.com/docs/reference/plugins/like/">Like Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/live-stream/" name="http://developers.facebook.com/docs/reference/plugins/live-stream/">Live Stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/login/" name="http://developers.facebook.com/docs/reference/plugins/login/">Login Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendations/" name="http://developers.facebook.com/docs/reference/plugins/recommendations/">Recommendations Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/registration/" name="http://developers.facebook.com/docs/reference/plugins/registration/">Registration</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/send/" name="http://developers.facebook.com/docs/reference/plugins/send/">Send Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/subscribe/" name="http://developers.facebook.com/docs/reference/plugins/subscribe/">Subscribe Button</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Beta Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/" name="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/">Recommendations Bar</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Like Button</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">Social Plugins</a> › <a href="/docs/reference/plugins/like/" name="https://developers.facebook.com/docs/reference/plugins/like/">Like Button</a>
+</div>
+</div>
+</div>
+<p>The Like button lets a user share your content with friends on Facebook. When the user clicks the Like button on your site, a story appears in the user&apos;s friends&apos; News Feed with a link back to your website.</p>
+<p>When your Web page represents a real-world entity, things like movies, sports teams, celebrities, and restaurants, use the <a href="/docs/opengraphprotocol" name="https://developers.facebook.com/docs/opengraphprotocol">Open Graph protocol</a> to specify information about the entity. If you include Open Graph tags on your Web page, your page becomes equivalent to a Facebook page. This means when a user clicks a Like button on your page, a connection is made between your page and the user. Your page will appear in the &quot;Likes and Interests&quot; section of the user&apos;s profile, and you have the ability to publish updates to the user. Your page will show up in same places that Facebook pages show up around the site (e.g. search), and you can target ads to people who like your content. <strong>Note:</strong> The count on the Like button will include all likes and shares whereas the <code>like</code> connection on the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> includes only the number of likes for the object.</p>
+<p>There are two Like button implementations: XFBML and Iframe. The XFBML (also available in HTML5-compliant markup) version is more versatile, but requires use of the <a href="https://developers.facebook.com/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>. The XFBML dynamically re-sizes its height according to whether there are profile pictures to display, gives you the ability (through the Javascript library) to listen for like events so that you know in real time when a user clicks the Like button, and it always gives the user the ability to add an optional comment to the like. If users do add a comment, the story published back to Facebook is given more prominence.</p>
+<p>
+<b>Note:</b> The URLs in the code are protocol relative. This lets the browser to load the SDK over the same protocol (HTTP or HTTPS) as the containing page, which will prevent &quot;Insecure Content&quot; warnings. Missing http and https in the code is intentional.</p>
+<p>To get started, just use the configurator below to get code to add to your site.</p>
+<h2>Step 1 - Get Like Button Code</h2>
+<div class="clearfix">
+<div class="plugin_form" id="udhtyd_2">
+<dl>
+<dt>
+<label for="param_href">URL to Like</label>
+<a data-hover="tooltip" href="#" title="The URL to like. In XFBML, defaults to the current page." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_href" name="href" type="text" />
+</dd>
+<dt>Send Button (XFBML Only) <a data-hover="tooltip" href="#" title="Include a Send button.  The Send Button is available only on sites that use the JavaScript SDK." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input checked="1" class="inputcheckbox" id="param_send" name="send" type="checkbox" value="true" />
+<label for="param_send">Send Button</label>
+</dd>
+<dt>
+<label for="param_layout">Layout Style</label>
+<a data-hover="tooltip" href="#" title="determines the size and amount of social context next to the button" name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="layout" id="param_layout">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">standard</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="standard">
+<a aria-checked="true" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">standard</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="button_count">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">button_count</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="box_count">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">box_count</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="layout">
+<option value="">
+</option>
+<option selected="1" value="standard">standard</option>
+<option value="button_count">button_count</option>
+<option value="box_count">box_count</option>
+</select>
+</div>
+</dd>
+<dt>
+<label for="param_width">Width</label>
+<a data-hover="tooltip" href="#" title="the width of the plugin, in pixels" name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_width" name="width" size="7" type="text" value="450" />
+</dd>
+<dt>Show Faces <a data-hover="tooltip" href="#" title="Show profile pictures below the button." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input checked="1" class="inputcheckbox" id="param_show_faces" name="show_faces" type="checkbox" value="true" />
+<label for="param_show_faces">Show faces</label>
+</dd>
+<dt>
+<label for="param_action">Verb to display</label>
+<a data-hover="tooltip" href="#" title="The verb to display in the button. Currently only &apos;like&apos; and &apos;recommend&apos; are supported." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="action" id="param_action">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">like</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="like">
+<a aria-checked="true" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">like</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="recommend">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">recommend</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="action">
+<option value="">
+</option>
+<option selected="1" value="like">like</option>
+<option value="recommend">recommend</option>
+</select>
+</div>
+</dd>
+<dt>
+<label for="param_colorscheme">Color Scheme</label>
+<a data-hover="tooltip" href="#" title="The color scheme of the plugin." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="colorscheme" id="param_colorscheme">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">light</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="light">
+<a aria-checked="true" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">light</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="dark">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">dark</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="colorscheme">
+<option value="">
+</option>
+<option selected="1" value="light">light</option>
+<option value="dark">dark</option>
+</select>
+</div>
+</dd>
+<dt>
+<label for="param_font">Font</label>
+<a data-hover="tooltip" href="#" title="the font of the plugin" name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="font" id="param_font">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton uiButtonNoText" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">
+</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="arial">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">arial</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="lucida grande">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">lucida grande</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="segoe ui">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">segoe ui</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="tahoma">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">tahoma</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="trebuchet ms">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">trebuchet ms</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="verdana">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">verdana</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="font">
+<option value="">
+</option>
+<option value="arial">arial</option>
+<option value="lucida grande">lucida grande</option>
+<option value="segoe ui">segoe ui</option>
+<option value="tahoma">tahoma</option>
+<option value="trebuchet ms">trebuchet ms</option>
+<option value="verdana">verdana</option>
+</select>
+</div>
+</dd>
+</dl>
+<div class="getCode">
+<a class="uiButton" href="/docs/reference/plugins/like/code/?revision=451653598196629" id="udhtyd_3" rel="dialog" role="button" name="https://developers.facebook.com/docs/reference/plugins/like/code/?revision=451653598196629">
+<span class="uiButtonText">Get Code</span>
+</a>
+</div>
+</div>
+<div class="plugin_example" id="udhtyd_1">
+</div>
+</div>
+<h2>Attributes</h2>
+<ul>
+<li>
+<code>href</code> - the URL to like. The XFBML version defaults to the current page. </li>
+<li>
+<code>send</code> - specifies whether to include a <a href="http://developers.facebook.com/docs/reference/plugins/send/" name="http://developers.facebook.com/docs/reference/plugins/send/">Send button</a> with the Like button. This only works with the XFBML version. </li>
+<li>
+<code>layout</code> - there are three options. <ul>
+<li>
+<code>standard</code> - displays social text to the right of the button and friends&apos; profile photos below. Minimum width: 225 pixels. Minimum increases by 40px if action is &apos;recommend&apos; by and increases by 60px if send is &apos;true&apos;. Default width: 450 pixels. Height: 35 pixels (without photos) or 80 pixels (with photos). </li>
+<li>
+<code>button_count</code> - displays the total number of likes to the right of the button. Minimum width: 90 pixels. Default width: 90 pixels. Height: 20 pixels. </li>
+<li>
+<code>box_count</code> - displays the total number of likes above the button. Minimum width: 55 pixels. Default width: 55 pixels. Height: 65 pixels.</li>
+</ul>
+</li>
+<li>
+<code>show_faces</code> - specifies whether to display profile photos below the button (standard layout only) </li>
+<li>
+<code>width</code> - the width of the Like button. </li>
+<li>
+<code>action</code> - the verb to display on the button. Options: &apos;like&apos;, &apos;recommend&apos; </li>
+<li>
+<code>font</code> - the font to display in the button. Options: &apos;arial&apos;, &apos;lucida grande&apos;, &apos;segoe ui&apos;, &apos;tahoma&apos;, &apos;trebuchet ms&apos;, &apos;verdana&apos; </li>
+<li>
+<code>colorscheme</code> - the color scheme for the like button. Options: &apos;light&apos;, &apos;dark&apos; </li>
+<li>
+<code>ref</code> - a label for tracking referrals; must be less than 50 characters and can contain alphanumeric characters and some punctuation (currently +/=-.:_). The ref attribute causes two parameters to be added to the referrer URL when a user clicks a link from a stream story about a Like action: <ul>
+<li>
+<code>fb_ref</code> - the ref parameter </li>
+<li>
+<code>fb_source</code> - the stream type (&apos;home&apos;, &apos;profile&apos;, &apos;search&apos;, &apos;ticker&apos;, &apos;tickerdialog&apos; or &apos;other&apos;) in which the click occurred and the story type (&apos;oneline&apos; or &apos;multiline&apos;), concatenated with an underscore.</li>
+</ul>
+</li>
+</ul>
+<h2 id="oggenerator">Step 2 - Get Open Graph Tags</h2>
+<div class="clearfix">
+<div class="plugin_form" id="udhtyd_4">
+<dl>
+<dt>
+<label for="param_title">Title</label>
+<a data-hover="tooltip" href="#" title="The title of the entity." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_title" name="title" type="text" />
+</dd>
+<dt>
+<label for="param_type">Type</label>
+<a data-hover="tooltip" href="#" title="The type of the entity." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="type" id="param_type">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton uiButtonNoText" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">
+</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="Chose a type">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">Chose a type</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="activity">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">activity</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="actor">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">actor</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="album">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">album</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="article">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">article</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="athlete">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">athlete</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="author">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">author</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="band">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">band</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="bar">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">bar</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="blog">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">blog</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="book">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">book</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="cafe">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">cafe</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="cause">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">cause</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="city">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">city</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="company">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">company</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="country">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">country</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="director">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">director</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="drink">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">drink</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="food">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">food</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="game">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">game</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="government">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">government</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="hotel">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">hotel</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="landmark">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">landmark</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="movie">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">movie</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="musician">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">musician</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="non_profit">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">non_profit</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="politician">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">politician</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="product">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">product</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="public_figure">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">public_figure</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="restaurant">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">restaurant</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="school">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">school</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="song">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">song</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="sport">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">sport</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="sports_league">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">sports_league</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="sports_team">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">sports_team</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="state_province">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">state_province</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="tv_show">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">tv_show</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="university">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">university</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="website">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">website</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="type">
+<option value="">
+</option>
+<option value="Chose a type">Chose a type</option>
+<option value="activity">activity</option>
+<option value="actor">actor</option>
+<option value="album">album</option>
+<option value="article">article</option>
+<option value="athlete">athlete</option>
+<option value="author">author</option>
+<option value="band">band</option>
+<option value="bar">bar</option>
+<option value="blog">blog</option>
+<option value="book">book</option>
+<option value="cafe">cafe</option>
+<option value="cause">cause</option>
+<option value="city">city</option>
+<option value="company">company</option>
+<option value="country">country</option>
+<option value="director">director</option>
+<option value="drink">drink</option>
+<option value="food">food</option>
+<option value="game">game</option>
+<option value="government">government</option>
+<option value="hotel">hotel</option>
+<option value="landmark">landmark</option>
+<option value="movie">movie</option>
+<option value="musician">musician</option>
+<option value="non_profit">non_profit</option>
+<option value="politician">politician</option>
+<option value="product">product</option>
+<option value="public_figure">public_figure</option>
+<option value="restaurant">restaurant</option>
+<option value="school">school</option>
+<option value="song">song</option>
+<option value="sport">sport</option>
+<option value="sports_league">sports_league</option>
+<option value="sports_team">sports_team</option>
+<option value="state_province">state_province</option>
+<option value="tv_show">tv_show</option>
+<option value="university">university</option>
+<option value="website">website</option>
+</select>
+</div>
+</dd>
+<dt>
+<label for="param_url">URL</label>
+<a data-hover="tooltip" href="#" title="The canonical, permanent URL of the page representing the entity." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_url" name="url" type="text" />
+</dd>
+<dt>
+<label for="param_image">Image</label>
+<a data-hover="tooltip" href="#" title="The URL to an image that represents the entity." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_image" name="image" type="text" />
+</dd>
+<dt>
+<label for="param_site_name">Site name</label>
+<a data-hover="tooltip" href="#" title="A human-readable name for your site." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_site_name" name="site_name" type="text" />
+</dd>
+<dt>
+<label for="param_admin">Admin</label>
+<a data-hover="tooltip" href="#" title="A comma-separated list of either the Facebook IDs of page administrators or a Facebook Platform application ID." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_admin" name="admin" type="text" value="0" />
+</dd>
+</dl>
+<div class="getCode">
+<a class="uiButton" href="/docs/reference/plugins/like/tags/?revision=451653598196629" id="udhtyd_5" rel="dialog" role="button" name="https://developers.facebook.com/docs/reference/plugins/like/tags/?revision=451653598196629">
+<span class="uiButtonText">Get Tags</span>
+</a>
+</div>
+</div>
+<div class="plugin_example">
+</div>
+</div>
+<h2 id="ogtags">Open Graph Tags</h2>
+<p>Open Graph tags are <code>&lt;meta&gt;</code> tags that you add to the <code>&lt;head&gt;</code> of your website to describe the entity your page represents, whether it is a band, restaurant, blog, or something else.</p>
+<p>An Open Graph tag looks like this:</p>
+<pre>
+<code>&lt;meta property=&quot;og:tag name&quot; content=&quot;tag value&quot;/&gt; 
+</code>
+</pre>
+<p>If you use Open Graph tags, the following six are required:</p>
+<ul>
+<li>
+<code>og:title</code> - The title of the entity. </li>
+<li>
+<code>og:type</code> - The type of entity. You must select a type from the list of <a href="/docs/opengraphprotocol#types" name="https://developers.facebook.com/docs/opengraphprotocol#types">Open Graph types</a>. </li>
+<li>
+<code>og:image</code> - The URL to an image that represents the entity. Images must be at least 50 pixels by 50 pixels. Square images work best, but you are allowed to use images up to three times as wide as they are tall. </li>
+<li>
+<code>og:url</code> - The canonical, permanent URL of the page representing the entity. When you use Open Graph tags, the Like button posts a link to the og:url instead of the URL in the Like button code. </li>
+<li>
+<code>og:site_name</code> - A human-readable name for your site, e.g., &quot;IMDb&quot;. </li>
+<li>
+<code>fb:admins</code> or <code>fb:app_id</code> - A comma-separated list of either the Facebook IDs of page administrators or a Facebook Platform application ID. At a minimum, include only your own Facebook ID.</li>
+</ul>
+<p>More information on Open Graph tags and details on Administering your page can be found on the <a href="/docs/opengraphprotocol" name="https://developers.facebook.com/docs/opengraphprotocol">Open Graph protocol documentation</a> .</p>
+<h2 id="faq">FAQ</h2>
+<h3>How do I know when a user clicks a Like button?</h3>
+<p>If you are using the XFBML version of the button, you can subscribe to the &apos;edge.create&apos; event through <a href="/docs/reference/javascript/FB.Event.subscribe" name="https://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe">FB.Event.subscribe</a>.</p>
+<h3>When will users have the option to add a comment to the like?</h3>
+<p>If you are using the XFBML version of the Like button, users will always have the option to add a comment. If you are using the Iframe version of the button, users will have the option to comments if you are using the &apos;standard&apos; layout with a width of at least 400 pixels. If users do add a comment, the story published back to Facebook is given more prominence.</p>
+<h3>What analytics are available about the Like button?</h3>
+<p>If you visit <a href="http://www.facebook.com/insights" name="http://www.facebook.com/insights">facebook.com/insights</a> and register your domain, you can see the number of likes on your domain each day and the demographics of who is clicking the Like button.</p>
+<h3>Can I link the Like button to my Facebook page?</h3>
+<p>Yes. Simply specify the URL of your Facebook page in the <code>href</code> parameter of the button.</p>
+<h3>What is the best way to know which Like button on my page generated the traffic?</h3>
+<p>Add the &apos;ref&apos; parameter to the plugin (see &quot;Attributes&quot; above).</p>
+<p>Examples:</p>
+<pre>
+<code>&lt;fb:like ref=&quot;top_left&quot;&gt;&lt;/fb:like&gt;
+&lt;iframe src=&quot;...&amp;ref=top_left&quot;&gt;&lt;/iframe&gt;
+</code>
+</pre>
+<p>When a user clicks a link back to your website, we will pass back both the ref value as a fb_ref parameter and the fb_source parameter in the referrer URL. Example:</p>
+<pre>
+<code>http://www.facebook.com/l.php?fb_ref=top_left&amp;fb_source=profile_oneline
+</code>
+</pre>
+<p>Aggregated stream stories contain all ref parameters, concatenated with commas.</p>
+<h3 id="scraperinfo">When does Facebook scrape my page?</h3>
+<p>Facebook needs to scrape your page to know how to display it around the site.</p>
+<p>Facebook scrapes your page every 24 hours to ensure the properties are up to date. The page is also scraped when an admin for the Open Graph page clicks the Like button and when the URL is entered into the <a href="/tools/lint/" name="https://developers.facebook.com/tools/lint/">Facebook URL Linter</a>. Facebook observes cache headers on your URLs - it will look at &quot;Expires&quot; and &quot;Cache-Control&quot; in order of preference. However, even if you specify a longer time, Facebook will scrape your page every 24 hours.</p>
+<p>The user agent of the scraper is: &quot;facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)&quot;</p>
+<h3>How do I display the Like button in different languages?</h3>
+<p>If you are using the XFBML version include the language code when you instantiate the library. Replace ‘en_US’ in this line with the correct locale code:</p>
+<pre>
+<code>&apos;//connect.facebook.net/en_US/all.js&apos;;
+</code>
+</pre>
+<p>If you are using the Iframe version include a locale parameter with the proper country code in the src URL. Example:</p>
+<pre>
+<code>src=&quot;http://www.facebook.com/plugins/like.php?locale=fr_FR&amp;...&quot;
+</code>
+</pre>
+<p>You may need to adjust the width of the Like button to accommodate different languages.</p>
+<h3>What makes up the number shown on my Like button?</h3>
+<p>The number shown is the sum of:</p>
+<ul>
+<li>The number of likes of this URL </li>
+<li>The number of shares of this URL (this includes copy/pasting a link back to Facebook) </li>
+<li>The number of likes and comments on stories on Facebook about this URL </li>
+<li>The number of inbox messages containing this URL as an attachment.</li>
+</ul>
+<h3>What happened to the old Share button?</h3>
+<p>We deprecated the Share Button when we launched the Like button, because the Like button improves clickthrough rates by allowing users to connect with one click, and by allowing them to see which of their friends have already connected. For reference, the Share button documentation is still available <a href="/docs/share/" name="https://developers.facebook.com/docs/share/">here</a>.</p>
+<h3>When I click the Like button, the popup window (or &quot;flyout&quot;) doesn&apos;t show. Why?</h3>
+<p>If the Like button is placed near the edge of an HTML element with the <code>overflow</code> property set to <code>hidden</code>, the flyout may be clipped or completely hidden when the button is clicked. This can be remedied by setting setting the <code>overflow</code> property to a value other than <code>hidden</code>, such as <code>visible</code>, <code>scroll</code>, or <code>auto</code>.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/plugins/like/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1338565784" title="2012年6月1日 8:49">約1週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

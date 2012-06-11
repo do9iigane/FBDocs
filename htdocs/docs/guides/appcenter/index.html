@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/guides/appcenter/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/guides/appcenter/">https://developers.facebook.com/docs/guides/appcenter/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li class="active withsubsections">
+<a class="selected" href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/guides/web" name="https://developers.facebook.com/docs/guides/web">Websites</a>
+</li>
+<li>
+<a href="/docs/guides/canvas" name="https://developers.facebook.com/docs/guides/canvas">Apps on Facebook</a>
+</li>
+<li>
+<a href="/docs/guides/mobile" name="https://developers.facebook.com/docs/guides/mobile">Mobile</a>
+</li>
+<li>
+<a href="/docs/appcenter/" name="https://developers.facebook.com/docs/appcenter/">App Center</a>
+</li>
+<li>
+<a href="/docs/bestpractices/" name="https://developers.facebook.com/docs/bestpractices/">Best Practices</a>
+</li>
+<li>
+<a href="/docs/samples" name="https://developers.facebook.com/docs/samples">Samples &amp; How-Tos</a>
+</li>
+<li>
+<a href="/videos" name="https://developers.facebook.com/videos">Videos</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Getting Started</h5>
+<ul>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/guides/appcenter/" name="http://developers.facebook.com/docs/guides/appcenter/">App Center Tutorial</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/appcenter/guidelines/" name="http://developers.facebook.com/docs/appcenter/guidelines/">App Center Guidelines</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/appcenter/categories/" name="http://developers.facebook.com/docs/appcenter/categories/">App Categories</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>App Center Tutorial</h1>
+<div class="breadcrumbs">
+<a href="/docs/" name="https://developers.facebook.com/docs/">Getting Started</a> › <a href="/docs/appcenter/" name="https://developers.facebook.com/docs/appcenter/">App Center</a> › <a href="/docs/guides/appcenter/" name="https://developers.facebook.com/docs/guides/appcenter/">App Center Tutorial</a>
+</div>
+</div>
+</div>
+<p>The App Center is the central place to find great social apps. The App Center is an additional channel to grow Apps on Facebook, mobile apps and Websites with Facebook Login. We encourage all developers to create an app detail page to appear in search and be eligible for listing in the App Center.</p>
+<p>This doc will guide developers through the process of configuring their apps:</p>
+<ol>
+<li>
+<a href="#creating" name="https://developers.facebook.com/docs/#creating">Creating an App Detail Page</a>
+</li>
+<li>
+<a href="#uploading" name="https://developers.facebook.com/docs/#uploading">Uploading Image Assets</a>
+</li>
+<li>
+<a href="#authorization" name="https://developers.facebook.com/docs/#authorization">Authorization</a>
+</li>
+<li>
+<a href="#websites" name="https://developers.facebook.com/docs/#websites">Special Considerations for Websites and Mobile Web</a>
+</li>
+<li>
+<a href="#submitting" name="https://developers.facebook.com/docs/#submitting">Submitting your app for the App Center</a>
+</li>
+</ol>
+<p>If you have not already created an app on the Facebook Platform you should refer to the guides for developing <a href="/docs/guides/canvas/" name="https://developers.facebook.com/docs/guides/canvas/">Apps on Facebook</a>, <a href="/docs/guides/mobile/" name="https://developers.facebook.com/docs/guides/mobile/">Facebook Mobile Apps</a> or <a href="/docs/guides/web/" name="https://developers.facebook.com/docs/guides/web/">Facebook for Websites</a>.</p>
+<p>This doc assumes you are already comfortable navigating the <a href="/apps" name="https://developers.facebook.com/apps">App Dashboard</a>, are familiar with the basic settings and have read the <a href="/docs/appcenter/guidelines/" name="https://developers.facebook.com/docs/appcenter/guidelines/">App Center Guidelines</a>. To ensure users have a good initial experience, app detail pages that are eligible for the App Center will be reviewed prior to being listed.</p>
+<p>
+<a name="creating">
+</a>
+</p>
+<h2>Creating an App Detail Page</h2>
+<p>All developers should create an app detail page in the <a href="/apps" name="https://developers.facebook.com/apps">App Dashboard</a>. These pages help people understand what makes an app unique, see screenshots of the experience, and login to start using the app. After a user authenticates from an app detail page, they’ll be sent into the app, whether it’s on Facebook, a website or a mobile app.</p>
+<p>App detail pages are required to be eligible for listing in the App Center. They will also become the destination page when non-users search for your app on Facebook.</p>
+<p>To access the App Center settings, visit the <a href="/apps" name="https://developers.facebook.com/apps">App Dashboard</a> and click on the App Center tab in the left navigation.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/appcenter_nav.jpg" width="700" />
+</p>
+<p>Here you can enter the values that will display on the app detail page in the App Center. The App Display Name, <a href="/docs/appcenter/categories/" name="https://developers.facebook.com/docs/appcenter/categories/">Category</a>, Tagline and Description values are taken from the app&apos;s Basic Settings and Auth Dialog settings, respectively. The Detailed Description field is unique to the App Center and allows for larger amount of copy letting you enter a more detailed description for your app detail page. Before submitting please make sure that your Tagline does not contain your Display Name, and your Detailed Description contains more greater detail than your short Description.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/appcenter_appinfoconfig3.jpg" width="700" />
+</p>
+<p>Make sure to only display the platforms that your app supports and are ready for the App Center. If you are testing an iOS App that uses the same App ID as your App on Facebook but it&apos;s still in development, you should mark this as hidden in your app detail configuration. Your supported platforms can be toggled as displayed or hidden in the Listed Platforms section.</p>
+<p>
+<strong>Note:</strong> If you support both a <a href="/docs/guides/web/" name="https://developers.facebook.com/docs/guides/web/">Website with Facebook Login</a> and an <a href="/docs/guides/canvas/" name="https://developers.facebook.com/docs/guides/canvas/">App on Facebook</a>, only the <a href="/docs/guides/canvas/" name="https://developers.facebook.com/docs/guides/canvas/">App on Facebook</a> will be displayed within App Center to help reduce any user confusion.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/appcenter_listed_platforms.jpg" width="384" />
+</p>
+<p>Finally you will need to provide support information in the Support Info section. If you have already entered this information previously in the Advanced Settings it will be carried over here. In order to be approved for App Center Developers are required to enter a <a href="https://www.facebook.com/about/privacy/" name="https://www.facebook.com/about/privacy/">Privacy Policy URL</a>, <a href="https://www.facebook.com/legal/terms" name="https://www.facebook.com/legal/terms">Terms of Service URL</a> and either a User Support Email address or URL. The Marketing URL field (optional) can be used to enter a promotional website for your app and will be displayed as &apos;View App Website&apos; on your app detail page.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/appcenter_supportinfo2.jpg" width="695" />
+</p>
+<p>
+<a name="uploading">
+</a>  </p>
+<h2>Uploading Image Assets</h2>
+<p>Developers need to upload icons, banners and screenshots. These may vary based on the platforms the app supports. The image assets required will be displayed automatically in the App Center tab based on the platforms marked as supported in the app&apos;s Basic Settings tab.</p>
+<p>When creating your images:</p>
+<ul>
+<li>Put the name of your app in the banner.</li>
+<li>Give important graphics some breathing space.</li>
+<li>Don&apos;t put logos and text against the border of images.</li>
+<li>Banner images must fill out the frame completely (e.g. no white space, no rounded edges, no borders).</li>
+<li>Icons can have rounded corners (we recommend transparency and PNG, not GIF).</li>
+<li>Refer to our examples and the <a href="/docs/appcenter/guidelines/" name="https://developers.facebook.com/docs/appcenter/guidelines/">App Center Guidelines</a> for help.</li>
+</ul>
+<p>
+<a name="assetsizes">
+</a>
+</p>
+<h3>Image Asset Sizes</h3>
+<p>
+<strong>Icons:</strong>
+</p>
+<table width="700">
+<tr>
+<td width="65">Size (px)</td>
+<td width="245">Display Location</td>
+<td>Example</td>
+</tr>
+<tr>
+<td>16 x 16</td>
+<td>News feed stories, bookmarks</td>
+<td>
+<img src="https://developers.facebook.com/attachment/appcenter_ex_bkmk.jpg" width="104" />
+</td>
+</tr>
+<tr>
+<td>64 x 64</td>
+<td>Auth Dialog, hovercards</td>
+<td>
+<img src="https://developers.facebook.com/attachment/appcenter_ex_hovercard.jpg" width="316" />
+</td>
+</tr>
+<tr>
+<td>96 x 96</td>
+<td>Mobile app detail page</td>
+<td>
+<img src="https://developers.facebook.com/attachment/appcenter_ex_mobile.jpg" width="350" />
+</td>
+</tr>
+<tr>
+<td>128 x 128</td>
+<td>Web app detail page</td>
+<td>
+<img src="https://developers.facebook.com/attachment/appcenter_ex_details.jpg" width="265" />
+</td>
+</tr>
+</table>
+<p>
+<strong>Web Promotional Banners:</strong>
+</p>
+<table width="700">
+<tr>
+<td width="65">Size (px)</td>
+<td width="245">Display Location</td>
+<td>Example</td>
+</tr>
+<tr>
+<td>155 x 100</td>
+<td>Lists on the main page, category pages, and subcategory pages</td>
+<td>
+<img src="https://developers.facebook.com/attachment/appcenter_ex_list.jpg" width="350" />
+</td>
+</tr>
+<tr>
+<td>394 x 150</td>
+<td>Featured unit at the top of the main page (optional, only used if selected)</td>
+<td>
+<img src="https://developers.facebook.com/attachment/appcenter_ex_editorial.jpg" width="350" />
+</td>
+</tr>
+<tr>
+<td>180 x 115</td>
+<td>Featured units on the right side of pages (optional, only used if selected)</td>
+<td>
+<img src="https://developers.facebook.com/attachment/appcenter_ex_ad.jpg" width="198" />
+</td>
+</tr>
+</table>
+<p>
+<strong>Mobile Promotional Banners:</strong>
+</p>
+<p>App Center supports the following mobile screen resolutions:</p>
+<ul>
+<li>MDPI: 240 x 480 phones</li>
+<li>HDPI: 480 x 800</li>
+<li>XHDPI: 640 x 960 and up</li>
+</ul>
+<table>
+<tr>
+<td width="65">Size (px)</td>
+<td>Display Location</td>
+</tr>
+<tr>
+<td>136 x 88</td>
+<td>Lists on the main page, category pages, and subcategory pages (MDPI)</td>
+</tr>
+<tr>
+<td>204 x 132</td>
+<td>Lists on the main page, category pages, and subcategory pages (HDPI)</td>
+</tr>
+<tr>
+<td>272 x 176</td>
+<td>Lists on the main page, category pages, and subcategory pages (XHDPI)</td>
+</tr>
+</table>
+<p>
+<strong>Cover Images:</strong>
+</p>
+<p>When designing the Cover image, developers should keep in mind that the 128x128 px icon slightly obscures the lower left corner of the Cover image, as displayed below.</p>
+<table width="700">
+<tr>
+<td width="65">Size (px)</td>
+<td>Display Location</td>
+<td>Example</td>
+</tr>
+<tr>
+<td>800 x 150</td>
+<td>App detail page</td>
+<td>
+<img src="https://developers.facebook.com/attachment/appcenter_ex_cover2.jpg" width="475" />
+</td>
+</tr>
+</table>
+<p>
+<strong>Screenshots:</strong>
+</p>
+<p>Developers can submit up to 5 screenshots per platform that the app supports (Web, Canvas, Mobile Web, iPhone, iPad, Android) and are required to submit at least 3 screenshots per platform.</p>
+<p>Screenshots should display real gameplay and not contain any marketing materials or banners. App Center supports screenshot dimensions between 320 x 320 to 2048 x 2048 pixels.</p>
+<p>If the aspect ratio of a screenshot doesn&apos;t fit with aspect ratio of the display box in App Center, we will scale the screenshot so one dimension is perfectly fit and then crop and center the image accordingly.</p>
+<p>Screenshots are chosen based on which device the user is using to view the page. If you are viewing the page on iPhone, iPhone screenshots get priority. If the app doesn&apos;t support iOS then mobile web screenshots get priority, and so on.</p>
+<p>There are 2 designs for screenshots layout:</p>
+<ul>
+<li>One portrait + two landscapes.</li>
+<li>Three landscapes.</li>
+</ul>
+<p>App Center will use the later layout only if all 3 screenshots are landscape. Otherwise, the first layout is used and portrait screenshots always come before any landscape screenshots (so the first screenshot is always a portrait).</p>
+<table>
+<tr>
+<td>Size (px)</td>
+<td>Display Location</td>
+</tr>
+<tr>
+<td>(320 - 2048) x (320 - 2048)</td>
+<td>App detail page screenshots</td>
+</tr>
+</table>
+<p>
+<a name="authorization">
+</a>  </p>
+<h2>Authorization</h2>
+<p>The app detail page in the App Center displays the permissions required for new users. It can be considered a version of the <a href="/docs/opengraph/authentication/" name="https://developers.facebook.com/docs/opengraph/authentication/">Auth Dialog</a> in this capacity, making it easy for new users to install your app directly from the App Center.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/appcenter_permissions.jpg" width="690" />
+</p>
+<p>The following fields are available when configuring the <strong>Permissions</strong> section under the <strong>App Center</strong> settings:</p>
+<ol>
+<li>
+<strong>User &amp; Friend Permissions</strong>: These <a href="/docs/reference/api/permissions/#user_friends_perms" name="https://developers.facebook.com/docs/reference/api/permissions/#user_friends_perms">permissions</a> will be displayed as <strong>required</strong> on the app detail page in App Center. </li>
+<li>
+<strong>Extended Permissions</strong>: After clicking through the app detail page users will be prompted with an Auth Dialog for these <a href="/docs/reference/api/permissions/#extended_perms" name="https://developers.facebook.com/docs/reference/api/permissions/#extended_perms">permissions</a> as <strong>optional</strong>, which means the user can &quot;x&quot; these permissions out and still authorize your app.</li>
+<li>
+<strong>Auth Token Parameter</strong>: When a user authorizes your app through the app detail page, we will pass your app the Auth Token in the format specified here. Available formats: <ul>
+<li>
+<code>URI Fragment</code>: if your app is using <a href="/docs/authentication/client-side/" name="https://developers.facebook.com/docs/authentication/client-side/">client-side authentication</a>
+</li>
+<li>
+<code>Query String</code>: if your app is using <a href="/docs/authentication/server-side/" name="https://developers.facebook.com/docs/authentication/server-side/">server-side authentication</a>.</li>
+</ul>
+</li>
+</ol>
+<p>If your app is a <strong>canvas app</strong>, we will not use this setting and will use the &quot;signed_request&quot; as the response type automatically.</p>
+<p>While some users will be directed to an app detail page from App Center, other users may still navigate to your app by directly entering your URL or through <a href="/docs/reference/dialogs/feed/" name="https://developers.facebook.com/docs/reference/dialogs/feed/">Feed</a>, <a href="/docs/requests/" name="https://developers.facebook.com/docs/requests/">Requests</a> and <a href="https://www.facebook.com/advertising/" name="https://www.facebook.com/advertising/">Ads</a>. In these cases you will still need to handle authorization through the existing <a href="/docs/opengraph/authentication/" name="https://developers.facebook.com/docs/opengraph/authentication/">Auth Dialog</a>.</p>
+<p>
+<strong>A special consideration when using the Query String setting:</strong>
+</p>
+<p>If you would like to use the <a href="/docs/authentication/server-side/" name="https://developers.facebook.com/docs/authentication/server-side/">server-side authentication</a> flow with App Center it is important to make sure you are passing the <code>redirect_uri</code> parameter correctly when exchanging your <code>code</code> for an access token. You should set your <code>redirect_uri</code> parameter to the click-through URL to your site without the <code>code</code> parameter. In most cases the URL will look something like:</p>
+<pre>
+<code> http://www.example.com/?fb_appcenter=1&amp;fb_source=search&amp;code=CODE_HERE
+</code>
+</pre>
+<p>Once you strip the code parameter it will become:</p>
+<pre>
+<code> http://www.example.com/?fb_appcenter=1&amp;fb_source=search
+</code>
+</pre>
+<p>which is the value that should be set in <code>redirect_uri</code>. Please make sure that this logic is dynamic as the query parameters appended to your click-through URL may be subject to change.</p>
+<h3>For <a href="/docs/guides/canvas/" name="https://developers.facebook.com/docs/guides/canvas/">Canvas Developers</a>
+</h3>
+<p>Most Canvas apps immediately redirect new users to the Auth Dialog via a client side redirect. This functionality should be maintained after submitting to the App Center as users may still navigate to the app by directly typing in the URL and will still need to be authorized. Developers must make sure that they are asking for the same set of permissions in both cases; the App Center permission configuration should match what developers are already asking for in the <code>scope</code> parameter of the <a href="/docs/reference/dialogs/oauth/" name="https://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog</a>. If these do not match, users could end up seeing two authorization prompts in a row, resulting in a confusing user experience and preventing your app from being listed in the App Center.</p>
+<h3>For <a href="/docs/mobile/ios/build/" name="https://developers.facebook.com/docs/mobile/ios/build/">iOS</a> and <a href="/docs/mobile/android/build/" name="https://developers.facebook.com/docs/mobile/android/build/">Android</a>
+</h3>
+<p>Mobile apps must use Single Sign On (SSO) to be eligible for display in the App Center. Only mobile apps that provide a seamless login process after clicking through the app detail page will be listed in the App Center.</p>
+<p>People will be able to browse the App Center on Facebook.com and through the Facebook mobile apps. When people want to use a native mobile app that requires installation, they will be directed to download the app from the Apple App Store or Google Play. The App Center links to mobile app marketplaces and is designed to drive growth for great social apps on iOS, Android and the mobile web.</p>
+<p>
+<a name="websites">
+</a>
+</p>
+<h3>For <a href="/docs/guides/web/" name="https://developers.facebook.com/docs/guides/web/">Website</a> and <a href="/docs/guides/mobile/web/" name="https://developers.facebook.com/docs/guides/mobile/web/">Mobile Web</a> Developers</h3>
+<p>The app detail page in the App Center will take care of authorizing users before they arrive on your website, but it&apos;s important to make sure that these users have a personalized experience when they land on your site after clicking through from App Center. Users should not have to click a second &quot;Login to Facebook&quot; button on your website, rather they should see some evidence of personalization in order to optimize the user experience.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/appcenter_website_guide2.jpg" width="700" />
+</p>
+<p>The following sample code will check to see if the user has authorized the app and the print a personalized welcome message e.g. &apos;Welcome, Constantin!&apos;.</p>
+<pre>
+<code> &lt;html&gt;                                                                                                                                                                      
+   &lt;head&gt;                                                                                                                                                                    
+     &lt;title&gt;Example&lt;/title&gt;                                                                                                                                                  
+   &lt;/head&gt;                                                                                                                                                                   
+   &lt;body&gt;                                                                                                                                                                    
+     &lt;div id=&quot;welcomeMessage&quot;&gt;&lt;/div&gt;                                                                                                                                         
+
+     &lt;!-- Load the Facebook JavaScript SDK --&gt;                                                                                                                               
+     &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;                                                                                                                                                
+     &lt;script&gt;                                                                                                                                                                
+       window.fbAsyncInit = function() {                                                                                                                                     
+         FB.init({                                                                                                                                                           
+           appId      : &apos;APP_ID&apos;, // App ID                                                                                                                         
+           status     : true, // check login status                                                                                                                          
+           cookie     : true                                                                                                                                                 
+         });                                                                                                                                                                 
+
+         // Check if the current user is logged in                                                                                                                           
+         // and has authorized the app                                                                                                                                       
+         FB.getLoginStatus(function(response) {                                                                                                                              
+           // Check the result of the user                                                                                                                                   
+           if(response &amp;&amp; response.status == &apos;connected&apos;) {                                                                                                                  
+             // The user is connected to Facebook                                                                                                                            
+             // and has authorized the app.                                                                                                                                  
+             // Now personalize the user experience                                                                                                                          
+
+             FB.api(&apos;/me&apos;, function(response) {                                                                                                                              
+               var message = document.getElementById(&apos;welcomeMessage&apos;);                                                                                                      
+               message.innerHTML = &apos;Hello, &apos; + response.first_name;                                                                                                          
+             });                                                                                                                                                             
+           } else {                                                                                                                                                          
+             // The user has not authenticated your app,                                                                                                                     
+             // proceed with your normal (anonymous) flow.                                                                                                                   
+           }                                                                                                                                                                 
+         });                                                                                                                                                                 
+       };                                                                                                                                                                    
+
+       // Load the SDK Asynchronously                                                                                                                                        
+       (function(d){                                                                                                                                                         
+         var js;                                                                                                                                                             
+         var id = &apos;facebook-jssdk&apos;;                                                                                                                                          
+         var ref = d.getElementsByTagName(&apos;script&apos;)[0];                                                                                                                      
+         if (d.getElementById(id)) {return;}                                                                                                                                 
+         js = d.createElement(&apos;script&apos;);                                                                                                                                     
+         js.id = id;                                                                                                                                                         
+         js.async = true;                                                                                                                                                    
+         js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;                                                                                                                     
+         ref.parentNode.insertBefore(js, ref);                                                                                                                               
+       }(document));                                                                                                                                                         
+     &lt;/script&gt;                                                                                                                                                               
+   &lt;/body&gt;                                                                                                                                                                   
+ &lt;/html&gt;
+</code>
+</pre>
+<p>For more information on how to detect the user&apos;s Facebook state see the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>, <a href="/docs/reference/javascript/FB.getLoginStatus/" name="https://developers.facebook.com/docs/reference/javascript/FB.getLoginStatus/">FB.getLoginStatus</a> documentation and <a href="https://developers.facebook.com/blog/post/2012/05/08/how-to--improve-the-experience-for-returning-users/" name="https://developers.facebook.com/blog/post/2012/05/08/how-to--improve-the-experience-for-returning-users/">this blog post</a>.</p>
+<p>
+<a name="submitting">
+</a>  </p>
+<h2>Submitting your App for the App Center</h2>
+<p>For an app to be listed in the App Center, your app must meet the <a href="/docs/appcenter/guidelines/" name="https://developers.facebook.com/docs/appcenter/guidelines/">guidelines</a>. Facebook will review images, additional app details, and the user experience. If your app is rejected, we&apos;ll explain why and give you suggestions for what to change. Once you make the changes we suggest, you can resubmit to be listed in App Center.</p>
+<p>Developers can preview their app detail page prior to submission by clicking the &apos;Preview&apos; link at the top of the page. This will display a live preview:</p>
+<p>
+<img src="https://developers.facebook.com/attachment/appcenter_preview_page.jpg" width="700" />
+</p>
+<p>Developers can submit their app by clicking the button at the top of the App Center section. Once submitted a message will be displayed indicating that the submission is pending review. This message will be updated once your app has been approved for App Center.</p>
+<p>Note: Once you have submitted your app detail page, the values cannot be changed until the submission has been approved or you cancel the submission. Once your app detail page is listed in the App Center, all future changes to the page will also be subject to review.</p>
+<p>The submission process is required for an app to be listed in the App Center, but all apps can continue to use the Facebook APIs and grow through Bookmarks, Requests, Timeline and News Feed. Submitting to the App Center is not a requirement, but it&apos;s highly encouraged, as the App Center provides a significant opportunity for new user acquisition.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/guides/appcenter/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1339178659" title="2012年6月8日 11:04">金曜日に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

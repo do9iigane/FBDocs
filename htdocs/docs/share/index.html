@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/share/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/share/">https://developers.facebook.com/docs/share/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Facebook Share</h1>
+</div>
+</div>
+<table bgcolor="#F2F2F2">
+<tr>
+<td>
+<b>The Share button has been deprecated in favor of the <a href="/docs/reference/plugins/like/" name="https://developers.facebook.com/docs/reference/plugins/like/">Like</a> button, and will no longer be supported. <p>Please use the <a href="/docs/reference/plugins/like/" name="https://developers.facebook.com/docs/reference/plugins/like/">Like</a> button whenever possible to drive maximum traffic to your apps.</p>
+</b>
+</td>
+</tr>
+</table>
+<hr />
+<h2>Implementing Facebook Share</h2>
+<p>You can render the Facebook Share button in an anchor (&lt;a&gt;) tag that takes the following attributes:</p>
+<ul>
+<li>name: You must specify fb_share for this attribute.</li>
+<li>type: The type of Share button or link to render, with or without a count included. Specify one of box_count, button_count, button, icon_link, or icon. The box_count and button_count options displays a count of the total number of times the page was shared on Facebook, how many comments were added to the story shared on Facebook, and how many times friends Liked the shared story. If you don&apos;t specify a type, then this attribute defaults to button_count.</li>
+<li>share_url: The URL for the page you want to share. If you don&apos;t specify a share_url, then this attribute defaults to the current page.</li>
+</ul>
+<p>To put a Facebook Share button on your site, copy and paste the following code into the page you want to share:</p>
+<pre>
+<code>&lt;a name=&quot;fb_share&quot;&gt;&lt;/a&gt; 
+&lt;script src=&quot;http://static.ak.fbcdn.net/connect.php/js/FB.Share&quot; 
+        type=&quot;text/javascript&quot;&gt;
+&lt;/script&gt;
+</code>
+</pre>
+<p>Because you didn&apos;t specify the <code>type</code> and <code>share_url</code> attributes, the button defaults to the <code>button_count</code> type and shares the URL of the page where you placed it.</p>
+<p>You need to include the script tag only once, no matter how many Share buttons you put on the same page. Place it after the first anchor tag on the page. If you can&apos;t place it there, you should put it high up on the page to ensure fast loading (in the page head works well).</p>
+<p>
+<strong>Note:</strong> You cannot share pages on the facebook.com domain.</p>
+<h3>WordPress Plugin</h3>
+<p>You can integrate Facebook Share using this <a href="http://wordpress.org/extend/plugins/facebook-share-new/" name="http://wordpress.org/extend/plugins/facebook-share-new/">WordPress plug-in</a>.</p>
+<hr />
+<h2>Styling Your Share Button</h2>
+<p>If you want, you can choose from a variety of styles for your Share button.</p>
+<table style="border:0; border-spacing:0; border-collapse:collapse; margin:auto; margin-top:1.5em; margin-bottom:1.5em">
+<tr>
+<th>Using this code...</th>
+<th>Renders this button...</th>
+<th>Of this size…</th>
+</tr>
+<tr>
+<td>
+<code>&lt;a name=&quot;fb_share&quot; type=&quot;button&quot; share_url=&quot;YOUR_URL&quot;&gt;</code>
+</td>
+<td>
+<img src="http://sphotos.ak.fbcdn.net/hphotos-ak-ash2/hs329.ash2/60892_444262393552_19292868552_5172535_910697_n.jpg" />
+</td>
+<td>56x18 pixels</td>
+</tr>
+<tr>
+<td>
+<code>&lt;a name=&quot;fb_share&quot; type=&quot;icon_link&quot; share_url=&quot;YOUR_URL&quot;&gt;</code>
+</td>
+<td>
+<img src="http://sphotos.ak.fbcdn.net/hphotos-ak-snc4/hs606.snc4/58624_444262413552_19292868552_5172537_7739429_n.jpg" />
+</td>
+<td>51x15 pixels</td>
+</tr>
+<tr>
+<td>
+<code>&lt;a name=&quot;fb_share&quot; type=&quot;icon&quot; share_url=&quot;YOUR_URL&quot;&gt;</code>
+</td>
+<td>
+<img src="http://sphotos.ak.fbcdn.net/hphotos-ak-ash2/hs329.ash2/60927_444262408552_19292868552_5172536_687291_n.jpg" />
+</td>
+<td>18x15 pixels</td>
+</tr>
+</table>
+<hr />
+<h2>Translating Your Share Button</h2>
+<p>If your site is written in another language, you can easily customize the Share button so it appears that language. To do this, simply wrap the text you want to appear within the anchor tags. For example, if your site is written in Spanish, you could specify your Share button like this:</p>
+<pre>
+<code>&lt;a name=&quot;fb_share&quot; type=&quot;icon_link&quot; 
+   share_url=&quot;YOUR_URL&quot;&gt;Compartir en Facebook&lt;/a&gt; 
+&lt;script src=&quot;http://static.ak.fbcdn.net/connect.php/js/FB.Share&quot; 
+        type=&quot;text/javascript&quot;&gt;
+&lt;/script&gt;
+</code>
+</pre>
+<hr />
+<h2>Sharing Rich Media</h2>
+<p>You can share rich media like images, audio, and video from your page. To do this, you need to include meta tags in the &lt;head&gt; element in your HTML code.</p>
+<h3>Configuring Meta Tags for Facebook Share</h3>
+<p>You can enhance how the shared item appears on Facebook by configuring how it gets previewed on a user&apos;s profile and when a user tries to share it. You do this with &lt;meta&gt; tags.</p>
+<p>Facebook Share passes along the URL of your page to our servers, which in turn looks up certain HTML tags within it. Those tags are used to display a preview of the page. In order to provide this preview, we always look for the title of the page, a summary of the main content and an image. If there&apos;s media content on the page, those media files are also important to identify.</p>
+<h3>Basic Tags</h3>
+<p>In order to make sure that the preview is always correctly populated, you should add the tags shown below to the &lt;head&gt; element in your HTML code. If you don&apos;t tag your page, Facebook Share will grab the title of your page as specified in the &lt;title&gt; tag, and will create a summary description from the first text that appears in the body of your page. A list of thumbnails will all be selected from available images on your page.</p>
+<p>You can control the exact title, description, and thumbnail that Facebook Share uses by adding the following meta tags to the &lt;head&gt; element in your page:</p>
+<pre>
+<code>&lt;meta property=&quot;og:title&quot; content=&quot;title&quot; /&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;description&quot; /&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;thumbnail_image&quot; /&gt;
+</code>
+</pre>
+<p>So an example news story could have the following:</p>
+<pre>
+<code>&lt;meta property=&quot;og:title&quot; content=&quot;Smith hails &apos;unique&apos; Wable legacy&quot; /&gt; 
+&lt;meta property=&quot;og:description&quot; content=&quot;John Smith claims beautiful football 
+            is the main legacy of Akhil Wable&apos;s decade at the club. &quot; /&gt; 
+&lt;meta property=&quot;og:image&quot; content=&quot;http://www.onjd.com/design05/images/PH2/WableAFC205.jpg&quot; /&gt;
+</code>
+</pre>
+<p>As shown, <code>og:title</code> contains the preview title, <code>og:description</code> contains the preview summary and <code>og:image</code> contains the preview image. Please make sure that none of the content fields contain any HTML markup because it will be stripped out.</p>
+<p>The title and description tags are the minimum requirements for any preview, so make sure to include these two.</p>
+<p>The <code>og:image</code> is the URL to the image that appears in the Feed story. The thumbnail&apos;s width AND height must be at least 50 pixels, and cannot exceed 130x110 pixels. The ratio of both height divided by width and width divided by height (w/h, h/w) cannot exceed 3.0. For example, an image of 126x39 pixels will not be displayed, as the ratio of width divided by height is greater than 3.0 (126/39 = 3.23). Images will be resized proportionally.</p>
+<h3>Specifying a &quot;medium&quot; Type</h3>
+<p>You may also specify the type of content being shared by using the following tag:</p>
+<pre>
+<code>&lt;meta name=&quot;medium&quot; content=&quot;medium_type&quot; /&gt;
+</code>
+</pre>
+<p>Valid values for medium_type are <code>audio</code>, <code>image</code>, <code>video</code>, <code>news</code>, <code>blog</code>, and <code>mult</code>.</p>
+<h3>Specifying Multimedia Tags</h3>
+<p>By default, Facebook Share assumes that the page being shared is a full page, and a link or URL will be shared in the user&apos;s Feed.</p>
+<p>If you specifically want to share audio or Flash content that renders and plays inline on Facebook, you need to specifically tag your page to identify the Flash content.</p>
+<p>The ideal way for you to connect video and media files to the share link is to make the URL in the link point to a Web page that contains the &lt;meta&gt; tags described above (title, description, image) along with some additional &lt;meta&gt; tags:</p>
+<h4>Audio (required)</h4>
+<pre>
+<code>&lt;meta property=&quot;og:title&quot; content=&quot;page title&quot; /&gt; 
+&lt;meta property=&quot;og:description&quot; content=&quot;audio description&quot; /&gt; 
+&lt;meta property=&quot;og:image&quot; content=&quot;audio image url (eg. album art)&quot; /&gt; 
+&lt;meta property=&quot;og:audio&quot; content=&quot;audio url (.mp3 only)&quot; /&gt; 
+</code>
+</pre>
+<h4>Audio (optional)</h4>
+<pre>
+<code>&lt;meta property=&quot;og:audio:type&quot; content=&quot;Content-Type header field&quot; /&gt;
+&lt;meta property=&quot;og:audio:title&quot; content=&quot;audio title (eg. song name)&quot; /&gt; 
+&lt;meta property=&quot;og:audio:artist&quot; content=&quot;audio artist name&quot; /&gt; 
+&lt;meta property=&quot;og:audio:album&quot; content=&quot;audio album name&quot; /&gt;
+</code>
+</pre>
+<h4>Flash (required)</h4>
+<p>In order to embed Flash content with Facebook Share, you must add a few additional meta tags along with title and description from above:</p>
+<pre>
+<code>&lt;meta property=&quot;og:title&quot; content=&quot;video title&quot; /&gt; 
+&lt;meta property=&quot;og:description&quot; content=&quot;video description&quot; /&gt; 
+&lt;meta property=&quot;og:image&quot; content=&quot;video screenshot image url&quot; /&gt; 
+&lt;meta property=&quot;og:video&quot; content=&quot;video url (.swf only)&quot;/&gt;
+</code>
+</pre>
+<h4>Flash (optional)</h4>
+<pre>
+<code>&lt;meta property=&quot;og:video:height&quot; content=&quot;video height&quot; /&gt; 
+&lt;meta property=&quot;og:video:width&quot; content=&quot;video width&quot; /&gt; 
+&lt;meta property=&quot;og:video:type&quot; content=&quot;application/x-shockwave-flash&quot; /&gt;
+</code>
+</pre>
+<p>
+<strong>Notes</strong>
+</p>
+<ul>
+<li>Facebook supports embedding video in SWF format only.</li>
+</ul>
+<h4>Video Example</h4>
+<p>Here is an example of embedded Flash video:</p>
+<pre>
+<code>&lt;embed src=&quot;http://www.example.com/player.swf&quot; flashvars=&quot;video_id=123456789&quot;
+       width=&quot;300&quot; height=&quot;200&quot; type=&quot;application/x-shockwave-flash&quot; /&gt;
+</code>
+</pre>
+<p>For that video, the appropriate metadata would look like this:</p>
+<pre>
+<code>&lt;meta property=&quot;og:video&quot; content=&quot;http://www.example.com/player.swf?video_id=123456789&quot;/&gt; 
+&lt;meta name=&quot;og:video:height&quot; content=&quot;200&quot; /&gt; 
+&lt;meta name=&quot;og:video:width&quot; content=&quot;300&quot; /&gt;
+&lt;meta name=&quot;og:video:type&quot; content=&quot;application/x-shockwave-flash&quot; /&gt;
+</code>
+</pre>
+<!--  ###  Hiding the Share Action Bar
+
+When someone clicks on your shared item, they are redirected to your page and a small action bar is added above your site. The action bar promotes further sharing so that more people can see your content If you would like to disable this feature, simply add this code to your Web page:
+
+    <script type="text/javascript"> 
+        if (top.location != location) {
+            top.location.href = document.location.href; 
+        }
+    </script>
+ -->
+<hr />
+<h2>Using Facebook Share on a Facebook-enabled Website</h2>
+<p>If you have already implemented the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">Facebook JS SDK</a> on your website, we recommend you migrate to the XFBML version of the <a href="/docs/reference/plugins/like" name="https://developers.facebook.com/docs/reference/plugins/like">Like button</a>.</p>
+<p>Alternatively, you add your own link, which when clicked, invokes <code>stream.publish</code> or <code>stream.share</code> from the <a href="/docs/reference/javascript/FB.ui" name="https://developers.facebook.com/docs/reference/javascript/FB.ui">FB.ui()</a> method of the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">Facebook JS SDK</a>.</p>
+<p>We no longer support the XFBML version of the Share button.</p>
+<hr />
+<h2>Creating Your Own Share URL</h2>
+<p>However you implement Facebook Share, it always uses the following URL format to display the preview to the user.</p>
+<pre>
+<code>https://www.facebook.com/sharer.php?u=&lt;url to share&gt;&amp;t=&lt;title of content&gt;
+</code>
+</pre>
+<p>Feel free to create your own implementation based on this. Make sure you URL encode the u and t parameters -- use the JavaScript function &quot;encodeURIComponent(). For example:</p>
+<pre>
+<code>https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.sadtrombone.com%2F&amp;t=Sad%20Trombone
+</code>
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/share/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1316587138" title="2011年9月20日 23:38">約9ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

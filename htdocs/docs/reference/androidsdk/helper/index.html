@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/androidsdk/helper/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/androidsdk/helper/">https://developers.facebook.com/docs/reference/androidsdk/helper/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</li>
+<li>
+<a href="/docs/reference/php" name="https://developers.facebook.com/docs/reference/php">PHP SDK</a>
+</li>
+<li>
+<a href="/docs/reference/iossdk" name="https://developers.facebook.com/docs/reference/iossdk">iOS SDK</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/androidsdk" name="https://developers.facebook.com/docs/reference/androidsdk">Android SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/request/" name="http://developers.facebook.com/docs/reference/androidsdk/request/">API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/" name="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/">Async API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/authentication/" name="http://developers.facebook.com/docs/reference/androidsdk/authentication/">Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialog/" name="http://developers.facebook.com/docs/reference/androidsdk/dialog/">Dialogs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/helper/" name="http://developers.facebook.com/docs/reference/androidsdk/helper/">Helpers</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Interfaces</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/" name="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/">DialogListener</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/" name="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/">RequestListener</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Errors</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/" name="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/">DialogError</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/" name="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/">FacebookError</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Helpers</h1>
+<div class="breadcrumbs">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/androidsdk/" name="https://developers.facebook.com/docs/reference/androidsdk/">Android SDK</a> › <a href="/docs/reference/androidsdk/helper/" name="https://developers.facebook.com/docs/reference/androidsdk/helper/">Helpers</a>
+</div>
+</div>
+</div>
+<p>The helper methods to help with the Facebook integrations. These are defined in <a href="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/Facebook.java" name="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/Facebook.java">Facebook.java</a>
+</p>
+<hr />
+<h2>Helper Methods</h2>
+<hr />
+<h2>long getAccessExpires()</h2>
+<p>Retrieve the current session&apos;s expiration time (in milliseconds since Unix epoch), or 0 if the session doesn&apos;t expire or doesn&apos;t exist.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>None</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>long - Session expiration time</p>
+<hr />
+<h2>String getAccessToken()</h2>
+<p>Retrieve the OAuth 2.0 access token for API access. Returns null if no session exists.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>None</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>String - Access token</p>
+<hr />
+<h2>String getAppId()</h2>
+<p>Retrieve the app ID used to initialize the &apos;Facebook&apos; object</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>None</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>String - App ID</p>
+<hr />
+<h2>boolean isSessionValid()</h2>
+<p>Whether this &apos;Facebook&apos; object has an non-expired session token</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>None</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>boolean - true if valid session, else false.</p>
+<hr />
+<h2>void setAccessExpires(long time)</h2>
+<p>Set the current session&apos;s expiration time (in milliseconds since Unix epoch).</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>time</code> - timestamp in milliseconds</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None</p>
+<hr />
+<h2>void setAccessExpiresIn(String expiresIn)</h2>
+<p>Set the current session&apos;s duration (in seconds since Unix epoch), do nothing if <code>null</code> or &quot;0&quot;.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>expiresIn</code> - duration in seconds</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None</p>
+<hr />
+<h2>void setAccessToken(String token)</h2>
+<p>Set the OAuth 2.0 access token for API access.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>token</code> - Access token</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None</p>
+<hr />
+<h2>void setAppId(String appId)</h2>
+<p>Set the app id for this &apos;Facebook&apos; object. This should be used carefully as this results in conflict between the app id and the current access token associated with the &apos;Facebook&apos; object.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>appId</code> - App id</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>None</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/androidsdk/helper/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1316384383" title="2011年9月18日 15:19">約9ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

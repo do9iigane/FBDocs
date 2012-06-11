@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/dialogs/send/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/dialogs/send/">https://developers.facebook.com/docs/reference/dialogs/send/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a class="selected" href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Dialogs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/add_to_page/" name="http://developers.facebook.com/docs/reference/dialogs/add_to_page/">Add Page Tab Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/feed/" name="http://developers.facebook.com/docs/reference/dialogs/feed/">Feed Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/friends/" name="http://developers.facebook.com/docs/reference/dialogs/friends/">Friends Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/oauth/" name="http://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/pay/" name="http://developers.facebook.com/docs/reference/dialogs/pay/">Pay Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/requests/" name="http://developers.facebook.com/docs/reference/dialogs/requests/">Requests Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/send/" name="http://developers.facebook.com/docs/reference/dialogs/send/">Send Dialog</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Send Dialog</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a> › <a href="/docs/reference/dialogs/send/" name="https://developers.facebook.com/docs/reference/dialogs/send/">Send Dialog</a>
+</div>
+</div>
+</div>
+<h2>Overview</h2>
+<p>The Send Dialog lets people to send content to specific friends. They’ll have the option to privately share a link as a Facebook message, Group post or email.</p>
+<p>You should specify a URL, and you can pre-populate a user in the ‘to’ field. The Send Dialog does not require any extended permissions. This Dialog is currently not supported on mobile devices.</p>
+<p>Note: Facebook messages is a channel for user-to-user communication, and not for applications to send messages to their users, or encourage users to spam their friends. In general, applications on Facebook should use Requests when communicating in game status (its your turn), inviting people to use an application, or sending messages to multiple people. You should offer the Send Dialog in situations when a user might otherwise send an email.</p>
+<h2>JavaScript Example</h2>
+<p>You can load the same Send Dialog URL using the Facebook JavaScript SDK:</p>
+<pre>
+&lt;html xmlns:fb=&quot;https://www.facebook.com/2008/fbml&quot;&gt;
+  &lt;body&gt;
+    &lt;script src=&quot;http://connect.facebook.net/en_US/all.js&quot;&gt;&lt;/script&gt;
+    &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+    &lt;script&gt;
+      // assume we are already logged in
+      FB.init({appId: &apos;123050457758183&apos;, xfbml: true, cookie: true});
+
+      FB.ui({
+          method: &apos;send&apos;,
+          name: &apos;People Argue Just to Win&apos;,
+          link: &apos;http://www.nytimes.com/2011/06/15/arts/people-argue-just-to-win-scholars-assert.html&apos;,
+          });
+     &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre></div>
+
+</body>
+</html>

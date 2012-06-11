@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/fbml/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/fbml/">https://developers.facebook.com/docs/reference/fbml/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Tools</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/board/" name="http://developers.facebook.com/docs/reference/fbml/board/">fb:board</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/bookmark/" name="http://developers.facebook.com/docs/reference/fbml/bookmark/">fb:bookmark</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/chat-invite/" name="http://developers.facebook.com/docs/reference/fbml/chat-invite/">fb:chat-invite</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/comments/" name="http://developers.facebook.com/docs/reference/fbml/comments/">fb:comments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/default/" name="http://developers.facebook.com/docs/reference/fbml/default/">fb:default</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/else/" name="http://developers.facebook.com/docs/reference/fbml/else/">fb:else</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/feed/" name="http://developers.facebook.com/docs/reference/fbml/feed/">fb:feed</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/friend-selector/" name="http://developers.facebook.com/docs/reference/fbml/friend-selector/">fb:friend-selector</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/google-analytics/" name="http://developers.facebook.com/docs/reference/fbml/google-analytics/">fb:google-analytics</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if/" name="http://developers.facebook.com/docs/reference/fbml/if/">fb:if</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-multiple-actors/" name="http://developers.facebook.com/docs/reference/fbml/if-multiple-actors/">fb:if-multiple-actors</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/multi-friend-input/" name="http://developers.facebook.com/docs/reference/fbml/multi-friend-input/">fb:multi-friend-input</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/quantcast/" name="http://developers.facebook.com/docs/reference/fbml/quantcast/">fb:quantcast</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/random/" name="http://developers.facebook.com/docs/reference/fbml/random/">fb:random</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/random-option/" name="http://developers.facebook.com/docs/reference/fbml/random-option/">fb:random-option</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/switch/" name="http://developers.facebook.com/docs/reference/fbml/switch/">fb:switch</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/typeahead-input/" name="http://developers.facebook.com/docs/reference/fbml/typeahead-input/">fb:typeahead-input</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/typeahead-option/" name="http://developers.facebook.com/docs/reference/fbml/typeahead-option/">fb:typeahead-option</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/user-agent/" name="http://developers.facebook.com/docs/reference/fbml/user-agent/">fb:user-agent</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>User/Groups</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/eventlink/" name="http://developers.facebook.com/docs/reference/fbml/eventlink/">fb:eventlink</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/grouplink/" name="http://developers.facebook.com/docs/reference/fbml/grouplink/">fb:grouplink</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-can-see/" name="http://developers.facebook.com/docs/reference/fbml/if-can-see/">fb:if-can-see</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-can-see-photo/" name="http://developers.facebook.com/docs/reference/fbml/if-can-see-photo/">fb:if-can-see-photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-app-user/" name="http://developers.facebook.com/docs/reference/fbml/if-is-app-user/">fb:if-is-app-user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-friends-with-viewer/" name="http://developers.facebook.com/docs/reference/fbml/if-is-friends-with-viewer/">fb:if-is-friends-with-viewer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-group-member/" name="http://developers.facebook.com/docs/reference/fbml/if-is-group-member/">fb:if-is-group-member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-user/" name="http://developers.facebook.com/docs/reference/fbml/if-is-user/">fb:if-is-user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-verified/" name="http://developers.facebook.com/docs/reference/fbml/if-is-verified/">fb:if-is-verified</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/name/" name="http://developers.facebook.com/docs/reference/fbml/name/">fb:name</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/profile-pic/" name="http://developers.facebook.com/docs/reference/fbml/profile-pic/">fb:profile-pic</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/pronoun/" name="http://developers.facebook.com/docs/reference/fbml/pronoun/">fb:pronoun</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/user/" name="http://developers.facebook.com/docs/reference/fbml/user/">fb:user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/user-status/" name="http://developers.facebook.com/docs/reference/fbml/user-status/">fb:user-status</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Notifications and Requests</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/application-name/" name="http://developers.facebook.com/docs/reference/fbml/application-name/">fb:application-name</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/multi-friend-selector/" name="http://developers.facebook.com/docs/reference/fbml/multi-friend-selector/">fb:multi-friend-selector</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/multi-friend-selector_(condensed)/" name="http://developers.facebook.com/docs/reference/fbml/multi-friend-selector_(condensed)/">fb:multi-friend-selector_(condensed)</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/req-choice/" name="http://developers.facebook.com/docs/reference/fbml/req-choice/">fb:req-choice</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/request-form/" name="http://developers.facebook.com/docs/reference/fbml/request-form/">fb:request-form</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/request-form-submit/" name="http://developers.facebook.com/docs/reference/fbml/request-form-submit/">fb:request-form-submit</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Platform Internationalization</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/date/" name="http://developers.facebook.com/docs/reference/fbml/date/">fb:date</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/fbml-attribute/" name="http://developers.facebook.com/docs/reference/fbml/fbml-attribute/">fb:fbml-attribute</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/intl/" name="http://developers.facebook.com/docs/reference/fbml/intl/">fb:intl</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/intl-token/" name="http://developers.facebook.com/docs/reference/fbml/intl-token/">fb:intl-token</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/tag/" name="http://developers.facebook.com/docs/reference/fbml/tag/">fb:tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/tag-attribute/" name="http://developers.facebook.com/docs/reference/fbml/tag-attribute/">fb:tag-attribute</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/tag-body/" name="http://developers.facebook.com/docs/reference/fbml/tag-body/">fb:tag-body</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/window-title/" name="http://developers.facebook.com/docs/reference/fbml/window-title/">fb:window-title</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Deprecated</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-own-profile/" name="http://developers.facebook.com/docs/reference/fbml/if-is-own-profile/">fb:if-is-own-profile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-user-has-added-app/" name="http://developers.facebook.com/docs/reference/fbml/if-user-has-added-app/">fb:if-user-has-added-app</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/networklink/" name="http://developers.facebook.com/docs/reference/fbml/networklink/">fb:networklink</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/notif-email/" name="http://developers.facebook.com/docs/reference/fbml/notif-email/">fb:notif-email</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/notif-page/" name="http://developers.facebook.com/docs/reference/fbml/notif-page/">fb:notif-page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/notif-subject/" name="http://developers.facebook.com/docs/reference/fbml/notif-subject/">fb:notif-subject</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/profile-action/" name="http://developers.facebook.com/docs/reference/fbml/profile-action/">fb:profile-action</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/rock-the-vote/" name="http://developers.facebook.com/docs/reference/fbml/rock-the-vote/">fb:rock-the-vote</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/userlink/" name="http://developers.facebook.com/docs/reference/fbml/userlink/">fb:userlink</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-added-app-users/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-added-app-users/">fb:visible-to-added-app-users</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-user/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-user/">fb:visible-to-user</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Status Messages</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/error/" name="http://developers.facebook.com/docs/reference/fbml/error/">fb:error</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/explanation/" name="http://developers.facebook.com/docs/reference/fbml/explanation/">fb:explanation</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/message/" name="http://developers.facebook.com/docs/reference/fbml/message/">fb:message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/success/" name="http://developers.facebook.com/docs/reference/fbml/success/">fb:success</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Page Navigation</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/create-button/" name="http://developers.facebook.com/docs/reference/fbml/create-button/">fb:create-button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/dashboard/" name="http://developers.facebook.com/docs/reference/fbml/dashboard/">fb:dashboard</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/header/" name="http://developers.facebook.com/docs/reference/fbml/header/">fb:header</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/header-title/" name="http://developers.facebook.com/docs/reference/fbml/header-title/">fb:header-title</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/help/" name="http://developers.facebook.com/docs/reference/fbml/help/">fb:help</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/mediaheader/" name="http://developers.facebook.com/docs/reference/fbml/mediaheader/">fb:mediaheader</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/owner-action/" name="http://developers.facebook.com/docs/reference/fbml/owner-action/">fb:owner-action</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/tab-item/" name="http://developers.facebook.com/docs/reference/fbml/tab-item/">fb:tab-item</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/tabs/" name="http://developers.facebook.com/docs/reference/fbml/tabs/">fb:tabs</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Wall</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/wall/" name="http://developers.facebook.com/docs/reference/fbml/wall/">fb:wall</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/wallpost/" name="http://developers.facebook.com/docs/reference/fbml/wallpost/">fb:wallpost</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/wallpost-action/" name="http://developers.facebook.com/docs/reference/fbml/wallpost-action/">fb:wallpost-action</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Visibility on Profile</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/18-plus/" name="http://developers.facebook.com/docs/reference/fbml/18-plus/">fb:18-plus</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/21-plus/" name="http://developers.facebook.com/docs/reference/fbml/21-plus/">fb:21-plus</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/restricted-to/" name="http://developers.facebook.com/docs/reference/fbml/restricted-to/">fb:restricted-to</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-app-users/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-app-users/">fb:visible-to-app-users</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-connection/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-connection/">fb:visible-to-connection</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-friends/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-friends/">fb:visible-to-friends</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-owner/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-owner/">fb:visible-to-owner</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Profile-specific</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/action/" name="http://developers.facebook.com/docs/reference/fbml/action/">fb:action</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/add-section-button/" name="http://developers.facebook.com/docs/reference/fbml/add-section-button/">fb:add-section-button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-section-not-added/" name="http://developers.facebook.com/docs/reference/fbml/if-section-not-added/">fb:if-section-not-added</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/narrow/" name="http://developers.facebook.com/docs/reference/fbml/narrow/">fb:narrow</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/publisher-link/" name="http://developers.facebook.com/docs/reference/fbml/publisher-link/">fb:publisher-link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/subtitle/" name="http://developers.facebook.com/docs/reference/fbml/subtitle/">fb:subtitle</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/user-item/" name="http://developers.facebook.com/docs/reference/fbml/user-item/">fb:user-item</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/user-table/" name="http://developers.facebook.com/docs/reference/fbml/user-table/">fb:user-table</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/wide/" name="http://developers.facebook.com/docs/reference/fbml/wide/">fb:wide</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Misc</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/add-profile-tab/" name="http://developers.facebook.com/docs/reference/fbml/add-profile-tab/">fb:add-profile-tab</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/fbml/" name="http://developers.facebook.com/docs/reference/fbml/fbml/">fb:fbml</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/fbmlversion/" name="http://developers.facebook.com/docs/reference/fbml/fbmlversion/">fb:fbmlversion</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/js-string/" name="http://developers.facebook.com/docs/reference/fbml/js-string/">fb:js-string</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/page-admin-edit-header/" name="http://developers.facebook.com/docs/reference/fbml/page-admin-edit-header/">fb:page-admin-edit-header</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/redirect/" name="http://developers.facebook.com/docs/reference/fbml/redirect/">fb:redirect</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/ref/" name="http://developers.facebook.com/docs/reference/fbml/ref/">fb:ref</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/serverFbml/" name="http://developers.facebook.com/docs/reference/fbml/serverFbml/">fb:serverFbml</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/time/" name="http://developers.facebook.com/docs/reference/fbml/time/">fb:time</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/title/" name="http://developers.facebook.com/docs/reference/fbml/title/">fb:title</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Editor Display</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor/" name="http://developers.facebook.com/docs/reference/fbml/editor/">fb:editor</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-button/" name="http://developers.facebook.com/docs/reference/fbml/editor-button/">fb:editor-button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-buttonset/" name="http://developers.facebook.com/docs/reference/fbml/editor-buttonset/">fb:editor-buttonset</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-cancel/" name="http://developers.facebook.com/docs/reference/fbml/editor-cancel/">fb:editor-cancel</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-custom/" name="http://developers.facebook.com/docs/reference/fbml/editor-custom/">fb:editor-custom</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-date/" name="http://developers.facebook.com/docs/reference/fbml/editor-date/">fb:editor-date</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-divider/" name="http://developers.facebook.com/docs/reference/fbml/editor-divider/">fb:editor-divider</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-month/" name="http://developers.facebook.com/docs/reference/fbml/editor-month/">fb:editor-month</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-text/" name="http://developers.facebook.com/docs/reference/fbml/editor-text/">fb:editor-text</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-textarea/" name="http://developers.facebook.com/docs/reference/fbml/editor-textarea/">fb:editor-textarea</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-time/" name="http://developers.facebook.com/docs/reference/fbml/editor-time/">fb:editor-time</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Embedded Media</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/flv/" name="http://developers.facebook.com/docs/reference/fbml/flv/">fb:flv</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/iframe/" name="http://developers.facebook.com/docs/reference/fbml/iframe/">fb:iframe</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/mp3/" name="http://developers.facebook.com/docs/reference/fbml/mp3/">fb:mp3</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/photo/" name="http://developers.facebook.com/docs/reference/fbml/photo/">fb:photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/silverlight/" name="http://developers.facebook.com/docs/reference/fbml/silverlight/">fb:silverlight</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/swf/" name="http://developers.facebook.com/docs/reference/fbml/swf/">fb:swf</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Dialog</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/dialog/" name="http://developers.facebook.com/docs/reference/fbml/dialog/">fb:dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/dialog-button/" name="http://developers.facebook.com/docs/reference/fbml/dialog-button/">fb:dialog-button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/dialog-content/" name="http://developers.facebook.com/docs/reference/fbml/dialog-content/">fb:dialog-content</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/dialog-title/" name="http://developers.facebook.com/docs/reference/fbml/dialog-title/">fb:dialog-title</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Additional Permissions</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/prompt-permission/" name="http://developers.facebook.com/docs/reference/fbml/prompt-permission/">fb:prompt-permission</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Social Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/comments_(XFBML)/" name="http://developers.facebook.com/docs/reference/fbml/comments_(XFBML)/">fb:comments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/live-stream/" name="http://developers.facebook.com/docs/reference/fbml/live-stream/">fb:live-stream</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Message Attachments</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/attachment-preview/" name="http://developers.facebook.com/docs/reference/fbml/attachment-preview/">fb:attachment-preview</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Forms</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/captcha/" name="http://developers.facebook.com/docs/reference/fbml/captcha/">fb:captcha</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/submit/" name="http://developers.facebook.com/docs/reference/fbml/submit/">fb:submit</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/javascript/" name="http://developers.facebook.com/docs/reference/fbml/javascript/">JavaScript SDK</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Facebook Markup Language (FBML)</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Facebook Markup Language (FBML)</a>
+</div>
+</div>
+</div>
+<div class="yellowBox thickLeftBorder">
+<b>FBML has been deprecated.</b> FBML will stop working on June 6th, 2012 and will be completely removed July 5th, 2012. For more information on the removal, please see the <a href="https://developers.facebook.com/roadmap" name="https://developers.facebook.com/roadmap">Developer Roadmap</a>. If you are building a new application on Facebook.com, please implement your application using HTML, JavaScript and CSS. You can use our <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a> and <a href="/plugins" name="https://developers.facebook.com/plugins">Social Plugins</a> to embedded many of the same social features which were available in FBML. </div>
+<p>FBML enables you to build Facebook applications that deeply integrate into a user&apos;s Facebook experience. To use JavaScript within FBML, use <a href="/docs/fbjs" name="https://developers.facebook.com/docs/fbjs">FBJS</a>.</p>
+<ul>
+<li>
+<a href="#tools" name="https://developers.facebook.com/docs/#tools">Tools</a>
+</li>
+<li>
+<a href="#user/groups" name="https://developers.facebook.com/docs/#user/groups">User/Groups</a>
+</li>
+<li>
+<a href="#notifications-and-requests" name="https://developers.facebook.com/docs/#notifications-and-requests">Notifications and Requests</a>
+</li>
+<li>
+<a href="#platform-internationalization" name="https://developers.facebook.com/docs/#platform-internationalization">Platform Internationalization</a>
+</li>
+<li>
+<a href="#deprecated" name="https://developers.facebook.com/docs/#deprecated">Deprecated</a>
+</li>
+<li>
+<a href="#status-messages" name="https://developers.facebook.com/docs/#status-messages">Status Messages</a>
+</li>
+<li>
+<a href="#page-navigation" name="https://developers.facebook.com/docs/#page-navigation">Page Navigation</a>
+</li>
+<li>
+<a href="#wall" name="https://developers.facebook.com/docs/#wall">Wall</a>
+</li>
+<li>
+<a href="#visibility-on-profile" name="https://developers.facebook.com/docs/#visibility-on-profile">Visibility on Profile</a>
+</li>
+<li>
+<a href="#profile-specific" name="https://developers.facebook.com/docs/#profile-specific">Profile-specific</a>
+</li>
+<li>
+<a href="#misc" name="https://developers.facebook.com/docs/#misc">Misc</a>
+</li>
+<li>
+<a href="#editor-display" name="https://developers.facebook.com/docs/#editor-display">Editor Display</a>
+</li>
+<li>
+<a href="#embedded-media" name="https://developers.facebook.com/docs/#embedded-media">Embedded Media</a>
+</li>
+<li>
+<a href="#dialog" name="https://developers.facebook.com/docs/#dialog">Dialog</a>
+</li>
+<li>
+<a href="#additional-permissions" name="https://developers.facebook.com/docs/#additional-permissions">Additional Permissions</a>
+</li>
+<li>
+<a href="#social-widgets" name="https://developers.facebook.com/docs/#social-widgets">Social Plugins</a>
+</li>
+<li>
+<a href="#message-attachments" name="https://developers.facebook.com/docs/#message-attachments">Message Attachments</a>
+</li>
+<li>
+<a href="#forms" name="https://developers.facebook.com/docs/#forms">Forms</a>
+</li>
+<li>
+<a href="#reference" name="https://developers.facebook.com/docs/#reference">Reference</a>
+</li>
+</ul>
+<hr />
+<h2 id="tools">Tools</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/board/" name="http://developers.facebook.com/docs/reference/fbml/board/">fb:board</a>
+</div>
+<div class="snippet">
+<p>Displays a discussion board with a unique identifier.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/bookmark/" name="http://developers.facebook.com/docs/reference/fbml/bookmark/">fb:bookmark</a>
+</div>
+<div class="snippet">
+<p>Renders a button that lets a user bookmark your application so a link to your application appears on the user&apos;s profile.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/chat-invite/" name="http://developers.facebook.com/docs/reference/fbml/chat-invite/">fb:chat-invite</a>
+</div>
+<div class="snippet">
+<p>Enables your users to initiate Facebook Chat with their friends from within your applications.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/comments/" name="http://developers.facebook.com/docs/reference/fbml/comments/">fb:comments</a>
+</div>
+<div class="snippet">
+<p>Displays a set of comments for a unique identifier.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/default/" name="http://developers.facebook.com/docs/reference/fbml/default/">fb:default</a>
+</div>
+<div class="snippet">
+<p>For a group of fb: tags contained within an fb:switch tag, the fb:default tag renders any content inside itself if no other fb: tag inside the fb:switch tag renders code before it.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/else/" name="http://developers.facebook.com/docs/reference/fbml/else/">fb:else</a>
+</div>
+<div class="snippet">
+<p>Handles the else case inside any <code>fb:if</code>, <code>fb:if-*</code> or <code>fb:is-in-network</code> tag, and with age and location restricting tags.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/feed/" name="http://developers.facebook.com/docs/reference/fbml/feed/">fb:feed</a>
+</div>
+<div class="snippet">
+<p>Renders an application-specific News Feed, which displays recent application stories about the logged in user&apos;s friends.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/friend-selector/" name="http://developers.facebook.com/docs/reference/fbml/friend-selector/">fb:friend-selector</a>
+</div>
+<div class="snippet">
+<p>Renders a predictive friend selector input for a given person.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/google-analytics/" name="http://developers.facebook.com/docs/reference/fbml/google-analytics/">fb:google-analytics</a>
+</div>
+<div class="snippet">
+<p>Inserts appropriate Google Analytics code into a canvas page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/if/" name="http://developers.facebook.com/docs/reference/fbml/if/">fb:if</a>
+</div>
+<div class="snippet">
+<p>Only renders the content inside the tag if <code>value</code> tag is set to true.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/if-multiple-actors/" name="http://developers.facebook.com/docs/reference/fbml/if-multiple-actors/">fb:if-multiple-actors</a>
+</div>
+<div class="snippet">
+<p>Displays the enclosed content when more than one actor is involved in a <a href="feed" name="https://developers.facebook.com/docs/feed">
+<code>Feed</code>
+</a> story.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/multi-friend-input/" name="http://developers.facebook.com/docs/reference/fbml/multi-friend-input/">fb:multi-friend-input</a>
+</div>
+<div class="snippet">
+<p>Renders a multi-friend form entry field like the one used in the message composer.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/quantcast/" name="http://developers.facebook.com/docs/reference/fbml/quantcast/">fb:quantcast</a>
+</div>
+<div class="snippet">
+<p>Inserts appropriate Quantcast code into a canvas page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/random/" name="http://developers.facebook.com/docs/reference/fbml/random/">fb:random</a>
+</div>
+<div class="snippet">
+<p>Randomly chooses an item inside the tags based on the weights provided.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/random-option/" name="http://developers.facebook.com/docs/reference/fbml/random-option/">fb:random-option</a>
+</div>
+<div class="snippet">
+<p>Contains code to be output when selected by the fb:random tag.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/switch/" name="http://developers.facebook.com/docs/reference/fbml/switch/">fb:switch</a>
+</div>
+<div class="snippet">
+<p>Evaluates every fb: tag inside and returns the first one that evaluates to anything other than an empty string.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/typeahead-input/" name="http://developers.facebook.com/docs/reference/fbml/typeahead-input/">fb:typeahead-input</a>
+</div>
+<div class="snippet">
+<p>Creates a type-ahead tool (as suggested) that will give you the results that you specify.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/typeahead-option/" name="http://developers.facebook.com/docs/reference/fbml/typeahead-option/">fb:typeahead-option</a>
+</div>
+<div class="snippet">
+<p>This tag specifies the values for a typeahead form input.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/user-agent/" name="http://developers.facebook.com/docs/reference/fbml/user-agent/">fb:user-agent</a>
+</div>
+<div class="snippet">
+<p>Displays the contents wrapped inside the tag to the specified user-agents.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="user/groups">User/Groups</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/eventlink/" name="http://developers.facebook.com/docs/reference/fbml/eventlink/">fb:eventlink</a>
+</div>
+<div class="snippet">
+<p>Prints the specified event name and formats it as a link to the event&apos;s page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/grouplink/" name="http://developers.facebook.com/docs/reference/fbml/grouplink/">fb:grouplink</a>
+</div>
+<div class="snippet">
+<p>Prints the specified group name and formats it as a link to the group&apos;s page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/if-can-see/" name="http://developers.facebook.com/docs/reference/fbml/if-can-see/">fb:if-can-see</a>
+</div>
+<div class="snippet">
+<p>Displays the enclosed content if the logged in user can see the specified <code>what</code> attribute of the specified user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/if-can-see-photo/" name="http://developers.facebook.com/docs/reference/fbml/if-can-see-photo/">fb:if-can-see-photo</a>
+</div>
+<div class="snippet">
+<p>Displays the enclosed content only if the logged in user can see the photo specified.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-app-user/" name="http://developers.facebook.com/docs/reference/fbml/if-is-app-user/">fb:if-is-app-user</a>
+</div>
+<div class="snippet">
+<p>Displays the enclosed content only if the specified user has accepted the terms of service of the application (that is, authorized your application).</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-friends-with-viewer/" name="http://developers.facebook.com/docs/reference/fbml/if-is-friends-with-viewer/">fb:if-is-friends-with-viewer</a>
+</div>
+<div class="snippet">
+<p>Displays the enclosed content only if the specified user is friends with the logged in user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-group-member/" name="http://developers.facebook.com/docs/reference/fbml/if-is-group-member/">fb:if-is-group-member</a>
+</div>
+<div class="snippet">
+<p>Displays the enclosed content only if the specified user is a member of the specified group.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-user/" name="http://developers.facebook.com/docs/reference/fbml/if-is-user/">fb:if-is-user</a>
+</div>
+<div class="snippet">
+<p>Only renders the content inside the tag if the viewer is one of the specified user(s).</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-verified/" name="http://developers.facebook.com/docs/reference/fbml/if-is-verified/">fb:if-is-verified</a>
+</div>
+<div class="snippet">
+<p>Displays the enclosed content only if Facebook has verified the current user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/name/" name="http://developers.facebook.com/docs/reference/fbml/name/">fb:name</a>
+</div>
+<div class="snippet">
+<p>Renders the name of the user specified, optionally linked to his or her profile.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/profile-pic/" name="http://developers.facebook.com/docs/reference/fbml/profile-pic/">fb:profile-pic</a>
+</div>
+<div class="snippet">
+<p>Turns into an <code>img</code> tag for the specified user&apos;s or Facebook Page&apos;s profile picture.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/pronoun/" name="http://developers.facebook.com/docs/reference/fbml/pronoun/">fb:pronoun</a>
+</div>
+<div class="snippet">
+<p>Renders a pronoun for a specific user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/user/" name="http://developers.facebook.com/docs/reference/fbml/user/">fb:user</a>
+</div>
+<div class="snippet">
+<p>Hides the content enclosed in this tag from any user who is blocked by the user whose <code>uid</code> is referenced in fb:user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/user-status/" name="http://developers.facebook.com/docs/reference/fbml/user-status/">fb:user-status</a>
+</div>
+<div class="snippet">
+<p>Returns the status of the user specified by <code>uid</code>.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="notifications-and-requests">Notifications and Requests</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/application-name/" name="http://developers.facebook.com/docs/reference/fbml/application-name/">fb:application-name</a>
+</div>
+<div class="snippet">
+<p>Renders the application name.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/multi-friend-selector/" name="http://developers.facebook.com/docs/reference/fbml/multi-friend-selector/">fb:multi-friend-selector</a>
+</div>
+<div class="snippet">
+<p>There are actually two versions of this button - the full version and the condensed version.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/multi-friend-selector_(condensed)/" name="http://developers.facebook.com/docs/reference/fbml/multi-friend-selector_(condensed)/">fb:multi-friend-selector_(condensed)</a>
+</div>
+<div class="snippet">
+<p>There are actually two versions of this button - the full version and the condensed version.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/req-choice/" name="http://developers.facebook.com/docs/reference/fbml/req-choice/">fb:req-choice</a>
+</div>
+<div class="snippet">
+<p>Specifies a button to be shown at the bottom of a request on the user&apos;s <a href="http://www.facebook.com/reqs.php" name="http://www.facebook.com/reqs.php">requests page</a>.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/request-form/" name="http://developers.facebook.com/docs/reference/fbml/request-form/">fb:request-form</a>
+</div>
+<div class="snippet">
+<p>Creates a form that sends requests to the selected users.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/request-form-submit/" name="http://developers.facebook.com/docs/reference/fbml/request-form-submit/">fb:request-form-submit</a>
+</div>
+<div class="snippet">
+<p>Creates a button that submits an fb:request-form.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="platform-internationalization">Platform Internationalization</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/date/" name="http://developers.facebook.com/docs/reference/fbml/date/">fb:date</a>
+</div>
+<div class="snippet">
+<p>Renders a date.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/fbml-attribute/" name="http://developers.facebook.com/docs/reference/fbml/fbml-attribute/">fb:fbml-attribute</a>
+</div>
+<div class="snippet">
+<p>Contains the value of an attribute of an <a href="fbml" name="https://developers.facebook.com/docs/fbml">
+<code>FBML</code>
+</a> tag.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/intl/" name="http://developers.facebook.com/docs/reference/fbml/intl/">fb:intl</a>
+</div>
+<div class="snippet">
+<p>Marks a string of English text as translatable into other languages.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/intl-token/" name="http://developers.facebook.com/docs/reference/fbml/intl-token/">fb:intl-token</a>
+</div>
+<div class="snippet">
+<p>Contains an attribute that replaces a token (variable) in the text of an fb:intl tag.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/tag/" name="http://developers.facebook.com/docs/reference/fbml/tag/">fb:tag</a>
+</div>
+<div class="snippet">
+<p>Renders an HTML tag.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/tag-attribute/" name="http://developers.facebook.com/docs/reference/fbml/tag-attribute/">fb:tag-attribute</a>
+</div>
+<div class="snippet">
+<p>Contains the value of an attribute of an HTML tag specified by fb:tag.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/tag-body/" name="http://developers.facebook.com/docs/reference/fbml/tag-body/">fb:tag-body</a>
+</div>
+<div class="snippet">
+<p>Contains the body (contents) of an HTML tag specified by fb:tag.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/window-title/" name="http://developers.facebook.com/docs/reference/fbml/window-title/">fb:window-title</a>
+</div>
+<div class="snippet">
+<p>Sets the title of the browser window to the content within the tag.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="deprecated">Deprecated</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-own-profile/" name="http://developers.facebook.com/docs/reference/fbml/if-is-own-profile/">fb:if-is-own-profile</a>
+</div>
+<div class="snippet">
+<p>This tag is <strong>deprecated</strong>, since if- tags are no longer allowed on profile pages.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/if-user-has-added-app/" name="http://developers.facebook.com/docs/reference/fbml/if-user-has-added-app/">fb:if-user-has-added-app</a>
+</div>
+<div class="snippet">
+<p>Displays the enclosed content only if the specified user has added the application to their account.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/networklink/" name="http://developers.facebook.com/docs/reference/fbml/networklink/">fb:networklink</a>
+</div>
+<div class="snippet">
+<p>Prints the specified network name.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/notif-email/" name="http://developers.facebook.com/docs/reference/fbml/notif-email/">fb:notif-email</a>
+</div>
+<div class="snippet">
+<p>Specifies content of the email body for a notification sent with the notifications.send call.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/notif-page/" name="http://developers.facebook.com/docs/reference/fbml/notif-page/">fb:notif-page</a>
+</div>
+<div class="snippet">
+<p>Specifies content of a notification that appears on a user&apos;s <a href="http://www.facebook.com/notifications.php" name="http://www.facebook.com/notifications.php">Notifications page</a>.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/notif-subject/" name="http://developers.facebook.com/docs/reference/fbml/notif-subject/">fb:notif-subject</a>
+</div>
+<div class="snippet">
+<p>Specifies the content of the email subject line for a notification sent with the notifications.send call.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/profile-action/" name="http://developers.facebook.com/docs/reference/fbml/profile-action/">fb:profile-action</a>
+</div>
+<div class="snippet">
+<p>Renders a link on the user&apos;s profile under their photo (such as &quot;View More photos of..&quot;).</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/rock-the-vote/" name="http://developers.facebook.com/docs/reference/fbml/rock-the-vote/">fb:rock-the-vote</a>
+</div>
+<div class="snippet">
+<p>Displays a Rock the Vote &amp; CREDO Mobile registration widget inline in your application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/userlink/" name="http://developers.facebook.com/docs/reference/fbml/userlink/">fb:userlink</a>
+</div>
+<div class="snippet">
+<p>Prints the specified user&apos;s full name linked to their profile along with their network, optionally (as is normally displayed on the Wall, for example).</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-added-app-users/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-added-app-users/">fb:visible-to-added-app-users</a>
+</div>
+<div class="snippet">
+<p>Displays the enclosed content only if the viewer has added the application to their account.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-user/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-user/">fb:visible-to-user</a>
+</div>
+<div class="snippet">
+<p>Only displays the content inside the tag if the viewer is the specified user.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="status-messages">Status Messages</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/error/" name="http://developers.facebook.com/docs/reference/fbml/error/">fb:error</a>
+</div>
+<div class="snippet">
+<p>Renders a standard Facebook error message.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/explanation/" name="http://developers.facebook.com/docs/reference/fbml/explanation/">fb:explanation</a>
+</div>
+<div class="snippet">
+<p>Renders a standard Facebook explanation message.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/message/" name="http://developers.facebook.com/docs/reference/fbml/message/">fb:message</a>
+</div>
+<div class="snippet">
+<p>Renders the heading text for an error, explanation or success message.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/success/" name="http://developers.facebook.com/docs/reference/fbml/success/">fb:success</a>
+</div>
+<div class="snippet">
+<p>Renders a standard Facebook success message.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="page-navigation">Page Navigation</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/create-button/" name="http://developers.facebook.com/docs/reference/fbml/create-button/">fb:create-button</a>
+</div>
+<div class="snippet">
+<p>Renders a Create button for adding user-generated content.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/dashboard/" name="http://developers.facebook.com/docs/reference/fbml/dashboard/">fb:dashboard</a>
+</div>
+<div class="snippet">
+<p>Renders a standard Facebook dashboard header.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/header/" name="http://developers.facebook.com/docs/reference/fbml/header/">fb:header</a>
+</div>
+<div class="snippet">
+<p>Renders a standard Facebook title header.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/header-title/" name="http://developers.facebook.com/docs/reference/fbml/header-title/">fb:header-title</a>
+</div>
+<div class="snippet">
+<p>Specifies the header title for a fb:mediaheader.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/help/" name="http://developers.facebook.com/docs/reference/fbml/help/">fb:help</a>
+</div>
+<div class="snippet">
+<p>Renders a help link.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/mediaheader/" name="http://developers.facebook.com/docs/reference/fbml/mediaheader/">fb:mediaheader</a>
+</div>
+<div class="snippet">
+<p>Renders a standard media header, intended mainly for displaying content contributed by a particular user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/owner-action/" name="http://developers.facebook.com/docs/reference/fbml/owner-action/">fb:owner-action</a>
+</div>
+<div class="snippet">
+<p>Specifies an action link to be displayed inside a fb:mediaheader when the viewer is the owner of the content</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/tab-item/" name="http://developers.facebook.com/docs/reference/fbml/tab-item/">fb:tab-item</a>
+</div>
+<div class="snippet">
+<p>Renders a standard Facebook tab.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/tabs/" name="http://developers.facebook.com/docs/reference/fbml/tabs/">fb:tabs</a>
+</div>
+<div class="snippet">
+<p>Renders a group of standard Facebook navigation tabs.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="wall">Wall</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/wall/" name="http://developers.facebook.com/docs/reference/fbml/wall/">fb:wall</a>
+</div>
+<div class="snippet">
+<p>Emulates the <strong>look</strong> of a wall environment.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/wallpost/" name="http://developers.facebook.com/docs/reference/fbml/wallpost/">fb:wallpost</a>
+</div>
+<div class="snippet">
+<p>Renders a Wall-style post.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/wallpost-action/" name="http://developers.facebook.com/docs/reference/fbml/wallpost-action/">fb:wallpost-action</a>
+</div>
+<div class="snippet">
+<p>Displays a link at the bottom of a wallpost (even if it appears before other text within the fb:wallpost tag).</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="visibility-on-profile">Visibility on Profile</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/18-plus/" name="http://developers.facebook.com/docs/reference/fbml/18-plus/">fb:18-plus</a>
+</div>
+<div class="snippet">
+<p>Restricts content to users who are age 18 or older.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/21-plus/" name="http://developers.facebook.com/docs/reference/fbml/21-plus/">fb:21-plus</a>
+</div>
+<div class="snippet">
+<p>Restricts content to users who are age 21 or older.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/restricted-to/" name="http://developers.facebook.com/docs/reference/fbml/restricted-to/">fb:restricted-to</a>
+</div>
+<div class="snippet">
+<p>Lets you tailor the enclosed content to display to specific ages, locations, or content types.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-app-users/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-app-users/">fb:visible-to-app-users</a>
+</div>
+<div class="snippet">
+<p>Displays the enclosed content only if the viewer has granted full permissions to the application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-connection/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-connection/">fb:visible-to-connection</a>
+</div>
+<div class="snippet">
+<p>Use this tag to display the content inside the tag on a user&apos;s or a <a href="http://www.facebook.com/business/?pages" name="http://www.facebook.com/business/?pages">Facebook Page&apos;s</a> profile only if the viewer is a friend of that user or is a fan of that Facebook Page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-friends/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-friends/">fb:visible-to-friends</a>
+</div>
+<div class="snippet">
+<p>Use this tag to display the content inside the tag on a user&apos;s profile only if the viewer is a friend of that user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-owner/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-owner/">fb:visible-to-owner</a>
+</div>
+<div class="snippet">
+<p>Displays content inside only if the viewer of the profile matches the profile owner.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="profile-specific">Profile-specific</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/action/" name="http://developers.facebook.com/docs/reference/fbml/action/">fb:action</a>
+</div>
+<div class="snippet">
+<p>Renders a link, usually for navigational purposes.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/add-section-button/" name="http://developers.facebook.com/docs/reference/fbml/add-section-button/">fb:add-section-button</a>
+</div>
+<div class="snippet">
+<p>Renders an <strong>Add to Profile</strong> or <strong>Add to Info</strong> button (depending upon which <code>section</code> attribute you specify) on an application&apos;s canvas page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/if-section-not-added/" name="http://developers.facebook.com/docs/reference/fbml/if-section-not-added/">fb:if-section-not-added</a>
+</div>
+<div class="snippet">
+<p>Renders the content wrapped within this tag on an application canvas page if the user hasn&apos;t added a condensed profile box or info section to her profile.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/narrow/" name="http://developers.facebook.com/docs/reference/fbml/narrow/">fb:narrow</a>
+</div>
+<div class="snippet">
+<p>Renders the content contained by the tag only if the profile box is in the narrow column of the profile.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/publisher-link/" name="http://developers.facebook.com/docs/reference/fbml/publisher-link/">fb:publisher-link</a>
+</div>
+<div class="snippet">
+<p>Renders an anchor tag around the internal content pointing to a profile with the application&apos;s Publisher preselected.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/subtitle/" name="http://developers.facebook.com/docs/reference/fbml/subtitle/">fb:subtitle</a>
+</div>
+<div class="snippet">
+<p>Defines the subtitle for the profile box.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/user-item/" name="http://developers.facebook.com/docs/reference/fbml/user-item/">fb:user-item</a>
+</div>
+<div class="snippet">
+<p>Renders a single cell of a table, which contains a thumbnail and name for a particular user, similar to the Mutual Friends table on profile pages.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/user-table/" name="http://developers.facebook.com/docs/reference/fbml/user-table/">fb:user-table</a>
+</div>
+<div class="snippet">
+<p>Renders a table, each cell of which contains a thumbnail and name for a particular user, similar to the Mutual Friends table on profile pages.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/wide/" name="http://developers.facebook.com/docs/reference/fbml/wide/">fb:wide</a>
+</div>
+<div class="snippet">
+<p>The enclosed content appears only when profile box is in the wide column of the profile.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="misc">Misc</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/add-profile-tab/" name="http://developers.facebook.com/docs/reference/fbml/add-profile-tab/">fb:add-profile-tab</a>
+</div>
+<div class="snippet">
+<p>Renders a button that lets a user add your application or site&apos;s application tab to his or her profile</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/fbml/" name="http://developers.facebook.com/docs/reference/fbml/fbml/">fb:fbml</a>
+</div>
+<div class="snippet">
+<p>This tag serves two purposes.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/fbmlversion/" name="http://developers.facebook.com/docs/reference/fbml/fbmlversion/">fb:fbmlversion</a>
+</div>
+<div class="snippet">
+<p>Prints the version of FBML currently in scope.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/js-string/" name="http://developers.facebook.com/docs/reference/fbml/js-string/">fb:js-string</a>
+</div>
+<div class="snippet">
+<p>This tag renders a block of FBML into an FBML block variable instead of rendering it on the page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/page-admin-edit-header/" name="http://developers.facebook.com/docs/reference/fbml/page-admin-edit-header/">fb:page-admin-edit-header</a>
+</div>
+<div class="snippet">
+<p>For apps that can be added to Facebook Pages, this adds a standardized edit header for canvas pages so that the Page owner can easily jump to their Page&apos;s app configuration.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/redirect/" name="http://developers.facebook.com/docs/reference/fbml/redirect/">fb:redirect</a>
+</div>
+<div class="snippet">
+<p>Redirects a user&apos;s browser to a new URL within the Facebook canvas.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/ref/" name="http://developers.facebook.com/docs/reference/fbml/ref/">fb:ref</a>
+</div>
+<div class="snippet">
+<p>Fetches and renders content (like FBML or JavaScript) from a given ref source onto your canvas pages.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/serverFbml/" name="http://developers.facebook.com/docs/reference/fbml/serverFbml/">fb:serverFbml</a>
+</div>
+<div class="snippet">
+<p>Renders the FBML on a Facebook server inside an IFrame.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/time/" name="http://developers.facebook.com/docs/reference/fbml/time/">fb:time</a>
+</div>
+<div class="snippet">
+<p>Renders the date and time in the user&apos;s time zone.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/title/" name="http://developers.facebook.com/docs/reference/fbml/title/">fb:title</a>
+</div>
+<div class="snippet">
+<p>Sets the page&apos;s <code>&lt;title&gt;</code> tag to its contents.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="editor-display">Editor Display</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/editor/" name="http://developers.facebook.com/docs/reference/fbml/editor/">fb:editor</a>
+</div>
+<div class="snippet">
+<p>Creates a form with two columns, just like the form on the edit-profile page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-button/" name="http://developers.facebook.com/docs/reference/fbml/editor-button/">fb:editor-button</a>
+</div>
+<div class="snippet">
+<p>Renders a button of type <tt>submit</tt> inside an fb:editor tag.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-buttonset/" name="http://developers.facebook.com/docs/reference/fbml/editor-buttonset/">fb:editor-buttonset</a>
+</div>
+<div class="snippet">
+<p>A container for one or more fb:editor-button tags, which are rendered next to each other with some space between each button.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-cancel/" name="http://developers.facebook.com/docs/reference/fbml/editor-cancel/">fb:editor-cancel</a>
+</div>
+<div class="snippet">
+<p>Renders a Cancel button inside an fb:editor tag.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-custom/" name="http://developers.facebook.com/docs/reference/fbml/editor-custom/">fb:editor-custom</a>
+</div>
+<div class="snippet">
+<p>Allows you to put any content into an fb:editor block, as long as it is valid FBML.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-date/" name="http://developers.facebook.com/docs/reference/fbml/editor-date/">fb:editor-date</a>
+</div>
+<div class="snippet">
+<p>Creates two drop down list boxes that let a user select a date.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-divider/" name="http://developers.facebook.com/docs/reference/fbml/editor-divider/">fb:editor-divider</a>
+</div>
+<div class="snippet">
+<p>Renders a horizontal line separator in the column containing the form elements.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-month/" name="http://developers.facebook.com/docs/reference/fbml/editor-month/">fb:editor-month</a>
+</div>
+<div class="snippet">
+<p>Creates a form selector element displaying the month.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-text/" name="http://developers.facebook.com/docs/reference/fbml/editor-text/">fb:editor-text</a>
+</div>
+<div class="snippet">
+<p>Creates an <code>&lt;input&gt;</code> of type <code>text</code>.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-textarea/" name="http://developers.facebook.com/docs/reference/fbml/editor-textarea/">fb:editor-textarea</a>
+</div>
+<div class="snippet">
+<p>Creates a <code>&lt;textarea&gt;</code> element.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-time/" name="http://developers.facebook.com/docs/reference/fbml/editor-time/">fb:editor-time</a>
+</div>
+<div class="snippet">
+<p>Creates a series of form selector elements showing the time in hours and minutes, and an AM/PM indicator.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="embedded-media">Embedded Media</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/flv/" name="http://developers.facebook.com/docs/reference/fbml/flv/">fb:flv</a>
+</div>
+<div class="snippet">
+<p>Renders a Flash-based FLV player that can stream arbitrary FLV (video/audio) files on the page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/iframe/" name="http://developers.facebook.com/docs/reference/fbml/iframe/">fb:iframe</a>
+</div>
+<div class="snippet">
+<p>Inserts an <code>&lt;iframe&gt;</code> tag into an application canvas page; you cannot use the <fb:iframe> tag on the profile page (that is, application tabs and profile boxes).</fb:iframe>
+</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/mp3/" name="http://developers.facebook.com/docs/reference/fbml/mp3/">fb:mp3</a>
+</div>
+<div class="snippet">
+<p>Renders a Flash-based audio player.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/photo/" name="http://developers.facebook.com/docs/reference/fbml/photo/">fb:photo</a>
+</div>
+<div class="snippet">
+<p>Renders a Facebook photo.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/silverlight/" name="http://developers.facebook.com/docs/reference/fbml/silverlight/">fb:silverlight</a>
+</div>
+<div class="snippet">
+<p>Renders a Microsoft Silverlight control.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/swf/" name="http://developers.facebook.com/docs/reference/fbml/swf/">fb:swf</a>
+</div>
+<div class="snippet">
+<p>Renders a Shockwave Flash (SWF) object.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="dialog">Dialog</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/dialog/" name="http://developers.facebook.com/docs/reference/fbml/dialog/">fb:dialog</a>
+</div>
+<div class="snippet">
+<p>The <strong>fb:dialog</strong> tag displays a lightbox-type dialog box when a user clicks on some element.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/dialog-button/" name="http://developers.facebook.com/docs/reference/fbml/dialog-button/">fb:dialog-button</a>
+</div>
+<div class="snippet">
+<p>Renders a button for the fb:dialog popup.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/dialog-content/" name="http://developers.facebook.com/docs/reference/fbml/dialog-content/">fb:dialog-content</a>
+</div>
+<div class="snippet">
+<p>The fb:dialog-content tag is a child of fb:dialog and represents the content that gets displayed inside the popup dialog when it appears.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/dialog-title/" name="http://developers.facebook.com/docs/reference/fbml/dialog-title/">fb:dialog-title</a>
+</div>
+<div class="snippet">
+<p>fb:dialog-title is a child of fb:dialog and renders a title for what is displayed inside the popup dialog.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="additional-permissions">Additional Permissions</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/prompt-permission/" name="http://developers.facebook.com/docs/reference/fbml/prompt-permission/">fb:prompt-permission</a>
+</div>
+<div class="snippet">
+<p>Renders the content of the tag as a link that, when clicked, initiates a dialog requesting the specified extended permissions from the user.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="social-widgets">Social Plugins</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/comments_(XFBML)/" name="http://developers.facebook.com/docs/reference/fbml/comments_(XFBML)/">fb:comments</a>
+</div>
+<div class="snippet">
+<p>Displays a Comments Box on a Facebook Connect site or in an IFrame application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/live-stream/" name="http://developers.facebook.com/docs/reference/fbml/live-stream/">fb:live-stream</a>
+</div>
+<div class="snippet">
+<p>Use this tag to render a Live Stream Box social widget on your FBML canvas pages or Facebook Connect sites.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="message-attachments">Message Attachments</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/attachment-preview/" name="http://developers.facebook.com/docs/reference/fbml/attachment-preview/">fb:attachment-preview</a>
+</div>
+<div class="snippet">
+<p>Renders a link in a message attachment that, when clicked, replaces that attachment with newly fetched content.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="forms">Forms</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/captcha/" name="http://developers.facebook.com/docs/reference/fbml/captcha/">fb:captcha</a>
+</div>
+<div class="snippet">
+<p>Renders a CAPTCHA on your canvas page inside of a form.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/submit/" name="http://developers.facebook.com/docs/reference/fbml/submit/">fb:submit</a>
+</div>
+<div class="snippet">
+<p>Creates a JavaScript submission mechanism for a form, which makes image or text links act as Submit buttons.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="reference">Reference</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fbml/javascript/" name="http://developers.facebook.com/docs/reference/fbml/javascript/">JavaScript SDK</a>
+</div>
+<div class="snippet">
+<p>JavaScript SDK</p>
+</div>
+</div>
+</div>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/fbml/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1338511636" title="2012年5月31日 17:47">約1週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

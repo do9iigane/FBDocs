@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/rest/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/rest/">https://developers.facebook.com/docs/reference/rest/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Administrative Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.banUsers/" name="http://developers.facebook.com/docs/reference/rest/admin.banUsers/">admin.banUsers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.getAllocation/" name="http://developers.facebook.com/docs/reference/rest/admin.getAllocation/">admin.getAllocation</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.getAppProperties/" name="http://developers.facebook.com/docs/reference/rest/admin.getAppProperties/">admin.getAppProperties</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.getBannedUsers/" name="http://developers.facebook.com/docs/reference/rest/admin.getBannedUsers/">admin.getBannedUsers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.getRestrictionInfo/" name="http://developers.facebook.com/docs/reference/rest/admin.getRestrictionInfo/">admin.getRestrictionInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.setAppProperties/" name="http://developers.facebook.com/docs/reference/rest/admin.setAppProperties/">admin.setAppProperties</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.setRestrictionInfo/" name="http://developers.facebook.com/docs/reference/rest/admin.setRestrictionInfo/">admin.setRestrictionInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.unbanUsers/" name="http://developers.facebook.com/docs/reference/rest/admin.unbanUsers/">admin.unbanUsers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/application.getPublicInfo/" name="http://developers.facebook.com/docs/reference/rest/application.getPublicInfo/">application.getPublicInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/batch.run/" name="http://developers.facebook.com/docs/reference/rest/batch.run/">batch.run</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/data.setCookie/" name="http://developers.facebook.com/docs/reference/rest/data.setCookie/">data.setCookie</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.setRefHandle/" name="http://developers.facebook.com/docs/reference/rest/fbml.setRefHandle/">fbml.setRefHandle</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/intl.getTranslations/" name="http://developers.facebook.com/docs/reference/rest/intl.getTranslations/">intl.getTranslations</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/intl.uploadNativeStrings/" name="http://developers.facebook.com/docs/reference/rest/intl.uploadNativeStrings/">intl.uploadNativeStrings</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/links.getStats/" name="http://developers.facebook.com/docs/reference/rest/links.getStats/">links.getStats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/migrations.getStatuses/" name="http://developers.facebook.com/docs/reference/rest/migrations.getStatuses/">migrations.getStatuses</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/migrations.setStatus/" name="http://developers.facebook.com/docs/reference/rest/migrations.setStatus/">migrations.setStatus</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/pages.blockFan/" name="http://developers.facebook.com/docs/reference/rest/pages.blockFan/">pages.blockFan</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Login/Auth Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/auth.createToken/" name="http://developers.facebook.com/docs/reference/rest/auth.createToken/">auth.createToken</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/auth.expireSession/" name="http://developers.facebook.com/docs/reference/rest/auth.expireSession/">auth.expireSession</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/auth.getSession/" name="http://developers.facebook.com/docs/reference/rest/auth.getSession/">auth.getSession</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/auth.promoteSession/" name="http://developers.facebook.com/docs/reference/rest/auth.promoteSession/">auth.promoteSession</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/auth.revokeAuthorization/" name="http://developers.facebook.com/docs/reference/rest/auth.revokeAuthorization/">auth.revokeAuthorization</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/auth.revokeExtendedPermission/" name="http://developers.facebook.com/docs/reference/rest/auth.revokeExtendedPermission/">auth.revokeExtendedPermission</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Data Retrieval Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/comments.get/" name="http://developers.facebook.com/docs/reference/rest/comments.get/">comments.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/data.getCookies/" name="http://developers.facebook.com/docs/reference/rest/data.getCookies/">data.getCookies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.refreshImgSrc/" name="http://developers.facebook.com/docs/reference/rest/fbml.refreshImgSrc/">fbml.refreshImgSrc</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.refreshRefUrl/" name="http://developers.facebook.com/docs/reference/rest/fbml.refreshRefUrl/">fbml.refreshRefUrl</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fql.multiquery/" name="http://developers.facebook.com/docs/reference/rest/fql.multiquery/">fql.multiquery</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fql.query/" name="http://developers.facebook.com/docs/reference/rest/fql.query/">fql.query</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/friends.areFriends/" name="http://developers.facebook.com/docs/reference/rest/friends.areFriends/">friends.areFriends</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/friends.get/" name="http://developers.facebook.com/docs/reference/rest/friends.get/">friends.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/friends.getAppUsers/" name="http://developers.facebook.com/docs/reference/rest/friends.getAppUsers/">friends.getAppUsers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/friends.getLists/" name="http://developers.facebook.com/docs/reference/rest/friends.getLists/">friends.getLists</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/friends.getMutualFriends/" name="http://developers.facebook.com/docs/reference/rest/friends.getMutualFriends/">friends.getMutualFriends</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/groups.get/" name="http://developers.facebook.com/docs/reference/rest/groups.get/">groups.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/groups.getMembers/" name="http://developers.facebook.com/docs/reference/rest/groups.getMembers/">groups.getMembers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/links.get/" name="http://developers.facebook.com/docs/reference/rest/links.get/">links.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/message.getThreadsInFolder/" name="http://developers.facebook.com/docs/reference/rest/message.getThreadsInFolder/">message.getThreadsInFolder</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notes.get/" name="http://developers.facebook.com/docs/reference/rest/notes.get/">notes.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notifications.get/" name="http://developers.facebook.com/docs/reference/rest/notifications.get/">notifications.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notifications.getList/" name="http://developers.facebook.com/docs/reference/rest/notifications.getList/">notifications.getList</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/pages.getinfo/" name="http://developers.facebook.com/docs/reference/rest/pages.getinfo/">pages.getinfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/pages.isAdmin/" name="http://developers.facebook.com/docs/reference/rest/pages.isAdmin/">pages.isAdmin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/pages.isAppAdded/" name="http://developers.facebook.com/docs/reference/rest/pages.isAppAdded/">pages.isAppAdded</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/pages.isFan/" name="http://developers.facebook.com/docs/reference/rest/pages.isFan/">pages.isFan</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/photos.get/" name="http://developers.facebook.com/docs/reference/rest/photos.get/">photos.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/photos.getAlbums/" name="http://developers.facebook.com/docs/reference/rest/photos.getAlbums/">photos.getAlbums</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/photos.getTags/" name="http://developers.facebook.com/docs/reference/rest/photos.getTags/">photos.getTags</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/privacy.get/" name="http://developers.facebook.com/docs/reference/rest/privacy.get/">privacy.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/profile.getFBML/" name="http://developers.facebook.com/docs/reference/rest/profile.getFBML/">profile.getFBML</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/profile.getInfo/" name="http://developers.facebook.com/docs/reference/rest/profile.getInfo/">profile.getInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/profile.getInfoOptions/" name="http://developers.facebook.com/docs/reference/rest/profile.getInfoOptions/">profile.getInfoOptions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/status.get/" name="http://developers.facebook.com/docs/reference/rest/status.get/">status.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.get/" name="http://developers.facebook.com/docs/reference/rest/stream.get/">stream.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.getComments/" name="http://developers.facebook.com/docs/reference/rest/stream.getComments/">stream.getComments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.getFilters/" name="http://developers.facebook.com/docs/reference/rest/stream.getFilters/">stream.getFilters</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.getInfo/" name="http://developers.facebook.com/docs/reference/rest/users.getInfo/">users.getInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.getLoggedInUser/" name="http://developers.facebook.com/docs/reference/rest/users.getLoggedInUser/">users.getLoggedInUser</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.getStandardinfo/" name="http://developers.facebook.com/docs/reference/rest/users.getStandardinfo/">users.getStandardinfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.hasAppPermission/" name="http://developers.facebook.com/docs/reference/rest/users.hasAppPermission/">users.hasAppPermission</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.isAppUser/" name="http://developers.facebook.com/docs/reference/rest/users.isAppUser/">users.isAppUser</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.isVerified/" name="http://developers.facebook.com/docs/reference/rest/users.isVerified/">users.isVerified</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/video.getUploadLimits/" name="http://developers.facebook.com/docs/reference/rest/video.getUploadLimits/">video.getUploadLimits</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Publishing Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/comments.add/" name="http://developers.facebook.com/docs/reference/rest/comments.add/">comments.add</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/comments.remove/" name="http://developers.facebook.com/docs/reference/rest/comments.remove/">comments.remove</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/links.post/" name="http://developers.facebook.com/docs/reference/rest/links.post/">links.post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/links.preview/" name="http://developers.facebook.com/docs/reference/rest/links.preview/">links.preview</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/liveMessage.send/" name="http://developers.facebook.com/docs/reference/rest/liveMessage.send/">liveMessage.send</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notes.create/" name="http://developers.facebook.com/docs/reference/rest/notes.create/">notes.create</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notes.delete/" name="http://developers.facebook.com/docs/reference/rest/notes.delete/">notes.delete</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notes.edit/" name="http://developers.facebook.com/docs/reference/rest/notes.edit/">notes.edit</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notifications.markRead/" name="http://developers.facebook.com/docs/reference/rest/notifications.markRead/">notifications.markRead</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notifications.sendEmail/" name="http://developers.facebook.com/docs/reference/rest/notifications.sendEmail/">notifications.sendEmail</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/photos.addTag/" name="http://developers.facebook.com/docs/reference/rest/photos.addTag/">photos.addTag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/photos.createAlbum/" name="http://developers.facebook.com/docs/reference/rest/photos.createAlbum/">photos.createAlbum</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/photos.upload/" name="http://developers.facebook.com/docs/reference/rest/photos.upload/">photos.upload</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/profile.setFBML/" name="http://developers.facebook.com/docs/reference/rest/profile.setFBML/">profile.setFBML</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/profile.setInfo/" name="http://developers.facebook.com/docs/reference/rest/profile.setInfo/">profile.setInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/profile.setInfoOptions/" name="http://developers.facebook.com/docs/reference/rest/profile.setInfoOptions/">profile.setInfoOptions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/status.set/" name="http://developers.facebook.com/docs/reference/rest/status.set/">status.set</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.addComment/" name="http://developers.facebook.com/docs/reference/rest/stream.addComment/">stream.addComment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.addLike/" name="http://developers.facebook.com/docs/reference/rest/stream.addLike/">stream.addLike</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.publish/" name="http://developers.facebook.com/docs/reference/rest/stream.publish/">stream.publish</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.remove/" name="http://developers.facebook.com/docs/reference/rest/stream.remove/">stream.remove</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.removeComment/" name="http://developers.facebook.com/docs/reference/rest/stream.removeComment/">stream.removeComment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.removeLike/" name="http://developers.facebook.com/docs/reference/rest/stream.removeLike/">stream.removeLike</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.setStatus/" name="http://developers.facebook.com/docs/reference/rest/users.setStatus/">users.setStatus</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/video.upload/" name="http://developers.facebook.com/docs/reference/rest/video.upload/">video.upload</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Facebook Connect Methods</h5>
+<ul>
+</ul>
+</li>
+<li>
+<h5>Mobile Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/sms.canSend/" name="http://developers.facebook.com/docs/reference/rest/sms.canSend/">sms.canSend</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/sms.send/" name="http://developers.facebook.com/docs/reference/rest/sms.send/">sms.send</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Dashboard API Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.decrementCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.decrementCount/">dashboard.decrementCount</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.getCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.getCount/">dashboard.getCount</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.incrementCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.incrementCount/">dashboard.incrementCount</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.multiGetCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.multiGetCount/">dashboard.multiGetCount</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.multiIncrementCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.multiIncrementCount/">dashboard.multiIncrementCount</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.multiSetCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.multiSetCount/">dashboard.multiSetCount</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.setCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.setCount/">dashboard.setCount</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Events API Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.cancel/" name="http://developers.facebook.com/docs/reference/rest/events.cancel/">events.cancel</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.create/" name="http://developers.facebook.com/docs/reference/rest/events.create/">events.create</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.edit/" name="http://developers.facebook.com/docs/reference/rest/events.edit/">events.edit</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.get/" name="http://developers.facebook.com/docs/reference/rest/events.get/">events.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.getMembers/" name="http://developers.facebook.com/docs/reference/rest/events.getMembers/">events.getMembers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.invite/" name="http://developers.facebook.com/docs/reference/rest/events.invite/">events.invite</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.rsvp/" name="http://developers.facebook.com/docs/reference/rest/events.rsvp/">events.rsvp</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Custom Tags API Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.deleteCustomTags/" name="http://developers.facebook.com/docs/reference/rest/fbml.deleteCustomTags/">fbml.deleteCustomTags</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.getCustomTags/" name="http://developers.facebook.com/docs/reference/rest/fbml.getCustomTags/">fbml.getCustomTags</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.registerCustomTags/" name="http://developers.facebook.com/docs/reference/rest/fbml.registerCustomTags/">fbml.registerCustomTags</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Ads Methods</h5>
+<ul>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Old REST API</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Old REST API</a>
+</div>
+</div>
+</div>
+<div class="blueBox">
+<p>
+<b>We are in the process of deprecating the REST API.</b> If you are building a new Facebook app, please use the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a>. While there is still functionality that we have not ported over yet, the Graph API is the center of Facebook Platform moving forward and where all new features will be found.</p>
+</div>
+<p>The REST API enables you to interact with Facebook web site programmatically via HTTP requests.</p>
+<p>The REST API supports both <a href="../../authentication/" name="https://developers.facebook.com/../authentication/">OAuth 2.0</a> as well as an older, custom authorization signature scheme. See the <a href="../../authentication/fb_sig/#migrate" name="https://developers.facebook.com/../authentication/fb_sig/#migrate">authentication upgrade guide</a> for information about how to upgrade your existing sessions to OAuth 2.0.</p>
+<p>To make requests to the REST API with <a href="../../authentication/" name="https://developers.facebook.com/../authentication/">OAuth</a>, you requests URLs in the following format:</p>
+<pre>https://api.facebook.com/method/<b>method_name</b>?
+    access_token=<b>oauth_access_token</b>&amp;
+    arg0=value0&amp;
+    arg1=value1</pre>
+<p>For example, you can fetch Zuck&apos;s profile with:</p>
+<div class="pre">
+<a href="https://api.facebook.com/method/users.getInfo?uids=4&amp;fields=name&amp;access_token=OAUTH_ACCESS_TOKEN&amp;format=json" name="https://api.facebook.com/method/users.getInfo?uids=4&amp;fields=name&amp;access_token=OAUTH_ACCESS_TOKEN&amp;format=json">
+<code>https://api.facebook.com/method/<b>users.getInfo</b>?uids=4&amp;fields=name&amp;access_token=<b>...</b>
+</code>
+</a>
+</div>
+<ul>
+<li>
+<a href="#administrative-methods" name="https://developers.facebook.com/docs/#administrative-methods">Administrative Methods</a>
+</li>
+<li>
+<a href="#login/auth-methods" name="https://developers.facebook.com/docs/#login/auth-methods">Login/Auth Methods</a>
+</li>
+<li>
+<a href="#data-retrieval-methods" name="https://developers.facebook.com/docs/#data-retrieval-methods">Data Retrieval Methods</a>
+</li>
+<li>
+<a href="#publishing-methods" name="https://developers.facebook.com/docs/#publishing-methods">Publishing Methods</a>
+</li>
+<li>
+<a href="#facebook-connect-methods" name="https://developers.facebook.com/docs/#facebook-connect-methods">Facebook Connect Methods</a>
+</li>
+<li>
+<a href="#mobile-methods" name="https://developers.facebook.com/docs/#mobile-methods">Mobile Methods</a>
+</li>
+<li>
+<a href="#dashboard-api-methods" name="https://developers.facebook.com/docs/#dashboard-api-methods">Dashboard API Methods</a>
+</li>
+<li>
+<a href="#events-api-methods" name="https://developers.facebook.com/docs/#events-api-methods">Events API Methods</a>
+</li>
+<li>
+<a href="#custom-tags-api-methods" name="https://developers.facebook.com/docs/#custom-tags-api-methods">Custom Tags API Methods</a>
+</li>
+<li>
+<a href="#ads-methods" name="https://developers.facebook.com/docs/#ads-methods">Ads Methods</a>
+</li>
+</ul>
+<hr />
+<h2 id="administrative-methods">Administrative Methods</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/admin.banUsers/" name="http://developers.facebook.com/docs/reference/rest/admin.banUsers/">admin.banUsers</a>
+</div>
+<div class="snippet">
+<p>Prevents users from accessing an application&apos;s canvas page and its forums.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/admin.getAllocation/" name="http://developers.facebook.com/docs/reference/rest/admin.getAllocation/">admin.getAllocation</a>
+</div>
+<div class="snippet">
+<p>Returns the current allocation limit for your application for the specified integration point.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/admin.getAppProperties/" name="http://developers.facebook.com/docs/reference/rest/admin.getAppProperties/">admin.getAppProperties</a>
+</div>
+<div class="snippet">
+<p>Returns values of properties for your applications from the Facebook Developer application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/admin.getBannedUsers/" name="http://developers.facebook.com/docs/reference/rest/admin.getBannedUsers/">admin.getBannedUsers</a>
+</div>
+<div class="snippet">
+<p>Returns the list of users who have been banned from the application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/admin.getRestrictionInfo/" name="http://developers.facebook.com/docs/reference/rest/admin.getRestrictionInfo/">admin.getRestrictionInfo</a>
+</div>
+<div class="snippet">
+<p>Returns the demographic restrictions for the application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/admin.setAppProperties/" name="http://developers.facebook.com/docs/reference/rest/admin.setAppProperties/">admin.setAppProperties</a>
+</div>
+<div class="snippet">
+<p>Sets values for properties for your applications in the Facebook Developer application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/admin.setRestrictionInfo/" name="http://developers.facebook.com/docs/reference/rest/admin.setRestrictionInfo/">admin.setRestrictionInfo</a>
+</div>
+<div class="snippet">
+<p>Sets the demographic restrictions for the application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/admin.unbanUsers/" name="http://developers.facebook.com/docs/reference/rest/admin.unbanUsers/">admin.unbanUsers</a>
+</div>
+<div class="snippet">
+<p>Unbans users previously banned with admin.banUsers.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/application.getPublicInfo/" name="http://developers.facebook.com/docs/reference/rest/application.getPublicInfo/">application.getPublicInfo</a>
+</div>
+<div class="snippet">
+<p>Returns public information about a given application (not necessarily your own).</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/batch.run/" name="http://developers.facebook.com/docs/reference/rest/batch.run/">batch.run</a>
+</div>
+<div class="snippet">
+<p>Execute a list of individual API calls in a single batch.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/data.setCookie/" name="http://developers.facebook.com/docs/reference/rest/data.setCookie/">data.setCookie</a>
+</div>
+<div class="snippet">
+<p>Sets a cookie for a given user and application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.setRefHandle/" name="http://developers.facebook.com/docs/reference/rest/fbml.setRefHandle/">fbml.setRefHandle</a>
+</div>
+<div class="snippet">
+<p>Associates a given &quot;handle&quot; with markup (like FBML or JavaScript) so that the handle can be used within the fb:ref tag.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/intl.getTranslations/" name="http://developers.facebook.com/docs/reference/rest/intl.getTranslations/">intl.getTranslations</a>
+</div>
+<div class="snippet">
+<p>Returns an array of strings from your application that you submitted for translation. This call returns the original native strings, the best (or all) translations of native strings into a given locale, whether the string has been approved, and by whom.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/intl.uploadNativeStrings/" name="http://developers.facebook.com/docs/reference/rest/intl.uploadNativeStrings/">intl.uploadNativeStrings</a>
+</div>
+<div class="snippet">
+<p>Lets you insert text strings into the Facebook Translations database so they can be translated.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/links.getStats/" name="http://developers.facebook.com/docs/reference/rest/links.getStats/">links.getStats</a>
+</div>
+<div class="snippet">
+<p>Returns information about one or more Facebook Share implementations.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/migrations.getStatuses/" name="http://developers.facebook.com/docs/reference/rest/migrations.getStatuses/">migrations.getStatuses</a>
+</div>
+<div class="snippet">
+<p>Returns the list of Platform migrations and the corresponding setting for each for the application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/migrations.setStatus/" name="http://developers.facebook.com/docs/reference/rest/migrations.setStatus/">migrations.setStatus</a>
+</div>
+<div class="snippet">
+<p>Configures the migration setting for a Platform migration.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/pages.blockFan/" name="http://developers.facebook.com/docs/reference/rest/pages.blockFan/">pages.blockFan</a>
+</div>
+<div class="snippet">
+<p>Blocks a fan from posting to the specified Page.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="login/auth-methods">Login/Auth Methods</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/auth.createToken/" name="http://developers.facebook.com/docs/reference/rest/auth.createToken/">auth.createToken</a>
+</div>
+<div class="snippet">
+<p>Creates an <code>auth_token</code> to be passed in as a parameter to login.php and then to auth.getSession after the user has logged in.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/auth.expireSession/" name="http://developers.facebook.com/docs/reference/rest/auth.expireSession/">auth.expireSession</a>
+</div>
+<div class="snippet">
+<p>Expires the session indicated in the API call, for your application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/auth.getSession/" name="http://developers.facebook.com/docs/reference/rest/auth.getSession/">auth.getSession</a>
+</div>
+<div class="snippet">
+<p>Returns the session key bound to an auth_token, as returned by auth.createToken or in the callback URL.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/auth.promoteSession/" name="http://developers.facebook.com/docs/reference/rest/auth.promoteSession/">auth.promoteSession</a>
+</div>
+<div class="snippet">
+<p>Returns a temporary session secret associated to the current existing session, for use in a client-side component to an application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/auth.revokeAuthorization/" name="http://developers.facebook.com/docs/reference/rest/auth.revokeAuthorization/">auth.revokeAuthorization</a>
+</div>
+<div class="snippet">
+<p>If this method is called for the logged in user, then no further API calls can be made on that user&apos;s behalf until the user decides to authorize the application again.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/auth.revokeExtendedPermission/" name="http://developers.facebook.com/docs/reference/rest/auth.revokeExtendedPermission/">auth.revokeExtendedPermission</a>
+</div>
+<div class="snippet">
+<p>Removes a specific extended permission that a user explicitly granted to your application.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="data-retrieval-methods">Data Retrieval Methods</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/comments.get/" name="http://developers.facebook.com/docs/reference/rest/comments.get/">comments.get</a>
+</div>
+<div class="snippet">
+<p>Returns all comments for a given <code>xid</code> posted through fb:comments. This method is a wrapper for the FQL query on the comment FQL table.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/data.getCookies/" name="http://developers.facebook.com/docs/reference/rest/data.getCookies/">data.getCookies</a>
+</div>
+<div class="snippet">
+<p>Returns all cookies for a given user and application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.refreshImgSrc/" name="http://developers.facebook.com/docs/reference/rest/fbml.refreshImgSrc/">fbml.refreshImgSrc</a>
+</div>
+<div class="snippet">
+<p>Fetches and re-caches the image stored at the given URL.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.refreshRefUrl/" name="http://developers.facebook.com/docs/reference/rest/fbml.refreshRefUrl/">fbml.refreshRefUrl</a>
+</div>
+<div class="snippet">
+<p>Fetches and re-caches the content stored at the given URL.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/fql.multiquery/" name="http://developers.facebook.com/docs/reference/rest/fql.multiquery/">fql.multiquery</a>
+</div>
+<div class="snippet">
+<p>Evaluates a series of FQL (Facebook Query Language) queries in one call and returns the data at one time.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/fql.query/" name="http://developers.facebook.com/docs/reference/rest/fql.query/">fql.query</a>
+</div>
+<div class="snippet">
+<p>Evaluates an FQL (Facebook Query Language) query.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/friends.areFriends/" name="http://developers.facebook.com/docs/reference/rest/friends.areFriends/">friends.areFriends</a>
+</div>
+<div class="snippet">
+<p>Returns whether or not each pair of specified users is friends with each other.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/friends.get/" name="http://developers.facebook.com/docs/reference/rest/friends.get/">friends.get</a>
+</div>
+<div class="snippet">
+<p>Returns the identifiers for the current user&apos;s Facebook friends.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/friends.getAppUsers/" name="http://developers.facebook.com/docs/reference/rest/friends.getAppUsers/">friends.getAppUsers</a>
+</div>
+<div class="snippet">
+<p>Returns the identifiers for the current user&apos;s Facebook friends who have authorized the specific calling application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/friends.getLists/" name="http://developers.facebook.com/docs/reference/rest/friends.getLists/">friends.getLists</a>
+</div>
+<div class="snippet">
+<p>Returns the identifiers for the current user&apos;s Facebook friend lists.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/friends.getMutualFriends/" name="http://developers.facebook.com/docs/reference/rest/friends.getMutualFriends/">friends.getMutualFriends</a>
+</div>
+<div class="snippet">
+<p>Returns the identifiers for the requested users&apos; Mutual Facebook friends.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/groups.get/" name="http://developers.facebook.com/docs/reference/rest/groups.get/">groups.get</a>
+</div>
+<div class="snippet">
+<p>Returns all visible groups according to the filters specified.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/groups.getMembers/" name="http://developers.facebook.com/docs/reference/rest/groups.getMembers/">groups.getMembers</a>
+</div>
+<div class="snippet">
+<p>Returns membership list data associated with a group.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/links.get/" name="http://developers.facebook.com/docs/reference/rest/links.get/">links.get</a>
+</div>
+<div class="snippet">
+<p>Returns all links the user has posted on their profile through your application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/message.getThreadsInFolder/" name="http://developers.facebook.com/docs/reference/rest/message.getThreadsInFolder/">message.getThreadsInFolder</a>
+</div>
+<div class="snippet">
+<p>Returns all of a user&apos;s messages and threads from the Inbox.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/notes.get/" name="http://developers.facebook.com/docs/reference/rest/notes.get/">notes.get</a>
+</div>
+<div class="snippet">
+<p>Returns a list of all of the visible notes written by the specified user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/notifications.get/" name="http://developers.facebook.com/docs/reference/rest/notifications.get/">notifications.get</a>
+</div>
+<div class="snippet">
+<p>Returns information on outstanding Facebook notifications for current session user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/notifications.getList/" name="http://developers.facebook.com/docs/reference/rest/notifications.getList/">notifications.getList</a>
+</div>
+<div class="snippet">
+<p>Returns all the current session user&apos;s notifications.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/pages.getinfo/" name="http://developers.facebook.com/docs/reference/rest/pages.getinfo/">pages.getinfo</a>
+</div>
+<div class="snippet">
+<p>Returns all visible pages to the filters specified.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/pages.isAdmin/" name="http://developers.facebook.com/docs/reference/rest/pages.isAdmin/">pages.isAdmin</a>
+</div>
+<div class="snippet">
+<p>Checks whether the logged-in user is the admin for a given Page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/pages.isAppAdded/" name="http://developers.facebook.com/docs/reference/rest/pages.isAppAdded/">pages.isAppAdded</a>
+</div>
+<div class="snippet">
+<p>Checks whether the Page has added the application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/pages.isFan/" name="http://developers.facebook.com/docs/reference/rest/pages.isFan/">pages.isFan</a>
+</div>
+<div class="snippet">
+<p>Checks whether a user is a fan of a given Page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/photos.get/" name="http://developers.facebook.com/docs/reference/rest/photos.get/">photos.get</a>
+</div>
+<div class="snippet">
+<p>Returns all visible photos according to the filters specified.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/photos.getAlbums/" name="http://developers.facebook.com/docs/reference/rest/photos.getAlbums/">photos.getAlbums</a>
+</div>
+<div class="snippet">
+<p>Returns metadata about all of the photo albums uploaded by the specified user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/photos.getTags/" name="http://developers.facebook.com/docs/reference/rest/photos.getTags/">photos.getTags</a>
+</div>
+<div class="snippet">
+<p>Returns the set of user tags on all photos specified.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/privacy.get/" name="http://developers.facebook.com/docs/reference/rest/privacy.get/">privacy.get</a>
+</div>
+<div class="snippet">
+<p>Returns the privacy setting for a Facebook object (video, note, link, photo, or photo album).</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/profile.getFBML/" name="http://developers.facebook.com/docs/reference/rest/profile.getFBML/">profile.getFBML</a>
+</div>
+<div class="snippet">
+<p>Gets the FBML that is currently set for a user&apos;s profile.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/profile.getInfo/" name="http://developers.facebook.com/docs/reference/rest/profile.getInfo/">profile.getInfo</a>
+</div>
+<div class="snippet">
+<p>Returns the specified user&apos;s application info section for the calling application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/profile.getInfoOptions/" name="http://developers.facebook.com/docs/reference/rest/profile.getInfoOptions/">profile.getInfoOptions</a>
+</div>
+<div class="snippet">
+<p>Returns the options associated with the specified field for an application info section.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/status.get/" name="http://developers.facebook.com/docs/reference/rest/status.get/">status.get</a>
+</div>
+<div class="snippet">
+<p>Returns the user&apos;s current and most recent statuses.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/stream.get/" name="http://developers.facebook.com/docs/reference/rest/stream.get/">stream.get</a>
+</div>
+<div class="snippet">
+<p>This method returns an object (in JSON-encoded or XML format) that contains the stream from the perspective of a specific viewer -- a user or a Facebook Page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/stream.getComments/" name="http://developers.facebook.com/docs/reference/rest/stream.getComments/">stream.getComments</a>
+</div>
+<div class="snippet">
+<p>This method returns all comments associated with a post in a user&apos;s stream. This method returns comments only if the user who owns the post (that is, the user published the post to his or her profile) has authorized your application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/stream.getFilters/" name="http://developers.facebook.com/docs/reference/rest/stream.getFilters/">stream.getFilters</a>
+</div>
+<div class="snippet">
+<p>This method returns any filters a user has specified for his or her home page stream.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/users.getInfo/" name="http://developers.facebook.com/docs/reference/rest/users.getInfo/">users.getInfo</a>
+</div>
+<div class="snippet">
+<p>Returns a wide array of user-specific information for each user identifier passed, limited by the view of the current user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/users.getLoggedInUser/" name="http://developers.facebook.com/docs/reference/rest/users.getLoggedInUser/">users.getLoggedInUser</a>
+</div>
+<div class="snippet">
+<p>Gets the user ID (<code>uid</code>) associated with the current session.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/users.getStandardinfo/" name="http://developers.facebook.com/docs/reference/rest/users.getStandardinfo/">users.getStandardinfo</a>
+</div>
+<div class="snippet">
+<p>Returns an array of user-specific information for use by the application itself.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/users.hasAppPermission/" name="http://developers.facebook.com/docs/reference/rest/users.hasAppPermission/">users.hasAppPermission</a>
+</div>
+<div class="snippet">
+<p>Checks whether the user has opted in to an extended application permission.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/users.isAppUser/" name="http://developers.facebook.com/docs/reference/rest/users.isAppUser/">users.isAppUser</a>
+</div>
+<div class="snippet">
+<p>Returns whether the user (either the session user or user specified by UID) has authorized the calling application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/users.isVerified/" name="http://developers.facebook.com/docs/reference/rest/users.isVerified/">users.isVerified</a>
+</div>
+<div class="snippet">
+<p>Returns whether the user is a verified Facebook user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/video.getUploadLimits/" name="http://developers.facebook.com/docs/reference/rest/video.getUploadLimits/">video.getUploadLimits</a>
+</div>
+<div class="snippet">
+<p>Returns the file size and length limits for a video that the current user can upload through your application.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="publishing-methods">Publishing Methods</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/comments.add/" name="http://developers.facebook.com/docs/reference/rest/comments.add/">comments.add</a>
+</div>
+<div class="snippet">
+<p>Adds a comment for a given <code>xid</code> on behalf of a user. Calls with a session secret may only act on behalf of the session user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/comments.remove/" name="http://developers.facebook.com/docs/reference/rest/comments.remove/">comments.remove</a>
+</div>
+<div class="snippet">
+<p>Removes a comment for a given <code>xid</code> by comment_id. Calls with a session secret may only act on behalf of the session user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/links.post/" name="http://developers.facebook.com/docs/reference/rest/links.post/">links.post</a>
+</div>
+<div class="snippet">
+<p>Lets a user post a link on their Wall through your application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/links.preview/" name="http://developers.facebook.com/docs/reference/rest/links.preview/">links.preview</a>
+</div>
+<div class="snippet">
+<p>This method returns a preview of a shared link in the form of a stream attachment.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/liveMessage.send/" name="http://developers.facebook.com/docs/reference/rest/liveMessage.send/">liveMessage.send</a>
+</div>
+<div class="snippet">
+<p>Sends a &quot;message&quot; directly to a user&apos;s browser, which can be handled in FBJS.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/notes.create/" name="http://developers.facebook.com/docs/reference/rest/notes.create/">notes.create</a>
+</div>
+<div class="snippet">
+<p>Lets a user write a Facebook note through your application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/notes.delete/" name="http://developers.facebook.com/docs/reference/rest/notes.delete/">notes.delete</a>
+</div>
+<div class="snippet">
+<p>Lets a user delete a Facebook note that was written through your application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/notes.edit/" name="http://developers.facebook.com/docs/reference/rest/notes.edit/">notes.edit</a>
+</div>
+<div class="snippet">
+<p>Lets a user edit a Facebook note through your application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/notifications.markRead/" name="http://developers.facebook.com/docs/reference/rest/notifications.markRead/">notifications.markRead</a>
+</div>
+<div class="snippet">
+<p>Marks one or more Facebook notifications as read.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/notifications.sendEmail/" name="http://developers.facebook.com/docs/reference/rest/notifications.sendEmail/">notifications.sendEmail</a>
+</div>
+<div class="snippet">
+<p>Sends an email to the specified users who have the application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/photos.addTag/" name="http://developers.facebook.com/docs/reference/rest/photos.addTag/">photos.addTag</a>
+</div>
+<div class="snippet">
+<p>Adds a tag with the given information to a photo.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/photos.createAlbum/" name="http://developers.facebook.com/docs/reference/rest/photos.createAlbum/">photos.createAlbum</a>
+</div>
+<div class="snippet">
+<p>Creates and returns a new album owned by the current session user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/photos.upload/" name="http://developers.facebook.com/docs/reference/rest/photos.upload/">photos.upload</a>
+</div>
+<div class="snippet">
+<p>Uploads a photo owned by the current session user and returns the new photo.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/profile.setFBML/" name="http://developers.facebook.com/docs/reference/rest/profile.setFBML/">profile.setFBML</a>
+</div>
+<div class="snippet">
+<p>Sets the FBML for a user&apos;s profile, including the content for both the profile box and the profile actions.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/profile.setInfo/" name="http://developers.facebook.com/docs/reference/rest/profile.setInfo/">profile.setInfo</a>
+</div>
+<div class="snippet">
+<p>Configures an application info section that the specified user can install on the Info tab of her profile.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/profile.setInfoOptions/" name="http://developers.facebook.com/docs/reference/rest/profile.setInfoOptions/">profile.setInfoOptions</a>
+</div>
+<div class="snippet">
+<p>Specifies the objects for a field for an application info section.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/status.set/" name="http://developers.facebook.com/docs/reference/rest/status.set/">status.set</a>
+</div>
+<div class="snippet">
+<p>Updates a user&apos;s Facebook status through your application. This is a streamlined version of users.setStatus.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/stream.addComment/" name="http://developers.facebook.com/docs/reference/rest/stream.addComment/">stream.addComment</a>
+</div>
+<div class="snippet">
+<p>This method adds a comment to a post that was already published to a user&apos;s Wall.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/stream.addLike/" name="http://developers.facebook.com/docs/reference/rest/stream.addLike/">stream.addLike</a>
+</div>
+<div class="snippet">
+<p>This method lets a user add a like to any post or comment the user can see. A user can like each post or comment only once.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/stream.publish/" name="http://developers.facebook.com/docs/reference/rest/stream.publish/">stream.publish</a>
+</div>
+<div class="snippet">
+<p>This method publishes a post into the stream on the user&apos;s Wall and News Feed. This post also appears in the user&apos;s friends&apos; streams (their News Feeds).</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/stream.remove/" name="http://developers.facebook.com/docs/reference/rest/stream.remove/">stream.remove</a>
+</div>
+<div class="snippet">
+<p>This method removes a post from a user&apos;s Wall. The post also gets removed from the user&apos;s and the user&apos;s friends&apos; News Feeds. Your application may only remove posts that were created through it.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/stream.removeComment/" name="http://developers.facebook.com/docs/reference/rest/stream.removeComment/">stream.removeComment</a>
+</div>
+<div class="snippet">
+<p>This method removes a comment from a post.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/stream.removeLike/" name="http://developers.facebook.com/docs/reference/rest/stream.removeLike/">stream.removeLike</a>
+</div>
+<div class="snippet">
+<p>This method removes a like a user added to a post or comment.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/users.setStatus/" name="http://developers.facebook.com/docs/reference/rest/users.setStatus/">users.setStatus</a>
+</div>
+<div class="snippet">
+<p>Updates a user&apos;s Facebook status.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/video.upload/" name="http://developers.facebook.com/docs/reference/rest/video.upload/">video.upload</a>
+</div>
+<div class="snippet">
+<p>Uploads a video owned by the current session user and returns the video.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="facebook-connect-methods">Facebook Connect Methods</h2>
+<div class="refindex">
+</div>
+<hr />
+<h2 id="mobile-methods">Mobile Methods</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/sms.canSend/" name="http://developers.facebook.com/docs/reference/rest/sms.canSend/">sms.canSend</a>
+</div>
+<div class="snippet">
+<p>Determines whether a user has enabled SMS for the application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/sms.send/" name="http://developers.facebook.com/docs/reference/rest/sms.send/">sms.send</a>
+</div>
+<div class="snippet">
+<p>Sends a given text message (SMS) to the user.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="dashboard-api-methods">Dashboard API Methods</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.decrementCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.decrementCount/">dashboard.decrementCount</a>
+</div>
+<div class="snippet">
+<p>This method decreases your application&apos;s dashboard counter by 1 for a given user, unless it&apos;s already set to 0.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.getCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.getCount/">dashboard.getCount</a>
+</div>
+<div class="snippet">
+<p>This method returns the current value for your application&apos;s dashboard counter for a given user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.incrementCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.incrementCount/">dashboard.incrementCount</a>
+</div>
+<div class="snippet">
+<p>This method increases your application&apos;s dashboard counter by 1 for a given user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.multiGetCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.multiGetCount/">dashboard.multiGetCount</a>
+</div>
+<div class="snippet">
+<p>This method returns the current value for your application&apos;s dashboard counter for an array of users.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.multiIncrementCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.multiIncrementCount/">dashboard.multiIncrementCount</a>
+</div>
+<div class="snippet">
+<p>This method increases your application&apos;s dashboard counter by 1 for an array of users.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.multiSetCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.multiSetCount/">dashboard.multiSetCount</a>
+</div>
+<div class="snippet">
+<p>This method sets your application&apos;s dashboard counter for an array of users.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.setCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.setCount/">dashboard.setCount</a>
+</div>
+<div class="snippet">
+<p>This method sets your application&apos;s dashboard counter for a given user.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="events-api-methods">Events API Methods</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/events.cancel/" name="http://developers.facebook.com/docs/reference/rest/events.cancel/">events.cancel</a>
+</div>
+<div class="snippet">
+<p>Cancels an event. The application must be an admin of the event.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/events.create/" name="http://developers.facebook.com/docs/reference/rest/events.create/">events.create</a>
+</div>
+<div class="snippet">
+<p>Creates an event on behalf of the user if the application has an active session; otherwise it creates an event on behalf of the application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/events.edit/" name="http://developers.facebook.com/docs/reference/rest/events.edit/">events.edit</a>
+</div>
+<div class="snippet">
+<p>Edits an existing event. The application must be an admin of the event.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/events.get/" name="http://developers.facebook.com/docs/reference/rest/events.get/">events.get</a>
+</div>
+<div class="snippet">
+<p>Returns all visible events according to the filters specified.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/events.getMembers/" name="http://developers.facebook.com/docs/reference/rest/events.getMembers/">events.getMembers</a>
+</div>
+<div class="snippet">
+<p>Returns membership list data associated with an event.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/events.invite/" name="http://developers.facebook.com/docs/reference/rest/events.invite/">events.invite</a>
+</div>
+<div class="snippet">
+<p>Lets your application invite users to an event.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/events.rsvp/" name="http://developers.facebook.com/docs/reference/rest/events.rsvp/">events.rsvp</a>
+</div>
+<div class="snippet">
+<p>Sets the attendance option for the current user.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="custom-tags-api-methods">Custom Tags API Methods</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.deleteCustomTags/" name="http://developers.facebook.com/docs/reference/rest/fbml.deleteCustomTags/">fbml.deleteCustomTags</a>
+</div>
+<div class="snippet">
+<p>Deletes one or more custom tags you previously registered for the calling application with fbml.registerCustomTags.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.getCustomTags/" name="http://developers.facebook.com/docs/reference/rest/fbml.getCustomTags/">fbml.getCustomTags</a>
+</div>
+<div class="snippet">
+<p>Returns the custom tag definitions for tags that were previously defined using fbml.registerCustomTags.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.registerCustomTags/" name="http://developers.facebook.com/docs/reference/rest/fbml.registerCustomTags/">fbml.registerCustomTags</a>
+</div>
+<div class="snippet">
+<p>Registers custom tags you can include in your that applications&apos; FBML markup. Custom tags consist of FBML snippets that are rendered during parse time on the containing page that references the custom tag.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="ads-methods">Ads Methods</h2>
+<div class="refindex">
+</div>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/rest/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1334082209" title="2012年4月10日 11:23">約2ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

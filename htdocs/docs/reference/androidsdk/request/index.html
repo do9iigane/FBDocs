@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/androidsdk/request/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/androidsdk/request/">https://developers.facebook.com/docs/reference/androidsdk/request/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</li>
+<li>
+<a href="/docs/reference/php" name="https://developers.facebook.com/docs/reference/php">PHP SDK</a>
+</li>
+<li>
+<a href="/docs/reference/iossdk" name="https://developers.facebook.com/docs/reference/iossdk">iOS SDK</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/androidsdk" name="https://developers.facebook.com/docs/reference/androidsdk">Android SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/request/" name="http://developers.facebook.com/docs/reference/androidsdk/request/">API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/" name="http://developers.facebook.com/docs/reference/androidsdk/ayncrequest/">Async API Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/authentication/" name="http://developers.facebook.com/docs/reference/androidsdk/authentication/">Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialog/" name="http://developers.facebook.com/docs/reference/androidsdk/dialog/">Dialogs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/helper/" name="http://developers.facebook.com/docs/reference/androidsdk/helper/">Helpers</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Interfaces</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/" name="http://developers.facebook.com/docs/reference/androidsdk/dialoglistener/">DialogListener</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/" name="http://developers.facebook.com/docs/reference/androidsdk/requestlistener/">RequestListener</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Errors</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/" name="http://developers.facebook.com/docs/reference/androidsdk/dialogerror/">DialogError</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/" name="http://developers.facebook.com/docs/reference/androidsdk/facebookerror/">FacebookError</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>API Requests</h1>
+<div class="breadcrumbs">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/androidsdk/" name="https://developers.facebook.com/docs/reference/androidsdk/">Android SDK</a> › <a href="/docs/reference/androidsdk/request/" name="https://developers.facebook.com/docs/reference/androidsdk/request/">API Requests</a>
+</div>
+</div>
+</div>
+<p>The API request methods used in the Facebook Android SDK. These are defined in <a href="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/Facebook.java" name="https://github.com/facebook/facebook-android-sdk/blob/master/facebook/src/com/facebook/android/Facebook.java">Facebook.java</a>.</p>
+<p>You implement these methods to do the following:</p>
+<ul>
+<li>
+<p>Make a server request using the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a>.</p>
+</li>
+<li>
+<p>Make a server request using <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>.</p>
+</li>
+<li>
+<p>Make a server request using the <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>.</p>
+</li>
+</ul>
+<h2>Request Methods</h2>
+<hr />
+<h2>String request(String graphPath) throws MalformedURLException, IOException:</h2>
+<p>Make a request to the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Facebook Graph API</a> without any parameters.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>graphPath</code> - Path to resource in the Facebook graph, e.g., to fetch data about the currently logged authenticated user, provide &quot;me&quot;,which will fetch https://graph.facebook.com/me.</p>
+<p>
+<b>Exceptions</b>
+</p>
+<p>
+<code>MalformedURLException</code> - if accessing an invalid endpoint</p>
+<p>
+<code>IOException</code> - if a network error occurs</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>JSON string representation of the response</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method blocks waiting for a network response, so do not call it in a UI thread.</p>
+<hr />
+<h2>String request(String graphPath, Bundle parameters) throws MalformedURLException, IOException:</h2>
+<p>Make a request to the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Facebook Graph API</a> with the given string parameters using an HTTP GET (default method).</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>graphPath</code> - Path to resource in the Facebook graph, e.g., to fetch data about the currently logged authenticated user, provide &quot;me&quot;,which will fetch https://graph.facebook.com/me.</p>
+<p>
+<code>parameters</code> - key-value string parameters, e.g. the path &quot;search&quot; with parameters &quot;q&quot; : &quot;facebook&quot; would produce a query for the following graph resource: https://graph.facebook.com/search?q=facebook</p>
+<p>
+<b>Exceptions</b>
+</p>
+<p>
+<code>MalformedURLException</code> - if accessing an invalid endpoint</p>
+<p>
+<code>IOException</code> - if a network error occurs</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>JSON string representation of the response</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method blocks waiting for a network response, so do not call it in a UI thread.</p>
+<hr />
+<h2>String request(String graphPath, Bundle parameters, String httpMethod) throws MalformedURLException, IOException:</h2>
+<p>Synchronously make a request to the Facebook Graph API with the given HTTP method and string parameters. Note that binary data parameters (e.g. pictures) are not yet supported by this helper function.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>graphPath</code> - Path to resource in the Facebook graph, e.g., to fetch data about the currently logged authenticated user, provide &quot;me&quot;,which will fetch https://graph.facebook.com/me.</p>
+<p>
+<code>parameters</code> - key-value string parameters, e.g. the path &quot;search&quot; with parameters &quot;q&quot; : &quot;facebook&quot; would produce a query for the following graph resource: https://graph.facebook.com/search?q=facebook</p>
+<p>
+<code>httpMethod</code> - http verb, e.g. &quot;GET&quot;, &quot;POST&quot;, &quot;DELETE&quot;</p>
+<p>
+<b>Exceptions</b>
+</p>
+<p>
+<code>MalformedURLException</code> - if accessing an invalid endpoint</p>
+<p>
+<code>IOException</code> - if a network error occurs</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>JSON string representation of the response</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method blocks waiting for a network response, so do not call it in a UI thread.</p>
+<hr />
+<h2>String request(Bundle parameters) throws MalformedURLException, IOException:</h2>
+<p>Make a request to Facebook&apos;s old <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">REST API</a> with the given parameters. One of the parameter keys must be &quot;method&quot; and its value should be a valid REST server API method.</p>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>parameters</code> - Key-value pairs of parameters to the request. Refer to the documentation: one of the parameters must be &quot;method&quot;. Example:</p>
+<pre>
+     Bundle parameters = new Bundle();
+     parameters.putString(&quot;method&quot;, &quot;auth.expireSession&quot;);
+     String response = request(parameters);
+</pre>
+<p>
+<b>Exceptions</b>
+</p>
+<p>
+<code>IOException</code> - if a network error occurs</p>
+<p>
+<code>MalformedURLException</code> - if accessing an invalid endpoint</p>
+<p>
+<code>IllegalArgumentException</code> - if one of the parameters is not &quot;method&quot;</p>
+<p>
+<b>Return Value</b>
+</p>
+<p>JSON string representation of the response</p>
+<p>
+<b>Notes</b>
+</p>
+<p>This method blocks waiting for a network response, so do not call it in a UI thread.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/androidsdk/request/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1316384293" title="2011年9月18日 15:18">約9ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/ads-api/conversionstatistics/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/ads-api/conversionstatistics/">https://developers.facebook.com/docs/reference/ads-api/conversionstatistics/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Best Practices</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/batch-requests/" name="http://developers.facebook.com/docs/reference/ads-api/batch-requests/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/etags-reference/" name="http://developers.facebook.com/docs/reference/ads-api/etags-reference/">Using ETags</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/currencies/" name="http://developers.facebook.com/docs/reference/ads-api/currencies/">Currencies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/">Introduction to Action Spec</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/" name="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/">Introduction to Sponsored Stories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/" name="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/">Optimized CPM</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Specs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/" name="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/">Conversion Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/creative-specs/" name="http://developers.facebook.com/docs/reference/ads-api/creative-specs/">Creative Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/">Defining Action Specs </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/">Targeting Specs</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced Targeting</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/">Action Spec Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/">Topic Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/">ZIP Code Targeting</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Queries</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/actionestimate/" name="http://developers.facebook.com/docs/reference/ads-api/actionestimate/">Action Estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/generatepreview/" name="http://developers.facebook.com/docs/reference/ads-api/generatepreview/">Action Spec Ad Previews</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/adstatistics/">Ad Statistics</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/" name="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/">Autocomplete Data</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/" name="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/">Broad Target Categories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/" name="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/">Connection Objects</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/">Conversion Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/keywordstats/" name="http://developers.facebook.com/docs/reference/ads-api/keywordstats/">Keyword Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/reachestimate/" name="http://developers.facebook.com/docs/reference/ads-api/reachestimate/">Reach estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-description/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-description/">Targeting Description</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccount/" name="http://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/">Ad account group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcampaign/" name="http://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcreative/" name="http://developers.facebook.com/docs/reference/ads-api/adcreative/">Ad creative</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adimage/" name="http://developers.facebook.com/docs/reference/ads-api/adimage/">Ad image</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/aduser/" name="http://developers.facebook.com/docs/reference/ads-api/aduser/">Ad user</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Conversion Stats</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api/">Ads API</a> › <a href="/docs/reference/ads-api/conversionstatistics/" name="https://developers.facebook.com/docs/reference/ads-api/conversionstatistics/">Conversion Stats</a>
+</div>
+</div>
+</div>
+<p>Conversion stats can be retrieved at <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>, <a href="/docs/reference/ads-api/adcampaign/" name="https://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a> and <a href="/docs/reference/ads-api/adaccount/" name="https://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a> levels. Each conversion stat returns six attribution values for each conversion that is being tracked. These attributions are defined as follow.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Attribution Value</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">post_imp_1d</td>
+<td align="left">Number of conversions within 1 day after viewing an ad</td>
+</tr>
+<tr>
+<td align="left">post_imp_7d</td>
+<td align="left">Number of conversions within 7 days after viewing an ad</td>
+</tr>
+<tr>
+<td align="left">post_imp_28d</td>
+<td align="left">Number of conversions within 28 days after viewing an ad</td>
+</tr>
+<tr>
+<td align="left">post_click_1d</td>
+<td align="left">Number of conversions within 1 day after clicking on an ad</td>
+</tr>
+<tr>
+<td align="left">post_click_7d</td>
+<td align="left">Number of conversions within 7 days after clicking on an ad</td>
+</tr>
+<tr>
+<td align="left">post_click_28d</td>
+<td align="left">Number of conversions within 28 days after clicking on an ad</td>
+</tr>
+</tbody>
+</table>
+<p>
+<strong>Note:</strong> Conversion stats update in near real-time.</p>
+<p>Below examples show how to fetch conversion reports for each object.</p>
+<h2>Ad Account Conversion Stats</h2>
+<p>To retrieve conversion stats for an <a href="/docs/reference/ads-api/adaccount/" name="https://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a> use the following request:</p>
+<pre>
+<code>curl https://graph.facebook.com/act_&lt;ACT_ID&gt;/conversions?access_token=__
+</code>
+</pre>
+<p>Below is an example response:</p>
+<pre>
+<code>{
+  &quot;account_id&quot;: 275246472512411,
+  &quot;values&quot;: [
+  {
+     &quot;start_time&quot;: 1321257600,
+     &quot;end_time&quot;: 1337756400,
+     &quot;conversions&quot;: [
+        {
+           &quot;action_type&quot;: &quot;like&quot;,
+           &quot;object_id&quot;: 69025400418,
+           &quot;post_click_1d&quot;: 2709,
+           &quot;post_click_7d&quot;: 2714,
+           &quot;post_click_28d&quot;: 2728,
+           &quot;post_imp_1d&quot;: 851,
+           &quot;post_imp_7d&quot;: 1993,
+           &quot;post_imp_28d&quot;: 4017
+        },
+        {
+           &quot;action_type&quot;: &quot;checkin&quot;,
+           &quot;object_id&quot;: 312375912145873,
+           &quot;post_click_1d&quot;: 0,
+           &quot;post_click_7d&quot;: 0,
+           &quot;post_click_28d&quot;: 0,
+           &quot;post_imp_1d&quot;: 0,
+           &quot;post_imp_7d&quot;: 0,
+           &quot;post_imp_28d&quot;: 1
+        },
+        {
+           &quot;action_type&quot;: &quot;like&quot;,
+           &quot;object_id&quot;: 312375912145873,
+           &quot;post_click_1d&quot;: 1113,
+           &quot;post_click_7d&quot;: 1114,
+           &quot;post_click_28d&quot;: 1114,
+           &quot;post_imp_1d&quot;: 7,
+           &quot;post_imp_7d&quot;: 23,
+           &quot;post_imp_28d&quot;: 25
+        },
+        {
+           &quot;action_type&quot;: &quot;like&quot;,
+           &quot;object_id&quot;: 64637653943,
+           &quot;post_click_1d&quot;: 8765,
+           &quot;post_click_7d&quot;: 8789,
+           &quot;post_click_28d&quot;: 8818,
+           &quot;post_imp_1d&quot;: 2168,
+           &quot;post_imp_7d&quot;: 4155,
+           &quot;post_imp_28d&quot;: 5772
+        },
+        {
+           &quot;action_type&quot;: &quot;comment&quot;,
+           &quot;object_id&quot;: 40796308305,
+           &quot;post_click_1d&quot;: 1,
+           &quot;post_click_7d&quot;: 1,
+           &quot;post_click_28d&quot;: 1,
+           &quot;post_imp_1d&quot;: 83,
+           &quot;post_imp_7d&quot;: 222,
+           &quot;post_imp_28d&quot;: 314
+        },
+        {
+           &quot;action_type&quot;: &quot;like&quot;,
+           &quot;object_id&quot;: 40796308305,
+           &quot;post_click_1d&quot;: 3,
+           &quot;post_click_7d&quot;: 15,
+           &quot;post_click_28d&quot;: 35,
+           &quot;post_imp_1d&quot;: 665,
+           &quot;post_imp_7d&quot;: 1561,
+           &quot;post_imp_28d&quot;: 2388
+        }
+      ]
+    }
+  ]
+}
+</code>
+</pre>
+<p>
+<strong>Note</strong>: If a conversion spec specifies likes of a post, i.e., {&apos;action.type&apos;:&apos;like&apos;, &apos;post&apos;:POST_ID}, the conversion stats shows the action as &apos;post_like&apos; (see above). This is mainly to enable differentiating likes on a post from likes on a page quickly in the conversion stats response.</p>
+<h2>Ad Campaign Conversion Stats</h2>
+<p>To retrieve conversion stats for all <a href="/docs/reference/ads-api/adcampaign/" name="https://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaigns</a> under an <a href="/docs/reference/ads-api/adaccount/" name="https://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a> use the following request:</p>
+<pre>
+<code>curl https://graph.facebook.com/act_&lt;ACT_ID&gt;/adcampaignconversions?access_token=__
+</code>
+</pre>
+<p>To retrieve stats for specific <a href="/docs/reference/ads-api/adcampaign/" name="https://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaigns</a> within an <a href="/docs/reference/ads-api/adaccount/" name="https://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a>, use the <code>campaign_ids</code> parameter as show in the following request:</p>
+<pre>
+<code>curl https://graph.facebook.com/act_&lt;ACT_ID&gt;/adcampaignconversions?campaign_ids=[123456,1258998]&amp;access_token=__
+</code>
+</pre>
+<p>Alternatively to retrieve stats for a single <a href="/docs/reference/ads-api/adcampaign/" name="https://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a>, use the <code>conversion</code> connection as show in the following request:</p>
+<pre>
+<code>curl https://graph.facebook.com/123456/conversions?access_token=__
+</code>
+</pre>
+<p>Where 123456 is an <a href="/docs/reference/ads-api/adcampaign/" name="https://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a> ID.</p>
+<p>Below is an example response:</p>
+<pre>
+<code>{
+  &quot;start_time&quot;: null,
+  &quot;end_time&quot;: &quot;2012-05-22T07:00:00+0000&quot;,
+  &quot;aggregate_days&quot;: 0,
+  &quot;by_impression_time&quot;: true,
+  &quot;data&quot;: [
+    {
+       &quot;campaign_id&quot;: 6004029540862,
+        &quot;values&quot;: [
+          {
+           &quot;start_time&quot;: 1316674800,
+           &quot;end_time&quot;: 1337670000,
+           &quot;conversions&quot;: [
+              {
+                 &quot;action_type&quot;: &quot;like&quot;,
+                 &quot;object_id&quot;: 157735000934788,
+                 &quot;post_click_1d&quot;: 135,
+                 &quot;post_click_7d&quot;: 135,
+                 &quot;post_click_28d&quot;: 135,
+                 &quot;post_imp_1d&quot;: 4,
+                 &quot;post_imp_7d&quot;: 4,
+                 &quot;post_imp_28d&quot;: 4
+              },
+              {
+                 &quot;action_type&quot;: &quot;post_like&quot;,
+                 &quot;object_id&quot;: 157735000934788,
+                 &quot;post_click_1d&quot;: 2,
+                 &quot;post_click_7d&quot;: 2,
+                 &quot;post_click_28d&quot;: 2,
+                 &quot;post_imp_1d&quot;: 1,
+                 &quot;post_imp_7d&quot;: 2,
+                 &quot;post_imp_28d&quot;: 3
+              },
+              {
+                 &quot;action_type&quot;: &quot;comment&quot;,
+                 &quot;object_id&quot;: 157735000934788,
+                 &quot;post_click_1d&quot;: 1,
+                 &quot;post_click_7d&quot;: 1,
+                 &quot;post_click_28d&quot;: 1,
+                 &quot;post_imp_1d&quot;: 0,
+                 &quot;post_imp_7d&quot;: 1,
+                 &quot;post_imp_28d&quot;: 1
+              }
+         ]
+       }
+     ]
+   }
+ ],
+ &quot;count&quot;: 1,
+ &quot;limit&quot;: 50,
+ &quot;offset&quot;: 0,
+ &quot;paging&quot;: {
+  &quot;next&quot;: &quot;https://graph.facebook.com/6004029540862/conversions?aggregate_days=0&amp;access_token=__&amp;offset=50&quot;
+ }
+} 
+</code>
+</pre>
+<h2>Ad Group Conversion Stats</h2>
+<p>To retrieve conversion stats for all <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad groups</a> in an <a href="/docs/reference/ads-api/adaccount/" name="https://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a> use the following request:</p>
+<pre>
+<code>curl https://graph.facebook.com/act_&lt;ACT_ID&gt;/adgroupconversions?access_token=__
+</code>
+</pre>
+<p>To retrieve stats for specific <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad groups</a> within an <a href="/docs/reference/ads-api/adaccount/" name="https://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a>, use the <code>adgroup_ids</code> parameter as show in the following request:</p>
+<pre>
+<code>curl https://graph.facebook.com/act_&lt;ACT_ID&gt;/adgroupconversions?adgroup_ids=[22113345,980987]&amp;access_token=__
+</code>
+</pre>
+<p>Alternatively to retrieve stats for a single <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>, use the <code>conversion</code> connection as show in the following request:</p>
+<pre>
+<code>curl https://graph.facebook.com/22113345/conversions?access_token=__
+</code>
+</pre>
+<p>Where 22113345 is an <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a> Id.</p>
+<p>Below is an example response:</p>
+<pre>
+<code>  {
+    &quot;start_time&quot;: &quot;2012-03-09T08:00:00+0000&quot;,
+    &quot;end_time&quot;: &quot;2012-04-10T07:00:00+0000&quot;,
+    &quot;aggregate_days&quot;: 0,
+    &quot;by_impression_time&quot;: true,
+    &quot;data&quot;: [
+      {
+       &quot;adgroup_id&quot;: 6005409278262,
+       &quot;values&quot;: [
+        {
+           &quot;start_time&quot;: 1331280000,
+           &quot;end_time&quot;: 1334041200,
+           &quot;conversions&quot;: [
+              {
+                 &quot;action_type&quot;: &quot;like&quot;,
+                 &quot;object_id&quot;: 157735000934788,
+                 &quot;post_click_1d&quot;: 79,
+                 &quot;post_click_7d&quot;: 79,
+                 &quot;post_click_28d&quot;: 79,
+                 &quot;post_imp_1d&quot;: 4,
+                 &quot;post_imp_7d&quot;: 4,
+                 &quot;post_imp_28d&quot;: 4
+              },
+              {
+                 &quot;action_type&quot;: &quot;post_like&quot;,
+                 &quot;object_id&quot;: 157735000934788,
+                 &quot;post_click_1d&quot;: 0,
+                 &quot;post_click_7d&quot;: 0,
+                 &quot;post_click_28d&quot;: 0,
+                 &quot;post_imp_1d&quot;: 1,
+                 &quot;post_imp_7d&quot;: 1,
+                 &quot;post_imp_28d&quot;: 2
+              }
+           ]
+         }
+      ]
+    }
+  ],
+  &quot;count&quot;: 1,
+  &quot;limit&quot;: 50,
+  &quot;offset&quot;: 0,
+  &quot;paging&quot;: {
+  &quot;next&quot;: &quot;https://graph.facebook.com/6005409278262/conversions?aggregate_days=0&amp;start_time=2012-03-10&amp;end_time=2012-04-10&amp;access_token=__&amp;offset=50&quot;
+   }
+  }
+</code>
+</pre>
+<h2>Additional Parameters</h2>
+<p>The following additional parameters are available on Conversion Stats requests.</p>
+<h3>Time Range</h3>
+<p>To fetch conversion stats for a specific date range, append <code>start_time</code> and <code>end_time</code> in date format.</p>
+<pre>
+<code>curl https://graph.facebook.com/act_&lt;ACC_ID&gt;/adcampaignconversions?start_time=2012-01-20&amp;end_time=2012-02-05&amp;adcampaign_ids=[666666]&amp;access_token=__
+</code>
+</pre>
+<p>Alternatively, for UNIX timestamp format, use <code>time_start</code> and <code>time_stop</code> parameters.</p>
+<pre>
+<code>curl https://graph.facebook.com/act_21002924/adcampaignconversions?time_start=1327045120&amp;time_stop=1328427520&amp;adcampaign_ids=[666666]&amp;access_token=_
+</code>
+</pre>
+<h3>Aggregation Window</h3>
+<p>When you use a time range, you may want to specify an aggregation window. If you set the aggregation window to 7 days, it will aggregate conversions for the past 7 days ending on each day in the time range. The default aggregation window is 0 days, that is, the total number of conversions in the time range. To specify an aggregation window, set <code>aggregate_days</code> parameter. For example, the following request asks for conversion stats for each day between 01/20/2012 and 12/05/2012. The conversion stats for each day is aggregated based on 5 day windows ending at that day.</p>
+<pre>
+<code>curl https://graph.facebook.com/act_21002924/adcampaignconversions?aggregate_days=5&amp;start_time=2012-01-20&amp;end_time=2012-02-05&amp;adcampaign_ids=[666666]&amp;access_token=__
+</code>
+</pre>
+<p>
+<strong>Note:</strong> The maximum permitted <code>aggregate_days</code> is 90 days.</p>
+<h3>Default Request Parameters for Lifetime Conversion Stats</h3>
+<p>The default values for <code>start_time</code>, <code>end_time</code>, and <code>aggregate_days</code> are 0, that is the API will return the lifetime stats of this <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a> / <a href="/docs/reference/ads-api/adcampaign/" name="https://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a>/ <a href="/docs/reference/ads-api/adaccount/" name="https://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a> if above parameters are set to zero (or not specified in the request).</p>
+<h3>Aggregation Type</h3>
+<p>You can aggregate conversion stats based on conversion time (default) or impression time. To aggregate stats based on click time, set <code>by_impression_time</code> parameter to false.</p>
+<pre>
+<code>curl https://graph.facebook.com/act_21002924/adcampaignconversions?by_impression_time=false&amp;adcampaign_ids=[666666]&amp;access_token=__
+</code>
+</pre>
+<ul>
+<li>A person&apos;s app used Featured story is eligible to be shown to his/her friends if he/she used the app for at least 4 minutes in the last 14 days or used the app twice ever with one of those times occurring in the last 14 days.</li>
+</ul>
+<h3>Limit</h3>
+<p>The limit is ONLY on the number of entries directly under the &quot;data&quot; field, each of which is the conversion stats of an <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>, <a href="/docs/reference/ads-api/adcampaign/" name="https://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a> or <a href="/docs/reference/ads-api/adaccount/" name="https://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a> with a certain starting date. Within each entry, conversions are broken down by the &quot;action_type&quot; and &quot;object_id&quot;.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1337790328" title="2012年5月23日 9:25">約2週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/ads-api/adgroup/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/ads-api/adgroup/">https://developers.facebook.com/docs/reference/ads-api/adgroup/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Best Practices</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/batch-requests/" name="http://developers.facebook.com/docs/reference/ads-api/batch-requests/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/etags-reference/" name="http://developers.facebook.com/docs/reference/ads-api/etags-reference/">Using ETags</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/currencies/" name="http://developers.facebook.com/docs/reference/ads-api/currencies/">Currencies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/">Introduction to Action Spec</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/" name="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/">Introduction to Sponsored Stories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/" name="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/">Optimized CPM</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Specs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/" name="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/">Conversion Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/creative-specs/" name="http://developers.facebook.com/docs/reference/ads-api/creative-specs/">Creative Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/">Defining Action Specs </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/">Targeting Specs</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced Targeting</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/">Action Spec Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/">Topic Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/">ZIP Code Targeting</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Queries</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/actionestimate/" name="http://developers.facebook.com/docs/reference/ads-api/actionestimate/">Action Estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/generatepreview/" name="http://developers.facebook.com/docs/reference/ads-api/generatepreview/">Action Spec Ad Previews</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/adstatistics/">Ad Statistics</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/" name="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/">Autocomplete Data</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/" name="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/">Broad Target Categories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/" name="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/">Connection Objects</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/">Conversion Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/keywordstats/" name="http://developers.facebook.com/docs/reference/ads-api/keywordstats/">Keyword Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/reachestimate/" name="http://developers.facebook.com/docs/reference/ads-api/reachestimate/">Reach estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-description/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-description/">Targeting Description</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccount/" name="http://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/">Ad account group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcampaign/" name="http://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcreative/" name="http://developers.facebook.com/docs/reference/ads-api/adcreative/">Ad creative</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adimage/" name="http://developers.facebook.com/docs/reference/ads-api/adimage/">Ad image</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/aduser/" name="http://developers.facebook.com/docs/reference/ads-api/aduser/">Ad user</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Ad group</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api/">Ads API</a> › <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>
+</div>
+</div>
+</div>
+<p>An ad on Facebook, as represented in the <a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>. Before using this object please review the <a href="https://developers.facebook.com/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads on the Graph API</a> documentation.</p>
+<h2>Fields</h2>
+<p>Also see the <a href="/docs/reference/ads-api/adcreative" name="https://developers.facebook.com/docs/reference/ads-api/adcreative">
+<code>adCreative</code>
+</a> object and <a href="/docs/reference/ads-api/targeting-specs/" name="https://developers.facebook.com/docs/reference/ads-api/targeting-specs/">Targeting Specs</a>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Permissions</th>
+<th align="left">Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<code>ad_id</code>
+</td>
+<td align="left">ID of the ad group, required for updating ad groups</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>long</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>campaign_id</code>
+</td>
+<td align="left">ID of the campaign, required for creating ad groups</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>long</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>name</code>
+</td>
+<td align="left">The name of the ad group, up to 100 characters in length, required for creating ad groups and can be updated</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>adgroup_status</code>
+</td>
+<td align="left">1 indicates ACTIVE, 3 indicates DELETED, 4 indicates PENDING_REVIEW, 5 indicates DISAPPROVED, 8 indicates CAMPAIGN_PAUSED (resuming the Campaign resumes the ad group), 7 indicates PENDING_BILLING_INFO and 9 indicates ADGROUP_PAUSED, and if the status is ADGROUP_PAUSED the ad group stays in that state regardless of the campaign being PAUSED or ACTIVE because you would have to resume that ad group specifically</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>bid_type</code>
+</td>
+<td align="left">Use 1 for CPC, 2 for CPM, and 6 or 7 for <a href="https://developers.facebook.com/docs/reference/ads-api/optimizedcpm/" name="https://developers.facebook.com/docs/reference/ads-api/optimizedcpm/">Goal-base Optimization</a>; required when creating ad groups;</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>max_bid</code>
+</td>
+<td align="left">The highest bid, defined in cents; required when creating ad groups; can be updated</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>targeting</code>
+</td>
+<td align="left">The ad&apos;s targeting elements, see <a href="/docs/reference/ads-api/targeting-specs/" name="https://developers.facebook.com/docs/reference/ads-api/targeting-specs/">Targeting Specs</a>
+</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>creative</code>
+</td>
+<td align="left">The ad&apos;s creative elements, see <a href="/docs/reference/ads-api/adcreative" name="https://developers.facebook.com/docs/reference/ads-api/adcreative">
+<code>adCreative</code>
+</a>
+</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>adgroup_id</code>
+</td>
+<td align="left">The ID of the ad group</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>long</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>end_time</code>
+</td>
+<td align="left">A unix timestamp for the start time of the ad</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>start_time</code>
+</td>
+<td align="left">A unix timestamp for the stop time of the ad</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>updated_time</code>
+</td>
+<td align="left">A unix timestamp for when the ad was updated</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>bid_info</code>
+</td>
+<td align="left">The ad&apos;s bid information</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>disapprove_reason_descriptions</code>
+</td>
+<td align="left">Reason ad was not approved</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>array</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Connections</h2>
+<p>The <code>adgroup</code> object has the following connections.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Permissions</th>
+<th align="left">Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">stats</td>
+<td align="left">The statistics for the adgroup</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<a href="/docs/reference/ads-api/adstatistics" name="https://developers.facebook.com/docs/reference/ads-api/adstatistics">
+<code>adstatistics</code>
+</a>
+</td>
+</tr>
+<tr>
+<td align="left">reachestimate</td>
+<td align="left">The Reach Estimate for the adgroup</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<a href="/docs/reference/ads-api/reachestimate" name="https://developers.facebook.com/docs/reference/ads-api/reachestimate">
+<code>reachestimate</code>
+</a>
+</td>
+</tr>
+<tr>
+<td align="left">keywordstats</td>
+<td align="left">The keyword stats for the adgroup</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<a href="/docs/reference/ads-api/keywordstats" name="https://developers.facebook.com/docs/reference/ads-api/keywordstats">
+<code>keywordstats</code>
+</a>
+</td>
+</tr>
+<tr>
+<td align="left">adcreatives</td>
+<td align="left">The creative for the adgroup</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<a href="/docs/reference/ads-api/adcreative/" name="https://developers.facebook.com/docs/reference/ads-api/adcreative/">
+<code>adcreative</code>
+</a>
+</td>
+</tr>
+<tr>
+<td align="left">targetingsentencelines</td>
+<td align="left">Human-readable description of the targeting for the adgroup</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<a href="/docs/reference/ads-api/targeting-description/" name="https://developers.facebook.com/docs/reference/ads-api/targeting-description/">
+<code>targetingsentencelines</code>
+</a>
+</td>
+</tr>
+<tr>
+<td align="left">previews</td>
+<td align="left">Generates a Preview of an <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>
+</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<a href="/docs/reference/ads-api/generatepreview/" name="https://developers.facebook.com/docs/reference/ads-api/generatepreview/">
+<code>Ad Preview</code>
+</a> HTML snippet</td>
+</tr>
+</tbody>
+</table>
+<h2>Limits</h2>
+<p>The following are the limits on ad groups</p>
+<ul>
+<li>How many times can an ad be edited? : 200</li>
+</ul>
+<p>
+<a name="using">
+</a>
+</p>
+<h2>Using adgroup objects</h2>
+<p>An ad group contains the data necessary for an ad. Each ad group has its own bids and targeting data. You can retrieve ad-related statistics for an ad group.</p>
+<p>Each ad group is associated with a campaign. All ad groups in a campaign have the same daily or lifetime budget and schedule.</p>
+<p>For the creative elements of an ad group, you specify a creative array. Within the array, you can specify a new creative or the ID of an existing <code>adCreative</code> object. <strong>For information about the <code>adCreative</code> parameters,</strong> see the <a href="/docs/reference/ads-api/adcreative" name="https://developers.facebook.com/docs/reference/ads-api/adcreative">adCreative object</a>.</p>
+<p>For the targeting elements of an ad group, you specify a <a href="/docs/reference/ads-api/targeting-specs/" name="https://developers.facebook.com/docs/reference/ads-api/targeting-specs/">Targeting Specs</a>. For more details on AdGroup targeting please see the <a href="/docs/reference/ads-api/targeting-specs/" name="https://developers.facebook.com/docs/reference/ads-api/targeting-specs/">Targeting Specs</a> documentation.</p>
+<p>Also see the following:</p>
+<ul>
+<li>
+<a href="#upd_del" name="https://developers.facebook.com/docs/#upd_del">Updating and deleting ad groups</a>
+</li>
+<li>
+<a href="#estimreach" name="https://developers.facebook.com/docs/#estimreach">Estimating reach</a>
+</li>
+<li>
+<a href="#getstats" name="https://developers.facebook.com/docs/#getstats">Retrieving stats for an ad group</a>
+</li>
+</ul>
+<p>
+<a name="retrieving">
+</a>
+</p>
+<h3>Retrieving ad groups</h3>
+<p>You can retrieve the data for all the ad groups in an account. Specify the account number as act_AccountNumber. Then use the <code>adGroup</code> object as a connection to act_AccountNumber. For example:</p>
+<pre>
+<code> https://graph.facebook.com/act_368811234/adgroups?access_token=____
+</code>
+</pre>
+<p>Note: At most 1000 adgroups can be retrieved in a single call. Any adgroups in excess of this must be paged through.</p>
+<p>To retrieve the data for a specific ad group use the adgroup ID, for example:</p>
+<pre>
+<code> https://graph.facebook.com/6003299131234?access_token=____
+</code>
+</pre>
+<p>To retrieve the basic data for multiple ad groups, specify their IDs, for example:</p>
+<pre>
+<code> https://graph.facebook.com?ids=6003299131234,6003266531234&amp;access_token=___   
+</code>
+</pre>
+<p>To retrieve all of the adgroups within a campaign specify the <code>adGroup</code> object as a connection to the campaign object, for example:</p>
+<pre>
+<code> https://graph.facebook.com/{campaign-id}/adgroups?access_token=____
+</code>
+</pre>
+<p>To retrieve the adgroups within multiple campaigns, specify the campaign IDs, for example:</p>
+<pre>
+<code> https://graph.facebook.com/act_368811234/adgroups?campaign_ids=[11234345565,5436363546456,34563456345]&amp;access_token=____   
+</code>
+</pre>
+<p>When retrieving adgroups from a account level or a campaign level you can filter deleted adgroups by using the include_deleted parameter</p>
+<pre>
+<code> https://graph.facebook.com/act_368811234/adgroups?include_deleted=true&amp;access_token=____
+</code>
+</pre>
+<p>If the include_deleted parameter is not supplied the default &quot;false&quot; is used. If you use the include_deleted parameter while specifying specific adgroups IDs the include_deleted parameter will be ignored and all of the requested adgroups will be returned.</p>
+<p>
+<a name="creating_group">
+</a>
+</p>
+<h2>Creating an ad group</h2>
+<p>Ad groups include the following elements:</p>
+<ul>
+<li>Campaign under which the ad is placed</li>
+<li>Bid type and maximum bid</li>
+<li>Targeting elements, such as the location, maximum age, and interests of the audience defined in a <a href="/docs/reference/ads-api/targeting-specs/" name="https://developers.facebook.com/docs/reference/ads-api/targeting-specs/">Targeting Spec</a>
+</li>
+<li>Creative elements as defined in an <a href="/docs/reference/ads-api/adcreative" name="https://developers.facebook.com/docs/reference/ads-api/adcreative">ad creative</a>
+</li>
+</ul>
+<p>Before submitting the data for an ad, decide on the ad design, the pricing, the campaign, and the target audience. See <a href="https://www.facebook.com/adsmarketing/index.php?sk=adtypes#!/adsmarketing/index.php?sk=gettingstarted_create" name="https://www.facebook.com/adsmarketing/index.php?sk=adtypes#!/adsmarketing/index.php?sk=gettingstarted_create">Create an ad and set a budget</a>.</p>
+<p>Your campaign pricing can be Cost Per Click (CPC) or Cost Per Thousand Impressions (CPM). See <a href="https://www.facebook.com/adsmarketing/index.php?sk=adtypes#!/adsmarketing/index.php?sk=gettingstarted_create" name="https://www.facebook.com/adsmarketing/index.php?sk=adtypes#!/adsmarketing/index.php?sk=gettingstarted_create">Create an ad and set a budget</a>.</p>
+<p>The following example creates a new ad group using a targeting element and a creative array. Note that instead of using the following values in the creative array, you can specify the ID an existing creative.</p>
+<p>If you specify the following:</p>
+<pre>
+<code>curl -F &quot;campaign_id=6003417011234&quot; -F &quot;bid_type=1&quot;
+-F &quot;max_bid=30&quot; -F &quot;targeting={&apos;countries&apos;:[&apos;US&apos;]}&quot;
+-F &quot;creative={&apos;type&apos;:25,&apos;action_spec&apos;:{&apos;action.type&apos;:&apos;like&apos;, &apos;post&apos;:10150420410887685}}&quot;
+-F &quot;name=test&quot;
+&quot;https://graph.facebook.com/act_368811234/adgroups?access_token=____&quot;
+</code>
+</pre>
+<p>The result will be similar to the following:</p>
+<pre>
+<code>{&quot;id&quot;:6003493971234}
+</code>
+</pre>
+<p>For a non-social ad, you could specify the following:</p>
+<pre>
+<code>curl -F &quot;campaign_id=6003417011234&quot; -F &quot;bid_type=1&quot; -F &quot;max_bid=30&quot;
+-F &quot;targeting={&apos;countries&apos;:[&apos;US&apos;]}&quot; -F
+&quot;creative={&apos;title&apos;:&apos;test&apos;,&apos;body&apos;:&apos;test&apos;,&apos;link_url&apos;:&apos;http:\/\/www.test.com&apos;,
+&apos;image_file&apos;:&apos;test.jpg&apos;}&quot; -F &quot;name=test&quot;
+-F &quot;test.jpg=@.\test.jpg&quot;
+&quot;https://graph.facebook.com/act_368811234/adgroups?access_token=____&quot;
+</code>
+</pre>
+<p>The result will be similar to the following:</p>
+<pre>
+<code>{&quot;id&quot;:6003485421234}
+</code>
+</pre>
+<p>When you create a new ad group, you can specify the ID of a creative (if the creative is in the ad account&apos;s creative library) instead of specifying data for a new creative. The ID of the creative is specified in the <code>creative_id</code> parameter as follows:</p>
+<pre>
+<code>curl -F &quot;campaign_id=6003417011234&quot; -F &quot;bid_type=1&quot; -F &quot;max_bid=30&quot;
+-F &quot;name=Adgroup name&quot;
+-F &quot;targeting={&apos;countries&apos;:[&apos;US&apos;]}&quot; -F
+&quot;creative={&apos;creative_id&apos;:12341234}&quot;
+&quot;https://graph.facebook.com/act_368811234/adgroups?access_token=____&quot;
+</code>
+</pre>
+<p>
+<strong>See <a href="/docs/reference/ads-api/adcreative" name="https://developers.facebook.com/docs/reference/ads-api/adcreative">
+<code>adCreative</code>
+</a> for the ad types and other information for new creatives and for using images</strong>.</p>
+<h3>Redownloading adgroups after creation</h3>
+<p>You can request the newly created adgroup to be returned to you after creation. For example, you could specify a request similar to the following to create an adgroup and have it returned:</p>
+<p>If you specify the following:</p>
+<pre>
+<code>curl -F &quot;campaign_id=6003417011234&quot; -F &quot;bid_type=1&quot;
+-F &quot;max_bid=30&quot; -F &quot;targeting={&apos;countries&apos;:[&apos;US&apos;]}&quot;
+-F &quot;creative={&apos;type&apos;:25,&apos;action_spec&apos;:{&apos;action.type&apos;:&apos;like&apos;, &apos;post&apos;:10150420410887685}}&quot;
+-F &quot;name=test&quot;
+-F &quot;redownload=1&quot;
+&quot;https://graph.facebook.com/act_368811234/adgroups?access_token=____&quot;
+</code>
+</pre>
+<p>The result would be similar to the following:</p>
+<pre>
+<code>{&quot;id&quot;:&quot;6004196911039&quot;,&quot;data&quot;:{&quot;adgroups&quot;:{&quot;6004196911039&quot;:{&quot;adgroup_id&quot;:6004196911039,&quot;ad_id&quot;:6004196911039,&quot;campaign_id&quot;:6003417011234,&quot;name&quot;:&quot;test&quot;,&quot;ad_status&quot;:4,&quot;adgroup_status&quot;:4,&quot;bid_type&quot;:1,&quot;max_bid&quot;:&quot;30&quot;,&quot;bid_info&quot;:{&quot;1&quot;:&quot;30&quot;},&quot;account_id&quot;:368811234,&quot;id&quot;:&quot;6004196911039&quot;,&quot;creative_ids&quot;:[6004196615439],&quot;targeting&quot;:{&quot;countries&quot;:[&quot;US&quot;],&quot;friends_of_connections&quot;:[{&quot;id&quot;:&quot;6004008089439&quot;,&quot;name&quot;:null}]},&quot;start_time&quot;:null,&quot;end_time&quot;:null,&quot;updated_time&quot;:1328021899}},&quot;creatives&quot;:{&quot;6004196615439&quot;:{&quot;type&quot;:25,&quot;action_spec&quot;:&quot;{&apos;action.type&apos;:&apos;like&apos;, &apos;post&apos;:10150420410887685}&quot;,&quot;related_fan_page&quot;:1,&quot;cluster_id&quot;:6004008089439,&quot;name&quot;:&quot;Sponsored story #6004196615439&quot;,&quot;run_status&quot;:1,&quot;preview_url&quot;:&quot;http:\/\/www.facebook.com\/ads\/api\/creative_preview.php?cid=6004196615439&quot;,&quot;count_current_adgroups&quot;:2,&quot;id&quot;:&quot;6004196615439&quot;,&quot;creative_id&quot;:&quot;6004196615439&quot;}}}}
+</code>
+</pre>
+<h3>Retrieving object IDs</h3>
+<p>As described at <a href="/docs/reference/ads-api/adCreative" name="https://developers.facebook.com/docs/reference/ads-api/adCreative">
+<code>adCreative</code>
+</a>, if you specify an ad type other than 1, you need to include the relevant Facebook object ID (in the <code>object_id</code> field). You can obtain a list of object IDs using the Graph API with <code>/act_{account-id}/connectionobjects</code>, which returns the objects for the session user. For most ad types, the page or event&apos;s profile image is used.</p>
+<p>
+<a name="upd_del">
+</a>
+</p>
+<h2>Updating and deleting ad groups</h2>
+<p>Using the ad group ID, you can update the following fields in an ad group:</p>
+<ul>
+<li>name</li>
+<li>max_bid</li>
+<li>bid_info</li>
+<li>adgroup_status</li>
+<li>bid_type</li>
+<li>targeting</li>
+<li>creative</li>
+</ul>
+<p>For example, you could specify a request similar to the following to update the ad group with the ID of 6003493971234:</p>
+<pre>
+<code>curl  -F &quot;name=newname&quot;
+&quot;https://graph.facebook.com/6003493971234?access_token=___&quot;
+</code>
+</pre>
+<p>To delete an ad group, specify a request similar to the following:</p>
+<pre>
+<code> curl  -XDELETE &quot;https://graph.facebook.com/6003417011234?access_token=___&quot;   
+</code>
+</pre>
+<h3>Redownloading adgroups after updating</h3>
+<p>You can request the newly updated adgroup to be returned to you after you update it. For example, you could specify a request similar to the following to update an adgroup and have it returned:</p>
+<p>If you specify the following:</p>
+<pre>
+<code>curl  -F &quot;name=newname&quot;
+-F &quot;redownload=1&quot;
+&quot;https://graph.facebook.com/6003826035839?access_token=___&quot;
+</code>
+</pre>
+<p>The result will be similar to the following:</p>
+<pre>
+<code>{&quot;result&quot;:true,&quot;data&quot;:{&quot;adgroups&quot;:{&quot;6003826035839&quot;:{&quot;adgroup_id&quot;:6003826035839,&quot;ad_id&quot;:6003826035839,&quot;campaign_id&quot;:6003417011234,&quot;name&quot;:&quot;newname&quot;,&quot;ad_status&quot;:4,&quot;adgroup_status&quot;:4,&quot;bid_type&quot;:1,&quot;max_bid&quot;:&quot;30&quot;,&quot;bid_info&quot;:{&quot;1&quot;:&quot;30&quot;},&quot;account_id&quot;:19643108,&quot;id&quot;:&quot;6003826035839&quot;,&quot;creative_ids&quot;:[6003143516439],&quot;targeting&quot;:{&quot;countries&quot;:[&quot;US&quot;],&quot;friends_of_connections&quot;:[{&quot;id&quot;:&quot;125772667501234&quot;,&quot;name&quot;:&quot;Awesome web site&quot;}]},&quot;start_time&quot;:null,&quot;end_time&quot;:null,&quot;updated_time&quot;:1319726641}},&quot;creatives&quot;:{&quot;6003143516439&quot;:{&quot;view_tag&quot;:&quot;&quot;,&quot;alt_view_tags&quot;:[],&quot;creative_id&quot;:6003143516439,&quot;type&quot;:9,&quot;object_id&quot;:125772667501234,&quot;url_tags&quot;:&quot;&quot;,&quot;name&quot;:&quot;Like Story #6003143516439&quot;,&quot;run_status&quot;:1,&quot;preview_url&quot;:&quot;http:\/\/www.facebook.com\/ads\/api\/creative_preview.php?cid=6003143516439&quot;,&quot;count_current_adgroups&quot;:2,&quot;id&quot;:&quot;6003143516439&quot;}}}}
+</code>
+</pre>
+<p>
+<a name="estimreach">
+</a>
+</p>
+<h2>Estimating the reach of a set of targeting values</h2>
+<p>To get the estimated reach of a set of targeting values, submit the targeting values via query string parameter to <code>/act_{account-id}/reachestimate?currency=USD&amp;targeting_spec=</code>. The format is the same as it would be for the targeting array used when <a href="#creating_group" name="https://developers.facebook.com/docs/#creating_group">creating an ad group</a>.</p>
+<p>Note that <code>currency</code> and <code>targeting_spec</code> are required for accessing <code>/act_{account-id}/reachestimate</code>. The returned CPC and CPM values are based on the currency specified. For the list of supported currencies, and the ISO values you can use, see the <a href="https://www.facebook.com/help/?faq=151451521590943" name="https://www.facebook.com/help/?faq=151451521590943">accepted currencies</a>. <code>targeting_spec</code> should include a country code at least.</p>
+<h2>Retrieving ad group targeting and estimating ad group reach</h2>
+<p>You can use <code>/{adgroup-id}</code> to get the targeting values for an ad group.</p>
+<p>You can use <code>/{adgroup-id}/reachestimate</code> to estimate the reach of an ad group.</p>
+<p>
+<a name="getstats">
+</a>
+</p>
+<h2>Retrieving stats for an ad group</h2>
+<p>Statistics for an <code>adGroup</code> object are retrieved in the same way as for an <a href="/docs/reference/api/adCampaign" name="https://developers.facebook.com/docs/reference/api/adCampaign">
+<code>adCampaign</code>
+</a> object.</p>
+<p>For statistics about one or more ad groups, use <code>/{adgroup-id}/stats</code>.</p>
+<p>For more details on ad stats please see the <a href="/docs/reference/ads-api/adstatistics/" name="https://developers.facebook.com/docs/reference/ads-api/adstatistics/">Ad Statistics</a> documentation.</p>
+<h2>Retrieving keyword stats for an ad group</h2>
+<p>You can retrieve an ad group&apos;s keyword stats of the past 7 days (excluding the current day). The ID specified must be for an ad group active in the past 7 days. Additionally, the ad group must use keyword targeting.</p>
+<p>For example, if you specify a request similar to the following:</p>
+<pre>
+<code> https://graph.facebook.com/6002311051234/keywordstats?access_token=____
+</code>
+</pre>
+<p>The result will be similar to the following:</p>
+<pre>
+<code> {
+    &quot;data&quot;: {
+       &quot;#Tennis&quot;: {
+       &quot;impressions&quot;: 156529,
+       &quot;clicks&quot;: 556,
+       &quot;unique_impressions&quot;: 44483,
+       &quot;unique_clicks&quot;: 542
+       },
+       &quot;#Coffee&quot;: {
+       &quot;impressions&quot;: 3265,
+       &quot;clicks&quot;: 19,
+       &quot;unique_impressions&quot;: 777,
+       &quot;unique_clicks&quot;: 19
+       }  
+     }
+ }
+</code>
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/ads-api/adgroup/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1337764361" title="2012年5月23日 2:12">約2週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

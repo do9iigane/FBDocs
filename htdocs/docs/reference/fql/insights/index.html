@@ -1,0 +1,2284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/fql/insights/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/fql/insights/">https://developers.facebook.com/docs/reference/fql/insights/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Tables</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/album/" name="http://developers.facebook.com/docs/reference/fql/album/">album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/application/" name="http://developers.facebook.com/docs/reference/fql/application/">application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/apprequest/" name="http://developers.facebook.com/docs/reference/fql/apprequest/">apprequest</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/checkin/" name="http://developers.facebook.com/docs/reference/fql/checkin/">checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comment/" name="http://developers.facebook.com/docs/reference/fql/comment/">comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comments_info/" name="http://developers.facebook.com/docs/reference/fql/comments_info/">comments_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/connection/" name="http://developers.facebook.com/docs/reference/fql/connection/">connection</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/cookies/" name="http://developers.facebook.com/docs/reference/fql/cookies/">cookies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/developer/" name="http://developers.facebook.com/docs/reference/fql/developer/">developer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain/" name="http://developers.facebook.com/docs/reference/fql/domain/">domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain_admin/" name="http://developers.facebook.com/docs/reference/fql/domain_admin/">domain_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event/" name="http://developers.facebook.com/docs/reference/fql/event/">event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event_member/" name="http://developers.facebook.com/docs/reference/fql/event_member/">event_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/family/" name="http://developers.facebook.com/docs/reference/fql/family/">family</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend/" name="http://developers.facebook.com/docs/reference/fql/friend/">friend</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend_request/" name="http://developers.facebook.com/docs/reference/fql/friend_request/">friend_request</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist/" name="http://developers.facebook.com/docs/reference/fql/friendlist/">friendlist</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist_member/" name="http://developers.facebook.com/docs/reference/fql/friendlist_member/">friendlist_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group/" name="http://developers.facebook.com/docs/reference/fql/group/">group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group_member/" name="http://developers.facebook.com/docs/reference/fql/group_member/">group_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/insights/" name="http://developers.facebook.com/docs/reference/fql/insights/">insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/like/" name="http://developers.facebook.com/docs/reference/fql/like/">like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/links/" name="http://developers.facebook.com/docs/reference/fql/links/">link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/link_stat/" name="http://developers.facebook.com/docs/reference/fql/link_stat/">link_stat</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/location_post/" name="http://developers.facebook.com/docs/reference/fql/location_post/">location_post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/mailbox_folder/" name="http://developers.facebook.com/docs/reference/fql/mailbox_folder/">mailbox_folder</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/message/" name="http://developers.facebook.com/docs/reference/fql/message/">message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notes/" name="http://developers.facebook.com/docs/reference/fql/notes/">note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notification/" name="http://developers.facebook.com/docs/reference/fql/notification/">notification</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/object_url/" name="http://developers.facebook.com/docs/reference/fql/object_url/">object_url</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/offer/" name="http://developers.facebook.com/docs/reference/fql/offer/">offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page/" name="http://developers.facebook.com/docs/reference/fql/page/">page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_admin/" name="http://developers.facebook.com/docs/reference/fql/page_admin/">page_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_blocked_user/" name="http://developers.facebook.com/docs/reference/fql/page_blocked_user/">page_blocked_user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_fan/" name="http://developers.facebook.com/docs/reference/fql/page_fan/">page_fan</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/life_event/" name="http://developers.facebook.com/docs/reference/fql/life_event/">page_milestone</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions/" name="http://developers.facebook.com/docs/reference/fql/permissions/">permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions_info/" name="http://developers.facebook.com/docs/reference/fql/permissions_info/">permissions_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo/" name="http://developers.facebook.com/docs/reference/fql/photo/">photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_src/" name="http://developers.facebook.com/docs/reference/fql/photo_src/">photo_src</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_tag/" name="http://developers.facebook.com/docs/reference/fql/photo_tag/">photo_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/place/" name="http://developers.facebook.com/docs/reference/fql/place/">place</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy/" name="http://developers.facebook.com/docs/reference/fql/privacy/">privacy</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy_setting/" name="http://developers.facebook.com/docs/reference/fql/privacy_setting/">privacy_setting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile/" name="http://developers.facebook.com/docs/reference/fql/profile/">profile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile_tab/" name="http://developers.facebook.com/docs/reference/fql/profile_tab/">profile_view</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question/" name="http://developers.facebook.com/docs/reference/fql/question/">question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option/" name="http://developers.facebook.com/docs/reference/fql/question_option/">question_option</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option_votes/" name="http://developers.facebook.com/docs/reference/fql/question_option_votes/">question_option_votes</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/review/" name="http://developers.facebook.com/docs/reference/fql/review/">review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_friend_info/" name="http://developers.facebook.com/docs/reference/fql/standard_friend_info/">standard_friend_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_user_info/" name="http://developers.facebook.com/docs/reference/fql/standard_user_info/">standard_user_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/status/" name="http://developers.facebook.com/docs/reference/fql/status/">status</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream/" name="http://developers.facebook.com/docs/reference/fql/stream/">stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_filter/" name="http://developers.facebook.com/docs/reference/fql/stream_filter/">stream_filter</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_tag/" name="http://developers.facebook.com/docs/reference/fql/stream_tag/">stream_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/subscription/" name="http://developers.facebook.com/docs/reference/fql/subscription/">subscription</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/thread/" name="http://developers.facebook.com/docs/reference/fql/thread/">thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/translation/" name="http://developers.facebook.com/docs/reference/fql/translation/">translation</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_message/" name="http://developers.facebook.com/docs/reference/fql/unified_message/">unified_message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread/" name="http://developers.facebook.com/docs/reference/fql/unified_thread/">unified_thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_action/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_action/">unified_thread_action</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_count/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_count/">unified_thread_count</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/url_like/" name="http://developers.facebook.com/docs/reference/fql/url_like/">url_like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/user/" name="http://developers.facebook.com/docs/reference/fql/user/">user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video/" name="http://developers.facebook.com/docs/reference/fql/video/">video</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video_tag/" name="http://developers.facebook.com/docs/reference/fql/video_tag/">video_tag</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>insights</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a> › <a href="/docs/reference/fql/insights/" name="https://developers.facebook.com/docs/reference/fql/insights/">insights</a>
+</div>
+</div>
+</div>
+<p>An <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a> table containing statistics about <a href="/docs/reference/api/application" name="https://developers.facebook.com/docs/reference/api/application">
+<code>Applications</code>
+</a>, <a href="/docs/reference/api/page" name="https://developers.facebook.com/docs/reference/api/page">
+<code>Pages</code>
+</a>, and <a href="/docs/reference/api/domain/" name="https://developers.facebook.com/docs/reference/api/domain/">
+<code>Domains</code>
+</a> with 30 or more connections. <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> objects have an equivalent <a href="/docs/reference/api/insights/" name="https://developers.facebook.com/docs/reference/api/insights/">Insights</a> connection type. The <a href="#metrics" name="https://developers.facebook.com/docs/#metrics">Metrics section</a> contains a complete list of available metrics.</p>
+<p>To read <code>insights</code> you need:</p>
+<ul>
+<li>Any valid <code>access_token</code> for the publicly available <code>application_active_users</code> metric</li>
+<li>An app <code>access_token</code> for all app <code>insights</code> app</li>
+<li>
+<code>read_insights</code> <a href="/docs/authentication/permissions" name="https://developers.facebook.com/docs/authentication/permissions">permissions</a> for all apps, Pages and domains owned by the current session user</li>
+</ul>
+<p>Use <a href="https://www.facebook.com/insights" name="https://www.facebook.com/insights">Facebook Insights</a> to claim your domain.</p>
+<h3>Example</h3>
+<p>The <code>application_active_users</code> metric on the <a href="https://www.facebook.com/developers/apps.php?app_id=2439131959" name="https://www.facebook.com/developers/apps.php?app_id=2439131959">Graffiti</a> App for the month up to and including June 26, 2011 (<a href="https://api.facebook.com/method/fql.query?query=SELECT%20metric%2C%20value%20FROM%20insights%20WHERE%20object_id%3D2439131959%20AND%20metric%3D&apos;application_active_users&apos;%20AND%20end_time%3Dend_time_date(&apos;2011-06-26&apos;)%20AND%20period%3Dperiod(&apos;month&apos;)&amp;access_token=OAUTH_ACCESS_TOKEN" name="https://api.facebook.com/method/fql.query?query=SELECT%20metric%2C%20value%20FROM%20insights%20WHERE%20object_id%3D2439131959%20AND%20metric%3D&apos;application_active_users&apos;%20AND%20end_time%3Dend_time_date(&apos;2011-06-26&apos;)%20AND%20period%3Dperiod(&apos;month&apos;)&amp;access_token=OAUTH_ACCESS_TOKEN">Try this query</a>):</p>
+<pre>
+<code>SELECT metric, value FROM insights WHERE object_id=2439131959 AND metric=&apos;application_active_users&apos; AND end_time=end_time_date(&apos;2011-06-26&apos;) AND period=period(&apos;month&apos;)
+</code>
+</pre>
+<p>The <code>page_fan_adds</code> metric for the day April 20, 2012:</p>
+<pre>
+<code>SELECT metric, value FROM insights WHERE object_id=111605505520003 AND metric=&apos;page_fan_adds&apos; AND end_time=1334905200 AND period=86400
+</code>
+</pre>
+<hr />
+<h2>Columns</h2>
+<table class="params columns">
+<tr>
+<th>インデックス可能</th>
+<th>名前</th>
+<th>タイプ</th>
+<th>説明</th>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">object_id</td>
+<td class="type">int</td>
+<td>
+<p>The object for which you are retrieving metrics.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">metric</td>
+<td class="type">string</td>
+<td>
+<p>The usage data to retrieve.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">end_time</td>
+<td class="type">int</td>
+<td>
+<p>The end of the period during which the metrics were collected, expressed as a unix time (which should always be midnight, Pacific Daylight Time) or using the function <code>end_time_date()</code> which takes a date string in <code>&apos;YYYY-MM-DD&apos;</code> format.</p>
+<p>
+<strong>Example:</strong> To obtain data for the 24-hour period starting on September 15th at 00:00 (i.e. 12:00 midnight) and ending on September 16th at 00:00 (i.e. 12:00 midnight), specify 1284620400 as the <code>end_time</code> and 86400 as the <code>period</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">period</td>
+<td class="type">int</td>
+<td>
+<p>The length of the period during which the metrics were collected, expressed in seconds as one of <code>86400</code> (day), <code>604800</code> (week), <code>2592000</code> (month) or <code>0</code> (lifetime) or using the function <code>period()</code> which takes one of the strings <code>day</code>, <code>week</code>, <code>month</code> or <code>lifetime</code>.</p>
+<p>
+<strong>Note:</strong> Each metric may not have all periods available.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">value</td>
+<td class="type">mixed</td>
+<td>
+<p>The value of the requested metric.</p>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="metrics">Metrics</h2>
+<p>The <code>insights</code> table can be queried with the following metrics.</p>
+<ul>
+<li>
+<a href="#application_users" name="https://developers.facebook.com/docs/#application_users">Application Users</a>
+</li>
+<li>
+<a href="#application_content" name="https://developers.facebook.com/docs/#application_content">Application Content</a>
+</li>
+<li>
+<a href="#plugins" name="https://developers.facebook.com/docs/#plugins">Plugins</a>
+</li>
+<li>
+<a href="#canvas" name="https://developers.facebook.com/docs/#canvas">Canvas</a>
+</li>
+<li>
+<a href="#application_tabs" name="https://developers.facebook.com/docs/#application_tabs">Application on Tabs</a>
+</li>
+<li>
+<p>
+<a href="#api_performance" name="https://developers.facebook.com/docs/#api_performance">API Performance</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#page_stories" name="https://developers.facebook.com/docs/#page_stories">Page Stories and People talking about this</a>
+</p>
+</li>
+<li>
+<a href="#page_impressions" name="https://developers.facebook.com/docs/#page_impressions">Page Impressions</a>
+</li>
+<li>
+<a href="#page_engagement" name="https://developers.facebook.com/docs/#page_engagement">Page Engagement</a>
+</li>
+<li>
+<a href="#page_users" name="https://developers.facebook.com/docs/#page_users">Page Users</a>
+</li>
+<li>
+<a href="#page_content" name="https://developers.facebook.com/docs/#page_content">Page Content</a>
+</li>
+<li>
+<p>
+<a href="#page_views" name="https://developers.facebook.com/docs/#page_views">Page Views</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#page_posts" name="https://developers.facebook.com/docs/#page_posts">Page Post</a>
+</p>
+</li>
+<li>
+<a href="#posts_stories" name="https://developers.facebook.com/docs/#posts_stories">Page Post: Stories and People talking about this</a>
+</li>
+<li>
+<a href="#post_impressions" name="https://developers.facebook.com/docs/#post_impressions">Page Post: Impressions</a>
+</li>
+<li>
+<p>
+<a href="#post_engagement" name="https://developers.facebook.com/docs/#post_engagement">Page Post: Engagement</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#domain_content" name="https://developers.facebook.com/docs/#domain_content">Domain Content</a>
+</p>
+</li>
+</ul>
+<p>
+<strong>Notes:</strong>
+</p>
+<ul>
+<li>The <code>_unique</code> suffix indicates the number of unique users who performed a specific action.</li>
+<li>The <code>_login</code> and <code>_logout</code> suffixes indicate page views by users logged in to Facebook and users not logged in to Facebook.</li>
+<li>The <code>_source</code> suffix indicates that the metric will be broken down into a list of referral sources. External referrals are broken down by domain. Internal referrals are broken down by Facebook-specific features such as &apos;Profile&apos;, &apos;Search&apos;, &apos;Requests&apos;, &apos;Suggestions&apos;, &apos;Stream&apos;, etc.</li>
+<li>Metrics that are marked with <code>*</code> are available in real-time, i.e., they are refreshed approximately every 15 minutes.</li>
+</ul>
+<h3 id="application_users">Application Users</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>application_active_users</code>
+</td>
+<td>1 day, 7 day, and 30 day counts of users who have engaged with your app or viewed your app</td>
+<td>day, week, month</td>
+</tr>
+<tr>
+<td>
+<code>application_active_users_locale</code>
+</td>
+<td>Top locales of your active users</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_active_users_city</code>
+</td>
+<td>Top cities of your active users</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_active_users_country</code>
+</td>
+<td>Top countries of your active users</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_active_users_gender</code>
+</td>
+<td>Gender of your active users</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_active_users_age</code>
+</td>
+<td>Age of your active users</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_active_users_gender_age</code>
+</td>
+<td>Gender and age demographics of your active users</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_installed_users</code>
+</td>
+<td>Total installations of your app or connections to your Connect app</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>application_installed_users_locale</code>
+</td>
+<td>Top locales of your app&apos;s installed user base</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>application_installed_users_city</code>
+</td>
+<td>Top cities of your app&apos;s installed user base</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>application_installed_users_country</code>
+</td>
+<td>Top countries of your app&apos;s installed user base</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>application_installed_users_gender</code>
+</td>
+<td>Gender of your app&apos;s installed user base</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>application_installed_users_age</code>
+</td>
+<td>Age of your app&apos;s installed user base</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>application_installed_users_gender_age</code>
+</td>
+<td>Gender and age demographics of your app&apos;s installed user base</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>application_installation_adds</code>
+</td>
+<td>New installations of your app or connections to your Connect site. Follows acceptance of your Terms of Service</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_installation_adds_unique</code>
+</td>
+<td>New installations of your app or connections to your Connect site. Follows acceptance of your Terms of Service</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_installation_removes</code>
+</td>
+<td>Removed installations of your app or connections to your Connect site</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_installation_removes_unique</code>
+</td>
+<td>Removed installations of your app or connections to your Connect site</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_tos_views</code>
+</td>
+<td>Impressions of the Terms Of Service dialog of your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_tos_views_unique</code>
+</td>
+<td>Impressions of the Terms Of Service dialog of your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_permission_views_top</code>
+</td>
+<td>Impressions of each permissions dialog type</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_permission_views_top_unique</code>
+</td>
+<td>Impressions of each permissions dialog type</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_permission_grants_top</code>
+</td>
+<td>Impressions of each permissions dialog type</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_permission_grants_top_unique</code>
+</td>
+<td>Impressions of each permissions dialog type</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_block_adds</code>
+</td>
+<td>Blocks of your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_block_adds_unique</code>
+</td>
+<td>Blocks of your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_block_removes</code>
+</td>
+<td>Removed blocks of your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_block_removes_unique</code>
+</td>
+<td>Removed blocks of your app</td>
+<td>day</td>
+</tr>
+</tbody>
+</table>
+<h3 id="application_content">Application Content</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>application_like_adds</code>
+</td>
+<td>Likes created via your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_like_adds_unique</code>
+</td>
+<td>Likes created via your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_like_removes</code>
+</td>
+<td>Likes deleted via your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_like_removes_unique</code>
+</td>
+<td>Likes deleted via your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_comment_adds</code>
+</td>
+<td>Comments created via your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_comment_adds_unique</code>
+</td>
+<td>Comments created via your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_photos</code>
+</td>
+<td>Photos created via your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_photos_unique</code>
+</td>
+<td>Photos created via your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_shares</code>
+</td>
+<td>Shares Created by your app via the Links.post method</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_shares_unique</code>
+</td>
+<td>Shares Created by your app via the Links.post method</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_status_updates</code>
+</td>
+<td>Status Updates created via your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_status_updates_unique</code>
+</td>
+<td>Status Updates created via your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_stream_stories</code>
+</td>
+<td>Stream.publish stories created via your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_stream_stories_unique</code>
+</td>
+<td>Stream.publish stories created via your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_feed_form_views</code>
+</td>
+<td>Impressions of the Feed form dialog</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_feed_form_views_unique</code>
+</td>
+<td>Impressions of the Feed form dialog from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_feed_form_views_login</code>
+</td>
+<td>Impressions of the Feed form dialog from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_feed_form_views_login_unique</code>
+</td>
+<td>Impressions of the Feed form dialog from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_feed_form_views_logout</code>
+</td>
+<td>Impressions of the Feed form dialog from users not logged into Facebook</td>
+<td>day</td>
+</tr>
+</tbody>
+</table>
+<h3 id="plugins">Plugins</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>application_widget_activity_views</code>
+</td>
+<td>Impressions of your activity plugin</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_activity_views_unique</code>
+</td>
+<td>Activity Plugin impressions from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_activity_views_login</code>
+</td>
+<td>Activity Plugin impressions from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_activity_views_login_unique</code>
+</td>
+<td>Activity Plugin impressions from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_activity_views_logout</code>
+</td>
+<td>Activity Plugin impressions from users not logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_activity_views_external_referrals</code>
+</td>
+<td>Top domains of impressions of your Activity plugins</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_comments_views</code>
+</td>
+<td>Impressions of your Comments plugin</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_comments_views_unique</code>
+</td>
+<td>Impressions of your Comments plugin from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_comments_views_login</code>
+</td>
+<td>Impressions of your Comments plugin from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_comments_views_login_unique</code>
+</td>
+<td>Impressions of your Comments plugin from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_comments_views_logout</code>
+</td>
+<td>Impressions of your Comments plugin from users not logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_fan_views</code>
+</td>
+<td>Impressions of your Like Box</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_fan_views_unique</code>
+</td>
+<td>Impressions of your Like Box plugin from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_fan_views_login</code>
+</td>
+<td>Impressions of your Like Box plugin from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_fan_views_login_unique</code>
+</td>
+<td>Impressions of your Like Box plugin from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_fan_views_logout</code>
+</td>
+<td>Impressions of your Like Box plugin from users not logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_fan_views_external_referrals</code>
+</td>
+<td>Top domains of impressions of your Like Box plugins</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_like_views</code>
+</td>
+<td>Impressions of your Like plugin</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_like_views_unique</code>
+</td>
+<td>Like Button impressions from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_like_views_login</code>
+</td>
+<td>Like Button impressions from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_like_views_login_unique</code>
+</td>
+<td>Like Button impressions from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_like_views_logout</code>
+</td>
+<td>Like Button impressions from users not logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_like_views_external_referrals</code>
+</td>
+<td>Top domains of impressions of your Like plugins</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_live_stream_views</code>
+</td>
+<td>Impressions of your Live Stream plugin</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_live_stream_views_unique</code>
+</td>
+<td>Impressions of your Live Stream plugin from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_live_stream_views_login</code>
+</td>
+<td>Impressions of your Live Stream plugin from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_live_stream_views_login_unique</code>
+</td>
+<td>Impressions of your Live Stream plugin from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_live_stream_views_logout</code>
+</td>
+<td>Impressions of your Live Stream plugin from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_live_stream_views_external_referrals</code>
+</td>
+<td>Top domains of impressions of your Live Stream plugins</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_recommendation_views</code>
+</td>
+<td>Impressions of your Recommendation plugin</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_recommendation_views_unique</code>
+</td>
+<td>Recommendation Plugin impressions from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_recommendation_views_login</code>
+</td>
+<td>Recommendation Plugin impressions from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_recommendation_views_login_unique</code>
+</td>
+<td>Recommendation Plugin impressions from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_recommendation_views_logout</code>
+</td>
+<td>Recommendation Plugin impressions from users not logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_recommendation_views_external_referrals</code>
+</td>
+<td>Top domains of impressions of your Recommendation plugins</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_share_views</code>
+</td>
+<td>Impressions of your Share widget from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_share_views_unique</code>
+</td>
+<td>Impressions of your Share widget from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_views</code>
+</td>
+<td>Total social plugin impressions</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_views_unique</code>
+</td>
+<td>Total social plugin impressions from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_views_login</code>
+</td>
+<td>Total social plugin impressions from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_views_login_unique</code>
+</td>
+<td>Total social plugin impressions from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_widget_views_logout</code>
+</td>
+<td>Total social plugin impressions from users not logged into Facebook</td>
+<td>day</td>
+</tr>
+</tbody>
+</table>
+<h3 id="canvas">Canvas</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>application_canvas_views</code>
+</td>
+<td>Number of impressions of your app&apos;s canvas page</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_canvas_views_unique</code>
+</td>
+<td>Number of impressions of your app&apos;s canvas page from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_canvas_views_login</code>
+</td>
+<td>Number of impressions of your app&apos;s canvas page from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_canvas_views_login_unique</code>
+</td>
+<td>Number of impressions of your app&apos;s canvas page from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_canvas_views_logout</code>
+</td>
+<td>Number of impressions of your app&apos;s canvas page from users not logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_canvas_views_internal_referrals</code>
+</td>
+<td>Top referrers to your Canvas page on Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_canvas_views_external_referrals</code>
+</td>
+<td>Top referrering external domains to your Canvas page</td>
+<td>day</td>
+</tr>
+</tbody>
+</table>
+<h3 id="application_tabs">Application Tabs</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>application_tab_views</code>
+</td>
+<td>Impressions of your app&apos;s tab on users&apos; Profiles</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_tab_views_unique</code>
+</td>
+<td>Impressions of your app&apos;s tab on users&apos; Profiles</td>
+<td>day</td>
+</tr>
+</tbody>
+</table>
+<h3 id="api_performance">API Performance</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>application_api_calls</code>
+</td>
+<td>Total API calls from your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_api_calls_top</code>
+</td>
+<td>Most frequent API calls from your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_api_calls_unique</code>
+</td>
+<td>Total API calls from your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_api_errors</code>
+</td>
+<td>Total API errors from your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_api_errors_rate</code>
+</td>
+<td>Average number of errors per API request from your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_api_errors_top</code>
+</td>
+<td>Most frequent API errors from your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_api_time_average</code>
+</td>
+<td>Average time for API requests from your app, in milliseconds</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_canvas_errors</code>
+</td>
+<td>HTTP request errors on your Canvas page</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_canvas_errors_rate</code>
+</td>
+<td>Average number of errors per canvas request of your app</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>application_canvas_time_average</code>
+</td>
+<td>Average HTTP response time on your Canvas page, in milliseconds</td>
+<td>day</td>
+</tr>
+</tbody>
+</table>
+<h3 id="page_stories">Stories and People talking about this</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>page_stories</code>
+</td>
+<td>The number of stories created about your Page</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_storytellers</code>*</td>
+<td>The number of people sharing stories about your page. These stories include liking your Page, posting to your Page&apos;s Wall, liking, commenting on or sharing one of your Page posts, answering a Question you posted, RSVPing to one of your events, mentioning your Page, phototagging your Page or checking in at your Place <br /> Note that currently only the weekly value is in real-time if you set <code>until=now</code> in the request</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_stories_by_story_type</code>
+</td>
+<td>The number of stories about your Page by story type</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_storytellers_by_story_type</code>
+</td>
+<td>The number of people talking about your Page, by story type</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_storytellers_by_age_gender</code>
+</td>
+<td>The number of People Talking About the Page by user age and gender</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_storytellers_by_country</code>
+</td>
+<td>The number of People Talking About the Page by user country</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_storytellers_by_locale</code>
+</td>
+<td>The number of People Talking About the Page by user language</td>
+<td>day, week, days_28</td>
+</tr>
+</tbody>
+</table>
+<h3 id="page_impressions">Page Impressions</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>page_impressions</code>
+</td>
+<td>The total number of impressions seen of any content associated with your Page</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_impressions_unique</code>
+</td>
+<td>The number of people who have seen any content associated with your Page</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_impressions_paid</code>
+</td>
+<td>The number of impressions of a Sponsored Story or Ad pointing to your Page</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_impressions_paid_unique</code>
+</td>
+<td>Number of people who saw a sponsored story or Ad about your Page</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_impressions_organic</code>
+</td>
+<td>The number of times your posts were seen in News Feed or Ticker or on visits to your Page. These impressions can be Fans or non-Fans</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_impressions_organic_unique</code>
+</td>
+<td>The number of people who visited your Page, or saw your Page or one of its posts in News Feed or Ticker. These impressions can be Fans or non-Fans</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_impressions_viral</code>
+</td>
+<td>The number of impressions of a story published by a friend about your Page. These stories include liking your Page, posting to your Page&apos;s Wall, liking, commenting on or sharing one of your Page posts, answering a Question you posted, RSVPing to one of your events, mentioning your Page, phototagging your Page or checking in at your Place</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_impressions_viral_unique</code>
+</td>
+<td>The number of people who saw your Page or one of its posts from a story published by a friend. These stories include liking your Page, posting to your Page&apos;s Wall, liking, commenting on or sharing one of your Page posts, answering a Question you posted, RSVPing to one of your events, mentioning your Page, phototagging your Page or checking in at your Place</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_impressions_by_story_type</code>
+</td>
+<td>Total impressions of stories published by a friend about your Page by story type</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_impressions_by_story_type_unique</code>
+</td>
+<td>The number of people who saw a story about your Page by story type</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_impressions_by_city_unique</code>
+</td>
+<td>The number of people who have seen any content associated with your Page by city</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_impressions_by_age_gender_unique</code>
+</td>
+<td>The number of people who have seen any content associated with your Page by age and gender grouping</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_impressions_frequency_distribution</code>
+</td>
+<td>The number of people your Page reached broken down by how many times people saw any content about your Page</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_impressions_viral_frequency_distribution</code>
+</td>
+<td>The number of people your Page reached from a story published by a friend, broken down by how many times people saw stories about your Page</td>
+<td>day, week, days_28</td>
+</tr>
+</tbody>
+</table>
+<h3 id="page_engagement">Page Engagement</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>page_engaged_users</code>
+</td>
+<td>The number of people who engaged with your Page. Engagement includes any click</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_consumptions</code>
+</td>
+<td>The number of times people clicked on any of your content without generating a story</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_consumptions_unique</code>
+</td>
+<td>The number of people who clicked on any of your content without generating a story</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_consumptions_by_consumption_type</code>
+</td>
+<td>The number of times people clicked on any of your content without generating a story, by type</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_consumptions_by_consumption_type_unique</code>
+</td>
+<td>The number of people who clicked on any of your content without generating a story, by type</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_places_checkin_total</code>
+</td>
+<td>The number of times people checked into a place</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_places_checkin_total_unique</code>
+</td>
+<td>The number of people who checked into a place</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_places_checkin_mobile</code>
+</td>
+<td>The number of times people checked into a place using mobile phones</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_places_checkin_mobile_unique</code>
+</td>
+<td>The number of people who checked into a place using mobile phones</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_places_checkins_by_age_gender</code>
+</td>
+<td>gender and age of people who checked in at your Place</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_places_checkins_by_locale</code>
+</td>
+<td>top locales of people who checked into your Place</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_places_checkins_by_country</code>
+</td>
+<td>top countries of people who checked into your Place</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_negative_feedback</code>
+</td>
+<td>The number of times people took a negative action (e.g., un-liked or hid a post)</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_negative_feedback_unique</code>
+</td>
+<td>The number of people who took a negative action (e.g., un-liked or hid a post)</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_negative_feedback_by_type</code>
+</td>
+<td>The number of times people took a negative action broken down by type (see <a href="#negative_feedback" name="https://developers.facebook.com/docs/#negative_feedback">negative feedback types</a>)</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_negative_feedback_by_type_unique</code>
+</td>
+<td>The number of people who took a negative action broken down by type see <a href="#negative_feedback" name="https://developers.facebook.com/docs/#negative_feedback">negative feedback types</a>)</td>
+<td>day, week, days_28</td>
+</tr>
+</tbody>
+</table>
+<h3 id="page_users">Page Users</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>page_fans</code>
+</td>
+<td>The total number of people who have liked your Page.</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>page_fans_locale</code>
+</td>
+<td>Aggregated language data about the people who like your Page based on the default language setting selected when accessing Facebook.</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>page_fans_city</code>
+</td>
+<td>Aggregated Facebook location data, sorted by city, about the people who like your Page.</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>page_fans_country</code>
+</td>
+<td>Aggregated Facebook location data, sorted by country, about the people who like your Page</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>page_fans_gender_age</code>
+</td>
+<td>Aggregated demographic data about the people who like your Page based on the age and gender information they provide in their user profiles.</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>page_fan_adds</code>
+</td>
+<td>The number of new people who have liked your Page.</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_fan_adds_unique</code>
+</td>
+<td>The number of new people who have liked your Page.</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_fans_by_like_source</code>
+</td>
+<td>This is a breakdown of the number of Page likes from the most common places where people can like your Page (see <a href="#like_sources" name="https://developers.facebook.com/docs/#like_sources">like sources</a>).</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_fans_by_like_source_unique</code>
+</td>
+<td>The number of people who liked your Page, broken down by the most common places where people can like your Page (see <a href="#like_sources" name="https://developers.facebook.com/docs/#like_sources">like sources</a>).</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_fan_removes</code>
+</td>
+<td>Unlikes of your Page</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_fan_removes_unique</code>
+</td>
+<td>Unlikes of your Page</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_friends_of_fans</code>
+</td>
+<td>The number of people who are friends of the Fans of your Page (estimated)</td>
+<td>day</td>
+</tr>
+</tbody>
+</table>
+<h3 id="page_content">Page Content</h3>
+<p>Most below metrics can be retrieved using <code>post_stories_by_action_type</code>, <code>post_consumptions_by_type</code>, and <code>page_consumptions_by_consumption_type</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>page_tab_views_login_top_unique</code>
+</td>
+<td>The number of users logged into Facebook who saw tabs on your Page</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_tab_views_login_top</code>
+</td>
+<td>The number of times users logged into Facebook saw tabs on your Page</td>
+<td>day</td>
+</tr>
+</tbody>
+</table>
+<h3 id="page_views">Page Views</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>page_views</code>
+</td>
+<td>Page views</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_views_unique</code>
+</td>
+<td>Page Views from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_views_login</code>
+</td>
+<td>Page Views from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_views_login_unique</code>
+</td>
+<td>Page Views from users logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_views_logout</code>
+</td>
+<td>Page views from users not logged into Facebook</td>
+<td>day</td>
+</tr>
+<tr>
+<td>
+<code>page_views_external_referrals</code>
+</td>
+<td>Top referrering external domains sending traffic to your Page.</td>
+<td>day</td>
+</tr>
+</tbody>
+</table>
+<h3 id="page_posts">Page Posts</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>page_posts_impressions</code>
+</td>
+<td>The number of impressions that came from all of your posts</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_posts_impressions_unique</code>
+</td>
+<td>The number of people who saw any of your Page posts</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_posts_impressions_paid</code>
+</td>
+<td>The number of impressions of your Page posts in an Ad or Sponsored Story</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_posts_impressions_paid_unique</code>
+</td>
+<td>The number of people who saw your Page posts in an Ad or Sponsored Story</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_posts_impressions_organic</code>
+</td>
+<td>The number of impressions of your posts in News Feed or Ticker or on your Page</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_posts_impressions_organic_unique</code>
+</td>
+<td>The number of people who saw your Page posts in News Feed or Ticker, or on your Page&apos;s Wall</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_posts_impressions_viral</code>
+</td>
+<td>The number of times users saw your posts via stories published by their friends</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_posts_impressions_viral_unique</code>
+</td>
+<td>The number of people who saw your Page posts via a story from a friend</td>
+<td>day, week, days_28</td>
+</tr>
+<tr>
+<td>
+<code>page_posts_impressions_frequency_distribution</code>
+</td>
+<td>The number of people who saw your Page posts, broken down by how many times people saw your posts</td>
+<td>day, week, days_28</td>
+</tr>
+</tbody>
+</table>
+<h3 id="posts_stories">Page Post: Stories and People talking about this</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>post_stories</code>*</td>
+<td>The number of stories generated about your Page post</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_storytellers</code>*</td>
+<td>The number of unique people who created a story about your Page post</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_stories_by_action_type</code>*</td>
+<td>The number of stories created about your Page post, by action type</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_storytellers_by_action_type</code>*</td>
+<td>The number of unique people who created a story about your Page post, by action type</td>
+<td>lifetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post_impressions">Page Post: Impressions</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>post_impressions</code>*</td>
+<td>The number of times your Page post was seen</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_impressions_unique</code>*</td>
+<td>The number of people who saw your Page post</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_impressions_paid</code>*</td>
+<td>The number of impressions of your Page post in an Ad or Sponsored Story</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_impressions_paid_unique</code>*</td>
+<td>The number of people who saw your Page post in an Ad or Sponsored Story</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_impressions_organic</code>*</td>
+<td>The number of impressions of your post in Newsfeed, Ticker, or on your Page&apos;s Wall</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_impressions_organic_unique</code>*</td>
+<td>The number of people who saw your post in their Newsfeed or Ticker or on your Page&apos;s Wall</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_impressions_viral</code>*</td>
+<td>The number of impressions of your Page post in a story generated by a friend</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_impressions_viral_unique</code>*</td>
+<td>The number of people who saw your page post in a story from a friend</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_impressions_by_story_type</code>*</td>
+<td>The number of times this post was seen via a story published by a friend of the person viewing the post</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_impressions_by_story_type_unique</code>*</td>
+<td>The number of people who saw your page post in a story from a friend, by story type</td>
+<td>lifetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post_engagement">Page Post: Engagement</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>post_consumptions</code>*</td>
+<td>The number of times people clicked on anywhere in your posts without generating a story</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_consumptions_unique</code>*</td>
+<td>The number of people who clicked anywhere in your post without generating a story</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_consumptions_by_type</code>*</td>
+<td>The number of times people clicked on anywhere in your posts without generating a story, by consumption type</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_consumptions_by_type_unique</code>*</td>
+<td>The number of people who clicked anywhere in your post without generating a story, by consumption type</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_engaged_users</code>*</td>
+<td>The number of people who clicked anywhere in your posts</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_negative_feedback</code>*</td>
+<td>The number of times people took a negative action in your post (e.g. hid it)</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_negative_feedback_unique</code>*</td>
+<td>The number of people who took a negative action in your post (e.g., hid it)</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_negative_feedback_by_type</code>*</td>
+<td>The number of times people took a negative action in your post broken down by type</td>
+<td>lifetime</td>
+</tr>
+<tr>
+<td>
+<code>post_negative_feedback_by_type_unique</code>*</td>
+<td>The number of people who took a negative action in your post broken down by type</td>
+<td>lifetime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="domain_content">Domain Content</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Available Periods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>domain_feed_clicks</code>
+</td>
+<td>The number of clicks sent to your site from stories in News Feed, Page Walls, or Profile Walls</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_feed_views</code>
+</td>
+<td>The number of times people viewed stories that link to your site in News Feed, Page Walls, or Profile Walls</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_stories</code>
+</td>
+<td>The number of times people posted a link to your site through an action on a social plugin or through a status message or Wall post</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_widget_comments_adds</code>
+</td>
+<td>The number of times people left comments on your site using the Comments plugin.</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_widget_comments_views</code>
+</td>
+<td>Comments Box impressions on your domain</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_widget_comments_feed_views</code>
+</td>
+<td>The number of times people viewed stories generated from Comments Box comments on your site.</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_widget_comments_feed_clicks</code>
+</td>
+<td>The number of clicks sent to your site from Comment stories.</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_widget_like_views</code>
+</td>
+<td>The number of times people viewed Like buttons on your site</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_widget_likes</code>
+</td>
+<td>The number of times people clicked the Like button on your site</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_widget_like_feed_views</code>
+</td>
+<td>The number of times people viewed stories generated from Like button clicks on your site</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_widget_like_feed_clicks</code>
+</td>
+<td>The number of clicks sent to your site from stories in News Feed, Page Walls, or Profile Walls</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_widget_send_views</code>
+</td>
+<td>Impressions on the Send Button on your domain</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_widget_send_clicks</code>
+</td>
+<td>The number of times people sent messages from your domain using the Send button</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_widget_send_inbox_views</code>
+</td>
+<td>Views of Inbox messages generated by the Send Button</td>
+<td>lifetime, day</td>
+</tr>
+<tr>
+<td>
+<code>domain_widget_send_inbox_clicks</code>
+</td>
+<td>The number of clicks sent to your site from Send button messages</td>
+<td>lifetime, day</td>
+</tr>
+</tbody>
+</table>
+<h3 id="domain_content">Like Sources</h3>
+<p>
+<a name="like_sources">
+</a>
+</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>page_suggestion</code>
+</td>
+<td>People who liked your Page through an invite from an admin</td>
+</tr>
+<tr>
+<td>
+<code>timeline</code>
+</td>
+<td>People who liked your Page from the Likes section of their own Timeline or someone else&apos;s</td>
+</tr>
+<tr>
+<td>
+<code>ads</code>
+</td>
+<td>People who clicked &quot;Like&quot; in an Ad or Sponsored Story pointing to your Page</td>
+</tr>
+<tr>
+<td>
+<code>registration</code>
+</td>
+<td>People you added to your Page as admins</td>
+</tr>
+<tr>
+<td>
+<code>mobile</code>
+</td>
+<td>&apos;People who liked your Page from a mobile device</td>
+</tr>
+<tr>
+<td>
+<code>wizard-suggestion</code>
+</td>
+<td>People who liked your Page in the New User Wizard when registering for Facebook</td>
+</tr>
+<tr>
+<td>
+<code>profile-connect</code>
+</td>
+<td>People who liked your Page on the Page itself or in a News Feed or ticker story</td>
+</tr>
+<tr>
+<td>
+<code>external-connect</code>
+</td>
+<td>People who liked your Page from an external site using a Facebook social plugin</td>
+</tr>
+<tr>
+<td>
+<code>recommended-pages</code>
+</td>
+<td>People who liked your Page from a Recommended Pages unit on the right column of Facebook</td>
+</tr>
+<tr>
+<td>
+<code>favorites</code>
+</td>
+<td>Other Pages that have liked your Page</td>
+</tr>
+<tr>
+<td>
+<code>api</code>
+</td>
+<td>People who liked your Page through an app developed by a third party</td>
+</tr>
+<tr>
+<td>
+<code>page-browser</code>
+</td>
+<td>People who liked your Page using Facebook&apos;s Page Browser</td>
+</tr>
+<tr>
+<td>
+<code>hovercard</code>
+</td>
+<td>People who liked your Page from the popup window they get when they hover over a link that leads to your Pag</td>
+</tr>
+<tr>
+<td>
+<code>search</code>
+</td>
+<td>People who liked your Page from their search results</td>
+</tr>
+<tr>
+<td>
+<code>page-profile</code>
+</td>
+<td>People who liked your Page on the Page itself</td>
+</tr>
+<tr>
+<td>
+<code>ticker</code>
+</td>
+<td>People who liked your Page from a story they saw about it in ticker</td>
+</tr>
+<tr>
+<td>
+<code>like-story</code>
+</td>
+<td>People who liked your Page from a story they saw about a friend liking it</td>
+</tr>
+</tbody>
+</table>
+<h3 id="domain_content">Negative Feedback Types</h3>
+<p>
+<a name="negative_feedback">
+</a>
+</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>hide_all</code>
+</td>
+<td>hide all stories from a Page</td>
+</tr>
+<tr>
+<td>
+<code>hide</code>
+</td>
+<td>hide this story</td>
+</tr>
+<tr>
+<td>
+<code>unlike_page</code>
+</td>
+<td>unlike a page</td>
+</tr>
+<tr>
+<td>
+<code>report_spam</code>
+</td>
+<td>report an object as a spam</td>
+</tr>
+</tbody>
+</table>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/fql/insights/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1337017302" title="2012年5月14日 10:41">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

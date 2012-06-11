@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/internationalization/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/internationalization/">https://developers.facebook.com/docs/internationalization/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a class="selected" href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Internationalization</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/internationalization/" name="https://developers.facebook.com/docs/internationalization/">Internationalization</a>
+</div>
+</div>
+</div>
+<p>Facebook is currently available in over 70 languages, thanks to a framework that allows our user community to translate the text on Facebook. By integrating with Facebook, you can take advantage of our Translations framework immediately, so you can enjoy the benefits that translation can bring to your Platform application or website.</p>
+<p>
+<img src="https://developers.facebook.com/images/devsite/i18n_logo.jpg" /> <a href="locales" name="https://developers.facebook.com/docs/locales">
+</a>
+</p>
+<h3>Understanding Locales</h3>
+<p>The locales that Facebook supports are available in an <a href="https://www.facebook.com/translations/FacebookLocales.xml" name="https://www.facebook.com/translations/FacebookLocales.xml">XML file</a>.</p>
+<p>Facebook locales follow <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" name="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO language</a> and <a href="http://en.wikipedia.org/wiki/ISO_3166-1" name="http://en.wikipedia.org/wiki/ISO_3166-1">country codes</a> respectively, concatenated by an underscore.</p>
+<p>The basic format is &apos;&apos;ll_CC&apos;&apos;, where &apos;&apos;ll&apos;&apos; is a two-letter language code, and &apos;&apos;CC&apos;&apos; is a two-letter country code. For instance, &apos;en_US&apos; represents US English.</p>
+<p>There are two exceptions that do not follow the ISO standard: ar_AR and es_LA. We use these to denote umbrella locales for Arabic and Spanish, despite in the latter case having a few more specialized localizations of Spanish.</p>
+<p>You can determine this information about a user by examining the <code>locale</code> field of the <a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">User</a> Graph API object.</p>
+<h3>Support Locales in Social Plugins and the JavaScript SDK</h3>
+<p>If you&apos;re rendering a <a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">social plugin</a> in an IFrame, Facebook automatically translates the text because it&apos;s based on the viewing user&apos;s locale.</p>
+<p>If you&apos;re using XFBML, you need to load the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a> in the appropriate locale for your site. For example, if your site is in Spanish, reference this script:</p>
+<pre>
+<code>//connect.facebook.net/es_LA/all.js
+</code>
+</pre>
+<h2>Internationalizing your Application</h2>
+<p>The following steps assume you have <a href="/apps" name="https://developers.facebook.com/apps">created an application</a> and have an application ID.</p>
+<ul>
+<li>
+<a href="#prepare" name="https://developers.facebook.com/docs/#prepare">Preparing your application for translation</a>
+</li>
+<li>
+<a href="#register" name="https://developers.facebook.com/docs/#register">Registering the text you want translated</a>
+</li>
+<li>
+<a href="#markup" name="https://developers.facebook.com/docs/#markup">Marking up text for translation</a>
+</li>
+<li>
+<a href="#translate" name="https://developers.facebook.com/docs/#translate">Getting your application translated</a>
+</li>
+<li>
+<a href="#administration" name="https://developers.facebook.com/docs/#administration">Managing the translation process</a>
+</li>
+<li>
+<a href="#best" name="https://developers.facebook.com/docs/#best">Best practices</a>
+</li>
+</ul>
+<p>
+<a name="prepare">
+</a>
+</p>
+<h2>Preparing Your Application for Translation</h2>
+<p>In order to opt into the Facebook Translations framework, you need to set the native language for your application, then you need to decide into which languages you want your application translated.</p>
+<h3>Selecting Your Native Language</h3>
+<ol>
+<li>Go to the <a href="/apps" name="https://developers.facebook.com/apps">My Applications page</a> in the App Dashboard, where you initially configured your application.</li>
+<li>Select the application you want translated, then click <strong>Edit Settings.</strong>
+</li>
+<li>On the <strong>Advanced</strong> tab, under <strong>Contact Info</strong> select the <strong>Language</strong> in which your application is currently written, then save your selection. This selection determines the native language from which translations will occur. If your application is using &quot;English (US)&quot; as the native language you will not see the option and will not be able to change it, as the <a href="/docs/opengraph/internationalization/" name="https://developers.facebook.com/docs/opengraph/internationalization/">Open Graph translations</a> need English as the native app language. See this <a href="/blog/post/605/" name="https://developers.facebook.com/blog/post/605/">blog post</a> for details.</li>
+</ol>
+<h3>Choosing Languages for Translation</h3>
+<p>Once you configure your application&apos;s native language, you need to specify into which languages you want your application translated.</p>
+<ol>
+<li>Visit the <a href="https://www.facebook.com/translations/admin/dashboard.php" name="https://www.facebook.com/translations/admin/dashboard.php">Translations admin panel</a> for your application. Select which application you want to translate from the dropdown menu in the upper right corner.</li>
+<li>Enable a language for translation. To enable translation of your application into a particular locale, select the row for the appropriate <strong>Language</strong>, then check the <strong>On</strong> check box for that locale. After checking it, users can see any strings that you mark as translatable, and can provide translations for them. <br />
+<strong>Note:</strong> If this check box is NOT checked, the only people who can translate your application into this language are the application&apos;s developers (listed in the App Dashboard) and those designated as the language managers for this language in the <strong>Language Managers</strong> column.</li>
+</ol>
+<p>Once you initiate the translation process, you&apos;ll return to the Translations dashboard when you need to do more <a href="#administration" name="https://developers.facebook.com/docs/#administration">administration</a>. For now, these steps are the ones necessary to get started.</p>
+<p>
+<a name="register">
+</a>
+</p>
+<h2>Registering the Text You Want Translated</h2>
+<p>Text can come from a lot of places, and it&apos;s important that if your application is available in a language that everything is translatable. The following is an exhaustive list of all places that you may find content you need to prepare for the translation process.</p>
+<h3>Text that gets rendered within your application or website.</h3>
+<p>Use FBML (for FBML applications) or XFBML (for Facebook websites or IFrame applications) <a href="#markup" name="https://developers.facebook.com/docs/#markup">markup tags</a> for this text.</p>
+<h3 id="text_on_fb">Text entered on facebook.com.</h3>
+<p>There is a list of static text about your application that you may enter on facebook.com which you may want to have translated. Each of these fields, when submitted or updated on Facebook, will automatically be registered on the Translations application on behalf of your application.</p>
+<ul>
+<li>Application Name</li>
+<li>Application Description</li>
+<li>Tab Name</li>
+<li>Attachment Text</li>
+<li>Description (from the Application Profile)</li>
+<li>About the Developers (from the Application Profile)</li>
+<li>Text related to the Open Graph action types and aggregations</li>
+</ul>
+<p>Once a translation is ready for any of these fields from the Translations application, it will automatically get used on Facebook without any further effort on the part of the developer.</p>
+<h3>Text sent through Facebook communication channels (like <a href="/docs/guides/attachments" name="https://developers.facebook.com/docs/guides/attachments">stream attachments</a>).</h3>
+<p>Wrap the text using the <a href="#markup" name="https://developers.facebook.com/docs/#markup">FBML internationalization markup tags</a>. Then, use <a href="/docs/reference/rest/intl.uploadNativeStrings/" name="https://developers.facebook.com/docs/reference/rest/intl.uploadNativeStrings/">intl.uploadNativeStrings</a> if you want to register the text to be translatable by users before actually sending it.</p>
+<h3>Text contained within your databases.</h3>
+<p>You may have content that isn&apos;t rendered directly. For instance, if your application is an online store, you might store a list of item names of your inventory. In order for this text to be registered for translation, use <a href="/docs/reference/rest/intl.uploadNativeStrings/" name="https://developers.facebook.com/docs/reference/rest/intl.uploadNativeStrings/">intl.uploadNativeStrings</a> to register all variations of the text that include each item from your database.</p>
+<p>
+<strong>Note:</strong> This technique should <strong>not</strong> apply to strings that change frequently, or are user-generated. Each application has a static limit for the number of strings that may be registered at any given time, so it&apos;s important to avoid submitting dynamic content for translation.</p>
+<h3>Text contained within images or other non-text-based representations.</h3>
+<p>This content cannot be translated directly using Facebook Translations. If you want to serve internationalized images, you need to generate an image for each language you wish to support, and determine the user&apos;s locale (for example, via <a href="/docs/reference/rest/users.getInfo/" name="https://developers.facebook.com/docs/reference/rest/users.getInfo/">users.getInfo</a>) to decide which image to serve them.</p>
+<!--  ==Examples==
+We've created some examples for you to start with to get an idea of how to make your own application or site translatable.
+###Hello, World!
+This is a simple HTML file that demonstrates how XFBML markup can be used to make a simple string translatable.
+
+###The Run Around, International Edition
+The Run Around was our original Facebook Connect example web site, so it's only appropriate that it goes international as well.  This is a more complicated example which touches on several of the more complex aspects of preparing an application for internationalization.
+
+###Smiley, International Edition
+Smiley is our most up-to-date example FBML application for getting started, so it's only appropriate that it goes international as well.  This is a more complicated example which touches on a few of the more complex aspects of preparing an FBML application for internationalization.
+ -->
+<p>
+<a name="markup">
+</a>
+</p>
+<h2>Marking Up Text for Translation</h2>
+<p>In order for you to submit structured text for use with Facebook Translations, there are a number of FBML and XFBML tags that have been added to accomplish this.</p>
+<ul>
+<li>
+<a href="/docs/reference/fbml/intl" name="https://developers.facebook.com/docs/reference/fbml/intl">fb:intl</a> -- The principal tag for making a string of text translatable. </li>
+<li>
+<a href="/docs/reference/fbml/intl-token" name="https://developers.facebook.com/docs/reference/fbml/intl-token">fb:intl-token</a> -- Replaces a token contained within fb:intl with its content.</li>
+<li>
+<a href="/docs/reference/fbml/tag" name="https://developers.facebook.com/docs/reference/fbml/tag">fb:tag</a> -- Renders an HTML tag. Only useful in conjunction with fb:tag-attribute.</li>
+<li>
+<a href="/docs/reference/fbml/tag-attribute" name="https://developers.facebook.com/docs/reference/fbml/tag-attribute">fb:tag-attribute</a> -- Contains the value of an HTML attribute specified by fb:tag that needs to be translatable. </li>
+<li>
+<a href="/docs/reference/fbml/tag-body" name="https://developers.facebook.com/docs/reference/fbml/tag-body">fb:tag-body</a> -- Contains the contents of an HTML tag specified by fb:tag. Only useful when fb:tag-attribute is needed.</li>
+<li>
+<a href="/docs/reference/fbml/date" name="https://developers.facebook.com/docs/reference/fbml/date">fb:date</a> -- Renders a date, adjusting the format correctly depending on the locale settings of the viewing user.</li>
+<li>
+<a href="/docs/reference/fbml/fbml-attribute" name="https://developers.facebook.com/docs/reference/fbml/fbml-attribute">fb:fbml-attribute</a> -- Similar to fb:tag-attribute, this contains the value of an attribute of an FBML tag, allowing the value to be translated. <strong>(FBML only)</strong>
+</li>
+<li>
+<a href="/docs/reference/fbml/window-title" name="https://developers.facebook.com/docs/reference/fbml/window-title">fb:window-title</a> -- Including this allows the window title of the current IFrame to be translatable. Note that this tag is only useful for Facebook Connect websites. <strong>(XFBML only)</strong>
+</li>
+</ul>
+<h3>Example Code</h3>
+<p>Let&apos;s say you have the following FBML in your application (or XFBML on your site):</p>
+<pre>
+<code>Give &lt;fb:name uid=&quot;4800348&quot; useyou=&quot;false&quot; firstnameonly=true/&gt; 
+a copy of &quot;Catcher In the Rye&quot;?
+</code>
+</pre>
+<p>When Facebook renders the FBML, this would yield the proper English sentence &apos;Give James a copy of &quot;Catcher In the Rye&quot;?&apos;. However, in order to render it in a way that is translatable, this line must be converted to the following:</p>
+<pre>
+<code>&lt;fb:intl desc=&quot;Asking whether user wants to give a book to someone&quot;&gt;
+  Give &lt;fb:name uid=&quot;4800348&quot; useyou=&quot;false&quot;/&gt; a copy of &quot;{book-title}&quot;?
+  &lt;fb:intl-token name=&quot;book-title&quot;&gt;
+      Catcher In the Rye
+  &lt;/fb:intl-token&gt;
+&lt;/fb:intl&gt;
+</code>
+</pre>
+<p>Some things to note about this code:</p>
+<ul>
+<li>The variable text (the book title) is a token formatted in curly brackets, since you don&apos;t want the actual book title to be part of the translatable text. This string, including the token, is what translators will need to be able to translate, using only the description as context. Wrapping the text in <a href="/docs/reference/fbml/intl-token" name="https://developers.facebook.com/docs/reference/fbml/intl-token">fb:intl-token</a> places the variable text into the string at render time. The <code>name</code> attribute must be the string in the token(s) it is meant to replace. While these components generally can be ordered in any way, you should do something similar to the above, for the sake of readability and to prevent forgetting tokens.</li>
+<li>The translatable message still contains the <a href="/docs/reference/fbml/name" name="https://developers.facebook.com/docs/reference/fbml/name">fb:name</a> tag. This tag gets displayed as a token when the string is presented to translators, but the token is inserted by Facebook&apos;s translation system. You do not need to put it inside curly braces manually. The translator will be presented with the string, &quot;Give {name} a copy of &quot;{book-title}&quot;?&quot; in this case.</li>
+</ul>
+<p>Once your FBML text uses these tags, it will be uploaded to the Translations application on the first canvas page load containing this FBML. After that initial page load, it will be translatable both in the Translations application as well as inline by Facebook users. Once the text is translated in, say, Spanish, it will appear to users browsing in the Spanish locale.</p>
+<h3>Best Practices</h3>
+<p>Much of this may become clearer after reading the <a href="#best" name="https://developers.facebook.com/docs/#best">best practices</a> for advice on how to best prepare your applications. We <strong>strongly</strong> encourage you to do so.</p>
+<p>
+<a name="translate">
+</a>
+</p>
+<h2>Getting Your Application Translated</h2>
+<p>Now that you <a href="#prepare" name="https://developers.facebook.com/docs/#prepare">prepared</a> your application or site for translation and <a href="#register" name="https://developers.facebook.com/docs/#register">registered</a> all the text you want translated, you can start getting the text translated. Any Facebook user can translate your application, but it&apos;s much easier for people who have already authorized your application.</p>
+<p>Users can translate text in two ways:</p>
+<ul>
+<li>Inline while using your application.</li>
+<li>Translating in bulk from the Translations application itself, which is an easy way to translate many strings of text at once. </li>
+</ul>
+<h3 id="inline_translation">Inline Translations</h3>
+<p>Users can translate strings inline if they&apos;ve enabled this mode of translation. The screenshot below shows what inline translation mode looks like to a user. Underlined strings are available for translation (and voting) simply by right-clicking on the underlined text.</p>
+<p>
+<a href="/images/devsite/i18n_Inline_Translations.png" name="https://developers.facebook.com/images/devsite/i18n_Inline_Translations.png">
+<img src="https://developers.facebook.com/images/devsite/i18n_Inline_Translations.png" width="600" />
+</a>
+</p>
+<p>Users can enable inline translating by clicking the link in the Translations dialog on the status bar.</p>
+<h3 id="bulk_translation">Bulk Translation</h3>
+<p>The Translations application has a user interface that allows translators to quickly and efficiently translate many strings. To direct a user to translate your application&apos;s strings in bulk, link them to <code>https://www.facebook.com/translations/index.php?translate?app=&lt;YOUR_APP_ID&gt;</code>, specifying your application ID.</p>
+<h3>Learn More</h3>
+<p>The best way to learn how your application can be translated is to actually try it out. The Facebook Translations application has a <a href="https://www.facebook.com/translations?help" name="https://www.facebook.com/translations?help">help guide</a> for getting started with translating. This may help you better understand the process.</p>
+<p>
+<a name="administration">
+</a>
+</p>
+<h2>Managing the Translation Process</h2>
+<p>Use the Translations admin panel to manage the translation process for your applications.</p>
+<ol>
+<li>Visit the <a href="https://www.facebook.com/translations/admin/dashboard.php" name="https://www.facebook.com/translations/admin/dashboard.php">Translations admin panel</a> for your application. If the default selection is not the application you wish to translate, select the right one from the dropdown in the upper right corner.<br />
+<br />
+<img src="https://developers.facebook.com/images/devsite/i18n_Dashboard.jpg" width="600" />
+</li>
+<li>
+<b>Enable it for translation:</b> To enable translation of your application into a particular locale, select the row for the appropriate <strong>Language</strong>, then check the <strong>On</strong> check box for that locale. After checking it, users can see any strings that you mark as translatable, and can provide translations for them. <br />
+<strong>Note:</strong> If this check box is NOT checked, the only people who can translate your application into this language are the application&apos;s developers (listed in the App Dashboard) and those designated as the language managers for this language (see the <strong>Language Managers</strong> column).</li>
+<li>
+<b>Review translated strings:</b> Click the link for the language in the <strong>Language</strong> column. You are taken to the <strong>Browse Phrases</strong> tab for text in this language.</li>
+<li>
+<b>Check the progress of the translation effort:</b> The progress bar in the <strong>Translation/Approval Progress</strong> column gives you a high level idea of what percentage of your text is translated and/or been approved.</li>
+<li>
+<b>Specify language managers:</b> In the <strong>Language Managers</strong> column, specify which Facebook users can administer translations in the given language. These individuals may view, add, and remove translations regardless whether the application is open to all translators.</li>
+<li>
+<b>Publish in that language:</b> When you decide that the existing translations are sufficient, click the blue <strong>Publish</strong> link. It turns green and changes to &apos;&apos;Published&apos;&apos;, which indicates that all users that view your text while viewing Facebook in this locale will see the translations.</li>
+</ol>
+<p>
+<a name="access">
+</a>
+</p>
+<h3>Accessing Your Translations</h3>
+<p>Facebook Translations has multiple ways for you to view and access the text you&apos;ve registered for translation, as well as the translations provided by Facebook users. The translation data retrieved from these methods may be used or stored however you choose.</p>
+<p>You can always view and edit your text and translations from <a href="https://www.facebook.com/translations/admin/browse.php" name="https://www.facebook.com/translations/admin/browse.php">the Translations admin console</a>. However, you can&apos;t export translations from the console currently. You can get the translations programmatically.</p>
+<p>There are two programmatic ways for accessing translation data:</p>
+<ul>
+<li>
+<strong>Calling the <a href="/docs/reference/rest/intl.getTranslations" name="https://developers.facebook.com/docs/reference/rest/intl.getTranslations">intl.getTranslations</a> API method.</strong> Call this method to easily query all of your translations for a particular language. </li>
+<li>
+<strong>Querying the <a href="/docs/reference/fql/translation" name="https://developers.facebook.com/docs/reference/fql/translation">translation FQL table</a>.</strong> Query this table for a very select set of translation data. </li>
+</ul>
+<p>
+<a name="best">
+</a>
+</p>
+<h2>Best Practices</h2>
+<p>We may make many assumptions when working with text in code, which may not always hold true in other languages. To help you prepare your application for most languages and quirks, we offer these best practices and lessons learned by the Facebook internationalization team. Unless otherwise indicated, these examples apply to both FBML and XFBML markup.</p>
+<h3>Be Descriptive</h3>
+<p>In general, text under 20 characters should have a description (use the <code>desc</code> attribute). A word like &quot;Poke&quot; can vary if it is used as a noun or a verb. Facebook Translations works by creating a hash value from the text and description of the phrase. That means that even a slight change to the original text or description will cause your string to be counted as a completely new one. So err on the side of starting off with a complete description you won&apos;t have to clarify later. For example, do this:</p>
+<pre>
+<code>&lt;fb:intl desc=&quot;Label for name of photo album&quot;&gt;Name:&lt;/fb:intl&gt;
+</code>
+</pre>
+<p>In some languages, the word for &quot;name&quot; is different depending on whether it&apos;s the name of a person, a place, or an object. A description here allows a translator to choose the correct word for this label.</p>
+<p>Descriptions should usually indicate context as well as meaning. This is especially important for things like link text that are presented as part of a larger grammatical structure like a sentence.</p>
+<p>So do this:</p>
+<pre>
+<code>&lt;fb:intl desc=&quot;In, &apos;X&apos;s photos are ready to view.&apos;&quot;&gt;{name}&apos;s photos&lt;/fb:intl&gt;
+</code>
+</pre>
+<p>In languages where nouns change depending on whether they&apos;re used as the subject or object of a sentence, this description will allow translators to use the correct form.</p>
+<h3>Don&apos;t Translate Markup</h3>
+<p>Don&apos;t include HTML markup in a translatable string; split the text into multiple translatable strings. Otherwise, translators will be able to modify your markup. <strong>Never</strong> put tags with behavior such as &lt;a&gt; inside a translatable string, since a translator would be able to make changes to the tag&apos;s contents. This is a better way to render an anchor:</p>
+<pre>
+<code>&lt;fb:intl&gt;Click {=here} to continue.
+  &lt;fb:intl-token name=&quot;=here&quot;&gt;
+&lt;a href=&quot;xyzzy&quot;&gt;
+  &lt;fb:intl desc=&quot;In &apos;Click here to continue&apos;&quot;&gt;here&lt;/fb:intl&gt;
+&lt;/a&gt;
+  &lt;/fb:intl-token&gt;
+&lt;/fb:intl&gt;
+</code>
+</pre>
+<h3>Use CSS instead of Markup</h3>
+<p>Use CSS rather than markup to confine text to particular parts of the page or to style your text. For example, if you have the text &quot;Next Page&quot; and you want each word on a separate line, put it in a &lt;div&gt; with a maximum width rather than putting a &lt;br&gt; tag in between the two words. Don&apos;t split the text into separately translatable units since it will prevent translators from changing word order if needed.</p>
+<p>
+<strong>Don&apos;t</strong> do either of these:</p>
+<pre>
+<code>&lt;fb:intl&gt;Next&lt;br/&gt;Page&lt;/fb:intl&gt;
+
+&lt;fb:intl&gt;Next&lt;/fb:intl&gt;&lt;br/&gt;&lt;fb:intl&gt;Page&lt;/fb:intl&gt;
+</code>
+</pre>
+<p>If a language needs the word for &quot;Page&quot; to come before the word for &quot;Next&quot;, it is impossible to translate correctly.</p>
+<p>Rather, do <strong>this</strong>:</p>
+<pre>
+<code>&lt;div class=&quot;limited-width-box&quot;&gt;&lt;fb:intl&gt;Next Page&lt;/fb:intl&gt;&lt;/div&gt;
+</code>
+</pre>
+<p>With appropriate CSS, the browser will word wrap the string appropriately.</p>
+<h3>Translating Attributes of HTML Tags</h3>
+<p>There are some HTML tags that have attributes that can take on text values, like the &quot;value&quot; attribute of an &lt;input&gt; tag or the &quot;alt&quot; text of an image. To make situations like these translatable, use <a href="/docs/reference/fbml/tag-attribute" name="https://developers.facebook.com/docs/reference/fbml/tag-attribute">fb:tag-attribute</a>. You would format markup for a form like this:</p>
+<pre>
+<code>&lt;input type=&quot;submit&quot;&gt; 
+  &lt;fb:tag-attribute name=&quot;value&quot;&gt; 
+    &lt;fb:intl desc=&quot;Button action: Submit a form&quot;&gt;Click here&lt;/fb:intl&gt; 
+  &lt;/fb:tag-attribute&gt; 
+&lt;/input&gt;
+</code>
+</pre>
+<h3>Avoid Layouts Relying on Precise Sizing</h3>
+<p>Try not to use layouts that depend on the precise onscreen sizes of pieces of text in the original language. For any piece of text, in some languages it is likely to be shorter and in some it will be longer (sometimes significantly so in either direction.) If you have sized your user interface elements such that your text just barely fits, your application will probably not work well in a language with longer words.</p>
+<h3>Assume Word Order Will Change</h3>
+<p>Assume that a translator will have to change the word order of every sentence. In particular, don&apos;t try to assemble sentences from smaller separately-translatable fragments, because even if you provide excellent descriptions, it&apos;s likely you will make it impossible for a translator to come up with a grammatically correct translation. Instead, expand all the possible cases out into separate translatable sentences and choose a complete sentence in your code.</p>
+<p>Here&apos;s a simple example to <strong>avoid</strong>:</p>
+<pre>
+<code>&lt;fb:intl&gt;You are eating&lt;/fb:intl&gt; &lt;fb:intl&gt;at home.&lt;/fb:intl&gt;
+&lt;fb:intl&gt;You are eating&lt;/fb:intl&gt; &lt;fb:intl&gt;at a restaurant.&lt;/fb:intl&gt;
+</code>
+</pre>
+<p>Here the code is printing the beginning of the sentence, which doesn&apos;t change in English, then choosing one of two possible endings. This is impossible to translate correctly to Chinese, where the phrases for &quot;at home&quot; and &quot;at a restaurant&quot; need to come before the word for &quot;eating&quot;.</p>
+<p>In this case, use separate phrases:</p>
+<pre>
+<code>&lt;fb:intl&gt;You are eating at home.&lt;/fb:intl&gt;
+&lt;fb:intl&gt;You are eating at a restaurant.&lt;/fb:intl&gt;
+</code>
+</pre>
+<p>Here the code chooses one of two complete sentences. The translator can adjust the word order of both sentences as needed, and these can be correctly translated into every language.</p>
+<p>Or, say you have a phrase like &quot;You have {number} photos.&quot; where you use the word &quot;photo&quot; when the number is 1, expand this out into separate complete sentences line, &quot;You have one photo.&quot; and &quot;You have {number} photos.&quot;, like this:</p>
+<pre>
+<code>&lt;fb:intl&gt;You have one photo.&lt;/fb:intl&gt;
+
+&lt;fb:intl&gt;You have {number} photos.
+    &lt;fb:intl-token name=&quot;number&quot;&gt;5&lt;/fb:intl-token&gt;
+&lt;/fb:intl&gt;
+</code>
+</pre>
+<h3>Don&apos;t Hardcode Punctuation</h3>
+<p>Different languages use different punctuation symbols; for example, Chinese has two different comma characters that are used in different contexts. And Japanese uses its own end-of-sentence character, which is not an English-style period. In general if you allow translators to translate complete sentences (including periods and commas) this won&apos;t be as big an issue for you. So you <strong>should</strong> include punctuation within the fb:intl tags:</p>
+<pre>
+<code>&lt;fb:intl&gt;You have mail.&lt;/fb:intl&gt;
+
+&lt;fb:intl&gt;Favorite color:&lt;/fb:intl&gt; &amp;lt;input ...&gt;
+</code>
+</pre>
+<p>Including the colon as part of the translatable string means translators can substitute another punctuation mark if applicable, or can insert whitespace between the text and the colon (as is done in French, for example.)</p>
+<h3>Messing with Your &lt;head&gt; (XFBML Only)</h3>
+<p>Generally speaking, XFBML will work anywhere in the &lt;body&gt; tag of your page. However, this doesn&apos;t account for the title of the window. You can set a window title using the <a href="/docs/reference/fbml/window-title" name="https://developers.facebook.com/docs/reference/fbml/window-title">fb:window-title</a> tag, placing it anywhere in your document where normal XFBML can be parsed. It will take the rendered contents of the tag as your document&apos;s title. You could now enable a translated window title with the following:</p>
+<pre>
+<code>&lt;fb:window-title&gt; 
+  &lt;fb:intl desc=&quot;Title of a Web page&quot;&gt;Welcome!&lt;/fb:intl&gt; 
+&lt;/fb:window-title&gt;
+</code>
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/internationalization/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1335820251" title="2012年4月30日 14:10">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

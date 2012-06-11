@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/plugins/recommendationsbar/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/plugins/recommendationsbar/">https://developers.facebook.com/docs/reference/plugins/recommendationsbar/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a class="selected" href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/activity/" name="http://developers.facebook.com/docs/reference/plugins/activity/">Activity Feed</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/comments/" name="http://developers.facebook.com/docs/reference/plugins/comments/">Comments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/facepile/" name="http://developers.facebook.com/docs/reference/plugins/facepile/">Facepile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like-box/" name="http://developers.facebook.com/docs/reference/plugins/like-box/">Like Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like/" name="http://developers.facebook.com/docs/reference/plugins/like/">Like Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/live-stream/" name="http://developers.facebook.com/docs/reference/plugins/live-stream/">Live Stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/login/" name="http://developers.facebook.com/docs/reference/plugins/login/">Login Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendations/" name="http://developers.facebook.com/docs/reference/plugins/recommendations/">Recommendations Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/registration/" name="http://developers.facebook.com/docs/reference/plugins/registration/">Registration</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/send/" name="http://developers.facebook.com/docs/reference/plugins/send/">Send Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/subscribe/" name="http://developers.facebook.com/docs/reference/plugins/subscribe/">Subscribe Button</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Beta Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/" name="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/">Recommendations Bar</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Recommendations Bar</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">Social Plugins</a> › <a href="/docs/reference/plugins/recommendationsbar/" name="https://developers.facebook.com/docs/reference/plugins/recommendationsbar/">Recommendations Bar</a>
+</div>
+</div>
+</div>
+<p>The Recommendations Bar allows users to like content, get recommendations, and share what they’re reading with their friends.</p>
+<p>The Recommendations Bar is always docked to the lower right (or left) of the screen. When the page loads the Recommendations bar will be collapsed and the user will have the option to ‘like’ your page.</p>
+<p>As the user nears the end of your page, the plugin will expand. The expanded view will show the user a social recommendation of the next article to read on your site.</p>
+<p>People will also have the option to share what they read on your site with their friends on Facebook. If a user chooses to ‘Add to Facebook,’ she will TOS your application, and in the future every time the plugin is expanded a ‘read’ action will be shared to Facebook. We will aggregate read stories for the user and display them in interesting ways on a user&apos;s Timeline and in friend&apos;s News Feeds, all of which will provide new points of distribution for your site. Read about the <a href="https://developers.facebook.com/docs/opengraph/" name="https://developers.facebook.com/docs/opengraph/">Open Graph</a> for more details on the benefits.</p>
+<p>You must include <a href="https://developers.facebook.com/docs/opengraph/news/" name="https://developers.facebook.com/docs/opengraph/news/">open graph markup</a> on your articles so Facebook knows how to display them on the site. If you do not include this, the plugin will show an error message instead of a recommendation. The Recommendations Bar uses the <code>news.reads</code> Open Graph action which requires Open Graph objects of type <code>article</code> so pages with a recommendations bar must include a <code>&lt;meta property=&quot;og:type&quot; content=&quot;article&quot;/&gt;</code> tag.</p>
+<p>In order to use Open Graph publishing, the App must enable the &quot;Enhanced Auth Dialog&quot; migration. This can be done from the &quot;Advanced&quot; settings of the &quot;Edit App&quot; page.</p>
+<p>
+<b>Expanding the plugin</b>
+<br /> The plugin is expanded once the <code>trigger</code> parameter requirements are met, and the person has been on the page for at least the duration specified in the <code>read_time</code> parameter. There are three values for the <code>trigger</code> parameter:</p>
+<ul>
+<li>
+<code>onvisible</code> - the plugin is expanded when a user scrolls past the exact point where the <code>&lt;fb:recommendations-bar /&gt;</code> tag is placed on the page. This is the simplest option and will work best if you place the tag right at the end of your article&apos;s main content. This is the default.</li>
+<li>
+<code>X%</code> - where <code>X</code> is any positive integer less than or equal to 100. This specifies the percent of the page the user must scroll down before the plugin is expanded. For example: <code>100%</code> would indicate that a user needs to scroll all the way to the end of the page before the plugin expands. <code>50%</code> would be to the mid point of the page. </li>
+<li>
+<code>manual</code> - use this option to manually trigger the plugin. When you want to trigger the plugin, call <code>FB.XFBML.RecommendationsBar.markRead(href);</code> in JavaScript. The <code>href</code> parameter is optional and will default to the current page if not set. If provided, it must match the <code>href</code> parameter on the XFBML tag. The manual trigger is useful when you have more a multi-page article. For example on a three page article, you would add <code>trigger=&quot;manual&quot;</code> on pages one and two and never call the <code>markRead</code> JavaScript function on those pages. </li>
+</ul>
+<p>The <code>read_time</code> parameter tells the plugin to wait a certain amount of time before it expands. It takes an integer representing the number of seconds. By default this will be set to 30 seconds. The minimum is 10 seconds. Note that in order for the plugin to expand, the <code>trigger</code> condition must be true, and the <code>read_time</code> must be met.</p>
+<div class="clearfix">
+<div class="plugin_form" id="ud31sh_2">
+<dl>
+<dt>
+<label for="param_href">URL of the article</label>
+<a data-hover="tooltip" href="#" title="The URL of the article. Defaults to the current page." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_href" name="href" type="text" value="https://developers.facebook.com/blog/post/559/" />
+</dd>
+<dt>
+<label for="param_trigger">Trigger</label>
+<a data-hover="tooltip" href="#" title="When to expand the plugin" name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="trigger" id="param_trigger">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">onvisible</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="onvisible">
+<a aria-checked="true" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">onvisible</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="X%">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">X%</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="manual">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">manual</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="trigger">
+<option value="">
+</option>
+<option selected="1" value="onvisible">onvisible</option>
+<option value="X%">X%</option>
+<option value="manual">manual</option>
+</select>
+</div>
+</dd>
+<dt>
+<label for="param_read_time">Read Time</label>
+<a data-hover="tooltip" href="#" title="The number of seconds the plugin will wait before it expands." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_read_time" name="read_time" size="7" type="text" value="30" />
+</dd>
+<dt>
+<label for="param_action">Verb to display</label>
+<a data-hover="tooltip" href="#" title="The verb to display in the plugin. Currently only &apos;like&apos; and &apos;recommend&apos; are supported." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="action" id="param_action">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">like</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="like">
+<a aria-checked="true" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">like</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="recommend">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">recommend</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="action">
+<option value="">
+</option>
+<option selected="1" value="like">like</option>
+<option value="recommend">recommend</option>
+</select>
+</div>
+</dd>
+<dt>
+<label for="param_side">Side</label>
+<a data-hover="tooltip" href="#" title="The side of the window where the plugin will display." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="side" id="param_side">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">right</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="left">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">left</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="right">
+<a aria-checked="true" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">right</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="side">
+<option value="">
+</option>
+<option value="left">left</option>
+<option selected="1" value="right">right</option>
+</select>
+</div>
+</dd>
+<dt>
+<label for="param_site">Domain</label>
+<a data-hover="tooltip" href="#" title="The domain for which to show recommendations. Defaults to the domain the plugin is on." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_site" name="site" type="text" />
+</dd>
+</dl>
+<div class="getCode">
+<a class="uiButton" href="/docs/reference/plugins/recommendationsbar/code/?revision=300246390037383" id="ud31sh_3" rel="dialog" role="button" name="https://developers.facebook.com/docs/reference/plugins/recommendationsbar/code/?revision=300246390037383">
+<span class="uiButtonText">Get Code</span>
+</a>
+</div>
+</div>
+<div class="plugin_example" id="ud31sh_1">
+</div>
+</div>
+<h2>Attributes</h2>
+<ul>
+<li>
+<code>href</code> - the URL of the page. The XFBML version defaults to the current page. </li>
+<li>
+<code>trigger</code> - when the plugin expands. Note that this parameter is evaluated in addition to the <code>read_time</code> parameter. Default is when a user scrolls past the &lt;fb:recommendations-bar/&gt; tag. There are three options. <ul>
+<li>
+<code>onvisible</code> - read is published when a user scrolls past the exact point where the XFBML tag is placed on the page.</li>
+<li>
+<code>X%</code> - where X is any positive integer less than or equal to 100. Indicates % of page scrolled past before read is triggered </li>
+<li>
+<code>manual</code> - use this option to manually trigger the read action. You call <code>FB.XFBML.RecommendationsBar.markRead(href);</code> when you want the plugin to expand. The <code>href</code> parameter is only necessary if the &lt;fb:recommendations-bar/&gt; tag includes an explicit <code>href</code> attribute. By default, this is the current request URL. </li>
+</ul>
+</li>
+<li>
+<code>read_time</code> - The number of seconds before the plugin will expand. Default is 30 seconds. Minimum is 10 seconds. </li>
+<li>
+<code>action</code> - The verb to display on the button. Options: &apos;like&apos;, &apos;recommend&apos; </li>
+<li>
+<code>side</code> - the side of the screen where the plugin will be displayed. This will automatically adjust based on the language, or can be set explicitly. Options: &apos;left&apos;, &apos;right&apos; </li>
+<li>
+<code>site</code> - a comma separated list of domains to show recommendations for. The default is the domain of the <code>href</code> parameter. </li>
+<li>
+<code>ref</code> - a label for tracking referrals; must be less than 50 characters and can contain alphanumeric characters and some punctuation (currently +/=-.:_). The ref attribute causes two parameters to be added to the referrer URL when a user clicks a link from a stream story about a Like action: <ul>
+<li>
+<code>fb_ref</code> - the ref parameter </li>
+<li>
+<code>fb_source</code> - the stream type (&apos;home&apos;, &apos;profile&apos;, &apos;search&apos;, &apos;other&apos;) in which the click occurred and the story type (&apos;oneline&apos; or &apos;multiline&apos;), concatenated with an underscore. </li>
+</ul>
+</li>
+<li>
+<code>num_recommendations</code> - the number of recommendations to display. By default, this value is 2 and the maximum value is 5. </li>
+<li>
+<p>
+<code>max_age</code> - a limit on recommendation and creation time of articles that are surfaced in the plugins, the default is 0 (we don’t take age into account). Otherwise the valid values are 1-180, which specifies the number of days.</p>
+<p>
+<b>Usage Notes</b>: If you implement the Recommendations Bar, you may only publish Open Graph read actions through the Recommendations Bar.</p>
+</li>
+</ul>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1330367749" title="2012年2月27日 10:35">約3ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

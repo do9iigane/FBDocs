@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/guides/web/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/guides/web/">https://developers.facebook.com/docs/guides/web/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li class="active withsubsections">
+<a class="selected" href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+<ul class="subsections">
+<li>
+<a class="selected" href="/docs/guides/web" name="https://developers.facebook.com/docs/guides/web">Websites</a>
+</li>
+<li>
+<a href="/docs/guides/canvas" name="https://developers.facebook.com/docs/guides/canvas">Apps on Facebook</a>
+</li>
+<li>
+<a href="/docs/guides/mobile" name="https://developers.facebook.com/docs/guides/mobile">Mobile</a>
+</li>
+<li>
+<a href="/docs/appcenter/" name="https://developers.facebook.com/docs/appcenter/">App Center</a>
+</li>
+<li>
+<a href="/docs/bestpractices/" name="https://developers.facebook.com/docs/bestpractices/">Best Practices</a>
+</li>
+<li>
+<a href="/docs/samples" name="https://developers.facebook.com/docs/samples">Samples &amp; How-Tos</a>
+</li>
+<li>
+<a href="/videos" name="https://developers.facebook.com/videos">Videos</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Facebook for Websites</h1>
+<div class="breadcrumbs">
+<a href="/docs/" name="https://developers.facebook.com/docs/">Getting Started</a> › <a href="/docs/guides/web/" name="https://developers.facebook.com/docs/guides/web/">Facebook for Websites</a>
+</div>
+</div>
+</div>
+<p>Facebook Platform enables you to make your website more social. You can use our <a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>, such as the <a href="/docs/reference/plugins/like" name="https://developers.facebook.com/docs/reference/plugins/like">Like Button</a> to drive user engagement with a single line of HTML. Our <a href="/docs/reference/plugins/login" name="https://developers.facebook.com/docs/reference/plugins/login">Login Button</a> and <a href="/docs/plugins/registration" name="https://developers.facebook.com/docs/plugins/registration">Registration Plugin</a> let you simplify or eliminate your own user registration and sign-in. Lastly, the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> lets you access the full social graph of a given user, allowing you to create a truly deep personal experience.</p>
+<p>This guide will walk you through the basics of creating a web app that leverages these features. The examples in this guide use PHP for server-side programming and HTML/JavaScript for client-side code. These examples are very straightforward and easily translatable to other languages.</p>
+<p>In this document:</p>
+<ul>
+<li>
+<a href="#plugins" name="https://developers.facebook.com/docs/#plugins">Social Plugins</a>
+</li>
+<li>
+<a href="#login" name="https://developers.facebook.com/docs/#login">Authentication</a>
+</li>
+<li>
+<a href="#personalization" name="https://developers.facebook.com/docs/#personalization">Personalization</a>
+</li>
+<li>
+<a href="#insights" name="https://developers.facebook.com/docs/#insights">Analytics</a>
+</li>
+</ul>
+<p>
+<a name="plugins">
+</a>
+</p>
+<hr />
+<h2>Social Plugins</h2>
+<p>
+<a href="/plugins/" name="https://developers.facebook.com/plugins/">Social Plugins</a> are the easiest way to get started with Facebook Platform. The plugins are embeddable social features that can be integrated in your site with a line of HTML. Because they are hosted by Facebook, the plugins are personalized for all users who are currently logged into Facebook, even if they are visiting your site for the first time.</p>
+<p>The most important Social Plugin is the <a href="/docs/reference/plugins/like" name="https://developers.facebook.com/docs/reference/plugins/like">Like Button</a>, which enables users to share your page with their friends with one click. You can add a Like button to any page with an <code>iframe</code> tag:</p>
+<pre>
+<code>&lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;My Great Web page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+       &lt;iframe src=&quot;https://www.facebook.com/plugins/like.php?href=YOUR_URL&quot;
+        scrolling=&quot;no&quot; frameborder=&quot;0&quot;
+        style=&quot;border:none; width:450px; height:80px&quot;&gt;&lt;/iframe&gt;
+    &lt;/body&gt;
+ &lt;/html&gt;
+</code>
+</pre>
+<p>There are a <a href="/docs/reference/plugins/like" name="https://developers.facebook.com/docs/reference/plugins/like">number of options</a> for the Like Button, including the option to include the names and profile pictures of the user&apos;s friends who have also liked the page. Here is a Like Button for the Facebook Developers site:</p>
+<div style="width:450px; height:60px; margin:auto; margin-top:1.5em; margin-bottom:1.5em; border:0px solid #d8dfea; line-height:0; padding:5px">
+<fb:like height="40" width="450">
+</fb:like>
+</div>
+<p>Once you have included the Like Button into your site, you can use other Social Plugins to turn those user interactions into more engaging experiences throughout your site. You can use the <a href="/docs/reference/plugins/activity" name="https://developers.facebook.com/docs/reference/plugins/activity">Activity Feed Plugin</a> to show users a stream of the recent likes and comments from their friends on your site. You can use the <a href="/docs/reference/plugins/recommendations" name="https://developers.facebook.com/docs/reference/plugins/recommendations">Recommendations Plugin</a> to show personalized page recommendations to your users based on the likes and comments across your entire site. Here are the activity and recommendations plugins for the Facebook Developers site:</p>
+<table style="border:0; border-spacing:0; border-collapse:collapse; margin:auto; margin-top:1.5em; margin-bottom:1.5em">
+<tr>
+<td style="border:0; padding:0; padding-right:25px; height:350px">
+<fb:activity height="350" site="developers.facebook.com" width="300">
+</fb:activity>
+</td>
+<td style="border:0; padding:0">
+<fb:recommendations height="350" site="developers.facebook.com" width="300">
+</fb:recommendations>
+</td>
+</tr>
+</table>
+<p>Most Social Plugins can be integrated with your site by simply including the <code>iframe</code> tag for the plugin within your page. There are several Social Plugins, such as <a href="/docs/reference/plugins/comments" name="https://developers.facebook.com/docs/reference/plugins/comments">Comments</a> and <a href="/docs/reference/plugins/live-stream" name="https://developers.facebook.com/docs/reference/plugins/live-stream">Live Stream</a>, that require the use of XFBML (eXtended Facebook Markup Language). XFBML is a set of XML elements that can be included in your HTML pages to display Social Plugins. When your page is loaded, any XFBML elements found in the document are processed by the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>, resulting in the appropriate plugin being rendered on your page.</p>
+<p>We provide XFBML elements for all of our Social Plugins. For example, the Like Button can also be placed on your page by using the XFBML equivalent:</p>
+<pre>
+<code> &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;My Great Web page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+      &lt;script&gt;
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = &quot;//connect.facebook.net/en_US/all.js#xfbml=1&quot;;
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, &apos;script&apos;, &apos;facebook-jssdk&apos;));
+      &lt;/script&gt;
+      &lt;div class=&quot;fb-like&quot;&gt;&lt;/div&gt;
+    &lt;/body&gt;
+ &lt;/html&gt;
+</code>
+</pre>
+<p>The <code>iframe</code> versions of our plugins are the most widely used, as they require a minimal understanding of Facebook Platform. The XFBML versions are typically used by more sophisticated developers looking for more control and consistency in their codebase.</p>
+<p>Getting started could not be simpler. Just select the plugin from our <a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">Social Plugin page</a> and follow the steps in the provided configurator. These configurators, like the below, help you setup your plugin and generate all the code you need to add it to your site.</p>
+<p>
+<img alt="Like Config" src="https://developers.facebook.com/attachment/like_config.png" />
+</p>
+<p>
+<a name="login">
+</a>
+</p>
+<hr />
+<h2>Authentication</h2>
+<p>Facebook helps you simplify and enhance user registration and sign-in by using Facebook as your login system. Users no longer need to fill in yet another registration form or remember another username and password to use your site. As long as the user is signed into Facebook, they are automatically signed into your site as well. Using Facebook for login provides you with all the information you need to create a social, personalized experience from the moment the user visits your site in their browser.</p>
+<p>Facebook Platform uses <a href="http://oauth.net/2/" name="http://oauth.net/2/">OAuth 2.0</a> for authentication and authorization. While you can add login to your site using OAuth 2.0 directly (see our <a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication Overview</a>), the open source <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a> is the simplest way to use Facebook for login.</p>
+<p>The JavaScript SDK requires that you <a href="/apps/" name="https://developers.facebook.com/apps/">register your website</a> with Facebook to get an <strong>App ID</strong> (or appId). The appId is a unique identifier for your site that ensures that we have the right level of security in place between the user and your website. In order to use the authentication methods, your app must be configured with an App Domain. App settings can be changed on the <a href="/apps" name="https://developers.facebook.com/apps">settings page</a>. The following example shows how to load the JavaScript SDK once you have your appId:</p>
+<pre>
+<code> &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;My Facebook Login Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+      &lt;script&gt;
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : &apos;YOUR_APP_ID&apos;,
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+        };
+        (function(d){
+           var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+           js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+           js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+           d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+         }(document));
+      &lt;/script&gt;
+    &lt;/body&gt;
+ &lt;/html&gt;
+</code>
+</pre>
+<p>Once you have loaded the JavaScript SDK into your page and initialized it with your appId, you simply add the <a href="/docs/reference/plugins/login" name="https://developers.facebook.com/docs/reference/plugins/login">Login Button</a> to your page using the <code>&lt;div class=&quot;fb-login-button&quot;&gt;</code> element as shown below:</p>
+<pre>
+<code> &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;My Facebook Login Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+      &lt;script&gt;
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : &apos;YOUR_APP_ID&apos;,
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+        };
+        (function(d){
+           var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+           js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+           js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+           d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+         }(document));
+      &lt;/script&gt;
+      &lt;div class=&quot;fb-login-button&quot;&gt;Login with Facebook&lt;/div&gt;
+    &lt;/body&gt;
+ &lt;/html&gt;
+</code>
+</pre>
+<p>When the user loads the page in their browser, the JavaScript SDK renders the Login Button on your page:</p>
+<p>
+<img alt="Login Button" src="https://developers.facebook.com/attachment/login_button.png" />
+</p>
+<p>In order to log the user into your site, three things need to happen. First, Facebook needs to <strong>authenticate</strong> the user. This ensures that the user is who they say they are. Second, Facebook needs to <strong>authenticate</strong> your website. This ensures that the user is giving their information to your site and not someone else. Lastly, the user must explicitly <strong>authorize</strong> your website to access their information. This ensures that the user knows exactly what data they are disclosing to your site.</p>
+<p>These steps may seem complex, but fortunately all you need to do is use the Login Button and all the user needs to do is click it. When the user does so, the JavaScript SDK will ensure that the user is signed into Facebook and that the request is coming from your website. We then present an <strong>authorization dialog</strong> in their browser that provides information about your site and the user data you are requesting. By default, this dialog looks like the below:</p>
+<p>
+<img alt="Authorization Dialog" src="https://developers.facebook.com/attachment/website_gdp.png" />
+</p>
+<p>If the user clicks <strong>Allow</strong>, we will give your site access to the requested information. If the user clicks, <strong>Don&apos;t Allow</strong> the dialog will close and no information will be available to your website. By default, we give you access to the user&apos;s name, picture and any other data they have shared with everyone on Facebook (see the <a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">User Graph object</a> for more details).</p>
+<p>If you need access to more information, such as the user&apos;s email address, etc. you must request <strong>permissions</strong> for this information. If you can do this by adding the permissions you need to the <code>scope</code> attribute of the Login Button like below:</p>
+<pre>
+<code> &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;My Facebook Login Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+      &lt;script&gt;
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : &apos;YOUR_APP_ID&apos;,
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+        };
+        (function(d){
+           var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+           js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+           js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+           d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+         }(document));
+      &lt;/script&gt;
+      &lt;div class=&quot;fb-login-button&quot; scope=&quot;email,user_checkins&quot;&gt;
+        Login with Facebook
+      &lt;/div&gt;
+    &lt;/body&gt;
+ &lt;/html&gt;
+</code>
+</pre>
+<p>When the user clicks the login button from this page, they will see the below authorization dialog. Note that there are now two new sections that outline the additional information that your site is requesting permission to access.</p>
+<p>
+<img alt="Authorization Permissions" src="https://developers.facebook.com/attachment/web_permissions.png" />
+</p>
+<p>A full list of permissions is available in our <a href="/docs/authentication/permissions" name="https://developers.facebook.com/docs/authentication/permissions">permissions reference</a>. There is a strong inverse correlation between the number of permissions your site requests and the number of users that will allow those permissions. The greater the number of permissions you ask for, the lower the number of users that will grant them; so we recommend that you only request the permissions you absolutely need for your site.</p>
+<p>In addition to Login Button, we offer the <a href="/docs/plugins/registration" name="https://developers.facebook.com/docs/plugins/registration">Registration Plugin</a>. The Registration Plugin offers two key features not available with the Login Button: support for users without Facebook accounts and the ability to request additional user information that Facebook may not have or make available.</p>
+<p>Using the Registration Plugin is just as simple as using the Login Button. You merely need to use the <code>&lt;div class=&quot;fb-registration&quot;&gt;</code> element in your page, rather than the Login Button:</p>
+<pre>
+<code> &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;My Facebook Login Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+      &lt;script&gt;
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : &apos;YOUR_APP_ID&apos;,
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+        };
+        (function(d){
+           var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+           js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+           js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+           d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+         }(document));
+      &lt;/script&gt;
+      &lt;div 
+        class=&quot;fb-registration&quot; 
+        data-fields=&quot;[{&apos;name&apos;:&apos;name&apos;}, {&apos;name&apos;:&apos;email&apos;},
+          {&apos;name&apos;:&apos;favorite_car&apos;,&apos;description&apos;:&apos;What is your favorite car?&apos;,
+            &apos;type&apos;:&apos;text&apos;}]&quot; 
+        data-redirect-uri=&quot;URL_TO_LOAD_AFTER_REGISTRATION&quot;
+      &lt;/div&gt;
+    &lt;/body&gt;
+ &lt;/html&gt;
+</code>
+</pre>
+<p>If the user is not already logged into Facebook, they will see the below form. Notice that the form is not prefilled with any user information, but there is a link to login to Facebook to do so.</p>
+<p>
+<img alt="Registration No Login" src="https://developers.facebook.com/attachment/reg_no_user.png" />
+</p>
+<p>If the user is already logged into Facebook or decides to login from the registration form, they will see the below. Notice that the form is now prefilled with their Facebook information.</p>
+<p>
+<img alt="Registration Login" src="https://developers.facebook.com/attachment/reg_user.png" />
+</p>
+<p>Once the user reviews the information and/or enters any custom fields (in the above example, <code>favorite_car</code> is a custom field that the user must populate directly, as it is not data that is currently part of the user&apos;s Facebook profile), the user clicks Register. This will start the authentication and authorization process which is denoted by the below dialog:</p>
+<p>
+<img alt="Registration Sign in" src="https://developers.facebook.com/attachment/reg_signin.png" />
+</p>
+<p>With authentication/authorization complete, we redirect the user to whatever URL you placed into the <code>redirect-uri</code> attribute of the plugin which completes the registration process.</p>
+<p>The Login Button and the Registration Plugin allow you to easily bring the more than 500 million Facebook users to your site. In doing so, you can also eliminate or reduce whole parts of your codebase. You can learn more about how to add Login with Facebook to your site by reading the documentation for the <a href="/docs/reference/plugins/login" name="https://developers.facebook.com/docs/reference/plugins/login">Login Button</a>, the <a href="/docs/plugins/registration" name="https://developers.facebook.com/docs/plugins/registration">Registration Plugin</a> and the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>.</p>
+<p>
+<a name="personalization">
+</a>
+</p>
+<hr />
+<h2>Personalization</h2>
+<p>While <a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a> offer a easy way to personalized your site, once you have added login to your site, you can access the full power of the <a href="/docs/api" name="https://developers.facebook.com/docs/api">Graph API</a> to create an even deeper personalized experience for your users. You can use the Graph API to access the user&apos;s Facebook profile, using this data in your own custom experience. You can use the Graph API to publish to the user&apos;s Facebook Wall and their News Feed. You can use the Graph API to access the user&apos;s social graph, bring their friends directly to your site all in your own custom experience.</p>
+<p>The <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">Javascript SDK</a> provides a straightforward way to access the Graph API: <a href="/docs/reference/javascript/fb.api/" name="https://developers.facebook.com/docs/reference/javascript/fb.api/">FB.api</a>. This function takes a string argument which specifies the part of the Graph to target and a callback function that is invoked when the call completes. The following demonstrates how to use FB.api() to retrieve the user&apos;s picture and name from the Graph API and display it on a page within your site:</p>
+<pre>
+<code> &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;My Facebook Login Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+      &lt;script&gt;
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : &apos;YOUR_APP_ID&apos;,
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api(&apos;/me&apos;, function(user) {
+            if (user) {
+              var image = document.getElementById(&apos;image&apos;);
+              image.src = &apos;https://graph.facebook.com/&apos; + user.id + &apos;/picture&apos;;
+              var name = document.getElementById(&apos;name&apos;);
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+           js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+           js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+           d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+         }(document));
+      &lt;/script&gt;
+
+      &lt;div align=&quot;center&quot;&gt;
+        &lt;img id=&quot;image&quot;/&gt;
+        &lt;div id=&quot;name&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/body&gt;
+ &lt;/html&gt;
+</code>
+</pre>
+<p>Another way to personalize your site with the JavaScript SDK is the <a href="/docs/reference/javascript/fb.ui/" name="https://developers.facebook.com/docs/reference/javascript/fb.ui/">FB.ui</a> function. This function invokes our <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Platform Dialogs</a> within the context of your site. You can use the FB.ui function to post to the user&apos;s Feed or allow them to invite new friends. The following demonstrates how to use the Feed Dialog from your site:</p>
+<pre>
+<code> &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;My Facebook Login Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+      &lt;script&gt;
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : &apos;YOUR_APP_ID&apos;,
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.ui({ method: &apos;feed&apos;, 
+              message: &apos;Facebook for Websites is super-cool&apos;});
+        };
+
+        (function(d){
+           var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+           js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+           js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+           d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+         }(document));
+      &lt;/script&gt;
+
+    &lt;/body&gt;
+ &lt;/html&gt;
+</code>
+</pre>
+<p>When this page is loaded in the user&apos;s browser, the JavaScript SDK will render the below dialog that the user can use to post to their feed. You can set a number of defaults for the dialog, which the user can then modify or override prior to posting.</p>
+<p>
+<img alt="Web Dialog" src="https://developers.facebook.com/attachment/web_dialog.png" />
+</p>
+<p>One of the best ways to learn what is possible with the JavaScript SDK is our <a href="/tools/console/" name="https://developers.facebook.com/tools/console/">JavaScript Console</a>. The tool offers a host of examples that you can execute directly in the console itself before you make any changes to your site.</p>
+<p>The JavaScript SDK lets you access the Graph API and Platform Dialogs from client-side code but some of the most interesting integrations involve accessing the Graph API from server-side code running on your web server. The JavaScript SDK saves the details for the logged in user in such a way that it can be accessed by the PHP SDK. This allows you to make server-side calls to Facebook Platform without doing any extra work. The following PHP example shows you how to use the JavaScript SDK for login and the PHP SDK for personalization:</p>
+<pre>
+<code>&lt;?php
+
+define(&apos;YOUR_APP_ID&apos;, &apos;YOUR APP ID&apos;);
+
+//uses the PHP SDK.  Download from https://github.com/facebook/php-sdk
+require &apos;facebook.php&apos;;
+
+$facebook = new Facebook(array(
+  &apos;appId&apos;  =&gt; YOUR_APP_ID,
+  &apos;secret&apos; =&gt; &apos;YOUR APP SECRET&apos;,
+));
+
+$userId = $facebook-&gt;getUser();
+
+?&gt;
+
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;?php if ($userId) { 
+      $userInfo = $facebook-&gt;api(&apos;/&apos; + $userId); ?&gt;
+      Welcome &lt;?= $userInfo[&apos;name&apos;] ?&gt;
+    &lt;?php } else { ?&gt;
+    &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+    &lt;fb:login-button&gt;&lt;/fb:login-button&gt;
+    &lt;?php } ?&gt;
+    &lt;script&gt;
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : &apos;YOUR_APP_ID&apos;,
+          status     : true, 
+          cookie     : true,
+          xfbml      : true,
+          oauth      : true,
+        });
+
+        FB.Event.subscribe(&apos;auth.login&apos;, function(response) {
+          window.location.reload();
+        });
+      };
+
+      (function(d){
+         var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+         js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+         js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+         d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+       }(document));
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<p>Using the JavaScript SDK and PHP SDK together is only one of several ways to access user credentials and information from server-side code. Our <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">Authentication Guide</a> highlights how to perform authentication and authorization directly from your web server allowing you to access the Graph API without using any client-side code.</p>
+<p>
+<a name="insights">
+</a>
+</p>
+<hr />
+<h2>Analytics</h2>
+<p>You can get detailed analytics about the demographics of your users and how users are sharing from your website with <a href="https://www.facebook.com/insights/" name="https://www.facebook.com/insights/">Insights</a>.</p>
+<p>
+<img alt="Insights" src="https://developers.facebook.com/attachment/insights.png" />
+</p>
+<p>
+<a href="https://www.facebook.com/insights/" name="https://www.facebook.com/insights/">Insights</a> provides reports broken down by domain and by app. These reports include rich data about users sharing content from your site within Facebook and other Facebook-enabled apps no matter where those activity originated. For example, if a user puts a URL from your site into a Facebook status message, that data is included in the analytics for your domain.</p>
+<p>The data from Insights is also <a href="/docs/api#insights" name="https://developers.facebook.com/docs/api#insights">available in the Graph API</a> so you can integrate the Facebook analytics data with your own, in-house analytics systems.</p>
+<p>If you use an external analytics system, there are a couple of steps you can take to ensure proper counts for page hits on your domain. First, exclude requests with a user agent matching <code>facebookexternalhit/*</code>. This user agent is used by the Facebook Open Graph tools to retrieve your <code>og</code> meta tags. Second, track clicks from plugins embedded on your site separately from clicks with a facebook.com referrer. Social Plugins with have a referral URL matching <code>http://www.facebook.com/plugins/*</code>.</p>
+<p>
+<a name="next">
+</a>
+</p>
+<hr />
+<h2>Next Steps</h2>
+<p>This was a quick survey of the major features available to your website from Facebook Platform. Our core concepts documents provide deeper insight into the various pieces of Facebook Platform. The <a href="http://www.pluralsight-training.net/microsoft/courses/TableOfContents?courseName=fb-platform" name="http://www.pluralsight-training.net/microsoft/courses/TableOfContents?courseName=fb-platform">Facebook Platform Overview</a> course and <a href="/docs/api" name="https://developers.facebook.com/docs/api">Graph API</a> are great places to start. If you are looking for a real world examples to help you get started building please see our <a href="/docs/samples" name="https://developers.facebook.com/docs/samples">Samples</a>. If you are looking for inspiration, check out our <a href="https://developers.facebook.com/showcase/" name="https://developers.facebook.com/showcase/">Showcase</a>.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/guides/web/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1337404262" title="2012年5月18日 22:11">約3週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

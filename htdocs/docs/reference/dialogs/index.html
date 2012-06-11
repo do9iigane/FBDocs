@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/dialogs/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/dialogs/">https://developers.facebook.com/docs/reference/dialogs/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a class="selected" href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Dialogs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/add_to_page/" name="http://developers.facebook.com/docs/reference/dialogs/add_to_page/">Add Page Tab Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/feed/" name="http://developers.facebook.com/docs/reference/dialogs/feed/">Feed Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/friends/" name="http://developers.facebook.com/docs/reference/dialogs/friends/">Friends Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/oauth/" name="http://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/pay/" name="http://developers.facebook.com/docs/reference/dialogs/pay/">Pay Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/requests/" name="http://developers.facebook.com/docs/reference/dialogs/requests/">Requests Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/send/" name="http://developers.facebook.com/docs/reference/dialogs/send/">Send Dialog</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Dialogs Overview</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs Overview</a>
+</div>
+</div>
+</div>
+<p>Dialogs provide a simple, consistent interface to provide social functionality to your users. Dialogs do not require any additional <a href="/docs/authentication/permissions" name="https://developers.facebook.com/docs/authentication/permissions">permissions</a> because they require user interaction. Dialogs can be used by your application in every context: within a <a href="/docs/guides/canvas/" name="https://developers.facebook.com/docs/guides/canvas/">Canvas Page</a>, in a <a href="/docs/appsonfacebook/pagetabs/" name="https://developers.facebook.com/docs/appsonfacebook/pagetabs/">Page Tab</a>, in a website or mobile web app, and within <a href="/docs/mobile/ios/build/" name="https://developers.facebook.com/docs/mobile/ios/build/">native iOS</a> and <a href="/docs/mobile/android/build/" name="https://developers.facebook.com/docs/mobile/android/build/">native Android</a> applications.</p>
+<p>There are currently 7 Dialogs available for you to use:</p>
+<ul>
+<li>The <a href="/docs/reference/dialogs/feed/" name="https://developers.facebook.com/docs/reference/dialogs/feed/">Feed Dialog</a> allows a user to post a story to their Timeline and to their friends&apos; News Feeds</li>
+<li>The <a href="/docs/reference/dialogs/oauth/" name="https://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog</a> allows a user to authorize an application as part of an authentication flow.</li>
+<li>The <a href="/docs/reference/dialogs/add_to_page/" name="https://developers.facebook.com/docs/reference/dialogs/add_to_page/">Add Page Tab Dialog</a> allows a user to add an application to a Facebook Page which they administer.</li>
+<li>The <a href="/docs/reference/dialogs/friends/" name="https://developers.facebook.com/docs/reference/dialogs/friends/">Friends Dialog</a> allows a user to send a friend request to another user.</li>
+<li>The <a href="/docs/reference/dialogs/pay/" name="https://developers.facebook.com/docs/reference/dialogs/pay/">Pay Dialog</a> allows a user to make a purchase using Facebook Credits.</li>
+<li>The <a href="/docs/reference/dialogs/requests/" name="https://developers.facebook.com/docs/reference/dialogs/requests/">Requests Dialog</a> allows a user to send a request to one or more of their friends</li>
+<li>The <a href="/docs/reference/dialogs/send/" name="https://developers.facebook.com/docs/reference/dialogs/send/">Send Dialog</a> allows a user to send a Facebook Message to one or more of their friends.</li>
+</ul>
+<p>You can integrate Dialogs into your application by constructing the URLs documented below, or by using a helper method in one of the Facebook SDKs:</p>
+<ul>
+<li>
+<a href="https://developers.facebook.com/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a> using the <a href="https://developers.facebook.com/docs/reference/javascript/FB.ui" name="https://developers.facebook.com/docs/reference/javascript/FB.ui">FB.ui</a> method.</li>
+<li>
+<a href="https://github.com/facebook/facebook-ios-sdk/" name="https://github.com/facebook/facebook-ios-sdk/">iOS SDK</a> using the <a href="https://github.com/facebook/facebook-ios-sdk/blob/master/README.mdown#dialogs" name="https://github.com/facebook/facebook-ios-sdk/blob/master/README.mdown#dialogs">dialog</a> method.</li>
+<li>
+<a href="https://github.com/facebook/facebook-android-sdk" name="https://github.com/facebook/facebook-android-sdk">Android SDK</a> using the <a href="https://github.com/facebook/facebook-android-sdk/blob/master/README.md#dialogs" name="https://github.com/facebook/facebook-android-sdk/blob/master/README.md#dialogs">dialog</a> method. </li>
+</ul>
+<h2>Invoking a Dialog directly with a URL</h2>
+<p>If you&apos;re not using one of the Facebook SDK&apos;s, you can invoke a Dialog by redirecting the user&apos;s browser to a URL. Every dialog has a method name and parameters. The URL to a dialog always starts with</p>
+<pre>
+<code>      https://www.facebook.com/dialog/
+</code>
+</pre>
+<p>followed by the name of the dialog and parameters. For example, to ask a user to post a story to their Wall, send them to the <a href="https://developers.facebook.com/docs/reference/dialogs/feed" name="https://developers.facebook.com/docs/reference/dialogs/feed">Feed Dialog</a> with required parameters:</p>
+<pre>
+<code>https://www.facebook.com/dialog/feed?
+    app_id=YOUR_APP_ID&amp;
+    redirect_uri=YOUR_REDIRECT_URI
+</code>
+</pre>
+<p>Because Dialogs enable simple social interactions, the user must be logged into Facebook to see a dialog. If the user is not already logged in, Facebook will prompt them to login before showing the the Dialog you invoked.</p>
+<p>
+<img alt="Feed dialog" src="https://developers.facebook.com/attachment/Facebook_Dialogs_Feed_Iframe.png" />
+</p>
+<h2>Common Dialog Parameters</h2>
+<p>All Dialogs share a few common parameters:</p>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Required?</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+</tr>
+<tr>
+<td>
+<code> app_id </code>
+</td>
+<td> Yes </td>
+<td> Your App ID as shows in your app&apos;s settings.</td>
+</tr>
+<tr>
+<td>
+<code> redirect_uri </code>
+</td>
+<td> Yes </td>
+<td> The URL to redirect to after the user clicks a button on the Dialog. </td>
+</tr>
+<tr>
+<td>
+<code> display </code>
+</td>
+<td> No. Default is <code>page</code>
+</td>
+<td> Display mode in which to render the Dialog. Can be <code>page</code>, <code>popup</code>, <code>iframe</code>, or <code>touch</code>. If you specify <code>iframe</code>, you must have a valid <code>access_token</code>. To get a valid <code>access_token</code>, please see the <a href="https://developers.facebook.com/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">Authentication guide</a>
+</td>
+</tr>
+<tr>
+<td>
+<code> show_error </code>
+</td>
+<td> No </td>
+<td> If this is set to <code>true</code>, the error code and error description will be displayed in the event of an error. </td>
+</tr>
+</table>
+<h2>Display Modes</h2>
+<p>Platform Dialogs are all built to seamlessly run in a variety of display contexts on both the web and mobile web. If you&apos;re invoking a Dialog using the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JS</a>, <a href="/docs/reference/iossdk/" name="https://developers.facebook.com/docs/reference/iossdk/">iOS</a> or <a href="/docs/reference/androidsdk/" name="https://developers.facebook.com/docs/reference/androidsdk/">Android SDKs</a>, the display mode will be automatically chosen for you based on the platform and the device being used by the user. However, you can force a particular display mode by setting the <code>display</code> parameter to one of the following values:</p>
+<ul>
+<li>
+<code>page</code>: By default, dialogs run in full-page mode with a Facebook header and footer. This is appropriate for apps that do a full-page redirect in a normal desktop/laptop web browser.</li>
+<li>
+<code>popup</code>: For use in a browser popup no bigger than 400px by 580px. Use this display type to maintain context for the user without needing to perform a full-page redirect.</li>
+<li>
+<code>touch</code>: For use on smartphones, mobile devices and small tablets (such as those with screens under 7 inches).</li>
+<li>
+<code>iframe</code>: For use by apps when running inside an iframe within a Canvas page on Facebook. Displays the dialog within a lightbox-style overlay. Because of the risk of clickjacking, this is only allowed for some certain dialogs, and requires you to pass a valid <code>access_token</code>. This mode is not supported by the <a href="/docs/reference/dialogs/oauth/" name="https://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog</a>.</li>
+</ul>
+<ul>
+</ul>
+<hr />
+<h2 id="methods">Dialogs</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/dialogs/add_to_page/" name="http://developers.facebook.com/docs/reference/dialogs/add_to_page/">Add Page Tab Dialog</a>
+</div>
+<div class="snippet">
+<p>The Add Page Tab Dialog prompts the user to add an app to a Facebook Page that the user admins. This does not require any extended permissions.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/dialogs/feed/" name="http://developers.facebook.com/docs/reference/dialogs/feed/">Feed Dialog</a>
+</div>
+<div class="snippet">
+<p>Prompt the user to publish an individual story to a profile&apos;s feed</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/dialogs/friends/" name="http://developers.facebook.com/docs/reference/dialogs/friends/">Friends Dialog</a>
+</div>
+<div class="snippet">
+<p>Prompt the user to add a friend.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/dialogs/oauth/" name="http://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog</a>
+</div>
+<div class="snippet">
+<p>Prompt the user to authorize and grant your app permissions</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/dialogs/pay/" name="http://developers.facebook.com/docs/reference/dialogs/pay/">Pay Dialog</a>
+</div>
+<div class="snippet">
+<p>Prompt a payment</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/dialogs/requests/" name="http://developers.facebook.com/docs/reference/dialogs/requests/">Requests Dialog</a>
+</div>
+<div class="snippet">
+<p>Requests Dialog</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/dialogs/send/" name="http://developers.facebook.com/docs/reference/dialogs/send/">Send Dialog</a>
+</div>
+<div class="snippet">
+<p>Prompt the user to send a message to a friend, group or email address</p>
+</div>
+</div>
+</div>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/dialogs/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1334589820" title="2012年4月16日 8:23">約2ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

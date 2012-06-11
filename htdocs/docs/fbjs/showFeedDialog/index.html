@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/fbjs/showFeedDialog/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/fbjs/showFeedDialog/">https://developers.facebook.com/docs/fbjs/showFeedDialog/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Facebook.showFeedDialog</h1>
+</div>
+</div>
+<h2>Description</h2>
+<p>
+<font color="#d00">Facebook has discontinued support for this method.</font>
+</p>
+<p>
+<em>Please use <a href="/docs/reference/rest/stream.publish" name="https://developers.facebook.com/docs/reference/rest/stream.publish">stream.publish</a> or the <a href="/docs/reference/api/post" name="https://developers.facebook.com/docs/reference/api/post">Graph API</a> instead.</em>
+</p>
+<p>This <a href="/docs/fbjs" name="https://developers.facebook.com/docs/fbjs">FBJS</a> call pops up a Feed dialog, allowing FBML applications to let users publish Feed stories to their Walls or one of their friends&apos; Walls.</p>
+<p>If you specify a <code>target_id</code>, an alternate dialog appears, allowing the user to post to that target friend&apos;s Wall. A one-line story will also appear on the user&apos;s Wall.</p>
+<p>The Feed dialog doesn&apos;t ping your server. You pass all your data through JavaScript, so it&apos;s faster.</p>
+<h2>Parameters</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Required</th>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Yes</td>
+<td align="left">template_bundle_id</td>
+<td align="left">int</td>
+<td align="left">The ID for a previously registered template bundle.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">template_data</td>
+<td align="left">object</td>
+<td align="left">This is the data for the template.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">body_general</td>
+<td align="left">string</td>
+<td align="left">This contains additional markup for a short story.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">target_id</td>
+<td align="left">int</td>
+<td align="left">This is the user ID of the friend of the Feed story actor. If this parameter is used, the Feed story template must include the <code>target</code> token. The story will be published to the friend&apos;s Feed.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">continuation</td>
+<td align="left">function</td>
+<td align="left">This is a JavaScript function to be called after the dialog has been accepted or rejected by the user. Note that due to concerns of abuse (rewarding users for publishing to their Feed, for example) it is not possible to determine whether the user clicked &quot;Publish&quot; or canceled the dialog. This function is passed three arguments: <code>postId</code>, <code>exception</code>, and <code>data</code>. <code>postId</code> is the ID of the post created by the Feed form. <code>exception</code> is currently not used (but is used by <code>FB.Connect.streamPublish</code>). <code>data</code> currently has one defined key: <code>user_message</code>, which contains the message entered by the user after the Feed form is accepted.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">user_message_prompt</td>
+<td align="left">string</td>
+<td align="left">The label (which could be in the form of a question) that appears above the text box on the Feed form next to the Facebook-provided question, &quot;What&apos;s on your mind?&quot;.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">user_message</td>
+<td align="left">string</td>
+<td align="left">Either a simple JavaScript object containing single property, {{c|value}}, which is set to the content that the user enters into the Feed form, or a simple string containing the same data. This message should have been entered by the user (for example, in a comment field on your site). The user can then edit this text. When the user publishes the Feed form, Facebook sets the value property to whatever text the user typed (if an object was passed in), and passes it to the callback.</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre>
+<code>var user_message_prompt = &quot;What do you think of this book?&quot;;
+var user_message = {value: &quot;write your review here&quot;};
+var continuation = function() { 
+   //your code here...
+};
+...
+Facebook.showFeedDialog(
+    47130247983,
+    template_data,
+    body_general,
+    563683308,
+    continuation,
+    user_message_prompt,
+    user_message
+);
+</code>
+</pre>
+<h2>.NET Usage</h2>
+<p>The JavaScript on the client page is standard, but what is interesting is the client-server interplay when using showFeedDialog. If you invoke the client script BEFORE the server postback, the dialog is never seen by the user as the postback re-draws the screen.</p>
+<p>I found it necessary to process the server side code first, and then execute the client JavaScript to display the feed dialog. There are a few ways to do this but here is an example of script imbedding.</p>
+<p>In the client page, after the javascript function that calls showFeedDialog, add a hidden label:</p>
+<pre>
+<code>&lt;asp:Label id=&quot;imbedJS&quot; runat=&quot;server&quot; type=&quot;hidden&quot; text=&quot;&quot; /&gt;
+</code>
+</pre>
+<p>Then, in your server side method:</p>
+<pre>
+<code>imbedJS.Text = String.Format(@&quot;&lt;script type=&quot;&quot;text/javascript&quot;&quot;&gt;myFeedDialogScript(&apos;{0}&apos;,
+    {1}, &apos;{2}&apos;);&lt;/script&gt;&quot;, param1, param2, param3);
+</code>
+</pre>
+<p>Now the user will see the dialog after the server-side code has completed. This at first seemed to pose a problem for my application: didn&apos;t want to &quot;give the user credit&quot; for completing the action until they had posted the story to the feed. However this is explicitly against Facebook policy - to reward users for posting to the Feed. This is also why it is impossible to detect the user&apos;s choice of &quot;Publish&quot; or &quot;Skip&quot;. So we process the server-side transaction and if the user skips publishing to the feed then so be it.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/fbjs/showFeedDialog/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1282081986" title="2010年8月17日 14:53">1年以上前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

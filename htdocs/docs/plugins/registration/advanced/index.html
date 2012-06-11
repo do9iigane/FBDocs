@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/plugins/registration/advanced/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/plugins/registration/advanced/">https://developers.facebook.com/docs/plugins/registration/advanced/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/plugins/registration/" name="http://developers.facebook.com/docs/plugins/registration/">Registration</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/plugins/registration/advanced/" name="http://developers.facebook.com/docs/plugins/registration/advanced/">Registration Advanced Uses</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/user_registration/flows/" name="http://developers.facebook.com/docs/user_registration/flows/">User Registration Flows</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Beta Plugins</h5>
+<ul>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Registration Advanced Uses</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">Social Plugins</a> › <a href="/docs/plugins/registration/advanced/" name="https://developers.facebook.com/docs/plugins/registration/advanced/">Registration Advanced Uses</a>
+</div>
+</div>
+</div>
+<h2>Introduction</h2>
+<p>These are some advanced topics about the <a href="/docs/plugins/registration" name="https://developers.facebook.com/docs/plugins/registration">Registration Plugin</a>.</p>
+<hr />
+<h2>Client Side Validation</h2>
+<p>If you want to add validation to any of your fields during registration, you must use the XFBML version of the plugin, since the <code>iframe</code> can&apos;t do cross domain communication.</p>
+<p>Pass the name of a single global function as the <code>onvalidate</code> param to the <code>&lt;fb:registration&gt;</code>. This function will be called whenever a user <a href="https://developer.mozilla.org/en/DOM/element.onblur" name="https://developer.mozilla.org/en/DOM/element.onblur">blurs</a> a field or submits the form. For privacy reasons, the input to your function will be only the custom fields you requested, on blur or submit. (After registration, you will receive the complete set of data.) Your function should return an object with keys matching your field names, and values being the error string. Returning an empty object <code>{}</code> means there were no errors.</p>
+<p>During the blur call, only non-empty field&apos;s errors will be shown. Submitting the form will be canceled if your function returns any errors.</p>
+<p>
+<fb:registration fields="[
+   {&quot;name&quot;:&quot;name&quot;},
+   {&quot;name&quot;:&quot;foo&quot;,&quot;description&quot;:&quot;Type foo&quot;,&quot;type&quot;:&quot;text&quot;},
+   {&quot;name&quot;:&quot;bar&quot;,&quot;description&quot;:&quot;Type bar&quot;,&quot;type&quot;:&quot;text&quot;},
+   {&quot;name&quot;:&quot;facebooker&quot;,&quot;description&quot;:&quot;Pick Paul&quot;,&quot;type&quot;:&quot;select&quot;,&quot;options&quot;:
+     {&quot;coder&quot;:&quot;Paul&quot;,&quot;pm&quot;:&quot;Austin&quot;,&quot;partners&quot;:&quot;Cat&quot;}},
+   {&quot;name&quot;:&quot;check&quot;,&quot;description&quot;:&quot;Check this&quot;,&quot;type&quot;:&quot;checkbox&quot;},
+   {&quot;name&quot;:&quot;date&quot;,&quot;description&quot;:&quot;Dec 16 2010&quot;,&quot;type&quot;:&quot;date&quot;},
+   {&quot;name&quot;:&quot;city&quot;,&quot;description&quot;:&quot;Calgary&quot;,&quot;type&quot;:&quot;typeahead&quot;,&quot;categories&quot;:
+     [&quot;city&quot;]}]" onvalidate="validate" redirect-uri="https://developers.facebook.com/tools/echo">
+</fb:registration>
+</p>
+<script> 
+function validate(form) {
+  errors = {};
+  if (form.foo !== &quot;foo&quot;) {
+    errors.foo = &quot;You didn&apos;t type foo&quot;;
+  }
+  if (form.bar !== &quot;bar&quot;) {
+    errors.bar = &quot;You didn&apos;t type bar&quot;;
+  }
+  if (form.facebooker !== &quot;coder&quot;) {
+    errors.facebooker = &quot;Pick the geeky one&quot;;
+  }
+  if (!form.check) {
+    errors.check = &quot;Check the little box&quot;;
+  }
+  if (form.date !== &apos;12/16/2010&apos;) {
+    errors.date = &quot;That isn&apos;t the launch date&quot;;
+  }
+  if (form.city.id !== &apos;111983945494775&apos;) {
+    errors.city = &quot;That isn&apos;t Calgary, Alberta&quot;;
+  }
+  return errors;
+}
+</script>
+<pre>
+<code>&lt;fb:registration redirect-uri=&quot;https://developers.facebook.com/tools/echo&quot; 
+ fields=&apos;[
+   {&quot;name&quot;:&quot;name&quot;},
+   {&quot;name&quot;:&quot;foo&quot;,&quot;description&quot;:&quot;Type foo&quot;,&quot;type&quot;:&quot;text&quot;},
+   {&quot;name&quot;:&quot;bar&quot;,&quot;description&quot;:&quot;Type bar&quot;,&quot;type&quot;:&quot;text&quot;},
+   {&quot;name&quot;:&quot;facebooker&quot;,&quot;description&quot;:&quot;Pick Paul&quot;,&quot;type&quot;:&quot;select&quot;,&quot;options&quot;:
+     {&quot;coder&quot;:&quot;Paul&quot;,&quot;pm&quot;:&quot;Austin&quot;,&quot;partners&quot;:&quot;Cat&quot;}},
+   {&quot;name&quot;:&quot;check&quot;,&quot;description&quot;:&quot;Check this&quot;,&quot;type&quot;:&quot;checkbox&quot;},
+   {&quot;name&quot;:&quot;date&quot;,&quot;description&quot;:&quot;Dec 16 2010&quot;,&quot;type&quot;:&quot;date&quot;},
+   {&quot;name&quot;:&quot;city&quot;,&quot;description&quot;:&quot;Calgary&quot;,&quot;type&quot;:&quot;typeahead&quot;,&quot;categories&quot;:
+     [&quot;city&quot;]}]&apos; 
+ onvalidate=&quot;validate&quot;&gt;&lt;/fb:registration&gt; 
+
+&lt;script&gt; 
+function validate(form) {
+  errors = {};
+  if (form.foo !== &quot;foo&quot;) {
+    errors.foo = &quot;You didn&apos;t type foo&quot;;
+  }
+  if (form.bar !== &quot;bar&quot;) {
+    errors.bar = &quot;You didn&apos;t type bar&quot;;
+  }
+  if (form.facebooker !== &quot;coder&quot;) {
+    errors.facebooker = &quot;Pick the geeky one&quot;;
+  }
+  if (!form.check) {
+    errors.check = &quot;Check the little box&quot;;
+  }
+  if (form.date !== &apos;12/16/2010&apos;) {
+    errors.date = &quot;That isn&apos;t the launch date&quot;;
+  }
+  if (form.city.id !== &apos;111983945494775&apos;) {
+    errors.city = &quot;That isn&apos;t Calgary, Alberta&quot;;
+  }
+  return errors;
+}
+&lt;/script&gt; 
+</code>
+</pre>
+<hr />
+<p>
+<a name="async">
+</a>
+</p>
+<h2>Async Validation</h2>
+<p>If you have to check something on your server (e.g. if a username is taken) then you don&apos;t have to reply from the validation function right away. You can return null (which is the default return in javascript) and then use the second parameter to reply with any errors. You have 20 seconds before the form submits anyways.</p>
+<p>
+<fb:registration fields="[{&quot;name&quot;:&quot;name&quot;},
+           {&quot;name&quot;:&quot;username&quot;,&quot;description&quot;:&quot;Username&quot;,&quot;type&quot;:&quot;text&quot;}]" onvalidate="validate_async" redirect-uri="https://developers.facebook.com/tools/echo">
+</fb:registration>
+</p>
+<script> 
+function validate_async(form, cb) {
+  $.getJSON(&apos;https://graph.facebook.com/&apos; + form.username + &apos;?callback=?&apos;, 
+    function(response) {
+      if (response.error) {
+        // Username isn&apos;t taken, let the form submit
+        cb();
+      }
+      cb({username: &apos;That username is taken&apos;});
+  });
+}
+</script>
+<pre>
+<code>&lt;fb:registration redirect-uri=&quot;https://developers.facebook.com/tools/echo&quot; 
+  fields=&apos;[{&quot;name&quot;:&quot;name&quot;},
+           {&quot;name&quot;:&quot;username&quot;,&quot;description&quot;:&quot;Username&quot;,&quot;type&quot;:&quot;text&quot;}]&apos; 
+  onvalidate=&quot;validate_async&quot;&gt;&lt;/fb:registration&gt; 
+
+&lt;script src=&quot;http://code.jquery.com/jquery-1.7.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt; 
+function validate_async(form, cb) {
+  $.getJSON(&apos;https://graph.facebook.com/&apos; + form.username + &apos;?callback=?&apos;, 
+    function(response) {
+      if (response.error) {
+        // Username isn&apos;t taken, let the form submit
+        cb();
+      }
+      cb({username: &apos;That username is taken&apos;});
+  });
+}
+&lt;/script&gt; 
+</code>
+</pre>
+<hr />
+<h2>HTTPS</h2>
+<p>When a user clicks the &apos;Register&apos; button on your site there are two data transfers. First, the data in the plugin is sent to Facebook. Facebook then signs the data with your application secret and passes it back to your <code>redirect_uri</code>. By default these data transfers are done in HTTPS and if you are using the iframe method, you should set the iframe source of the plugin to:</p>
+<pre>
+<code>https://www.facebook.com/plugins/registration
+</code>
+</pre>
+<p>instead of</p>
+<pre>
+<code>http ://www.facebook.com/plugins/registration
+</code>
+</pre>
+<p>If you are using the xfbml version of the plugin, simply load the javascript library over https instead of http. For example:</p>
+<pre>
+<code> &lt;script src=&quot;https://connect.facebook.net...&quot;&gt;&lt;/script&gt;
+</code>
+</pre>
+<p>If you enable https, your <code>redirect-uri</code> must be an https URL, otherwise browsers will show an error warning. Enabling https protects your users against <a href="http://en.wikipedia.org/wiki/Man-in-the-middle_attack" name="http://en.wikipedia.org/wiki/Man-in-the-middle_attack">man-in-the-middle attacks</a> during the two data transfers.</p>
+<hr />
+<h2>
+<code>locale</code>
+</h2>
+<p>The plugin will render in the locale that the user uses facebook in. If you want to always force a locale, just pass the <code>locale</code> parameter set to be a POSIX locale, which is a 2 letter lowercase <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" name="http://www.loc.gov/standards/iso639-2/php/code_list.php">language code</a> then an <code>_</code> followed by a 2 letter uppercase <a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists/english_country_names_and_code_elements.htm" name="http://www.iso.org/iso/country_codes/iso_3166_code_lists/english_country_names_and_code_elements.htm">country code</a>. The plugin hasn&apos;t been translated into every language, so if you want to help in your local language, use the <a href="https://www.facebook.com/translations/" name="https://www.facebook.com/translations/">translation app</a>.</p>
+<iframe allowtransparency="true" frameborder="no" height="330" scrolling="auto" src="https://www.facebook.com/plugins/registration?
+             client_id=113869198637480&amp;
+             redirect_uri=http%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fecho%2F&amp;
+             fields=name,birthday,gender,location,email&amp;
+             locale=de_DE" style="border:none" width="100%">
+</iframe>
+<hr />
+<h2>
+<code>no_submit</code>
+</h2>
+<p>If there are fields that you really don&apos;t want to travel over the wire to Facebook servers, you can specify the <code>no_submit:true</code> attribute and they will removed from the DOM before submitting. To get the data on your end, you must use the client side validation function to add those to the user&apos;s session (via a cookie or server-side call). Then when the form submit comes through you can read the <code>signed_request</code> and the data you stored in the user&apos;s session and build your user row in your database.</p>
+<p>One &apos;gotcha&apos; is that your client side validation function and the form submit result page are two different web pages. You have to store a browser cookie so that you can correlate the data.</p>
+<p>Try submitting this form, and see that the password field disappears as the form submits.</p>
+<p>
+<fb:registration fields="[{&quot;name&quot;:&quot;name&quot;},{&quot;name&quot;:&quot;password&quot;,&quot;no_submit&quot;:true}]" onvalidate="validateAndSave" redirect-uri="https://developers.facebook.com/tools/echo">
+</fb:registration>
+</p>
+<script>
+function validateAndSave(form) {
+  if (!form.password) {
+    return({&quot;password&quot;:&quot;Type a password&quot;});
+  }
+  var dt = new Date(), expiryTime = dt.setTime( dt.getTime() + 1000*5 );
+  document.cookie = &apos;password=&apos;+form.password+&apos;;expires=&apos;+dt.toGMTString();
+  return {};
+}
+</script>
+<pre>
+<code>&lt;fb:registration redirect-uri=&quot;https://developers.facebook.com/tools/echo&quot; 
+  fields=&apos;[{&quot;name&quot;:&quot;name&quot;},{&quot;name&quot;:&quot;password&quot;,&quot;no_submit&quot;:true}]&apos;
+  onvalidate=&quot;validateAndSave&quot;&gt;&lt;/fb:registration&gt;
+
+&lt;script&gt;
+function validateAndSave(form) {
+  if (!form.password) {
+    return({&quot;password&quot;:&quot;Type a password&quot;});
+  }
+  var dt = new Date(), expiryTime = dt.setTime( dt.getTime() + 1000*5 );
+  document.cookie = &apos;password=&apos;+form.password+&apos;;expires=&apos;+dt.toGMTString();
+  return {};
+}
+&lt;/script&gt;
+
+</code>
+</pre>
+<hr />
+<h2>Verify <code>fields</code>
+</h2>
+<p>When you request facebook data, we verify the form fields before packaging them up in the <code>signed_request</code>. This lets you assume that all the data is genuine and saves you from having to verify things. The one problem that could arise, is a smart attacker could change the form fields and submit them to you, thereby giving you unverified data.</p>
+<p>For example, these two <code>fields</code> will look the same in the <code>registration</code> part of the <code>signed_request</code>.</p>
+<pre>
+<code>fields=&apos;[
+  {&quot;name&quot;:&quot;name&quot;},
+  {&quot;name&quot;:&quot;email&quot;}]&apos;
+
+fields=&apos;[
+  {&quot;name&quot;:&quot;name&quot;},
+  {&quot;name&quot;:&quot;email&quot;,&quot;description&quot;:&quot;Fake Email&quot;,&quot;type&quot;:&quot;text&quot;}]&apos;
+</code>
+</pre>
+<p>To protect yourself against this attack, you should look inside the <code>registration_metadata</code> key and make sure the <code>fields</code> exactly match the <code>fields</code> you used to build your forms.</p>
+<p>Compare the <code>registration</code> and <code>registration_metadata</code> keys when you submit these two forms.</p>
+<p>
+<fb:registration fields="[{&quot;name&quot;:&quot;name&quot;},{&quot;name&quot;:&quot;email&quot;}]" redirect-uri="https://developers.facebook.com/tools/echo">
+</fb:registration>
+</p>
+<p>
+<fb:registration fields="[{&quot;name&quot;:&quot;name&quot;},{&quot;name&quot;:&quot;email&quot;,&quot;description&quot;:&quot;Fake Email&quot;,&quot;type&quot;:&quot;text&quot;}]" redirect-uri="https://developers.facebook.com/tools/echo">
+</fb:registration>
+</p>
+<hr />
+<h2>Not Verifying the Signature</h2>
+<p>If you are unable to validate the <code>signed_request</code> because you can&apos;t embed your application secret (e.g. in javascript or a desktop application) then you <em>MUST</em> only use one piece of information from the payload, the <code>oauth_token</code>.</p>
+<p>You should hit the <a href="http://graph.facebook.com" name="http://graph.facebook.com/">graph api</a> to fetch any user data. For example, use <a href="https://developers.facebook.com/docs/reference/api/user/" name="https://developers.facebook.com/docs/reference/api/user/">/me</a> to fetch the basic information. You will be granted the permission to read any data from the graph api that the user originally put into your form.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/plugins/registration/advanced/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1331672709" title="2012年3月13日 14:05">約3ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/fql/user/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/fql/user/">https://developers.facebook.com/docs/reference/fql/user/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Tables</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/album/" name="http://developers.facebook.com/docs/reference/fql/album/">album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/application/" name="http://developers.facebook.com/docs/reference/fql/application/">application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/apprequest/" name="http://developers.facebook.com/docs/reference/fql/apprequest/">apprequest</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/checkin/" name="http://developers.facebook.com/docs/reference/fql/checkin/">checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comment/" name="http://developers.facebook.com/docs/reference/fql/comment/">comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comments_info/" name="http://developers.facebook.com/docs/reference/fql/comments_info/">comments_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/connection/" name="http://developers.facebook.com/docs/reference/fql/connection/">connection</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/cookies/" name="http://developers.facebook.com/docs/reference/fql/cookies/">cookies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/developer/" name="http://developers.facebook.com/docs/reference/fql/developer/">developer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain/" name="http://developers.facebook.com/docs/reference/fql/domain/">domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain_admin/" name="http://developers.facebook.com/docs/reference/fql/domain_admin/">domain_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event/" name="http://developers.facebook.com/docs/reference/fql/event/">event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event_member/" name="http://developers.facebook.com/docs/reference/fql/event_member/">event_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/family/" name="http://developers.facebook.com/docs/reference/fql/family/">family</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend/" name="http://developers.facebook.com/docs/reference/fql/friend/">friend</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend_request/" name="http://developers.facebook.com/docs/reference/fql/friend_request/">friend_request</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist/" name="http://developers.facebook.com/docs/reference/fql/friendlist/">friendlist</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist_member/" name="http://developers.facebook.com/docs/reference/fql/friendlist_member/">friendlist_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group/" name="http://developers.facebook.com/docs/reference/fql/group/">group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group_member/" name="http://developers.facebook.com/docs/reference/fql/group_member/">group_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/insights/" name="http://developers.facebook.com/docs/reference/fql/insights/">insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/like/" name="http://developers.facebook.com/docs/reference/fql/like/">like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/links/" name="http://developers.facebook.com/docs/reference/fql/links/">link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/link_stat/" name="http://developers.facebook.com/docs/reference/fql/link_stat/">link_stat</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/location_post/" name="http://developers.facebook.com/docs/reference/fql/location_post/">location_post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/mailbox_folder/" name="http://developers.facebook.com/docs/reference/fql/mailbox_folder/">mailbox_folder</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/message/" name="http://developers.facebook.com/docs/reference/fql/message/">message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notes/" name="http://developers.facebook.com/docs/reference/fql/notes/">note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notification/" name="http://developers.facebook.com/docs/reference/fql/notification/">notification</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/object_url/" name="http://developers.facebook.com/docs/reference/fql/object_url/">object_url</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/offer/" name="http://developers.facebook.com/docs/reference/fql/offer/">offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page/" name="http://developers.facebook.com/docs/reference/fql/page/">page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_admin/" name="http://developers.facebook.com/docs/reference/fql/page_admin/">page_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_blocked_user/" name="http://developers.facebook.com/docs/reference/fql/page_blocked_user/">page_blocked_user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_fan/" name="http://developers.facebook.com/docs/reference/fql/page_fan/">page_fan</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/life_event/" name="http://developers.facebook.com/docs/reference/fql/life_event/">page_milestone</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions/" name="http://developers.facebook.com/docs/reference/fql/permissions/">permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions_info/" name="http://developers.facebook.com/docs/reference/fql/permissions_info/">permissions_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo/" name="http://developers.facebook.com/docs/reference/fql/photo/">photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_src/" name="http://developers.facebook.com/docs/reference/fql/photo_src/">photo_src</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_tag/" name="http://developers.facebook.com/docs/reference/fql/photo_tag/">photo_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/place/" name="http://developers.facebook.com/docs/reference/fql/place/">place</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy/" name="http://developers.facebook.com/docs/reference/fql/privacy/">privacy</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy_setting/" name="http://developers.facebook.com/docs/reference/fql/privacy_setting/">privacy_setting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile/" name="http://developers.facebook.com/docs/reference/fql/profile/">profile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile_tab/" name="http://developers.facebook.com/docs/reference/fql/profile_tab/">profile_view</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question/" name="http://developers.facebook.com/docs/reference/fql/question/">question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option/" name="http://developers.facebook.com/docs/reference/fql/question_option/">question_option</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option_votes/" name="http://developers.facebook.com/docs/reference/fql/question_option_votes/">question_option_votes</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/review/" name="http://developers.facebook.com/docs/reference/fql/review/">review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_friend_info/" name="http://developers.facebook.com/docs/reference/fql/standard_friend_info/">standard_friend_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_user_info/" name="http://developers.facebook.com/docs/reference/fql/standard_user_info/">standard_user_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/status/" name="http://developers.facebook.com/docs/reference/fql/status/">status</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream/" name="http://developers.facebook.com/docs/reference/fql/stream/">stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_filter/" name="http://developers.facebook.com/docs/reference/fql/stream_filter/">stream_filter</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_tag/" name="http://developers.facebook.com/docs/reference/fql/stream_tag/">stream_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/subscription/" name="http://developers.facebook.com/docs/reference/fql/subscription/">subscription</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/thread/" name="http://developers.facebook.com/docs/reference/fql/thread/">thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/translation/" name="http://developers.facebook.com/docs/reference/fql/translation/">translation</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_message/" name="http://developers.facebook.com/docs/reference/fql/unified_message/">unified_message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread/" name="http://developers.facebook.com/docs/reference/fql/unified_thread/">unified_thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_action/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_action/">unified_thread_action</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_count/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_count/">unified_thread_count</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/url_like/" name="http://developers.facebook.com/docs/reference/fql/url_like/">url_like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/user/" name="http://developers.facebook.com/docs/reference/fql/user/">user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video/" name="http://developers.facebook.com/docs/reference/fql/video/">video</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video_tag/" name="http://developers.facebook.com/docs/reference/fql/video_tag/">video_tag</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>user</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a> › <a href="/docs/reference/fql/user/" name="https://developers.facebook.com/docs/reference/fql/user/">user</a>
+</div>
+</div>
+</div>
+<p>A user profile as represented in <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>. If you need user information for analytic purposes, query the <a href="/docs/reference/fql/standard_user_info/" name="https://developers.facebook.com/docs/reference/fql/standard_user_info/">standard_user_info</a> table instead.</p>
+<p>The Graph API <a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">User</a> has the equivalent information for the user profile information.</p>
+<p>
+<strong>Notes:</strong>
+</p>
+<ul>
+<li>You can cache this data and subscribe to <a href="/docs/api/realtime" name="https://developers.facebook.com/docs/api/realtime">real time updates</a> on any of its fields which are also fields in the corresponding <a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">Graph API version</a>.</li>
+<li>No data will be returned by this table if the user has turned off access to Facebook Platform.</li>
+<li>If a user has allowed an application to view certain restricted data then this data will be available the viewer using the same application with any valid <code>access_token</code>. Note that site privacy settings take precedence. So if the viewer cannot see this data on the site then they will not be able to see this via FQL.</li>
+<li>A friend can control the information accessible to applications you use through privacy settings on the website. So for example, if &apos;&apos;Religious and political views&apos;&apos; are set to not be accessible to apps friends use, then even asking for <code>friends_religion_politics</code> permission and querying the friend&apos;s <code>uid</code> for <code>political</code> data will not return a result. </li>
+</ul>
+<p>To read the <code>user</code> table you need</p>
+<ul>
+<li>no <code>access_token</code> for publicly available data: uid, name, first_name, middle_name, last_name, sex, locale, pic_small_with_logo, pic_big_with_logo, pic_square_with_logo, pic_with_logo, username</li>
+<li>any valid <code>access_token</code> for additional user data, except for the follow-on exceptions:</li>
+<li>
+<code>user_likes</code> or <code>friends_likes</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: movies, music, books, tv, languages, quotes, games, sports, favorite_athletes, favorite_teams, inspirational_people, likes_count </li>
+<li>
+<code>user_education_history</code> or <code>friends_education_history</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: hs_info, education_history, education</li>
+<li>
+<code>user_work_history</code> or <code>friends_work_history</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: work_history, work</li>
+<li>
+<code>user_religion_politics</code> or <code>friends_religion_politics</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: political, religion</li>
+<li>
+<code>user_about_me</code> or <code>friends_about_me</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: about_me</li>
+<li>
+<code>user_notes</code> or <code>friends_notes</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: notes_count</li>
+<li>
+<code>user_status</code> or <code>friends_status</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: status</li>
+<li>
+<code>user_online_presence</code> or <code>friends_online_presence</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: online_presence</li>
+<li>
+<code>email</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: proxied_email, contact_email</li>
+<li>
+<code>user_birthday</code> or <code>friends_birthday</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: birthday, birthday_date</li>
+<li>
+<code>user_hometown</code> or <code>friends_hometown</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: hometown_location</li>
+<li>
+<code>user_relationships</code> or <code>friends_relationships</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: family, significant_other_id</li>
+<li>
+<code>user_relationship_details</code> or <code>friends_relationship_details</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: meeting_sex, meeting_for</li>
+<li>
+<code>user_activities</code> or <code>friends_activities</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: activities</li>
+<li>
+<code>user_interests</code> or <code>friends_interests</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: interests</li>
+<li>
+<code>user_location</code> or <code>friends_location</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: current_location</li>
+<li>
+<code>user_website</code> or <code>friends_website</code> <a href="/docs/authentication/permissions/" title="Permissions" name="https://developers.facebook.com/docs/authentication/permissions/">permissions</a> to view: website</li>
+</ul>
+<h2>コラム</h2>
+<table class="params columns">
+<tr>
+<th>インデックス可能</th>
+<th>名前</th>
+<th>タイプ</th>
+<th>説明</th>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">uid</td>
+<td class="type">int</td>
+<td>
+<p>The user ID of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">username</td>
+<td class="type">string</td>
+<td>
+<p>The username of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">first_name</td>
+<td class="type">string</td>
+<td>
+<p>The first name of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">middle_name</td>
+<td class="type">string</td>
+<td>
+<p>The middle name of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">last_name</td>
+<td class="type">string</td>
+<td>
+<p>The last name of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">name</td>
+<td class="type">string</td>
+<td>
+<p>The full name of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">pic_small</td>
+<td class="type">string</td>
+<td>
+<p>The URL to the small-sized profile picture for the user being queried. The image can have a maximum width of 50px and a maximum height of 150px. This URL may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">pic_big</td>
+<td class="type">string</td>
+<td>
+<p>The URL to the largest-sized profile picture for the user being queried. The image can have a maximum width of 200px and a maximum height of 600px. This URL may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">pic_square</td>
+<td class="type">string</td>
+<td>
+<p>The URL to the square profile picture for the user being queried. The image can have a maximum width and height of 50px. This URL may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">pic</td>
+<td class="type">string</td>
+<td>
+<p>The URL to the medium-sized profile picture for the user being queried. The image can have a maximum width of 100px and a maximum height of 300px. This URL may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">affiliations</td>
+<td class="type">array</td>
+<td>
+<p>The networks to which the user being queried belongs. The status field within this field will only return results in English.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">profile_update_time</td>
+<td class="type">time</td>
+<td>
+<p>The time the profile of the user being queried was most recently updated. If the user&apos;s profile has not been updated in the past three days, this value will be 0.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">timezone</td>
+<td class="type">int</td>
+<td>
+<p>The user&apos;s timezone offset from UTC.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">religion</td>
+<td class="type">string</td>
+<td>
+<p>The religion of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">birthday</td>
+<td class="type">string</td>
+<td>
+<p>The birthday of the user being queried. The format of this date varies based on the user&apos;s locale.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">birthday_date</td>
+<td class="type">string</td>
+<td>
+<p>The birthday of the user being queried in MM/DD/YYYY format.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">devices</td>
+<td class="type">array</td>
+<td>
+<p>An <code>array</code> of objects containing fields <code>os</code>, which may be a value of &apos;iOS&apos; or &apos;Android&apos;, along with an additional field <code>hardware</code> which may be a value of &apos;iPad&apos; or &apos;iPhone&apos;, if present. However, <code>hardware</code> may not be returned if we are unable to determine the exact <code>hardware</code> model and only the <code>os</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">sex</td>
+<td class="type">string</td>
+<td>
+<p>The gender of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">hometown_location</td>
+<td class="type">array</td>
+<td>
+<p>The hometown (and state) of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">meeting_sex</td>
+<td class="type">array</td>
+<td>
+<p>A list of the genders the person the user being queried wants to meet.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">meeting_for</td>
+<td class="type">array</td>
+<td>
+<p>A list of the reasons the user being queried wants to meet someone.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">relationship_status</td>
+<td class="type">string</td>
+<td>
+<p>The type of relationship for the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">significant_other_id</td>
+<td class="type">uid</td>
+<td>
+<p>The user ID of the partner (for example, husband, wife, boyfriend, girlfriend) of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">political</td>
+<td class="type">string</td>
+<td>
+<p>The political views of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">current_location</td>
+<td class="type">array</td>
+<td>
+<p>The current location of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">activities</td>
+<td class="type">string</td>
+<td>
+<p>The activities of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">interests</td>
+<td class="type">string</td>
+<td>
+<p>The interests of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">is_app_user</td>
+<td class="type">bool</td>
+<td>
+<p>Indicates whether the user being queried has logged in to the current application.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">music</td>
+<td class="type">string</td>
+<td>
+<p>The favorite music of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">tv</td>
+<td class="type">string</td>
+<td>
+<p>The favorite television shows of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">movies</td>
+<td class="type">string</td>
+<td>
+<p>The favorite movies of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">books</td>
+<td class="type">string</td>
+<td>
+<p>The favorite books of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">quotes</td>
+<td class="type">string</td>
+<td>
+<p>The favorite quotes of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">about_me</td>
+<td class="type">string</td>
+<td>
+<p>More information about the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">hs_info</td>
+<td class="type">array</td>
+<td>
+<p>
+<strong>Deprecated.</strong> This value is now equivalent to <code>education</code> entry of <code>type</code> &apos;&apos;High School&apos;&apos;.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">education_history</td>
+<td class="type">array</td>
+<td>
+<p>
+<strong>Deprecated.</strong> This value is now equivalent to <code>education</code> entry of <code>type</code> &apos;&apos;College&apos;&apos;.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">work_history</td>
+<td class="type">array</td>
+<td>
+<p>
+<strong>Deprecated.</strong> This value is now equivalent to <code>work</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">notes_count</td>
+<td class="type">int</td>
+<td>
+<p>The number of notes created by the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">wall_count</td>
+<td class="type">int</td>
+<td>
+<p>The number of Wall posts for the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">status</td>
+<td class="type">string</td>
+<td>
+<p>The current status of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">has_added_app</td>
+<td class="type">bool</td>
+<td>
+<p>
+<strong>Deprecated.</strong> This value is now equivalent to <code>is_app_user</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">online_presence</td>
+<td class="type">string</td>
+<td>
+<p>The user&apos;s Facebook Chat status. Returns a string, one of <code>active</code>, <code>idle</code>, <code>offline</code>, or <code>error</code> (when Facebook can&apos;t determine presence information on the server side). The query does not return the user&apos;s Facebook Chat status when that information is restricted for privacy reasons.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">locale</td>
+<td class="type">string</td>
+<td>
+<p>The two-letter language code and the two-letter country code representing the user&apos;s <a href="http://www.facebook.com/translations/FacebookLocales.xml" name="http://www.facebook.com/translations/FacebookLocales.xml">locale</a>. Country codes are taken from the <a href="http://www.iso.org/iso/iso-3166-1_decoding_table.html" name="http://www.iso.org/iso/iso-3166-1_decoding_table.html">ISO 3166 alpha 2 code</a> list.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">proxied_email</td>
+<td class="type">string</td>
+<td>
+<p>The proxied wrapper for a user&apos;s email address. If the user shared a proxied email address instead of his or her primary email address with you, this address also appears in the email field (see above). Facebook recommends you query the email field to get the email address shared with your application.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">profile_url</td>
+<td class="type">string</td>
+<td>
+<p>The URL to a user&apos;s profile. If the user specified a username for his or her profile, <code>profile_url</code> contains the username.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">email_hashes</td>
+<td class="type">array</td>
+<td>
+<p>An array containing a set of confirmed email hashes for the user. Emails are registered via the deprecated <a href="https://developers.facebook.com/docs/reference/rest/connect.registerUsers/" name="https://developers.facebook.com/docs/reference/rest/connect.registerUsers/">connect.registerUsers</a> API call and are only confirmed when the user adds your application. The format of each email hash is the crc32 and md5 hashes of the email address combined with an underscore (_).</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">pic_small_with_logo</td>
+<td class="type">string</td>
+<td>
+<p>The URL to the small-sized profile picture for the user being queried. The image can have a maximum width of 50px and a maximum height of 150px, and is overlaid with the Facebook favicon. This URL may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">pic_big_with_logo</td>
+<td class="type">string</td>
+<td>
+<p>The URL to the largest-sized profile picture for the user being queried. The image can have a maximum width of 200px and a maximum height of 600px, and is overlaid with the Facebook favicon. This URL may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">pic_square_with_logo</td>
+<td class="type">string</td>
+<td>
+<p>The URL to the square profile picture for the user being queried. The image can have a maximum width and height of 50px, and is overlaid with the Facebook favicon. This URL may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">pic_with_logo</td>
+<td class="type">string</td>
+<td>
+<p>The URL to the medium-sized profile picture for the user being queried. The image can have a maximum width of 100px and a maximum height of 300px, and is overlaid with the Facebook favicon. This URL may be blank.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">pic_cover</td>
+<td class="type">array</td>
+<td>
+<p>An array containing the keys <code>cover_id</code>, <code>source</code>, and <code>offset_y</code> which refer to the user&apos;s cover photo.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">allowed_restrictions</td>
+<td class="type">string</td>
+<td>
+<p>A comma-delimited list of <a href="/docs/reference/rest/admin.setRestrictionInfo" name="https://developers.facebook.com/docs/reference/rest/admin.setRestrictionInfo">Demographic Restrictions</a> <code>types</code> a user is allowed to access. Currently, <code>alcohol</code> is the only type that can get returned.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">verified</td>
+<td class="type">bool</td>
+<td>
+<p>Indicates whether or not Facebook has verified the user.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">profile_blurb</td>
+<td class="type">string</td>
+<td>
+<p>This string contains the contents of the text box under a user&apos;s profile picture.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">family</td>
+<td class="type">array</td>
+<td>
+<p>
+<strong>Note:</strong> For family information, you should query the <a href="/docs/reference/fql/family/" name="https://developers.facebook.com/docs/reference/fql/family/">family</a> FQL table instead.</p>
+<p>This array contains a series of entries for the immediate relatives of the user being queried. Each entry is also an array containing the following fields:</p>
+<ul>
+<li>relationship -- A string describing the type of relationship. Can be one of <code>parent</code>, <code>mother</code>, <code>father</code>, <code>sibling</code>, <code>sister</code>, <code>brother</code>, <code>child</code>, <code>son</code>, <code>daughter</code>.</li>
+<li>uid (optional) -- The user ID of the relative, which gets displayed if the account is linked to (confirmed by) another account. If the relative did not confirm the relationship, the name appears instead.</li>
+<li>name (optional) -- The name of the relative, which could be text the user entered. If the relative confirmed the relationship, the uid appears instead.</li>
+<li>birthday -- If the relative is a child, this is the birthday the user entered.</li>
+</ul>
+<p>
+<strong>Note:</strong> At this time, you cannot query for a specific relationship (like SELECT family FROM user WHERE family.relationship = &apos;daughter&apos; AND uid = &apos;$x&apos;); you&apos;ll have to query on the family field and filter the results yourself.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">website</td>
+<td class="type">string</td>
+<td>
+<p>The website of the user being queried.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">is_blocked</td>
+<td class="type">bool</td>
+<td>
+<p>Returns true if the user is blocked to the viewer/logged in user.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">contact_email</td>
+<td class="type">string</td>
+<td>
+<p>A string containing the user&apos;s primary Facebook email address. If the user shared his or her primary email address with you, this address also appears in the <code>email</code> field (see below). Facebook recommends you query the email field to get the email address shared with your application.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">email</td>
+<td class="type">string</td>
+<td>
+<p>A string containing the user&apos;s primary Facebook email address or the user&apos;s proxied email address, whichever address the user granted your application. Facebook recommends you query this field to get the email address shared with your application.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">*</td>
+<td class="name">third_party_id</td>
+<td class="type">string</td>
+<td>
+<p>A string containing an anonymous, but unique identifier for the user. You can use this identifier with third-parties.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">name_format</td>
+<td class="type">string</td>
+<td>
+<p>The user&apos;s name formatted to correctly handle Chinese, Japanese, Korean ordering.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">video_upload_limits</td>
+<td class="type">array</td>
+<td>
+<p>The size of the video file and the length of the video that a user can upload. This object contains length and size of video.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">games</td>
+<td class="type">string</td>
+<td>
+<p>The user&apos;s favorite games; this field is deprecated and will be removed in the near future. The string is a comma-separated list.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">work</td>
+<td class="type">array</td>
+<td>
+<p>A list of the user&apos;s work history. Contains employer, location, position, start_date and end_date fields.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">education</td>
+<td class="type">array</td>
+<td>
+<p>A list of the user&apos;s education history. Contains <code>year</code> and <code>type</code> fields, and <code>school</code> object (<code>name</code>, <code>id</code>, <code>type</code>, and optional <code>year</code>, <code>degree</code>, <code>concentration</code> array, <code>classes</code> array, and <code>with</code> array ).</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">sports</td>
+<td class="type">array</td>
+<td>
+<p>The sports that the user plays. The array objects contain id and name fields.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">favorite_athletes</td>
+<td class="type">array</td>
+<td>
+<p>The user&apos;s favorite athletes; this field is deprecated and will be removed in the near future. The array objects contain id and name fields.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">favorite_teams</td>
+<td class="type">array</td>
+<td>
+<p>The user&apos;s favorite teams; this field is deprecated and will be removed in the near future. The array objects contain id and name fields.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">inspirational_people</td>
+<td class="type">array</td>
+<td>
+<p>The people who inspire the user. The array objects contain id and name fields.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">languages</td>
+<td class="type">array</td>
+<td>
+<p>The user&apos;s languages. The array objects contain id and name fields.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">likes_count</td>
+<td class="type">int</td>
+<td>
+<p>Count of all the pages this user has liked.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">friend_count</td>
+<td class="type">int</td>
+<td>
+<p>Count of all the user&apos;s friends.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">mutual_friend_count</td>
+<td class="type">int</td>
+<td>
+<p>The number of mutual friends shared by the user in the query and the session user.</p>
+</td>
+</tr>
+<tr>
+<td class="indexable">
+</td>
+<td class="name">can_post</td>
+<td class="type">bool</td>
+<td>
+<p>Whether or not the viewer can post to the user&apos;s Wall.</p>
+</td>
+</tr>
+</table>
+<h2>参考情報:</h2>
+<ul>
+<li>
+<p>
+<a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">Users Graph API</a>
+</p>
+</li>
+<li>
+<p>
+<a href="/docs/reference/fql/standard_user_info" name="https://developers.facebook.com/docs/reference/fql/standard_user_info">standard_user_info FQL table</a>
+</p>
+</li>
+</ul>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/fql/user/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1338417899" title="2012年5月30日 15:44">約1週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/php/facebook-api/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/php/facebook-api/">https://developers.facebook.com/docs/reference/php/facebook-api/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/php" name="https://developers.facebook.com/docs/reference/php">PHP SDK</a>
+</li>
+<li>
+<a href="/docs/reference/iossdk" name="https://developers.facebook.com/docs/reference/iossdk">iOS SDK</a>
+</li>
+<li>
+<a href="/docs/reference/androidsdk" name="https://developers.facebook.com/docs/reference/androidsdk">Android SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Downloads</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/download/" name="http://developers.facebook.com/docs/reference/php/download/">Download the PHP SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Facebook Object</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-api/" name="http://developers.facebook.com/docs/reference/php/facebook-api/">api</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-getAccessToken/" name="http://developers.facebook.com/docs/reference/php/facebook-getAccessToken/">getAccessToken</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-getAppSecret/" name="http://developers.facebook.com/docs/reference/php/facebook-getAppSecret/">getApiSecret</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-getAppId/" name="http://developers.facebook.com/docs/reference/php/facebook-getAppId/">getAppId</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-getLoginStatusUrl/" name="http://developers.facebook.com/docs/reference/php/facebook-getLoginStatusUrl/">getLoginStatusUrl</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-getLoginUrl/" name="http://developers.facebook.com/docs/reference/php/facebook-getLoginUrl/">getLoginUrl</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-getLogoutUrl/" name="http://developers.facebook.com/docs/reference/php/facebook-getLogoutUrl/">getLogoutUrl</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-getSignedRequest/" name="http://developers.facebook.com/docs/reference/php/facebook-getSignedRequest/">getSignedRequest</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-getUser/" name="http://developers.facebook.com/docs/reference/php/facebook-getUser/">getUser</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-setAccessToken/" name="http://developers.facebook.com/docs/reference/php/facebook-setAccessToken/">setAccessToken</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-setAppSecret/" name="http://developers.facebook.com/docs/reference/php/facebook-setAppSecret/">setApiSecret</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-setAppId/" name="http://developers.facebook.com/docs/reference/php/facebook-setAppId/">setAppId</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-setFileUploadSupport/" name="http://developers.facebook.com/docs/reference/php/facebook-setFileUploadSupport/">setFileUploadSupport</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/facebook-getFileUploadSupport/" name="http://developers.facebook.com/docs/reference/php/facebook-getFileUploadSupport/">useFileUploadSupport</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>FacebookApiException</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/exception-getResult/" name="http://developers.facebook.com/docs/reference/php/exception-getResult/">getResult</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/php/exception-getType/" name="http://developers.facebook.com/docs/reference/php/exception-getType/">getType</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>api</h1>
+<div class="breadcrumbs">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/php/" name="https://developers.facebook.com/docs/reference/php/">PHP SDK</a> › <a href="/docs/reference/php/facebook-api/" name="https://developers.facebook.com/docs/reference/php/facebook-api/">api</a>
+</div>
+</div>
+</div>
+<h2>
+<code>Facebook::api(/* polymorphic */)</code>
+</h2>
+<p>This method can call a Facebook <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> method, an <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a> query, or a <strong>(DEPRECATED)</strong> <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">REST API</a> method, depending on the parameters passed in.</p>
+<p>To call a Graph API method, pass in the path as the first parameter; to run FQL queries or REST APIs, pass in the array of parameters required for the API call, as described below.</p>
+<h2>Examples</h2>
+<h3>Get the User&apos;s profile via the Graph API and print their name</h3>
+<pre>
+<code>&lt;?
+  // Remember to copy files from the SDK&apos;s src/ directory to a
+  // directory in your application on the server, such as php-sdk/
+  require_once(&apos;php-sdk/facebook.php&apos;);
+
+  $config = array(
+    &apos;appId&apos; =&gt; &apos;YOUR_APP_ID&apos;,
+    &apos;secret&apos; =&gt; &apos;YOUR_APP_SECRET&apos;,
+  );
+
+  $facebook = new Facebook($config);
+  $user_id = $facebook-&gt;getUser();
+?&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;?
+    if($user_id) {
+
+      // We have a user ID, so probably a logged in user.
+      // If not, we&apos;ll get an exception, which we handle below.
+      try {
+
+        $user_profile = $facebook-&gt;api(&apos;/me&apos;,&apos;GET&apos;);
+        echo &quot;Name: &quot; . $user_profile[&apos;name&apos;];
+
+      } catch(FacebookApiException $e) {
+        // If the user is logged out, you can have a 
+        // user ID even though the access token is invalid.
+        // In this case, we&apos;ll get an exception, so we&apos;ll
+        // just ask the user to login again here.
+        $login_url = $facebook-&gt;getLoginUrl(); 
+        echo &apos;Please &lt;a href=&quot;&apos; . $login_url . &apos;&quot;&gt;login.&lt;/a&gt;&apos;;
+        error_log($e-&gt;getType());
+        error_log($e-&gt;getMessage());
+      }   
+    } else {
+
+      // No user, print a link for the user to login
+      $login_url = $facebook-&gt;getLoginUrl();
+      echo &apos;Please &lt;a href=&quot;&apos; . $login_url . &apos;&quot;&gt;login.&lt;/a&gt;&apos;;
+
+    }
+
+  ?&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<h3>Get the User&apos;s name using FQL and print it</h3>
+<pre>
+<code>&lt;?
+  // Remember to copy files from the SDK&apos;s src/ directory to a
+  // directory in your application on the server, such as php-sdk/
+  require_once(&apos;php-sdk/facebook.php&apos;);
+
+  $config = array(
+    &apos;appId&apos; =&gt; &apos;YOUR_APP_ID&apos;,
+    &apos;secret&apos; =&gt; &apos;YOUR_APP_SECRET&apos;,
+  );
+
+  $facebook = new Facebook($config);
+  $user_id = $facebook-&gt;getUser();
+?&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;?
+    if($user_id) {
+
+      // We have a user ID, so probably a logged in user.
+      // If not, we&apos;ll get an exception, which we handle below.
+      try {
+        $fql = &apos;SELECT name from user where uid = &apos; . $user_id;
+        $ret_obj = $facebook-&gt;api(array(
+                                   &apos;method&apos; =&gt; &apos;fql.query&apos;,
+                                   &apos;query&apos; =&gt; $fql,
+                                 ));
+
+        // FQL queries return the results in an array, so we have
+        //  to get the user&apos;s name from the first element in the array.
+        echo &apos;&lt;pre&gt;Name: &apos; . $ret_obj[0][&apos;name&apos;] . &apos;&lt;/pre&gt;&apos;;
+
+      } catch(FacebookApiException $e) {
+        // If the user is logged out, you can have a 
+        // user ID even though the access token is invalid.
+        // In this case, we&apos;ll get an exception, so we&apos;ll
+        // just ask the user to login again here.
+        $login_url = $facebook-&gt;getLoginUrl(); 
+        echo &apos;Please &lt;a href=&quot;&apos; . $login_url . &apos;&quot;&gt;login.&lt;/a&gt;&apos;;
+        error_log($e-&gt;getType());
+        error_log($e-&gt;getMessage());
+      }   
+    } else {
+
+      // No user, so print a link for the user to login
+      $login_url = $facebook-&gt;getLoginUrl();
+      echo &apos;Please &lt;a href=&quot;&apos; . $login_url . &apos;&quot;&gt;login.&lt;/a&gt;&apos;;
+
+    }
+
+  ?&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<h3>Post a link to a User&apos;s wall using the Graph API</h3>
+<pre>
+<code>&lt;?
+  // Remember to copy files from the SDK&apos;s src/ directory to a
+  // directory in your application on the server, such as php-sdk/
+  require_once(&apos;php-sdk/facebook.php&apos;);
+
+  $config = array(
+    &apos;appId&apos; =&gt; &apos;YOUR_APP_ID&apos;,
+    &apos;secret&apos; =&gt; &apos;YOUR_APP_SECRET&apos;,
+  );
+
+  $facebook = new Facebook($config);
+  $user_id = $facebook-&gt;getUser();
+?&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;?
+    if($user_id) {
+
+      // We have a user ID, so probably a logged in user.
+      // If not, we&apos;ll get an exception, which we handle below.
+      try {
+        $ret_obj = $facebook-&gt;api(&apos;/me/feed&apos;, &apos;POST&apos;,
+                                    array(
+                                      &apos;link&apos; =&gt; &apos;www.example.com&apos;,
+                                      &apos;message&apos; =&gt; &apos;Posting with the PHP SDK!&apos;
+                                 ));
+        echo &apos;&lt;pre&gt;Post ID: &apos; . $ret_obj[&apos;id&apos;] . &apos;&lt;/pre&gt;&apos;;
+
+      } catch(FacebookApiException $e) {
+        // If the user is logged out, you can have a 
+        // user ID even though the access token is invalid.
+        // In this case, we&apos;ll get an exception, so we&apos;ll
+        // just ask the user to login again here.
+        $login_url = $facebook-&gt;getLoginUrl( array(
+                       &apos;scope&apos; =&gt; &apos;publish_stream&apos;
+                       )); 
+        echo &apos;Please &lt;a href=&quot;&apos; . $login_url . &apos;&quot;&gt;login.&lt;/a&gt;&apos;;
+        error_log($e-&gt;getType());
+        error_log($e-&gt;getMessage());
+      }   
+      // Give the user a logout link 
+      echo &apos;&lt;br /&gt;&lt;a href=&quot;&apos; . $facebook-&gt;getLogoutUrl() . &apos;&quot;&gt;logout&lt;/a&gt;&apos;;
+    } else {
+
+      // No user, so print a link for the user to login
+      // To post to a user&apos;s wall, we need publish_stream permission
+      // We&apos;ll use the current URL as the redirect_uri, so we don&apos;t
+      // need to specify it here.
+      $login_url = $facebook-&gt;getLoginUrl( array( &apos;scope&apos; =&gt; &apos;publish_stream&apos; ) );
+      echo &apos;Please &lt;a href=&quot;&apos; . $login_url . &apos;&quot;&gt;login.&lt;/a&gt;&apos;;
+
+    } 
+
+  ?&gt;      
+
+  &lt;/body&gt; 
+&lt;/html&gt;  
+</code>
+</pre>
+<h3>Upload a photo to a User&apos;s profile</h3>
+<pre>
+<code>&lt;?
+  // Remember to copy files from the SDK&apos;s src/ directory to a
+  // directory in your application on the server, such as php-sdk/
+  require_once(&apos;php-sdk/facebook.php&apos;);
+
+  $config = array(
+    &apos;appId&apos; =&gt; &apos;YOUR_APP_ID&apos;,
+    &apos;secret&apos; =&gt; &apos;YOUR_APP_SECRET&apos;,
+    &apos;fileUpload&apos; =&gt; true,
+  );
+
+  $facebook = new Facebook($config);
+  $user_id = $facebook-&gt;getUser();
+
+  $photo = &apos;./mypic.png&apos;; // Path to the photo on the local filesystem
+  $message = &apos;Photo upload via the PHP SDK!&apos;;
+?&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;?
+    if($user_id) {
+
+      // We have a user ID, so probably a logged in user.
+      // If not, we&apos;ll get an exception, which we handle below.
+      try {
+
+        // Upload to a user&apos;s profile. The photo will be in the
+        // first album in the profile. You can also upload to
+        // a specific album by using /ALBUM_ID as the path 
+        $ret_obj = $facebook-&gt;api(&apos;/me/photos&apos;, &apos;POST&apos;, array(
+                                         &apos;source&apos; =&gt; &apos;@&apos; . $photo,
+                                         &apos;message&apos; =&gt; $message,
+                                         )
+                                      );
+        echo &apos;&lt;pre&gt;Photo ID: &apos; . $ret_obj[&apos;id&apos;] . &apos;&lt;/pre&gt;&apos;;
+
+      } catch(FacebookApiException $e) {
+        // If the user is logged out, you can have a 
+        // user ID even though the access token is invalid.
+        // In this case, we&apos;ll get an exception, so we&apos;ll
+        // just ask the user to login again here.
+        $login_url = $facebook-&gt;getLoginUrl( array(
+                       &apos;scope&apos; =&gt; &apos;photo_upload&apos;
+                       )); 
+        echo &apos;Please &lt;a href=&quot;&apos; . $login_url . &apos;&quot;&gt;login.&lt;/a&gt;&apos;;
+        error_log($e-&gt;getType());
+        error_log($e-&gt;getMessage());
+      }   
+
+      echo &apos;&lt;br /&gt;&lt;a href=&quot;&apos; . $facebook-&gt;getLogoutUrl() . &apos;&quot;&gt;logout&lt;/a&gt;&apos;;
+    } else {
+
+      // No user, print a link for the user to login
+      // To upload a photo to a user&apos;s wall, we need photo_upload  permission
+      // We&apos;ll use the current URL as the redirect_uri, so we don&apos;t
+      // need to specify it here.
+      $login_url = $facebook-&gt;getLoginUrl( array( &apos;scope&apos; =&gt; &apos;photo_upload&apos;) );
+      echo &apos;Please &lt;a href=&quot;&apos; . $login_url . &apos;&quot;&gt;login.&lt;/a&gt;&apos;;
+
+    }
+
+  ?&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<h2>Parameters</h2>
+<h3>Graph API Methods</h3>
+<p>To call a Graph API method, pass in the endpoint path you wish to retrieve as the first parameter, and other optional parameters as necessary:</p>
+<pre>
+<code>$ret = $facebook-&gt;api($path, $method, $params);
+</code>
+</pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>path</code>
+</td>
+<td>The Graph API path for the request, e.g. &quot;/me&quot; for the logged in user&apos;s profile.</td>
+</tr>
+<tr>
+<td>
+<code>method</code>
+</td>
+<td>(optional) Specify the HTTP method for this request: <code>&apos;GET&apos;</code>, <code>&apos;POST&apos;</code>, or <code>&apos;DELETE&apos;</code>.</td>
+</tr>
+<tr>
+<td>
+<code>params</code>
+</td>
+<td>(optional) Parameters specific to the particular Graph API method you are calling. Passed in as an associative array of <code>&apos;name&apos; =&gt; &apos;value&apos;</code> pairs.</td>
+</tr>
+</tbody>
+</table>
+<h3>FQL Queries</h3>
+<p>To run an FQL query, pass the parameters in as an array, with the <code>&apos;method&apos;</code> property set to <code>&apos;fql.query&apos;</code>:</p>
+<pre>
+<code>$ret = $facebook-&gt;api( array(
+                         &apos;method&apos; =&gt; &apos;fql.query&apos;,
+                         &apos;query&apos; =&gt; &apos;SELECT . . . &apos;,
+                     ));
+</code>
+</pre>
+<h3>
+<strong>(DEPRECATED)</strong> REST APIs</h3>
+<p>REST APIs are called exactly the same as FQL queries, except that the <code>&apos;method&apos;</code> property is replaced with the REST API name, and other parameters are replaced as necessary for the specific API call. For example:</p>
+<pre>
+<code>$ret = $facebook-&gt;api( array(
+                         &apos;method&apos; =&gt; &apos;link.getStats&apos;,
+                         &apos;urls&apos; =&gt; &apos;facebook.com,developers.facebook.com&apos;,
+                     ));
+</code>
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/php/facebook-api/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1317338067" title="2011年9月29日 16:14">約8ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

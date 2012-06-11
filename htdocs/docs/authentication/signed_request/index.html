@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/authentication/signed_request/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/authentication/signed_request/">https://developers.facebook.com/docs/authentication/signed_request/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/server-side/" name="http://developers.facebook.com/docs/authentication/server-side/">Server-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/client-side/" name="http://developers.facebook.com/docs/authentication/client-side/">Client-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/ios/" name="http://developers.facebook.com/docs/authentication/ios/">Authentication in native iOS apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/android/" name="http://developers.facebook.com/docs/authentication/android/">Authentication in native Android apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pages/" name="http://developers.facebook.com/docs/authentication/pages/">Authenticating as a Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/applications/" name="http://developers.facebook.com/docs/authentication/applications/">Authenticating as an App</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/devices/" name="http://developers.facebook.com/docs/authentication/devices/">Authentication for Devices</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/canvas/" name="http://developers.facebook.com/docs/authentication/canvas/">Authentication within a Canvas Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pagetab/" name="http://developers.facebook.com/docs/authentication/pagetab/">Authentication within a Page Tab</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/access-token-expiration/" name="http://developers.facebook.com/docs/authentication/access-token-expiration/">Handling Invalid and Expired Access Tokens</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/permissions/" name="http://developers.facebook.com/docs/authentication/permissions/">Permissions Reference</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/publishing/" name="http://developers.facebook.com/docs/publishing/">Publishing Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/reauthentication/" name="http://developers.facebook.com/docs/authentication/reauthentication/">Re-Authentication</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/authentication/signed_request/" name="http://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Signed Request</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">Authentication</a> › <a href="/docs/authentication/signed_request/" name="https://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a>
+</div>
+</div>
+</div>
+<p>A <strong>signed_request</strong> parameter is used by Facebook to pass data to an application in a number of different scenarios:</p>
+<ul>
+<li>A <code>signed_request</code> parameter is POSTed to an application when the app is loaded inside a <a href="/docs/guides/canvas" name="https://developers.facebook.com/docs/guides/canvas">Canvas page</a>. For example, at <code>https://apps.facebook.com/YOUR_APP_NAMESPACE/</code>.</li>
+<li>A <code>signed_request</code> parameter is POSTed to an application when the app is loaded inside a <a href="/docs/appsonfacebook/pagetabs/" name="https://developers.facebook.com/docs/appsonfacebook/pagetabs/">Page Tab</a>.</li>
+<li>If an app has registered a <strong>Deauthorized Callback URL</strong> in it&apos;s <a href="/apps" name="https://developers.facebook.com/apps">settings</a>, a <code>signed_request</code> parameter will be POSTed to that URL whenever a user deauthorizes that application in their <a href="https://www.facebook.com/settings?tab=applications" name="https://www.facebook.com/settings?tab=applications">account settings</a>.</li>
+<li>A <code>signed_request</code> parameter is passed to an app which is using the <a href="/docs/plugins/registration" name="https://developers.facebook.com/docs/plugins/registration">Registration Plugin</a> whenever a user successfully registers.</li>
+<li>When using the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JS SDK</a> for <a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">authentication</a>, the <code>authResponse</code> object contains a <code>signed_request</code> property which is used to transfer information about the authenticated user.</li>
+</ul>
+<p>When you receive a <code>signed_request</code> string, it can be verified using your App Secret to ensure the request was send by Facebook and not a third party. Parsing the <code>signed_request</code> will yield a JSON object containing some data. The content and structure of this object differs depending on the scenario in which it was generated.</p>
+<h3>Parsing and Verifying</h3>
+<p>A <code>signed_request</code> string is the concatenation of an <a href="http://en.wikipedia.org/wiki/HMAC" name="http://en.wikipedia.org/wiki/HMAC">HMAC</a> <a href="http://en.wikipedia.org/wiki/SHA-2" name="http://en.wikipedia.org/wiki/SHA-2">SHA-256</a> signature, a period (<code>.</code>), and a <a href="http://en.wikipedia.org/wiki/Base64#URL_applications" name="http://en.wikipedia.org/wiki/Base64#URL_applications">base64url encoded</a> JSON object. It looks something like this (without the newlines):</p>
+<pre>
+<code>vlXgu64BQGFSQrY0ZcJBZASMvYvTHu9GQ0YM9rjPSso
+.
+eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsIjAiOiJwYXlsb2FkIn0
+</code>
+</pre>
+<p>The HMAC signature means you can verify that the request came from Facebook. The signature potion is signed using your App Secret which is only known by you and Facebook. Without this secret, third parties cannot modify the <code>signed_request</code> string without also invalidating its contents.</p>
+<p>Verifying the signature and decoding the data in a <code>signed_request</code> string is quite straightforward. The following PHP provides an example:</p>
+<pre>
+<code>function parse_signed_request($signed_request, $secret) {
+  list($encoded_sig, $payload) = explode(&apos;.&apos;, $signed_request, 2); 
+
+  // decode the data
+  $sig = base64_url_decode($encoded_sig);
+  $data = json_decode(base64_url_decode($payload), true);
+
+  if (strtoupper($data[&apos;algorithm&apos;]) !== &apos;HMAC-SHA256&apos;) {
+    error_log(&apos;Unknown algorithm. Expected HMAC-SHA256&apos;);
+    return null;
+  }
+
+  // check sig
+  $expected_sig = hash_hmac(&apos;sha256&apos;, $payload, $secret, $raw = true);
+  if ($sig !== $expected_sig) {
+    error_log(&apos;Bad Signed JSON signature!&apos;);
+    return null;
+  }
+
+  return $data;
+}
+
+function base64_url_decode($input) {
+  return base64_decode(strtr($input, &apos;-_&apos;, &apos;+/&apos;));
+}
+</code>
+</pre>
+<p>You call this function with <code>$_REQUEST[&apos;signed_request&apos;]</code> and your <strong>App Secret</strong>. Our <a href="http://github.com/facebook/php-sdk/" name="http://github.com/facebook/php-sdk/">PHP SDK</a> includes methods to parse and verify the <code>signed_request</code> string for you.</p>
+<h3>Debugging</h3>
+<p>To help in debugging, you can pass any <code>signed_request</code> string to <a href="https://developers.facebook.com/tools/echo?signed_request=vlXgu64BQGFSQrY0ZcJBZASMvYvTHu9GQ0YM9rjPSso.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsIjAiOiJwYXlsb2FkIn0" name="https://developers.facebook.com/tools/echo?signed_request=vlXgu64BQGFSQrY0ZcJBZASMvYvTHu9GQ0YM9rjPSso.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsIjAiOiJwYXlsb2FkIn0">/tools/echo</a> to quickly see a decoded version.</p>
+<h3>Fields and Values</h3>
+<p>A <code>signed_request</code> is simply a data transfer mechanism and does not imply any defined structure or format of data carried in the request. However, within the Facebook Platform, the JSON object payload may contain some of the following fields and values:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>code</code>
+</td>
+<td>an OAuth Code which can be exchanged for a valid user access token via a subsequent <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">server-side request</a>
+</td>
+</tr>
+<tr>
+<td>
+<code>algorithm</code>
+</td>
+<td>A JSON string containing the mechanism used to sign the request, normally: <code>HMAC-SHA256</code>.</td>
+</tr>
+<tr>
+<td>
+<code>issued_at</code>
+</td>
+<td>A JSON number containing the Unix timestamp when the request was signed.</td>
+</tr>
+<tr>
+<td>
+<code>user_id</code>
+</td>
+<td>A JSON string containing the User ID of the current user.</td>
+</tr>
+<tr>
+<td>
+<code>user</code>
+</td>
+<td>A JSON object containing the <code>locale</code> string, <code>country</code> string and the <code>age</code> object (containing the <code>min</code> and <code>max</code> number range of the age) for the current user.</td>
+</tr>
+<tr>
+<td>
+<code>oauth_token</code>
+</td>
+<td>A JSON string that can be used when making requests to the <a href="/docs/api" name="https://developers.facebook.com/docs/api">Graph API</a>. This is also known as a user access token.</td>
+</tr>
+<tr>
+<td>
+<code>expires</code>
+</td>
+<td>A JSON number containing the Unix timestamp when the <code>oauth_token</code> expires.</td>
+</tr>
+<tr>
+<td>
+<code>app_data</code>
+</td>
+<td>A JSON string containing the content of the <code>app_data</code> query string parameter which may be passed if the app is being loaded within a <a href="/docs/appsonfacebook/pagetabs/" name="https://developers.facebook.com/docs/appsonfacebook/pagetabs/">Page Tab</a>.</td>
+</tr>
+<tr>
+<td>
+<code>page</code>
+</td>
+<td>A JSON object containing the page <code>id</code> string, the <code>liked</code> boolean (set to <code>true</code> if the user has liked the page, <code>false</code> if not) and the <code>admin</code> boolean (set to <code>true</code> if the user is an admin of the page, <code>false</code> if they&apos;re not). This field is only present if your app is being loaded within a <a href="/docs/appsonfacebook/pagetabs/" name="https://developers.facebook.com/docs/appsonfacebook/pagetabs/">Page Tab</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>Some fields and values, the <code>user_id</code> and <code>oauth_token</code> for example will only be passed if the user has <a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">authorized</a> your app.</p>
+<h3 id="faq">Common Questions</h3>
+<dl>
+<dt>My JSON is missing a few characters and not decoding. What should I do?</dt>
+<dd>You are probably using normal base64 decoding instead of base64url decoding. See <a href="http://en.wikipedia.org/wiki/Base64#URL_applications" name="http://en.wikipedia.org/wiki/Base64#URL_applications">wikipedia</a>.</dd>
+<dt>Why this signature scheme?</dt>
+<dd>Many different signature schemes have been proposed over time. <a href="http://oauth.net/core/1.0/#signing_process" name="http://oauth.net/core/1.0/#signing_process">OAuth 1.0</a> built a base string to be signed, which was problematic because the normalization rules were difficult to get right. Our fb_sig signing scheme made it really easy for applications to just use the variables without checking the signature. And how to <a href="http://kentbrewster.com/oauth-confessions/" name="http://kentbrewster.com/oauth-confessions/">normalize what you&apos;re signing</a> has always been a problem with signatures. To deal with all these issues, we&apos;ve built a signature scheme, based on the <a href="http://docs.google.com/document/pub?id=1kv6Oz_HRnWa0DaJx_SQ5Qlk_yqs_7zNAm75-FmKwNo4" name="http://docs.google.com/document/pub?id=1kv6Oz_HRnWa0DaJx_SQ5Qlk_yqs_7zNAm75-FmKwNo4">OAuth 2.0 proposal</a>.</dd>
+<dt>Why base64url encoding?</dt>
+<dd>This way, the only &apos;weird&apos; character you have to deal with are <code>-</code>, <code>_</code> and <code>.</code> which are all safe to be put in URL parameters, HTTP headers, or URL anchors. No more worrying about <a href="http://en.wikipedia.org/wiki/Percent-encoding" name="http://en.wikipedia.org/wiki/Percent-encoding">percent encoding</a>, removing newlines, or browser incompatibilities with <a href="http://stackoverflow.com/questions/1703552/encoding-of-window-location-hash" name="http://stackoverflow.com/questions/1703552/encoding-of-window-location-hash">anchor tag</a> decoding.</dd>
+<dt>Why is it called <code>signed_request</code>?</dt>
+<dd>It&apos;s the part of the HTTP request that is signed. You can remember the signature comes first in both the name of the parameter and the parameter itself.</dd>
+<dt>Why is there a &apos;.&apos; in the middle? Don&apos;t you know the length of the signature?</dt>
+<dd>Different signature algorithms have different lengths, and you don&apos;t know which algorithm you are using until you decode the JSON.</dd>
+<dt>Why don&apos;t you use hex encoding for the signature?</dt>
+<dd>It is nice to be consistent. The signature and the payload are now encoded the exact same way.</dd>
+<dt>Why is the signature first?</dt>
+<dd>Doing a left split is usually easier than a right one. It also allows us to pursue other encodings, like hex for the signature and percent encoding for the payload.</dd>
+<dt>Do you have any examples?</dt>
+<dd>The example at the start is encoded with the secret being the string <code>secret</code> and the data should come out as <code>{&quot;0&quot;:&quot;payload&quot;}</code>.</dd>
+</dl>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/authentication/signed_request/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1331838528" title="2012年3月15日 12:08">約3ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

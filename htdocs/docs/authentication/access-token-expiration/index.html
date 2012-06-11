@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/authentication/access-token-expiration/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/authentication/access-token-expiration/">https://developers.facebook.com/docs/authentication/access-token-expiration/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/server-side/" name="http://developers.facebook.com/docs/authentication/server-side/">Server-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/client-side/" name="http://developers.facebook.com/docs/authentication/client-side/">Client-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/ios/" name="http://developers.facebook.com/docs/authentication/ios/">Authentication in native iOS apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/android/" name="http://developers.facebook.com/docs/authentication/android/">Authentication in native Android apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pages/" name="http://developers.facebook.com/docs/authentication/pages/">Authenticating as a Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/applications/" name="http://developers.facebook.com/docs/authentication/applications/">Authenticating as an App</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/devices/" name="http://developers.facebook.com/docs/authentication/devices/">Authentication for Devices</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/canvas/" name="http://developers.facebook.com/docs/authentication/canvas/">Authentication within a Canvas Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pagetab/" name="http://developers.facebook.com/docs/authentication/pagetab/">Authentication within a Page Tab</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/authentication/access-token-expiration/" name="http://developers.facebook.com/docs/authentication/access-token-expiration/">Handling Invalid and Expired Access Tokens</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/permissions/" name="http://developers.facebook.com/docs/authentication/permissions/">Permissions Reference</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/publishing/" name="http://developers.facebook.com/docs/publishing/">Publishing Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/reauthentication/" name="http://developers.facebook.com/docs/authentication/reauthentication/">Re-Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/signed_request/" name="http://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Handling Invalid and Expired Access Tokens</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">Authentication</a> › <a href="/docs/authentication/access-token-expiration/" name="https://developers.facebook.com/docs/authentication/access-token-expiration/">Handling Invalid and Expired Access Tokens</a>
+</div>
+</div>
+</div>
+<p>When an access token is passed to your application from Facebook, in most cases, you will also be passed an <code>expires</code> value which tells you when you can expect that token to expire. The duration a token is valid for depends upon the method in which it was generated.</p>
+<p>However, there are several events which can cause an access token to become invalid before its expected expiry time. Examples include: when a user changes their password, when a user de-authorizes an application, or when an App&apos;s Secret is refreshed.</p>
+<p>When building robust, high-quality social applications, it&apos;s important to ensure your application can handle these scenarios and can obtain new, valid access tokens for your users. Having a valid token ensures you are able to query for changes in a user&apos;s data, and to publish actions to the <a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>.</p>
+<h2>Detecting Access Token errors</h2>
+<p>Facebook doesn&apos;t notify you that a previously issued access token has become invalid. Unless you have persisted the <code>expiry</code> time passed to your application along with the access token, often the first your application knows that a given token has become invalid is when you attempt to make a request to the API.</p>
+<p>The first step in handling expired tokens is to read error messages thrown by the API. In each case, the API will return an HTTP <code>400</code> status code and a JSON body explaining the nature of the error:</p>
+<h3>1. Access Token has expired</h3>
+<pre>
+<code>{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Error validating access token: Session has expired at unix 
+                time SOME_TIME. The current unix time is SOME_TIME.&quot;, 
+    &quot;type&quot;: &quot;OAuthException&quot;, 
+    &quot;code&quot;: 190
+  }
+}
+</code>
+</pre>
+<h3>2. Access Token invalidated due to the user logging out or changing their password</h3>
+<pre>
+<code>{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Error validating access token: The session is invalid 
+                because the user logged out.&quot;, 
+    &quot;type&quot;: &quot;OAuthException&quot;, 
+    &quot;code&quot;: 190
+  }
+}
+</code>
+</pre>
+<h3>3. User has Deauthorized your application</h3>
+<pre>
+<code>{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Error validating access token: User USER_ID has 
+                not authorized application APP_ID.&quot;, 
+    &quot;type&quot;: &quot;OAuthException&quot;, 
+    &quot;code&quot;: 190
+  }
+}
+</code>
+</pre>
+<h2>Handling Invalid/Expired Access Tokens</h2>
+<p>If the user de-authorized your application, you must consider the user to effectively be a new user. To handle this case, you must implement the standard app authorization flow. See the <a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication documentation</a>.</p>
+<p>However, if the access token became invalid for some other reason, the solution in all cases is to re-authenticate the user. Until you re-authenticate the user, you will be unable to read from or write data to the Facebook APIs.</p>
+<p>The method you use to re-authenticate the user will depend on the platform and context in which the user next uses your application.</p>
+<h3>Desktop Web and Mobile Web apps which implement <a href="/docs/authentication/client-side" name="https://developers.facebook.com/docs/authentication/client-side">authentication with the Javascript SDK</a>
+</h3>
+<p>Calling <code>FB.getLoginStatus()</code> or ensuring <code>status: true</code> is set when you call <code>FB.init()</code> means that the next time a user lands on your application and is signed into Facebook, the <code>authResponse</code> object you are passed as a result of those calls will contain a fresh, valid access token.</p>
+<p>In this case, its simply the act of the user using your application which implicitly generates a new access token.</p>
+<h3>Desktop Web and Mobile Web apps which implement the <a href="/docs/authentication/server-side" name="https://developers.facebook.com/docs/authentication/server-side">server-side authentication flow</a>
+</h3>
+<p>To obtain a fresh access token in this case you must pass the user through the full server-side flow again: i.e. obtain a <code>code</code> and exchange it for a new access token.</p>
+<p>However, assuming the user has not de-authorized your application, when you redirect the user into the <a href="/docs/reference/dialogs/oauth/" name="https://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog</a>, the user will not be prompted to reauthorize your application, and will be immediately redirected to your <code>redirect_uri</code>. This means that the re-authentication process can appear transparent to the user.</p>
+<h3>Applications in Canvas and Page Tabs</h3>
+<p>The next time a user loads your application within a Canvas or Page Tab context, a new <a href="/docs/authentication/signed_request" name="https://developers.facebook.com/docs/authentication/signed_request">
+<code>signed_request</code>
+</a> parameter will be passed. This will contain a new <code>oauth_token</code> property. This is your new access token. As with web apps which implement authentication using the Javascript SDK, its the act of user returning to your app which implicitly generates a new access token.</p>
+<h3>iOS native applications</h3>
+<p>API errors are handled by the <code>FBRequestDelegate</code> interface. When you detect an access token is invalid or has expired, your application will need to multi-task over to the Facebook iOS app. Assuming the user has not deauthorized your app, they will be immediately multi-tasked back to your iOS application with a fresh, valid access token.</p>
+<p>For more, see the <a href="/docs/authentication/ios" name="https://developers.facebook.com/docs/authentication/ios">Authentication for iOS native apps</a> documentation.</p>
+<h3>Android native applications</h3>
+<p>You may detect access token errors by inspecting the <code>response</code> parameter of the <code>onComplete</code> method. In this case, you will again need to call <code>facebook.authorize()</code> to re-authenticate the user and generate a fresh access token.</p>
+<p>For more, see the <a href="/docs/authentication/android" name="https://developers.facebook.com/docs/authentication/android">Authentication for Android native apps</a> documentation.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/authentication/access-token-expiration/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1337279519" title="2012年5月17日 11:31">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/fbjs/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/fbjs/">https://developers.facebook.com/docs/fbjs/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a class="selected" href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>FBJS (Facebook JavaScript)</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">FBJS (Facebook JavaScript)</a>
+</div>
+</div>
+</div>
+<table bgcolor="#F2F2F2">
+<tr>
+<td>
+<b>We are deprecating FBJS.</b> On <b>Jan 1, 2012:</b> FBJS will no longer be supported on Platform. <b>June 1, 2012:</b> FBJS apps will no longer work. All FBJS endpoints are removed. If you are building a new app on Facebook.com, please implement your app using HTML, JavaScript and CSS. </td>
+</tr>
+</table>
+<h2>Introduction</h2>
+<p>FBJS is Facebook&apos;s solution for developers who want to use JavaScript in their <a href="reference/fbml" name="https://developers.facebook.com/docs/reference/fbml">FBML</a> applications. We built FBJS to empower developers with all the functionality they need while protecting our users&apos; privacy at the same time.</p>
+<p>Note: We don&apos;t recommend FBML for new developers. If you aren&apos;t already using FBML, you should instead <a href="../../guides/canvas" name="https://developers.facebook.com/../guides/canvas">implement your application within an <code>iframe</code>
+</a>, using the <a href="https://developers.facebook.com/docs/reference/javascript" name="https://developers.facebook.com/docs/reference/javascript">JavaScript SDK</a> and <a href="/plugins" name="https://developers.facebook.com/plugins">social plugins</a> for client-side integration with Facebook services.</p>
+<hr />
+<h2>Contents</h2>
+<ul>
+<li>
+<a href="#how" name="https://developers.facebook.com/docs/#how">How it works</a>
+</li>
+<li>
+<a href="#basics" name="https://developers.facebook.com/docs/#basics">The basics</a>
+</li>
+<li>
+<a href="#dom_objects" name="https://developers.facebook.com/docs/#dom_objects">FBJS DOM objects</a>
+</li>
+<li>
+<a href="#methods" name="https://developers.facebook.com/docs/#methods">Methods</a>
+</li>
+<li>
+<a href="#events" name="https://developers.facebook.com/docs/#events">Events</a>
+</li>
+<li>
+<a href="#unobtrusive" name="https://developers.facebook.com/docs/#unobtrusive">Unobtrusive events</a>
+</li>
+<li>
+<a href="#ajax" name="https://developers.facebook.com/docs/#ajax">AJAX</a>
+</li>
+<li>
+<a href="#animation" name="https://developers.facebook.com/docs/#animation">Animation</a>
+</li>
+<li>
+<a href="#dialogs" name="https://developers.facebook.com/docs/#dialogs">Dialogs</a>
+</li>
+<li>
+<a href="#fbml" name="https://developers.facebook.com/docs/#fbml">FBML Blocks</a>
+</li>
+<li>
+<a href="#include" name="https://developers.facebook.com/docs/#include">Include files</a>
+</li>
+<li>
+<a href="#local_proxy" name="https://developers.facebook.com/docs/#local_proxy">Local proxies</a>
+</li>
+<li>
+<a href="#tips" name="https://developers.facebook.com/docs/#tips">Tips</a>
+</li>
+</ul>
+<hr />
+<p>
+<a name="how">
+</a>
+</p>
+<h2>How It Works</h2>
+<p>Most providers who allow developers to embed JavaScript within their domain force developers to use IFrames to sandbox their code. Facebook has taken a different approach to this problem. JavaScript that you give us gets parsed, and any identifiers (function and variable names) get prepended with your application ID. For example, the following code block:</p>
+<pre>
+<code>function foo(bar) { 
+    var obj = {property: bar}; 
+    return obj.property; 
+}
+</code>
+</pre>
+<p>becomes:</p>
+<pre>
+<code>function a12345_foo(a12345_bar) { 
+    var a12345_obj = {property: a12345_bar};
+    return a12345_obj.property; 
+}
+</code>
+</pre>
+<p>This creates a virtual scope for every application that runs within Facebook. From there we expose certain functionality through a collection of JavaScript objects that allow you to modify your content on Facebook. Our objects are made to mimic the functionality of JavaScript as closely as possible, but it may take some getting used to for people who are already adept with JavaScript.</p>
+<p>You can <a href="#include" name="https://developers.facebook.com/docs/#include">include</a> an FBJS script file in a canvas page.</p>
+<hr />
+<p>
+<a name="basics">
+</a>
+</p>
+<h2>The Basics</h2>
+<p>The JavaScript syntax you&apos;ve come to know and love (or hate) is exactly the same. You can create objects, use anonymous functions, create timeouts and almost any other thing you can think of. Modifying the DOM tree is slightly different, however.</p>
+<p>Take this example FBML code, for instance:</p>
+<pre>
+<code>&lt;a href=&quot;#&quot; onclick=&quot;hello_world(this); return false;&quot;&gt;Hello World!&lt;/a&gt;
+&lt;script&gt; 
+&lt;!-- 
+function random_int(lo, hi) { 
+    return Math.floor((Math.random() * (hi - lo)) + lo); 
+} 
+
+function hello_world(obj) { 
+    var r = random_int(0, 255), b = random_int(0, 255), g = random_int(0, 255); 
+    var color = r+&apos;, &apos;+g+&apos;, &apos;+b;
+    obj.setStyle(&apos;color&apos;, &apos;rgb(&apos;+color+&apos;)&apos;); 
+} 
+//--&gt; 
+&lt;/script&gt;
+</code>
+</pre>
+<p>As you can see, creating FBJS is very similar to JavaScript. Note, however, that this example may not work as expected:</p>
+<pre>
+<code>&lt;a href=&quot;#&quot; id=&quot;hello&quot;&gt;Hello World!&lt;/a&gt; 
+&lt;script&gt; &lt;!-- function random_int(lo, hi) { 
+    return Math.floor((Math.random() * (hi - lo)) + lo); 
+} 
+
+function hello_world(obj) { 
+    var r = random_int(0, 255), b = random_int(0, 255), g = random_int(0, 255); 
+    var color = r+&apos;, &apos;+g+&apos;, &apos;+b; 
+    obj.setStyle(&apos;color&apos;,&apos;rgb(&apos;+color+&apos;)&apos;); 
+} 
+
+hello_world(document.getElementById(&apos;hello&apos;)); 
+//--&gt;
+&lt;/script&gt;
+</code>
+</pre>
+<p>In profile boxes, inline scripts are deferred until the first &quot;active&quot; event is triggered by a user. An active event is considered either <code>onfocus</code>, <code>onclick</code>, <code>onmousedown</code>, and so forth. Basically anything that requires a mouse click is an &quot;active&quot; event. On a canvas page, however, this example works just fine.</p>
+<p>
+<strong>A best practice</strong> would be to setup your FBJS as follows:</p>
+<pre>
+<code>&lt;script&gt; 
+&lt;!-- 
+//--&gt; 
+&lt;/script&gt;
+</code>
+</pre>
+<p>While this seems to be unnecessary, it helps prevent one more issues that may arise from creating FBJS. Also, please note the line breaks after the comment blocks!</p>
+<hr />
+<p>
+<a name="dom_objects">
+</a>
+</p>
+<h2>FBJS DOM Objects</h2>
+<h3>Retrieving Objects</h3>
+<p>A handle to an FBJS DOM object can be retrieved by either calling <code>document.getElementById</code> or <code>document.createElement</code>. Additionally, the &quot;this&quot; pointer in DOM events also points to the target of the event.</p>
+<h3>Manipulating Objects</h3>
+<p>FBJS DOM objects implement most of the same methods regular JavaScript objects implement including: appendChild, insertBefore, removeChild, and cloneNode. Properties like parentNode, nextSibling, src, href (and many many others) have been redefined as a couplet of getters and setters.</p>
+<p>Instead of <code>obj.parentNode</code> just call <code>obj.getParentNode()</code>, and so on. Most of the properties are easy to figure out, but here&apos;s an exhaustive list of properties in JavaScript and how they translate to FBJS:</p>
+<table>
+<tr>
+<th>JavaScript </th>
+<th> FBJS getter </th>
+<th> FBJS setter </th>
+<th> Description </th>
+</tr>
+<tr>
+<td>parentNode </td>
+<td> getParentNode </td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>nextSibling </td>
+<td> getNextSibling </td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>previousSibling </td>
+<td> getPreviousSibling </td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>firstChild </td>
+<td> getFirstChild </td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td> lastChild </td>
+<td> getLastChild </td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td> childNodes </td>
+<td> getChildNodes </td>
+<td>
+</td>
+<td> Returns a snapshot array of childNodes. </td>
+</tr>
+<tr>
+<td> innerHTML </td>
+<td> n/a </td>
+<td> setInnerFBML </td>
+<td> Note that this can throw an error if you pass a string directly. Use [fb:js-string](/docs/reference/fbml/js-string) to create the string first then pass that variable. </td>
+</tr>
+<tr>
+<td>innerHTML </td>
+<td>n/a </td>
+<td>setInnerXHTML </td>
+<td> Beta feature. Allows you to set the innerHTML of an element by passing in a string of XHTML. The XHTML is sanitized according to FBML rules and then placed into the document. </td>
+</tr>
+<tr>
+<td> innerText/textContent </td>
+<td> n/a </td>
+<td> setTextValue </td>
+<td> Not exactly like setInnerFBML as this will only allow text (no HTML)! It will remove all childNodes of the element it is called on. </td>
+</tr>
+<tr>
+<td> form </td>
+<td> getForm </td>
+<td>
+</td>
+<td> Doesn&apos;t work, use `document.getElementById(&apos;formid&apos;)` instead. </td>
+</tr>
+<tr>
+<td> action </td>
+<td> getAction </td>
+<td> setAction </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> value </td>
+<td> getValue </td>
+<td> setValue </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> href </td>
+<td> getHref </td>
+<td> setHref </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> target </td>
+<td> getTarget </td>
+<td> setTarget </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> src </td>
+<td> getSrc </td>
+<td> setSrc </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> className </td>
+<td> getClassName </td>
+<td> setClassName </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> tagName </td>
+<td> getTagName </td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td> id </td>
+<td> getId </td>
+<td> setId </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> dir </td>
+<td> getDir </td>
+<td> setDir </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> checked </td>
+<td> getChecked </td>
+<td> setChecked </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> clientWidth </td>
+<td> getClientWidth </td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td> clientHeight </td>
+<td> getClientHeight </td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td> offsetWidth </td>
+<td> getOffsetWidth </td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td> offsetHeight </td>
+<td> getOffsetHeight </td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td> n\a </td>
+<td> getAbsoluteTop </td>
+<td>
+</td>
+<td> Returns the elements absolute position relative to the top of the page. Useful because of lack of offsetParent support. </td>
+</tr>
+<tr>
+<td> n\a </td>
+<td> getAbsoluteLeft </td>
+<td>
+</td>
+<td> Same as getAbsoluteTop, but horizontally. </td>
+</tr>
+<tr>
+<td> scrollTop </td>
+<td> getScrollTop </td>
+<td> setScrollTop </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> scrollLeft </td>
+<td> getScrollLeft </td>
+<td> setScrollLeft </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> scrollHeight </td>
+<td> getScrollHeight </td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td> scrollWidth </td>
+<td> getScrollWidth </td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td> tabIndex </td>
+<td> getTabIndex </td>
+<td> setTabIndex </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> title </td>
+<td> getTitle </td>
+<td> setTitle </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> name </td>
+<td> getName </td>
+<td> setName </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> cols </td>
+<td> getCols </td>
+<td> setCols </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> rows </td>
+<td> getRows </td>
+<td> setRows </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> accessKey </td>
+<td> getAccessKey </td>
+<td> setAccessKey </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> disabled </td>
+<td> getDisabled </td>
+<td> setDisabled </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> readOnly </td>
+<td> getReadOnly </td>
+<td> setReadOnly </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> type </td>
+<td> getType </td>
+<td> setType </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> selectedIndex </td>
+<td> getSelectedIndex </td>
+<td> setSelectedIndex </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> selected </td>
+<td> getSelected </td>
+<td> setSelected </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> location </td>
+<td> n/a </td>
+<td> setLocation </td>
+<td> Must be an absolute URL </td>
+</tr>
+<tr>
+<td> style </td>
+<td> getStyle </td>
+<td> setStyle </td>
+<td>
+</td>
+</tr>
+<tr>
+<td> n/a </td>
+<td> getRootElement </td>
+<td>
+</td>
+<td>Used as `document.getRootElement`. Returns the top-level element of your profile box or canvas page. </td>
+</tr>
+</table>
+<h3>Manipulating Styles</h3>
+<p>Styles are set with the setStyle method and queried with the getStyle method. setStyle can set multiple styles using the syntax:</p>
+<pre>
+<code>obj.setStyle({color: &apos;black&apos;, background: &apos;white&apos;});
+</code>
+</pre>
+<p>
+<strong>Note:</strong> Does not work appropriately with width on dialog boxes (content scales but corners do not).</p>
+<p>Or one style at a time using:</p>
+<pre>
+<code>obj.setStyle(&apos;color&apos;, &apos;black&apos;);
+</code>
+</pre>
+<p>Beware you need to camelize style names. This works:</p>
+<pre>
+<code>obj.setStyle(&apos;textDecoration&apos;, &apos;underline&apos;)
+</code>
+</pre>
+<p>But this won&apos;t:</p>
+<pre>
+<code>obj.setStyle(&apos;text-decoration&apos;, &apos;underline&apos;)
+</code>
+</pre>
+<p>You must also remember to use &apos;px&apos; notation when referring to positions or height/width, and so forth.</p>
+<p>This works:</p>
+<pre>
+<code>obj.setStyle(&apos;width&apos;, &apos;340px&apos;)
+</code>
+</pre>
+<p>But this doesn&apos;t:</p>
+<pre>
+<code>obj.setStyle(&apos;width&apos;, &apos;340&apos;)
+</code>
+</pre>
+<p>This is important to remember when you&apos;re using algorithms to calculate those values. You can&apos;t just use the calculated variable x like: <code>setStyle(&apos;left&apos;, x)</code>, but rather like <code>setStyle(&apos;left&apos;, x+&apos;px&apos;)</code>.</p>
+<p>Additional functionality for manipulating CSS classes has been added to FBJS DOM nodes.</p>
+<p>addClassName(className)</p>
+<pre>
+<code> Adds a class name to the `className` string if it isn&apos;t already present.
+</code>
+</pre>
+<p>removeClassName(className)</p>
+<pre>
+<code> Removes a class name from the `className` string if it present.
+</code>
+</pre>
+<p>toggleClassName(className)</p>
+<pre>
+<code> If a class name exists, it removes it. If it doesn&apos;t exist it adds it.
+</code>
+</pre>
+<p>hasClassName(className)</p>
+<pre>
+<code> Returns true if the class name exists or false otherwise.
+</code>
+</pre>
+<h3>Setting Content</h3>
+<p>innerHTML isn&apos;t implemented for security reasons. Three alternatives exist.</p>
+<ol>
+<li>
+<p>obj.setTextValue(newText) can be used to set a literal text value inside of your DOM object (no HTML or FBML accepted).</p>
+</li>
+<li>
+<p>obj.setInnerFBML(fbJsStringVar) can be used to put HTML or FBML inside of your DOM object. Note that you need to create a <a href="reference/fbml/fb:js-string" name="https://developers.facebook.com/docs/reference/fbml/fb:js-string">Fb:js-string</a> object first and pass it in as passing a string literal will result in an error.</p>
+</li>
+<li>
+<p>obj.setInnerXHTML(string) is a beta feature that allows you to place a string of XHTML directly into the document. The XHTML is sanitized in JavaScript before being rendered.</p>
+</li>
+</ol>
+<h3>Working with Text Fields</h3>
+<p>Textbox selections have been implemented with the methods getSelection and setSelection. getSelection returns an object with properties start and end which correspond to the W3C-style attributes selectionStart and selectionEnd. setSelection takes two arguments, <code>start</code> and <code>end</code> (optional). This abstraction was added because Internet Explorer does not support selectionStart and selectionEnd. Since it is quicker in IE to retrieve both values together, they were coupled together into a single getter and setter. This function should work the same in all browsers with no extra work from you.</p>
+<h3>Creating FBML Elements</h3>
+<p>You can also use createElement to create FBML elements, although this is currently limited to <a href="/docs/reference/fbml/swf" name="https://developers.facebook.com/docs/reference/fbml/swf">fb:swf</a>. Once it&apos;s created, it works just like any other DOM object does, however, once it is attached to the DOM you cannot move it and obj.getElementsByTagName(&apos;fb:swf&apos;) does not work and also you cannot copy it.</p>
+<pre>
+<code>var newSwf = document.createElement(&apos;fb:swf&apos;);
+</code>
+</pre>
+<hr />
+<p>
+<a name="methods">
+</a>
+</p>
+<h2>Methods</h2>
+<ul>
+<li>
+<a href="/docs/fbjs/createApplication" name="https://developers.facebook.com/docs/fbjs/createApplication">Facebook.createApplication</a>
+</li>
+<li>
+<a href="/docs/fbjs/showBookmarkDialog" name="https://developers.facebook.com/docs/fbjs/showBookmarkDialog">Facebook.showBookmarkDialog</a>
+</li>
+<li>
+<a href="/docs/fbjs/showFeedDialog" name="https://developers.facebook.com/docs/fbjs/showFeedDialog">Facebook.showFeedDialog</a>
+</li>
+<li>
+<a href="/docs/fbjs/showPermissionDialog" name="https://developers.facebook.com/docs/fbjs/showPermissionDialog">Facebook.showPermissionDialog</a>
+</li>
+<li>
+<a href="/docs/fbjs/showProfileTabDialog" name="https://developers.facebook.com/docs/fbjs/showProfileTabDialog">Facebook.showProfileTabDialog</a>
+</li>
+<li>
+<a href="/docs/fbjs/streamPublish" name="https://developers.facebook.com/docs/fbjs/streamPublish">Facebook.streamPublish</a>
+</li>
+</ul>
+<hr />
+<p>
+<a name="events">
+</a>
+</p>
+<h2>Events</h2>
+<p>Events can be added to FBJS DOM objects using the W3C-style <a href="https://developer.mozilla.org/en/DOM/element.addEventListener" name="https://developer.mozilla.org/en/DOM/element.addEventListener">addEventListener method</a>. The third parameter, boolean useCapture is required (it does not have a default value), and removeEventListener is supported. In addition to the W3C event methods, we&apos;ve also added listEventListeners and purgeEventListeners.</p>
+<dl>
+<dt>listEventListeners(eventName)</dt>
+<dd>Returns an array of handles of all events that have been added to this event. Events that were added in FBML using the on<event> attributes will also be included</event>
+</dd>
+<dt>purgeEventListeners(eventName)</dt>
+<dd>Removes all event listeners for a given event. This also removes events that were added as attributes in FBML.</dd>
+</dl>
+<p>Event handlers are called with one parameter, which is an object with information about the event. In the case of event handlers added as attributes, this object will be accessible through the &quot;event&quot; variable (just as it is in regular JavaScript). The event will have attributes <code>target</code>, <code>type</code>, <code>pageX</code>, <code>pageY</code>, <code>ctrlKey</code>, <code>keyCode</code>, <code>metaKey</code>, and <code>shiftKey</code>. It also implements two methods:</p>
+<dl>
+<dt>stopPropagation</dt>
+<dd>Prevents this event from propagating to any more elements further up in the DOM.</dd>
+<dt>preventDefault</dt>
+<dd>Cancels the default behavior of this event without stopping propagation. For instance, preventDefault on an onfocus event will prevent that element from getting focus.</dd>
+<dt>getId on event object of a listener function</dt>
+<dd>When using the getId() method inside an event listener function on the event object, the following syntax may be used to retrieve the ID of the object that fired the event:</dd>
+</dl>
+<pre>
+&lt;div id=&quot;firedByDescription&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;foo&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;bar&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+//disclaimer: sample code block meant only to demonstrate functionality
+
+function myEventHandler(evt) {
+  //we&apos;ll use this div later to drop stuff into it
+  firedByDescription = document.getElementById(&apos;firedByDescription&apos;);
+  if (evt.type == &apos;mouseout&apos;) { 
+    //if the event is a mouseout, empty out the description div, and exit the event listener
+    firedByDescription.setTextValue(&apos;&apos;);
+    return true;
+  }
+
+  //otherwise... do some processing:
+
+  //*VERY IMPORTANT*: note that the object, which fired the event is located two nodes up in the DOM tree
+  //See note below
+  //eventFiredBy_ObjectId = evt.target.getParentNode().getParentNode().getId();
+
+  //On newer versions, it seems that there is no need to go up two levels int he DOM tree, hence
+  eventFiredBy_ObjectId = evt.target.getId();
+  //works, whereas the first does not!
+
+  //**NOTE** My testing of this suggests that when you call addEventListener() it adds it to the element, AND all it&apos;s descendants
+  // This can then cause the event to be fired multiple times, as it is fired for the element and it&apos;s descendant elements.
+  // When fired by a descendant element, you will probably have to do some kind of getParent()-ing
+  // I&apos;m raising this as a bug, as it does make things a little unworkable!
+
+  //once you have the ID, you may, for example, drop its id into the firedByDescription div:
+  firedByDescription.setTextValue(eventFiredBy_ObjectId);
+
+  //... or do some conditional processing:
+  if (eventFiredBy_ObjectId == &apos;foo&apos;) {
+    //do something if the event was fired by &apos;foo&apos;
+  } else {
+    //do something if the event was fired by &apos;bar&apos;
+  }
+}
+
+//add event listener to &apos;foo&apos; div (mouseover &amp; mouseout)
+document.getElementById(&apos;foo&apos;).addEventListener(&apos;mouseover&apos;,myEventHandler);
+document.getElementById(&apos;foo&apos;).addEventListener(&apos;mouseout&apos;,myEventHandler);
+
+//add *the same* event listener to &apos;bar&apos; div (mouseover &amp; mouseout)
+document.getElementById(&apos;bar&apos;).addEventListener(&apos;mouseover&apos;,myEventHandler);
+document.getElementById(&apos;bar&apos;).addEventListener(&apos;mouseout&apos;,myEventHandler);
+&lt;/script&gt;
+</pre>
+<p>This functionality is very useful in cases where you have one event handler for multiple objects of the same type. Take for instance a shopping cart of some sort, or any type of object browser. When a user moves her mouse over one of the items in the cart, you may want to conditionally display information about the item -- by finding its ID, you may associate a description text for that item and display it to the user in another div. As you can see, using event listeners can be a very powerful way to display useful additional information to the user, based on where they move their mouse within your Facebook application. Happy coding and creativity! For me (end Aug 09) evt.target.getParentNode().getId() did work, the version with 2 or without ParentNode calls did not.</p>
+<p>
+<strong>Note</strong> (Sep 23 2009): Generally, to get the element which is currently being checked for event listeners (foo and bar in this case) then event.<a href="https://developer.mozilla.org/en/DOM/event.currentTarget" name="https://developer.mozilla.org/en/DOM/event.currentTarget">currentTarget</a> property should be used. But if you want to get the element that dispatched the event then event.<a href="https://developer.mozilla.org/en/DOM/event.target" name="https://developer.mozilla.org/en/DOM/event.target">target</a> property should be used, it could be the element that registered for the event or a child of it. Hence, the behavior described earlier is actually not a bug. Unfortunately FBJS does not supports <a href="https://developer.mozilla.org/en/DOM/event.currentTarget" name="https://developer.mozilla.org/en/DOM/event.currentTarget">currentTarget</a> property of the event object. So the only solution remains is to mimic currentTarget property by going up through parent elements and checking them for some kind of flag like classname, tagname or id.</p>
+<h3>Mimic event.currentTarget</h3>
+<p>Continuing previous example, we can mimic currentTarget property of the event object relying on ids of elements to whom the event listeners are attached.</p>
+<pre>
+var currentTarget = evt.target; 
+
+// we can also check by (currentTarget.getTagName().toLowerCase() != &quot;div&quot;)
+// but only if we are sure that there won&apos;t be another &lt;div&gt; childs in foo and bar
+while (currentTarget.getId() == &quot;foo&quot; || currentTarget.getId() == &quot;bar&quot;) {
+    currentTarget = currentTarget.getParentNode();
+    // did not checked if for the top element FBJS getParentNode() method returns null
+    // according to W3C it should
+    if (!currentTarget) {
+        // went all the way up and did not find what looked for
+        return false;
+    }
+}
+eventFiredBy_ObjectId = currentTarget.getId();
+</pre>
+<hr />
+<p>
+<a name="unobtrusive">
+</a>
+</p>
+<h2>Unobtrusive Events</h2>
+<p>Some developers prefer to separate code from content, and as such prefer the methods of adding event listeners versus onclick functions. There seem to be some issues with doing such, and the below code block documents how to add an event:</p>
+<pre>
+&lt;a href=&quot;#&quot; id=&quot;hello&quot; onclick=&quot;return false&quot;&gt;Hello World!&lt;/a&gt;
+&lt;script&gt;
+&lt;!--
+function random_int(lo, hi) {
+    return Math.floor((Math.random() * (hi - lo)) + lo);
+}
+function hello_world(obj) {
+    var r = random_int(0, 255), b = random_int(0, 255), g = random_int(0, 255);
+    var color = r+&apos;, &apos;+g+&apos;, &apos;+b;
+    obj.setStyle(&apos;color&apos;, &apos;rgb(&apos;+color+&apos;)&apos;);
+}
+function test() {
+    var obj = document.getElementById(&apos;hello&apos;);
+    obj.addEventListener(&apos;click&apos;, function(e){
+        hello_world(obj);
+        e.stopPropagation();
+        e.preventDefault();
+        return false;
+    }, false);
+}
+test();
+//--&gt;
+&lt;/script&gt;
+}
+</pre>
+<p>
+<strong>Of particular note</strong> is the onclick=&quot;return false&quot; on the anchor tag. This was tested using the <a href="reference/fbml" name="https://developers.facebook.com/docs/reference/fbml">FBML parser</a> (see the console for any FBML tag).</p>
+<hr />
+<p>
+<a name="ajax">
+</a>
+</p>
+<h2>AJAX</h2>
+<p>FBJS supplies a very powerful AJAX object for developers. Facebook proxies all AJAX requests and optionally runs useful post-processing on the data returned, such as JSON, or FBML parsing. To use it, just instantiate a new AJAX class. It supports the following properties:</p>
+<dl>
+<dt>ondone(data)</dt>
+<dd>An event handler which fires when an AJAX call returns. Depending on .responseType, data is an object, a raw string, or an FBML string.</dd>
+<dt>onerror</dt>
+<dd>An event handler that fires when an error occurs during an AJAX call.</dd>
+<dt>requireLogin</dt>
+<dd>If you set this to true the AJAX call will require the user to be logged into your application before the AJAX call will go through. The AJAX call will then be made with the regular fb_sig parameters containing the user&apos;s identity. If they refuse to login, the AJAX call will fail.</dd>
+<dt>responseType</dt>
+<dd>This can be one of Ajax.RAW, Ajax.JSON, or Ajax.FBML.</dd>
+<dt>useLocalProxy</dt>
+<dd>
+<strong>Beta.</strong> If this is true and you are using RAW or JSON type, the Ajax object will attempt to use fb:local-proxy to make a direct call to your app server. See <a href="#local_proxy" name="https://developers.facebook.com/docs/#local_proxy">FBJS_LocalProxy</a> for more details.</dd>
+<dt>Ajax.RAW</dt>
+<dd>The response from your server is returned to your callback in its original form.</dd>
+<dt>Ajax.JSON</dt>
+<dd>The response from your server is parsed as a JSON object and returned to your callback in the form of an object. Properties of your JSON object that are prefixed with &quot;fbml_&quot; are parsed as individual FBML strings and returned as FBML blocks. These blocks can be used on a DOM object with the setInnerFBML method. Each variable and its value in the response is limited to a combined length of 5000 characters. <strong>Note:</strong> be sure to use json_encode or else you may see odd results with large data sets. See <a href="https://bugs.developers.facebook.com/show_bug.cgi?id=363" name="https://bugs.developers.facebook.com/show_bug.cgi?id=363">Bugzilla #363</a> for more information. json_encode is available by default in most PHP5 installations, and implementations for many other languages are available at json.org.</dd>
+<dt>Ajax.FBML</dt>
+<dd>The response from your server is parsed as FBML and returned as an FBML block. This block can used on a DOM object with the setInnerFBML method.</dd>
+</dl>
+<p>FBJS supports these two AJAX methods:</p>
+<dl>
+<dt>post(url, query)</dt>
+<dd>Start an AJAX post. <code>url</code> must be a remote address, and <code>query</code> can be either a string or an object that is automatically converted to a string.</dd>
+<dt>abort()</dt>
+<dd>Aborts an AJAX post.</dd>
+</dl>
+<p>Here&apos;s an example showing most of the functionality of Ajax.</p>
+<h3>Example of Ajax Object in Action</h3>
+<p>Solid example of how to make an <code>onclick</code> call.</p>
+<ul>
+<li>Note that url must be full, absolute path to file on your server, not a canvas page (apps.facebook...).</li>
+<li>One you should note that there is no &quot;setInnerHtml&quot; call in FBJS for security reasons. If you want to add dynamic HTML you must add it on the server side and pass it using the setInnerFBML call. *<code>Don&apos;t pass HTML with</code>setTextValue` because it won&apos;t work. </li>
+<li>Ajax has an apparent short ~10 second max timeout!</li>
+<li>Be aware of silent 5000 byte size limit to JSON replies if JSON is not perfect (use <code>json_encode</code> to avoid this)</li>
+<li>Ideally the url will point to a non-static location that has content sent through some form of CGI. In formal language, the url must respond to a request for <code>application/x-www-form-urlencoded</code> content.</li>
+<li>When using JSON and setInnerFBML, the prefix of the FBML parameter must be <code>fbml_</code>. The parameter will then be sanitized, and passed on to <code>setInnerFBML</code>.</li>
+</ul>
+<pre>
+<code>
+    These links demonstrate the Ajax object:
+
+    &lt;a href=&quot;#&quot; onclick=&quot;do_ajax(Ajax.JSON); return false;&quot;&gt;JSON&lt;/a&gt;&lt;br /&gt;
+    &lt;a href=&quot;#&quot; onclick=&quot;do_ajax(Ajax.RAW); return false;&quot;&gt;RAW&lt;/a&gt;&lt;br /&gt;
+    &lt;a href=&quot;#&quot; onclick=&quot;do_ajax(Ajax.FBML); return false;&quot;&gt;FBML&lt;/a&gt;&lt;br /&gt;
+    &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;requirelogin&quot; checked=&quot;checked&quot; /&gt;&lt;span&gt;Require Login?&lt;/span&gt;&lt;/label&gt;&lt;br /&gt;
+    &lt;div&gt;&lt;span id=&quot;ajax1&quot;&gt;&lt;/span&gt;&lt;span id=&quot;ajax2&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+
+    &lt;script&gt;&lt;!--
+    function do_ajax(type) {
+      var ajax = new Ajax();
+      ajax.responseType = type;
+      switch (type) {
+        case Ajax.JSON:
+          ajax.ondone = function(data) {
+            document.getElementById(&apos;ajax1&apos;).setTextValue(data.message + &apos; The current time is: &apos; +  data.time + &apos;. &apos;);
+            document.getElementById(&apos;ajax2&apos;).setInnerFBML(data.fbml_test);
+          }
+          break;
+
+        case Ajax.FBML:
+          ajax.ondone = function(data) {
+            document.getElementById(&apos;ajax1&apos;).setInnerFBML(data);
+            document.getElementById(&apos;ajax2&apos;).setTextValue(&apos;&apos;);
+          }
+          break;
+
+        case Ajax.RAW:
+          ajax.ondone = function(data) {
+            document.getElementById(&apos;ajax1&apos;).setTextValue(data);
+            document.getElementById(&apos;ajax2&apos;).setTextValue(&apos;&apos;);
+          }
+          break;
+      }
+      ajax.requireLogin = document.getElementById(&apos;requirelogin&apos;).getChecked();
+      ajax.post(&apos;http://example.com/testajax.php?t=&apos;+type);
+    }
+    //--&gt;&lt;/script&gt;
+</code>
+</pre>
+<hr />
+<p>
+<a name="animation">
+</a>
+</p>
+<h2>Animation</h2>
+<p>FBJS exposes a powerful animation library which gives developers an easy way to improve their user interface with a line of code or two. All animations are CSS based, so a working knowledge of CSS will really help you out here.</p>
+<p>The syntax for the open-source version is identical to the FBJS version (they&apos;re the same library) so the techniques you learn for FBJS Animation will work outside of Facebook, and vice versa.</p>
+<p>Note: If you&apos;re using the open-source Animation library, it&apos;s best if your page is running in standards compliant mode (i.e. not quirks mode). Quirks mode may cause FBJS to behave oddly with certain animations. Information regarding quirks mode and how to activate standards compliant mode: <a href="http://www.quirksmode.org/css/quirksmode.html" name="http://www.quirksmode.org/css/quirksmode.html">http://www.quirksmode.org/css/quirksmode.html</a>.</p>
+<p>While FBJS&apos;s Animation library delivers much of the same functionality as other animation libraries, the interface is much different. In our opinion, it&apos;s a great improvement over current libraries. Understanding the code doesn&apos;t require obtuse dictionaries of properties, but instead relies on intuitive method chaining.</p>
+<h3>Basic Animations<br />
+<br />
+</h3>
+<h3>Tweening CSS attributes</h3>
+<p>We&apos;ll begin with some code:</p>
+<pre>
+<code>&lt;a href=&quot;#&quot; onclick=&quot;Animation(this).to(&apos;background&apos;, &apos;#aa77ff&apos;).go(); return false;&quot;&gt;Highlight&lt;/a&gt;
+</code>
+</pre>
+<p>The first step is always to call Animation() with the DOM object you want to animate as the first parameter. Then from there you chain on whatever CSS you&apos;d like to animate. In this case, we&apos;ll be animating &quot;background&quot; to a light blue (#aa77ff). Finally, call <tt>go()</tt> to let Animation know that you are done chaining.</p>
+<p>You can use this pattern to animate as many attributes as you&apos;d like.</p>
+<pre>
+<code>&lt;a href=&quot;#&quot; onclick=&quot;Animation(this).to(&apos;background&apos;, &apos;#aa77ff&apos;).to(&apos;color&apos;, &apos;#00bbcc&apos;).go(); return false;&quot;&gt;Highlight&lt;/a&gt;
+</code>
+</pre>
+<p>In this example we&apos;re animating both the text and background color. These both happen in one fluid animation.</p>
+<p>The <tt>to</tt> method always animates from the current attribute to the value you specify. If you want to override this behavior you can use it in conjunction with the <tt>from</tt> method to specify in what state the animation should start. For instance... to create an animation that flashes a color and fades back you would do this:</p>
+<pre>
+<code>&lt;a href=&quot;#&quot; onclick=&quot;Animation(this).to(&apos;background&apos;, &apos;#fff&apos;).from(&apos;background&apos;, &apos;#ff0&apos;).go(); return false;&quot;&gt;Flash&lt;/a&gt;
+</code>
+</pre>
+<p>This tells Animation to start the animation from yellow and disregard the current color, and then fade back to white. The result is a nice flash \ fade effect on your link which could be used to call attention to something important on your page.</p>
+<p>The final method used to interact directly with CSS attributes is the <tt>by</tt> method. It will increment the current CSS value by an amount:</p>
+<pre>
+<code>&lt;a href=&quot;#&quot; onclick=&quot;Animation(this).by(&apos;left&apos;, &apos;15px&apos;).go(); return false;&quot; style=&quot;position: relative; left: 0px&quot;&gt;Move&lt;/a&gt;
+</code>
+</pre>
+<p>This creates a link that, when clicked, will move 15 pixels to the right, and continue to move with each subsequent click.</p>
+<p>This add some more fun. Look also at <tt>checkpoint</tt> method below.</p>
+<pre>
+<code>&lt;a href=&quot;#&quot; id=&quot;me_1&quot; onmouseover=&quot;Animation(document.getElementById(&apos;me_2&apos;)).by(&apos;left&apos;, &apos;15px&apos;).by(&apos;top&apos;, &apos;5px&apos;).checkpoint().by(&apos;left&apos;, &apos;-15px&apos;).checkpoint().by(&apos;top&apos;, &apos;-5px&apos;).go(); return false;&quot; style=&quot;position: relative; left: 0px;top: 0px&quot;&gt;Move the other on the right&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;me_2&quot; onmouseover=&quot;Animation(document.getElementById(&apos;me_1&apos;)).by(&apos;left&apos;, &apos;15px&apos;).by(&apos;top&apos;, &apos;5px&apos;).checkpoint().by(&apos;left&apos;, &apos;-15px&apos;).checkpoint().by(&apos;top&apos;, &apos;-5px&apos;).go(); return false;&quot; style=&quot;position: relative; left: 140px;top: 0px&quot;&gt;Move the other on the left&lt;/a&gt;
+</code>
+</pre>
+<p>There&apos;s a shorthand notation that may save you some time when using both the <tt>to</tt> and <tt>from</tt> methods. The example above (the &quot;Flash&quot; hyperlink) can instead be written like this:</p>
+<pre>
+<code>&lt;a href=&quot;#&quot; onclick=&quot;Animation(this).to(&apos;background&apos;, &apos;#aa7&apos;).from(&apos;#aa77ff&apos;).go(); return false;&quot;&gt;Flash&lt;/a&gt;
+</code>
+</pre>
+<p>Note that we changed <tt>from(&apos;background&apos;, &apos;#aa77ff&apos;)</tt> to <tt>from(&apos;#aa77ff&apos;)</tt>. If a call to either <tt>to</tt>, <tt>from</tt>, or <tt>by</tt> is immediately preceded by a call to one of those methods and you supply only one argument it will default to the attribute supplied in the last call.</p>
+<h3>Custom durations</h3>
+<p>The default duration for animations you build is 1 second. If you need to adjust this, you can use the <tt>duration</tt> method:</p>
+<pre>
+<code>&lt;a href=&quot;#&quot; onclick=&quot;Animation(this).to(&apos;background&apos;, &apos;#ffff4b&apos;).to(&apos;color&apos;, &apos;#00a000&apos;).duration(2000).go(); return false;&quot;&gt;Highlight&lt;/a&gt;
+</code>
+</pre>
+<p>Now the animation will tween over 2 seconds instead of 1. (Note: <tt>duration</tt> accepts milliseconds, not seconds).</p>
+<h3>Animating Block-level Objects<br />
+<br />
+</h3>
+<h3>Hiding/shrinking</h3>
+<p>You can also animate block-level elements with FBJS&apos;s Animation library. You can use this to show and hide sections of your page at different times. We also provide several mechanisms to cater to specific animation use-cases. Here&apos;s an example:</p>
+<pre>
+<code>&lt;div style=&quot;overflow: hidden&quot; id=&quot;container&quot;&gt;
+&lt;img src=&quot;https://static.ak.facebook.com/images/wiki_logo.png&quot; /&gt;&lt;br /&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;Animation(document.getElementById(&apos;container&apos;)).to(&apos;height&apos;, &apos;0px&apos;).to(&apos;opacity&apos;, 0).hide().go(); return false;&quot;&gt;Hide this div&lt;/a&gt;.
+&lt;/div&gt;
+</code>
+</pre>
+<p>Note the style=&quot;overflow: hidden&quot; on the div, in this example, this is very important. Since animations are CSS-based, if we don&apos;t specify overflow: hidden the image will bleed out of the dimension-less div. Again, in this animation we&apos;re tweening two CSS styles at once (height and opacity) which gives us a very nice hiding effect. Also, you&apos;ll notice the <tt>hide</tt> method being used here. This is a simple flag that tells Animation to set the target&apos;s display style to &quot;none&quot; after the animation is completed, thus completely hiding it from the user. In this case it&apos;s not required, but it&apos;s still a good idea to use <tt>hide</tt> on animations where the entire target will disappear.</p>
+<h3>Preventing text wrapping</h3>
+<p>One common case of animating is shrinking or expanding a div which contains text in it. Take this code for example:</p>
+<pre>
+<code>&lt;div id=&quot;container&quot;&gt;
+Facebook is a social utility that connects people with friends and others who work, study and live around them.
+People use Facebook to keep up with friends, upload an unlimited number of photos, share links and videos, and learn more about the people they meet.&lt;br /&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;Animation(document.getElementById(&apos;container&apos;)).to(&apos;height&apos;, &apos;0px&apos;).to(&apos;width&apos;, &apos;0px&apos;).to(&apos;opacity&apos;, 0).hide().go(); return false;&quot;&gt;Hide this div&lt;/a&gt;.
+&lt;/div&gt;
+</code>
+</pre>
+<p>You&apos;ll notice that as the div shrinks the text continues to wrap to fit the div, creating a very poor animation. When animating block-level elements that contain elements that may wrap, try using the <tt>blind</tt> method. Compare this animation to the above animation:</p>
+<pre>
+<code>&lt;div id=&quot;container&quot;&gt;
+Facebook is a social utility that connects people with friends and others who work, study and live around them.
+People use Facebook to keep up with friends, upload an unlimited number of photos, share links and videos, and learn more about the people they meet.&lt;br /&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;Animation(document.getElementById(&apos;container&apos;)).to(&apos;height&apos;, &apos;0px&apos;).to(&apos;width&apos;, &apos;0px&apos;).to(&apos;opacity&apos;, 0).blind().hide().go(); return false;&quot;&gt;Hide this div&lt;/a&gt;.
+&lt;/div&gt;
+</code>
+</pre>
+<p>It&apos;s much smoother isn&apos;t it? <tt>blind</tt> works by creating another div directly inside the target with an explicit width and height. This prevents wrapping for the entirety of the animation, however once the animation is done, the extra helper-div will be removed, so be sure only to use <tt>blind</tt> when your animation target either starts or finishes completely hidden.</p>
+<h3>Revealing</h3>
+<p>You can also animate width and height to &quot;auto&quot; for when you want to completely show a div without having to calculate the specific dimensions of its parent:</p>
+<pre>
+<code>&lt;div id=&quot;about&quot; style=&quot;display: none&quot;&gt;
+Facebook is a social utility that connects people with friends and others who work, study and live around them.
+People use Facebook to keep up with friends, upload an unlimited number of photos, share links and videos, and learn more about the people they meet.
+&lt;/div&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;Animation(document.getElementById(&apos;about&apos;)).to(&apos;height&apos;, &apos;auto&apos;).from(&apos;0px&apos;).to(&apos;width&apos;, &apos;auto&apos;).from(&apos;0px&apos;).to(&apos;opacity&apos;, 1).from(0).blind().show().go(); return false;&quot;&gt;About Facebook&lt;/a&gt;.
+</code>
+</pre>
+<p>Here you can see many of the features of FBJS Animation coming together. Note our div starts off hidden (style=&quot;display: none&quot;) and we use Animation to expand it. We&apos;re using <tt>from</tt> here again to explicitly animate from nothingness (otherwise the animation would have no effect besides immediately showing the div, since width and height default to &quot;auto&quot;, and opacity defaults to 1). We also use <tt>blind</tt> to prevent the text from wrapping again. The last method there is <tt>show</tt> which is the opposite of <tt>hide</tt>. It tells Animation to set display to &quot;block&quot; at the beginning of the animation.</p>
+<h3>Advanced Features<br />
+<br />
+</h3>
+<h3>Checkpoints</h3>
+<p>There are some times when you want to build an animation that consists of two separate steps, but one logical animation. For cases like these we have checkpoints...</p>
+<pre>
+<code>&lt;div id=&quot;about&quot; style=&quot;display: none; border: 1px solid #bdc7d8; padding: 0px 3px&quot;&gt;
+Facebook is a social utility that connects people with friends and others who work, study and live around them.
+People use Facebook to keep up with friends, upload an unlimited number of photos, share links and videos, and learn more about the people they meet.
+&lt;/div&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;Animation(document.getElementById(&apos;about&apos;)).to(&apos;height&apos;, &apos;0px&apos;).from(&apos;0px&apos;).to(&apos;width&apos;, &apos;auto&apos;).from(&apos;0px&apos;).show().blind().checkpoint().to(&apos;height&apos;, &apos;auto&apos;).blind().go(); return false;&quot;&gt;About Facebook&lt;/a&gt;.
+</code>
+</pre>
+<p>The checkpoint here separates the animation into two steps. The second part of the animation will execute immediately after the first part has finished. This particular animation first stretches the div to fit its parent, while keeping the height at 0. This part of the animation is visible because the div has a border. After that&apos;s complete, the div grows vertically to reveal the text inside. Animations can have has many checkpoints as you want, just continue to chain them on and they will all execute in succession.</p>
+<h3>Staggered checkpoints</h3>
+<p>Checkpoint also supports an extra parameter which can signal a checkpoint to fire &apos;&apos;before&apos;&apos; the previous animation is actually finished. It ranges between 0 and 1 (floating). 0 will make the checkpoint useless, and 1 will make the checkpoint fire immediately after the previous animation. 1 is the default.</p>
+<pre>
+<code>&lt;div id=&quot;container&quot;&gt;
+Facebook is a social utility that connects people with friends and others who work, study and live around them.
+People use Facebook to keep up with friends, upload an unlimited number of photos, share links and videos, and learn more about the people they meet.&lt;br /&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;Animation(document.getElementById(&apos;container&apos;)).to(&apos;height&apos;, &apos;0px&apos;).blind().hide().checkpoint(0.5).to(&apos;opacity&apos;, 0).duration(500).go(); return false;&quot;&gt;Hide this div&lt;/a&gt;.
+&lt;/div&gt;
+</code>
+</pre>
+<p>In this example we&apos;re using 0.5 which makes the second part of the animation start halfway through the first animation. Note the use of the duration method here to make sure that the second part of the animation finishes at the same time as the first. Since the first animation is 1 second long and the second animation starts halfway through, a duration of 500ms means they will finish at the same time.</p>
+<h3>Checkpoint callbacks</h3>
+<p>Checkpoints also support callbacks which can be used to fire off more animations or do any other related tasks:</p>
+<pre>
+<code>&lt;div id=&quot;container&quot;&gt;
+Facebook is a social utility that connects people with friends and others who work, study and live around them.
+People use Facebook to keep up with friends, upload an unlimited number of photos, share links and videos, and learn more about the people they meet.&lt;br /&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;Animation(document.getElementById(&apos;container&apos;)).to(&apos;width&apos;, &apos;0px&apos;).to(&apos;height&apos;, &apos;0px&apos;).to(&apos;opacity&apos;, 0).blind().hide()
+.checkpoint(1, function() {
+Animation(document.getElementById(&apos;next&apos;)).to(&apos;width&apos;, &apos;auto&apos;).from(&apos;0px&apos;).to(&apos;height&apos;, &apos;auto&apos;).from(&apos;0px&apos;).to(&apos;opacity&apos;, 1).from(0).blind().show().go();
+})
+.go(); return false;&quot;&gt;Moving On...&lt;/a&gt;
+&lt;/div&gt;
+&lt;div id=&quot;next&quot; style=&quot;display: none&quot;&gt;
+All that&apos;s needed to join Facebook is a valid email address. To connect with coworkers or classmates, use your school or work email address to register.
+Once you register, join a regional network to connect with the people in your area.
+&lt;/div&gt;
+</code>
+</pre>
+<p>Here we actually create a nested animation. The outer animation hides a div, the inner animation shows a new div afterwards. FBJS Animation is smart about chaining animations like this, it will make sure that the animations flow together well regardless of computer speed and frame rate.</p>
+<h3>Easing</h3>
+<p>Animation tweening by default is linear, meaning changes occur at a constant speed throughout the entire animation. Sometimes it can make the animation appear smoother by applying an ease, which manipulates distribution of the tween:</p>
+<pre>
+<code>&lt;div id=&quot;container&quot;&gt;
+Facebook is a social utility that connects people with friends and others who work, study and live around them.
+People use Facebook to keep up with friends, upload an unlimited number of photos, share links and videos, and learn more about the people they meet.&lt;br /&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;Animation(document.getElementById(&apos;container&apos;)).to(&apos;height&apos;, &apos;0px&apos;).to(&apos;width&apos;, &apos;0px&apos;).to(&apos;opacity&apos;, 0).blind().hide().ease(Animation.ease.end).go(); return false;&quot;&gt;Hide this div&lt;/a&gt;.
+&lt;/div&gt;
+</code>
+</pre>
+<p>Notice how the animation starts slightly faster, but slows down when it&apos;s almost done.</p>
+<h3>Custom Ease Functions</h3>
+<p>There are three default eases that come with the animation library: <tt>begin</tt>, <tt>end</tt>, and <tt>both</tt>. <tt>begin</tt> will start slow and end fast, <tt>end</tt> will start fast and end slow, and <tt>both</tt> will start and end slow, but will be very fast in the middle. You can also define your own ease function. To create an ease function, just create a new function with a domain and range of 0 - 1 (floating).</p>
+<pre>
+<code>&lt;div id=&quot;container&quot;&gt;
+Facebook is a social utility that connects people with friends and others who work, study and live around them.
+People use Facebook to keep up with friends, upload an unlimited number of photos, share links and videos, and learn more about the people they meet.&lt;br /&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;Animation(document.getElementById(&apos;container&apos;)).to(&apos;height&apos;, &apos;0px&apos;).blind().hide().ease(bounceEase).go(); return false;&quot;&gt;Hide this div&lt;/a&gt;.
+&lt;/div&gt;
+&lt;script&gt;
+function bounceEase(p) {
+if (p &lt;= 0.6) {
+return Math.pow(p * 5 / 3, 2);
+} else {
+return Math.pow((p - 0.8) * 5, 2) * 0.4 + 0.6
+}
+}
+&lt;/script&gt;
+</code>
+</pre>
+<p>Creating custom ease functions can unlock many different capabilities of FBJS Animation.</p>
+<h3>Tips<br />
+<br />
+</h3>
+<h3>Use checkpoints to delay animation</h3>
+<p>Instead of creating timeouts like this:</p>
+<pre>
+<code>setTimeout(function() {
+Animation(obj).to(&apos;width&apos;, &apos;auto&apos;).go();
+}, 2000);
+</code>
+</pre>
+<p>Try this:</p>
+<pre>
+<code>Animation(obj).duration(2000).checkpoint().to(&apos;width&apos;, &apos;auto&apos;).go();
+</code>
+</pre>
+<p>Both are identical, except the second method is much easier to implement.</p>
+<h3>Create abstractions for your animations</h3>
+<p>Do you find yourself using the same animation over and over? Instead of copy and pasting the same long Animation chain, put it into a function:</p>
+<pre>
+<code>function show(obj) {
+Animation(obj).to(&apos;height&apos;, &apos;auto&apos;).from(&apos;0px&apos;).to(&apos;width&apos;, &apos;auto&apos;).from(&apos;auto&apos;).to(&apos;opacity&apos;, 1).from(0).show().blind().go();
+}
+</code>
+</pre>
+<hr />
+<p>
+<a name="dialogs">
+</a>
+</p>
+<h2>Dialogs</h2>
+<p>Dialog is an object we&apos;ve created to allow you to hook into our base dialog abstractions. It allows you to create rich and fully dynamic dialogs for your application.</p>
+<dl>
+<dt>Dialog(type)</dt>
+<dd>(constructor) type can be either Dialog.DIALOG_POP or Dialog.DIALOG_CONTEXTUAL.</dd>
+<dt>Dialog.DIALOG_POP</dt>
+<dd>This is the type of dialog that shows up when you delete a wall post.</dd>
+<dt>Dialog.DIALOG_CONTEXTUAL</dt>
+<dd>This is type of dialog that shows up when you delete a minifeed story.</dd>
+<dt>onconfirm</dt>
+<dd>An event handler that fires when the user selects the button designed as &quot;confirm&quot; (left most button). If this event doesn&apos;t return false the dialog will be hidden.</dd>
+<dt>oncancel</dt>
+<dd>An event handler that fires when the user selects the button designed as &quot;cancel&quot; (right most button). If this event doesn&apos;t return false the dialog will be hidden.</dd>
+<dt>setStyle</dt>
+<dd>Allows you to set the style of the parent dialog node</dd>
+<dt>showMessage(title, content, button_confirm = &apos;Okay&apos;)</dt>
+<dd>Displays a dialog with only a confirm button. <code>title</code> and <code>content</code> can be either strings or pre-rendered FBML blocks. This currently does not work in IE7. See <a href="https://bugs.developers.facebook.com/show_bug.cgi?id=6271" name="https://bugs.developers.facebook.com/show_bug.cgi?id=6271">the bug report</a>.</dd>
+<dt>showChoice(title, content, button_confirm = &apos;Okay&apos;, button_cancel = &apos;Cancel&apos;)</dt>
+<dd>Displays a dialog with Confirm and Cancel buttons. <code>title</code> and <code>content</code> can be either strings or pre-rendered FBML blocks. This currently does not work in IE7. See <a href="https://bugs.developers.facebook.com/show_bug.cgi?id=6271" name="https://bugs.developers.facebook.com/show_bug.cgi?id=6271">the bug report</a>.</dd>
+<dt>setContext</dt>
+<dd>(only applicable for DIALOG_CONTEXTUAL). Sets the context of a dialog, which basically means where the cursor arrow is pointing.</dd>
+<dt>hide</dt>
+<dd>Hides this dialog if it is visible.</dd>
+</dl>
+<hr />
+<p>
+<a name="fbml">
+</a>
+</p>
+<h2>FBML Blocks</h2>
+<p>Blocks of pre-rendered <a href="reference/fbml" name="https://developers.facebook.com/docs/reference/fbml">FBML</a> can be exported into your JavaScript scope on page load. To do this, simply wrap a block of FBML inside an <code>&lt;fb:js-string var=&quot;variable_name&quot;&gt;</code> tag (see <a href="reference/fbml/js-string" name="https://developers.facebook.com/docs/reference/fbml/js-string">fb:js-string</a> for more information). Instead of rendering the block of FBML on the page it is put into a FBML block variable, which you can then use in your JavaScript with setInnerFBML. This is useful, because tags like &lt;fb:swf&gt; get rendered without <code>waitforclick</code> restrictions. FBML blocks can also be retrieved from AJAX calls, as explained above.</p>
+<hr />
+<p>
+<a name="include">
+</a>
+</p>
+<h2>Include files</h2>
+<p>You can reference FBJS scripts using the <code>src</code> attribute of the &lt;script&gt; tag and the <code>href</code> attribute on &lt;link&gt; tags on canvas pages. This feature is useful for referencing large FBJS and CSS scripts that can be cached on user&apos;s browsers.</p>
+<p>In order to use this feature, you just need to use regular &lt;script&gt; syntax in HTML. Here is an example:</p>
+<pre>
+<code>&lt;script src=&quot;http://foo.com/bar.js&quot;&gt;&lt;/script&gt;
+</code>
+</pre>
+<p>When this <a href="#fbml" name="https://developers.facebook.com/docs/#fbml">FBML</a> is rendered into HTML, the <code>src</code> attribute will be changed to point to a Facebook URL that contains a cached FBJS script of the original URL. In addition, the browser caching of this URL is set to never expire so that client browser will cache it as well.</p>
+<p>Here are some general guidelines for using this feature:</p>
+<ol>
+<li>
+<p>The <code>src</code> attribute in FBML is enabled only for canvas pages and the Publisher.</p>
+</li>
+<li>
+<p>Please limit the total number of unique scripts for your application (across all canvas pages) to less than 1000. Facebook may start deleting old scripts if your application uses more than 1000 scripts.</p>
+</li>
+<li>
+<p>Please make sure that you don&apos;t use a different script URL for each user. For example, http://foo.com/bar.js?user_id=11 and http://foo.com/bar.js?user_id=22 should never be used.</p>
+</li>
+<li>
+<p>Since the cache policy is set to never expire, you should update the URL only if the content of the script changes. For example, you can change http://foo.com/bar.js?v=1.0 to http://foo.com/bar.js?v=2.0 or http://foo.com/v1.0/bar.js to http://foo.com/v2.0/bar.js when a new version of the script is available.</p>
+</li>
+<li>
+<p>To reduce the number of HTTP requests per page (at least for the first page load) and improve performance, we recommend that you limit your FBJS script references to no more than 10 per page.</p>
+</li>
+<li>
+<p>If your script code is small (say a few lines), it&apos;s probably better to embed it inline instead of using <code>src</code>.</p>
+</li>
+<li>
+<p>The URL you use to reference the included file must include your server&apos;s name; it cannot be a relative path such as &apos;/myfolder/my.css&apos;.</p>
+</li>
+</ol>
+<p>
+<strong>Important:</strong> After being rendered by Facebook, your external file will likely increase in size. If the rendered version (not your original!) exceeds 64KB it will not be served. You must either reduce the size or split it into separate files.</p>
+<h3>Stylesheet Includes</h3>
+<p>Stylesheet includes are cached automatically by Facebook. Just include a &lt;link rel=&quot;stylesheet&quot;&gt; tag like:</p>
+<pre>
+<code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; href=&quot;http://yourapp.com/stylesheets/style.css?v=1.0&quot; /&gt;
+</code>
+</pre>
+<p>Increment the version number upon each change to your style sheet, as specified above.</p>
+<hr />
+<p>
+<a name="local_proxy">
+</a>
+</p>
+<h2>FBJS LocalProxy</h2>
+<p>In FBJS the AJAX object is used to make asynchronous requests to your server. AJAX allows you to make three different types of requests. RAW, JSON, and FBML. For FBML, it is necessary that the request go through our FBML proxy server so that we can collect data and render the FBML. For RAW and JSON types, there is no reason to go through the Facebook central server. The AJAX object now has a new property useLocalProxy that lets you make direct calls to your app server. If you find yourself using AJAX often it is worth checking out this new functionality.</p>
+<h3>Notes</h3>
+<ul>
+<li>
+<p>If you make an AJAX call using LocalProxy, the AJAX handler at your server won&apos;t get the fb_sig parameters and neither will it get any usable session information. So if you intend to perform actions based on user session state on the app, its better not to use LocalProxy.</p>
+</li>
+<li>
+<p>The user must have Flash Player 9 or greater installed in order for this to work.</p>
+</li>
+<li>
+<p>This method uses a trick set up by Flash. We use expose an ActionScript callback that FBJS can call into. The crossdomain.xml file then lets us make the cross-domain call to your server. The result is then returned to JavaScript. To ensure security, we restrict requests to the same domain as the canvas page registered by the app.</p>
+</li>
+</ul>
+<h3>Quick Start Guide</h3>
+<ol>
+<li>
+<p>Set <code>ajax.useLocalProxy = true</code>.</p>
+</li>
+<li>
+<p>Include the tag <code>&lt;fb:local-proxy /&gt;</code> at the bottom of your FBML.</p>
+</li>
+<li>
+<p>Include the following crossdomain.xml file at the root of your application server.</p>
+<p>
+<cross-domain-policy> <allow-access-from domain="apps.facebook.com"> <allow-access-from domain="apps.*.facebook.com"> </allow-access-from>
+</allow-access-from>
+</cross-domain-policy>
+</p>
+</li>
+</ol>
+<p>AJAX calls should now work just as they did before in FBJS, except without the added latency of our proxy server.</p>
+<p>To actually use the data that you get through this method, check out setInnerXHTML, which lets you insert a string of XHTML into the DOM.</p>
+<p>
+<strong>Note:</strong> For clarification, the crossdomain.xml file needs to be in the root of your server. not the root of your application (that is, http://my.host.com/crossdomain.xml, not https://apps.facebook.com/myapp/crossdomain.xml).</p>
+<h3>Code Sample</h3>
+<pre>
+<code> &lt;script&gt;
+ function do_ajax() {
+   var ajax = new Ajax();
+   var queryParams = { &quot;param1&quot; : 1, &quot;param2&quot; : 2 };
+   ajax.responseType = Ajax.JSON;
+   ajax.useLocalProxy = true;
+   ajax.ondone = function(xhtml) {
+     var p = document.getElementById(&apos;rewrite&apos;);
+     p.setInnerXHTML(xhtml.content);
+   }
+   ajax.onerror = function() {
+     console.log(&quot;there was an error&quot;);
+   }
+   ajax.post(&apos;http://foo.com/bar.json&apos;, queryParams); //Server port must be port 80
+  }
+ &lt;/script&gt;
+ &lt;div id=&quot;rewrite&quot;&gt;&lt;/div&gt;
+ &lt;fb:local-proxy/&gt;
+</code>
+</pre>
+<p>In this example, we assume that bar.json looks like <code>{&quot;content&quot;:&quot;&lt;p&gt;Click&lt;/p&gt;&quot;}</code> or something similar. The only difference between this and the [Ajax Example][24] is the inclusion of fb:local-proxy and the fact that we set useLocalProxy to true. Also note the new method setInnerXHTML which provides a way to use the non-FBML content returned from AJAX calls.</p>
+<hr />
+<p>
+<a name="tips">
+</a>
+</p>
+<h2>Tips</h2>
+<ul>
+<li>
+<p>Don&apos;t create JavaScript that depends on a sensitive DOM structure. Code like <code>this.getElementByTagName(&apos;div&apos;)[1].getFirstChild().getLastChild().setStyle(&apos;color&apos;, &apos;white&apos;)</code> is very fragile and may randomly break if we change the way certain elements are rendered.</p>
+</li>
+<li>
+<p>Most FBJS DOM methods are chainable. For instance, instead of:</p>
+<pre>
+<code>var obj = document.createElement(&apos;div&apos;); 
+obj.addEventListener(&apos;click&apos;, click);
+obj.addEventListener(&apos;mousemove&apos;, mousemove); 
+obj.setStyle(&apos;color&apos;, &apos;black&apos;);
+</code>
+</pre>
+<p>You can do:</p>
+<pre>
+<code>document.createElement(&apos;div&apos;).addEventListener(&apos;click&apos;, on_click).addEventListener(&apos;mousemove&apos;, mousemove).setStyle(&apos;color&apos;, &apos;black&apos;);
+</code>
+</pre>
+</li>
+<li>
+<p>You cannot extend base objects like Function or Array, however we do provide a typical &quot;bind&quot; implementation on the Function prototype.</p>
+</li>
+<li>
+<p>FBJS objects don&apos;t contain handles to any of their actual DOM objects, however if you use <a href="http://www.getfirebug.com/" name="http://www.getfirebug.com/">Firebug</a>, the console can show you exactly to what an object is referring. Try console.dir on an FBJS DOM object. In your console you&apos;ll see a <code>PRIV_obj</code> attribute which is the actual DOM node represented by your FBJS DOM handle. This can help you figure out what FBJS is doing behind the curtains. This trick also works with all other FBJS objects such as AJAX and FBML blocks.</p>
+</li>
+<li>
+<p>Use <a href="http://www.getfirebug.com/" name="http://www.getfirebug.com/">Firebug</a> to troubleshoot and diagnose anything that isn&apos;t working with your FBJS.</p>
+</li>
+<li>
+<p>Consider using include files support to save processing/load times and bandwidth.</p>
+</li>
+<li>
+<p>If you notice your application hangs in Firefox 3.0/3.5 on OS X, check and see if you&apos;re specifying an absolute path to your canvas page in a link URL. Change the link to use a relative path to your canvas page and see if the page loads correctly.</p>
+</li>
+<li>
+<p>
+<strong>Never</strong> append a time stamp on FBML CSS/JavaScript. Doing so will significant increase latency and cost to both Facebook and your servers. It can also cause all of your CSS/JavaScript requests to be blocked when the number of unique URL requests exceed a limit.</p>
+</li>
+</ul>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/fbjs/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1321068757" title="2011年11月11日 19:32">約7ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

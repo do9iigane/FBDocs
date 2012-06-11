@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.waitForCondition/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.waitForCondition/">https://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.waitForCondition/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>FB.CanvasClient</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.add_windowSizeChanged/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.add_windowSizeChanged/">FB.CanvasClient.add_windowSizeChanged</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.getCanvasInfo/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.getCanvasInfo/">FB.CanvasClient.getCanvasInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.get_timerInterval/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.get_timerInterval/">FB.CanvasClient.get_timerInterval</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.remove_windowSizeChanged/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.remove_windowSizeChanged/">FB.CanvasClient.remove_windowSizeChanged</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.setCanvasHeight/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.setCanvasHeight/">FB.CanvasClient.setCanvasHeight</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.set_timerInterval/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.set_timerInterval/">FB.CanvasClient.set_timerInterval</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.startTimerToSizeToContent/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.startTimerToSizeToContent/">FB.CanvasClient.startTimerToSizeToContent</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.stopTimerToSizeToContent/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.CanvasClient.stopTimerToSizeToContent/">FB.CanvasClient.stopTimerToSizeToContent</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>FB.Connect</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.addSignedPublicSessionDataToUrl/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.addSignedPublicSessionDataToUrl/">FB.Connect.addSignedPublicSessionDataToUrl</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.createApplication/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.createApplication/">FB.Connect.createApplication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.forceSessionRefresh/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.forceSessionRefresh/">FB.Connect.forceSessionRefresh</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.getSignedPublicSessionData/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.getSignedPublicSessionData/">FB.Connect.getSignedPublicSessionData</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.getUIServerDialogProperty/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.getUIServerDialogProperty/">FB.Connect.getUIServerDialogProperty</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.get_loggedInUser/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.get_loggedInUser/">FB.Connect.get_loggedInUser</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.get_status/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.get_status/">FB.Connect.get_status</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.ifUserConnected/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.ifUserConnected/">FB.Connect.ifUserConnected</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.inviteConnectUsers/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.inviteConnectUsers/">FB.Connect.inviteConnectUsers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.isUIServerEnabled/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.isUIServerEnabled/">FB.Connect.isUIServerEnabled</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.logout/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.logout/">FB.Connect.logout</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.logoutAndRedirect/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.logoutAndRedirect/">FB.Connect.logoutAndRedirect</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.pollLoginStatus/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.pollLoginStatus/">FB.Connect.pollLoginStatus</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.requireSession/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.requireSession/">FB.Connect.requireSession</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showAddFriendDialog/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showAddFriendDialog/">FB.Connect.showAddFriendDialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showAddSectionButton/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showAddSectionButton/">FB.Connect.showAddSectionButton</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showBookmarkDialog/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showBookmarkDialog/">FB.Connect.showBookmarkDialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showFeedDialog/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showFeedDialog/">FB.Connect.showFeedDialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showPermissionDialog/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showPermissionDialog/">FB.Connect.showPermissionDialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showProfileTabDialog/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showProfileTabDialog/">FB.Connect.showProfileTabDialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showUIServerDialog/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.showUIServerDialog/">FB.Connect.showUIServerDialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.streamPublish/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Connect.streamPublish/">FB.Connect.streamPublish</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>FB.ApiClient</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.auth_getAppPublicKey/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.auth_getAppPublicKey/">FB.ApiClient.auth_getAppPublicKey</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.auth_getSignedPublicSessionData/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.auth_getSignedPublicSessionData/">FB.ApiClient.auth_getSignedPublicSessionData</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.callMethod/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.callMethod/">FB.ApiClient.callMethod</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.connect_getUnconnectedFriendsCount/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.connect_getUnconnectedFriendsCount/">FB.ApiClient.connect_getUnconnectedFriendsCount</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.events_get/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.events_get/">FB.ApiClient.events_get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.events_getMembers/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.events_getMembers/">FB.ApiClient.events_getMembers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.fbml_refreshImgSrc/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.fbml_refreshImgSrc/">FB.ApiClient.fbml_refreshImgSrc</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.fbml_refreshRefUrl/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.fbml_refreshRefUrl/">FB.ApiClient.fbml_refreshRefUrl</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.feed_getAppFriendStories/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.feed_getAppFriendStories/">FB.ApiClient.feed_getAppFriendStories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.feed_publishUserAction/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.feed_publishUserAction/">FB.ApiClient.feed_publishUserAction</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.fql_query/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.fql_query/">FB.ApiClient.fql_query</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.friends_get/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.friends_get/">FB.ApiClient.friends_get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.get_apiKey/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.get_apiKey/">FB.ApiClient.get_apiKey</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.get_session/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.get_session/">FB.ApiClient.get_session</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.get_sessionWaitable/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.get_sessionWaitable/">FB.ApiClient.get_sessionWaitable</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.pages_getInfo/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.pages_getInfo/">FB.ApiClient.pages_getInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.pages_isAdmin/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.pages_isAdmin/">FB.ApiClient.pages_isAdmin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.pages_isAppAdded/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.pages_isAppAdded/">FB.ApiClient.pages_isAppAdded</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.pages_isFan/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.pages_isFan/">FB.ApiClient.pages_isFan</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.photos_addTag/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.photos_addTag/">FB.ApiClient.photos_addTag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.photos_createAlbum/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.photos_createAlbum/">FB.ApiClient.photos_createAlbum</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.photos_get/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.photos_get/">FB.ApiClient.photos_get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.photos_getAlbums/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.photos_getAlbums/">FB.ApiClient.photos_getAlbums</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.photos_getTags/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.photos_getTags/">FB.ApiClient.photos_getTags</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.preloadFQL_get/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.preloadFQL_get/">FB.ApiClient.preloadFQL_get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.requireLogin/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.requireLogin/">FB.ApiClient.requireLogin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.revokeAuthorization/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.revokeAuthorization/">FB.ApiClient.revokeAuthorization</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.sessionIsExpired/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.sessionIsExpired/">FB.ApiClient.sessionIsExpired</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.set_session/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.set_session/">FB.ApiClient.set_session</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.stream_get/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.stream_get/">FB.ApiClient.stream_get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.stream_getComments/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.stream_getComments/">FB.ApiClient.stream_getComments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.stream_getFilters/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.stream_getFilters/">FB.ApiClient.stream_getFilters</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.users_getInfo/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.users_getInfo/">FB.ApiClient.users_getInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.users_hasAppPermission/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.users_hasAppPermission/">FB.ApiClient.users_hasAppPermission</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.users_isAppAdded/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.users_isAppAdded/">FB.ApiClient.users_isAppAdded</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.users_isAppUser/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.users_isAppUser/">FB.ApiClient.users_isAppUser</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.users_setStatus/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.users_setStatus/">FB.ApiClient.users_setStatus</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>FB.XFBML.Host</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.XFBML.Host.get_areElementsReady/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.XFBML.Host.get_areElementsReady/">FB.XFBML.Host.get_areElementsReady</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.XFBML.Host.parseDomElement/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.XFBML.Host.parseDomElement/">FB.XFBML.Host.parseDomElement</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.XFBML.Host.parseDomTree/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.XFBML.Host.parseDomTree/">FB.XFBML.Host.parseDomTree</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.XFBML.Host.refresh/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.XFBML.Host.refresh/">FB.XFBML.Host.refresh</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>FB.XFBML.Conditions</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.XFBML.Conditions.ifCanSee/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.XFBML.Conditions.ifCanSee/">FB.XFBML.Conditions.ifCanSee</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>FB.Monitor</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.bind/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.bind/">FB.Monitor.bind</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.copy/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.copy/">FB.Monitor.copy</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.disableLogging/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.disableLogging/">FB.Monitor.disableLogging</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.externalCallback/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.externalCallback/">FB.Monitor.externalCallback</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.forEach/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.forEach/">FB.Monitor.forEach</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.logFunction/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.logFunction/">FB.Monitor.logFunction</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.logXFBML/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.logXFBML/">FB.Monitor.logXFBML</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.loggingEnabled/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.loggingEnabled/">FB.Monitor.loggingEnabled</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.provide/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.provide/">FB.Monitor.provide</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.redo/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.redo/">FB.Monitor.redo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.resolve/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.resolve/">FB.Monitor.resolve</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.scheduleSend/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.scheduleSend/">FB.Monitor.scheduleSend</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.send/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.send/">FB.Monitor.send</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.subclass/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.subclass/">FB.Monitor.subclass</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.wrapObject/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Monitor.wrapObject/">FB.Monitor.wrapObject</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>FB.Facebook</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.add_initCalled/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.add_initCalled/">FB.Facebook.add_initCalled</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.get_baseDomain/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.get_baseDomain/">FB.Facebook.get_baseDomain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.get_initialized/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.get_initialized/">FB.Facebook.get_initialized</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.get_isInCanvas/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.get_isInCanvas/">FB.Facebook.get_isInCanvas</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.get_isInConnect/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.get_isInConnect/">FB.Facebook.get_isInConnect</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.get_sessionState/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.get_sessionState/">FB.Facebook.get_sessionState</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.get_sessionWaitable/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.get_sessionWaitable/">FB.Facebook.get_sessionWaitable</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.init/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.init/">FB.Facebook.init</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.remove_initCalled/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.remove_initCalled/">FB.Facebook.remove_initCalled</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.set_baseDomain/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Facebook.set_baseDomain/">FB.Facebook.set_baseDomain</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>FB.Waitable</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.add_changed/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.add_changed/">FB.Waitable.add_changed</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.onChange/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.onChange/">FB.Waitable.onChange</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.remove_changed/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.remove_changed/">FB.Waitable.remove_changed</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.resetChange/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.resetChange/">FB.Waitable.resetChange</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.waitForCondition/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.waitForCondition/">FB.Waitable.waitForCondition</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.waitForValue/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.waitForValue/">FB.Waitable.waitForValue</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.waitUntilReady/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.waitUntilReady/">FB.Waitable.waitUntilReady</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>FB.BatchSequencer</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.BatchSequencer.execute/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.BatchSequencer.execute/">FB.BatchSequencer.execute</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>FB.PendingResult</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/oldjavascript/FB.PendingResult.setPendingResult/" name="http://developers.facebook.com/docs/reference/oldjavascript/FB.PendingResult.setPendingResult/">FB.PendingResult.setPendingResult</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>FB.Waitable.waitForCondition</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a> › <a href="/docs/reference/oldjavascript/FB.Waitable.waitForCondition/" name="https://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.waitForCondition/">FB.Waitable.waitForCondition</a>
+</div>
+</div>
+</div>
+<p>Watch for changes in ready state and result until condition is satisfied.</p>
+<h2>パラメータ</h2>
+<table class="params">
+<tr>
+<th>名前</th>
+<th>タイプ</th>
+<th>説明</th>
+</tr>
+<tr>
+<td class="name">callback</td>
+<td class="type">Function</td>
+<td>
+<p>Callback function that will be invoked whenever the ready state or result changes. If callback returns true, the condition is satisfied and this callback won&apos;t be called anymore.</p>
+<p>callback should have the following signature: function(waitable).</p>
+</td>
+</tr>
+</table>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/oldjavascript/FB.Waitable.waitForCondition/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1287790594" title="2010年10月22日 16:36">1年以上前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

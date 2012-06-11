@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/publishing/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/publishing/">https://developers.facebook.com/docs/publishing/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/server-side/" name="http://developers.facebook.com/docs/authentication/server-side/">Server-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/client-side/" name="http://developers.facebook.com/docs/authentication/client-side/">Client-Side Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/ios/" name="http://developers.facebook.com/docs/authentication/ios/">Authentication in native iOS apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/android/" name="http://developers.facebook.com/docs/authentication/android/">Authentication in native Android apps</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pages/" name="http://developers.facebook.com/docs/authentication/pages/">Authenticating as a Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/applications/" name="http://developers.facebook.com/docs/authentication/applications/">Authenticating as an App</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/devices/" name="http://developers.facebook.com/docs/authentication/devices/">Authentication for Devices</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/canvas/" name="http://developers.facebook.com/docs/authentication/canvas/">Authentication within a Canvas Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/pagetab/" name="http://developers.facebook.com/docs/authentication/pagetab/">Authentication within a Page Tab</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/access-token-expiration/" name="http://developers.facebook.com/docs/authentication/access-token-expiration/">Handling Invalid and Expired Access Tokens</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/permissions/" name="http://developers.facebook.com/docs/authentication/permissions/">Permissions Reference</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/publishing/" name="http://developers.facebook.com/docs/publishing/">Publishing Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/reauthentication/" name="http://developers.facebook.com/docs/authentication/reauthentication/">Re-Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/authentication/signed_request/" name="http://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Publishing Permissions</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication/">Authentication</a> › <a href="/docs/publishing/" name="https://developers.facebook.com/docs/publishing/">Publishing Permissions</a>
+</div>
+</div>
+</div>
+<p>There are two permissions,<a href="#publish_actions" name="https://developers.facebook.com/docs/#publish_actions">publish_actions</a> and <a href="#publish_stream" name="https://developers.facebook.com/docs/#publish_stream">publish_stream</a>, that allow you to publish stories or activity on behalf of the users of your app. If a user grants you a publishing permission, actions you take on the user’s behalf must be expected by the user and consistent with the user’s actions within your app.</p>
+<h2 id="publish_actions">Requesting publish_actions</h2>
+<p>The publish_actions permission was introduced with the launch of the <a href="https://developers.facebook.com/docs/opengraph/" name="https://developers.facebook.com/docs/opengraph/">Open Graph</a> in September, 2011. When a user grants this permission to the app, the app can publish Open Graph stories from that app. Additionally, the app is able to publish the following activity (<em>only available through the Graph API</em>):</p>
+<ul>
+<li>post to the user&apos;s feed</li>
+<li>upload photo and videos - including creating an album</li>
+<li>tag photos and videos</li>
+<li>add likes/comments to stories</li>
+</ul>
+<p>If your app requires any publishing abilities not listed above, then you will need to request the <a href="#publish_stream" name="https://developers.facebook.com/docs/#publish_stream">publish_stream</a> permission.</p>
+<h2 id="publish_stream">Requesting publish_stream</h2>
+<p>The publish_stream permission is a superset of publish_actions allowing everything that publish_actions allows plus more. Some of the additional publishing capabilities are:</p>
+<ul>
+<li>posting to a friend&apos;s feed</li>
+<li>posting questions</li>
+<li>creating notes</li>
+<li>posting content to events or groups</li>
+</ul>
+<p>Since publish_stream is a second screen Auth Dialog permission, make sure you really need the specific capabilities solely offered through publish_stream before requesting it. We have found that requesting permissions that prompt a second Auth Dialog screen can lead to lower conversion rates.</p>
+<h2 id="auth_implications">Auth Dialog Implications</h2>
+<p>The publish_stream permission is considered a <a href="https://developers.facebook.com/docs/opengraph/authentication/#perms" name="https://developers.facebook.com/docs/opengraph/authentication/#perms">second screen permission in the Auth Dialog</a>. This not only creates a less fluid experience for users installing your app, but also allows users to skip the permission. So before requesting the publish_stream permission, please be sure that your app requires its additional publishing capabilities.</p>
+<p>In contrast, the publish_actions permission is a <a href="https://developers.facebook.com/docs/opengraph/authentication/#perms" name="https://developers.facebook.com/docs/opengraph/authentication/#perms">first screen permission in the Auth Dialog</a>, which must be accepted in order to install your app. Like all permissions, it can still be revoked by the user in their App Settings.</p>
+<h2>Calling /&lt;uid&gt;/permissions</h2>
+<p>If you call the /&lt;uid&gt;/permissions/ Graph API endpoint to see what permissions a user has granted and the user has granted publish_stream, you will also see that they have granted the publish_actions permission. This is due to the fact that publish_stream is a superset of publish_actions.</p>
+<h2>Permissions in the User App Settings</h2>
+<p>If you look in your App Settings (Account Settings -&gt; Apps) at an app where you have granted the publish_stream permission, even though it is a superset of publish_actions, only one icon will be displayed for publish_stream. If the app had only requested publish_actions, then you would see a single icon that specifically refers to publish_actions. Both permissions are revokable by the user in their App Settings.</p>
+<h2>Requesting Both Publishing Permissions</h2>
+<p>If you attempt to request both the publish_actions and publish_stream permission at the same time, the Auth Dialog will ignore the publish_actions permission and only prompt for the publish_stream permission. This of course will mean that the permission will be prompted in the <a href="https://developers.facebook.com/docs/opengraph/authentication/#perms" name="https://developers.facebook.com/docs/opengraph/authentication/#perms">second Auth Dialog screen</a> and can be skipped by the user.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/publishing/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1335583800" title="2012年4月27日 20:30">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

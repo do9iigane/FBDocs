@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/beta/opengraph/tutorial/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/beta/opengraph/tutorial/">https://developers.facebook.com/docs/beta/opengraph/tutorial/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li class="active">
+<h5>Getting Started</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/keyconcepts/" name="http://developers.facebook.com/docs/opengraph/keyconcepts/">Key Concepts</a>
+</li>
+<li>
+<a class="selected" href="http://developers.facebook.com/docs/opengraph/tutorial/" name="http://developers.facebook.com/docs/opengraph/tutorial/">Tutorial</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/authentication/" name="http://developers.facebook.com/docs/opengraph/authentication/">Auth Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/plugins/" name="http://developers.facebook.com/docs/opengraph/plugins/">Social Plugins</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/samples/" name="http://developers.facebook.com/docs/opengraph/samples/">Open Graph Samples</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Open Graph Tool</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/define-objects/" name="http://developers.facebook.com/docs/opengraph/define-objects/">Define Objects</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/define-actions/" name="http://developers.facebook.com/docs/opengraph/define-actions/">Define Actions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/define-units/" name="http://developers.facebook.com/docs/opengraph/define-units/">Define Aggregations</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/opengraph-approval/" name="http://developers.facebook.com/docs/opengraph/opengraph-approval/">Submit for Approval</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/template/" name="http://developers.facebook.com/docs/opengraph/template/">Using Text Templates</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/objects/" name="http://developers.facebook.com/docs/opengraph/objects/">Using Objects</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/actions/" name="http://developers.facebook.com/docs/opengraph/actions/">Using Actions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/permissions/" name="http://developers.facebook.com/docs/opengraph/permissions/">Open Graph Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/objects/builtin/" name="http://developers.facebook.com/docs/opengraph/objects/builtin/">Built-in Object Types</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/actions/builtin/" name="http://developers.facebook.com/docs/opengraph/actions/builtin/">Built-in Action Types</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/simpletypes/" name="http://developers.facebook.com/docs/opengraph/simpletypes/">Simple Types</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/complextypes/" name="http://developers.facebook.com/docs/opengraph/complextypes/">Complex Types</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/checklist/" name="http://developers.facebook.com/docs/opengraph/checklist/">Open Graph Checklist</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/publish-past-actions/" name="http://developers.facebook.com/docs/opengraph/publish-past-actions/">Publishing Past Actions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/usergeneratedphotos/" name="http://developers.facebook.com/docs/opengraph/usergeneratedphotos/">User Generated Photos in Open Graph</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/internationalization/" name="http://developers.facebook.com/docs/opengraph/internationalization/">Open Graph Internationalization</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/actionlinks/" name="http://developers.facebook.com/docs/opengraph/actionlinks/">Action Links</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/insights/" name="http://developers.facebook.com/docs/opengraph/insights/">Open Graph Insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/userrestrictions/" name="http://developers.facebook.com/docs/opengraph/userrestrictions/">User Restrictions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/opengraph/using-app-tokens/" name="http://developers.facebook.com/docs/opengraph/using-app-tokens/">Using App Access Tokens</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Archive</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/opengraphprotocol/" name="http://developers.facebook.com/docs/opengraphprotocol/">Open Graph Protocol</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Tutorial</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/opengraph/" name="https://developers.facebook.com/docs/opengraph/">Open Graph</a> › <a href="/docs/opengraph/tutorial/" name="https://developers.facebook.com/docs/opengraph/tutorial/">Tutorial</a>
+</div>
+</div>
+</div>
+<p>This tutorial will guide you through the key steps to build, test, and publish your first <a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a> app. We will build a sample recipe app that allows users to publish stories about cooking recipes. Before starting, please review the <a href="/docs/opengraph/checklist/" name="https://developers.facebook.com/docs/opengraph/checklist/">Open Graph Checklist</a> which will not only help in your app design and planning, but will also help speed up the app review process.</p>
+<ul>
+<li>
+<a href="#create-app" name="https://developers.facebook.com/docs/#create-app">Step 1: Create</a> a Facebook app</li>
+<li>
+<a href="#authenticate" name="https://developers.facebook.com/docs/#authenticate">Step 2: Authenticate users</a> with the Login Button plugin</li>
+<li>
+<a href="#define" name="https://developers.facebook.com/docs/#define">Step 3: Define</a> Objects, Actions and Aggregations through the <a href="/apps" name="https://developers.facebook.com/apps">App Dashboard</a>
+</li>
+<li>
+<a href="#publish" name="https://developers.facebook.com/docs/#publish">Step 4: Publish Actions</a> for your users</li>
+<li>
+<a href="#plugins" name="https://developers.facebook.com/docs/#plugins">Step 5: Add Social Plugins</a> to your app </li>
+<li>
+<a href="#submit" name="https://developers.facebook.com/docs/#submit">Step 6: Submit Your Actions</a> for approval</li>
+</ul>
+<p>Read more about the <a href="/docs/opengraph/keyconcepts" name="https://developers.facebook.com/docs/opengraph/keyconcepts">Key Concepts</a> behind <a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>.</p>
+<p>If you&apos;re having issues publishing Open Graph actions, visit the <a href="#debug" name="https://developers.facebook.com/docs/#debug">Debug and Troubleshoot</a> section. To help you get started quickly, we&apos;ve also included <a href="/docs/opengraph/samples/" name="https://developers.facebook.com/docs/opengraph/samples/">sample code</a> for download.</p>
+<p>
+<a name="create-app">
+</a>
+</p>
+<div style="height: 3px;">
+</div>
+<hr />
+<h2>Step 1: Create a Facebook App</h2>
+<p>To create a Facebook app, go to the <a href="/apps" name="https://developers.facebook.com/apps">App Dashboard</a>, click the &apos;Create New App&apos; button, and enter your app name and a namespace to get started.</p>
+<p>
+<img alt="Open Graph protocol" src="https://developers.facebook.com/attachment/devapp_home.png" />
+</p>
+<div align="center">
+<strong>
+</strong>
+</div>
+<p>Once you have entered the initial information you will land on the Basic Settings page.</p>
+<ol>
+<li>
+<strong>Basic Info</strong>: <ol>
+<li>Your app namespace. This should be unique to your app and will be used to manage your objects and actions.</li>
+</ol>
+</li>
+<li>
+<strong>Select how your app integrates with Facebook</strong>: <ol>
+<li>Select the &apos;Website&apos; choice (For the tutorial, we will demonstrate a website integration with Open Graph)</li>
+<li>Enter a Site URL (your website location).</li>
+</ol>
+</li>
+</ol>
+<p>
+<a name="authenticate">
+</a>
+</p>
+<div style="height: 3px;">
+</div>
+<hr />
+<h2>Step 2: Authenticate Users</h2>
+<p>In order to publish Open Graph Actions, your app needs to prompt users for the <code>publish_actions</code> permission. You can use the <a href="https://developers.facebook.com/docs/reference/plugins/login/" name="https://developers.facebook.com/docs/reference/plugins/login/">Login Button</a> plugin and set the &apos;scope&apos; parameter to prompt for this permission.</p>
+<p>Here is some code, using the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>, to help you get started right way. Remember to replace <code>[YOUR_APP_ID]</code> with your own app information.</p>
+<pre>
+<code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; dir=&quot;ltr&quot; lang=&quot;en-US&quot;
+      xmlns:fb=&quot;https://www.facebook.com/2008/fbml&quot;&gt; 
+&lt;head&gt;
+  &lt;title&gt;OG Tutorial App&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+  &lt;script&gt;
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : &apos;[YOUR_APP_ID]&apos;, // App ID
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+      });
+    };
+
+    // Load the SDK Asynchronously
+    (function(d){
+      var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+      js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+      js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+      d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+    }(document));
+  &lt;/script&gt;
+
+  &lt;fb:login-button show-faces=&quot;true&quot; width=&quot;200&quot; max-rows=&quot;1&quot; scope=&quot;publish_actions&quot;&gt;
+  &lt;/fb:login-button&gt;
+
+  &lt;h3&gt;Stuffed Cookies&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;img title=&quot;Stuffed Cookies&quot; 
+         src=&quot;http://fbwerks.com:8000/zhen/cookie.jpg&quot; 
+         width=&quot;550&quot;/&gt;
+  &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<p>
+<a name="define">
+</a>
+</p>
+<div style="height: 3px;">
+</div>
+<hr />
+<h2>Step 3: Define Objects, Actions and Aggregations</h2>
+<p>The Open Graph tab of the <a href="/apps" name="https://developers.facebook.com/apps">App Dashboard</a> shows the &quot;Getting Started&quot; subtab of the tool:</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/devapp_start.png" />
+</div>
+<h3>Define Object Types and Action Types</h3>
+<p>The Getting Started wizard walks you through the process of defining your initial object type and action type.</p>
+<ul>
+<li>Click the &apos;Open Graph&apos; tab under your app settings.</li>
+<li>Click the &apos;Getting Started&apos; subtab.</li>
+</ul>
+<p>In this tutorial, you will set up your app so that users will be able to <strong>Cook</strong> a <strong>Recipe</strong>. In order to do so, we will define an action (or verb) type called <strong>Cook</strong> and define an object (or noun) type called <strong>Recipe</strong>.</p>
+<ul>
+<li>Enter <strong>cook</strong> in the verb field and <strong>recipe</strong> in the noun field.</li>
+<li>Then, click the &apos;Get Started&apos; button. </li>
+</ul>
+<p>The next step in the wizard allows you to further <a href="/docs/opengraph/define-actions/" name="https://developers.facebook.com/docs/opengraph/define-actions/">define your custom action type</a>, <strong>Cook</strong>, with custom properties and sample data. We will use the default configuration in this tutorial, so click on the <strong>Save Changes and Next</strong> button.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/action_start.png" />
+</div>
+<p>
+<br />
+</p>
+<p>Now, you are able to further <a href="/docs/opengraph/define-objects/" name="https://developers.facebook.com/docs/opengraph/define-objects/">define your custom object type</a>, <strong>Recipe</strong>, with custom properties and sample data. We will again use the default configuration in this tutorial, so click on the <strong>Save Changes and Next</strong> button.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/object_start.png" />
+</div>
+<h3>Define an Aggregation</h3>
+<p>Finally, after defining both an initial custom action type and custom object type, you are now able to <a href="/docs/opengraph/define-units/" name="https://developers.facebook.com/docs/opengraph/define-units/">define an aggregation</a>.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/agg_start.png" width="100%" />
+</div>
+<p>
+<br />
+</p>
+<p>When a user interacts with your app in a meaningful way, we will also highlight these actions on the user&apos;s Timeline with an aggregation.</p>
+<p>Let&apos;s create an aggregation to highlight a list of <strong>recipes</strong> that were <strong>cooked</strong>:</p>
+<ol>
+<li>
+<strong>Data to Display</strong> - We&apos;re looking for a list of <strong>cook</strong> actions, so enter <strong>Cook</strong> here. </li>
+<li>
+<strong>Layout Style</strong> - Select <strong>List</strong>
+</li>
+<li>
+<strong>Sort By</strong> - Select <strong>Most Recent</strong>
+</li>
+<li>
+<strong>Aggregation Title</strong> - Enter a user-friendly title for the aggregation, such as &quot;Recently Cooked Recipes&quot;</li>
+<li>
+<strong>Caption Lines</strong> - You can reference both properties of the object and action here. Let&apos;s leave this blank for now for this tutorial, but feel free to read about more info on <a href="/docs/opengraph/define-units/#captions" name="https://developers.facebook.com/docs/opengraph/define-units/#captions">how to use captions</a>.</li>
+<li>
+<strong>Timeline Preview</strong> - Preview of how your aggregation will appear in a user&apos;s Timeline. </li>
+</ol>
+<p>Click the <strong>Save and Finish</strong> button to save all your changes and return to the Open Graph dashboard. You are now done with defining your initial object types, action types and aggregations. The Dashboard view of your Open Graph app settings will show a summary of these configurations.</p>
+<p>The next section will walk you through on how to get your app to publish its first Open Graph action and display an aggregation on a user&apos;s Timeline.</p>
+<p>
+<a name="publish">
+</a>
+</p>
+<div style="height: 3px;">
+</div>
+<hr />
+<h2>Step 4: Publish Actions</h2>
+<p>Before being able to publish an Open Graph action for a user and having define its corresponding connected object type in <a href="#define" name="https://developers.facebook.com/docs/#define">Step 3</a>, you will now need to create a publicly accessible web page that represents this object using Open Graph metatags. Once this <strong>object page</strong> is created, you can use the Graph API to publish an action.</p>
+<p>
+<a name="create-object">
+</a>
+</p>
+<h3>Create an Object Page</h3>
+<p>The Open Graph Dashboard page has a &apos;Get Code&apos; link next to <strong>Recipe</strong> object type. This contains the Open Graph meta tags describing the object that you&apos;ll need to include on your web page.</p>
+<ul>
+<li>Copy and paste this code snippet into a web page. Make sure to host your web page in a location where Facebook will be able to access it via HTTP GET. </li>
+<li>Use the <a href="/tools/debug" name="https://developers.facebook.com/tools/debug">Debugger Tool</a> to verify your meta tags are set up correctly by inputting your object web page URL. Resolve any warnings generated.</li>
+<li>Note the object page URL because you will be using it to publish the related action</li>
+</ul>
+<p>Here is an object page with the <code>&lt;meta&gt;</code> tags added. Remember to replace <code>[YOUR_APP_NAMESPACE]</code> and <code>[YOUR_APP_ID]</code> with your own app information.</p>
+<pre>
+<code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; dir=&quot;ltr&quot; lang=&quot;en-US&quot;
+      xmlns:fb=&quot;https://www.facebook.com/2008/fbml&quot;&gt; 
+&lt;head prefix=&quot;og: http://ogp.me/ns# [YOUR_APP_NAMESPACE]: 
+                  http://ogp.me/ns/apps/[YOUR_APP_NAMESPACE]#&quot;&gt;
+  &lt;title&gt;OG Tutorial App&lt;/title&gt;
+  &lt;meta property=&quot;fb:app_id&quot; content=&quot;[YOUR_APP_ID]&quot; /&gt; 
+  &lt;meta property=&quot;og:type&quot; content=&quot;[YOUR_APP_NAMESPACE]:recipe&quot; /&gt; 
+  &lt;meta property=&quot;og:title&quot; content=&quot;Stuffed Cookies&quot; /&gt; 
+  &lt;meta property=&quot;og:image&quot; content=&quot;http://fbwerks.com:8000/zhen/cookie.jpg&quot; /&gt; 
+  &lt;meta property=&quot;og:description&quot; content=&quot;The Turducken of Cookies&quot; /&gt; 
+  &lt;meta property=&quot;og:url&quot; content=&quot;http://fbwerks.com:8000/zhen/cookie.html&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+  &lt;script&gt;
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : &apos;[YOUR_APP_ID]&apos;, // App ID
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+      });
+    };
+
+    // Load the SDK Asynchronously
+    (function(d){
+      var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+      js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+      js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+      d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+    }(document));
+  &lt;/script&gt;
+
+  &lt;h3&gt;Stuffed Cookies&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;img title=&quot;Stuffed Cookies&quot; 
+         src=&quot;http://fbwerks.com:8000/zhen/cookie.jpg&quot; 
+         width=&quot;550&quot;/&gt;
+  &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<p>
+<a name="publish-action">
+</a>
+</p>
+<h3>Publish an Action</h3>
+<p>Publishing an action connects the user to the object you created. The Open Graph Dashboard page has a &apos;Get Code&apos; link next to your action. This contains <code>curl</code> code snippets that you can copy into terminal and run directly.</p>
+<p>Publishing an action involves making an HTTP POST to the <strong>
+<code>me/[app_namespace]:[action_type]</code>
+</strong> Graph API endpoint with the following parameters:</p>
+<ul>
+<li>
+<code>[object_type]</code>: a link to a web page representing an object.</li>
+<li>
+<code>access_token</code>: a valid user access_token with <code>publish_actions</code> permissions.</li>
+</ul>
+<p>For example, sending a POST to:</p>
+<pre>
+POST  https://graph.facebook.com/me/[YOUR_APP_NAMESPACE]:cook
+         ?recipe=OBJECT_URL&amp;access_token=ACCESS_TOKEN
+</pre>
+<p>This will publish a <code>Cook</code> action for the <code>Recipe</code> corresponding to the provided <code>OBJECT_URL</code>. Replace <code>OBJECT_URL</code> with your object web page URL.</p>
+<p>Here is the updated sample app with the <strong>Cook</strong> action creation enabled when clicking the &quot;Cook&quot; button:</p>
+<pre>
+<code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; dir=&quot;ltr&quot; lang=&quot;en-US&quot;
+      xmlns:fb=&quot;https://www.facebook.com/2008/fbml&quot;&gt; 
+&lt;head prefix=&quot;og: http://ogp.me/ns# [YOUR_APP_NAMESPACE]: 
+                  http://ogp.me/ns/apps/[YOUR_APP_NAMESPACE]#&quot;&gt;
+  &lt;title&gt;OG Tutorial App&lt;/title&gt;
+  &lt;meta property=&quot;fb:app_id&quot; content=&quot;[YOUR_APP_ID]&quot; /&gt; 
+  &lt;meta property=&quot;og:type&quot; content=&quot;[YOUR_APP_NAMESPACE]:recipe&quot; /&gt; 
+  &lt;meta property=&quot;og:title&quot; content=&quot;Stuffed Cookies&quot; /&gt; 
+  &lt;meta property=&quot;og:image&quot; content=&quot;http://fbwerks.com:8000/zhen/cookie.jpg&quot; /&gt; 
+  &lt;meta property=&quot;og:description&quot; content=&quot;The Turducken of Cookies&quot; /&gt; 
+  &lt;meta property=&quot;og:url&quot; content=&quot;http://fbwerks.com:8000/zhen/cookie.html&quot;&gt;
+
+  &lt;script type=&quot;text/javascript&quot;&gt;
+  function postCook()
+  {
+      FB.api(
+        &apos;/me/[YOUR_APP_NAMESPACE]:cook&apos;,
+        &apos;post&apos;,
+        { recipe: &apos;http://fbwerks.com:8000/zhen/cookie.html&apos; },
+        function(response) {
+           if (!response || response.error) {
+              alert(&apos;Error occured&apos;);
+           } else {
+              alert(&apos;Cook was successful! Action ID: &apos; + response.id);
+           }
+        });
+  }
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+  &lt;script&gt;
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : &apos;[YOUR_APP_ID]&apos;, // App ID
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+      });
+    };
+
+    // Load the SDK Asynchronously
+    (function(d){
+      var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+      js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+      js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+      d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+    }(document));
+  &lt;/script&gt;
+
+  &lt;h3&gt;Stuffed Cookies&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;img title=&quot;Stuffed Cookies&quot; 
+         src=&quot;http://fbwerks.com:8000/zhen/cookie.jpg&quot; 
+         width=&quot;550&quot;/&gt;
+  &lt;/p&gt;
+
+  &lt;br&gt;
+  &lt;form&gt;
+    &lt;input type=&quot;button&quot; value=&quot;Cook&quot; onclick=&quot;postCook()&quot; /&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<p>Now click the &quot;Cook&quot; button! If the publish to Open Graph is successful, an <code>id</code> will be returned that represents the newly published action. Congratulations! You have now published an action and completed the basic steps in getting your Open Graph app up and running.</p>
+<p>In order to view an aggregation on a user&apos;s Timeline, your app will need to publish a few more actions to Open Graph on behalf of the user. Define a few more objects through the <a href="#define" name="https://developers.facebook.com/docs/#define">earlier steps</a> and publish a few more actions. Your app will need to publish actions for at least 5 times before an aggregation is surfaced on a user&apos;s Timeline.</p>
+<p>Go to Timeline on Facebook to view the aggregation of your app:</p>
+<p>
+<img src="https://developers.facebook.com/attachment/timeline_report.jpg" width="100%" />
+</p>
+<h3>Previewing Stories from Published Actions</h3>
+<p>You can preview News Feed stories created when publishing actions by going to <code>https://www.facebook.com/USER_ID/activity/STORY_ID</code>, where <code>USER_ID</code> is the user&apos;s Facebook ID or username, and <code>STORY_ID</code> is the <code>action-instance-id</code> as described below. For example:</p>
+<p>
+<a href="https://www.facebook.com/dhirenp/activity/10100657260775943" name="https://www.facebook.com/dhirenp/activity/10100657260775943">https://www.facebook.com/dhirenp/activity/10100657260775943</a>
+</p>
+<p>The user must have appropriate permissions in order to see the preview.</p>
+<h3>Publishing Past Actions</h3>
+<p>Open Graph also provides the ability to publish a user&apos;s past actions and objects. Please refer to our developer documentation on <a href="/docs/opengraph/publish-past-actions/" name="https://developers.facebook.com/docs/opengraph/publish-past-actions/">Publishing Past Actions</a>.</p>
+<p>
+<a name="plugins">
+</a>
+</p>
+<div style="height: 3px;">
+</div>
+<hr />
+<h2>Step 5: Add Social Plugins</h2>
+<p>Add one or more <a href="/docs/opengraph/plugins" name="https://developers.facebook.com/docs/opengraph/plugins">Social Plugins</a> that are available for Open Graph apps.</p>
+<p>On your object web page, you can add any of these plugins to highlight Open Graph actions. For the purposes of this tutorial, let&apos;s add the new <a href="/docs/reference/plugins/activity" name="https://developers.facebook.com/docs/reference/plugins/activity">Activity Plugin</a>.</p>
+<h3>Activity</h3>
+<p>The <a href="/docs/reference/plugins/activity/" name="https://developers.facebook.com/docs/reference/plugins/activity/">Activity Plugin</a> has been updated to highlight the Open Graph actions published by an app.</p>
+<p>To add an Activity Plugin, include the following code on your web page:</p>
+<pre>&lt;fb:activity actions=&quot;[YOUR_APP_NAMESPACE]:ACTION-TYPE&quot;/&gt;&lt;/fb:activity&gt;</pre>
+<p>Here is the entire code of the tutorial that includes publishing an Open Graph action and rendering the Activity Plugin, all within a single page:</p>
+<pre>
+<code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; dir=&quot;ltr&quot; lang=&quot;en-US&quot;
+      xmlns:fb=&quot;https://www.facebook.com/2008/fbml&quot;&gt; 
+&lt;head prefix=&quot;og: http://ogp.me/ns# [YOUR_APP_NAMESPACE]: 
+                  http://ogp.me/ns/apps/[YOUR_APP_NAMESPACE]#&quot;&gt;
+  &lt;title&gt;OG Tutorial App&lt;/title&gt;
+  &lt;meta property=&quot;fb:app_id&quot; content=&quot;[YOUR_APP_ID]&quot; /&gt; 
+  &lt;meta property=&quot;og:type&quot; content=&quot;[YOUR_APP_NAMESPACE]:recipe&quot; /&gt; 
+  &lt;meta property=&quot;og:title&quot; content=&quot;Stuffed Cookies&quot; /&gt; 
+  &lt;meta property=&quot;og:image&quot; content=&quot;http://fbwerks.com:8000/zhen/cookie.jpg&quot; /&gt; 
+  &lt;meta property=&quot;og:description&quot; content=&quot;The Turducken of Cookies&quot; /&gt; 
+  &lt;meta property=&quot;og:url&quot; content=&quot;http://fbwerks.com:8000/zhen/cookie.html&quot;&gt;
+
+  &lt;script type=&quot;text/javascript&quot;&gt;
+  function postCook()
+  {
+      FB.api(
+        &apos;/me/[YOUR_APP_NAMESPACE]:cook?recipe&apos;,
+        &apos;post&apos;,
+        { recipe: &apos;http://fbwerks.com:8000/zhen/cookie.html&apos; },
+        function(response) {
+           if (!response || response.error) {
+              alert(&apos;Error occured&apos;);
+           } else {
+              alert(&apos;Cook was successful! Action ID: &apos; + response.id);
+           }
+        });
+  }
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+  &lt;script&gt;
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : &apos;[YOUR_APP_ID]&apos;, // App ID
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+      });
+    };
+
+    // Load the SDK Asynchronously
+    (function(d){
+      var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+      js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+      js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+      d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+    }(document));
+  &lt;/script&gt;
+
+  &lt;h3&gt;Stuffed Cookies&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;img title=&quot;Stuffed Cookies&quot; 
+         src=&quot;http://fbwerks.com:8000/zhen/cookie.jpg&quot; 
+         width=&quot;550&quot;/&gt;
+  &lt;/p&gt;
+
+  &lt;br&gt;
+  &lt;form&gt;
+    &lt;input type=&quot;button&quot; value=&quot;Cook&quot; onclick=&quot;postCook()&quot; /&gt;
+  &lt;/form&gt;
+
+  &lt;fb:activity actions=&quot;[YOUR_APP_NAMESPACE]:cook&quot;&gt;&lt;/fb:activity&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<p>
+<a name="submit">
+</a>
+</p>
+<div style="height: 3px;">
+</div>
+<hr />
+<h2>Step 6: Submit Your Actions For Approval</h2>
+<p>We are introducing a lightweight <a href="/docs/opengraph/opengraph-approval/" name="https://developers.facebook.com/docs/opengraph/opengraph-approval/">review and approval process</a> before your app can publish Open Graph actions to all users.</p>
+<p>
+<center>
+<img src="https://developers.facebook.com/attachment/submit_action.png" width="85%" />
+</center>
+</p>
+<p>Open Graph activities will be immediately visible to the administrators, developers and testers of your app. This allows you to do end-to-end testing of your Open Graph integration. Once that is complete, submit the Open Graph actions of your app via the <a href="/apps" name="https://developers.facebook.com/apps">App Dashboard</a> for review and approval.</p>
+<p>After we have verified that the use of Open Graph actions by your app meets our criteria, we will approve your app to publish Open Graph actions to all Facebook users. Please note that we are not approving your app, only how Open Graph actions are being published by your app.</p>
+<p>Read more about the <a href="/docs/opengraph/opengraph-approval/" name="https://developers.facebook.com/docs/opengraph/opengraph-approval/">approval process</a> for further details.</p>
+<p>
+<a name="debug">
+</a>
+</p>
+<div style="height: 3px;">
+</div>
+<hr />
+<h2>Debug and Troubleshoot</h2>
+<p>Here are some helpful tips when troubleshooting issues in publishing Open Graph objects or actions by your app:</p>
+<h3>How to verify your Objects are in the Open Graph</h3>
+<ul>
+<li>Use the <a href="/tools/debug" name="https://developers.facebook.com/tools/debug">Object Debugger</a> to validate your objects to make sure you have included the needed meta tags. </li>
+</ul>
+<h3>How to verify your Actions are published to the Open Graph</h3>
+<ul>
+<li>Make sure your objects are properly defined with the <a href="/tools/debug" name="https://developers.facebook.com/tools/debug">Object Debugger</a>
+</li>
+<li>Make sure you are using the right namespace for your API calls. Remember that an application namespace cannot be modified once set. </li>
+<li>Make sure you have removed the <code>&amp;expires</code> token from your <code>access_token</code> before making the Graph API call </li>
+<li>Make sure you are getting an <code>id</code> returned from the Graph API POST call </li>
+</ul>
+<h3>Why am I getting &quot;This method must be called with an app access_token&quot; error when publishing an action?</h3>
+<ul>
+<li>Uncheck the &quot;Require app access token to write&quot; checkbox on the configuration page (hidden under the Advanced section) for your Open Graph action type in the App Dashboard. </li>
+</ul>
+<hr />
+<h2>Next Steps</h2>
+<ul>
+<li>Download the code presented in this tutorial from our <a href="/docs/opengraph/samples/" name="https://developers.facebook.com/docs/opengraph/samples/">Open Graph Samples</a>
+</li>
+<li>Read more about the <a href="/docs/opengraph/keyconcepts" name="https://developers.facebook.com/docs/opengraph/keyconcepts">Key Concepts</a> behind <a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+</ul>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/opengraph/tutorial/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1337283293" title="2012年5月17日 12:34">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

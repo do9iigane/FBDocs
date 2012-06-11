@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/iossdk/dialog/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/iossdk/dialog/">https://developers.facebook.com/docs/reference/iossdk/dialog/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</li>
+<li>
+<a href="/docs/reference/php" name="https://developers.facebook.com/docs/reference/php">PHP SDK</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/iossdk" name="https://developers.facebook.com/docs/reference/iossdk">iOS SDK</a>
+</li>
+<li>
+<a href="/docs/reference/androidsdk" name="https://developers.facebook.com/docs/reference/androidsdk">Android SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/authentication/" name="http://developers.facebook.com/docs/reference/iossdk/authentication/">Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/dialog/" name="http://developers.facebook.com/docs/reference/iossdk/dialog/">Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/request/" name="http://developers.facebook.com/docs/reference/iossdk/request/">Request</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Protocols</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/FBDialogDelegate/" name="http://developers.facebook.com/docs/reference/iossdk/FBDialogDelegate/">FBDialogDelegate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/" name="http://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/">FBRequestDelegate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/" name="http://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/">FBSessionDelegate</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Dialog</h1>
+<div class="breadcrumbs">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/iossdk/" name="https://developers.facebook.com/docs/reference/iossdk/">iOS SDK</a> › <a href="/docs/reference/iossdk/dialog/" name="https://developers.facebook.com/docs/reference/iossdk/dialog/">Dialog</a>
+</div>
+</div>
+</div>
+<p>The dialog methods used in the Facebook iOS SDK. These are defined in <code>Facebook.h</code>.</p>
+<p>You implement these methods to generate a <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Facebook Platform dialog</a>.</p>
+<h2>Instance Methods</h2>
+<hr />
+<h3>dialog:andDelegate:</h3>
+<p>Call this method to generate a UI dialog for the desired action.</p>
+<pre>
+<code>- (void)dialog:(NSString *)action
+     andDelegate:(id&lt;FBDialogDelegate&gt;)delegate;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>action</code> - The type of dialog to call. Currently supported methods are <code>oauth</code>, <code>feed</code>, and <code>apprequests</code>.</p>
+<p>
+<code>delegate</code> - The receiver&apos;s delegate or <code>nil</code> if it doesn&apos;t have a delegate. See <a href="/docs/reference/iossdk/FBRequestDelegate/" name="https://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/">FBRequestDelegate</a> for information on the delegate protocol.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You call this method to set up the dialog for a method. You should set up your delegate to handle the scenarios where the dialog succeeds, is cancelled by the user, as well as any error scenarios.</p>
+<hr />
+<h3>dialog:andParams:andDelegate:</h3>
+<p>Call this method to generate a UI dialog for the desired method and additional parameters.</p>
+<pre>
+<code>- (void)dialog:(NSString *)action
+     andParams:(NSMutableDictionary *)params
+ andDelegate:(id &lt;FBDialogDelegate&gt;)delegate;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>action</code> - The type of dialog to call. Currently supported methods are <code>oauth</code>, <code>feed</code>, and <code>apprequests</code>.</p>
+<p>
+<code>params</code> - Key-value string pairs representing parameters specific to a particular dialog.</p>
+<p>
+<code>delegate</code> - The receiver&apos;s delegate or <code>nil</code> if it doesn&apos;t have a delegate. See <a href="/docs/reference/iossdk/FBRequestDelegate/" name="https://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/">FBRequestDelegate</a> for information on the delegate protocol.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You should call this dialog if the method you are calling requires parameters to set up the dialog. You should set up your delegate to handle the scenarios where the dialog succeeds, is cancelled by the user, as well as any error scenarios.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/iossdk/dialog/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1328740275" title="2012年2月8日 14:31">約4ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/api/album/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/api/album/">https://developers.facebook.com/docs/reference/api/album/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Concepts</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/batch/" name="http://developers.facebook.com/docs/reference/api/batch/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/permissions/" name="http://developers.facebook.com/docs/reference/api/permissions/">Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/realtime/" name="http://developers.facebook.com/docs/reference/api/realtime/">Real-time Updates</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/achievement/" name="http://developers.facebook.com/docs/reference/api/achievement/">Achievement(Instance)</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/album/" name="http://developers.facebook.com/docs/reference/api/album/">Album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/application/" name="http://developers.facebook.com/docs/reference/api/application/">Application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/checkin/" name="http://developers.facebook.com/docs/reference/api/checkin/">Checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Comment/" name="http://developers.facebook.com/docs/reference/api/Comment/">Comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/domain/" name="http://developers.facebook.com/docs/reference/api/domain/">Domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/event/" name="http://developers.facebook.com/docs/reference/api/event/">Event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/FriendList/" name="http://developers.facebook.com/docs/reference/api/FriendList/">FriendList</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/group/" name="http://developers.facebook.com/docs/reference/api/group/">Group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/insights/" name="http://developers.facebook.com/docs/reference/api/insights/">Insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/link/" name="http://developers.facebook.com/docs/reference/api/link/">Link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/message/" name="http://developers.facebook.com/docs/reference/api/message/">Message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/note/" name="http://developers.facebook.com/docs/reference/api/note/">Note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/offer/" name="http://developers.facebook.com/docs/reference/api/offer/">Offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/order/" name="http://developers.facebook.com/docs/reference/api/order/">Order </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/page/" name="http://developers.facebook.com/docs/reference/api/page/">Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/photo/" name="http://developers.facebook.com/docs/reference/api/photo/">Photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/post/" name="http://developers.facebook.com/docs/reference/api/post/">Post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question/" name="http://developers.facebook.com/docs/reference/api/question/">Question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question_option/" name="http://developers.facebook.com/docs/reference/api/question_option/">QuestionOption</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Review/" name="http://developers.facebook.com/docs/reference/api/Review/">Review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/status/" name="http://developers.facebook.com/docs/reference/api/status/">Status message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/thread/" name="http://developers.facebook.com/docs/reference/api/thread/">Thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/user/" name="http://developers.facebook.com/docs/reference/api/user/">User</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/video/" name="http://developers.facebook.com/docs/reference/api/video/">Video</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Album</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> › <a href="/docs/reference/api/album/" name="https://developers.facebook.com/docs/reference/api/album/">Album</a>
+</div>
+</div>
+</div>
+<p>An album of <a href="/docs/reference/api/photo" name="https://developers.facebook.com/docs/reference/api/photo">photos</a> as represented in the <a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>.</p>
+<p>The <a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">
+<code>User</code>
+</a>, <a href="/docs/reference/api/page" name="https://developers.facebook.com/docs/reference/api/page">
+<code>Page</code>
+</a> and <a href="/docs/reference/api/application" name="https://developers.facebook.com/docs/reference/api/application">
+<code>Application</code>
+</a> objects have an <code>albums</code> connection of type <code>album</code>.</p>
+<p>To read an <code>Album</code> you need</p>
+<ul>
+<li>Any valid access token if it is public and belongs to a <a href="/docs/reference/api/page" name="https://developers.facebook.com/docs/reference/api/page">
+<code>Page</code>
+</a>
+</li>
+<li>The <code>user_photos</code> <a href="/docs/authentication/permissions/" name="https://developers.facebook.com/docs/authentication/permissions/">permission</a> if it belongs to a <a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">
+<code>User</code>
+</a>
+</li>
+<li>The <code>friend_photos</code> <a href="/docs/authentication/permissions/" name="https://developers.facebook.com/docs/authentication/permissions/">permission</a> if it belongs to a <a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">
+<code>User&apos;s</code>
+</a> friend</li>
+</ul>
+<p>If an app lets a user choose an album when uploading photos, the app should check the <code>can_upload</code> flag to be sure that the app is allowed to add new photos to the album.</p>
+<h3>Example</h3>
+<p>An album on the <a href="https://www.facebook.com/facebook" name="https://www.facebook.com/facebook">Facebook Page</a>:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=10150146071791729" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=10150146071791729">https://graph.facebook.com/10150146071791729</a>
+</p>
+<h2>Fields</h2>
+<p>The <code>Album</code> object has the following fields.</p>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>
+<p>The album ID</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>from</code>
+</td>
+<td>
+<p>The profile that created this album</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code>
+</p>
+</td>
+<td>
+<p>object containing <code>id</code> and <code>name</code> fields</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>
+<p>The title of the album</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>description</code>
+</td>
+<td>
+<p>The description of the album</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>location</code>
+</td>
+<td>
+<p>The location of the album</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>link</code>
+</td>
+<td>
+<p>A link to this album on Facebook</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing a valid URL</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>cover_photo</code>
+</td>
+<td>
+<p>The album cover photo ID</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>privacy</code>
+</td>
+<td>
+<p>The privacy settings for the album</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>count</code>
+</td>
+<td>
+<p>The number of photos in this album</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>type</code>
+</td>
+<td>
+<p>The type of the album: <code>profile</code>, <code>mobile</code>, <code>wall</code>, <code>normal</code> or <code>album</code>
+</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>created_time</code>
+</td>
+<td>
+<p>The time the photo album was initially created</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing ISO-8601 date-time</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>updated_time</code>
+</td>
+<td>
+<p>The last time the photo album was updated</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing ISO-8601 date-time</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>can_upload</code>
+</td>
+<td>
+<p>Determines whether the UID can upload to the album and returns <code>true</code> if the user owns the album, the album is not full, and the app can add photos to the album</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>
+<code>boolean</code>
+</p>
+</td>
+</tr>
+</table>
+<h2>Connections</h2>
+<p>The Album object has the following connections.</p>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=10150146071791729%2Fphotos" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=10150146071791729%2Fphotos">photos</a>
+</td>
+<td>
+<p>The photos contained in this album</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>array of <code>photo</code> objects</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=10150146071791729%2Flikes" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=10150146071791729%2Flikes">likes</a>
+</td>
+<td>
+<p>The likes made on this album</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>array of objects containing <code>id</code> and <code>name</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=10150146071791729%2Fcomments" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=10150146071791729%2Fcomments">comments</a>
+</td>
+<td>
+<p>The comments made on this album</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>array of objects containing <code>id</code>, <code>from</code>, <code>message</code> and <code>created_time</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://graph.facebook.com/10150146071791729/picture" name="https://graph.facebook.com/10150146071791729/picture">picture</a>
+</td>
+<td>
+<p>The album&apos;s cover photo, the first picture uploaded to an album becomes the cover photo for the album.</p>
+</td>
+<td>
+<p>Any valid <code>access_token</code> or <code>user_photos</code> or <code>friend_photos</code>
+</p>
+</td>
+<td>
+<p>HTTP 302 redirect to URL of the album&apos;s cover picture</p>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="photos">photos</h2>
+<h3>Create</h3>
+<p>You can add <a href="https://developers.dev.facebook.com/docs/reference/api/photo/" name="https://developers.dev.facebook.com/docs/reference/api/photo/">photos</a> to an album by issuing an HTTP POST request to <code>ALBUM_ID/photos</code> with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> source </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/photo/" name="https://developers.facebook.com/docs/reference/api/photo/">Photo</a> content </td>
+<td>
+<code>multipart/form-data</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/photo/" name="https://developers.facebook.com/docs/reference/api/photo/">Photo</a> description </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new photo ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="comments">comments</h2>
+<h3>Create</h3>
+<p>You can <a href="https://developers.facebook.com/docs/reference/api/comment/" name="https://developers.facebook.com/docs/reference/api/comment/">comment</a> on an Album by issuing an HTTP POST request to <code>ALBUM_ID/comments</code> with the <code>publish_stream</code> permission and following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code>message</code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/comment/" name="https://developers.facebook.com/docs/reference/api/comment/">Comment</a> text </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new comment ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="likes">likes</h2>
+<h3>Create</h3>
+<p>You can like an Album by issuing an HTTP POST request to <code>ALBUM_ID/likes</code> with the <code>publish_stream</code> permission. No parameters necessary.</p>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td> If the create succeeded. </td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</table>
+<h3>Delete</h3>
+<p>You can unlike an album by issuing an HTTP DELETE request to <code>ALBUM_ID/like</code> with the <code>publish_stream</code> permission.</p>
+<p>If the delete is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td> If the unlike succeeded </td>
+<td>
+<code>boolean</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2>How-Tos</h2>
+<p>
+<a href="https://developers.facebook.com/blog/post/498" name="https://developers.facebook.com/blog/post/498">How-To: Use the Graph API to Upload Photos to a user’s profile (<code>php</code>)</a>
+</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/api/album/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1338508332" title="2012年5月31日 16:52">約1週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

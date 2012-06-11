@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/dialogs/oauth/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/dialogs/oauth/">https://developers.facebook.com/docs/reference/dialogs/oauth/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a class="selected" href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Dialogs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/add_to_page/" name="http://developers.facebook.com/docs/reference/dialogs/add_to_page/">Add Page Tab Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/feed/" name="http://developers.facebook.com/docs/reference/dialogs/feed/">Feed Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/friends/" name="http://developers.facebook.com/docs/reference/dialogs/friends/">Friends Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/oauth/" name="http://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/pay/" name="http://developers.facebook.com/docs/reference/dialogs/pay/">Pay Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/requests/" name="http://developers.facebook.com/docs/reference/dialogs/requests/">Requests Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/dialogs/send/" name="http://developers.facebook.com/docs/reference/dialogs/send/">Send Dialog</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>OAuth Dialog</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a> › <a href="/docs/reference/dialogs/oauth/" name="https://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog</a>
+</div>
+</div>
+</div>
+<p>The OAuth Dialog is used within the <a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">authentication flows</a> to enabled a user to authorize your application and to grant additional permissions to your app. The Authentication is based on the <a href="http://tools.ietf.org/html/draft-ietf-oauth-v2" name="http://tools.ietf.org/html/draft-ietf-oauth-v2">OAuth 2.0</a> protocol.</p>
+<p>
+<img alt="The OAuth dialog on web and mobile web" src="https://developers.facebook.com/attachment/auth-web-mobileweb.jpg" />
+</p>
+<p>While the dialog can be invoked using the JS SDK, the iOS SDK and the Android SDK, it can also be invoked directly by opening a URL in the user&apos;s web browser.</p>
+<h2>Constructing a URL to the OAuth Dialog</h2>
+<p>To invoke the OAuth Dialog, redirect the user&apos;s browser to a URL of the form:</p>
+<pre>
+<code>https://www.facebook.com/dialog/oauth/?
+    client_id=YOUR_APP_ID
+    &amp;redirect_uri=YOUR_REDIRECT_URL
+    &amp;state=YOUR_STATE_VALUE
+    &amp;scope=COMMA_SEPARATED_LIST_OF_PERMISSION_NAMES
+</code>
+</pre>
+<h2>Parameters</h2>
+<p>The OAuth Dialog supports the following parameters which should be passed in the URL string:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>client_id</code>
+</td>
+<td>Yes</td>
+<td>Your App ID. This is called <code>client_id</code> instead of <code>app_id</code> for this particular method in order to be compliant with the OAuth 2.0 specification.</td>
+</tr>
+<tr>
+<td>
+<code>redirect_uri</code>
+</td>
+<td>Yes</td>
+<td>The URL to redirect to after the user clicks a button in the dialog. The URL you specify must be a URL of with the same Base Domain as specified in your <a href="/apps" name="https://developers.facebook.com/apps">app&apos;s settings</a>, a Canvas URL of the form <code>https://apps.facebook.com/YOUR_APP_NAMESPACE</code> or a Page Tab URL of the form <code>https://www.facebook.com/PAGE_USERNAME/app_YOUR_APP_ID</code>
+</td>
+</tr>
+<tr>
+<td>
+<code>scope</code>
+</td>
+<td>No</td>
+<td>A comma separated list of <a href="/docs/authentication/permissions" name="https://developers.facebook.com/docs/authentication/permissions">permission names</a> which you would like the user to grant your application. Only the permissions which the user has <strong>not</strong> already granted your application will be shown</td>
+</tr>
+<tr>
+<td>
+<code>state</code>
+</td>
+<td>No</td>
+<td>An opaque string used to maintain application state between the request and callback. When Facebook redirects the user back to your <code>redirect_uri</code>, this value will be included unchanged in the response. You should use this to protect against <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" name="http://en.wikipedia.org/wiki/Cross-site_request_forgery">Cross-Site Request Forgery</a>.</td>
+</tr>
+<tr>
+<td>
+<code>response_type</code>
+</td>
+<td>No</td>
+<td>The requested response type, one of <code>code</code> or <code>token</code>. Defaults to <code>code</code>. If left unset, or set to <code>code</code> the Dialog&apos;s response will include an OAuth code which can be exchanged for an access token as per the <a href="/docs/authentication/server-side" name="https://developers.facebook.com/docs/authentication/server-side">server-side authentication flow</a>. If set to <code>token</code>, the Dialog&apos;s response will include an oauth user access token in the fragment of the URL the user is redirected to - as per the <a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">client-side authentication flow</a>.</td>
+</tr>
+<tr>
+<td>
+<code>display</code>
+</td>
+<td>No</td>
+<td>The display mode with which to render the Dialog. One of <code>page</code>, <code>popup</code> or <code>touch</code>. Defaults to <code>page</code>. In <code>page</code> mode, the OAuth dialog is displayed in the full Facebook chrome.</td>
+</tr>
+</tbody>
+</table>
+<h2>Return Values</h2>
+<p>If the user authorizes your application, the browser will redirect to the URL you specified in the <code>redirect_uri</code> parameter.</p>
+<p>If the <code>response_type</code> was left unset or was set to the value <code>code</code>, if the user authorizes your application, the browser will be redirected to:</p>
+<pre>
+<code>YOUR_REDIRECT_URI?
+    state=YOUR_STATE_VALUE        
+    &amp;code=CODE_GENERATED_BY_FACEBOOK
+    &amp;state=YOUR_STATE_VALUE
+</code>
+</pre>
+<p>See the <a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">server-side authentication documentation</a> for how to exchange this code for a user access token.</p>
+<p>If the <code>response_type</code> was the value <code>token</code>, if the user authorizes your application, the browser will be redirected to:</p>
+<pre>
+<code>YOUR_REDIRECT_URI#
+    access_token=USER_ACCESS_TOKEN
+   &amp;expires_in=NUMBER_OF_SECONDS_UNTIL_TOKEN_EXPIRES
+   &amp;state=YOUR_STATE_VALUE
+</code>
+</pre>
+<p>See the <a href="/docs/authentication/client-side" name="https://developers.facebook.com/docs/authentication/client-side">client-side authentication</a> documentation for more on how to handle this response.</p>
+<p>If the user does not authorize your application, the browser will redirect to</p>
+<pre>
+<code>YOUR_REDIRECT_URI?
+    error_reason=user_denied
+   &amp;error=access_denied
+   &amp;error_description=The+user+denied+your+request.
+   &amp;state=YOUR_STATE_VALUE
+</code>
+</pre>
+<h2>プロパティ</h2>
+<h2>データの返送</h2>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/dialogs/oauth/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1332165738" title="2012年3月19日 7:02">約3ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

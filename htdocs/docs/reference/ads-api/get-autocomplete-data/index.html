@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/">https://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Best Practices</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/batch-requests/" name="http://developers.facebook.com/docs/reference/ads-api/batch-requests/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/etags-reference/" name="http://developers.facebook.com/docs/reference/ads-api/etags-reference/">Using ETags</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/currencies/" name="http://developers.facebook.com/docs/reference/ads-api/currencies/">Currencies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/">Introduction to Action Spec</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/" name="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/">Introduction to Sponsored Stories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/" name="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/">Optimized CPM</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Specs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/" name="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/">Conversion Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/creative-specs/" name="http://developers.facebook.com/docs/reference/ads-api/creative-specs/">Creative Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/">Defining Action Specs </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/">Targeting Specs</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced Targeting</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/">Action Spec Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/">Topic Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/">ZIP Code Targeting</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Queries</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/actionestimate/" name="http://developers.facebook.com/docs/reference/ads-api/actionestimate/">Action Estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/generatepreview/" name="http://developers.facebook.com/docs/reference/ads-api/generatepreview/">Action Spec Ad Previews</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/adstatistics/">Ad Statistics</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/" name="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/">Autocomplete Data</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/" name="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/">Broad Target Categories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/" name="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/">Connection Objects</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/">Conversion Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/keywordstats/" name="http://developers.facebook.com/docs/reference/ads-api/keywordstats/">Keyword Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/reachestimate/" name="http://developers.facebook.com/docs/reference/ads-api/reachestimate/">Reach estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-description/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-description/">Targeting Description</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccount/" name="http://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/">Ad account group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcampaign/" name="http://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcreative/" name="http://developers.facebook.com/docs/reference/ads-api/adcreative/">Ad creative</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adimage/" name="http://developers.facebook.com/docs/reference/ads-api/adimage/">Ad image</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/aduser/" name="http://developers.facebook.com/docs/reference/ads-api/aduser/">Ad user</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Autocomplete Data</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api/">Ads API</a> › <a href="/docs/reference/ads-api/get-autocomplete-data/" name="https://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/">Autocomplete Data</a>
+</div>
+</div>
+</div>
+<h1>Searching for available targeting data</h1>
+<p>
+<a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad groups</a> can be targeted based on a number of targeting criteria. Many of these targeting criteria are based on predefined values e.g. the country &quot;Japan&quot; or the city &quot;Tokyo&quot;. This document describes how to query the valid values for these targeting types from the Graph API. For information about autocomplete data for <strong>targeting keywords</strong>, see <a href="/docs/reference/ads-api/topic-targeting/" name="https://developers.facebook.com/docs/reference/ads-api/topic-targeting/">Topic Targeting</a>.</p>
+<p>Autocomplete data is retrieved by using parameters with the following basic URL:</p>
+<pre>
+<code>https://graph.facebook.com/search
+</code>
+</pre>
+<p>For most types of autocomplete data, the required parameters are the following:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<code>q</code>
+</td>
+<td align="left">The string for which you want autocomplete values</td>
+</tr>
+<tr>
+<td align="left">
+<code>type</code>
+</td>
+<td align="left">The type of autocomplete data to retrieve, e.g. locales</td>
+</tr>
+</tbody>
+</table>
+<p>The value specified for the <code>type</code> parameter is the category of autocomplete data to retrieve, e.g. to retrieve locales, you can specify <code>type=adlocale</code>. The following table contains the other valid categories Please see <a href="/docs/reference/ads-api/topic-targeting/" name="https://developers.facebook.com/docs/reference/ads-api/topic-targeting/">Topic Targeting</a> for the .</p>
+<table>
+<thead>
+<tr>
+<th align="left">Value for the <code>type</code> parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">adcountry</td>
+<td align="left">Autocomplete values for country targeting</td>
+</tr>
+<tr>
+<td align="left">adregion</td>
+<td align="left">Autocomplete values for region targeting</td>
+</tr>
+<tr>
+<td align="left">adcity</td>
+<td align="left">Autocomplete values for city targeting</td>
+</tr>
+<tr>
+<td align="left">adcollege</td>
+<td align="left">Autocomplete values for college targeting</td>
+</tr>
+<tr>
+<td align="left">adcollegemajor</td>
+<td align="left">Autocomplete values for college major targeting</td>
+</tr>
+<tr>
+<td align="left">adlocale</td>
+<td align="left">Autocomplete values for locale targeting</td>
+</tr>
+<tr>
+<td align="left">adworkplace</td>
+<td align="left">Autocomplete values for workplace targeting</td>
+</tr>
+<tr>
+<td align="left">adkeyword</td>
+<td align="left">Autocomplete values for keyword targeting</td>
+</tr>
+</tbody>
+</table>
+<h2>Country search</h2>
+<p>Every country which is targetable is referenced by a country code. For example, to look up the United States country code, you could use the following query:</p>
+<pre>
+<code>https://graph.facebook.com/search?q=un&amp;type=adcountry&amp;access_token=____    
+</code>
+</pre>
+<p>The response contains three countries:</p>
+<pre>
+<code>{
+  &quot;data&quot;: [
+  {
+     &quot;country_code&quot;: &quot;US&quot;,
+     &quot;name&quot;: &quot;United States&quot;,
+     &quot;supports_region&quot;: true,
+     &quot;supports_city&quot;: true
+  },
+  {
+     &quot;country_code&quot;: &quot;GB&quot;,
+     &quot;name&quot;: &quot;United Kingdom&quot;,
+     &quot;supports_region&quot;: true,
+     &quot;supports_city&quot;: true
+  },
+  {
+     &quot;country_code&quot;: &quot;AE&quot;,
+     &quot;name&quot;: &quot;United Arab Emirates&quot;,
+     &quot;supports_region&quot;: false,
+     &quot;supports_city&quot;: true
+  }
+  ]
+}
+</code>
+</pre>
+<p>In the response data, the <code>key</code> field contains a number and is unique within a category of data, e.g. within all countries. If <code>support_region</code> is true, then region codes are also supported for this country. Likewise, if <code>support_city</code> is set true, city codes are also supported for this country.</p>
+<h3>Options</h3>
+<p>The following optional parameters are valid for the country search function.</p>
+<ul>
+<li>To download a complete list of all countries, leave <code>q</code> parameter blank (<code>q=&amp;</code>), and set limit to a large number (e.g., limit=1000). Downloading complete data sets is only available for countries, regions and locales. </li>
+<li>To look up a country based on its country code you can add a <code>match_country_code</code> parameter with a boolean value of 1 or true to the request. This will match the Country based on the <code>country_code</code> rather than the name field. If the <code>match_country_code</code> parameter is not supplied the search defaults to 0 or false.</li>
+<li>You can limit the number of values returned with the <code>limit</code> parameter, e.g. <code>limit=15</code>. Otherwise, the default for the maximum number of response values is eight.</li>
+</ul>
+<h2>Region Search</h2>
+<p>Every region which is targetable is referenced by a region code. For example to search for all regions that start with <code>al</code>, you can use the following query:</p>
+<pre>
+<code>https://graph.facebook.com/search?q=al&amp;type=adregion&amp;access_token=____  
+</code>
+</pre>
+<p>The response is similar to the following:</p>
+<pre>
+<code>{
+  &quot;data&quot;: [
+  {
+     &quot;key&quot;: 1,
+     &quot;name&quot;: &quot;Alabama&quot;,
+     &quot;country_code&quot;: &quot;US&quot;
+  },
+  {
+     &quot;key&quot;: 2,
+     &quot;name&quot;: &quot;Alaska&quot;,
+     &quot;country_code&quot;: &quot;US&quot;
+  },
+  {
+     &quot;key&quot;: 1,
+     &quot;name&quot;: &quot;Alberta&quot;,
+     &quot;country_code&quot;: &quot;CA&quot;
+  },
+  {
+     &quot;key&quot;: 2,
+     &quot;name&quot;: &quot;Alagoas&quot;,
+     &quot;country_code&quot;: &quot;BR&quot;
+  }
+ ]
+}
+</code>
+</pre>
+<p>In the response data, the <code>key</code> field contains a number and is unique within a category of data, e.g. within all regions.</p>
+<h3>Options</h3>
+<p>The following optional parameters are valid for the region search function.</p>
+<ul>
+<li>To download a complete list of all regions, leave <code>q</code> parameter blank (<code>q=&amp;</code>), and set limit to a large number (e.g., limit=1000). Downloading complete data sets is only available for countries, regions and locales.</li>
+<li>When searching for regions or cities, you can limit the response by country using the <code>country_list</code> parameter, e.g. use <code>country_list=[&quot;ca&quot;]</code> to limit the response to regions in Canada. Please note country codes are case sensitive.</li>
+<li>You can limit the number of values returned with the <code>limit</code> parameter, e.g. <code>limit=15</code>. Otherwise, the default for the maximum number of response values is eight.</li>
+</ul>
+<h2>City Search</h2>
+<p>Every city which is targetable is referenced by a city code. For example to search for all cities that start with <code>dub</code>, you can use below query:</p>
+<pre>
+<code>https://graph.facebook.com/search?q=dub&amp;type=adcity&amp;access_token=____   
+</code>
+</pre>
+<p>The response is similar to the following:</p>
+<pre>
+<code>{
+  &quot;data&quot;: [
+    {
+      &quot;name&quot;: &quot;Dubai&quot;, 
+      &quot;key&quot;: 218104176, 
+      &quot;subtext&quot;: &quot;United Arab Emirates&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Dublin&quot;, 
+      &quot;key&quot;: 219110906, 
+      &quot;subtext&quot;: &quot;Ireland&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Dubna, Russia&quot;, 
+      &quot;key&quot;: 220068414, 
+      &quot;subtext&quot;: &quot;Moskva, Russia&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Dubuque, IA&quot;, 
+      &quot;key&quot;: 220548728, 
+      &quot;subtext&quot;: &quot;IA, United States&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Dubno, Ukraine&quot;, 
+      &quot;key&quot;: 220471793, 
+      &quot;subtext&quot;: &quot;Rivnens&apos;ka Oblast&apos;, Ukraine&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Dubrajpur, India&quot;, 
+      &quot;key&quot;: 219128039, 
+      &quot;subtext&quot;: &quot;West Bengal, India&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Dublin, OH&quot;, 
+      &quot;key&quot;: 220602982, 
+      &quot;subtext&quot;: &quot;OH, United States&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Dublin, CA&quot;, 
+      &quot;key&quot;: 220522764, 
+      &quot;subtext&quot;: &quot;CA, United States&quot;
+    }
+  ]
+}
+</code>
+</pre>
+<p>In the response data, the <code>key</code> field contains a number and is unique within a category of data, e.g. within all cities.</p>
+<h3>Options</h3>
+<p>The following optional parameters are valid for the city search function.</p>
+<ul>
+<li>When searching for regions or cities, you can limit the response by country using the <code>country_list</code> parameter, e.g. use <code>country_list=[&quot;ca&quot;]</code> to limit the response to regions in Canada. Please note country codes are case sensitive.</li>
+<li>You can limit the number of values returned with the <code>limit</code> parameter, e.g. <code>limit=15</code>. Otherwise, the default for the maximum number of response values is eight.</li>
+</ul>
+<h2>Locale Search</h2>
+<p>Every locale which is targetable is referenced by a locale code. For example to search for all locale that start with <code>en</code>, you can use below query:</p>
+<pre>
+<code>https://graph.facebook.com/search?q=en&amp;type=adlocale&amp;access_token=____  
+</code>
+</pre>
+<p>The response is similar to the following:</p>
+<pre>
+<code>{
+  &quot;data&quot;: [
+    {
+      &quot;key&quot;: 51, 
+      &quot;name&quot;: &quot;English (Upside Down)&quot;
+    }, 
+    {
+      &quot;key&quot;: 6, 
+      &quot;name&quot;: &quot;English (US)&quot;
+    }, 
+    {
+      &quot;key&quot;: 24, 
+      &quot;name&quot;: &quot;English (UK)&quot;
+    }
+  ]
+}
+</code>
+</pre>
+<p>In the response data, the <code>key</code> field contains a number and is unique within a category of data, e.g. within all locales.</p>
+<h3>Options</h3>
+<p>The following optional parameters are valid for the locale search function.</p>
+<ul>
+<li>To download a complete list of all locales, leave <code>q</code> parameter blank (<code>q=&amp;</code>), and set limit to a large number (e.g., limit=1000). Downloading complete data sets is only available for countries, regions and locales.</li>
+<li>You can limit the number of values returned with the <code>limit</code> parameter, e.g. <code>limit=15</code>. Otherwise, the default for the maximum number of response values is eight.</li>
+</ul>
+<h2>College Search</h2>
+<p>Every college which is targetable is referenced by a college code. For example to search for all colleges that start with <code>ha</code>, you can use below query:</p>
+<pre>
+<code>https://graph.facebook.com/search?q=ha&amp;type=adcollege&amp;access_token=____ 
+</code>
+</pre>
+<p>The response is similar to the following:</p>
+<pre>
+<code>{
+  &quot;data&quot;: [
+    {
+      &quot;name&quot;: &quot;Harvard&quot;, 
+      &quot;key&quot;: 16777217, 
+      &quot;subtext&quot;: &quot;Cambridge, Massachusetts&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Hawaii&quot;, 
+      &quot;key&quot;: 16777412, 
+      &quot;subtext&quot;: &quot;Honolulu, Hawaii&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Hartford&quot;, 
+      &quot;key&quot;: 16777445, 
+      &quot;subtext&quot;: &quot;West Hartford, Connecticut&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Harding&quot;, 
+      &quot;key&quot;: 16777927, 
+      &quot;subtext&quot;: &quot;Searcy, Arkansas&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Hampton&quot;, 
+      &quot;key&quot;: 16777627, 
+      &quot;subtext&quot;: &quot;Hampton, Virginia&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Harper&quot;, 
+      &quot;key&quot;: 16779183, 
+      &quot;subtext&quot;: &quot;Palatine, Illinois&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Hawai`i Pacific University&quot;, 
+      &quot;key&quot;: 16777611, 
+      &quot;subtext&quot;: &quot;Honolulu, Hawaii&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Hamilton College&quot;, 
+      &quot;key&quot;: 16777262, 
+      &quot;subtext&quot;: &quot;Clinton, New York&quot;
+    }
+  ]
+}
+</code>
+</pre>
+<p>In the response data, the <code>key</code> field contains a number and is unique within a category of data, e.g. within all colleges.</p>
+<h3>Options</h3>
+<p>The following optional paramters are valid for the college search function.</p>
+<ul>
+<li>You can limit the number of values returned with the <code>limit</code> parameter, e.g. <code>limit=15</code>. Otherwise, the default for the maximum number of response values is eight.</li>
+</ul>
+<h2>College Major Search</h2>
+<p>Every college major which is targetable is referenced by a college major code. For example to search for all college majors that start with <code>co</code>, you can use below query:</p>
+<pre>
+<code>https://graph.facebook.com/search?q=co&amp;type=adcollegemajor&amp;access_token=____    
+</code>
+</pre>
+<p>The response is similar to the following:</p>
+<pre>
+<code>{
+  &quot;data&quot;: [
+    {
+      &quot;name&quot;: &quot;Music Composition&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Business Communication&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Computer Networking&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Communicative Disorders&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Construction Engineering&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Communication Design&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Organizational Communication&quot;
+    }, 
+    {
+      &quot;name&quot;: &quot;Communication: Journalism&quot;
+    }
+  ]
+}
+</code>
+</pre>
+<p>In the response data, the <code>key</code> field contains a number and is unique within a category of data, e.g. within all college majors.</p>
+<h3>Options</h3>
+<p>The following optional paramters are valid for the college major search function.</p>
+<ul>
+<li>You can limit the number of values returned with the <code>limit</code> parameter, e.g. <code>limit=15</code>. Otherwise, the default for the maximum number of response values is eight.</li>
+</ul>
+<h2>Workplace Search</h2>
+<p>Every workplace which is targetable is referenced by a workplace code. For example to search for all workplaces that start with <code>mi</code>, you can use below query:</p>
+<pre>
+<code>https://graph.facebook.com/search?q=mi&amp;type=adworkplace&amp;access_token=____   
+</code>
+</pre>
+<p>The response is similar to the following:</p>
+<pre>
+<code>{
+  &quot;data&quot;: [
+    {
+      &quot;name&quot;: &quot;Microsoft&quot;, 
+      &quot;key&quot;: 50431654
+    }, 
+    {
+      &quot;name&quot;: &quot;MindShare&quot;, 
+      &quot;key&quot;: 50446992
+    }, 
+    {
+      &quot;name&quot;: &quot;Ministry of Defence&quot;, 
+      &quot;key&quot;: 50453655
+    }, 
+    {
+      &quot;name&quot;: &quot;Millward Brown Group&quot;, 
+      &quot;key&quot;: 50434052
+    }, 
+    {
+      &quot;name&quot;: &quot;Mitre Corporation&quot;, 
+      &quot;key&quot;: 50432429
+    }, 
+    {
+      &quot;name&quot;: &quot;Micron Technology&quot;, 
+      &quot;key&quot;: 50432218
+    }, 
+    {
+      &quot;name&quot;: &quot;Microsoft Student Partners&quot;, 
+      &quot;key&quot;: 50469387
+    }, 
+    {
+      &quot;name&quot;: &quot;MillerCoors&quot;, 
+      &quot;key&quot;: 50433129
+    }
+  ]
+}
+</code>
+</pre>
+<p>In the response data, the <code>key</code> field contains a number and is unique within a category of data, e.g. within all workplaces.</p>
+<h3>Options</h3>
+<p>The following optional parameters are valid for the workplace search function.</p>
+<ul>
+<li>You can limit the number of values returned with the <code>limit</code> parameter, e.g. <code>limit=15</code>. Otherwise, the default for the maximum number of response values is eight.</li>
+</ul>
+<h2>Keyword Search</h2>
+<p>Keyword search, keyword validation and keyword suggestions are described in the <a href="/docs/reference/ads-api/topic-targeting/" name="https://developers.facebook.com/docs/reference/ads-api/topic-targeting/">Topic Targeting</a> documentation.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1330103790" title="2012年2月24日 9:16">約4ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

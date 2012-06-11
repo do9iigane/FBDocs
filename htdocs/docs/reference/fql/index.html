@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/fql/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/fql/">https://developers.facebook.com/docs/reference/fql/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Tables</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/album/" name="http://developers.facebook.com/docs/reference/fql/album/">album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/application/" name="http://developers.facebook.com/docs/reference/fql/application/">application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/apprequest/" name="http://developers.facebook.com/docs/reference/fql/apprequest/">apprequest</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/checkin/" name="http://developers.facebook.com/docs/reference/fql/checkin/">checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comment/" name="http://developers.facebook.com/docs/reference/fql/comment/">comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/comments_info/" name="http://developers.facebook.com/docs/reference/fql/comments_info/">comments_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/connection/" name="http://developers.facebook.com/docs/reference/fql/connection/">connection</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/cookies/" name="http://developers.facebook.com/docs/reference/fql/cookies/">cookies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/developer/" name="http://developers.facebook.com/docs/reference/fql/developer/">developer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain/" name="http://developers.facebook.com/docs/reference/fql/domain/">domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/domain_admin/" name="http://developers.facebook.com/docs/reference/fql/domain_admin/">domain_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event/" name="http://developers.facebook.com/docs/reference/fql/event/">event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/event_member/" name="http://developers.facebook.com/docs/reference/fql/event_member/">event_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/family/" name="http://developers.facebook.com/docs/reference/fql/family/">family</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend/" name="http://developers.facebook.com/docs/reference/fql/friend/">friend</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friend_request/" name="http://developers.facebook.com/docs/reference/fql/friend_request/">friend_request</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist/" name="http://developers.facebook.com/docs/reference/fql/friendlist/">friendlist</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist_member/" name="http://developers.facebook.com/docs/reference/fql/friendlist_member/">friendlist_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group/" name="http://developers.facebook.com/docs/reference/fql/group/">group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/group_member/" name="http://developers.facebook.com/docs/reference/fql/group_member/">group_member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/insights/" name="http://developers.facebook.com/docs/reference/fql/insights/">insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/like/" name="http://developers.facebook.com/docs/reference/fql/like/">like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/links/" name="http://developers.facebook.com/docs/reference/fql/links/">link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/link_stat/" name="http://developers.facebook.com/docs/reference/fql/link_stat/">link_stat</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/location_post/" name="http://developers.facebook.com/docs/reference/fql/location_post/">location_post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/mailbox_folder/" name="http://developers.facebook.com/docs/reference/fql/mailbox_folder/">mailbox_folder</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/message/" name="http://developers.facebook.com/docs/reference/fql/message/">message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notes/" name="http://developers.facebook.com/docs/reference/fql/notes/">note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/notification/" name="http://developers.facebook.com/docs/reference/fql/notification/">notification</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/object_url/" name="http://developers.facebook.com/docs/reference/fql/object_url/">object_url</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/offer/" name="http://developers.facebook.com/docs/reference/fql/offer/">offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page/" name="http://developers.facebook.com/docs/reference/fql/page/">page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_admin/" name="http://developers.facebook.com/docs/reference/fql/page_admin/">page_admin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_blocked_user/" name="http://developers.facebook.com/docs/reference/fql/page_blocked_user/">page_blocked_user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/page_fan/" name="http://developers.facebook.com/docs/reference/fql/page_fan/">page_fan</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/life_event/" name="http://developers.facebook.com/docs/reference/fql/life_event/">page_milestone</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions/" name="http://developers.facebook.com/docs/reference/fql/permissions/">permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/permissions_info/" name="http://developers.facebook.com/docs/reference/fql/permissions_info/">permissions_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo/" name="http://developers.facebook.com/docs/reference/fql/photo/">photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_src/" name="http://developers.facebook.com/docs/reference/fql/photo_src/">photo_src</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/photo_tag/" name="http://developers.facebook.com/docs/reference/fql/photo_tag/">photo_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/place/" name="http://developers.facebook.com/docs/reference/fql/place/">place</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy/" name="http://developers.facebook.com/docs/reference/fql/privacy/">privacy</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/privacy_setting/" name="http://developers.facebook.com/docs/reference/fql/privacy_setting/">privacy_setting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile/" name="http://developers.facebook.com/docs/reference/fql/profile/">profile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/profile_tab/" name="http://developers.facebook.com/docs/reference/fql/profile_tab/">profile_view</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question/" name="http://developers.facebook.com/docs/reference/fql/question/">question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option/" name="http://developers.facebook.com/docs/reference/fql/question_option/">question_option</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/question_option_votes/" name="http://developers.facebook.com/docs/reference/fql/question_option_votes/">question_option_votes</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/review/" name="http://developers.facebook.com/docs/reference/fql/review/">review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_friend_info/" name="http://developers.facebook.com/docs/reference/fql/standard_friend_info/">standard_friend_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/standard_user_info/" name="http://developers.facebook.com/docs/reference/fql/standard_user_info/">standard_user_info</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/status/" name="http://developers.facebook.com/docs/reference/fql/status/">status</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream/" name="http://developers.facebook.com/docs/reference/fql/stream/">stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_filter/" name="http://developers.facebook.com/docs/reference/fql/stream_filter/">stream_filter</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/stream_tag/" name="http://developers.facebook.com/docs/reference/fql/stream_tag/">stream_tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/subscription/" name="http://developers.facebook.com/docs/reference/fql/subscription/">subscription</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/thread/" name="http://developers.facebook.com/docs/reference/fql/thread/">thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/translation/" name="http://developers.facebook.com/docs/reference/fql/translation/">translation</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_message/" name="http://developers.facebook.com/docs/reference/fql/unified_message/">unified_message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread/" name="http://developers.facebook.com/docs/reference/fql/unified_thread/">unified_thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_action/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_action/">unified_thread_action</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_count/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_count/">unified_thread_count</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/url_like/" name="http://developers.facebook.com/docs/reference/fql/url_like/">url_like</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/user/" name="http://developers.facebook.com/docs/reference/fql/user/">user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video/" name="http://developers.facebook.com/docs/reference/fql/video/">video</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fql/video_tag/" name="http://developers.facebook.com/docs/reference/fql/video_tag/">video_tag</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Facebook Query Language (FQL)</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">Facebook Query Language (FQL)</a>
+</div>
+</div>
+</div>
+<p>The FQL object enables running FQL queries using the Graph API. Facebook Query Language, or FQL, enables you to use a SQL-style interface to query the data exposed by the <a href="../api/" name="https://developers.facebook.com/api/">Graph API</a>. It provides for some advanced features not available in the Graph API, including batching multiple queries into a single call.</p>
+<h2>Example</h2>
+<p>Runs the query &quot;SELECT uid2 FROM friend WHERE uid1=me()&quot;</p>
+<p>
+<a href="https://developers.facebook.com/tools/explorer?method=GET&amp;path=fql%3Fq%3DSELECT%20uid2%20FROM%20friend%20WHERE%20uid1%3Dme()" name="https://developers.facebook.com/tools/explorer?method=GET&amp;path=fql%3Fq%3DSELECT%20uid2%20FROM%20friend%20WHERE%20uid1%3Dme()">
+<code>GET /fql?q=SELECT+uid2+FROM+friend+WHERE+uid1=me()&amp;access_token=...</code>
+</a>
+</p>
+<h2>Read</h2>
+<p>You can issue a <code>HTTP GET</code> request to <code>/fql?q=query</code> where <code>query</code> can be a single fql query or a JSON-encoded dictionary of queries.</p>
+<h2>Query</h2>
+<p>Queries are of the form <code>SELECT [fields] FROM [table] WHERE [conditions]</code>. Unlike SQL, the FQL <code>FROM</code> clause can contain only a single table. You can use the <code>IN</code> keyword in <code>SELECT</code> or <code>WHERE</code> clauses to do subqueries, but the subqueries cannot reference variables in the outer query&apos;s scope. Your query must also be <em>indexable</em>, meaning that it queries properties that are marked as indexable in the documentation below.</p>
+<p>FQL can handle simple math, basic boolean operators, AND or NOT logical operators, and ORDER BY and LIMIT clauses.</p>
+<p>For any query that takes a <code>uid</code>, you can pass <code>me()</code> to return the logged-in user. For example:</p>
+<pre>
+<code>SELECT name FROM user WHERE uid = me() 
+</code>
+</pre>
+<p>Other functions that are available are <code>now()</code>, <code>strlen()</code>, <code>substr()</code> and <code>strpos()</code>.</p>
+<p>Here&apos;s an example of a subquery that fetches all user information for the active user and friends:</p>
+<pre>
+<code>SELECT uid, name, pic_square FROM user WHERE uid = me()
+OR uid IN (SELECT uid2 FROM friend WHERE uid1 = me())
+</code>
+</pre>
+<h2>Multi-query</h2>
+<p>Evaluates a series of FQL (Facebook Query Language) queries in one call and returns the data at one time.</p>
+<p>This method takes a JSON-encoded dictionary called &apos;&apos;queries&apos;&apos; where the individual queries use the exact same syntax as a simple query. However, this method allows for more complex queries to be made. You can fetch data from one query and use it in another query within the same call. The WHERE clause is optional in the latter query, since it references data that’s already been fetched. To reference the results of one query in another query within the same call, specify its name in the FROM clause, preceded by #.</p>
+<p>For example, say you want to get some data about a user attending an event. Normally, you’d have to perform two queries in a row, waiting for the results of the first query before running the second query, since the second query depends on data from the first one. But with fql.multiquery, you can run them at the same time, and get all the results you need, giving you better performance than running a series of fql.query calls. First, you need to get the user ID and RSVP status of each attendee, so you’d formulate the first query – query1 – like this:</p>
+<pre>
+<code>&quot;query1&quot;:&quot;SELECT uid, rsvp_status FROM event_member WHERE eid=12345678&quot;
+</code>
+</pre>
+<p>Then to get each attendee’s profile data (name, URL, and picture in this instance), you’d make a second query – query2 – which references the results from query1. You formulate query2 like this:</p>
+<pre>
+<code>&quot;query2&quot;:&quot;SELECT name, url, pic FROM profile WHERE id IN (SELECT uid FROM #query1)&quot;
+</code>
+</pre>
+<p>This method also has better performance than running a series of fql.query calls with <a href="/docs/reference/rest/batch.run/" name="https://developers.facebook.com/docs/reference/rest/batch.run/">
+<code>batch.run</code>
+</a>.</p>
+<h2>Sample</h2>
+<p>Here&apos;s a sample for running fql query</p>
+<pre>
+&lt;?php
+  $app_id = &apos;YOUR_APP_ID&apos;;
+  $app_secret = &apos;YOUR_APP_SECRET&apos;;
+  $my_url = &apos;POST_AUTH_URL&apos;;
+
+  $code = $_REQUEST[&quot;code&quot;];
+ 
+ //auth user
+ if(empty($code)) {
+    $dialog_url = &apos;https://www.facebook.com/dialog/oauth?client_id=&apos; 
+    . $app_id . &apos;&amp;redirect_uri=&apos; . urlencode($my_url) ;
+    echo(&quot;&lt;script&gt;top.location.href=&apos;&quot; . $dialog_url . &quot;&apos;&lt;/script&gt;&quot;);
+  }
+
+  //get user access_token
+  $token_url = &apos;https://graph.facebook.com/oauth/access_token?client_id=&apos;
+    . $app_id . &apos;&amp;redirect_uri=&apos; . urlencode($my_url) 
+    . &apos;&amp;client_secret=&apos; . $app_secret 
+    . &apos;&amp;code=&apos; . $code;
+  $access_token = file_get_contents($token_url);
+ 
+  // Run fql query
+  $fql_query_url = &apos;https://graph.facebook.com/&apos;
+    . &apos;/fql?q=SELECT+uid2+FROM+friend+WHERE+uid1=me()&apos;
+    . &apos;&amp;&apos; . $access_token;
+  $fql_query_result = file_get_contents($fql_query_url);
+  $fql_query_obj = json_decode($fql_query_result, true);
+
+  //display results of fql query
+  echo &apos;&lt;pre&gt;&apos;;
+  print_r(&quot;query results:&quot;);
+  print_r($fql_query_obj);
+  echo &apos;&lt;/pre&gt;&apos;;
+
+  // Run fql multiquery
+  $fql_multiquery_url = &apos;https://graph.facebook.com/&apos;
+    . &apos;fql?q={&quot;all+friends&quot;:&quot;SELECT+uid2+FROM+friend+WHERE+uid1=me()&quot;,&apos;
+    . &apos;&quot;my+name&quot;:&quot;SELECT+name+FROM+user+WHERE+uid=me()&quot;}&apos;
+    . &apos;&amp;&apos; . $access_token;
+  $fql_multiquery_result = file_get_contents($fql_multiquery_url);
+  $fql_multiquery_obj = json_decode($fql_multiquery_result, true);
+
+  //display results of fql multiquery
+  echo &apos;&lt;pre&gt;&apos;;
+  print_r(&quot;multi query results:&quot;);
+  print_r($fql_multiquery_obj);
+  echo &apos;&lt;/pre&gt;&apos;;
+?&gt;
+</pre>
+<ul>
+</ul>
+<hr />
+<h2 id="tables">Tables</h2>
+<div class="refindex">
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/album/" name="http://developers.facebook.com/docs/reference/fql/album/">album</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about a photo album.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/application/" name="http://developers.facebook.com/docs/reference/fql/application/">application</a>
+</div>
+<div class="snippet">
+<p>Query this table to return read-only <a href="/docs/appproperties" name="https://developers.facebook.com/docs/appproperties">properties</a> about an application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/apprequest/" name="http://developers.facebook.com/docs/reference/fql/apprequest/">apprequest</a>
+</div>
+<div class="snippet">
+<p>An <a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a> table containing the requests sent via an app to a user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/checkin/" name="http://developers.facebook.com/docs/reference/fql/checkin/">checkin</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about a checkin. By default, this query returns the last 20 checkins and returns a maximum of 500 checkins.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/comment/" name="http://developers.facebook.com/docs/reference/fql/comment/">comment</a>
+</div>
+<div class="snippet">
+<p>Query this table to obtain comments associated with one or more [fb:comments]</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/comments_info/" name="http://developers.facebook.com/docs/reference/fql/comments_info/">comments_info</a>
+</div>
+<div class="snippet">
+<p>The comments_info FQL table. Query this table to obtain XIDs for <a href="../fbml/comments" name="https://developers.facebook.com/fbml/comments">fb:comments</a> objects associated with an application ID.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/connection/" name="http://developers.facebook.com/docs/reference/fql/connection/">connection</a>
+</div>
+<div class="snippet">
+<p>Query this table to return a user&apos;s friends and the Facebook Pages to which the user is connected.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/cookies/" name="http://developers.facebook.com/docs/reference/fql/cookies/">cookies</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about a cookie.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/developer/" name="http://developers.facebook.com/docs/reference/fql/developer/">developer</a>
+</div>
+<div class="snippet">
+<p>Query this table to return the application IDs for which the specified user is listed as a developer in the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps">Developer application</a>.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/domain/" name="http://developers.facebook.com/docs/reference/fql/domain/">domain</a>
+</div>
+<div class="snippet">
+<p>The domain table provides a read-only mapping between domain names and ids.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/domain_admin/" name="http://developers.facebook.com/docs/reference/fql/domain_admin/">domain_admin</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about the admin of a domain.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/event/" name="http://developers.facebook.com/docs/reference/fql/event/">event</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about an event.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/event_member/" name="http://developers.facebook.com/docs/reference/fql/event_member/">event_member</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about a user&apos;s status for an event or see a list of events for a user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/family/" name="http://developers.facebook.com/docs/reference/fql/family/">family</a>
+</div>
+<div class="snippet">
+<p>Query this table to return detailed information about a user&apos;s family.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/friend/" name="http://developers.facebook.com/docs/reference/fql/friend/">friend</a>
+</div>
+<div class="snippet">
+<p>Query this table to determine whether two users are linked together as friends.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/friend_request/" name="http://developers.facebook.com/docs/reference/fql/friend_request/">friend_request</a>
+</div>
+<div class="snippet">
+<p>Query this table either to determine which users have sent friend requests to the logged-in user or to query whether a friend request has been sent from the logged-in user to a specific user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist/" name="http://developers.facebook.com/docs/reference/fql/friendlist/">friendlist</a>
+</div>
+<div class="snippet">
+<p>Query this table to return any friend lists owned by the specified user.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/friendlist_member/" name="http://developers.facebook.com/docs/reference/fql/friendlist_member/">friendlist_member</a>
+</div>
+<div class="snippet">
+<p>Query this table to determine which users are members of a friend list.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/group/" name="http://developers.facebook.com/docs/reference/fql/group/">group</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about a group.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/group_member/" name="http://developers.facebook.com/docs/reference/fql/group_member/">group_member</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about the members of a group, or retrieve a list of groups of which a user is a member</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/insights/" name="http://developers.facebook.com/docs/reference/fql/insights/">insights</a>
+</div>
+<div class="snippet">
+<p>The insights table contains statistics about Applications, Pages and Domains</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/like/" name="http://developers.facebook.com/docs/reference/fql/like/">like</a>
+</div>
+<div class="snippet">
+<p>Query this table to return the user IDs of users who like a given Facebook object (video, note, link, photo, or album).</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/links/" name="http://developers.facebook.com/docs/reference/fql/links/">link</a>
+</div>
+<div class="snippet">
+<p>Query this table to return the links a user has posted.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/link_stat/" name="http://developers.facebook.com/docs/reference/fql/link_stat/">link_stat</a>
+</div>
+<div class="snippet">
+<p>The link_stat table contains counts that show how users on Facebook are interacting with a given link.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/location_post/" name="http://developers.facebook.com/docs/reference/fql/location_post/">location_post</a>
+</div>
+<div class="snippet">
+<p>An FQL table representing posts that are tagged with a location.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/mailbox_folder/" name="http://developers.facebook.com/docs/reference/fql/mailbox_folder/">mailbox_folder</a>
+</div>
+<div class="snippet">
+<p>The mailbox_folder table contains information about a user&apos;s mailbox folders.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/message/" name="http://developers.facebook.com/docs/reference/fql/message/">message</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about messages in a thread.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/notes/" name="http://developers.facebook.com/docs/reference/fql/notes/">note</a>
+</div>
+<div class="snippet">
+<p>Query this table to return the notes the current user has written or to return details for a particular note.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/notification/" name="http://developers.facebook.com/docs/reference/fql/notification/">notification</a>
+</div>
+<div class="snippet">
+<p>Query this table to get the notifications for the current session user, that is, any notification that appears on http://www.facebook.com/notifications.php.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/object_url/" name="http://developers.facebook.com/docs/reference/fql/object_url/">object_url</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about a URL in the Open Graph</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/offer/" name="http://developers.facebook.com/docs/reference/fql/offer/">offer</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about an offer.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/page/" name="http://developers.facebook.com/docs/reference/fql/page/">page</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about a Facebook Page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/page_admin/" name="http://developers.facebook.com/docs/reference/fql/page_admin/">page_admin</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about which Facebook Pages the user Admins.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/page_blocked_user/" name="http://developers.facebook.com/docs/reference/fql/page_blocked_user/">page_blocked_user</a>
+</div>
+<div class="snippet">
+<p>An FQL table that can be used to return a list of a users that are blocked from a Facebook Page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/page_fan/" name="http://developers.facebook.com/docs/reference/fql/page_fan/">page_fan</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about the user who likes a Facebook Page.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/life_event/" name="http://developers.facebook.com/docs/reference/fql/life_event/">page_milestone</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about a Page&apos;s milestones.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/permissions/" name="http://developers.facebook.com/docs/reference/fql/permissions/">permissions</a>
+</div>
+<div class="snippet">
+<p>Query this table to return the <a href="/docs/authentication/permissions" name="https://developers.facebook.com/docs/authentication/permissions">permissions</a> the current user has granted to the app.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/permissions_info/" name="http://developers.facebook.com/docs/reference/fql/permissions_info/">permissions_info</a>
+</div>
+<div class="snippet">
+<p>Query this table to return more descriptive information about <a href="/docs/authentication/permissions" name="https://developers.facebook.com/docs/authentication/permissions">extended permissions</a>.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/photo/" name="http://developers.facebook.com/docs/reference/fql/photo/">photo</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about a photo.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/photo_src/" name="http://developers.facebook.com/docs/reference/fql/photo_src/">photo_src</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about photo source url.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/photo_tag/" name="http://developers.facebook.com/docs/reference/fql/photo_tag/">photo_tag</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about a photo tag.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/place/" name="http://developers.facebook.com/docs/reference/fql/place/">place</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about a place.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/privacy/" name="http://developers.facebook.com/docs/reference/fql/privacy/">privacy</a>
+</div>
+<div class="snippet">
+<p>Query this table to return a user&apos;s privacy setting for a given object_id.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/privacy_setting/" name="http://developers.facebook.com/docs/reference/fql/privacy_setting/">privacy_setting</a>
+</div>
+<div class="snippet">
+<p>Query default privacy settings for a user for a particular app</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/profile/" name="http://developers.facebook.com/docs/reference/fql/profile/">profile</a>
+</div>
+<div class="snippet">
+<p>Query this table to return certain (typically publicly) viewable information for a profile.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/profile_tab/" name="http://developers.facebook.com/docs/reference/fql/profile_tab/">profile_view</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information a Page&apos;s apps.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/question/" name="http://developers.facebook.com/docs/reference/fql/question/">question</a>
+</div>
+<div class="snippet">
+<p>A Question as represented in FQL.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/question_option/" name="http://developers.facebook.com/docs/reference/fql/question_option/">question_option</a>
+</div>
+<div class="snippet">
+<p>An option for a question, as represented in FQL.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/question_option_votes/" name="http://developers.facebook.com/docs/reference/fql/question_option_votes/">question_option_votes</a>
+</div>
+<div class="snippet">
+<p>The votes on a particular option for a question, as represented in FQL.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/review/" name="http://developers.facebook.com/docs/reference/fql/review/">review</a>
+</div>
+<div class="snippet">
+<p>Query this table to obtain reviews associated with an <a href="\/docs\/reference\/fql\/application" name="https://developers.facebook.com/docs/%5C/docs%5C/reference%5C/fql%5C/application">application</a>, a <a href="\/docs\/reference\/fql\/user" name="https://developers.facebook.com/docs/%5C/docs%5C/reference%5C/fql%5C/user">user</a> or both.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/standard_friend_info/" name="http://developers.facebook.com/docs/reference/fql/standard_friend_info/">standard_friend_info</a>
+</div>
+<div class="snippet">
+<p>Query this table to determine whether two users are linked together as friends.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/standard_user_info/" name="http://developers.facebook.com/docs/reference/fql/standard_user_info/">standard_user_info</a>
+</div>
+<div class="snippet">
+<p>Query this table to return standard information about a user, for use when you need analytic information only.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/status/" name="http://developers.facebook.com/docs/reference/fql/status/">status</a>
+</div>
+<div class="snippet">
+<p>Query this table to return one or more of a user&apos;s statuses.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/stream/" name="http://developers.facebook.com/docs/reference/fql/stream/">stream</a>
+</div>
+<div class="snippet">
+<p>Query this table to return posts from a user&apos;s stream or the user&apos;s profile.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/stream_filter/" name="http://developers.facebook.com/docs/reference/fql/stream_filter/">stream_filter</a>
+</div>
+<div class="snippet">
+<p>Query this table to return a filter_key that can be used to query the <a href="stream" name="https://developers.facebook.com/docs/stream">stream FQL table</a>, as seen through any content filters the user has available on Facebook.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/stream_tag/" name="http://developers.facebook.com/docs/reference/fql/stream_tag/">stream_tag</a>
+</div>
+<div class="snippet">
+<p>Query this table to return associations between users or Facebook Pages and the items they tag in status posts.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/subscription/" name="http://developers.facebook.com/docs/reference/fql/subscription/">subscription</a>
+</div>
+<div class="snippet">
+<p>Query this table to determine whether two users are linked together in a subscriber/subscribee relationship and to retrieve a list of users another user subscribes to or is subscribed to by.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/thread/" name="http://developers.facebook.com/docs/reference/fql/thread/">thread</a>
+</div>
+<div class="snippet">
+<p>Query this table to return information about message threads in a user&apos;s Inbox.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/translation/" name="http://developers.facebook.com/docs/reference/fql/translation/">translation</a>
+</div>
+<div class="snippet">
+<p>Query this table to return the native strings (original, untranslated text in your application interface) and the translated strings for your application.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/unified_message/" name="http://developers.facebook.com/docs/reference/fql/unified_message/">unified_message</a>
+</div>
+<div class="snippet">
+<p>This table can be used to access information about messages in the new Facebook messaging system.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread/" name="http://developers.facebook.com/docs/reference/fql/unified_thread/">unified_thread</a>
+</div>
+<div class="snippet">
+<p>This table can be used to access information about threads in the new Facebook messaging system.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_action/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_action/">unified_thread_action</a>
+</div>
+<div class="snippet">
+<p>This table should be used to access information about subscribe and unsubscribe actions performed on a thread in the new Facebook messaging system.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/unified_thread_count/" name="http://developers.facebook.com/docs/reference/fql/unified_thread_count/">unified_thread_count</a>
+</div>
+<div class="snippet">
+<p>This table should be used to access information about the number of threads in a folder in the new Facebook messaging system.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/url_like/" name="http://developers.facebook.com/docs/reference/fql/url_like/">url_like</a>
+</div>
+<div class="snippet">
+<p>An FQL table containing the Open Graph URLs that the current session user has Liked.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/user/" name="http://developers.facebook.com/docs/reference/fql/user/">user</a>
+</div>
+<div class="snippet">
+<p>Query this table to return detailed information from a user&apos;s profile.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/video/" name="http://developers.facebook.com/docs/reference/fql/video/">video</a>
+</div>
+<div class="snippet">
+<p>The video table contains information about videos.</p>
+</div>
+</div>
+<div class="page">
+<div class="title">
+<a href="http://developers.facebook.com/docs/reference/fql/video_tag/" name="http://developers.facebook.com/docs/reference/fql/video_tag/">video_tag</a>
+</div>
+<div class="snippet">
+<p>The video_tag table contains information about users tagged in videos.</p>
+</div>
+</div>
+</div>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/fql/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1326739323" title="2012年1月16日 10:42">約5ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

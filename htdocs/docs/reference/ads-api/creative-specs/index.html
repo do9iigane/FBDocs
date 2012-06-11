@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/ads-api/creative-specs/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/ads-api/creative-specs/">https://developers.facebook.com/docs/reference/ads-api/creative-specs/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Best Practices</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/batch-requests/" name="http://developers.facebook.com/docs/reference/ads-api/batch-requests/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/etags-reference/" name="http://developers.facebook.com/docs/reference/ads-api/etags-reference/">Using ETags</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/currencies/" name="http://developers.facebook.com/docs/reference/ads-api/currencies/">Currencies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/intro-action-specs/">Introduction to Action Spec</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/" name="http://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/">Introduction to Sponsored Stories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/" name="http://developers.facebook.com/docs/reference/ads-api/optimizedcpm/">Optimized CPM</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Specs</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/" name="http://developers.facebook.com/docs/reference/ads-api/conversion-specs/">Conversion Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/creative-specs/" name="http://developers.facebook.com/docs/reference/ads-api/creative-specs/">Creative Specs</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/" name="http://developers.facebook.com/docs/reference/ads-api/start-action-specs/">Defining Action Specs </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-specs/">Targeting Specs</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Advanced Targeting</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/action-specs-targeting/">Action Spec Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/topic-targeting/">Topic Targeting</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/" name="http://developers.facebook.com/docs/reference/ads-api/zipcode-targeting/">ZIP Code Targeting</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Queries</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/actionestimate/" name="http://developers.facebook.com/docs/reference/ads-api/actionestimate/">Action Estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/generatepreview/" name="http://developers.facebook.com/docs/reference/ads-api/generatepreview/">Action Spec Ad Previews</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/adstatistics/">Ad Statistics</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/" name="http://developers.facebook.com/docs/reference/ads-api/get-autocomplete-data/">Autocomplete Data</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/" name="http://developers.facebook.com/docs/reference/ads-api/broadcategorytargeting/">Broad Target Categories</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/" name="http://developers.facebook.com/docs/reference/ads-api/connectionobjects/">Connection Objects</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/" name="http://developers.facebook.com/docs/reference/ads-api/conversionstatistics/">Conversion Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/keywordstats/" name="http://developers.facebook.com/docs/reference/ads-api/keywordstats/">Keyword Stats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/reachestimate/" name="http://developers.facebook.com/docs/reference/ads-api/reachestimate/">Reach estimate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/targeting-description/" name="http://developers.facebook.com/docs/reference/ads-api/targeting-description/">Targeting Description</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccount/" name="http://developers.facebook.com/docs/reference/ads-api/adaccount/">Ad account</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adaccountgroup/">Ad account group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcampaign/" name="http://developers.facebook.com/docs/reference/ads-api/adcampaign/">Ad campaign</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adcreative/" name="http://developers.facebook.com/docs/reference/ads-api/adcreative/">Ad creative</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adgroup/" name="http://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/adimage/" name="http://developers.facebook.com/docs/reference/ads-api/adimage/">Ad image</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/ads-api/aduser/" name="http://developers.facebook.com/docs/reference/ads-api/aduser/">Ad user</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Creative Specs</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api/">Ads API</a> › <a href="/docs/reference/ads-api/creative-specs/" name="https://developers.facebook.com/docs/reference/ads-api/creative-specs/">Creative Specs</a>
+</div>
+</div>
+</div>
+<p>Creative specs are used to define what the creative of an <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a> looks like. Creative Specs are used in <a href="/docs/reference/ads-api/adcreative/" name="https://developers.facebook.com/docs/reference/ads-api/adcreative/">Ad Creative</a> and <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a> objects. Creative Specs can also be used to <a href="/docs/reference/ads-api/generatepreview/" name="https://developers.facebook.com/docs/reference/ads-api/generatepreview/">generate previews</a> of what a creative will look like when used in an <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>
+</p>
+<h2>Fields</h2>
+<p>The following are the fields for the creative spec. The required fields are different based on the creative type, see the parameter columns of the <a href="#ad_creative_types" name="https://developers.facebook.com/docs/#ad_creative_types">&quot;Ad Creative Types&quot;</a> table below. <table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Permissions</th>
+<th align="left">Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<code>name</code>
+</td>
+<td align="left">The name of the creative in the creative library</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>type</code>
+</td>
+<td align="left">The number of the ad type, which identifies the type of Sponsored story or ad</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>object_id</code>
+</td>
+<td align="left">The Facebook object ID that is relevant to the ad and ad type. See <a href="/docs/reference/ads-api/connectionobjects/" name="https://developers.facebook.com/docs/reference/ads-api/connectionobjects/">connection objects</a>)</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>body</code>
+</td>
+<td align="left">The body of the ad, not applicable to Sponsored stories</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>image_hash</code>
+</td>
+<td align="left">Image ID for an image you can use in creatives and thus in ads, see <a href="#using_images" name="https://developers.facebook.com/docs/#using_images">Using Images</a>
+</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>image_url</code>
+</td>
+<td align="left">A URL for the image for this creative, see <a href="#using_images" name="https://developers.facebook.com/docs/#using_images">Using Images</a>
+</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>creative_id</code>
+</td>
+<td align="left">Required in order to use an existing creative from the creative library</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>count_current_adgroups</code>
+</td>
+<td align="left">Indicates the number of ad groups in which the creative is used</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>title</code>
+</td>
+<td align="left">Title for a default ad</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>run_status</code>
+</td>
+<td align="left">Indicates whether the creative is active (1) or deleted (3)</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>int</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>link_url</code>
+</td>
+<td align="left">A URL for the ad</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>url_tag</code>
+</td>
+<td align="left">A string which will be appended to urls clicked from type 25 and 27 creatives.</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>preview_url</code>
+</td>
+<td align="left">The URL to preview the ad, only for the current session user</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>related_fan_page</code>
+</td>
+<td align="left">Provides social context to a type 1 ad, see <a href="#include_social" name="https://developers.facebook.com/docs/#include_social">Including social context</a>
+</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>auto_update</code>
+</td>
+<td align="left">Boolean true to constantly promote the latest page post and ignore story_id parameter. Boolean false to promote a specific page post by story_id. Required for type 27 ads only.</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>boolean</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>story_id</code>
+</td>
+<td align="left">The fbid of a page post to use in a type 25 or type 27 ad. This ID can be retrieved by using the graph API to query the posts of the page. Note: The ID of the post is returned in the following format: &lt;Page_ID&gt;_&lt;Story_ID&gt;. Only the &quot;Story_ID&quot; element should be supplied as the story_id.</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>string</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+<code>action_spec</code>
+</td>
+<td align="left">A JSON string defining an action performed by a user for use in a type 25 ad. See <a href="/docs/reference/ads-api/start-action-specs/" name="https://developers.facebook.com/docs/reference/ads-api/start-action-specs/">action spec reference</a> for more details.</td>
+<td align="left">
+<code>ads_management</code>
+</td>
+<td align="left">
+<code>JSON String</code>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<h2>Limits</h2>
+<p>The following are the limits on the fields in a Creative Spec.</p>
+<ul>
+<li>The maximum amount of characters that can be in an ad’s title : 25 characters</li>
+<li>The maximum amount of characters that can be in an ad’s body : 90 characters</li>
+<li>The maximum amount of characters that can be in a URL : 1024 characters</li>
+<li>The maximum allowable length of an individual word in an ad’s text or title : 20 characters</li>
+<li>The minimum amount of characters that can be in an ad’s title : 1 character</li>
+<li>The minimum amount of characters that can be in an ad’s body :1 character</li>
+</ul>
+<p>
+<a name="ad_creative_types">
+</a>
+</p>
+<h2>Ad Creative Types</h2>
+<p>To plan a creative, first determine the ad <code>type</code>. The ad <code>type</code> that you choose determines which parameters will be required and/or optional (see below).</p>
+<p>Additional information about ad types is available at <a href="https://www.facebook.com/adsmarketing/#!/adsmarketing/index.php?sk=adtypes" name="https://www.facebook.com/adsmarketing/#!/adsmarketing/index.php?sk=adtypes">Ad Types</a>. For general information about <strong>Sponsored stories</strong>, see <a href="https://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/" name="https://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/">Sponsored Stories</a>. For general information about some of the creative elements, see <a href="https://www.facebook.com/adsmarketing/#!/adsmarketing/index.php?sk=gettingstarted_create" name="https://www.facebook.com/adsmarketing/#!/adsmarketing/index.php?sk=gettingstarted_create">Getting Started</a>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Ad Type</th>
+<th align="left">Description</th>
+<th align="left">Required Parameters</th>
+<th align="left">Optional Parameters</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">Basic ad for an external website. Type 1 is default ad type that is used if no ad type is specified</td>
+<td align="left">
+<code>title</code>
+<br />
+<code>body</code>
+<br />
+<code>link_url</code>
+<br />
+<code>image_file</code> (or <code>image_hash</code>).</td>
+<td align="left">
+<code>name</code>
+<br />
+<code>related_fan_page</code>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Social ad for a Facebook Page/Place (including page tab applications). Encourages users to like a place.</td>
+<td align="left">
+<code>object_id</code>
+<br />
+<code>body</code>
+</td>
+<td align="left">
+<code>name</code>
+<br />
+<code>link_url</code>
+<br />
+<code>image_file</code> (or <code>image_hash</code>)</td>
+<td>
+<code>link_url</code> is used to identify a specific landing tab on the page (e.g. a page tab application) by the page tab&apos;s URL. See <a href="/docs/reference/ads-api/connectionobjects/" name="https://developers.facebook.com/docs/reference/ads-api/connectionobjects/">connection objects</a> for retrieving Page tabs&apos; URLs. <a href="/docs/authentication/signed_request/" name="https://developers.facebook.com/docs/authentication/signed_request/">app_data</a> parameters may be added to the url to pass data to a tab app.</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Social ad for an event RSVP. Encourages users to respond to an event.</td>
+<td align="left">
+<code>object_id</code>
+<br />
+<code>body</code>
+</td>
+<td align="left">
+<code>name</code>
+<br />
+<code>image_file</code> (or <code>image_link</code>)</td>
+<td>
+<a href="/docs/reference/ads-api/connectionobjects/" name="https://developers.facebook.com/docs/reference/ads-api/connectionobjects/">Type 3 objects only</a>
+</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Social ad for a Facebook application (lands on the application&apos;s profile page). Encourages users to install a Facebook application.</td>
+<td align="left">
+<code>object_id</code>
+<br />
+<code>body</code>
+<br />
+<code>image_file</code> (or <code>image_hash</code>)</td>
+<td align="left">
+<code>name</code>
+<br />
+<code>link_url</code>
+</td>
+<td>
+<a href="/docs/reference/ads-api/connectionobjects/" name="https://developers.facebook.com/docs/reference/ads-api/connectionobjects/">Type 2 objects only</a>, <br /> Note only app <code>link_url</code>s are valid for type 4 ads. These urls may be used to pass parameters to canvas apps</td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">
+<a href="https://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/" name="https://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/">Sponsored stories</a> for promoting actions taken by a user as defined by an Action Spec. Please see <a href="#action_specs_Sponsored_stories" name="https://developers.facebook.com/docs/#action_specs_Sponsored_stories">Action Specs for Sponsored Stories</a> below</td>
+<td align="left">
+<code>action_spec</code>
+</td>
+<td align="left">
+<code>url_tags</code>
+<br />
+<code>name</code>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td align="left">27</td>
+<td align="left">
+<a href="https://www.facebook.com/ads/stories/PremiumAndMarketplace.pdf" name="https://www.facebook.com/ads/stories/PremiumAndMarketplace.pdf">Page Ads</a> for a Page post. Enables page owners to boost stories to their page&apos;s fans. See note below.</td>
+<td align="left">
+<code>object_id</code>
+<br />
+<code>auto_update</code>
+<br /> OR <br />
+<code>story_id</code>
+</td>
+<td align="left">
+<code>url_tags</code>
+<br />
+<code>name</code>
+</td>
+<td>
+<a href="/docs/reference/ads-api/connectionobjects/" name="https://developers.facebook.com/docs/reference/ads-api/connectionobjects/">Type 1 or 6 objects only</a>
+<br />When using type 27 Ad Creatives to promote a page post which has been targeted by locale the AdGroup targeting must include the same (or a subset of) locale targeting as the page post. E.g. if the Page Post is targeted at locales 6 (US English) and 24 (UK English), then the Ad Group must be targeted at one or more of the same locales.</td>
+</tr>
+</tbody>
+</table>
+<p>
+<a name="action_specs_Sponsored_stories">
+</a>
+</p>
+<h3>Action Specs for Sponsored Stories</h3>
+<p>You can create Sponsored Stories using <a href="https://developers.facebook.com/docs/reference/ads-api/start-action-specs/" name="https://developers.facebook.com/docs/reference/ads-api/start-action-specs/">Action Spec framework</a> with type 25 Ad Creatives.</p>
+<p>All legacy Ad Creative Types for Sponsored Stories can be defined using Action Spec. The following table lists such legacy types and their associated Action Spec definitions. However, note that Action Spec framework enables you to create many other Sponsored Stories beyond the legacy types below. To see other examples, go <a href="https://developers.facebook.com/docs/reference/ads-api/start-action-specs/" name="https://developers.facebook.com/docs/reference/ads-api/start-action-specs/">here</a>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Legacy Creative type</th>
+<th align="left">Description</th>
+<th align="left">Equivalent Action Spec</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">8</td>
+<td align="left">Promotes stories published through an app.</td>
+<td align="left">{&apos;action.type&apos;:&apos;post&apos;, &apos;application&apos;:APP_ID}</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">Promotes stories about a user liking a page/place.</td>
+<td align="left">{&apos;action.type&apos;:&apos;like&apos;, &apos;page&apos;: PAGE_ID}</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">Promoting stories about a user checking into a place.</td>
+<td align="left">{&apos;action.type&apos;:&apos;checkin&apos;,&apos;page&apos;:PAGE_ID}</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">Promoting stories about a user checking into any child place of this page.</td>
+<td align="left">{&apos;action.type&apos;:&apos;checkin&apos;, &apos;page.parent&apos;:PAGE_ID}</td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left">Promotes stories about a user using an app <a href="#action_specs_Sponsored_stories_app_used" name="https://developers.facebook.com/docs/#action_specs_Sponsored_stories_app_used">note</a>.</td>
+<td align="left">{&apos;action.type&apos;:&apos;app_use&apos;, &apos;application&apos;:APP_ID}</td>
+</tr>
+<tr>
+<td align="left">17</td>
+<td align="left">Promotes stories about a user liking any post from a page that was published by page&apos;s admin.</td>
+<td align="left">{&apos;action.type&apos;:&apos;like&apos;, &apos;post.author&apos;:PAGE_ID,&apos;post.wall&apos;:PAGE_ID}</td>
+</tr>
+<tr>
+<td align="left">19</td>
+<td align="left">Promotes stories about a user liking a domain.</td>
+<td align="left">{&apos;action.type&apos;:&apos;like&apos;, &apos;object.domain&apos;:DOMAIN_ID}</td>
+</tr>
+<tr>
+<td align="left">19</td>
+<td align="left">Promotes stories about a user sharing something from a domain.</td>
+<td align="left">{&apos;action.type&apos;:&apos;post&apos;, &apos;object.domain&apos;:DOMAIN_ID}</td>
+</tr>
+<tr>
+<td align="left">25 + query_template=6</td>
+<td align="left">Promotes stories about a user liking a specific page post.</td>
+<td align="left">{&apos;action.type&apos;:&apos;like&apos;, &apos;post&apos;:PAGE_POST_ID}</td>
+</tr>
+<tr>
+<td align="left">25 + query_template=7</td>
+<td align="left">Promotes stories about a user commenting on a specific page post.</td>
+<td align="left">{&apos;action.type&apos;:&apos;comment&apos;,&apos;post&apos;:PAGE_POST_ID}</td>
+</tr>
+<tr>
+<td align="left">25 + query_template=7</td>
+<td align="left">Promotes stories about a user commenting on any post from a page that was published by page&apos;s admin.</td>
+<td align="left">{&apos;action.type&apos;:&apos;comment&apos;, &apos;post.author&apos;:PAGE_ID,&apos;post.wall&apos;:PAGE_ID}</td>
+</tr>
+<tr>
+<td align="left">25 + query_template=8</td>
+<td align="left">Promotes stories about a user RSVPing into an event.</td>
+<td align="left">{&apos;action.type&apos;:&apos;rsvp&apos;, &apos;event&apos;: EVENT_ID}</td>
+</tr>
+</tbody>
+</table>
+<p>Please note that query_template is being retired from the API and is not used in the Action Spec framework.</p>
+<p>
+<a name="action_specs_Sponsored_stories_app_used">
+</a> <strong>Note</strong>: Previously, a person&apos;s app used Sponsored story is eligible to be shown to his/her friends if he/she used the app longer than 10 minutes in the last 28 days or used the app twice within the last 28 days. We made a slight change to show these Sponsored stories if a user used the app for at least 4 minutes in the last 14 days or used the app twice ever with one of those times occurring in the last 14 days.</p>
+<p>
+<a name="timeline_app_ss">
+</a>
+</p>
+<h3>Open Graph sponsored stories for timeline apps</h3>
+<p>In addition to on Facebook Activity sponsored stories, Custom Open Graph activity, which is generated by a timeline apps, can also be used to generate Sponsored Stories. Open Graph sponsored stories are defined in the same way as on Facebook Activity Sponsored Stories, i.e. as type 25 creative type with an <a href="/docs/reference/ads-api/start-action-specs/" name="https://developers.facebook.com/docs/reference/ads-api/start-action-specs/">action spec</a> to define the activity to boost into a sponsored story.</p>
+<p>
+<a name="tracking_parameters">
+</a>
+</p>
+<h2>Tracking Parameters</h2>
+<p>For ads that lead to content off Facebook, it may be useful to distinguish whether clicks coming to your Facebook application of website are from an ad or a news feed story. Several ad types support adding query parameter to ads destination URL for purpose of tracking.</p>
+<ul>
+<li>For <strong>type 1</strong> ads, you can simply append a query parameter to a website URL when specifying <code>url_link</code>.</li>
+<li>For <strong>type 2</strong> ads that land on an <code>iframe</code> page tab application, you can append a special query parameter <code>app_data</code> to the page tab URL when specifying <code>url_link</code> (see <a href="#obtaining_objects" name="https://developers.facebook.com/docs/#obtaining_objects">Obtaining Objects</a> for obtaining page tab URLs). You can retrive <code>app_id</code> from <code>signed_request</code> parameter that Facebook platform appends to the application&apos;s tab URL when the tab is loaded (see <a href="/docs/authentication/signed_request/" name="https://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a>).</li>
+<li>For <strong>type 4</strong> ads, you can simply append a query parameter to n app URL when specifying <code>url_link</code>.</li>
+<li>For <strong>type 25 ads</strong> you can use <code>url_tags</code> to specify a list of query parameters for the following action spec formats: {&apos;action.type&apos;:&apos;post&apos;, &apos;application&apos;:APP_ID}, {&apos;action.type&apos;:&apos;app_use&apos;, &apos;application&apos;:APP_ID} and {&apos;action.type&apos;:&apos;post&apos;, &apos;post.domain&apos;:DOMAIN_ID}. These query parameters will be appended to the ad&apos;s URL, which points to an external website or a Facebook canvas application. (see <a href="https://www.facebook.com/help/?faq=186017481448547" name="https://www.facebook.com/help/?faq=186017481448547">optional tracking tags</a>)</li>
+<li>For <strong>type 27 ads</strong>, you can use <code>url_tags</code> to specify a list of query parameters. These query parameters will be appended to the ad&apos;s URL, which points to an external website or a Facebook canvas application. (see <a href="https://www.facebook.com/help/?faq=186017481448547" name="https://www.facebook.com/help/?faq=186017481448547">optional tracking tags</a>).</li>
+</ul>
+<p>
+<a name="obtaining_objects">
+</a>
+</p>
+<h2>Obtaining Objects</h2>
+<p>Many ad creatives such as Sponsored stories and social ads for Facebook page require <code>object_id</code> of relevant Facebook object or URL of a page tab. You can obtain a list of object IDs using the Graph API with <code>/{account-id}/connectionobjects</code>, which returns the objects for the session user. Please see <a href="/docs/reference/ads-api/adaccount#obtaining_objects" name="https://developers.facebook.com/docs/reference/ads-api/adaccount#obtaining_objects">Obtaining ad account objects</a>
+</p>
+<p>
+<a name="obtaining_posts">
+</a>
+</p>
+<h3>Obtaining Page Posts</h3>
+<p>You can use Graph API for obtaining posts of a page (see <a href="/docs/reference/api/page/" name="https://developers.facebook.com/docs/reference/api/page/">Page</a>):</p>
+<p>To retrieve a list of page&apos;s own posts (for type 25 or type 27 ad) call</p>
+<pre>
+<code>curl https://graph.facebook.com/&lt;PAGE_ID&gt;/posts?access_token=&lt;ACCESS_TOKEN&gt;
+</code>
+</pre>
+<p>You can use any valid page <code>access_token</code> or user <code>access_token</code>.</p>
+<p>Note: The ID of the post is returned in the following format: &lt;Page_ID&gt;_&lt;Story_ID&gt;. Only the &quot;Story_ID&quot; element should be supplied as the story_id.</p>
+<p>
+<a name="obtaining_events">
+</a>
+</p>
+<h3>Obtaining Page Events</h3>
+<p>You can use Graph API for obtaining events of a page (see <a href="/docs/reference/api/page/" name="https://developers.facebook.com/docs/reference/api/page/">Page</a>):</p>
+<p>To retrieve a list of page&apos;s own events (for type 25 ad) call</p>
+<pre>
+<code>curl https://graph.facebook.com/&lt;PAGE_ID&gt;/events?access_token=&lt;ACCESS_TOKEN&gt;
+</code>
+</pre>
+<p>You can use any valid <code>access_token</code> or user <code>access_token</code>.</p>
+<p>
+<a name="include_social">
+</a>
+</p>
+<h2>Including social context in ads for external sites</h2>
+<p>Social Context may be applied to external URL (type 1) ads by means of the related_fan_page parameter. The social context can either be determined by Facebook or specified by you. Facebook can match the ad&apos;s external URL (specified in the link_url parameter) to a related Facebook page (or Facebook app) based on the <a href="#url_validation" name="https://developers.facebook.com/docs/#url_validation">validation criteria</a>. Alternatively you can specify the Object Id of the Facebook Page (or Facebook App) you want the social context to be applied from. Facebook will still validate this Object ID matches the URL in the Ad.</p>
+<p>
+<strong>Note:</strong> Pages must have a minimum of 10 fans before social context will be applied.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Value of <code>related_fan_page</code>
+</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">Indicates that no social context should be provided.</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">Indicates that Facebook should automatically match and include social context from a Facebook page (or Facebook app). Specifying 1 is equivalent to checking the &quot;Show stories about people interacting with this page&quot; checkbox in the Ad Manager web interface. This is the default value.</td>
+</tr>
+<tr>
+<td align="left">{object ID of a Facebook page or app}</td>
+<td align="left">The object ID of a Facebook page (or Facebook app). If Facebook matches the object ID to the specified <code>link_url</code> value, Facebook will apply social context for the ad, based on the object ID.</td>
+</tr>
+</tbody>
+</table>
+<p>Note: When a Facebook App Object ID is provided the Social Context of the app is used rather than the App Profile Page.</p>
+<p>The following example creates an ad group with a related link_url value corresponding to the object ID. Facebook will provide social context for the ad, based on the object ID, if Facebook matches the object ID to the specified link_url value:</p>
+<pre>
+<code>curl -F &quot;campaign_id=6003417011234&quot;
+ -F &quot;bid_type=1&quot;
+ -F &quot;max_bid=30&quot;
+ -F &quot;targeting={&apos;countries&apos;:[&apos;US&apos;]}&quot;
+ -F  &quot;creative=
+   {&apos;title&apos;:test_ad&apos;,&apos;body&apos;:&apos;test_ad,
+   &apos;link_url&apos;:&apos;http:\/\/www.cnn.com&apos;,
+   &apos;image_file&apos;:&apos;test.jpg&apos;,
+   &apos;related_fan_page&apos;:5550296508}&quot;
+ -F &quot;name=test&quot; -F test.jpg=@.\test.jpg
+ &quot;https://graph.facebook.com
+ /act_368811234/adgroups?access_token=_____&quot;
+</code>
+</pre>
+<p>The result will be of the standard ad creation response form.</p>
+<pre>
+<code>{&quot;id&quot;:&quot;6003557111234&quot;}
+</code>
+</pre>
+<p>
+<a name="url_validation">
+</a>
+</p>
+<h3>URL Validation</h3>
+<p>In order to receive the social context of a Page the <code>url</code> of the creative must be pointing to website listed in the related page&apos;s &quot;about&quot; section. Note, only one website may be listed in the &quot;about&quot; section for the validation to work. The urls are validated according to the following rules.</p>
+<p>If the Page lists the URL &quot;www.mybrand.com&quot;;</p>
+<ul>
+<li>Ads pointing to www.mybrand.com will be eligible to receive social context.</li>
+<li>Ads pointing to www.mybrand.com/?=query will also be eligible - our system will omit any query after a ? in the URL.</li>
+<li>Ads pointing to www.mybrand.com/directory will not. Our system will not accept subdomains or directories within the domain listed.</li>
+</ul>
+<p>If the Page lists the URL &quot;www.mybrand.com/directory&quot;;</p>
+<ul>
+<li>Ads pointing to www.mybrand.com/directory will be eligible to receive social context.</li>
+<li>Ads pointing to www.mybrand.com/directory/?=query will also be eligible - our system will omit anything after a ? in the URL.</li>
+<li>Ads pointing to www.mybrand.com/ will not be eligible.</li>
+</ul>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/ads-api/creative-specs/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1338542734" title="2012年6月1日 2:25">約1週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

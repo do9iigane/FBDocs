@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/api/event/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/api/event/">https://developers.facebook.com/docs/reference/api/event/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Concepts</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/batch/" name="http://developers.facebook.com/docs/reference/api/batch/">Batch Requests</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/permissions/" name="http://developers.facebook.com/docs/reference/api/permissions/">Permissions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/realtime/" name="http://developers.facebook.com/docs/reference/api/realtime/">Real-time Updates</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Objects</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/achievement/" name="http://developers.facebook.com/docs/reference/api/achievement/">Achievement(Instance)</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/album/" name="http://developers.facebook.com/docs/reference/api/album/">Album</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/application/" name="http://developers.facebook.com/docs/reference/api/application/">Application</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/checkin/" name="http://developers.facebook.com/docs/reference/api/checkin/">Checkin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Comment/" name="http://developers.facebook.com/docs/reference/api/Comment/">Comment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/domain/" name="http://developers.facebook.com/docs/reference/api/domain/">Domain</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/event/" name="http://developers.facebook.com/docs/reference/api/event/">Event</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/FriendList/" name="http://developers.facebook.com/docs/reference/api/FriendList/">FriendList</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/group/" name="http://developers.facebook.com/docs/reference/api/group/">Group</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/insights/" name="http://developers.facebook.com/docs/reference/api/insights/">Insights</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/link/" name="http://developers.facebook.com/docs/reference/api/link/">Link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/message/" name="http://developers.facebook.com/docs/reference/api/message/">Message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/note/" name="http://developers.facebook.com/docs/reference/api/note/">Note</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/offer/" name="http://developers.facebook.com/docs/reference/api/offer/">Offer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/order/" name="http://developers.facebook.com/docs/reference/api/order/">Order </a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/page/" name="http://developers.facebook.com/docs/reference/api/page/">Page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/photo/" name="http://developers.facebook.com/docs/reference/api/photo/">Photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/post/" name="http://developers.facebook.com/docs/reference/api/post/">Post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question/" name="http://developers.facebook.com/docs/reference/api/question/">Question</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/question_option/" name="http://developers.facebook.com/docs/reference/api/question_option/">QuestionOption</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/Review/" name="http://developers.facebook.com/docs/reference/api/Review/">Review</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/status/" name="http://developers.facebook.com/docs/reference/api/status/">Status message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/thread/" name="http://developers.facebook.com/docs/reference/api/thread/">Thread</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/user/" name="http://developers.facebook.com/docs/reference/api/user/">User</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/api/video/" name="http://developers.facebook.com/docs/reference/api/video/">Video</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Event</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> › <a href="/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/">Event</a>
+</div>
+</div>
+</div>
+<p>Specifies information about an event, including the location, event name, and which invitees plan to attend. The <code>User</code>, <code>Page</code>, and <code>Application</code> objects have an <code>events</code> connection.</p>
+<p>To read an <code>Event</code>, you need one of the following:</p>
+<ul>
+<li>no access token if the event is public</li>
+<li>a user access token for a user who can see the event if it has restricted visibility</li>
+<li>an app access token for the app that created the event</li>
+<li>a page access token for the page that created the event</li>
+</ul>
+<div class="blueBox">
+<p>Starting <a href="https://developers.facebook.com/roadmap/#july-2012" name="https://developers.facebook.com/roadmap/#july-2012">July 5th</a>, an access token will be required to access even public events. To read an <code>Event</code>, you will need one of the following:</p>
+<ul>
+<li>a user access token for a user who can see the event</li>
+<li>an app access token (for non-public events, must be the app that created the event)</li>
+<li>a page access token (for non-public events, must be the page that created the event)</li>
+</ul>
+</div>
+<p>To read the <code>/events</code> connection of a <a href="/docs/reference/api/user/" name="https://developers.facebook.com/docs/reference/api/user/">User</a>, you need:</p>
+<ul>
+<li>the <code>user_events</code> <a href="/docs/authentication/permissions/" name="https://developers.facebook.com/docs/authentication/permissions/">permission</a> for the current user</li>
+<li>the <code>friends_events</code> <a href="/docs/authentication/permissions/" name="https://developers.facebook.com/docs/authentication/permissions/">permission</a> for a friend of the current user</li>
+</ul>
+<h2>Example</h2>
+<p>The <a href="https://www.facebook.com/home.php?sk=event_331218348435&amp;ap=1" name="https://www.facebook.com/home.php?sk=event_331218348435&amp;ap=1">Facebook Developer Garage Austin</a> <code>Event</code>:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=331218348435" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=331218348435">https://graph.facebook.com/331218348435</a>
+</p>
+<hr />
+<h2>Fields</h2>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td>
+<p>The event ID</p>
+</td>
+<td>
+<p>generic <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>owner</code>
+</td>
+<td>
+<p>The profile that created the event</p>
+</td>
+<td>
+<p>generic <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>object containing <code>id</code> and <code>name</code> fields</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>name</code>
+</td>
+<td>
+<p>The event title</p>
+</td>
+<td>
+<p>generic <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>description</code>
+</td>
+<td>
+<p>The long-form description of the event</p>
+</td>
+<td>
+<p>generic <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>start_time</code>
+</td>
+<td>
+<p>The start time of the event, as you want it to be displayed on facebook</p>
+</td>
+<td>
+<p>generic <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing an ISO-8601 formatted date/time or a UNIX timestamp; if it contains a time zone (not recommended), it will be converted to Pacific time before being stored and displayed</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>end_time</code>
+</td>
+<td>
+<p>The end time of the event, as you want it to be displayed on facebook</p>
+</td>
+<td>
+<p>generic <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing an ISO-8601 formatted date/time or a UNIX timestamp; if it contains a time zone (not recommended), it will be converted to Pacific time before being stored and displayed</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>location</code>
+</td>
+<td>
+<p>The location for this event</p>
+</td>
+<td>
+<p>generic <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>venue</code>
+</td>
+<td>
+<p>The location of this event</p>
+</td>
+<td>
+<p>generic <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>object containing one or more of the following fields: <code>id</code>, <code>street</code>, <code>city</code>, <code>state</code>, <code>zip</code>, <code>country</code>, <code>latitude</code>, and <code>longitude</code> fields</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>privacy</code>
+</td>
+<td>
+<p>The visibility of this event</p>
+</td>
+<td>
+<p>generic <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing &apos;OPEN&apos;, &apos;CLOSED&apos;, or &apos;SECRET&apos;</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>updated_time</code>
+</td>
+<td>
+<p>The last time the event was updated</p>
+</td>
+<td>
+<p>generic <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>
+<code>string</code> containing ISO-8601 date-time</p>
+</td>
+</tr>
+</table>
+<hr />
+<h2>Connections</h2>
+<table>
+<tr>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Description</b>
+</td>
+<td>
+<b>Permissions</b>
+</td>
+<td>
+<b>Returns</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/tools/explorer/?method=GET&amp;path=331218348435%2Ffeed" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=331218348435%2Ffeed">feed</a>
+</td>
+<td>
+<p>This event&apos;s wall.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>An array of <code>Post</code> objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#noreply" name="https://developers.facebook.com/docs/#noreply">noreply</a>
+</td>
+<td>
+<p>All of the users who have been not yet responded to their invitation to this event.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> containing objects with <code>id</code>, <code>name</code> and <code>rsvp_status</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#invited" name="https://developers.facebook.com/docs/#invited">invited</a>
+</td>
+<td>
+<p>All of the users who have been invited to this event.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> containing objects with <code>id</code>, <code>name</code> and <code>rsvp_status</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#attending" name="https://developers.facebook.com/docs/#attending">attending</a>
+</td>
+<td>
+<p>All of the users who are attending this event.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> containing objects with <code>id</code>, <code>name</code> and <code>rsvp_status</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#maybe" name="https://developers.facebook.com/docs/#maybe">maybe</a>
+</td>
+<td>
+<p>All of the users who have been responded &quot;Maybe&quot; to their invitation to this event.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> containing objects with <code>id</code>, <code>name</code> and <code>rsvp_status</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#declined" name="https://developers.facebook.com/docs/#declined">declined</a>
+</td>
+<td>
+<p>All of the users who declined their invitation to this event.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> containing JSON objects with <code>id</code>, <code>name</code> and <code>rsvp_status</code> fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://graph.facebook.com/331218348435/picture" name="https://graph.facebook.com/331218348435/picture">picture</a>
+</td>
+<td>
+<p>The event&apos;s profile picture.</p>
+</td>
+<td>
+<p>any valid <code>access_token</code>, <code>user_events</code> or <code>friends_events</code>
+</p>
+</td>
+<td>
+<p>Returns a HTTP 302 with the URL of the event&apos;s picture (use ?type=small | normal | large to request a different photo).</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#videos" name="https://developers.facebook.com/docs/#videos">videos</a>
+</td>
+<td>
+<p>The videos uploaded to an event.</p>
+</td>
+<td>
+<p>valid user <code>access_token</code>
+</p>
+</td>
+<td>
+<p>
+<code>array</code> of <code>Video</code> objects.</p>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="feed">feed</h2>
+<p>This connection corresponds to the <code>Event</code>&apos;s wall. You can create a <code>link</code>, <code>post</code> or <code>status message</code> by issuing an HTTP POST request to the <code>EVENT_ID/feed</code> connection.</p>
+<h3 id="links">links</h3>
+<h3>Create</h3>
+<p>You can post a <a href="https://developers.dev.facebook.com/docs/reference/api/link/" name="https://developers.dev.facebook.com/docs/reference/api/link/">link</a> on the event&apos;s wall by issuing an HTTP POST request to <code>EVENT_ID/feed</code> with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> link </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/link/" name="https://developers.facebook.com/docs/reference/api/link/">Link</a> URL </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/link/" name="https://developers.facebook.com/docs/reference/api/link/">Link</a> message </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>The other fields are taken from the metadata of the page URL given in the &apos;link&apos; param.</p>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new link ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="posts">posts</h2>
+<h3>Create</h3>
+<p>You can create a post on an <code>Event</code>&apos;s wall by issuing an HTTP POST request to <code>EVENT_ID/feed</code> with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> message </td>
+<td>
+<code>string</code>
+</td>
+<td> either <code>message</code> or <code>link</code>
+</td>
+</tr>
+<tr>
+<td>
+<code> link </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> URL </td>
+<td>
+<code>string</code>
+</td>
+<td> either <code>message</code> or <code>link</code>
+</td>
+</tr>
+<tr>
+<td>
+<code> picture </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> thumbnail image (can only be used if <code>link</code> is specified) </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> name </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> name (can only be used if <code>link</code> is specified) </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> caption </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> caption (can only be used if <code>link</code> is specified) </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> description </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> description (can only be used if <code>link</code> is specified) </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> actions </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> actions </td>
+<td>
+<code>array</code> of objects containing <code>name</code> and <code>link</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new post ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="statuses">statuses</h2>
+<h3>create</h3>
+<p>You can post a <a href="https://developers.dev.facebook.com/docs/reference/api/status/" name="https://developers.dev.facebook.com/docs/reference/api/status/">status message</a> on an <code>Event</code>&apos;s wall by issuing an HTTP POST request to <code>EVENT_ID/feed</code> with the <code>publish_stream</code> permissions and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/status/" name="https://developers.facebook.com/docs/reference/api/status/">Status Message</a> content </td>
+<td>
+<code>string</code>
+</td>
+<td> yes </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new status message ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="invited">invited</h2>
+<h3>Create</h3>
+<p>You can invite users to an event by issuing an HTTP POST to <code>/EVENT_ID/invited/USER_ID</code>. You can invite multiple users by issuing an HTTP POST to <code>/EVENT_ID/invited?users=USER_ID1,USER_ID2,USER_ID3</code>. Both of these require the <code>create_event</code> permission and return <code>true</code> if the invite is successful.</p>
+<h3>Read</h3>
+<p>You can read the list of invitees for an event by issuing an HTTP GET to <code>/EVENT_ID/invited</code>:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=331218348435/invited" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=331218348435/invited">https://graph.facebook.com/331218348435/invited</a>
+</p>
+<p>You can check whether a specific user has been invited to an event by issuing an HTTP GET to <code>/EVENT_ID/invited/USER_ID</code>:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=331218348435/invited/2503747" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=331218348435/invited/2503747">https://graph.facebook.com/331218348435/invited/2503747</a>
+</p>
+<p>You&apos;ll need the <code>user_events</code> or <code>friend_events</code> permissions to view the invite list for for non-public events.</p>
+<p>These calls return an object with the <code>name, id,</code> and <code>rsvp_status</code> (<code>&apos;not_replied&apos;, &apos;unsure&apos;, &apos;attending&apos;,</code> or <code>&apos;declined&apos;</code>) fields. When checking for a specific user, if the user is not invited to the event, the API will return an empty <code>data</code> array.</p>
+<h3>Delete</h3>
+<p>You can un-invite a user from an event by issuing an HTTP DELETE to <code>/EVENT_ID/invited/USER_ID</code>. Returns <code>true</code> if the request is successful. The user must be an admin (i.e. creator) of the event for this call to succeed. Requires <code>rsvp_event</code> permission.</p>
+<hr />
+<h2 id="attending">attending</h2>
+<h3>Create</h3>
+<p>You can RSVP the user as &apos;attending&apos; an <code>Event</code> by issuing an HTTP POST to <code>EVENT_ID/attending</code>. This requires the <code>rsvp_event</code> permission and returns <code>true</code> if the RSVP is successful, and <code>false</code> otherwise.</p>
+<h3>Read</h3>
+<p>You can which users are &apos;attending&apos; an event by issuing an HTTP GET to <code>/EVENT_ID/attending</code> This returns a list of all users who responded &apos;yes&apos; to the event:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=331218348435/attending" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=331218348435/attending">https://graph.facebook.com/331218348435/attending</a>
+</p>
+<p>You can check if a specific user responded &apos;yes&apos; to an event by issuing an HTTP GET to <code>/EVENT_ID/attending/USER_ID</code>. These operations require the <code>user_events</code> or <code>friends_events</code> permissions for non-public events and return an array of objects with the <code>name, id,</code> and <code>rsvp_status</code> fields. When checking a single user, an empty <code>data</code> will be returned if the user did not respond &apos;yes&apos; to the event.</p>
+<hr />
+<h2 id="maybe">maybe</h2>
+<h3>Create</h3>
+<p>You can RSVP the user as a &apos;maybe&apos; for an <code>Event</code> by issuing an HTTP POST to <code>EVENT_ID/maybe</code>. This requires the <code>rsvp_event</code> permission and returns <code>true</code> if the RSVP is successful, and <code>false</code> otherwise.</p>
+<h3>Read</h3>
+<p>You can which users have replied &apos;maybe&apos; to an event by issuing an HTTP GET to <code>/EVENT_ID/maybe</code> This returns a list of all users who responded &apos;maybe&apos; to the event:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=331218348435/maybe" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=331218348435/maybe">https://graph.facebook.com/331218348435/maybe</a>
+</p>
+<p>You can check if a specific user responded &apos;maybe&apos; to an event by issuing an HTTP GET to <code>/EVENT_ID/maybe/USER_ID</code>. These operations require the <code>user_events</code> or <code>friends_events</code> permissions for non-public events and return an array of objects with the <code>name, id,</code> and <code>rsvp_status</code> fields. When checking a single user, an empty <code>data</code> will be returned if the user did not respond &apos;maybe&apos; to the event.</p>
+<hr />
+<h2 id="declined">declined</h2>
+<h3>Create</h3>
+<p>You can RSVP the user as &apos;declined&apos; for an <code>Event</code> by issuing an HTTP POST to <code>EVENT_ID/declined</code>. This requires the <code>rsvp_event</code> permission and returns <code>true</code> if the RSVP is successful, and <code>false</code> otherwise.</p>
+<h3>Read</h3>
+<p>You can which users are declined an event (i.e. responded &apos;no&apos;) by issuing an HTTP GET to <code>/EVENT_ID/declined</code> This returns a list of all users who responded &apos;no&apos; to the event:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=331218348435/declined" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=331218348435/declined">https://graph.facebook.com/331218348435/declined</a>
+</p>
+<p>You can check if a specific user responded &apos;no&apos; to an event by issuing an HTTP GET to <code>/EVENT_ID/declined/USER_ID</code>. These operations require the <code>user_events</code> or <code>friends_events</code> permissions for non-public events and return an array of objects with the <code>name, id,</code> and <code>rsvp_status</code> fields. When checking a single user, an empty <code>data</code> will be returned if the user did not respond &apos;no&apos; to the event.</p>
+<hr />
+<h2 id="noreply">noreply</h2>
+<h3>Read</h3>
+<p>You can which users have not replied to an event by issuing an HTTP GET to <code>/EVENT_ID/noreply</code> This returns a list of all users who have not replied to the event:</p>
+<p>
+<a href="/tools/explorer/?method=GET&amp;path=331218348435/noreply" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=331218348435/noreply">https://graph.facebook.com/331218348435/noreply</a>
+</p>
+<p>You can check if a specific user has not replied to an event by issuing an HTTP GET to <code>/EVENT_ID/noreply/USER_ID</code>. These operations require the <code>user_events</code> or <code>friends_events</code> permissions for non-public events and return an array of objects with the <code>name, id,</code> and <code>rsvp_status</code> fields. When checking a single user, an empty <code>data</code> will be returned if the user did reply to the event.</p>
+<hr />
+<h2 id="photos">photos</h2>
+<h3>Read</h3>
+<p>You can read the <a href="https://developers.facebook.com/docs/reference/api/photo/" name="https://developers.facebook.com/docs/reference/api/photo/">photos</a> published to an event by issuing an <code>HTTP GET</code> request to <code>/EVENT_ID/photos</code> with a user <code>access_token</code>.</p>
+<p>The API returns an <code>array</code> of <a href="https://developers.dev.facebook.com/docs/reference/api/photo/" name="https://developers.dev.facebook.com/docs/reference/api/photo/">photo</a> objects.</p>
+<h3>Create</h3>
+<p>You can post <a href="https://developers.dev.facebook.com/docs/reference/api/photo/" name="https://developers.dev.facebook.com/docs/reference/api/photo/">photos</a> to an <code>Event</code>&apos;s Wall by issuing an HTTP POST request to <code>EVENT_ID/photos</code> with the <code>publish_stream</code> permission and the following parameters.</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> source </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/photo/" name="https://developers.facebook.com/docs/reference/api/photo/">Photo</a> content </td>
+<td>
+<code>multipart/form-data</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> message </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/photo/" name="https://developers.facebook.com/docs/reference/api/photo/">Photo</a> description </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new photo ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="videos">videos</h2>
+<h3>Read</h3>
+<p>You can read the <a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">videos</a> published to an event by issuing an <code>HTTP GET</code> request to <code>/EVENT_ID/videos</code> with a user <code>access_token</code>.</p>
+<p>The API returns an <code>array</code> of <a href="https://developers.dev.facebook.com/docs/reference/api/video/" name="https://developers.dev.facebook.com/docs/reference/api/video/">video</a> objects.</p>
+<h3>Create</h3>
+<p>You can publish a <a href="https://developers.dev.facebook.com/docs/reference/api/video/" name="https://developers.dev.facebook.com/docs/reference/api/video/">video</a> to an event by issuing an HTTP POST request to <code>https://graph-video.facebook.com/EVENT_ID/videos</code> with a user <code>access_token</code> and the following parameters:</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> source </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">Video</a> content </td>
+<td>
+<code>multipart/form-data</code>
+</td>
+<td> yes </td>
+</tr>
+<tr>
+<td>
+<code> title </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">Video</a> title </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+<tr>
+<td>
+<code> description </code>
+</td>
+<td>
+<a href="https://developers.facebook.com/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">Video</a> description </td>
+<td>
+<code>string</code>
+</td>
+<td> no </td>
+</tr>
+</table>
+<p>If the create is successful, you get the following return.</p>
+<table>
+<tr>
+<th> Name </th>
+<th> Description </th>
+<th> Type </th>
+</tr>
+<tr>
+<td>
+<code>id</code>
+</td>
+<td> The new video ID </td>
+<td>
+<code>string</code>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="picture">picture</h2>
+<h3>Read</h3>
+<p>Issuing an <code>HTTP GET</code> request to <code>/EVENT_ID/picture</code> returns an <code>HTTP 302</code> redirect to URL of the event&apos;s profile picture.</p>
+<h3>Create/Update</h3>
+<p>You can add a profile picture to an event by issuing an <code>HTTP POST</code> request to <code>/EVENT_ID/picture</code> with the <code>create_event</code> permission for an admin of the event and the following parameter:</p>
+<table>
+<tr>
+<th> Parameter </th>
+<th> Description </th>
+<th> Type</th>
+<th> Required </th>
+</tr>
+<tr>
+<td>
+<code> source </code>
+</td>
+<td> Picture content </td>
+<td>
+<code>multipart/form-data</code>
+</td>
+<td> yes </td>
+</tr>
+</table>
+<p>Returns <code>true</code> if the request is successful.</p>
+<h3>Delete</h3>
+<p>You can delete an event&apos;s profile picture by issuing an <code>HTTP DELETE</code> request to <code>/EVENT_ID/picture</code> with the <code>create_event</code> permission for an admin of the event.</p>
+<p>Returns <code>true</code> if the request is successful.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/api/event/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1338589231" title="2012年6月1日 15:20">約1週間前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

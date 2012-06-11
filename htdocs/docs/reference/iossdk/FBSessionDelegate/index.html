@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/">https://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>
+</li>
+<li>
+<a href="/docs/reference/php" name="https://developers.facebook.com/docs/reference/php">PHP SDK</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/iossdk" name="https://developers.facebook.com/docs/reference/iossdk">iOS SDK</a>
+</li>
+<li>
+<a href="/docs/reference/androidsdk" name="https://developers.facebook.com/docs/reference/androidsdk">Android SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/authentication/" name="http://developers.facebook.com/docs/reference/iossdk/authentication/">Authentication</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/dialog/" name="http://developers.facebook.com/docs/reference/iossdk/dialog/">Dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/request/" name="http://developers.facebook.com/docs/reference/iossdk/request/">Request</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Protocols</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/FBDialogDelegate/" name="http://developers.facebook.com/docs/reference/iossdk/FBDialogDelegate/">FBDialogDelegate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/" name="http://developers.facebook.com/docs/reference/iossdk/FBRequestDelegate/">FBRequestDelegate</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/" name="http://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/">FBSessionDelegate</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>FBSessionDelegate</h1>
+<div class="breadcrumbs">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/iossdk/" name="https://developers.facebook.com/docs/reference/iossdk/">iOS SDK</a> › <a href="/docs/reference/iossdk/FBSessionDelegate/" name="https://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/">FBSessionDelegate</a>
+</div>
+</div>
+</div>
+<p>The FBSessionDelegate protocol defines the methods that a delegate of a <code>Facebook</code> object may implement. The methods are defined in <code>Facebook.h</code>.</p>
+<p>The protocol declares methods that are implemented by your application to handle session callbacks during user authentication and permissions authorization. All the methods defined in this protocol are required.</p>
+<p>You should implement the methods to handle one or more of the following scenarios:</p>
+<ul>
+<li>
+<p>User successfully logs in.</p>
+</li>
+<li>
+<p>User successfully logs out.</p>
+</li>
+<li>
+<p>User dismisses the authorization dialog during the login process.</p>
+</li>
+<li>
+<p>An error occurs during the authorization process.</p>
+</li>
+<li>
+<p>The <code>access_token</code> has been refreshed.</p>
+</li>
+<li>
+<p>The current user session has expired during an API call.</p>
+</li>
+</ul>
+<h2>Instance Methods</h2>
+<hr />
+<h3>fbDidLogin</h3>
+<p>Sent to the delegate when the user successfully logs in.</p>
+<pre>
+<code>- (void)fbDidLogin;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>None</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You will want to handle any post-login set up in your implementation. For example you could store the user&apos;s <code>access_token</code> in persistent storage.</p>
+<hr />
+<h3>fbDidNotLogin:</h3>
+<p>Sent to the delegate when there is an error during authorization or if the user dismissed the dialog without logging in.</p>
+<pre>
+<code>- (void)fbDidNotLogin:(BOOL)cancelled;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>cancelled</code> - If the authorization failed due to user action.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You will want to handle the authorization dismissals and failures in your implementation.</p>
+<hr />
+<h3>fbDidLogout</h3>
+<p>Sent to the delegate when the user logged out.</p>
+<pre>
+<code>- (void)fbDidLogout;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>None</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You will want to handle any post-logout set up in your implementation. For example, you could remove the user&apos;s <code>access_token</code> from persistent storage if you previously stored this upon successful login.</p>
+<hr />
+<h3>fbDidExtendToken:expiresAt:</h3>
+<p>Sent to the delegate when the access token is extended.</p>
+<pre>
+<code>- (void)fbDidExtendToken:(NSString*)accessToken
+           expiresAt:(NSDate*)expiresAt;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>
+<code>accessToken</code> - The extended <code>access_token</code>.</p>
+<p>
+<code>expiresAt</code> - The updated expiration date.</p>
+<p>
+<b>Notes</b>
+</p>
+<p>Implement this method to refresh any previously stored <code>access_token</code> in your app. For example, if you stored the session information in persistent storage you will need to update that information.</p>
+<hr />
+<h3>fbSessionInvalidated</h3>
+<p>Sent to the delegate when Facebook Platform is invoked and the current user session has expired.</p>
+<pre>
+<code>- (void)fbSessionInvalidated;
+</code>
+</pre>
+<p>
+<b>Parameters</b>
+</p>
+<p>None</p>
+<p>
+<b>Notes</b>
+</p>
+<p>You could implement this method and perhaps alert the user then invite them to re-authenticate your app.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/iossdk/FBSessionDelegate/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1331918496" title="2012年3月16日 10:21">約3ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

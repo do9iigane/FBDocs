@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/fbjs/createApplication/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/fbjs/createApplication/">https://developers.facebook.com/docs/fbjs/createApplication/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Facebook.createApplication</h1>
+</div>
+</div>
+<h2>Description</h2>
+<p>This <a href="/docs/fbjs" name="https://developers.facebook.com/docs/fbjs">FBJS</a> method allows the calling application to create a child application.</p>
+<h2>Parameters</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Required</th>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Yes</td>
+<td align="left">name</td>
+<td align="left">string</td>
+<td align="left">The name of the child application to create.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">callback</td>
+<td align="left">CallbackWithObject</td>
+<td align="left">A callback function to be called when the user responds to the application creation dialog. Callback is called with an array as the first parameter: new_app_id, new_api_key.</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre>
+<code>&lt;a href=&quot;#&quot; onclick=&quot;myOnClick();&quot;&gt;Create app&lt;/a&gt;
+&lt;div id=&quot;new_app_info&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt; 
+function myOnClick() {
+    Facebook.createApplication(&apos;mynewapp&apos;, onAppCreate);
+}   
+
+function onAppCreate(response) {    
+    var return_div = document.getElementById(&apos;new_app_info&apos;); 
+    return_div.setTextValue(&quot;New application info: new_id=&quot;+response[&apos;new_app_id&apos;]+&quot; new_key=&quot;+response[&apos;new_api_key&apos;]);
+}
+&lt;/script&gt;
+</code>
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/fbjs/createApplication/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1282083274" title="2010年8月17日 15:14">1年以上前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

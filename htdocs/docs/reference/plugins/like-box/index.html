@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/plugins/like-box/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/plugins/like-box/">https://developers.facebook.com/docs/reference/plugins/like-box/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/socialdesign" name="https://developers.facebook.com/socialdesign">Social Design</a>
+</li>
+<li>
+<a class="selected" href="/docs/plugins" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
+</li>
+<li>
+<a href="/docs/opengraph" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
+</li>
+<li>
+<a href="/docs/channels" name="https://developers.facebook.com/docs/channels">Social Channels</a>
+</li>
+<li>
+<a href="/docs/authentication" name="https://developers.facebook.com/docs/authentication">Authentication</a>
+</li>
+<li>
+<a href="/docs/reference/api" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/activity/" name="http://developers.facebook.com/docs/reference/plugins/activity/">Activity Feed</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/comments/" name="http://developers.facebook.com/docs/reference/plugins/comments/">Comments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/facepile/" name="http://developers.facebook.com/docs/reference/plugins/facepile/">Facepile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like-box/" name="http://developers.facebook.com/docs/reference/plugins/like-box/">Like Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/like/" name="http://developers.facebook.com/docs/reference/plugins/like/">Like Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/live-stream/" name="http://developers.facebook.com/docs/reference/plugins/live-stream/">Live Stream</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/login/" name="http://developers.facebook.com/docs/reference/plugins/login/">Login Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendations/" name="http://developers.facebook.com/docs/reference/plugins/recommendations/">Recommendations Box</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/registration/" name="http://developers.facebook.com/docs/reference/plugins/registration/">Registration</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/send/" name="http://developers.facebook.com/docs/reference/plugins/send/">Send Button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/subscribe/" name="http://developers.facebook.com/docs/reference/plugins/subscribe/">Subscribe Button</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Beta Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/" name="http://developers.facebook.com/docs/reference/plugins/recommendationsbar/">Recommendations Bar</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Like Box</h1>
+<div class="breadcrumbs">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts/">Core Concepts</a> › <a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins/">Social Plugins</a> › <a href="/docs/reference/plugins/like-box/" name="https://developers.facebook.com/docs/reference/plugins/like-box/">Like Box</a>
+</div>
+</div>
+</div>
+<p>The Like Box is a social plugin that enables <a href="https://www.facebook.com/advertising/?pages" name="https://www.facebook.com/advertising/?pages">Facebook Page</a> owners to attract and gain Likes from their own website. The Like Box enables users to:</p>
+<ul>
+<li>See how many users already like this Page, and which of their friends like it too</li>
+<li>Read recent posts from the Page</li>
+<li>Like the Page with one click, without needing to visit the Page</li>
+</ul>
+<p>The minimum supported plugin width is 292px.</p>
+<div class="clearfix">
+<div class="plugin_form" id="ud2u0t_2">
+<dl>
+<dt>
+<label for="param_href">Facebook Page URL</label>
+<a data-hover="tooltip" href="#" title="The URL of the Facebook Page for this Like box." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext wideinputtext" id="param_href" name="href" type="text" value="http://www.facebook.com/platform" />
+</dd>
+<dt>
+<label for="param_width">Width</label>
+<a data-hover="tooltip" href="#" title="The width of the plugin in pixels." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_width" name="width" size="7" type="text" value="292" />
+</dd>
+<dt>
+<label for="param_height">Height</label>
+<a data-hover="tooltip" href="#" title="The height of the plugin in pixels (optional)." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_height" name="height" size="7" type="text" value="" />
+</dd>
+<dt>
+<label for="param_colorscheme">Color Scheme</label>
+<a data-hover="tooltip" href="#" title="The color scheme of the plugin. Note that the background is always transparent to match your background color. This setting changes the foreground colors to work well on light or dark backgrounds." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<div class="uiSelector inlineBlock uiSelectorNormal uiSelectorDynamicLabel" data-name="colorscheme" id="param_colorscheme">
+<div class="wrap">
+<a aria-expanded="false" aria-haspopup="1" class="uiSelectorButton uiButton" data-length="30" href="#" rel="toggle" role="button" name="https://developers.facebook.com/docs/#">
+<span class="uiButtonText">light</span>
+</a>
+<div class="uiSelectorMenuWrapper uiToggleFlyout">
+<div class="uiMenu uiSelectorMenu" role="menu">
+<ul class="uiMenuInner">
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="light">
+<a aria-checked="true" class="itemAnchor" href="#" role="menuitemradio" tabindex="0" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">light</span>
+</a>
+</li>
+<li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="dark">
+<a aria-checked="false" class="itemAnchor" href="#" role="menuitemradio" tabindex="-1" name="https://developers.facebook.com/docs/#">
+<span class="itemLabel fsm">dark</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<select name="colorscheme">
+<option value="">
+</option>
+<option selected="1" value="light">light</option>
+<option value="dark">dark</option>
+</select>
+</div>
+</dd>
+<dt>Show Faces <a data-hover="tooltip" href="#" title="Show profile photos in the plugin." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input checked="1" class="inputcheckbox" id="param_show_faces" name="show_faces" type="checkbox" value="true" />
+<label for="param_show_faces">Show Faces</label>
+</dd>
+<dt>
+<label for="param_border_color">Border Color</label>
+<a data-hover="tooltip" href="#" title="The border color of the plugin." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input class="inputtext" id="param_border_color" name="border_color" size="7" type="text" />
+</dd>
+<dt>Stream <a data-hover="tooltip" href="#" title="Show the profile stream for the public profile." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input checked="1" class="inputcheckbox" id="param_stream" name="stream" type="checkbox" value="true" />
+<label for="param_stream">Show stream</label>
+</dd>
+<dt>Header <a data-hover="tooltip" href="#" title="Show the &apos;Find us on Facebook&apos; bar at top. Only shown when either stream or faces are present." name="https://developers.facebook.com/docs/#">(?)</a>
+</dt>
+<dd>
+<input checked="1" class="inputcheckbox" id="param_header" name="header" type="checkbox" value="true" />
+<label for="param_header">Show header</label>
+</dd>
+</dl>
+<div class="getCode">
+<a class="uiButton" href="/docs/reference/plugins/like-box/code/?revision=218497338233727" id="ud2u0t_3" rel="dialog" role="button" name="https://developers.facebook.com/docs/reference/plugins/like-box/code/?revision=218497338233727">
+<span class="uiButtonText">Get Code</span>
+</a>
+</div>
+</div>
+<div class="plugin_example" id="ud2u0t_1">
+</div>
+</div>
+<h2>Attributes</h2>
+<ul>
+<li>
+<code>href</code> - the URL of the Facebook Page for this Like Box </li>
+<li>
+<code>width</code> - the width of the plugin in pixels. Default width: 300px. </li>
+<li>
+<code>height</code> - the height of the plugin in pixels. The default height varies based on number of faces to display, and whether the stream is displayed. With the stream displayed, and 10 faces the default height is 556px. With no faces, and no stream the default height is 63px. </li>
+<li>
+<code>colorscheme</code> - the color scheme for the plugin. Options: &apos;light&apos;, &apos;dark&apos; </li>
+<li>
+<code>show_faces</code> - specifies whether or not to display profile photos in the plugin. Default value: true. </li>
+<li>
+<code>stream</code> - specifies whether to display a stream of the latest posts from the Page&apos;s wall </li>
+<li>
+<code>header</code> - specifies whether to display the Facebook header at the top of the plugin. </li>
+<li>
+<code>border_color</code> - the border color of the plugin. </li>
+<li>
+<code>force_wall</code> - for Places, specifies whether the stream contains posts from the Place&apos;s wall or just checkins from friends. Default value: false.</li>
+</ul>
+<h2>How do I know when a user clicks a Like button?</h2>
+<p>If you are using the XFBML version of the button, you can subscribe to the &apos;edge.create&apos; event through <a href="/docs/reference/javascript/FB.Event.subscribe" name="https://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe">FB.Event.subscribe</a>.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/plugins/like-box/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1326240475" title="2012年1月10日 16:07">約5ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

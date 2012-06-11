@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/authentication/fb_sig/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/authentication/fb_sig/">https://developers.facebook.com/docs/authentication/fb_sig/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Legacy Canvas Auth</h1>
+</div>
+</div>
+<p>This document discusses our legacy Canvas authentication mechanism. We have moved to <a href="/docs/authentication/canvas" name="https://developers.facebook.com/docs/authentication/canvas">OAuth2.0 for Canvas</a> pages by default. This document also covers <a href="#migrate" name="https://developers.facebook.com/docs/#migrate">how to migrate</a> to our new approach.</p>
+<hr />
+<h2>Information Sent to your Application</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fb_sig</td>
+<td>Your application&apos;s Facebook signature. In order to verify a Facebook request to your canvas page, you need to remove _fb_sig__ from the rest of the keys before hashing them to verify against the signature contained in fb_sig.</td>
+</tr>
+<tr>
+<td>fb_sig_added</td>
+<td>If set to true, then the user has authorized your application.</td>
+</tr>
+<tr>
+<td>fb_sig_api_key</td>
+<td>Your application&apos;s API key.</td>
+</tr>
+<tr>
+<td>fb_sig_user</td>
+<td>The user ID. This is only passed once the user has authorized your application.</td>
+</tr>
+<tr>
+<td>fb_sig_app_id</td>
+<td>Your application&apos;s ID.</td>
+</tr>
+<tr>
+<td>fb_sig_country</td>
+<td>The user&apos;s country.</td>
+</tr>
+<tr>
+<td>fb_sig_base_domain</td>
+<td>The base domain from which your app is served.</td>
+</tr>
+<tr>
+<td>fb_sig_in_canvas</td>
+<td>When true, indicates the application is an FBML application; otherwise, it&apos;s not set.</td>
+</tr>
+<tr>
+<td>fb_sig_in_iframe</td>
+<td>When true, indicates the application is an IFrame application; otherwise, it&apos;s not set.</td>
+</tr>
+<tr>
+<td>fb_sig_in_new_facebook</td>
+<td>This is always true.</td>
+</tr>
+<tr>
+<td>fb_sig_locale</td>
+<td>The user&apos;s <a href="https://www.facebook.com/translations/FacebookLocales.xml" name="https://www.facebook.com/translations/FacebookLocales.xml">locale</a>.</td>
+</tr>
+<tr>
+<td>fb_sig_request_method</td>
+<td>For FBML applications, indicates whether the request is a GET or a POST.</td>
+</tr>
+<tr>
+<td>fb_sig_time</td>
+<td>The current time, which is a UNIX timestamp.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Verifying Information</h2>
+<p>When Facebook sends you information about a user, you need to know that it is actually coming from Facebook. If you send a request to Facebook and receive a response, then you know that it comes from Facebook because you know who you asked. If a request comes in unsolicited, however, you need to authenticate that the user information is actually coming from Facebook servers.</p>
+<p>The key to verification is the application secret. There are only two parties that know the secret: your application and Facebook. Whenever Facebook sends data to your server, it includes a signature that is generated using your application secret. You can perform the same encoding and check the signature to make sure it matches. If the signatures match, then you know the information came from Facebook.</p>
+<h3>Generating Your Own Signature</h3>
+<p>To generate the signature for the information Facebook sends you:</p>
+<ol>
+<li>Remove the &quot;fb_sig_&quot; prefix from all of the parameter names (keys).</li>
+<li>Sort the values alphabetically by the keys.</li>
+<li>Concatenate all key/value pairs together in the format &quot;k=v&quot; (omitting the fb_sig parameter, since that is what we are calculating).</li>
+<li>Append your application secret, which you can find by going to the <a href="https://www.facebook.com/developers/apps.php" name="https://www.facebook.com/developers/apps.php">Developer application</a> and following the link for your application.</li>
+<li>Generate an MD5 hash of the whole string.</li>
+</ol>
+<p>The following PHP code provides a quick example of verifying information sent to an iFrame canvas application:</p>
+<pre>
+<code>&lt;?php 
+    /* 
+    typical use case: 
+    process.php?string=$string&amp;sig=fb_sig in process.php, 
+    $string .= $secret and md5($string) == $_GET[&apos;fb_sig&apos;] 
+    */ 
+
+    $fbsig = array(); 
+    foreach($_GET as $key=&gt;$value) { 
+        if(substr($key,0,7) == &apos;fb_sig_&apos;) { 
+            $fbsig[substr($key,7)] = $value; 
+        } 
+    } 
+    ksort($fbsig); 
+    foreach($fbsig as $key=&gt;$value) { 
+        $string .= $key . &apos;=&apos; . $value; 
+    } 
+    $string .= $secret;
+    md5($string) == $_GET[&apos;fb_sig&apos;]; // this will return true. 
+?&gt;
+</code>
+</pre>
+<hr />
+<p>
+<a name="migrate">
+</a>
+</p>
+<h2>Migrating to OAuth 2.0</h2>
+<p>As of <a href="https://developers.facebook.com/blog/post/439" name="https://developers.facebook.com/blog/post/439">December 10, 2010</a>, OAuth 2.0 is the default authentication mechanism for Apps on Facebook.com.</p>
+<table>
+<thead>
+<tr>
+<th>Old Parameter Name</th>
+<th>How to Migrate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>fb_sig_added</code>
+</td>
+<td>Your application has been added if there is an <code>oauth_token</code>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_api_key</code>
+</td>
+<td>You should already know this in your application.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_app_id</code>
+</td>
+<td>You should already know this. If you have 2 apps with the same endpoint, please give Facebook two different endpoints, and use a <a href="http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html" name="http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html">rewrite rule</a> or something similar to send users to the same code.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_canvas_user</code>
+</td>
+<td>Deprecated. Same as <code>user_id</code>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_expires</code>
+</td>
+<td>See <code>expires</code>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_ext_perms</code>
+</td>
+<td>See <a href="https://developers.facebook.com/docs/reference/fql/permissions" name="https://developers.facebook.com/docs/reference/fql/permissions">FQL Permissions Table</a>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_friends</code>
+</td>
+<td>See <a href="https://developers.facebook.com/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">/me/friends</a>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_in_canvas</code>
+</td>
+<td>Assumed when there is not a <code>profile_id</code> and your application is an FBML app.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_in_iframe</code>
+</td>
+<td>Assumed when there is not a <code>profile_id</code> and your application is an IFrame app.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_in_profile_tab</code>
+</td>
+<td>Assumed when there is a <code>profile_id</code>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_is_admin</code>
+</td>
+<td>See <a href="https://developers.facebook.com/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">/me/accounts</a>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_is_fan</code>
+</td>
+<td>See <a href="https://developers.facebook.com/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">/me/likes</a>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_linked_account_ids</code>
+</td>
+<td>Deprecated.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_logged_out_facebook</code>
+</td>
+<td>Deprecated. You only get to know if the user has logged into your app or not.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_page_added</code>
+</td>
+<td>Your application has been added if there is an <code>oauth_token</code>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_page_id</code>
+</td>
+<td>See <code>profile_id</code>. You can check if it is a Page via the Graph API.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_profile_session_key</code>
+</td>
+<td>See <code>oauth_token</code>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_profile_update_time</code>
+</td>
+<td>See <a href="https://developers.facebook.com/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">/me</a>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_profile_user</code>
+</td>
+<td>See <code>profile_id</code>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_session_key</code>
+</td>
+<td>Deprecated. Use the <code>oauth_token</code> for all API calls.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_ss</code>
+</td>
+<td>Deprecated. Use the <code>oauth_token</code>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_time</code>
+</td>
+<td>Deprecated. Use your own servers&apos;s timestamp.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_type</code>
+</td>
+<td>See <a href="https://developers.facebook.com/docs/reference/api/page" name="https://developers.facebook.com/docs/reference/api/page">&apos;category&apos;</a>.</td>
+</tr>
+<tr>
+<td>
+<code>fb_sig_user</code>
+</td>
+<td>See <code>user_id</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>
+<a name="exchange_session">
+</a>
+</p>
+<p>To convert sessions, send a POST request to <b>https://graph.facebook.com/oauth/exchange_sessions</b> with a comma-separated list of sessions you want to convert:</p>
+<pre>curl -F client_id=your_app_id \
+     -F client_secret=your_app_secret \
+     -F sessions=session_key1,session_key2 \
+     https://graph.facebook.com/oauth/exchange_sessions</pre>
+<p>The response from the request is a JSON array of OAuth access tokens in the same order as the sessions given:</p>
+<pre>
+[
+  {
+    &quot;access_token&quot;: &quot;...&quot;,
+    &quot;expires&quot;: 1271649600,
+  },
+  ...
+]
+</pre>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/authentication/fb_sig/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1331913461" title="2012年3月16日 8:57">約3ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

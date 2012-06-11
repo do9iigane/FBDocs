@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/fbml/multi-friend-selector/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/fbml/multi-friend-selector/">https://developers.facebook.com/docs/reference/fbml/multi-friend-selector/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Tools</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/board/" name="http://developers.facebook.com/docs/reference/fbml/board/">fb:board</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/bookmark/" name="http://developers.facebook.com/docs/reference/fbml/bookmark/">fb:bookmark</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/chat-invite/" name="http://developers.facebook.com/docs/reference/fbml/chat-invite/">fb:chat-invite</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/comments/" name="http://developers.facebook.com/docs/reference/fbml/comments/">fb:comments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/default/" name="http://developers.facebook.com/docs/reference/fbml/default/">fb:default</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/else/" name="http://developers.facebook.com/docs/reference/fbml/else/">fb:else</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/feed/" name="http://developers.facebook.com/docs/reference/fbml/feed/">fb:feed</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/friend-selector/" name="http://developers.facebook.com/docs/reference/fbml/friend-selector/">fb:friend-selector</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/google-analytics/" name="http://developers.facebook.com/docs/reference/fbml/google-analytics/">fb:google-analytics</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if/" name="http://developers.facebook.com/docs/reference/fbml/if/">fb:if</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-multiple-actors/" name="http://developers.facebook.com/docs/reference/fbml/if-multiple-actors/">fb:if-multiple-actors</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/multi-friend-input/" name="http://developers.facebook.com/docs/reference/fbml/multi-friend-input/">fb:multi-friend-input</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/quantcast/" name="http://developers.facebook.com/docs/reference/fbml/quantcast/">fb:quantcast</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/random/" name="http://developers.facebook.com/docs/reference/fbml/random/">fb:random</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/random-option/" name="http://developers.facebook.com/docs/reference/fbml/random-option/">fb:random-option</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/switch/" name="http://developers.facebook.com/docs/reference/fbml/switch/">fb:switch</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/typeahead-input/" name="http://developers.facebook.com/docs/reference/fbml/typeahead-input/">fb:typeahead-input</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/typeahead-option/" name="http://developers.facebook.com/docs/reference/fbml/typeahead-option/">fb:typeahead-option</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/user-agent/" name="http://developers.facebook.com/docs/reference/fbml/user-agent/">fb:user-agent</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>User/Groups</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/eventlink/" name="http://developers.facebook.com/docs/reference/fbml/eventlink/">fb:eventlink</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/grouplink/" name="http://developers.facebook.com/docs/reference/fbml/grouplink/">fb:grouplink</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-can-see/" name="http://developers.facebook.com/docs/reference/fbml/if-can-see/">fb:if-can-see</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-can-see-photo/" name="http://developers.facebook.com/docs/reference/fbml/if-can-see-photo/">fb:if-can-see-photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-app-user/" name="http://developers.facebook.com/docs/reference/fbml/if-is-app-user/">fb:if-is-app-user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-friends-with-viewer/" name="http://developers.facebook.com/docs/reference/fbml/if-is-friends-with-viewer/">fb:if-is-friends-with-viewer</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-group-member/" name="http://developers.facebook.com/docs/reference/fbml/if-is-group-member/">fb:if-is-group-member</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-user/" name="http://developers.facebook.com/docs/reference/fbml/if-is-user/">fb:if-is-user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-verified/" name="http://developers.facebook.com/docs/reference/fbml/if-is-verified/">fb:if-is-verified</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/name/" name="http://developers.facebook.com/docs/reference/fbml/name/">fb:name</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/profile-pic/" name="http://developers.facebook.com/docs/reference/fbml/profile-pic/">fb:profile-pic</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/pronoun/" name="http://developers.facebook.com/docs/reference/fbml/pronoun/">fb:pronoun</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/user/" name="http://developers.facebook.com/docs/reference/fbml/user/">fb:user</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/user-status/" name="http://developers.facebook.com/docs/reference/fbml/user-status/">fb:user-status</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Notifications and Requests</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/application-name/" name="http://developers.facebook.com/docs/reference/fbml/application-name/">fb:application-name</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/multi-friend-selector/" name="http://developers.facebook.com/docs/reference/fbml/multi-friend-selector/">fb:multi-friend-selector</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/multi-friend-selector_(condensed)/" name="http://developers.facebook.com/docs/reference/fbml/multi-friend-selector_(condensed)/">fb:multi-friend-selector_(condensed)</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/req-choice/" name="http://developers.facebook.com/docs/reference/fbml/req-choice/">fb:req-choice</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/request-form/" name="http://developers.facebook.com/docs/reference/fbml/request-form/">fb:request-form</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/request-form-submit/" name="http://developers.facebook.com/docs/reference/fbml/request-form-submit/">fb:request-form-submit</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Platform Internationalization</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/date/" name="http://developers.facebook.com/docs/reference/fbml/date/">fb:date</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/fbml-attribute/" name="http://developers.facebook.com/docs/reference/fbml/fbml-attribute/">fb:fbml-attribute</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/intl/" name="http://developers.facebook.com/docs/reference/fbml/intl/">fb:intl</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/intl-token/" name="http://developers.facebook.com/docs/reference/fbml/intl-token/">fb:intl-token</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/tag/" name="http://developers.facebook.com/docs/reference/fbml/tag/">fb:tag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/tag-attribute/" name="http://developers.facebook.com/docs/reference/fbml/tag-attribute/">fb:tag-attribute</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/tag-body/" name="http://developers.facebook.com/docs/reference/fbml/tag-body/">fb:tag-body</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/window-title/" name="http://developers.facebook.com/docs/reference/fbml/window-title/">fb:window-title</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Deprecated</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-is-own-profile/" name="http://developers.facebook.com/docs/reference/fbml/if-is-own-profile/">fb:if-is-own-profile</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-user-has-added-app/" name="http://developers.facebook.com/docs/reference/fbml/if-user-has-added-app/">fb:if-user-has-added-app</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/networklink/" name="http://developers.facebook.com/docs/reference/fbml/networklink/">fb:networklink</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/notif-email/" name="http://developers.facebook.com/docs/reference/fbml/notif-email/">fb:notif-email</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/notif-page/" name="http://developers.facebook.com/docs/reference/fbml/notif-page/">fb:notif-page</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/notif-subject/" name="http://developers.facebook.com/docs/reference/fbml/notif-subject/">fb:notif-subject</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/profile-action/" name="http://developers.facebook.com/docs/reference/fbml/profile-action/">fb:profile-action</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/rock-the-vote/" name="http://developers.facebook.com/docs/reference/fbml/rock-the-vote/">fb:rock-the-vote</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/userlink/" name="http://developers.facebook.com/docs/reference/fbml/userlink/">fb:userlink</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-added-app-users/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-added-app-users/">fb:visible-to-added-app-users</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-user/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-user/">fb:visible-to-user</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Status Messages</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/error/" name="http://developers.facebook.com/docs/reference/fbml/error/">fb:error</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/explanation/" name="http://developers.facebook.com/docs/reference/fbml/explanation/">fb:explanation</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/message/" name="http://developers.facebook.com/docs/reference/fbml/message/">fb:message</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/success/" name="http://developers.facebook.com/docs/reference/fbml/success/">fb:success</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Page Navigation</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/create-button/" name="http://developers.facebook.com/docs/reference/fbml/create-button/">fb:create-button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/dashboard/" name="http://developers.facebook.com/docs/reference/fbml/dashboard/">fb:dashboard</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/header/" name="http://developers.facebook.com/docs/reference/fbml/header/">fb:header</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/header-title/" name="http://developers.facebook.com/docs/reference/fbml/header-title/">fb:header-title</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/help/" name="http://developers.facebook.com/docs/reference/fbml/help/">fb:help</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/mediaheader/" name="http://developers.facebook.com/docs/reference/fbml/mediaheader/">fb:mediaheader</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/owner-action/" name="http://developers.facebook.com/docs/reference/fbml/owner-action/">fb:owner-action</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/tab-item/" name="http://developers.facebook.com/docs/reference/fbml/tab-item/">fb:tab-item</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/tabs/" name="http://developers.facebook.com/docs/reference/fbml/tabs/">fb:tabs</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Wall</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/wall/" name="http://developers.facebook.com/docs/reference/fbml/wall/">fb:wall</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/wallpost/" name="http://developers.facebook.com/docs/reference/fbml/wallpost/">fb:wallpost</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/wallpost-action/" name="http://developers.facebook.com/docs/reference/fbml/wallpost-action/">fb:wallpost-action</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Visibility on Profile</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/18-plus/" name="http://developers.facebook.com/docs/reference/fbml/18-plus/">fb:18-plus</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/21-plus/" name="http://developers.facebook.com/docs/reference/fbml/21-plus/">fb:21-plus</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/restricted-to/" name="http://developers.facebook.com/docs/reference/fbml/restricted-to/">fb:restricted-to</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-app-users/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-app-users/">fb:visible-to-app-users</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-connection/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-connection/">fb:visible-to-connection</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-friends/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-friends/">fb:visible-to-friends</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/visible-to-owner/" name="http://developers.facebook.com/docs/reference/fbml/visible-to-owner/">fb:visible-to-owner</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Profile-specific</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/action/" name="http://developers.facebook.com/docs/reference/fbml/action/">fb:action</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/add-section-button/" name="http://developers.facebook.com/docs/reference/fbml/add-section-button/">fb:add-section-button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/if-section-not-added/" name="http://developers.facebook.com/docs/reference/fbml/if-section-not-added/">fb:if-section-not-added</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/narrow/" name="http://developers.facebook.com/docs/reference/fbml/narrow/">fb:narrow</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/publisher-link/" name="http://developers.facebook.com/docs/reference/fbml/publisher-link/">fb:publisher-link</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/subtitle/" name="http://developers.facebook.com/docs/reference/fbml/subtitle/">fb:subtitle</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/user-item/" name="http://developers.facebook.com/docs/reference/fbml/user-item/">fb:user-item</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/user-table/" name="http://developers.facebook.com/docs/reference/fbml/user-table/">fb:user-table</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/wide/" name="http://developers.facebook.com/docs/reference/fbml/wide/">fb:wide</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Misc</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/add-profile-tab/" name="http://developers.facebook.com/docs/reference/fbml/add-profile-tab/">fb:add-profile-tab</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/fbml/" name="http://developers.facebook.com/docs/reference/fbml/fbml/">fb:fbml</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/fbmlversion/" name="http://developers.facebook.com/docs/reference/fbml/fbmlversion/">fb:fbmlversion</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/js-string/" name="http://developers.facebook.com/docs/reference/fbml/js-string/">fb:js-string</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/page-admin-edit-header/" name="http://developers.facebook.com/docs/reference/fbml/page-admin-edit-header/">fb:page-admin-edit-header</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/redirect/" name="http://developers.facebook.com/docs/reference/fbml/redirect/">fb:redirect</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/ref/" name="http://developers.facebook.com/docs/reference/fbml/ref/">fb:ref</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/serverFbml/" name="http://developers.facebook.com/docs/reference/fbml/serverFbml/">fb:serverFbml</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/time/" name="http://developers.facebook.com/docs/reference/fbml/time/">fb:time</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/title/" name="http://developers.facebook.com/docs/reference/fbml/title/">fb:title</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Editor Display</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor/" name="http://developers.facebook.com/docs/reference/fbml/editor/">fb:editor</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-button/" name="http://developers.facebook.com/docs/reference/fbml/editor-button/">fb:editor-button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-buttonset/" name="http://developers.facebook.com/docs/reference/fbml/editor-buttonset/">fb:editor-buttonset</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-cancel/" name="http://developers.facebook.com/docs/reference/fbml/editor-cancel/">fb:editor-cancel</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-custom/" name="http://developers.facebook.com/docs/reference/fbml/editor-custom/">fb:editor-custom</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-date/" name="http://developers.facebook.com/docs/reference/fbml/editor-date/">fb:editor-date</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-divider/" name="http://developers.facebook.com/docs/reference/fbml/editor-divider/">fb:editor-divider</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-month/" name="http://developers.facebook.com/docs/reference/fbml/editor-month/">fb:editor-month</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-text/" name="http://developers.facebook.com/docs/reference/fbml/editor-text/">fb:editor-text</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-textarea/" name="http://developers.facebook.com/docs/reference/fbml/editor-textarea/">fb:editor-textarea</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/editor-time/" name="http://developers.facebook.com/docs/reference/fbml/editor-time/">fb:editor-time</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Embedded Media</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/flv/" name="http://developers.facebook.com/docs/reference/fbml/flv/">fb:flv</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/iframe/" name="http://developers.facebook.com/docs/reference/fbml/iframe/">fb:iframe</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/mp3/" name="http://developers.facebook.com/docs/reference/fbml/mp3/">fb:mp3</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/photo/" name="http://developers.facebook.com/docs/reference/fbml/photo/">fb:photo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/silverlight/" name="http://developers.facebook.com/docs/reference/fbml/silverlight/">fb:silverlight</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/swf/" name="http://developers.facebook.com/docs/reference/fbml/swf/">fb:swf</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Dialog</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/dialog/" name="http://developers.facebook.com/docs/reference/fbml/dialog/">fb:dialog</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/dialog-button/" name="http://developers.facebook.com/docs/reference/fbml/dialog-button/">fb:dialog-button</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/dialog-content/" name="http://developers.facebook.com/docs/reference/fbml/dialog-content/">fb:dialog-content</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/dialog-title/" name="http://developers.facebook.com/docs/reference/fbml/dialog-title/">fb:dialog-title</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Additional Permissions</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/prompt-permission/" name="http://developers.facebook.com/docs/reference/fbml/prompt-permission/">fb:prompt-permission</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Social Plugins</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/comments_(XFBML)/" name="http://developers.facebook.com/docs/reference/fbml/comments_(XFBML)/">fb:comments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/live-stream/" name="http://developers.facebook.com/docs/reference/fbml/live-stream/">fb:live-stream</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Message Attachments</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/attachment-preview/" name="http://developers.facebook.com/docs/reference/fbml/attachment-preview/">fb:attachment-preview</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Forms</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/captcha/" name="http://developers.facebook.com/docs/reference/fbml/captcha/">fb:captcha</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/submit/" name="http://developers.facebook.com/docs/reference/fbml/submit/">fb:submit</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Reference</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/fbml/javascript/" name="http://developers.facebook.com/docs/reference/fbml/javascript/">JavaScript SDK</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>fb:multi-friend-selector</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a> › <a href="/docs/reference/fbml/multi-friend-selector/" name="https://developers.facebook.com/docs/reference/fbml/multi-friend-selector/">fb:multi-friend-selector</a>
+</div>
+</div>
+</div>
+<table bgcolor="#F2F2F2">
+<tr>
+<td>
+<b>We are deprecating FBML.</b> On <b>Jan 1, 2012:</b> FBML will no longer be supported on Platform. <b>June 1, 2012:</b> FBML apps will no longer work. All FBML endpoints are removed. If you are building a new application on Facebook.com, please implement your application using HTML, JavaScript and CSS. You can use our <a href="../javascript" name="https://developers.facebook.com/javascript">JavaScript SDK</a> and <a href="/plugins" name="https://developers.facebook.com/plugins">Social Plugins</a> to embedded many of the same social features available in FBML. </td>
+</tr>
+</table>
+<p>There are actually two versions of this button - the full version and the condensed version. This page describes the full version. For information about the condensed version, see fb:multi-friend-selector (condensed).</p>
+<p>This is a nearly full-page interface intended to be used on canvas pages to allow the user to send a &quot;large&quot; number of requests or invitations (where &quot;large&quot; is generally some number more than 4). This tag must be used inside an fb:request-form tag. This interface includes a series of <nowiki>&lt;input type=&quot;hidden&quot; name=&quot;ids[]&quot; value=&quot;<a href="friend" name="https://developers.facebook.com/docs/friend">id</a>&quot;&gt;</nowiki> which are included for selected users in the form that gets submitted to your <fb:request-form> action URL. Both the <strong>Skip this Step</strong> button and the <strong>Submit</strong> button take the user to the parent fb:request-form action URL.</fb:request-form>
+</p>
+<p>Your users can also invite their friends who aren&apos;t yet on Facebook. If <code>email_invite</code> is set to <code>true</code>, users can manually enter email addresses in the text box at the bottom of the multi-friend selector. If <code>import_external_friends</code> is set to <code>true</code>, users will be able to import their additional email contacts. Email contacts who register through invitation emails will have your application pre-bookmarked on the left navigation menu. Another option is Express Registration, which allows non-Facebook users to join Facebook and authorize your application at the same time. After the friend authorizes your application, it gets bookmarked automatically.</p>
+<p>For developers using iframes, a full page version of this is available. Please see Multi_friend_selector for information about using it.</p>
+<p>As a best practice suggestion, please choose the appropriate <code>bypass</code> string for the context in which the multi-friend selector appears. For example, if the user clicks a link to explicitly arrive at the multi-friend selector, &quot;Cancel&quot; may be the appropriate string. However, if the user arrives at the multi-friend selector within the context of an application flow, the default &quot;Skip&quot; is more appropriate, as &quot;Cancel&quot; may imply the cancellation of the application flow instead.</p>
+<p>A user may invite a number of people each day equal to the maximum number of requests allocated to your application. If a user attempts to go over this limit, the following message appears:</p>
+<p>
+<img src="http://images.marketworks.com/hi/1/1088/pp_too_many.jpg" />
+</p>
+<h2>パラメータ</h2>
+<table class="params">
+<tr>
+<th>名前</th>
+<th>タイプ</th>
+<th>説明</th>
+</tr>
+<tr>
+<td class="name">actiontext</td>
+<td class="type">string</td>
+<td>
+<p>An instructional message to display to users at the top of the multi-friend-selector.</p>
+</td>
+</tr>
+<tr>
+<td class="name">showborder</td>
+<td class="type">bool</td>
+<td>
+<p>Indicates whether you want a border around the outside of the multi-friend-selector.</p>
+</td>
+</tr>
+<tr>
+<td class="name">rows</td>
+<td class="type">int</td>
+<td>
+<p>The number of rows of friends to show in the multi-friend-selector. Default value is 5 and the value must be between 3 and 10</p>
+</td>
+</tr>
+<tr>
+<td class="name">max</td>
+<td class="type">int</td>
+<td>
+<p>The maximum number of users that can be selected. This value ranges from 1 to 35, and is capped at the number of friend requests the user has remaining under their limit. This attribute is ignored if it is greater than the number of requests your application is able to send.</p>
+</td>
+</tr>
+<tr>
+<td class="name">exclude_ids</td>
+<td class="type">array</td>
+<td>
+<p>A comma-separated list of user IDs to exclude from the multi-friend-selector.</p>
+</td>
+</tr>
+<tr>
+<td class="name">bypass</td>
+<td class="type">string</td>
+<td>
+<p>The version of the <strong>Bypass</strong> button you want to use. Set this attribute to &quot;step&quot;, &quot;cancel&quot;, or &quot;skip&quot;, which results in <strong>Skip This Step</strong>, <strong>Cancel</strong>, or <strong>Skip</strong>, respectively. Default value is skip</p>
+</td>
+</tr>
+<tr>
+<td class="name">email_invite</td>
+<td class="type">bool</td>
+<td>
+<p>Indicates whether you want to display an email invite section in the multi-friend-selector.</p>
+</td>
+</tr>
+<tr>
+<td class="name">cols</td>
+<td class="type">int</td>
+<td>
+<p>The number of columns of friends to show in the multi-friend selector, which also determines the width of the invite box. The value must be one of: <code>2</code> (which sets the box to 368px wide), <code>3</code> (which sets it to 466px wide), or <code>5</code> (which sets it to 740px wide). Default value is 5 (although only 4 columns will be visible by default on a canvas page due to a change to canvas page width that was made after this component was released)</p>
+</td>
+</tr>
+<tr>
+<td class="name">import_external_friends</td>
+<td class="type">bool</td>
+<td>
+<p>Indicates whether you want to enable an email contact importer, which allows users to send invites/requests to their non-Facebook friends. Default: <code>true</code>
+</p>
+</td>
+</tr>
+</table>
+<h2>導入例</h2>
+<div class="fql_example">
+<div class="code">
+<pre>&lt;fb:multi-friend-selector actiontext=&quot;Select the 
+friends you want to invite. (All of them.)&quot; rows=&quot;3&quot;/&gt;</pre>
+</div>
+</div>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/fbml/multi-friend-selector/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1325147319" title="2011年12月29日 0:28">約5ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

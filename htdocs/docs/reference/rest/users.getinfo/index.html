@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/rest/users.getinfo/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/rest/users.getinfo/">https://developers.facebook.com/docs/reference/rest/users.getinfo/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Administrative Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.banUsers/" name="http://developers.facebook.com/docs/reference/rest/admin.banUsers/">admin.banUsers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.getAllocation/" name="http://developers.facebook.com/docs/reference/rest/admin.getAllocation/">admin.getAllocation</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.getAppProperties/" name="http://developers.facebook.com/docs/reference/rest/admin.getAppProperties/">admin.getAppProperties</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.getBannedUsers/" name="http://developers.facebook.com/docs/reference/rest/admin.getBannedUsers/">admin.getBannedUsers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.getRestrictionInfo/" name="http://developers.facebook.com/docs/reference/rest/admin.getRestrictionInfo/">admin.getRestrictionInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.setAppProperties/" name="http://developers.facebook.com/docs/reference/rest/admin.setAppProperties/">admin.setAppProperties</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.setRestrictionInfo/" name="http://developers.facebook.com/docs/reference/rest/admin.setRestrictionInfo/">admin.setRestrictionInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/admin.unbanUsers/" name="http://developers.facebook.com/docs/reference/rest/admin.unbanUsers/">admin.unbanUsers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/application.getPublicInfo/" name="http://developers.facebook.com/docs/reference/rest/application.getPublicInfo/">application.getPublicInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/batch.run/" name="http://developers.facebook.com/docs/reference/rest/batch.run/">batch.run</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/data.setCookie/" name="http://developers.facebook.com/docs/reference/rest/data.setCookie/">data.setCookie</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.setRefHandle/" name="http://developers.facebook.com/docs/reference/rest/fbml.setRefHandle/">fbml.setRefHandle</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/intl.getTranslations/" name="http://developers.facebook.com/docs/reference/rest/intl.getTranslations/">intl.getTranslations</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/intl.uploadNativeStrings/" name="http://developers.facebook.com/docs/reference/rest/intl.uploadNativeStrings/">intl.uploadNativeStrings</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/links.getStats/" name="http://developers.facebook.com/docs/reference/rest/links.getStats/">links.getStats</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/migrations.getStatuses/" name="http://developers.facebook.com/docs/reference/rest/migrations.getStatuses/">migrations.getStatuses</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/migrations.setStatus/" name="http://developers.facebook.com/docs/reference/rest/migrations.setStatus/">migrations.setStatus</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/pages.blockFan/" name="http://developers.facebook.com/docs/reference/rest/pages.blockFan/">pages.blockFan</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Login/Auth Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/auth.createToken/" name="http://developers.facebook.com/docs/reference/rest/auth.createToken/">auth.createToken</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/auth.expireSession/" name="http://developers.facebook.com/docs/reference/rest/auth.expireSession/">auth.expireSession</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/auth.getSession/" name="http://developers.facebook.com/docs/reference/rest/auth.getSession/">auth.getSession</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/auth.promoteSession/" name="http://developers.facebook.com/docs/reference/rest/auth.promoteSession/">auth.promoteSession</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/auth.revokeAuthorization/" name="http://developers.facebook.com/docs/reference/rest/auth.revokeAuthorization/">auth.revokeAuthorization</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/auth.revokeExtendedPermission/" name="http://developers.facebook.com/docs/reference/rest/auth.revokeExtendedPermission/">auth.revokeExtendedPermission</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Data Retrieval Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/comments.get/" name="http://developers.facebook.com/docs/reference/rest/comments.get/">comments.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/data.getCookies/" name="http://developers.facebook.com/docs/reference/rest/data.getCookies/">data.getCookies</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.refreshImgSrc/" name="http://developers.facebook.com/docs/reference/rest/fbml.refreshImgSrc/">fbml.refreshImgSrc</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.refreshRefUrl/" name="http://developers.facebook.com/docs/reference/rest/fbml.refreshRefUrl/">fbml.refreshRefUrl</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fql.multiquery/" name="http://developers.facebook.com/docs/reference/rest/fql.multiquery/">fql.multiquery</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fql.query/" name="http://developers.facebook.com/docs/reference/rest/fql.query/">fql.query</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/friends.areFriends/" name="http://developers.facebook.com/docs/reference/rest/friends.areFriends/">friends.areFriends</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/friends.get/" name="http://developers.facebook.com/docs/reference/rest/friends.get/">friends.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/friends.getAppUsers/" name="http://developers.facebook.com/docs/reference/rest/friends.getAppUsers/">friends.getAppUsers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/friends.getLists/" name="http://developers.facebook.com/docs/reference/rest/friends.getLists/">friends.getLists</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/friends.getMutualFriends/" name="http://developers.facebook.com/docs/reference/rest/friends.getMutualFriends/">friends.getMutualFriends</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/groups.get/" name="http://developers.facebook.com/docs/reference/rest/groups.get/">groups.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/groups.getMembers/" name="http://developers.facebook.com/docs/reference/rest/groups.getMembers/">groups.getMembers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/links.get/" name="http://developers.facebook.com/docs/reference/rest/links.get/">links.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/message.getThreadsInFolder/" name="http://developers.facebook.com/docs/reference/rest/message.getThreadsInFolder/">message.getThreadsInFolder</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notes.get/" name="http://developers.facebook.com/docs/reference/rest/notes.get/">notes.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notifications.get/" name="http://developers.facebook.com/docs/reference/rest/notifications.get/">notifications.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notifications.getList/" name="http://developers.facebook.com/docs/reference/rest/notifications.getList/">notifications.getList</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/pages.getinfo/" name="http://developers.facebook.com/docs/reference/rest/pages.getinfo/">pages.getinfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/pages.isAdmin/" name="http://developers.facebook.com/docs/reference/rest/pages.isAdmin/">pages.isAdmin</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/pages.isAppAdded/" name="http://developers.facebook.com/docs/reference/rest/pages.isAppAdded/">pages.isAppAdded</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/pages.isFan/" name="http://developers.facebook.com/docs/reference/rest/pages.isFan/">pages.isFan</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/photos.get/" name="http://developers.facebook.com/docs/reference/rest/photos.get/">photos.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/photos.getAlbums/" name="http://developers.facebook.com/docs/reference/rest/photos.getAlbums/">photos.getAlbums</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/photos.getTags/" name="http://developers.facebook.com/docs/reference/rest/photos.getTags/">photos.getTags</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/privacy.get/" name="http://developers.facebook.com/docs/reference/rest/privacy.get/">privacy.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/profile.getFBML/" name="http://developers.facebook.com/docs/reference/rest/profile.getFBML/">profile.getFBML</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/profile.getInfo/" name="http://developers.facebook.com/docs/reference/rest/profile.getInfo/">profile.getInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/profile.getInfoOptions/" name="http://developers.facebook.com/docs/reference/rest/profile.getInfoOptions/">profile.getInfoOptions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/status.get/" name="http://developers.facebook.com/docs/reference/rest/status.get/">status.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.get/" name="http://developers.facebook.com/docs/reference/rest/stream.get/">stream.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.getComments/" name="http://developers.facebook.com/docs/reference/rest/stream.getComments/">stream.getComments</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.getFilters/" name="http://developers.facebook.com/docs/reference/rest/stream.getFilters/">stream.getFilters</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.getInfo/" name="http://developers.facebook.com/docs/reference/rest/users.getInfo/">users.getInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.getLoggedInUser/" name="http://developers.facebook.com/docs/reference/rest/users.getLoggedInUser/">users.getLoggedInUser</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.getStandardinfo/" name="http://developers.facebook.com/docs/reference/rest/users.getStandardinfo/">users.getStandardinfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.hasAppPermission/" name="http://developers.facebook.com/docs/reference/rest/users.hasAppPermission/">users.hasAppPermission</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.isAppUser/" name="http://developers.facebook.com/docs/reference/rest/users.isAppUser/">users.isAppUser</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.isVerified/" name="http://developers.facebook.com/docs/reference/rest/users.isVerified/">users.isVerified</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/video.getUploadLimits/" name="http://developers.facebook.com/docs/reference/rest/video.getUploadLimits/">video.getUploadLimits</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Publishing Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/comments.add/" name="http://developers.facebook.com/docs/reference/rest/comments.add/">comments.add</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/comments.remove/" name="http://developers.facebook.com/docs/reference/rest/comments.remove/">comments.remove</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/links.post/" name="http://developers.facebook.com/docs/reference/rest/links.post/">links.post</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/links.preview/" name="http://developers.facebook.com/docs/reference/rest/links.preview/">links.preview</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/liveMessage.send/" name="http://developers.facebook.com/docs/reference/rest/liveMessage.send/">liveMessage.send</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notes.create/" name="http://developers.facebook.com/docs/reference/rest/notes.create/">notes.create</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notes.delete/" name="http://developers.facebook.com/docs/reference/rest/notes.delete/">notes.delete</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notes.edit/" name="http://developers.facebook.com/docs/reference/rest/notes.edit/">notes.edit</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notifications.markRead/" name="http://developers.facebook.com/docs/reference/rest/notifications.markRead/">notifications.markRead</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/notifications.sendEmail/" name="http://developers.facebook.com/docs/reference/rest/notifications.sendEmail/">notifications.sendEmail</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/photos.addTag/" name="http://developers.facebook.com/docs/reference/rest/photos.addTag/">photos.addTag</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/photos.createAlbum/" name="http://developers.facebook.com/docs/reference/rest/photos.createAlbum/">photos.createAlbum</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/photos.upload/" name="http://developers.facebook.com/docs/reference/rest/photos.upload/">photos.upload</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/profile.setFBML/" name="http://developers.facebook.com/docs/reference/rest/profile.setFBML/">profile.setFBML</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/profile.setInfo/" name="http://developers.facebook.com/docs/reference/rest/profile.setInfo/">profile.setInfo</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/profile.setInfoOptions/" name="http://developers.facebook.com/docs/reference/rest/profile.setInfoOptions/">profile.setInfoOptions</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/status.set/" name="http://developers.facebook.com/docs/reference/rest/status.set/">status.set</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.addComment/" name="http://developers.facebook.com/docs/reference/rest/stream.addComment/">stream.addComment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.addLike/" name="http://developers.facebook.com/docs/reference/rest/stream.addLike/">stream.addLike</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.publish/" name="http://developers.facebook.com/docs/reference/rest/stream.publish/">stream.publish</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.remove/" name="http://developers.facebook.com/docs/reference/rest/stream.remove/">stream.remove</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.removeComment/" name="http://developers.facebook.com/docs/reference/rest/stream.removeComment/">stream.removeComment</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/stream.removeLike/" name="http://developers.facebook.com/docs/reference/rest/stream.removeLike/">stream.removeLike</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/users.setStatus/" name="http://developers.facebook.com/docs/reference/rest/users.setStatus/">users.setStatus</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/video.upload/" name="http://developers.facebook.com/docs/reference/rest/video.upload/">video.upload</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Facebook Connect Methods</h5>
+<ul>
+</ul>
+</li>
+<li>
+<h5>Mobile Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/sms.canSend/" name="http://developers.facebook.com/docs/reference/rest/sms.canSend/">sms.canSend</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/sms.send/" name="http://developers.facebook.com/docs/reference/rest/sms.send/">sms.send</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Dashboard API Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.decrementCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.decrementCount/">dashboard.decrementCount</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.getCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.getCount/">dashboard.getCount</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.incrementCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.incrementCount/">dashboard.incrementCount</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.multiGetCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.multiGetCount/">dashboard.multiGetCount</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.multiIncrementCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.multiIncrementCount/">dashboard.multiIncrementCount</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.multiSetCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.multiSetCount/">dashboard.multiSetCount</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/dashboard.setCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.setCount/">dashboard.setCount</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Events API Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.cancel/" name="http://developers.facebook.com/docs/reference/rest/events.cancel/">events.cancel</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.create/" name="http://developers.facebook.com/docs/reference/rest/events.create/">events.create</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.edit/" name="http://developers.facebook.com/docs/reference/rest/events.edit/">events.edit</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.get/" name="http://developers.facebook.com/docs/reference/rest/events.get/">events.get</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.getMembers/" name="http://developers.facebook.com/docs/reference/rest/events.getMembers/">events.getMembers</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.invite/" name="http://developers.facebook.com/docs/reference/rest/events.invite/">events.invite</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/events.rsvp/" name="http://developers.facebook.com/docs/reference/rest/events.rsvp/">events.rsvp</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Custom Tags API Methods</h5>
+<ul>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.deleteCustomTags/" name="http://developers.facebook.com/docs/reference/rest/fbml.deleteCustomTags/">fbml.deleteCustomTags</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.getCustomTags/" name="http://developers.facebook.com/docs/reference/rest/fbml.getCustomTags/">fbml.getCustomTags</a>
+</li>
+<li>
+<a href="http://developers.facebook.com/docs/reference/rest/fbml.registerCustomTags/" name="http://developers.facebook.com/docs/reference/rest/fbml.registerCustomTags/">fbml.registerCustomTags</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Ads Methods</h5>
+<ul>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>users.getInfo</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a> › <a href="/docs/reference/rest/users.getInfo/" name="https://developers.facebook.com/docs/reference/rest/users.getInfo/">users.getInfo</a>
+</div>
+</div>
+</div>
+<table style="background-color: #F2F2F2; margin-bottom: 2em;">
+<tr>
+<td>
+<b>Please note:</b> We are in the process of deprecating the REST API, so if you are building a new application you shouldn&apos;t use this function. Instead use the <a href="/docs/api" name="https://developers.facebook.com/docs/api">Graph API</a> and access the <a href="/docs/reference/api/user" name="https://developers.facebook.com/docs/reference/api/user">User object</a>.</td>
+</tr>
+</table>
+<p>Returns a wide array of user-specific information for each user identifier passed, limited by the view of the current user. The current user is determined from the <code>session_key</code> parameter. The only storable values returned from this call are those under the <code>affiliations</code> element, the <code>notes_count</code> value, the <code>proxied_email</code> address, and the contents of the <code>profile_update_time</code> element.</p>
+<p>Use this call to get user data that you intend to display to other users (of your application, for example). If you need some basic information about a user for analytics purposes, call <a href="users.getStandardinfo" name="https://developers.facebook.com/docs/users.getStandardinfo">
+<code>users.getStandardInfo</code>
+</a> instead.</p>
+<p>This call no longer requires a session key. However, if you call this method without a session key, you can only get the following information:</p>
+<ul>
+<li>uid</li>
+<li>first_name</li>
+<li>middle_name</li>
+<li>last_name</li>
+<li>name</li>
+<li>locale</li>
+<li>current_location</li>
+<li>affiliations (regional type only)</li>
+<li>pic_square</li>
+<li>profile_url</li>
+<li>sex</li>
+</ul>
+<p>You can call this method as soon as a user interacts with your application, before she has authorized your application to access her information. If you do so, you can get the same information as you can without a session (see above).</p>
+<h4>User Privacy and Visible Data</h4>
+<p>
+<strong>Important:</strong> Depending upon the user&apos;s privacy settings (including whether the user has decided to opt out of Platform completely), you may not see certain user data. For any user submitted to this method, the following user fields are visible to an application only if that user has authorized that application and specifically chose to reveal them:</p>
+<ul>
+<li>meeting_for</li>
+<li>meeting_sex</li>
+<li>religion </li>
+</ul>
+<p>In addition, the visibility of <strong>all</strong> fields, with the exception of <code>first_name</code>, <code>last_name</code>, <code>name</code>, <code>pic</code>, <code>sex</code>, <code>affiliations</code>, and <code>uid</code> may be restricted by the user&apos;s Facebook privacy settings in relation to the calling user (the user associated with the current session).</p>
+<p>If a field is not visible for either of the above reasons, then that field&apos;s corresponding element will be empty with a <code>nil</code> attribute set, in the following manner:</p>
+<pre>
+<code>&lt;significant_other_id xsi:nil=&quot;true&quot;/&gt;
+</code>
+</pre>
+<p>Finally, a user profile query will not return any data if the user has turned off access to Facebook Platform.</p>
+<h2>パラメータ</h2>
+<table class="params">
+<tr>
+<th>名前</th>
+<th>タイプ</th>
+<th>説明</th>
+</tr>
+<tr>
+<td class="name">uids</td>
+<td class="type">array</td>
+<td>
+<p>List of user IDs. This is a comma-separated list of user IDs.</p>
+</td>
+</tr>
+<tr>
+<td class="name">fields</td>
+<td class="type">array</td>
+<td>
+<p>List of desired fields in return. This is a comma-separated list of field strings.</p>
+</td>
+</tr>
+<tr>
+<td class="name">callback</td>
+<td class="type">string</td>
+<td>
+<p>Name of a function to call. This is primarily to enable cross-domain JavaScript requests using the &lt;script&gt; tag, also known as JSONP, and works with both the XML and JSON formats. The function will be called with the response passed as the parameter.</p>
+</td>
+</tr>
+</table>
+<h2>レスポンス</h2>
+<p>Following is a list of data returned by this call:</p>
+<ul>
+<li>
+<strong>uid</strong> - The user ID corresponding to the user info returned. This is always returned, whether included in fields or not, and always as the first subelement.</li>
+<li>
+<strong>about_me</strong> - text element corresponding to Facebook &apos;About Me&apos; profile section. May be blank.</li>
+<li>
+<strong>activities</strong> - User-entered &quot;Activities&quot; profile field. No guaranteed formatting.</li>
+<li>
+<p>
+<strong>affiliations</strong> - list of network affiliations, as affiliation elements, each of which contain year, type, status, name, and nid child elements. If no affiliations are returned, this element will be blank. The user&apos;s primary network (key: nid) will be listed first.</p>
+<ul>
+<li>
+<strong>type</strong> takes the following values: *** <strong>college:</strong> college network *** <strong>high school:</strong> high school network *** <strong>work:</strong> work network *** <strong>region:</strong> geographical network</li>
+<li>
+<strong>year</strong> may be blank, depending on the network type.</li>
+<li>
+<strong>name</strong> is the name of the network.</li>
+<li>
+<strong>nid</strong> is a unique identifier for the network. The user-to-network relation may be stored.</li>
+<li>
+<strong>status</strong> describes the user&apos;s graduate status if the network is a college network. Otherwise, it is blank.</li>
+</ul>
+</li>
+<li>
+<p>
+<strong>birthday</strong> - User-entered &quot;Birthday&quot; profile field. No guaranteed formatting as it&apos;s based on the user&apos;s locale. Use birthday_date instead of you need to be sure of the format.</p>
+</li>
+<li>
+<strong>birthday_date</strong> - The user&apos;s birthday, rendered as a machine-readable string. The format of this date never changes. </li>
+<li>
+<strong>books</strong> - User-entered &quot;Favorite Books&quot; profile field. No guaranteed formatting.</li>
+<li>
+<strong>contact_email</strong> - is a string containing the user&apos;s primary Facebook email address. If the user shared his or her primary email address with you, this address also appears in the <strong>email</strong> field (see below).</li>
+<li>
+<p>
+<strong>current_location</strong> - User-entered &quot;Current Location&quot; profile fields. Contains four children: city, state, country, and zip.</p>
+<ul>
+<li>
+<strong>city</strong> is user-entered, and may be blank.</li>
+<li>
+<strong>state</strong> is a well-defined name of the state, and may be blank.</li>
+<li>
+<strong>country</strong> is well-defined, and may be blank.</li>
+<li>
+<strong>zip</strong> is an integer, and is 0 if unspecified by the user.</li>
+</ul>
+</li>
+<li>
+<p>
+<strong>education_history</strong> - list of school information, as education_info elements, each of which contain name, year, and concentration child elements. If no school information is returned, this element will be blank.</p>
+<ul>
+<li>
+<strong>year</strong> is a four-digit year, and may be blank.</li>
+<li>
+<strong>name</strong> is the name of the school, and is user-specified.</li>
+<li>
+<strong>concentrations</strong> is a list of concentration elements, and may be an empty list.</li>
+<li>
+<strong>degree</strong> is the name of the degree, and may be blank.</li>
+</ul>
+</li>
+<li>
+<p>
+<strong>email</strong> is a string containing the user&apos;s primary Facebook email address or the user&apos;s proxied email address, whichever address the user granted your application.</p>
+</li>
+<li>
+<strong>email_hashes</strong> is an array containing a set of confirmed email hashes for the user. Emails are registered via the <a href="connect.registerUsers" name="https://developers.facebook.com/docs/connect.registerUsers">
+<code>connect.registerUsers</code>
+</a> API call and are only confirmed when the user adds your application. The format of each email hash is the crc32 and md5 hashes of the email address combined with an underscore (_). </li>
+<li>
+<strong>family</strong> is an array containing the user&apos;s family members, listing the user ID and relationship for each member.</li>
+<li>
+<strong>has_added_app</strong> - [Deprecated] Bool (0 or 1) indicating whether the user has authorized the application. This value is now equivalent to <code>is_app_user</code>.</li>
+<li>
+<p>
+<strong>hometown_location</strong> - User-entered &quot;Hometown&quot; profile fields. Contains three children: city, state, and country.</p>
+<ul>
+<li>
+<strong>city</strong> is user-entered, and may be blank</li>
+<li>
+<strong>state</strong> is a well-defined name of the state, and may be blank.</li>
+<li>
+<strong>country</strong> is well-defined, and may be blank.</li>
+</ul>
+</li>
+<li>
+<p>
+<strong>hs_info</strong> - User-entered high school information. Contains five children: hs1_name, hs2_name, grad_year, hs1_key, and hs2_key.</p>
+<ul>
+<li>
+<strong>hs1_name</strong> is well-defined, and may be left blank</li>
+<li>
+<strong>hs2_name</strong> is well-defined, and may be left blank, though may not have information if hs1_name is blank.</li>
+<li>
+<strong>grad_year</strong> is a four-digit year, or may be blank</li>
+<li>
+<strong>hs1_id</strong> is a unique ID representing that school, and is not zero if and only if hs1_name is not blank.</li>
+<li>
+<strong>hs2_id</strong> is a unique ID representing that school, and is not zero if and only if hs2_name is not blank. </li>
+</ul>
+</li>
+<li>
+<p>
+<strong>interests</strong> - User-entered &quot;Interests&quot; profile field. No guaranteed formatting.</p>
+</li>
+<li>
+<strong>is_app_user</strong> - Bool (0 or 1) indicating whether the user has used the calling application.</li>
+<li>
+<strong>is_blocked</strong> - Bool that returns true if the user is blocked to the viewer/logged in user. The user must be logged in or you must have a valid session key to get this value.</li>
+<li>
+<strong>locale</strong> - The current locale in which the user has chosen to browse Facebook. The basic format is LL_CC, where LL is a two-letter language code, and CC is a two-letter country code. Country codes are taken from the <a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists/english_country_names_and_code_elements.htm" name="http://www.iso.org/iso/country_codes/iso_3166_code_lists/english_country_names_and_code_elements.htm">ISO 3166 alpha 2 code</a> list. For instance, &apos;en_US&apos; represents US English. </li>
+<li>
+<strong>meeting_for</strong> - list of desired relationship types corresponding to the &quot;Looking For&quot; profile element. If no relationship types are specified, the meeting_for element is empty. Otherwise represented as a list of seeking child text elements, which may each contain one of the following strings: Friendship, A Relationship, Dating, Random Play, Whatever I can get.</li>
+<li>
+<strong>meeting_sex</strong> - list of desired relationship genders corresponding to the &quot;Interested In&quot; profile element. If no relationship genders are specified, the meeting_sex element is empty. Otherwise represented as a list of sex child text elements, which may each contain one of the following strings: male, female .</li>
+<li>
+<strong>movies</strong> - User-entered &quot;Favorite Movies&quot; profile field. No guaranteed formatting.</li>
+<li>
+<strong>music</strong> - User-entered &quot;Favorite Music&quot; profile field. No guaranteed formatting.</li>
+<li>
+<p>
+<strong>name</strong> - User-entered &quot;Name&quot; profile field. May not be blank.</p>
+<ul>
+<li>
+<strong>first_name</strong> is generated from the user-entered &quot;Name&quot; profile field.</li>
+<li>
+<strong>middle_name</strong> is generated from the user-entered &quot;Name&quot; profile field.</li>
+<li>
+<strong>last_name</strong> - The user&apos;s last name, which is generated from the user-entered &quot;Name&quot; profile field.</li>
+</ul>
+</li>
+<li>
+<p>
+<strong>notes_count</strong> - Total number of notes written by the user.</p>
+</li>
+<li>
+<strong>pic</strong> - URL of user profile picture, with max width 100px and max height 300px. May be blank.</li>
+<li>
+<strong>pic_with_logo</strong> - URL of user profile picture with a Facebook logo overlaid, with max width 100px and max height 300px. May be blank.</li>
+<li>
+<strong>pic_big</strong> - URL of user profile picture, with max width 200px and max height 600px. May be blank.</li>
+<li>
+<strong>pic_big_with_logo</strong> - URL of user profile picture with a Facebook logo overlaid, with max width 200px and max height 600px. May be blank.</li>
+<li>
+<strong>pic_small</strong> - URL of user profile picture, with max width 50px and max height 150px. May be blank.</li>
+<li>
+<strong>pic_small_with_logo</strong> - URL of user profile picture with a Facebook logo overlaid, with max width 50px and max height 150px. May be blank.</li>
+<li>
+<strong>pic_square</strong> - URL of a square section of the user profile picture, with width 50px and height 50px. May be blank.</li>
+<li>
+<strong>pic_square_with_logo</strong> - URL of a square section of the user profile picture with a Facebook logo overlaid, with width 50px and height 50px. May be blank.</li>
+<li>
+<strong>political</strong> - User-entered &quot;Political View&quot; profile field. It&apos;s a free-form text field.</li>
+<li>
+<strong>profile_blurb</strong> - A free-form text field under a user&apos;s profile picture.</li>
+<li>
+<strong>profile_update_time</strong> - Time (in seconds since epoch) that the user&apos;s profile was last updated. If the user&apos;s profile was not updated within the past 3 days, 0 is returned.</li>
+<li>
+<strong>profile_url</strong> - URL of the Facebook profile of the user. If the user has specified a username, the username is included in the URL, not profile.php?id=UID.</li>
+<li>
+<strong>proxied_email</strong> - A proxied wrapper alternative for contacting the user through email, instead of directly calling notifications.sendEmail. If the user shared his or her proxied email address with you, this address also appears in the <strong>email</strong> field (see below).</li>
+<li>
+<strong>quotes</strong> - User-entered &quot;Favorite Quotes&quot; profile field. No guaranteed formatting.</li>
+<li>
+<strong>relationship_status</strong> - User-entered &quot;Relationship Status&quot; profile field. Is either blank or one of the following strings: Single, In a Relationship, In an Open Relationship, Engaged, Married, It&apos;s Complicated, Widowed.</li>
+<li>
+<strong>religion</strong> - User-entered &quot;Religious Views&quot; profile field. No guaranteed formatting.</li>
+<li>
+<strong>sex</strong> - User-entered &quot;Sex&quot; profile file. This is the gender string, not localized. This field may be blank.</li>
+<li>
+<strong>significant_other_id</strong> - the id of the person the user is in a relationship with. Only shown if both people in the relationship are users of the application making the request.</li>
+<li>
+<strong>status</strong> - Contains a &quot;message&quot; child with user-entered status information, as well as a &quot;time&quot; child with the time (in seconds since epoch) at which the status message was set.</li>
+<li>
+<strong>timezone</strong> - offset from GMT (e.g. California is -8).</li>
+<li>
+<strong>tv</strong> - User-entered &quot;Favorite TV Shows&quot; profile field. No guaranteed formatting.</li>
+<li>
+<strong>username</strong> - The user&apos;s Facebook username, if one was specified. Otherwise, this field is blank.</li>
+<li>
+<strong>wall_count</strong> - Total number of posts to the user&apos;s wall. Note that this does not include items with attachments, i.e. wall photos, wall videos, posted links, etc. Only items that show up on http://www.facebook.com/wall.php are included in this count.</li>
+<li>
+<strong>website</strong> - User-entered personal website profile field. No guaranteed formatting.</li>
+<li>
+<strong>work_history</strong> - list of work history information, as work_info elements, each of which contain location, company_name, position, description, start_date and end_date child elements. If no work history information is returned, this element is blank. <ul>
+<li>
+<strong>location</strong> is user-entered, and has a similar format to current_location and hometown_location above.</li>
+<li>
+<strong>company_name</strong> is user-entered, and does not necessarily correspond to a Facebook work network.</li>
+<li>
+<strong>description</strong> is user-entered, and may be blank.</li>
+<li>
+<strong>position</strong> is user-entered, and may be blank.</li>
+<li>
+<strong>start_date</strong> is of the form YYYY-MM, YYYY, or MM. It may be blank.</li>
+<li>
+<strong>end_date</strong> is of the form YYYY-MM, YYYY, or MM. It may be blank.</li>
+</ul>
+</li>
+</ul>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/rest/users.getInfo/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1327101709" title="2012年1月20日 15:21">約5ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

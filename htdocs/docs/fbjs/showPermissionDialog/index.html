@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/fbjs/showPermissionDialog/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/fbjs/showPermissionDialog/">https://developers.facebook.com/docs/fbjs/showPermissionDialog/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Facebook.showPermissionDialog</h1>
+</div>
+</div>
+<h2>Description</h2>
+<p>Method for FBJS and FBML applications to prompt the current session user to grant your application one or more extended permissions.</p>
+<h2>Parameters</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Required</th>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Yes</td>
+<td align="left">permission</td>
+<td align="left">string</td>
+<td align="left">One or more extended permissions to request. Pass the permissions as a string of comma-separated values.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">callback</td>
+<td align="left">function</td>
+<td align="left">Callback function to be invoked after user has closed the permissions window. The callback takes one object. On success, the dialog passes to the callback an object with a comma separated list of the permissions the user granted. On failure, or if the user canceled the permissions dialog, an empty object gets passed to the callback.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">enableProfileSelector</td>
+<td align="left">bool</td>
+<td align="left">If one of the permissions you are requesting is publish_stream, and the current user is a Page admin, setting enableProfileSelector to &apos;true&apos; causes a dropdown list to appear in the permission dialog. This allows the user to select for which Page(s) the permission should be granted. The dropdown contains only Pages for which the publish_stream permission hasn&apos;t been granted. If the user isn&apos;t the admin of any Pages, the dropdown list doesn&apos;t appear. After the user grants the permission, you can use the page admin (FQL) and the permissions (FQL) tables to query which Pages the user administers have the publish_stream permission. <code>default|false</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">profileSelectorIds</td>
+<td align="left">array</td>
+<td align="left">An array of Page and/or user IDs used to filter the IDs shown in the dropdown described in the showProfileSelector parameter. Use it when you wish to request the publish_stream permission for a specific Page or set of Pages. <code>default|null</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre>
+<code>Facebook.showPermissionDialog(&apos;publish_stream,read_stream&apos;, ondone, enableProfileSelector, [1234,2345]);
+</code>
+</pre>
+<h2>Notes</h2>
+<p>When specifying multiple extended permissions, do not put spaces after the commas. The API does not seem to trim spaces after it splits the string into an array, so having spaces will cause those permissions to be ignored.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/fbjs/showPermissionDialog/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1282082021" title="2010年8月17日 14:53">1年以上前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

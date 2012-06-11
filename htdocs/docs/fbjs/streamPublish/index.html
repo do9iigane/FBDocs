@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/fbjs/streamPublish/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/fbjs/streamPublish/">https://developers.facebook.com/docs/fbjs/streamPublish/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Facebook.streamPublish</h1>
+</div>
+</div>
+<h2>Description</h2>
+<p>This <a href="/docs/fbjs" name="https://developers.facebook.com/docs/fbjs">FBJS</a> method publishes a post into the stream on the Wall of a user or a Facebook Page, group, or event connected to the user (but not to the Wall of an application profile page). By default, this call publishes to the current session user&apos;s Wall, but if you specify a user ID, Facebook Page ID, group ID, or event ID as the <code>target_id</code>, then the post appears on the Wall of the target, and not the user posting the item.</p>
+<p>The post also appears in the streams (News Feeds) of any user connected to both the actor and the target of the post.</p>
+<p>This method works in two ways. You can use it to publish:</p>
+<ul>
+<li>As a Feed form. Keep the <code>auto_publish</code> parameter set to the default, false, so the Feed form appears. You do not need the <code>publish_stream</code> permission to publish in this manner. </li>
+<li>Directly to a user&apos;s or Page&apos;s stream, without prompting the user. Before your application can publish directly to the stream, the user or Page must grant your application the <code>publish_stream</code> extended permission. If the user previously granted your application the permission to publish short stories into the News Feed automatically, then you don&apos;t need to prompt for this permission in order to call this method. Make sure you set the <code>auto_publish</code> parameter to true.</li>
+</ul>
+<p>This method takes similar parameters to <code>stream.publish</code>. The main difference between calling this function and calling stream.publish is that if the user hasn&apos;t granted your application the <code>publish_stream</code> <code>extended permission</code>, or if the <code>auto_publish</code> parameter is set to false (the default), a Feed form appears, asking the user to confirm the post before publishing.</p>
+<p>You can give your users the opportunity to add their own message to the post.</p>
+<p>To provide rich content like MP3 audio, Flash, or an image, you can supply a predefined object called <code>attachment</code>. Facebook formats the attachment into the post.</p>
+<p>If the user isn&apos;t logged in to Facebook when you make this call, a login dialog appears, followed by a dialog with the post data.</p>
+<h3>Updating a User&apos;s Status</h3>
+<p>You can use this method to simply update a user&apos;s status. When you do so, the status message appears at the top of the user&apos;s profile and on the Friends &gt; Status Updates page. The message also appears in the stream with your application icon.</p>
+<p>To use this method to set a user&apos;s status do the following:</p>
+<ul>
+<li>Do not include an attachment or action link. If you do, the story will get published and will appear in the stream and on the user&apos;s Wall only. It won&apos;t appear at the top of the profile or in the Status Updates page.</li>
+<li>Make sure the message is no longer than 420 characters. Otherwise, an error gets returned.</li>
+</ul>
+<h2>Parameters</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Required</th>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+</td>
+<td align="left">user_message</td>
+<td align="left">string</td>
+<td align="left">The message the user enters for the post at the time of publication. If the message is a status update (that is, you&apos;re not including an attachment or an action link), it can contain up to 420 characters. Otherwise, if the post contains an attachment or action link, the message can contain up to 10,000 characters. See Updating a User&apos;s Status above.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">attachment</td>
+<td align="left">object</td>
+<td align="left">A dictionary object containing the text of the post, relevant links, a media type (image, mp3, flash), as well as any other key/value pairs you may want to add. <br />
+<b>Note:</b> If you want to use this call to update a user&apos;s status, don&apos;t pass this parameter. See Updating a User&apos;s Status above.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">action_links</td>
+<td align="left">object</td>
+<td align="left">A dictionary containing an <code>action link</code> object, containing the link text and a hyperlink. If you want to use this call to update a user&apos;s status, don&apos;t pass this parameter. See Updating a User&apos;s Status above.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">target_id</td>
+<td align="left">
+</td>
+<td align="left">The ID of the user, Page, group, or event where you are publishing the content. If you specify a <code>target_id</code>, the post appears on the Wall of the target profile, Page, group, or event, not on the Wall of the user who published the post. This mimics the action of posting on a friend&apos;s Wall on Facebook itself.<br />Note: If you specify a Page ID as the <code>actor_id</code>, you cannot specify a <code>target_id</code>. Pages cannot write on other users&apos; Walls.<br />Note: You cannot publish to an application profile page&apos;s Wall.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">user_message_prompt</td>
+<td align="left">string</td>
+<td align="left">Text you provide the user as a prompt to specify a user_message. This appears above the box where the user enters a custom message. For example, &quot;What&apos;s on your mind?&quot;</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">callback</td>
+<td align="left">function</td>
+<td align="left">Callback to execute after the function completes. It takes three parameters: <br />* <code>post_id</code>, which returns the ID of the published post. If the user cancels publishing, then the callback function returns the string &quot;null&quot; as the post_id, not actual JavaScript null. <br />* <code>exception</code>, which returns the error description if an error occurred. <br />* <code>data</code>, which currently has one defined key: <code>user_message</code>. <code>user_message</code> contains the text the user entered in the Feed form for the post.</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">auto_publish</td>
+<td align="left">bool</td>
+<td align="left">Indicates whether to automatically publish to the user&apos;s stream without displaying a Feed form to the user. If the user has granted your application the <code>publish_stream</code> extended permission and this parameter is set to true, the post is published automatically. <code>default|false</code>
+</td>
+</tr>
+<tr>
+<td align="left">
+</td>
+<td align="left">actor_id</td>
+<td align="left">string</td>
+<td align="left">=Allows the logged in user to publish on a Facebook Page&apos;s behalf if the user is an admin of the Page. If specified, actor_id indicates the ID of the Page that will publish the post. If the user publishes the post, the post will appear on the Page&apos;s Wall as if the Page has posted it. <code>default|null</code>
+<br />Note: If you specify a Page ID as the <code>actor_id</code>, you cannot specify a <code>target_id</code>. Pages cannot write on other users&apos; Walls.</td>
+</tr>
+</tbody>
+</table>
+<h2>Examples</h2>
+<p>Prompt a user to update his or her status only.</p>
+<pre>
+<code>Facebook.streamPublish();
+</code>
+</pre>
+<p>Prompt a user to update his or her stream with an image attachment.</p>
+<pre>
+<code>var attachment = {&apos;media&apos;:[{&apos;type&apos;:&apos;image&apos;,&apos;src&apos;:&apos;http://bit.ly/AJTnf&apos;,&apos;href&apos;:&apos;http://bit.ly/hifZk&apos;}]};
+Facebook.streamPublish(&apos;&apos;, attachment);
+</code>
+</pre>
+<p>Prompt a user to write on his or her friend&apos;s Wall.</p>
+<pre>
+<code>Facebook.streamPublish(&apos;&apos;, attachment, null, 4)
+</code>
+</pre>
+<p>Prompt a user to post an image, then check results in a callback.</p>
+<pre>
+<code>function callback (post_id, exception) {
+ if(post_id) {
+   post_to_my_server(post_id);
+ }
+}
+Facebook.streamPublish(&apos;&apos;, attachment, null, null, &apos;What do you think?&apos;, callback);
+</code>
+</pre>
+<h2>Returns</h2>
+<p>This call returns true if the dialog is shown correctly. To capture the post_id and any exceptions, use the callback functionality to get a asynchronous response.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/fbjs/streamPublish/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1295918942" title="2011年1月24日 17:29">1年以上前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/test_users/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/test_users/">https://developers.facebook.com/docs/test_users/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/tools/explorer" name="https://developers.facebook.com/tools/explorer">Graph API Explorer</a>
+</li>
+<li>
+<a href="/tools/console/" name="https://developers.facebook.com/tools/console/">JavaScript Test Console</a>
+</li>
+<li>
+<a href="/apps" name="https://developers.facebook.com/apps">Developer App</a>
+</li>
+<li>
+<a href="/docs/insights/" name="https://developers.facebook.com/docs/insights/">Insights</a>
+</li>
+<li>
+<a href="/tools/access_token/" name="https://developers.facebook.com/tools/access_token/">Access Token Tool</a>
+</li>
+<li>
+<a href="/tools/debug/" name="https://developers.facebook.com/tools/debug/">Debugger</a>
+</li>
+<li>
+<a class="selected" href="/docs/test_users" name="https://developers.facebook.com/docs/test_users">Test User API</a>
+</li>
+</ul>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Test Users</h1>
+<div class="breadcrumbs">
+<a href="/tools/" name="https://developers.facebook.com/tools/">Tools</a> › <a href="/docs/test_users/" name="https://developers.facebook.com/docs/test_users/">Test Users</a>
+</div>
+</div>
+</div>
+<p>A test user is a user account associated with an app created for the purpose of testing the functionality of that app. You can use test users for manual or automated testing.</p>
+<p>We allow you to access the test account via a login_url which allows you to directly login to the account. The login_url expires after two hours, but you easily refresh it to get a new login_url for the same test user. We also provide you an access_token for the test user so that you can take actions on behalf of the test user via the api.</p>
+<p>An app can create up to 500 test users to start testing an app.</p>
+<hr />
+<h2>Creating</h2>
+<p>You can create a test user associated with a particular app using the <a href="https://developers.facebook.com/docs/api" name="https://developers.facebook.com/docs/api">Graph API</a> with your <a href="https://developers.facebook.com/docs/authentication/#applogin" name="https://developers.facebook.com/docs/authentication/#applogin">app access token</a>.</p>
+<p>
+<b>API</b>
+</p>
+<pre>
+https://graph.facebook.com/APP_ID/accounts/test-users?
+  installed=true
+  &amp;name=FULL_NAME
+  &amp;locale=en_US
+  &amp;permissions=read_stream
+  &amp;method=post
+  &amp;access_token=APP_ACCESS_TOKEN
+</pre>
+<p>
+<b>Parameters:</b>
+</p>
+<p>You can specify whether this user has already installed your app as well as the set of permissions that your app is granted for this user by default upon creation.</p>
+<p>
+<code>installed</code>: This is a Boolean parameter to specify whether your app should be installed for the test user at the time of creation. It is <code>true</code> by default.</p>
+<p>
+<code>name</code>: This is an optional string parameter. You can specify a name for the test user you create. The specified name will also be used in the email address assigned to the test user.</p>
+<p>
+<code>locale</code>: This is an optional string parameter. You can specify a local for the test user you create, the default is en_US. The list of supported locales is available as an <a href="https://www.facebook.com/translations/FacebookLocales.xml" name="https://www.facebook.com/translations/FacebookLocales.xml">XML file</a>.</p>
+<p>
+<code>permissions</code>: This is a comma-separated list of <a href="https://developers.facebook.com/docs/authentication/permissions" name="https://developers.facebook.com/docs/authentication/permissions">extended permissions</a>. Your app is granted these permissions for the new test user if <code>installed</code> is <code>true</code>.</p>
+<p>
+<code>access_token</code>: This is an <a href="https://developers.facebook.com/docs/authentication/#applogin" name="https://developers.facebook.com/docs/authentication/#applogin">app access token</a>.</p>
+<p>
+<b>Response :</b>
+</p>
+<pre>{ 
+  &quot;id&quot;: &quot;1234...&quot;,  
+  &quot;access_token&quot;:&quot;1234567...&quot; , 
+  &quot;login_url&quot;:&quot;https://www.facebook.com/platform/test_account...&quot;
+  &quot;email&quot;: &quot;example...@tfbnw.net&quot;,
+  &quot;password&quot;: &quot;1234...&quot;
+}</pre>
+<p>
+<code>id</code> : User id of the test user</p>
+<p>
+<code>access_token</code>: You can use this access token to make API calls on behalf of the test user. This is available only if your app has been installed by the test user.</p>
+<p>
+<code>login_url</code>: You can login as the test user by going to this url. This expires on first use or after one hour whichever happens first to ensure that the test accounts remain secure. You can easily refresh the login_url by simply calling the get method again.</p>
+<p>
+<code>email</code>: If logging in manually (that is, not using the login_url), you can use this as the user&apos;s email address.</p>
+<p>
+<code>password</code>: If logging in manually (that is, not using the login_url), you can use this as the user&apos;s password. You should store this password, as it will only be returned on the creation of the test user. This is because we don&apos;t store the password ourselves, just the hash. See <a href="#changepw" name="https://developers.facebook.com/docs/#changepw">this section</a> should you need to change/reset the password.</p>
+<p>
+<b>Error Codes: </b>
+</p>
+<p>If you exceed the limit of test users you can create for an app you will receive an error.</p>
+<pre>Error code: 2900 (Too many test accounts)</pre>
+<hr />
+<h2>Adding existing test users to other apps</h2>
+<p>You can add existing test users to other apps by using the Graph API with the app access token that you&apos;re adding the user to.</p>
+<pre>
+https://graph.facebook.com/APP_ID/accounts/test-users?
+  installed=true
+  &amp;permissions=read_stream
+  &amp;uid=TEST_USER_ID
+  &amp;owner_access_token=APP_ACCESS_TOKEN_OWNER
+  &amp;access_token=APP_ACCESS_TOKEN
+  &amp;method=post
+</pre>
+<p>
+<b>Parameters:</b>
+</p>
+<p>
+<code>uid</code> : User id of the existing test user</p>
+<p>
+<code>owner_access_token</code> : App access token of the app used to create the test user</p>
+<hr />
+<h2>Accessing</h2>
+<p>You can access the test users associated with an app by making a <code>GET</code> request to the Graph API with the app access token.</p>
+<p>
+<b>API</b>
+</p>
+<pre>
+https://graph.facebook.com/APP_ID/accounts/test-users?
+  access_token=APP_ACCESS_TOKEN
+</pre>
+<p>
+<b>Response:</b>
+</p>
+<pre>{
+ &quot;data&quot; [
+   { 
+    &quot;id&quot;: &quot;1231....&quot;,  
+    &quot;access_token&quot;:&quot;1223134...&quot; , 
+    &quot;login_url&quot;:&quot;https://www.facebook.com/platform/test_account..&quot; 
+   }
+   { 
+    &quot;id&quot;: &quot;1231....&quot;,  
+    &quot;access_token&quot;:&quot;1223134...&quot; , 
+    &quot;login_url&quot;:&quot;https://www.facebook.com/platform/test_account..&quot; 
+   }
+ ]
+}
+</pre>
+<p>
+<code>id</code> : User id of the test user</p>
+<p>
+<code>access_token</code>: You can use this access token to make API calls on behalf of the test user. This is available only if your app has been installed by the test user.</p>
+<p>
+<code>login_url</code>: You can login as the test user by going to this url. This expires on first use or after two hours whichever happens first.</p>
+<hr />
+<h2>Making friend connections</h2>
+<p>You can use the API to make friends connections for a test user with other test users of that app. We provide an API for creating a friend request as well as for accepting a friend request. This enables developers to create several friend connections between test users via the API itself, without having to log-in as the test user to accept requests.</p>
+<p>
+<b>API</b>
+</p>
+<pre>
+https://graph.facebook.com/TEST_USER_1_ID/friends/TEST_USER_2_ID?
+  method=post
+  &amp;access_token=TEST_USER_1_ACCESS_TOKEN
+
+https://graph.facebook.com/TEST_USER_2_ID/friends/TEST_USER_1_ID?
+  method=post
+  &amp;access_token=TEST_USER_2_ACCESS_TOKEN
+</pre>
+<ul>
+<li>The first call should be made with access token of TEST_USER_1_ID. This will creates a friend request from TEST_USER_1_ID to TEST_USER_2_ID. </li>
+<li>The second call should be made with access token for TEST_USER_2_ID and will confirm the request.</li>
+</ul>
+<p>
+<b>Response:</b> <code>true</code> on success, <code>false</code> otherwise</p>
+<hr />
+<h2>
+<a name="changepw">
+</a>Changing a test user&apos;s password and name</h2>
+<p>You can change a test user&apos;s password by simply issuing a <code>POST</code> request with a <code>password</code> parameter to the test user ID in the Graph API.</p>
+<p>
+<b>API</b>
+</p>
+<pre>
+https://graph.facebook.com/TEST_USER_ID?
+  password=NEW_PASSWORD
+  &amp;name=NEW_NAME   
+  &amp;method=post
+  &amp;access_token=APP_ACCESS_TOKEN
+</pre>
+<p>
+<b>Parameters:</b>
+</p>
+<p>
+<code>password</code> and <code>name</code>: both optional parameters. This request can be used to change the name and/or password of an existing test user.</p>
+<p>
+<b>Response:</b> <code>true</code> on success, <code>false</code> otherwise</p>
+<hr />
+<h2>Deleting</h2>
+<p>You can delete an existing test user like any other object in the graph.</p>
+<p>
+<b>API</b>
+</p>
+<pre>
+https://graph.facebook.com/TEST_USER_ID?
+  method=delete
+  &amp;access_token=TEST_USER_ACCESS_TOKEN (OR) APP_ACCESS_TOKEN
+</pre>
+<p>
+<b>Response:</b> <code>true</code> on success, <code>false</code> otherwise</p>
+<p>
+<b>Error Codes: </b>
+</p>
+<p>
+<code>API_EC_TEST_ACCOUNTS_CANT_DELETE (2903)</code> : Test user is associated with multiple apps.</p>
+<p>
+<code>API_EC_TEST_ACCOUNTS_CANT_REMOVE_APP (2902)</code> : Test user must be associated with at least one app.</p>
+<p>
+<code>API_EC_TEST_ACCOUNTS_INVALID_ID (2901)</code>: Test user is not associated with this app.</p>
+<hr />
+<h2>Limitations</h2>
+<p>We ensure that test users are exempt from Facebook spam or fake account detection systems to ensure that you can test your app without worrying about getting disabled.</p>
+<p>Also, to ensure that using test user accounts to test various scenarios doesn&apos;t end up unintentionally creating spam, we enforce certain limitations on what test users can do.</p>
+<ul>
+<li>Test users can interact with other test users only and not with real users on site.</li>
+<li>Test users cannot fan a public Page or create public content on them like writing on a Page&apos;s wall. A Test user can however view and interact with the app tab on the Page if they are associated with that app. </li>
+<li>They can be accessed and used by any developer of the associated app.</li>
+<li>They only have test privileges on the associated app. This implies that they can use the app in live mode or sandbox mode but cannot edit any technical settings or access insights for that app.</li>
+<li>A test user is always a test user and cannot be converted to a normal user account.</li>
+</ul>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/test_users/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1331917490" title="2012年3月16日 10:04">約3ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

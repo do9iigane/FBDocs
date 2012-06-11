@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/bestpractices/creating-timeline-aggregations/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/bestpractices/creating-timeline-aggregations/">https://developers.facebook.com/docs/bestpractices/creating-timeline-aggregations/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li>
+<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+</li>
+<li>
+<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="/tools" name="https://developers.facebook.com/tools">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Guide: Creating Timeline Aggregations</h1>
+</div>
+</div>
+<p>In our last series of <a href="https://developers.facebook.com/docs/bestpractices/" name="https://developers.facebook.com/docs/bestpractices/">guides</a>, we talked about <a href="https://developers.facebook.com/docs/bestpractices/creating-actions-objects/" name="https://developers.facebook.com/docs/bestpractices/creating-actions-objects/">creating engaging Open Graph stories using actions and objects</a>. In this series, we’ll explain how to build aggregations for Facebook Timeline. We’ll start with the basics, and get more specific in the next guide.</p>
+<h3>What’s a timeline aggregation?</h3>
+<p>Timeline aggregations are stories about a person’s app activity that have been grouped together and published on their timeline. Aggregations let people view their activity in new and interesting ways, and make it easy for others to see what they’re up to at specific points in time.</p>
+<p>For example, a timeline aggregation could include all the restaurants a person visited during their San Francisco vacation, or the all the locations they checked into.</p>
+<p>Timeline aggregations can appear in a report on timeline and in the apps tab view.</p>
+<table class="uiGrid">
+<tr>
+<td>
+<img class="border" src="https://developers.facebook.com/attachment/FS_agg.jpg" width="232" />
+<br />
+<i>Report aggregation</i>
+</td>
+<td>
+<img class="border" src="https://developers.facebook.com/attachment/4SQ_agg.jpg" width="418" />
+<br />
+<i>Apps tab aggregation</i>
+</td>
+</tr>
+</table>
+<h3>How timeline aggregations work</h3>
+<p>Timeline aggregations are built from Open Graph stories people share from your app. Here’s an example of how they work:</p>
+<ol>
+<li>Andy, a Goodreads user, shares a story about rating a book:<br />
+<br />
+<img class="border" src="https://developers.facebook.com/attachment/GR_action2.jpg" width="400" />
+</li>
+<li>Later, this story becomes part of an aggregation on his timeline. This aggregation lets Andy and his friends see all the books he read in February:<br />
+<br />
+<img class="border" src="https://developers.facebook.com/attachment/GR_agg.jpg" width="400" />
+</li>
+</ol>
+<p>
+<br /> Whether or not an aggregation appears on someone’s timeline depends on two factors:</p>
+<ul>
+<li>
+<b>Data availability:</b> Has the person published multiple stories from your app over a given time period to warrant an aggregation? If there aren’t enough stories, an aggregation won’t be created.</li>
+<li>
+<b>Feedback:</b> Have people shown interest in the story by liking or commenting? Has the person hidden the story or removed the app?</li>
+</ul>
+<h3>Types of timeline aggregations</h3>
+<p>There are six different layout styles for timeline aggregations: lists, galleries, tables, numbers, items and maps. You can define which layout styles your app will display using the <a href="#" name="https://developers.facebook.com/docs/#">developer tool</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Type of Aggregation</th>
+<th>How It Works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<b>List</b>
+<br />
+<br />
+<center>
+<img class="border" src="https://developers.facebook.com/attachment/GR_type.jpg" width="400" />
+</center>
+</td>
+<td>List aggregations highlight a person&apos;s recent activity or favorite objects. They’re great for detailed, data-rich stories.<br />
+<br />Displays a thumbnail image and 3 lines of text.</td>
+</tr>
+<tr>
+<td>
+<b>Gallery</b>
+<br />
+<br />
+<center>
+<img class="border" src="https://developers.facebook.com/attachment/FS_type.jpg" width="400" />
+</center>
+</td>
+<td>Gallery aggregations highlight a person’s photo activity. They’re great for apps with photo-based objects.<br />
+<br />Displays up to 4 photos and a single line of text.</td>
+</tr>
+<tr>
+<td>
+<b>Table</b>
+<br />
+<br />
+<center>
+<img class="border" src="https://developers.facebook.com/attachment/MMR_type2.jpg" width="400" />
+</center>
+</td>
+<td>Table aggregations let people easily view lots of activity data. They’re great for apps with lots of statistical data (ex: fitness apps that track time, distance and speed).<br />
+<br />Displays information in a table format.</td>
+</tr>
+<tr>
+<td>
+<b>Number</b>
+<br />
+<br />
+<center>
+<img class="border" src="https://developers.facebook.com/attachment/RT_type2.jpg" width="400" />
+</center>
+</td>
+<td>Number aggregations highlight a single, meaningful number. They’re great for apps whose users care about specific type of information (ex: the total miles they ran in a time period or the number of restaurant reviews they’ve posted).<br />
+<br />Displays a single number with basic caption text.</td>
+</tr>
+<tr>
+<td>
+<b>Item</b>
+<br />
+<br />
+<center>
+<img class="border" src="https://developers.facebook.com/attachment/iheart_type.jpg" width="400" />
+</center>
+</td>
+<td>Item aggregations highlight a single, interesting action or object with a compelling photo or image. They’re great for apps with rich imagery or infrequent stories.<br />
+<br />Displays an image with basic caption text.</td>
+</tr>
+<tr>
+<td>
+<b>Map</b>
+<br />
+<br />
+<center>
+<img class="border" src="https://developers.facebook.com/attachment/endo_type2.jpg" width="400" />
+</center>
+</td>
+<td>Map aggregations highlight where a person’s activity took place. For example, a lifestyle app could show the geo-coordinates of the &quot;longest run&quot; a person took.<br />
+<br />They’re great for showing single or multiple activities where sharing the location is important, (ex: all the restaurants a person visited, running routes).</td>
+</tr>
+</tbody>
+</table>
+<h3>1. Thinking about information</h3>
+<table class="uiGrid">
+<tr>
+<td> Interacting with an aggregation is the main way people will access your app from their timelines. So when you’re creating aggregations, be sure to think about what information people will find interesting. In addition to actions and objects, you might try aggregating on properties. For example, Pose aggregates on Most Loved Brands, where Brand is a property of an Item. </td>
+<td>
+<img class="border" src="https://developers.facebook.com/attachment/pose_info2.jpg" width="400" />
+</td>
+</tr>
+</table>
+<h3>2. Selecting the proper layout</h3>
+<table class="uiGrid">
+<tr>
+<td> Another way to make your aggregations interesting is to pick layout styles that are right for your app and meaningful to your users. If your app publishes stories about routes people run, for example, users might want to see a map aggregation that shows where those routes are. If your app publishes stories that include beautiful photos, such as Pinterest, a gallery aggregation will help showcase photos on timeline. </td>
+<td>
+<img class="border" src="https://developers.facebook.com/attachment/pin_select.jpg" width="400" />
+</td>
+</tr>
+</table>
+<h3>3. Prioritizing aggregations</h3>
+<table class="uiGrid">
+<tr>
+<td> Finally, if you create multiple aggregations, make sure they’re not repetitive, and order your reports starting with the information that’s most appealing to users. You can edit the report order in the aggregations section of your app dashboard. For instance, Gogobot orders their aggregations based on the common actions people take in their app. </td>
+<td>
+<img class="border" src="https://developers.facebook.com/attachment/gogo_order.jpg" width="400" />
+</td>
+</tr>
+</table>
+<h3>Next up</h3>
+<p>In our next guide, we’ll talk about creating timeline aggregations using the <a href="https://developers.facebook.com/apps/" name="https://developers.facebook.com/apps/">developer tool</a>. To learn more about the Open Graph, read our core <a href="https://developers.facebook.com/docs/opengraph/keyconcepts/" name="https://developers.facebook.com/docs/opengraph/keyconcepts/">Open Graph key concepts</a> or get started with the <a href="https://developers.facebook.com/docs/opengraph/tutorial/" name="https://developers.facebook.com/docs/opengraph/tutorial/">Open Graph tutorial</a>.</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/bestpractices/creating-timeline-aggregations/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1335990554" title="2012年5月2日 13:29">約1ヶ月前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>
