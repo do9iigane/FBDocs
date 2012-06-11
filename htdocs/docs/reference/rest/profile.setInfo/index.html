@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/reference/rest/profile.setInfo/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/rest/profile.setInfo/">https://developers.facebook.com/docs/reference/rest/profile.setInfo/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/" target="">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts" target="">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics" target="">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/" target="">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/" target="">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization/" name="https://developers.facebook.com/docs/internationalization" target="">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api" target="">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits/" name="https://developers.facebook.com/docs/credits" target="">Credits</a>
+</li>
+<li>
+<a href="/docs/chat/" name="https://developers.facebook.com/docs/chat" target="">Chat API</a>
+</li>
+<li>
+<a class="selected" href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/" target="">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/" target="">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/" target="">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/" target="">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks" target="">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="https://developers.facebook.com/tools" name="https://developers.facebook.com/tools" target="_blank">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Administrative Methods</h5>
+<ul>
+<li>
+<a href="/docs/reference/rest/admin.banUsers/" name="http://developers.facebook.com/docs/reference/rest/admin.banUsers/" target="">admin.banUsers</a>
+</li>
+<li>
+<a href="/docs/reference/rest/admin.getAllocation/" name="http://developers.facebook.com/docs/reference/rest/admin.getAllocation/" target="">admin.getAllocation</a>
+</li>
+<li>
+<a href="/docs/reference/rest/admin.getAppProperties/" name="http://developers.facebook.com/docs/reference/rest/admin.getAppProperties/" target="">admin.getAppProperties</a>
+</li>
+<li>
+<a href="/docs/reference/rest/admin.getBannedUsers/" name="http://developers.facebook.com/docs/reference/rest/admin.getBannedUsers/" target="">admin.getBannedUsers</a>
+</li>
+<li>
+<a href="/docs/reference/rest/admin.getRestrictionInfo/" name="http://developers.facebook.com/docs/reference/rest/admin.getRestrictionInfo/" target="">admin.getRestrictionInfo</a>
+</li>
+<li>
+<a href="/docs/reference/rest/admin.setAppProperties/" name="http://developers.facebook.com/docs/reference/rest/admin.setAppProperties/" target="">admin.setAppProperties</a>
+</li>
+<li>
+<a href="/docs/reference/rest/admin.setRestrictionInfo/" name="http://developers.facebook.com/docs/reference/rest/admin.setRestrictionInfo/" target="">admin.setRestrictionInfo</a>
+</li>
+<li>
+<a href="/docs/reference/rest/admin.unbanUsers/" name="http://developers.facebook.com/docs/reference/rest/admin.unbanUsers/" target="">admin.unbanUsers</a>
+</li>
+<li>
+<a href="/docs/reference/rest/application.getPublicInfo/" name="http://developers.facebook.com/docs/reference/rest/application.getPublicInfo/" target="">application.getPublicInfo</a>
+</li>
+<li>
+<a href="/docs/reference/rest/batch.run/" name="http://developers.facebook.com/docs/reference/rest/batch.run/" target="">batch.run</a>
+</li>
+<li>
+<a href="/docs/reference/rest/data.setCookie/" name="http://developers.facebook.com/docs/reference/rest/data.setCookie/" target="">data.setCookie</a>
+</li>
+<li>
+<a href="/docs/reference/rest/fbml.setRefHandle/" name="http://developers.facebook.com/docs/reference/rest/fbml.setRefHandle/" target="">fbml.setRefHandle</a>
+</li>
+<li>
+<a href="/docs/reference/rest/intl.getTranslations/" name="http://developers.facebook.com/docs/reference/rest/intl.getTranslations/" target="">intl.getTranslations</a>
+</li>
+<li>
+<a href="/docs/reference/rest/intl.uploadNativeStrings/" name="http://developers.facebook.com/docs/reference/rest/intl.uploadNativeStrings/" target="">intl.uploadNativeStrings</a>
+</li>
+<li>
+<a href="/docs/reference/rest/links.getStats/" name="http://developers.facebook.com/docs/reference/rest/links.getStats/" target="">links.getStats</a>
+</li>
+<li>
+<a href="/docs/reference/rest/migrations.getStatuses/" name="http://developers.facebook.com/docs/reference/rest/migrations.getStatuses/" target="">migrations.getStatuses</a>
+</li>
+<li>
+<a href="/docs/reference/rest/migrations.setStatus/" name="http://developers.facebook.com/docs/reference/rest/migrations.setStatus/" target="">migrations.setStatus</a>
+</li>
+<li>
+<a href="/docs/reference/rest/pages.blockFan/" name="http://developers.facebook.com/docs/reference/rest/pages.blockFan/" target="">pages.blockFan</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Login/Auth Methods</h5>
+<ul>
+<li>
+<a href="/docs/reference/rest/auth.createToken/" name="http://developers.facebook.com/docs/reference/rest/auth.createToken/" target="">auth.createToken</a>
+</li>
+<li>
+<a href="/docs/reference/rest/auth.expireSession/" name="http://developers.facebook.com/docs/reference/rest/auth.expireSession/" target="">auth.expireSession</a>
+</li>
+<li>
+<a href="/docs/reference/rest/auth.getSession/" name="http://developers.facebook.com/docs/reference/rest/auth.getSession/" target="">auth.getSession</a>
+</li>
+<li>
+<a href="/docs/reference/rest/auth.promoteSession/" name="http://developers.facebook.com/docs/reference/rest/auth.promoteSession/" target="">auth.promoteSession</a>
+</li>
+<li>
+<a href="/docs/reference/rest/auth.revokeAuthorization/" name="http://developers.facebook.com/docs/reference/rest/auth.revokeAuthorization/" target="">auth.revokeAuthorization</a>
+</li>
+<li>
+<a href="/docs/reference/rest/auth.revokeExtendedPermission/" name="http://developers.facebook.com/docs/reference/rest/auth.revokeExtendedPermission/" target="">auth.revokeExtendedPermission</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Data Retrieval Methods</h5>
+<ul>
+<li>
+<a href="/docs/reference/rest/comments.get/" name="http://developers.facebook.com/docs/reference/rest/comments.get/" target="">comments.get</a>
+</li>
+<li>
+<a href="/docs/reference/rest/data.getCookies/" name="http://developers.facebook.com/docs/reference/rest/data.getCookies/" target="">data.getCookies</a>
+</li>
+<li>
+<a href="/docs/reference/rest/fbml.refreshImgSrc/" name="http://developers.facebook.com/docs/reference/rest/fbml.refreshImgSrc/" target="">fbml.refreshImgSrc</a>
+</li>
+<li>
+<a href="/docs/reference/rest/fbml.refreshRefUrl/" name="http://developers.facebook.com/docs/reference/rest/fbml.refreshRefUrl/" target="">fbml.refreshRefUrl</a>
+</li>
+<li>
+<a href="/docs/reference/rest/fql.multiquery/" name="http://developers.facebook.com/docs/reference/rest/fql.multiquery/" target="">fql.multiquery</a>
+</li>
+<li>
+<a href="/docs/reference/rest/fql.query/" name="http://developers.facebook.com/docs/reference/rest/fql.query/" target="">fql.query</a>
+</li>
+<li>
+<a href="/docs/reference/rest/friends.areFriends/" name="http://developers.facebook.com/docs/reference/rest/friends.areFriends/" target="">friends.areFriends</a>
+</li>
+<li>
+<a href="/docs/reference/rest/friends.get/" name="http://developers.facebook.com/docs/reference/rest/friends.get/" target="">friends.get</a>
+</li>
+<li>
+<a href="/docs/reference/rest/friends.getAppUsers/" name="http://developers.facebook.com/docs/reference/rest/friends.getAppUsers/" target="">friends.getAppUsers</a>
+</li>
+<li>
+<a href="/docs/reference/rest/friends.getLists/" name="http://developers.facebook.com/docs/reference/rest/friends.getLists/" target="">friends.getLists</a>
+</li>
+<li>
+<a href="/docs/reference/rest/friends.getMutualFriends/" name="http://developers.facebook.com/docs/reference/rest/friends.getMutualFriends/" target="">friends.getMutualFriends</a>
+</li>
+<li>
+<a href="/docs/reference/rest/groups.get/" name="http://developers.facebook.com/docs/reference/rest/groups.get/" target="">groups.get</a>
+</li>
+<li>
+<a href="/docs/reference/rest/groups.getMembers/" name="http://developers.facebook.com/docs/reference/rest/groups.getMembers/" target="">groups.getMembers</a>
+</li>
+<li>
+<a href="/docs/reference/rest/links.get/" name="http://developers.facebook.com/docs/reference/rest/links.get/" target="">links.get</a>
+</li>
+<li>
+<a href="/docs/reference/rest/message.getThreadsInFolder/" name="http://developers.facebook.com/docs/reference/rest/message.getThreadsInFolder/" target="">message.getThreadsInFolder</a>
+</li>
+<li>
+<a href="/docs/reference/rest/notes.get/" name="http://developers.facebook.com/docs/reference/rest/notes.get/" target="">notes.get</a>
+</li>
+<li>
+<a href="/docs/reference/rest/notifications.get/" name="http://developers.facebook.com/docs/reference/rest/notifications.get/" target="">notifications.get</a>
+</li>
+<li>
+<a href="/docs/reference/rest/notifications.getList/" name="http://developers.facebook.com/docs/reference/rest/notifications.getList/" target="">notifications.getList</a>
+</li>
+<li>
+<a href="/docs/reference/rest/pages.getinfo/" name="http://developers.facebook.com/docs/reference/rest/pages.getinfo/" target="">pages.getinfo</a>
+</li>
+<li>
+<a href="/docs/reference/rest/pages.isAdmin/" name="http://developers.facebook.com/docs/reference/rest/pages.isAdmin/" target="">pages.isAdmin</a>
+</li>
+<li>
+<a href="/docs/reference/rest/pages.isAppAdded/" name="http://developers.facebook.com/docs/reference/rest/pages.isAppAdded/" target="">pages.isAppAdded</a>
+</li>
+<li>
+<a href="/docs/reference/rest/pages.isFan/" name="http://developers.facebook.com/docs/reference/rest/pages.isFan/" target="">pages.isFan</a>
+</li>
+<li>
+<a href="/docs/reference/rest/photos.get/" name="http://developers.facebook.com/docs/reference/rest/photos.get/" target="">photos.get</a>
+</li>
+<li>
+<a href="/docs/reference/rest/photos.getAlbums/" name="http://developers.facebook.com/docs/reference/rest/photos.getAlbums/" target="">photos.getAlbums</a>
+</li>
+<li>
+<a href="/docs/reference/rest/photos.getTags/" name="http://developers.facebook.com/docs/reference/rest/photos.getTags/" target="">photos.getTags</a>
+</li>
+<li>
+<a href="/docs/reference/rest/privacy.get/" name="http://developers.facebook.com/docs/reference/rest/privacy.get/" target="">privacy.get</a>
+</li>
+<li>
+<a href="/docs/reference/rest/profile.getFBML/" name="http://developers.facebook.com/docs/reference/rest/profile.getFBML/" target="">profile.getFBML</a>
+</li>
+<li>
+<a href="/docs/reference/rest/profile.getInfo/" name="http://developers.facebook.com/docs/reference/rest/profile.getInfo/" target="">profile.getInfo</a>
+</li>
+<li>
+<a href="/docs/reference/rest/profile.getInfoOptions/" name="http://developers.facebook.com/docs/reference/rest/profile.getInfoOptions/" target="">profile.getInfoOptions</a>
+</li>
+<li>
+<a href="/docs/reference/rest/status.get/" name="http://developers.facebook.com/docs/reference/rest/status.get/" target="">status.get</a>
+</li>
+<li>
+<a href="/docs/reference/rest/stream.get/" name="http://developers.facebook.com/docs/reference/rest/stream.get/" target="">stream.get</a>
+</li>
+<li>
+<a href="/docs/reference/rest/stream.getComments/" name="http://developers.facebook.com/docs/reference/rest/stream.getComments/" target="">stream.getComments</a>
+</li>
+<li>
+<a href="/docs/reference/rest/stream.getFilters/" name="http://developers.facebook.com/docs/reference/rest/stream.getFilters/" target="">stream.getFilters</a>
+</li>
+<li>
+<a href="/docs/reference/rest/users.getInfo/" name="http://developers.facebook.com/docs/reference/rest/users.getInfo/" target="">users.getInfo</a>
+</li>
+<li>
+<a href="/docs/reference/rest/users.getLoggedInUser/" name="http://developers.facebook.com/docs/reference/rest/users.getLoggedInUser/" target="">users.getLoggedInUser</a>
+</li>
+<li>
+<a href="/docs/reference/rest/users.getStandardinfo/" name="http://developers.facebook.com/docs/reference/rest/users.getStandardinfo/" target="">users.getStandardinfo</a>
+</li>
+<li>
+<a href="/docs/reference/rest/users.hasAppPermission/" name="http://developers.facebook.com/docs/reference/rest/users.hasAppPermission/" target="">users.hasAppPermission</a>
+</li>
+<li>
+<a href="/docs/reference/rest/users.isAppUser/" name="http://developers.facebook.com/docs/reference/rest/users.isAppUser/" target="">users.isAppUser</a>
+</li>
+<li>
+<a href="/docs/reference/rest/users.isVerified/" name="http://developers.facebook.com/docs/reference/rest/users.isVerified/" target="">users.isVerified</a>
+</li>
+<li>
+<a href="/docs/reference/rest/video.getUploadLimits/" name="http://developers.facebook.com/docs/reference/rest/video.getUploadLimits/" target="">video.getUploadLimits</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Publishing Methods</h5>
+<ul>
+<li>
+<a href="/docs/reference/rest/comments.add/" name="http://developers.facebook.com/docs/reference/rest/comments.add/" target="">comments.add</a>
+</li>
+<li>
+<a href="/docs/reference/rest/comments.remove/" name="http://developers.facebook.com/docs/reference/rest/comments.remove/" target="">comments.remove</a>
+</li>
+<li>
+<a href="/docs/reference/rest/links.post/" name="http://developers.facebook.com/docs/reference/rest/links.post/" target="">links.post</a>
+</li>
+<li>
+<a href="/docs/reference/rest/links.preview/" name="http://developers.facebook.com/docs/reference/rest/links.preview/" target="">links.preview</a>
+</li>
+<li>
+<a href="/docs/reference/rest/liveMessage.send/" name="http://developers.facebook.com/docs/reference/rest/liveMessage.send/" target="">liveMessage.send</a>
+</li>
+<li>
+<a href="/docs/reference/rest/notes.create/" name="http://developers.facebook.com/docs/reference/rest/notes.create/" target="">notes.create</a>
+</li>
+<li>
+<a href="/docs/reference/rest/notes.delete/" name="http://developers.facebook.com/docs/reference/rest/notes.delete/" target="">notes.delete</a>
+</li>
+<li>
+<a href="/docs/reference/rest/notes.edit/" name="http://developers.facebook.com/docs/reference/rest/notes.edit/" target="">notes.edit</a>
+</li>
+<li>
+<a href="/docs/reference/rest/notifications.markRead/" name="http://developers.facebook.com/docs/reference/rest/notifications.markRead/" target="">notifications.markRead</a>
+</li>
+<li>
+<a href="/docs/reference/rest/notifications.sendEmail/" name="http://developers.facebook.com/docs/reference/rest/notifications.sendEmail/" target="">notifications.sendEmail</a>
+</li>
+<li>
+<a href="/docs/reference/rest/photos.addTag/" name="http://developers.facebook.com/docs/reference/rest/photos.addTag/" target="">photos.addTag</a>
+</li>
+<li>
+<a href="/docs/reference/rest/photos.createAlbum/" name="http://developers.facebook.com/docs/reference/rest/photos.createAlbum/" target="">photos.createAlbum</a>
+</li>
+<li>
+<a href="/docs/reference/rest/photos.upload/" name="http://developers.facebook.com/docs/reference/rest/photos.upload/" target="">photos.upload</a>
+</li>
+<li>
+<a href="/docs/reference/rest/profile.setFBML/" name="http://developers.facebook.com/docs/reference/rest/profile.setFBML/" target="">profile.setFBML</a>
+</li>
+<li>
+<a href="/docs/reference/rest/profile.setInfo/" name="http://developers.facebook.com/docs/reference/rest/profile.setInfo/" target="">profile.setInfo</a>
+</li>
+<li>
+<a href="/docs/reference/rest/profile.setInfoOptions/" name="http://developers.facebook.com/docs/reference/rest/profile.setInfoOptions/" target="">profile.setInfoOptions</a>
+</li>
+<li>
+<a href="/docs/reference/rest/status.set/" name="http://developers.facebook.com/docs/reference/rest/status.set/" target="">status.set</a>
+</li>
+<li>
+<a href="/docs/reference/rest/stream.addComment/" name="http://developers.facebook.com/docs/reference/rest/stream.addComment/" target="">stream.addComment</a>
+</li>
+<li>
+<a href="/docs/reference/rest/stream.addLike/" name="http://developers.facebook.com/docs/reference/rest/stream.addLike/" target="">stream.addLike</a>
+</li>
+<li>
+<a href="/docs/reference/rest/stream.publish/" name="http://developers.facebook.com/docs/reference/rest/stream.publish/" target="">stream.publish</a>
+</li>
+<li>
+<a href="/docs/reference/rest/stream.remove/" name="http://developers.facebook.com/docs/reference/rest/stream.remove/" target="">stream.remove</a>
+</li>
+<li>
+<a href="/docs/reference/rest/stream.removeComment/" name="http://developers.facebook.com/docs/reference/rest/stream.removeComment/" target="">stream.removeComment</a>
+</li>
+<li>
+<a href="/docs/reference/rest/stream.removeLike/" name="http://developers.facebook.com/docs/reference/rest/stream.removeLike/" target="">stream.removeLike</a>
+</li>
+<li>
+<a href="/docs/reference/rest/users.setStatus/" name="http://developers.facebook.com/docs/reference/rest/users.setStatus/" target="">users.setStatus</a>
+</li>
+<li>
+<a href="/docs/reference/rest/video.upload/" name="http://developers.facebook.com/docs/reference/rest/video.upload/" target="">video.upload</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Facebook Connect Methods</h5>
+<ul>
+</ul>
+</li>
+<li>
+<h5>Mobile Methods</h5>
+<ul>
+<li>
+<a href="/docs/reference/rest/sms.canSend/" name="http://developers.facebook.com/docs/reference/rest/sms.canSend/" target="">sms.canSend</a>
+</li>
+<li>
+<a href="/docs/reference/rest/sms.send/" name="http://developers.facebook.com/docs/reference/rest/sms.send/" target="">sms.send</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Dashboard API Methods</h5>
+<ul>
+<li>
+<a href="/docs/reference/rest/dashboard.decrementCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.decrementCount/" target="">dashboard.decrementCount</a>
+</li>
+<li>
+<a href="/docs/reference/rest/dashboard.getCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.getCount/" target="">dashboard.getCount</a>
+</li>
+<li>
+<a href="/docs/reference/rest/dashboard.incrementCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.incrementCount/" target="">dashboard.incrementCount</a>
+</li>
+<li>
+<a href="/docs/reference/rest/dashboard.multiGetCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.multiGetCount/" target="">dashboard.multiGetCount</a>
+</li>
+<li>
+<a href="/docs/reference/rest/dashboard.multiIncrementCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.multiIncrementCount/" target="">dashboard.multiIncrementCount</a>
+</li>
+<li>
+<a href="/docs/reference/rest/dashboard.multiSetCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.multiSetCount/" target="">dashboard.multiSetCount</a>
+</li>
+<li>
+<a href="/docs/reference/rest/dashboard.setCount/" name="http://developers.facebook.com/docs/reference/rest/dashboard.setCount/" target="">dashboard.setCount</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Events API Methods</h5>
+<ul>
+<li>
+<a href="/docs/reference/rest/events.cancel/" name="http://developers.facebook.com/docs/reference/rest/events.cancel/" target="">events.cancel</a>
+</li>
+<li>
+<a href="/docs/reference/rest/events.create/" name="http://developers.facebook.com/docs/reference/rest/events.create/" target="">events.create</a>
+</li>
+<li>
+<a href="/docs/reference/rest/events.edit/" name="http://developers.facebook.com/docs/reference/rest/events.edit/" target="">events.edit</a>
+</li>
+<li>
+<a href="/docs/reference/rest/events.get/" name="http://developers.facebook.com/docs/reference/rest/events.get/" target="">events.get</a>
+</li>
+<li>
+<a href="/docs/reference/rest/events.getMembers/" name="http://developers.facebook.com/docs/reference/rest/events.getMembers/" target="">events.getMembers</a>
+</li>
+<li>
+<a href="/docs/reference/rest/events.invite/" name="http://developers.facebook.com/docs/reference/rest/events.invite/" target="">events.invite</a>
+</li>
+<li>
+<a href="/docs/reference/rest/events.rsvp/" name="http://developers.facebook.com/docs/reference/rest/events.rsvp/" target="">events.rsvp</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Custom Tags API Methods</h5>
+<ul>
+<li>
+<a href="/docs/reference/rest/fbml.deleteCustomTags/" name="http://developers.facebook.com/docs/reference/rest/fbml.deleteCustomTags/" target="">fbml.deleteCustomTags</a>
+</li>
+<li>
+<a href="/docs/reference/rest/fbml.getCustomTags/" name="http://developers.facebook.com/docs/reference/rest/fbml.getCustomTags/" target="">fbml.getCustomTags</a>
+</li>
+<li>
+<a href="/docs/reference/rest/fbml.registerCustomTags/" name="http://developers.facebook.com/docs/reference/rest/fbml.registerCustomTags/" target="">fbml.registerCustomTags</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Ads Methods</h5>
+<ul>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>profile.setInfo</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a> › <a href="/docs/reference/rest/profile.setInfo/" name="https://developers.facebook.com/docs/reference/rest/profile.setInfo/">profile.setInfo</a>
+</div>
+</div>
+</div>
+<p>
+<strong>To integrate into the profile, use application tabs. For more information, please read the Developer Roadmap.</strong>
+</p>
+<p>Configures an application info section that the specified user can install on the Info tab of her profile.</p>
+<p>You prompt the user to install the section using the fb:add-section-button tag (set the <code>section</code> parameter to <strong>info</strong>). The button remains on your canvas page until the user clicks it to add the section.</p>
+<h2>パラメータ</h2>
+<table class="params">
+<tr>
+<th>名前</th>
+<th>タイプ</th>
+<th>説明</th>
+</tr>
+<tr>
+<td class="name">title</td>
+<td class="type">string</td>
+<td>
+<p>The title or header of the application info section.</p>
+</td>
+</tr>
+<tr>
+<td class="name">type</td>
+<td class="type">int</td>
+<td>
+<p>Specify <code>1</code> for a text-only field-item configuration or <code>5</code> for a thumbnail configuration.</p>
+</td>
+</tr>
+<tr>
+<td class="name">uid</td>
+<td class="type">int</td>
+<td>
+<p>The user ID of the user adding the application info section.</p>
+</td>
+</tr>
+<tr>
+<td class="name">[[info_fields]]</td>
+<td class="type">array</td>
+<td>
+<p>A JSON-encoded array of elements comprising an application info section, including the <code>field</code> (the title of the field) and an array of <code>info_item</code> objects (each object has a <code>label</code> and a <code>link</code>, and optionally contains <code>image</code>, <code>description</code>, and <code>sublabel</code> fields.</p>
+</td>
+</tr>
+</table>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/reference/rest/profile.setInfo/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1287790575" title="2010年10月22日 16:36">1年以上前に更新</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

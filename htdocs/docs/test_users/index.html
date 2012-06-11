@@ -13,50 +13,50 @@
 <div class="toplevelnav">
 <ul>
 <li>
-<a href="/docs/" name="https://developers.facebook.com/docs/">
+<a href="/docs/" name="https://developers.facebook.com/docs/" target="">
 <div class="navSectionTitle">Getting Started</div>
 </a>
 </li>
 <li>
-<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts" target="">
 <div class="navSectionTitle">Core Concepts</div>
 </a>
 </li>
 <li>
-<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics" target="">
 <div class="navSectionTitle">Advanced Topics</div>
 </a>
 </li>
 <li>
-<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks" target="">
 <div class="navSectionTitle">SDK Reference</div>
 </a>
 </li>
 <li class="active withsubsections">
-<a class="selected" href="/tools" name="https://developers.facebook.com/tools">
+<a class="selected" href="https://developers.facebook.com/tools" name="https://developers.facebook.com/tools" target="_blank">
 <div class="navSectionTitle">Tools</div>
 </a>
 <ul class="subsections">
 <li>
-<a href="/tools/explorer" name="https://developers.facebook.com/tools/explorer">Graph API Explorer</a>
+<a href="https://developers.facebook.com/tools/explorer" name="https://developers.facebook.com/tools/explorer" target="_blank">Graph API Explorer</a>
 </li>
 <li>
-<a href="/tools/console/" name="https://developers.facebook.com/tools/console/">JavaScript Test Console</a>
+<a href="https://developers.facebook.com/tools/console/" name="https://developers.facebook.com/tools/console/" target="_blank">JavaScript Test Console</a>
 </li>
 <li>
-<a href="/apps" name="https://developers.facebook.com/apps">Developer App</a>
+<a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps" target="_blank">Developer App</a>
 </li>
 <li>
-<a href="/docs/insights/" name="https://developers.facebook.com/docs/insights/">Insights</a>
+<a href="/docs/insights/" name="https://developers.facebook.com/docs/insights/" target="">Insights</a>
 </li>
 <li>
-<a href="/tools/access_token/" name="https://developers.facebook.com/tools/access_token/">Access Token Tool</a>
+<a href="https://developers.facebook.com/tools/access_token/" name="https://developers.facebook.com/tools/access_token/" target="_blank">Access Token Tool</a>
 </li>
 <li>
-<a href="/tools/debug/" name="https://developers.facebook.com/tools/debug/">Debugger</a>
+<a href="https://developers.facebook.com/tools/debug/" name="https://developers.facebook.com/tools/debug/" target="_blank">Debugger</a>
 </li>
 <li>
-<a class="selected" href="/docs/test_users" name="https://developers.facebook.com/docs/test_users">Test User API</a>
+<a class="selected" href="/docs/test_users/" name="https://developers.facebook.com/docs/test_users" target="">Test User API</a>
 </li>
 </ul>
 </li>
@@ -68,7 +68,7 @@
 <div class="content">
 <h1>Test Users</h1>
 <div class="breadcrumbs">
-<a href="/tools/" name="https://developers.facebook.com/tools/">Tools</a> › <a href="/docs/test_users/" name="https://developers.facebook.com/docs/test_users/">Test Users</a>
+<a href="https://developers.facebook.com/tools/" name="https://developers.facebook.com/tools/">Tools</a> › <a href="/docs/test_users/" name="https://developers.facebook.com/docs/test_users/">Test Users</a>
 </div>
 </div>
 </div>
@@ -77,7 +77,7 @@
 <p>An app can create up to 500 test users to start testing an app.</p>
 <hr />
 <h2>Creating</h2>
-<p>You can create a test user associated with a particular app using the <a href="https://developers.facebook.com/docs/api" name="https://developers.facebook.com/docs/api">Graph API</a> with your <a href="https://developers.facebook.com/docs/authentication/#applogin" name="https://developers.facebook.com/docs/authentication/#applogin">app access token</a>.</p>
+<p>You can create a test user associated with a particular app using the <a href="/docs/api/" name="https://developers.facebook.com/docs/api">Graph API</a> with your <a href="/docs/authentication/#applogin" name="https://developers.facebook.com/docs/authentication/#applogin">app access token</a>.</p>
 <p>
 <b>API</b>
 </p>
@@ -101,9 +101,9 @@ https://graph.facebook.com/APP_ID/accounts/test-users?
 <p>
 <code>locale</code>: This is an optional string parameter. You can specify a local for the test user you create, the default is en_US. The list of supported locales is available as an <a href="https://www.facebook.com/translations/FacebookLocales.xml" name="https://www.facebook.com/translations/FacebookLocales.xml">XML file</a>.</p>
 <p>
-<code>permissions</code>: This is a comma-separated list of <a href="https://developers.facebook.com/docs/authentication/permissions" name="https://developers.facebook.com/docs/authentication/permissions">extended permissions</a>. Your app is granted these permissions for the new test user if <code>installed</code> is <code>true</code>.</p>
+<code>permissions</code>: This is a comma-separated list of <a href="/docs/authentication/permissions/" name="https://developers.facebook.com/docs/authentication/permissions">extended permissions</a>. Your app is granted these permissions for the new test user if <code>installed</code> is <code>true</code>.</p>
 <p>
-<code>access_token</code>: This is an <a href="https://developers.facebook.com/docs/authentication/#applogin" name="https://developers.facebook.com/docs/authentication/#applogin">app access token</a>.</p>
+<code>access_token</code>: This is an <a href="/docs/authentication/#applogin" name="https://developers.facebook.com/docs/authentication/#applogin">app access token</a>.</p>
 <p>
 <b>Response :</b>
 </p>
@@ -123,7 +123,7 @@ https://graph.facebook.com/APP_ID/accounts/test-users?
 <p>
 <code>email</code>: If logging in manually (that is, not using the login_url), you can use this as the user&apos;s email address.</p>
 <p>
-<code>password</code>: If logging in manually (that is, not using the login_url), you can use this as the user&apos;s password. You should store this password, as it will only be returned on the creation of the test user. This is because we don&apos;t store the password ourselves, just the hash. See <a href="#changepw" name="https://developers.facebook.com/docs/#changepw">this section</a> should you need to change/reset the password.</p>
+<code>password</code>: If logging in manually (that is, not using the login_url), you can use this as the user&apos;s password. You should store this password, as it will only be returned on the creation of the test user. This is because we don&apos;t store the password ourselves, just the hash. See <a href="/docs/#changepw" name="https://developers.facebook.com/docs/#changepw">this section</a> should you need to change/reset the password.</p>
 <p>
 <b>Error Codes: </b>
 </p>

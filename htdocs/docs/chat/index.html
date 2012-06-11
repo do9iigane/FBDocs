@@ -13,59 +13,59 @@
 <div class="toplevelnav">
 <ul>
 <li>
-<a href="/docs/" name="https://developers.facebook.com/docs/">
+<a href="/docs/" name="https://developers.facebook.com/docs/" target="">
 <div class="navSectionTitle">Getting Started</div>
 </a>
 </li>
 <li>
-<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts" target="">
 <div class="navSectionTitle">Core Concepts</div>
 </a>
 </li>
 <li class="active withsubsections">
-<a class="selected" href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<a class="selected" href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics" target="">
 <div class="navSectionTitle">Advanced Topics</div>
 </a>
 <ul class="subsections">
 <li>
-<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/" target="">Dialogs</a>
 </li>
 <li>
-<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/" target="">FQL</a>
 </li>
 <li>
-<a href="/docs/internationalization" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+<a href="/docs/internationalization/" name="https://developers.facebook.com/docs/internationalization" target="">Internationalization</a>
 </li>
 <li>
-<a href="/docs/reference/ads-api" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+<a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api" target="">Ads API</a>
 </li>
 <li>
-<a href="/docs/credits" name="https://developers.facebook.com/docs/credits">Credits</a>
+<a href="/docs/credits/" name="https://developers.facebook.com/docs/credits" target="">Credits</a>
 </li>
 <li>
-<a class="selected" href="/docs/chat" name="https://developers.facebook.com/docs/chat">Chat API</a>
+<a class="selected" href="/docs/chat/" name="https://developers.facebook.com/docs/chat" target="">Chat API</a>
 </li>
 <li>
-<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/" target="">Legacy REST API</a>
 </li>
 <li>
-<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/" target="">Legacy FBML</a>
 </li>
 <li>
-<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/" target="">Legacy FBJS</a>
 </li>
 <li>
-<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/" target="">Legacy Javascript SDK</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks" target="">
 <div class="navSectionTitle">SDK Reference</div>
 </a>
 </li>
 <li>
-<a href="/tools" name="https://developers.facebook.com/tools">
+<a href="https://developers.facebook.com/tools" name="https://developers.facebook.com/tools" target="_blank">
 <div class="navSectionTitle">Tools</div>
 </a>
 </li>
@@ -95,9 +95,9 @@
 <p>Facebook Chat currently supports the following features:</p>
 <ul>
 <li>
-<a href="#platauth" name="https://developers.facebook.com/docs/#platauth">Facebook Platform authentication</a> using the X-FACEBOOK-PLATFORM <a href="http://asg.web.cmu.edu/sasl/" name="http://asg.web.cmu.edu/sasl/">SASL</a> authentication mechanism</li>
+<a href="/docs/#platauth" name="https://developers.facebook.com/docs/#platauth">Facebook Platform authentication</a> using the X-FACEBOOK-PLATFORM <a href="http://asg.web.cmu.edu/sasl/" name="http://asg.web.cmu.edu/sasl/">SASL</a> authentication mechanism</li>
 <li>
-<a href="#jabber" name="https://developers.facebook.com/docs/#jabber">Username/password authentication</a> using the DIGEST-MD5 authentication mechanism</li>
+<a href="/docs/#jabber" name="https://developers.facebook.com/docs/#jabber">Username/password authentication</a> using the DIGEST-MD5 authentication mechanism</li>
 <li>Sending and receiving plain-text messages (not HTML messages)</li>
 <li>Sending and receiving typing notifications using the <a href="http://xmpp.org/extensions/xep-0085.html" name="http://xmpp.org/extensions/xep-0085.html">XEP-0085</a> protocol extension (<em>not</em> the XEP-0022 extension)</li>
 <li>Setting the user idle using a show element in presence stanzas (there will be a delay before the user appears idle)</li>
@@ -128,7 +128,7 @@
 </p>
 <h3>Authenticating with Facebook Platform</h3>
 <p>We support a custom <a href="http://asg.web.cmu.edu/sasl/" name="http://asg.web.cmu.edu/sasl/">SASL</a> mechanism called X-FACEBOOK-PLATFORM that allows clients to connect to chat using Facebook authentication. This mechanism is preferred for any application that is oriented toward social media in general or Facebook in particular, especially applications that are already integrated with Facebook Platform.</p>
-<p>In order to connect using this mechanism, the user must first log in to your application and grant the <code>xmpp_login</code> <a href="../authentication/permissions" name="https://developers.facebook.com/authentication/permissions">extended permission</a>. Follow the <a href="/docs/authentication/#client-side-flow" name="https://developers.facebook.com/docs/authentication/#client-side-flow">client side flow</a> to get a valid access_token for the user with the <code>xmpp_login</code> extended permission.</p>
+<p>In order to connect using this mechanism, the user must first log in to your application and grant the <code>xmpp_login</code> <a href="https://developers.facebook.com/authentication/permissions" name="https://developers.facebook.com/authentication/permissions">extended permission</a>. Follow the <a href="/docs/authentication/#client-side-flow" name="https://developers.facebook.com/docs/authentication/#client-side-flow">client side flow</a> to get a valid access_token for the user with the <code>xmpp_login</code> extended permission.</p>
 <p>Your application may now log in to Facebook Chat via Jabber using the X-FACEBOOK-PLATFORM mechanism. The user&apos;s Jabber ID will be assigned during the resource binding step of XMPP. Please keep in mind that while all of the messages defined by the X-FACEBOOK-PLATFORM mechanism are UTF-8 strings, XMPP specifies that they should be Base64-encoded before being sent over the wire.</p>
 <p>The mechanism starts with a server challenge, in the form of a common HTTP query string: an ampersand-separated sequence of equals-sign-delimited key/value pairs. The keys and values are UTF-8-encoded and URL-encoded. The query string contains two items: <code>method</code> and <code>nonce</code>.</p>
 <p>The client&apos;s reply should be a similarly-encoded query string prepared as if it were going to call a method against the Facebook API. The call should contain the following parameters:</p>
@@ -162,7 +162,7 @@
 <li>Reports messages or any other information about user activity to a third party (including the client developer).</li>
 <li>Integrates with Facebook, or has a Facebook Application ID.</li>
 </ul>
-<p>If your application does any of the above, you must use <a href="#platauth" name="https://developers.facebook.com/docs/#platauth">Facebook Platform authentication</a> instead.</p>
+<p>If your application does any of the above, you must use <a href="/docs/#platauth" name="https://developers.facebook.com/docs/#platauth">Facebook Platform authentication</a> instead.</p>
 <p>The user&apos;s Jabber ID is simply his or her Facebook user name with <code>@chat.facebook.com</code> appended. A user must have a Facebook username to use DIGEST-MD5. After the user gets his or her username, he or she must log out of and into Facebook once for us to store the special hash of the password.</p>
 <p>Clients should retrieve their user&apos;s vCard from the server according to XEP-0054 in order to be able to display a more natural name to the user. For example:</p>
 <pre>

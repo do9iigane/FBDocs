@@ -13,27 +13,27 @@
 <div class="toplevelnav">
 <ul>
 <li>
-<a href="/docs/" name="https://developers.facebook.com/docs/">
+<a href="/docs/" name="https://developers.facebook.com/docs/" target="">
 <div class="navSectionTitle">Getting Started</div>
 </a>
 </li>
 <li>
-<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts" target="">
 <div class="navSectionTitle">Core Concepts</div>
 </a>
 </li>
 <li>
-<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics" target="">
 <div class="navSectionTitle">Advanced Topics</div>
 </a>
 </li>
 <li>
-<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks" target="">
 <div class="navSectionTitle">SDK Reference</div>
 </a>
 </li>
 <li>
-<a href="/tools" name="https://developers.facebook.com/tools">
+<a href="https://developers.facebook.com/tools" name="https://developers.facebook.com/tools" target="_blank">
 <div class="navSectionTitle">Tools</div>
 </a>
 </li>
@@ -56,10 +56,10 @@
 <p>We released an update to our SDKs for iPhone and Android that will allow access_token expiration to be extended. If you continue to use an older version, and do not implement changes to extend the token, the user will have to re-login to your app periodically when the access_token expires. See the iOS and Android doc pages for more information:</p>
 <ul>
 <li>
-<strong>iOS:</strong> <a href="https://developers.facebook.com/docs/mobile/ios/build/#extend_token" name="https://developers.facebook.com/docs/mobile/ios/build/#extend_token">https://developers.facebook.com/docs/mobile/ios/build/#extend_token</a>
+<strong>iOS:</strong> <a href="/docs/mobile/ios/build/#extend_token" name="https://developers.facebook.com/docs/mobile/ios/build/#extend_token">https://developers.facebook.com/docs/mobile/ios/build/#extend_token</a>
 </li>
 <li>
-<strong>Android:</strong> <a href="https://developers.facebook.com/docs/mobile/android/build/#extend_token" name="https://developers.facebook.com/docs/mobile/android/build/#extend_token">https://developers.facebook.com/docs/mobile/android/build/#extend_token</a>
+<strong>Android:</strong> <a href="/docs/mobile/android/build/#extend_token" name="https://developers.facebook.com/docs/mobile/android/build/#extend_token">https://developers.facebook.com/docs/mobile/android/build/#extend_token</a>
 </li>
 </ul>
 <h3>Exception 3: Native Mobile Apps using newer SDKs (iOS and Android)</h3>
@@ -70,12 +70,12 @@
 <img src="https://developers.facebook.com/attachment/deprecate%20offline_access.png" />
 </p>
 <h3>Scenario 1: If you were NOT previously asking for offline_access</h3>
-<p>There are no required changes needed for your app to continue functioning. If you were obtaining user access_tokens through the signed_requests or those returned in a browser hash-tag (client-side), those tokens will have short expirations. You should consider using our <a href="#extend_token" name="https://developers.facebook.com/docs/#extend_token">new endpoint</a> to exchange them for new access_tokens that have a longer expiration time. When you do the exchange, your short-lived access_token will continue to function until it expires, however, the new endpoint will return a second access_token that will have a much longer expiration and this is what you should use going forward.</p>
+<p>There are no required changes needed for your app to continue functioning. If you were obtaining user access_tokens through the signed_requests or those returned in a browser hash-tag (client-side), those tokens will have short expirations. You should consider using our <a href="/docs/#extend_token" name="https://developers.facebook.com/docs/#extend_token">new endpoint</a> to exchange them for new access_tokens that have a longer expiration time. When you do the exchange, your short-lived access_token will continue to function until it expires, however, the new endpoint will return a second access_token that will have a much longer expiration and this is what you should use going forward.</p>
 <h3>Scenario 2: If you have been previously requesting offline_access - updated 4/30/2012</h3>
 <p>Once the migration has been enabled, existing use access_tokens, with the offline_access permission, <b>will continue to work without any change to their expiration time</b>. However, new users to your app will not be prompted for the offline_access permission in the Auth Dialog and will receive either a short-lived or long-lived access_token depending on your environment and how you are requesting the access_token (client or server-side OAuth, see Scenario 3 and 4 below).</p>
 <p>After the offline_access removal date, currently set for 7/5/2012 <a href="https://developers.facebook.com/roadmap/" name="https://developers.facebook.com/roadmap/">(see roadmap for exact date)</a>, all existing offline_access access_tokens will have their expiration time truncated to 60 days. This truncation will be transparent to the user and your app will continue functioning normally; Facebook will send an updated message through the weekly developer round-up when this truncation will occur.</p>
 <h3>Scenario 3: Server-side OAuth Developers</h3>
-<p>Once the migration is enabled, if the access_token is generated from a <a href="https://developers.facebook.com/docs/authentication/server-side/" name="https://developers.facebook.com/docs/authentication/server-side/">server-side</a> OAuth call, the resulting access_token will have the longer expiration time by default. If the call is made while there is still a valid long-lived user access_token for that user, the returned user access_token from this second call may be the same or may have changed, but in either case the expiration time will be set to a long expiration time.<br />
+<p>Once the migration is enabled, if the access_token is generated from a <a href="/docs/authentication/server-side/" name="https://developers.facebook.com/docs/authentication/server-side/">server-side</a> OAuth call, the resulting access_token will have the longer expiration time by default. If the call is made while there is still a valid long-lived user access_token for that user, the returned user access_token from this second call may be the same or may have changed, but in either case the expiration time will be set to a long expiration time.<br />
 <b>Note:</b> The user must access your application before you&apos;re able to get a valid &quot;authorization Code&quot; to be able to make the server-side OAuth call again. Apps will not be able to setup a background/cron job that tries to automatically extend the expiration time, because the &quot;authorization code&quot; is short-lived and will have expired.</p>
 <h3 id="extend_token">Scenario 4: Client-side OAuth and Extending Access_Token Expiration Time through New Endpoint</h3>
 <p>Using the new endpoint below, you will be able to extend the expiration time of an existing, non-expired, short-lived user access_token. Please note, the endpoint can only be used to extend the short-lived user access_tokens. If you pass an access_token that had a long-lived expiration time, the endpoint will simply pass that same access_token back to you without altering or extending the expiration time.</p>

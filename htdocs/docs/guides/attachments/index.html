@@ -13,27 +13,27 @@
 <div class="toplevelnav">
 <ul>
 <li>
-<a href="/docs/" name="https://developers.facebook.com/docs/">
+<a href="/docs/" name="https://developers.facebook.com/docs/" target="">
 <div class="navSectionTitle">Getting Started</div>
 </a>
 </li>
 <li>
-<a href="/docs/coreconcepts" name="https://developers.facebook.com/docs/coreconcepts">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts" target="">
 <div class="navSectionTitle">Core Concepts</div>
 </a>
 </li>
 <li>
-<a href="/docs/advancedtopics" name="https://developers.facebook.com/docs/advancedtopics">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics" target="">
 <div class="navSectionTitle">Advanced Topics</div>
 </a>
 </li>
 <li>
-<a href="/docs/sdks" name="https://developers.facebook.com/docs/sdks">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks" target="">
 <div class="navSectionTitle">SDK Reference</div>
 </a>
 </li>
 <li>
-<a href="/tools" name="https://developers.facebook.com/tools">
+<a href="https://developers.facebook.com/tools" name="https://developers.facebook.com/tools" target="_blank">
 <div class="navSectionTitle">Tools</div>
 </a>
 </li>
@@ -76,11 +76,11 @@
 </li>
 <li>
 <p>
-<strong>comments_xid:</strong> An application-specific xid associated with the stream post. The xid allows you to get comments made to this post using the <a href="/docs/reference/rest/comments.get" name="https://developers.facebook.com/docs/reference/rest/comments.get">comments.get</a>. It also allows you to associate comments made to this post with a <a href="/docs/reference/plugins/comments" name="https://developers.facebook.com/docs/reference/plugins/comments">Comments Box</a> for FBML <a href="/docs/reference/fbml/comments_(XFBML)" name="https://developers.facebook.com/docs/reference/fbml/comments_(XFBML)">fb:comments</a>.</p>
+<strong>comments_xid:</strong> An application-specific xid associated with the stream post. The xid allows you to get comments made to this post using the <a href="/docs/reference/rest/comments.get/" name="https://developers.facebook.com/docs/reference/rest/comments.get">comments.get</a>. It also allows you to associate comments made to this post with a <a href="/docs/reference/plugins/comments/" name="https://developers.facebook.com/docs/reference/plugins/comments">Comments Box</a> for FBML <a href="/docs/reference/fbml/comments_(XFBML)/" name="https://developers.facebook.com/docs/reference/fbml/comments_(XFBML)">fb:comments</a>.</p>
 </li>
 <li>
 <p>
-<strong>Your own key/value pairs:</strong> You can include your own key/value pairs for your own use later on. These key/value pairs won&apos;t appear in any user&apos;s stream when published, but Facebook stores them. When you retrieve the user&apos;s stream later with <a href="/docs/reference/rest/stream.get" name="https://developers.facebook.com/docs/reference/rest/stream.get">stream.get</a>, these key/value pairs get returned with the rest of the user&apos;s stream.<br />
+<strong>Your own key/value pairs:</strong> You can include your own key/value pairs for your own use later on. These key/value pairs won&apos;t appear in any user&apos;s stream when published, but Facebook stores them. When you retrieve the user&apos;s stream later with <a href="/docs/reference/rest/stream.get/" name="https://developers.facebook.com/docs/reference/rest/stream.get">stream.get</a>, these key/value pairs get returned with the rest of the user&apos;s stream.<br />
 <br />For example, you might have an application that uses geo-tagging. You could pass through key/value pairs that record the user&apos;s latitude and longitude when the user publishes the post. Then, when you retrieve the streams for many of your users, you can use that data to plot out a geographic distribution of your users and their actions.</p>
 </li>
 </ul>
@@ -120,7 +120,7 @@
 </code>
 </pre>
 <p>
-<strong>Note:</strong> Although you pass photos and other images as type <em>image</em>, when you get the attachment by calling <a href="/docs/reference/rest/stream.get" name="https://developers.facebook.com/docs/reference/rest/stream.get">stream.get</a> or querying on the <a href="/docs/reference/fql/stream" name="https://developers.facebook.com/docs/reference/fql/stream">stream (FQL)</a> table, the image gets returned as type <em>photo</em>.</p>
+<strong>Note:</strong> Although you pass photos and other images as type <em>image</em>, when you get the attachment by calling <a href="/docs/reference/rest/stream.get/" name="https://developers.facebook.com/docs/reference/rest/stream.get">stream.get</a> or querying on the <a href="/docs/reference/fql/stream/" name="https://developers.facebook.com/docs/reference/fql/stream">stream (FQL)</a> table, the image gets returned as type <em>photo</em>.</p>
 <p>
 <strong>Note:</strong> Don&apos;t reference images that are hosted on the fbcdn.net domain. The images associated with these URLs aren&apos;t always optimized for stream stories and occasionally resulted in errors, leading to a poor user experience. Make sure your stream attachments don&apos;t reference images with this domain. You should host the images locally.</p>
 <h3>Using the <code>flash</code> Media Type</h3>
@@ -167,7 +167,7 @@
 </pre>
 <hr />
 <h2>Translating Attachments</h2>
-<p>If your application works with the Facebook <a href="https://wiki.developers.facebook.com/index.php/Internationalization" name="https://wiki.developers.facebook.com/index.php/Internationalization">Translations framework</a>, you can include <a href="../reference/fbml/intl" name="https://developers.facebook.com/reference/fbml/intl">fb:intl</a> and its child tags in your attachments.</p>
+<p>If your application works with the Facebook <a href="https://wiki.developers.facebook.com/index.php/Internationalization" name="https://wiki.developers.facebook.com/index.php/Internationalization">Translations framework</a>, you can include <a href="https://developers.facebook.com/reference/fbml/intl" name="https://developers.facebook.com/reference/fbml/intl">fb:intl</a> and its child tags in your attachments.</p>
 <div class="mtl pvm uiBoxWhite topborder">
 <div class="mbm lfloat">
 <fb:like href="http://developers.facebook.com/docs/guides/attachments/" send="true" show_faces="false">

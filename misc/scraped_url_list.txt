@@ -937,6 +937,7 @@ https://developers.facebook.com/docs/reference/rest/privacy.get/
 https://developers.facebook.com/docs/reference/rest/profile.getFBML/
 https://developers.facebook.com/docs/reference/rest/profile.getFBML/profile.setFBML/
 https://developers.facebook.com/docs/reference/rest/profile.getInfo/
+https://developers.facebook.com/docs/reference/rest/profile.getInfo/profile.setInfo/
 https://developers.facebook.com/docs/reference/rest/profile.getInfoOptions/
 https://developers.facebook.com/docs/reference/rest/profile.getInfoOptions/profile.setInfoOptions/
 https://developers.facebook.com/docs/reference/rest/profile.setFBML/
