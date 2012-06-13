@@ -484,6 +484,21 @@
 </tr>
 <tr>
 <td>
+<code>devices</code>
+</td>
+<td>
+<p>A list of the user&apos;s devices beyond desktop</p>
+</td>
+<td>
+<p>User <code>access_token</code> required; only available for friends of the current user</p>
+</td>
+<td>
+<p>
+<code>array</code> of objects containing <code>os</code> which may be a value of &apos;iOS&apos; or &apos;Android&apos;, along with an additional field <code>hardware</code> which may be a value of &apos;iPad&apos; or &apos;iPhone&apos; if present, however may not be returned if we are unable to determine the hardware model - Note: this is a non-default field and must be explicitly specified as shown below</p>
+</td>
+</tr>
+<tr>
+<td>
 <code>education</code>
 </td>
 <td>
@@ -1444,11 +1459,10 @@
 </tr>
 <tr>
 <td>
-<a href="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fvideos%2Fuploaded" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fvideos%2Fuploaded">videos</a>
+<a href="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fvideos" name="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=me%2Fvideos">videos</a>
 </td>
 <td>
-<p>The videos this user has been tagged in. To access the list of videos a user has uploaded, access <code>/videos/uploaded</code>
-</p>
+<p>The videos this user has been tagged in.</p>
 </td>
 <td>
 <p>
@@ -1829,36 +1843,6 @@
 <code> location_id </code>
 </td>
 <td> Facebook Place ID of the place the <a href="/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/"> Event </a> is taking place </td>
-<td>
-<code>string</code>
-</td>
-<td> no </td>
-</tr>
-<tr>
-<td>
-<code> city </code>
-</td>
-<td> Name of the city where the <a href="/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/"> Event </a> is taking place </td>
-<td>
-<code>string</code>
-</td>
-<td> no </td>
-</tr>
-<tr>
-<td>
-<code> state </code>
-</td>
-<td> Name of the state where the <a href="/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/"> Event </a> is taking place. Can only be used if a <code>city</code> is specified. </td>
-<td>
-<code>string</code>
-</td>
-<td> no </td>
-</tr>
-<tr>
-<td>
-<code> country </code>
-</td>
-<td> Name of the country where the <a href="/docs/reference/api/event/" name="https://developers.facebook.com/docs/reference/api/event/"> Event </a> is taking place. Can only be used if a <code>city</code> is specified. </td>
 <td>
 <code>string</code>
 </td>
@@ -2769,9 +2753,6 @@
 </p>
 <hr />
 <h2 id="videos">videos</h2>
-<h3>Read</h3>
-<p>You can read the videos a user is tagged in by issuing an <code>HTTP GET</code> request to <code>/USER_ID/videos</code> with the user <code>access_token</code> with the <code>user_videos</code> or <code>friends_videos</code> permission.</p>
-<p>You can read the videos a user has uploaded by issuing an <code>HTTP GET</code> request to <code>/USER_ID/videos/uploaded</code> with the user <code>access_token</code> with the <code>user_videos</code> or <code>friends_videos</code> permission.</p>
 <h3>Create</h3>
 <p>You can publish a <a href="/docs/reference/api/video/" name="https://developers.facebook.com/docs/reference/api/video/">video</a> on behalf of a user by issuing an HTTP POST request to <code>PROFILE_ID/videos</code> with the <code>publish_stream</code> permission and the following parameters.</p>
 <table>
@@ -3028,7 +3009,7 @@
 </fb:like>
 </div>
 <div class="clear">
-<abbr class="timestamp" data-utime="1339412961" title="2012年6月11日 4:09">2012年6月11日 4:09</abbr>
+<abbr class="timestamp" data-utime="1339548144" title="2012年6月12日 17:42">2012年6月12日 17:42</abbr>
 </div>
 </div></div>
 

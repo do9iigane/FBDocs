@@ -93,6 +93,7 @@ https://developers.facebook.com/docs/guides/canvas/
 https://developers.facebook.com/docs/guides/games/
 https://developers.facebook.com/docs/guides/games/auth/
 https://developers.facebook.com/docs/guides/games/canvas/
+https://developers.facebook.com/docs/guides/games/custom-multi-friend-selector/
 https://developers.facebook.com/docs/guides/games/custom-muti-friend-selector/
 https://developers.facebook.com/docs/guides/games/feed/
 https://developers.facebook.com/docs/guides/games/getting-started/
