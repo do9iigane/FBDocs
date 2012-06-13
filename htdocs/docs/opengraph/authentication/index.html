@@ -276,6 +276,20 @@
 </ul>
 </li>
 </ol>
+<p>
+<strong>A special consideration when using the Query String setting:</strong>
+</p>
+<p>If you would like to use the <a href="/docs/authentication/server-side/" name="https://developers.facebook.com/docs/authentication/server-side/">server-side authentication</a> flow it is important to make sure you are passing the <code>redirect_uri</code> parameter correctly when exchanging your <code>code</code> for an access token. You should set your <code>redirect_uri</code> parameter to the click-through URL to your site without the <code>code</code> parameter. In most cases the URL will look something like:</p>
+<pre>
+<code> http://www.example.com/?fb_source=search&amp;code=CODE_HERE
+</code>
+</pre>
+<p>Once you strip the code parameter it will become:</p>
+<pre>
+<code> http://www.example.com/?fb_source=search
+</code>
+</pre>
+<p>which is the value that should be set in <code>redirect_uri</code>. Please make sure that this logic is dynamic as the query parameters appended to your click-through URL may be subject to change.</p>
 <p>We strongly encourage all Open Graph apps to leverage Authenticated Referrals, as it will help drive activity, sharing, and distribution of your app. Authenticated Referrals is turned on for all new apps and off by default for all existing apps on Platform. Enable this feature by visiting the Auth Dialog tab in the <a href="/docs/apps/" name="https://developers.facebook.com/docs/apps">App Dashboard</a> and select &quot;Enabled&quot; for Authenticated Referrals option.</p>
 <p>
 <a name="add-data">
@@ -340,7 +354,7 @@
 </fb:like>
 </div>
 <div class="clear">
-<abbr class="timestamp" data-utime="1335818994" title="2012年4月30日 13:49">約1ヶ月前に更新</abbr>
+<abbr class="timestamp" data-utime="1339449452" title="2012年6月11日 14:17">2012年6月11日 14:17</abbr>
 </div>
 </div></div>
 
