@@ -13,22 +13,22 @@
 <div class="toplevelnav">
 <ul>
 <li>
-<a href="/docs/" name="https://developers.facebook.com/docs/" target="">
+<a href="/docs/" name="https://developers.facebook.com/docs/">
 <div class="navSectionTitle">Getting Started</div>
 </a>
 </li>
 <li>
-<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts" target="">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts">
 <div class="navSectionTitle">Core Concepts</div>
 </a>
 </li>
 <li>
-<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics" target="">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics">
 <div class="navSectionTitle">Advanced Topics</div>
 </a>
 </li>
 <li>
-<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks" target="">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks">
 <div class="navSectionTitle">SDK Reference</div>
 </a>
 </li>
@@ -99,7 +99,7 @@
 </tr>
 <tr>
 <td>fb_sig_locale</td>
-<td>The user&apos;s <a href="https://www.facebook.com/translations/FacebookLocales.xml" name="https://www.facebook.com/translations/FacebookLocales.xml">locale</a>.</td>
+<td>The user&apos;s <a href="https://www.facebook.com/translations/FacebookLocales.xml" name="https://www.facebook.com/translations/FacebookLocales.xml" target="_blank">locale</a>.</td>
 </tr>
 <tr>
 <td>fb_sig_request_method</td>
@@ -121,7 +121,7 @@
 <li>Remove the &quot;fb_sig_&quot; prefix from all of the parameter names (keys).</li>
 <li>Sort the values alphabetically by the keys.</li>
 <li>Concatenate all key/value pairs together in the format &quot;k=v&quot; (omitting the fb_sig parameter, since that is what we are calculating).</li>
-<li>Append your application secret, which you can find by going to the <a href="https://www.facebook.com/developers/apps.php" name="https://www.facebook.com/developers/apps.php">Developer application</a> and following the link for your application.</li>
+<li>Append your application secret, which you can find by going to the <a href="https://www.facebook.com/developers/apps.php" name="https://www.facebook.com/developers/apps.php" target="_blank">Developer application</a> and following the link for your application.</li>
 <li>Generate an MD5 hash of the whole string.</li>
 </ol>
 <p>The following PHP code provides a quick example of verifying information sent to an iFrame canvas application:</p>
@@ -154,7 +154,7 @@
 </a>
 </p>
 <h2>Migrating to OAuth 2.0</h2>
-<p>As of <a href="https://developers.facebook.com/blog/post/439" name="https://developers.facebook.com/blog/post/439">December 10, 2010</a>, OAuth 2.0 is the default authentication mechanism for Apps on Facebook.com.</p>
+<p>As of <a href="https://developers.facebook.com/blog/post/439" name="https://developers.facebook.com/blog/post/439" target="_blank">December 10, 2010</a>, OAuth 2.0 is the default authentication mechanism for Apps on Facebook.com.</p>
 <table>
 <thead>
 <tr>
@@ -179,7 +179,7 @@
 <td>
 <code>fb_sig_app_id</code>
 </td>
-<td>You should already know this. If you have 2 apps with the same endpoint, please give Facebook two different endpoints, and use a <a href="http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html" name="http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html">rewrite rule</a> or something similar to send users to the same code.</td>
+<td>You should already know this. If you have 2 apps with the same endpoint, please give Facebook two different endpoints, and use a <a href="http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html" name="http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html" target="_blank">rewrite rule</a> or something similar to send users to the same code.</td>
 </tr>
 <tr>
 <td>

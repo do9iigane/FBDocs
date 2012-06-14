@@ -13,22 +13,22 @@
 <div class="toplevelnav">
 <ul>
 <li>
-<a href="/docs/" name="https://developers.facebook.com/docs/" target="">
+<a href="/docs/" name="https://developers.facebook.com/docs/">
 <div class="navSectionTitle">Getting Started</div>
 </a>
 </li>
 <li>
-<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts" target="">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts">
 <div class="navSectionTitle">Core Concepts</div>
 </a>
 </li>
 <li>
-<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics" target="">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics">
 <div class="navSectionTitle">Advanced Topics</div>
 </a>
 </li>
 <li>
-<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks" target="">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks">
 <div class="navSectionTitle">SDK Reference</div>
 </a>
 </li>
@@ -46,13 +46,13 @@
 <h1>Android Single Sign-On</h1>
 </div>
 </div>
-<p>Before you begin development with the Facebook Android SDK, you will need to install the Android SDK and dev tools, Git (the source control client we use for this SDK) and then clone the lastest version of the SDK from <a href="http://github.com/" name="http://github.com/">GitHub</a>:</p>
+<p>Before you begin development with the Facebook Android SDK, you will need to install the Android SDK and dev tools, Git (the source control client we use for this SDK) and then clone the lastest version of the SDK from <a href="http://github.com/" name="http://github.com/" target="_blank">GitHub</a>:</p>
 <ul>
-<li>Install <a href="http://developer.android.com/sdk/index.html" name="http://developer.android.com/sdk/index.html">Android SDK</a> &amp; the <a href="http://developer.android.com/sdk/eclipse-adt.html" name="http://developer.android.com/sdk/eclipse-adt.html">Eclipse Plugin</a>
+<li>Install <a href="http://developer.android.com/sdk/index.html" name="http://developer.android.com/sdk/index.html" target="_blank">Android SDK</a> &amp; the <a href="http://developer.android.com/sdk/eclipse-adt.html" name="http://developer.android.com/sdk/eclipse-adt.html" target="_blank">Eclipse Plugin</a>
 </li>
-<li>Install <a href="http://git-scm.com/" name="http://git-scm.com/">Git</a>
+<li>Install <a href="http://git-scm.com/" name="http://git-scm.com/" target="_blank">Git</a>
 </li>
-<li>Clone the <a href="https://github.com/facebook/facebook-android-sdk" name="https://github.com/facebook/facebook-android-sdk">GitHub repository</a>: <code>git clone git://github.com/facebook/facebook-android-sdk.git</code>
+<li>Clone the <a href="https://github.com/facebook/facebook-android-sdk" name="https://github.com/facebook/facebook-android-sdk" target="_blank">GitHub repository</a>: <code>git clone git://github.com/facebook/facebook-android-sdk.git</code>
 </li>
 <li>
 <p>For Emulator testing, create Virtual devices by going to Eclipse-&gt;Window-&gt;Android SDK and AVD Manager-&gt;Virtual devices</p>
@@ -111,11 +111,11 @@
 <h2 id="sig">Step 4: Add app signature to the Facebook App</h2>
 <p>We now need to export the signature for your app so that Facebook can use to ensure users are only communicating with your app on the Android. This is done by running the <strong>keytool</strong> that comes with the Android SDK. The following shows how to export the key for your app using the debug defaults specified by the Android SDK and Eclipse.</p>
 <p>
-<strong>Warning</strong> - the keytool.exe silently generates keyhash even if it can&apos;t find the debug.keystore or if the password is incorrect. Make sure that you have provided the correct path to the debug.keystore and are using the correct password. For Windows, it&apos;s generally at C:\Users{user}.android. General Rule: If the tool doesn&apos;t ask for password, your keystore path is incorrect. Password: &apos;android&apos;. More info under &apos;Signing in Debug Mode&apos; on the <a href="http://developer.android.com/guide/publishing/app-signing.html" name="http://developer.android.com/guide/publishing/app-signing.html">Signing Your Applications</a>. Refer to Troubleshoot section below for more tips on keyhash.</p>
+<strong>Warning</strong> - the keytool.exe silently generates keyhash even if it can&apos;t find the debug.keystore or if the password is incorrect. Make sure that you have provided the correct path to the debug.keystore and are using the correct password. For Windows, it&apos;s generally at C:\Users{user}.android. General Rule: If the tool doesn&apos;t ask for password, your keystore path is incorrect. Password: &apos;android&apos;. More info under &apos;Signing in Debug Mode&apos; on the <a href="http://developer.android.com/guide/publishing/app-signing.html" name="http://developer.android.com/guide/publishing/app-signing.html" target="_blank">Signing Your Applications</a>. Refer to Troubleshoot section below for more tips on keyhash.</p>
 <pre>
 keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | openssl sha1 -binary | openssl base64
 </pre>
-<p>This tool generates a string that must be registered in the <strong>Mobile</strong> section of the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps">App Dashboard</a> for your app. Remember to click &apos;Save Changes&apos; to save the keyhash.</p>
+<p>This tool generates a string that must be registered in the <strong>Mobile</strong> section of the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps" target="_blank">App Dashboard</a> for your app. Remember to click &apos;Save Changes&apos; to save the keyhash.</p>
 <div align="center">
 <img src="https://developers.facebook.com/attachment/AndroidSSO_keyhash.png" width="100%" />
 </div>
@@ -193,7 +193,7 @@ adb install ~/facebook-android-sdk/Facebook.apk
 <div align="center">
 <img src="https://developers.facebook.com/attachment/AndroidSSO_secondrun.png" width="100%" />
 </div>
-<p>This dialog is displayed to mask the abrupt app-switching between your app and the Facebook app while Facebook SDK gets the access token for your app. This is not an optimal user experience and can be avoided by persistently saving the access token for your app. Let&apos;s rework on the previous code by using the <a href="http://developer.android.com/guide/topics/data/data-storage.html#pref" name="http://developer.android.com/guide/topics/data/data-storage.html#pref">Shared Preferences</a>.</p>
+<p>This dialog is displayed to mask the abrupt app-switching between your app and the Facebook app while Facebook SDK gets the access token for your app. This is not an optimal user experience and can be avoided by persistently saving the access token for your app. Let&apos;s rework on the previous code by using the <a href="http://developer.android.com/guide/topics/data/data-storage.html#pref" name="http://developer.android.com/guide/topics/data/data-storage.html#pref" target="_blank">Shared Preferences</a>.</p>
 <pre>
 package com.greatapp;
 
@@ -305,7 +305,7 @@ facebook.authorize(this, new String[] { &quot;email&quot;, &quot;read_stream&quo
 <ul>
 <li>
 <p>
-<b>Key Hash Reference Doc</b>: <a href="http://developer.android.com/guide/publishing/app-signing.html" name="http://developer.android.com/guide/publishing/app-signing.html">Signing Your Applications</a>.</p>
+<b>Key Hash Reference Doc</b>: <a href="http://developer.android.com/guide/publishing/app-signing.html" name="http://developer.android.com/guide/publishing/app-signing.html" target="_blank">Signing Your Applications</a>.</p>
 </li>
 <li>
 <p>
@@ -313,7 +313,7 @@ facebook.authorize(this, new String[] { &quot;email&quot;, &quot;read_stream&quo
 </li>
 <li>
 <p>
-<b>Openssl</b>: If you don&apos;t have openssl, install it from here: <a href="http://www.slproweb.com/products/Win32OpenSSL.html" name="http://www.slproweb.com/products/Win32OpenSSL.html">Windows</a>, <a href="http://www.openssl.org/source/" name="http://www.openssl.org/source/">MAC</a>. For Mac, follow the instructions <a href="http://www.itechtalk.com/thread7108.html" name="http://www.itechtalk.com/thread7108.html">here</a>.</p>
+<b>Openssl</b>: If you don&apos;t have openssl, install it from here: <a href="http://www.slproweb.com/products/Win32OpenSSL.html" name="http://www.slproweb.com/products/Win32OpenSSL.html" target="_blank">Windows</a>, <a href="http://www.openssl.org/source/" name="http://www.openssl.org/source/" target="_blank">MAC</a>. For Mac, follow the instructions <a href="http://www.itechtalk.com/thread7108.html" name="http://www.itechtalk.com/thread7108.html" target="_blank">here</a>.</p>
 </li>
 <li>
 <p>

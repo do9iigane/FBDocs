@@ -13,12 +13,12 @@
 <div class="toplevelnav">
 <ul>
 <li>
-<a href="/docs/" name="https://developers.facebook.com/docs/" target="">
+<a href="/docs/" name="https://developers.facebook.com/docs/">
 <div class="navSectionTitle">Getting Started</div>
 </a>
 </li>
 <li class="active withsubsections">
-<a class="selected" href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts" target="">
+<a class="selected" href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts">
 <div class="navSectionTitle">Core Concepts</div>
 </a>
 <ul class="subsections">
@@ -26,29 +26,29 @@
 <a href="https://developers.facebook.com/socialdesign" name="https://developers.facebook.com/socialdesign" target="_blank">Social Design</a>
 </li>
 <li>
-<a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins" target="">Social Plugins</a>
+<a href="/docs/plugins/" name="https://developers.facebook.com/docs/plugins">Social Plugins</a>
 </li>
 <li>
-<a href="/docs/opengraph/" name="https://developers.facebook.com/docs/opengraph" target="">Open Graph</a>
+<a href="/docs/opengraph/" name="https://developers.facebook.com/docs/opengraph">Open Graph</a>
 </li>
 <li>
-<a href="/docs/channels/" name="https://developers.facebook.com/docs/channels" target="">Social Channels</a>
+<a href="/docs/channels/" name="https://developers.facebook.com/docs/channels">Social Channels</a>
 </li>
 <li>
-<a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication" target="">Authentication</a>
+<a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication">Authentication</a>
 </li>
 <li>
-<a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api" target="">Graph API</a>
+<a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api">Graph API</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics" target="">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics">
 <div class="navSectionTitle">Advanced Topics</div>
 </a>
 </li>
 <li>
-<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks" target="">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks">
 <div class="navSectionTitle">SDK Reference</div>
 </a>
 </li>
@@ -66,13 +66,13 @@
 <h5>Plugins</h5>
 <ul>
 <li>
-<a href="/docs/plugins/registration/" name="http://developers.facebook.com/docs/plugins/registration/" target="">Registration</a>
+<a href="/docs/plugins/registration/" name="http://developers.facebook.com/docs/plugins/registration/">Registration</a>
 </li>
 <li>
-<a class="selected" href="/docs/plugins/registration/advanced/" name="http://developers.facebook.com/docs/plugins/registration/advanced/" target="">Registration Advanced Uses</a>
+<a class="selected" href="/docs/plugins/registration/advanced/" name="http://developers.facebook.com/docs/plugins/registration/advanced/">Registration Advanced Uses</a>
 </li>
 <li>
-<a href="/docs/user_registration/flows/" name="http://developers.facebook.com/docs/user_registration/flows/" target="">User Registration Flows</a>
+<a href="/docs/user_registration/flows/" name="http://developers.facebook.com/docs/user_registration/flows/">User Registration Flows</a>
 </li>
 </ul>
 </li>
@@ -97,7 +97,7 @@
 <hr />
 <h2>Client Side Validation</h2>
 <p>If you want to add validation to any of your fields during registration, you must use the XFBML version of the plugin, since the <code>iframe</code> can&apos;t do cross domain communication.</p>
-<p>Pass the name of a single global function as the <code>onvalidate</code> param to the <code>&lt;fb:registration&gt;</code>. This function will be called whenever a user <a href="https://developer.mozilla.org/en/DOM/element.onblur" name="https://developer.mozilla.org/en/DOM/element.onblur">blurs</a> a field or submits the form. For privacy reasons, the input to your function will be only the custom fields you requested, on blur or submit. (After registration, you will receive the complete set of data.) Your function should return an object with keys matching your field names, and values being the error string. Returning an empty object <code>{}</code> means there were no errors.</p>
+<p>Pass the name of a single global function as the <code>onvalidate</code> param to the <code>&lt;fb:registration&gt;</code>. This function will be called whenever a user <a href="https://developer.mozilla.org/en/DOM/element.onblur" name="https://developer.mozilla.org/en/DOM/element.onblur" target="_blank">blurs</a> a field or submits the form. For privacy reasons, the input to your function will be only the custom fields you requested, on blur or submit. (After registration, you will receive the complete set of data.) Your function should return an object with keys matching your field names, and values being the error string. Returning an empty object <code>{}</code> means there were no errors.</p>
 <p>During the blur call, only non-empty field&apos;s errors will be shown. Submitting the form will be canceled if your function returns any errors.</p>
 <p>
 <fb:registration fields="[
@@ -238,12 +238,12 @@ function validate_async(form, cb) {
 <code> &lt;script src=&quot;https://connect.facebook.net...&quot;&gt;&lt;/script&gt;
 </code>
 </pre>
-<p>If you enable https, your <code>redirect-uri</code> must be an https URL, otherwise browsers will show an error warning. Enabling https protects your users against <a href="http://en.wikipedia.org/wiki/Man-in-the-middle_attack" name="http://en.wikipedia.org/wiki/Man-in-the-middle_attack">man-in-the-middle attacks</a> during the two data transfers.</p>
+<p>If you enable https, your <code>redirect-uri</code> must be an https URL, otherwise browsers will show an error warning. Enabling https protects your users against <a href="http://en.wikipedia.org/wiki/Man-in-the-middle_attack" name="http://en.wikipedia.org/wiki/Man-in-the-middle_attack" target="_blank">man-in-the-middle attacks</a> during the two data transfers.</p>
 <hr />
 <h2>
 <code>locale</code>
 </h2>
-<p>The plugin will render in the locale that the user uses facebook in. If you want to always force a locale, just pass the <code>locale</code> parameter set to be a POSIX locale, which is a 2 letter lowercase <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" name="http://www.loc.gov/standards/iso639-2/php/code_list.php">language code</a> then an <code>_</code> followed by a 2 letter uppercase <a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists/english_country_names_and_code_elements.htm" name="http://www.iso.org/iso/country_codes/iso_3166_code_lists/english_country_names_and_code_elements.htm">country code</a>. The plugin hasn&apos;t been translated into every language, so if you want to help in your local language, use the <a href="https://www.facebook.com/translations/" name="https://www.facebook.com/translations/">translation app</a>.</p>
+<p>The plugin will render in the locale that the user uses facebook in. If you want to always force a locale, just pass the <code>locale</code> parameter set to be a POSIX locale, which is a 2 letter lowercase <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" name="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">language code</a> then an <code>_</code> followed by a 2 letter uppercase <a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists/english_country_names_and_code_elements.htm" name="http://www.iso.org/iso/country_codes/iso_3166_code_lists/english_country_names_and_code_elements.htm" target="_blank">country code</a>. The plugin hasn&apos;t been translated into every language, so if you want to help in your local language, use the <a href="https://www.facebook.com/translations/" name="https://www.facebook.com/translations/" target="_blank">translation app</a>.</p>
 <iframe allowtransparency="true" frameborder="no" height="330" scrolling="auto" src="https://www.facebook.com/plugins/registration?
              client_id=113869198637480&amp;
              redirect_uri=http%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fecho%2F&amp;
@@ -317,7 +317,7 @@ fields=&apos;[
 <hr />
 <h2>Not Verifying the Signature</h2>
 <p>If you are unable to validate the <code>signed_request</code> because you can&apos;t embed your application secret (e.g. in javascript or a desktop application) then you <em>MUST</em> only use one piece of information from the payload, the <code>oauth_token</code>.</p>
-<p>You should hit the <a href="http://graph.facebook.com/" name="http://graph.facebook.com/">graph api</a> to fetch any user data. For example, use <a href="/docs/reference/api/user/" name="https://developers.facebook.com/docs/reference/api/user/">/me</a> to fetch the basic information. You will be granted the permission to read any data from the graph api that the user originally put into your form.</p>
+<p>You should hit the <a href="http://graph.facebook.com/" name="http://graph.facebook.com/" target="_blank">graph api</a> to fetch any user data. For example, use <a href="/docs/reference/api/user/" name="https://developers.facebook.com/docs/reference/api/user/">/me</a> to fetch the basic information. You will be granted the permission to read any data from the graph api that the user originally put into your form.</p>
 <div class="mtl pvm uiBoxWhite topborder">
 <div class="mbm lfloat">
 <fb:like href="http://developers.facebook.com/docs/plugins/registration/advanced/" send="true" show_faces="false">

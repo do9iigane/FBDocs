@@ -13,54 +13,54 @@
 <div class="toplevelnav">
 <ul>
 <li>
-<a href="/docs/" name="https://developers.facebook.com/docs/" target="">
+<a href="/docs/" name="https://developers.facebook.com/docs/">
 <div class="navSectionTitle">Getting Started</div>
 </a>
 </li>
 <li>
-<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts" target="">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts">
 <div class="navSectionTitle">Core Concepts</div>
 </a>
 </li>
 <li class="active withsubsections">
-<a class="selected" href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics" target="">
+<a class="selected" href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics">
 <div class="navSectionTitle">Advanced Topics</div>
 </a>
 <ul class="subsections">
 <li>
-<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/" target="">Dialogs</a>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
 </li>
 <li>
-<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/" target="">FQL</a>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
 </li>
 <li>
-<a class="selected" href="/docs/internationalization/" name="https://developers.facebook.com/docs/internationalization" target="">Internationalization</a>
+<a class="selected" href="/docs/internationalization/" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
 </li>
 <li>
-<a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api" target="">Ads API</a>
+<a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
 </li>
 <li>
-<a href="/docs/credits/" name="https://developers.facebook.com/docs/credits" target="">Credits</a>
+<a href="/docs/credits/" name="https://developers.facebook.com/docs/credits">Credits</a>
 </li>
 <li>
-<a href="/docs/chat/" name="https://developers.facebook.com/docs/chat" target="">Chat API</a>
+<a href="/docs/chat/" name="https://developers.facebook.com/docs/chat">Chat API</a>
 </li>
 <li>
-<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/" target="">Legacy REST API</a>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
 </li>
 <li>
-<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/" target="">Legacy FBML</a>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
 </li>
 <li>
-<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/" target="">Legacy FBJS</a>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
 </li>
 <li>
-<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/" target="">Legacy Javascript SDK</a>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks" target="">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks">
 <div class="navSectionTitle">SDK Reference</div>
 </a>
 </li>
@@ -87,8 +87,8 @@
 </a>
 </p>
 <h3>Understanding Locales</h3>
-<p>The locales that Facebook supports are available in an <a href="https://www.facebook.com/translations/FacebookLocales.xml" name="https://www.facebook.com/translations/FacebookLocales.xml">XML file</a>.</p>
-<p>Facebook locales follow <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" name="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO language</a> and <a href="http://en.wikipedia.org/wiki/ISO_3166-1" name="http://en.wikipedia.org/wiki/ISO_3166-1">country codes</a> respectively, concatenated by an underscore.</p>
+<p>The locales that Facebook supports are available in an <a href="https://www.facebook.com/translations/FacebookLocales.xml" name="https://www.facebook.com/translations/FacebookLocales.xml" target="_blank">XML file</a>.</p>
+<p>Facebook locales follow <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" name="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">ISO language</a> and <a href="http://en.wikipedia.org/wiki/ISO_3166-1" name="http://en.wikipedia.org/wiki/ISO_3166-1" target="_blank">country codes</a> respectively, concatenated by an underscore.</p>
 <p>The basic format is &apos;&apos;ll_CC&apos;&apos;, where &apos;&apos;ll&apos;&apos; is a two-letter language code, and &apos;&apos;CC&apos;&apos; is a two-letter country code. For instance, &apos;en_US&apos; represents US English.</p>
 <p>There are two exceptions that do not follow the ISO standard: ar_AR and es_LA. We use these to denote umbrella locales for Arabic and Spanish, despite in the latter case having a few more specialized localizations of Spanish.</p>
 <p>You can determine this information about a user by examining the <code>locale</code> field of the <a href="/docs/reference/api/user/" name="https://developers.facebook.com/docs/reference/api/user">User</a> Graph API object.</p>
@@ -100,7 +100,7 @@
 </code>
 </pre>
 <h2>Internationalizing your Application</h2>
-<p>The following steps assume you have <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps">created an application</a> and have an application ID.</p>
+<p>The following steps assume you have <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps" target="_blank">created an application</a> and have an application ID.</p>
 <ul>
 <li>
 <a href="/docs/#prepare" name="https://developers.facebook.com/docs/#prepare">Preparing your application for translation</a>
@@ -129,15 +129,15 @@
 <p>In order to opt into the Facebook Translations framework, you need to set the native language for your application, then you need to decide into which languages you want your application translated.</p>
 <h3>Selecting Your Native Language</h3>
 <ol>
-<li>Go to the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps">My Applications page</a> in the App Dashboard, where you initially configured your application.</li>
+<li>Go to the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps" target="_blank">My Applications page</a> in the App Dashboard, where you initially configured your application.</li>
 <li>Select the application you want translated, then click <strong>Edit Settings.</strong>
 </li>
-<li>On the <strong>Advanced</strong> tab, under <strong>Contact Info</strong> select the <strong>Language</strong> in which your application is currently written, then save your selection. This selection determines the native language from which translations will occur. If your application is using &quot;English (US)&quot; as the native language you will not see the option and will not be able to change it, as the <a href="/docs/opengraph/internationalization/" name="https://developers.facebook.com/docs/opengraph/internationalization/">Open Graph translations</a> need English as the native app language. See this <a href="https://developers.facebook.com/blog/post/605/" name="https://developers.facebook.com/blog/post/605/">blog post</a> for details.</li>
+<li>On the <strong>Advanced</strong> tab, under <strong>Contact Info</strong> select the <strong>Language</strong> in which your application is currently written, then save your selection. This selection determines the native language from which translations will occur. If your application is using &quot;English (US)&quot; as the native language you will not see the option and will not be able to change it, as the <a href="/docs/opengraph/internationalization/" name="https://developers.facebook.com/docs/opengraph/internationalization/">Open Graph translations</a> need English as the native app language. See this <a href="https://developers.facebook.com/blog/post/605/" name="https://developers.facebook.com/blog/post/605/" target="_blank">blog post</a> for details.</li>
 </ol>
 <h3>Choosing Languages for Translation</h3>
 <p>Once you configure your application&apos;s native language, you need to specify into which languages you want your application translated.</p>
 <ol>
-<li>Visit the <a href="https://www.facebook.com/translations/admin/dashboard.php" name="https://www.facebook.com/translations/admin/dashboard.php">Translations admin panel</a> for your application. Select which application you want to translate from the dropdown menu in the upper right corner.</li>
+<li>Visit the <a href="https://www.facebook.com/translations/admin/dashboard.php" name="https://www.facebook.com/translations/admin/dashboard.php" target="_blank">Translations admin panel</a> for your application. Select which application you want to translate from the dropdown menu in the upper right corner.</li>
 <li>Enable a language for translation. To enable translation of your application into a particular locale, select the row for the appropriate <strong>Language</strong>, then check the <strong>On</strong> check box for that locale. After checking it, users can see any strings that you mark as translatable, and can provide translations for them. <br />
 <strong>Note:</strong> If this check box is NOT checked, the only people who can translate your application into this language are the application&apos;s developers (listed in the App Dashboard) and those designated as the language managers for this language in the <strong>Language Managers</strong> column.</li>
 </ol>
@@ -246,7 +246,7 @@ a copy of &quot;Catcher In the Rye&quot;?
 <h3 id="inline_translation">Inline Translations</h3>
 <p>Users can translate strings inline if they&apos;ve enabled this mode of translation. The screenshot below shows what inline translation mode looks like to a user. Underlined strings are available for translation (and voting) simply by right-clicking on the underlined text.</p>
 <p>
-<a href="https://developers.facebook.com/images/devsite/i18n_Inline_Translations.png" name="https://developers.facebook.com/images/devsite/i18n_Inline_Translations.png">
+<a href="https://developers.facebook.com/images/devsite/i18n_Inline_Translations.png" name="https://developers.facebook.com/images/devsite/i18n_Inline_Translations.png" target="_blank">
 <img src="https://developers.facebook.com/images/devsite/i18n_Inline_Translations.png" width="600" />
 </a>
 </p>
@@ -254,7 +254,7 @@ a copy of &quot;Catcher In the Rye&quot;?
 <h3 id="bulk_translation">Bulk Translation</h3>
 <p>The Translations application has a user interface that allows translators to quickly and efficiently translate many strings. To direct a user to translate your application&apos;s strings in bulk, link them to <code>https://www.facebook.com/translations/index.php?translate?app=&lt;YOUR_APP_ID&gt;</code>, specifying your application ID.</p>
 <h3>Learn More</h3>
-<p>The best way to learn how your application can be translated is to actually try it out. The Facebook Translations application has a <a href="https://www.facebook.com/translations?help" name="https://www.facebook.com/translations?help">help guide</a> for getting started with translating. This may help you better understand the process.</p>
+<p>The best way to learn how your application can be translated is to actually try it out. The Facebook Translations application has a <a href="https://www.facebook.com/translations?help" name="https://www.facebook.com/translations?help" target="_blank">help guide</a> for getting started with translating. This may help you better understand the process.</p>
 <p>
 <a name="administration">
 </a>
@@ -262,7 +262,7 @@ a copy of &quot;Catcher In the Rye&quot;?
 <h2>Managing the Translation Process</h2>
 <p>Use the Translations admin panel to manage the translation process for your applications.</p>
 <ol>
-<li>Visit the <a href="https://www.facebook.com/translations/admin/dashboard.php" name="https://www.facebook.com/translations/admin/dashboard.php">Translations admin panel</a> for your application. If the default selection is not the application you wish to translate, select the right one from the dropdown in the upper right corner.<br />
+<li>Visit the <a href="https://www.facebook.com/translations/admin/dashboard.php" name="https://www.facebook.com/translations/admin/dashboard.php" target="_blank">Translations admin panel</a> for your application. If the default selection is not the application you wish to translate, select the right one from the dropdown in the upper right corner.<br />
 <br />
 <img src="https://developers.facebook.com/images/devsite/i18n_Dashboard.jpg" width="600" />
 </li>
@@ -284,7 +284,7 @@ a copy of &quot;Catcher In the Rye&quot;?
 </p>
 <h3>Accessing Your Translations</h3>
 <p>Facebook Translations has multiple ways for you to view and access the text you&apos;ve registered for translation, as well as the translations provided by Facebook users. The translation data retrieved from these methods may be used or stored however you choose.</p>
-<p>You can always view and edit your text and translations from <a href="https://www.facebook.com/translations/admin/browse.php" name="https://www.facebook.com/translations/admin/browse.php">the Translations admin console</a>. However, you can&apos;t export translations from the console currently. You can get the translations programmatically.</p>
+<p>You can always view and edit your text and translations from <a href="https://www.facebook.com/translations/admin/browse.php" name="https://www.facebook.com/translations/admin/browse.php" target="_blank">the Translations admin console</a>. However, you can&apos;t export translations from the console currently. You can get the translations programmatically.</p>
 <p>There are two programmatic ways for accessing translation data:</p>
 <ul>
 <li>

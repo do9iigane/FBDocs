@@ -13,22 +13,22 @@
 <div class="toplevelnav">
 <ul>
 <li>
-<a href="/docs/" name="https://developers.facebook.com/docs/" target="">
+<a href="/docs/" name="https://developers.facebook.com/docs/">
 <div class="navSectionTitle">Getting Started</div>
 </a>
 </li>
 <li>
-<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts" target="">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts">
 <div class="navSectionTitle">Core Concepts</div>
 </a>
 </li>
 <li>
-<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics" target="">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics">
 <div class="navSectionTitle">Advanced Topics</div>
 </a>
 </li>
 <li>
-<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks" target="">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks">
 <div class="navSectionTitle">SDK Reference</div>
 </a>
 </li>
@@ -73,7 +73,7 @@
 <p>There are no required changes needed for your app to continue functioning. If you were obtaining user access_tokens through the signed_requests or those returned in a browser hash-tag (client-side), those tokens will have short expirations. You should consider using our <a href="/docs/#extend_token" name="https://developers.facebook.com/docs/#extend_token">new endpoint</a> to exchange them for new access_tokens that have a longer expiration time. When you do the exchange, your short-lived access_token will continue to function until it expires, however, the new endpoint will return a second access_token that will have a much longer expiration and this is what you should use going forward.</p>
 <h3>Scenario 2: If you have been previously requesting offline_access - updated 4/30/2012</h3>
 <p>Once the migration has been enabled, existing use access_tokens, with the offline_access permission, <b>will continue to work without any change to their expiration time</b>. However, new users to your app will not be prompted for the offline_access permission in the Auth Dialog and will receive either a short-lived or long-lived access_token depending on your environment and how you are requesting the access_token (client or server-side OAuth, see Scenario 3 and 4 below).</p>
-<p>After the offline_access removal date, currently set for 7/5/2012 <a href="https://developers.facebook.com/roadmap/" name="https://developers.facebook.com/roadmap/">(see roadmap for exact date)</a>, all existing offline_access access_tokens will have their expiration time truncated to 60 days. This truncation will be transparent to the user and your app will continue functioning normally; Facebook will send an updated message through the weekly developer round-up when this truncation will occur.</p>
+<p>After the offline_access removal date, currently set for 7/5/2012 <a href="https://developers.facebook.com/roadmap/" name="https://developers.facebook.com/roadmap/" target="_blank">(see roadmap for exact date)</a>, all existing offline_access access_tokens will have their expiration time truncated to 60 days. This truncation will be transparent to the user and your app will continue functioning normally; Facebook will send an updated message through the weekly developer round-up when this truncation will occur.</p>
 <h3>Scenario 3: Server-side OAuth Developers</h3>
 <p>Once the migration is enabled, if the access_token is generated from a <a href="/docs/authentication/server-side/" name="https://developers.facebook.com/docs/authentication/server-side/">server-side</a> OAuth call, the resulting access_token will have the longer expiration time by default. If the call is made while there is still a valid long-lived user access_token for that user, the returned user access_token from this second call may be the same or may have changed, but in either case the expiration time will be set to a long expiration time.<br />
 <b>Note:</b> The user must access your application before you&apos;re able to get a valid &quot;authorization Code&quot; to be able to make the server-side OAuth call again. Apps will not be able to setup a background/cron job that tries to automatically extend the expiration time, because the &quot;authorization code&quot; is short-lived and will have expired.</p>
@@ -96,7 +96,7 @@
 <p>When a user grants an app the <code>manage_pages</code> permission, the app is able to obtain page access tokens for pages that the user administers by querying the <code>[User ID]/accounts</code> Graph API endpoint. With the migration enabled, when using a short-lived user access token to query this endpoint, the page access tokens obtained are short-lived as well.</p>
 <p>Exchange the short-lived user access token for a long-lived access token using the endpoint and steps explained earlier. By using a long-lived user access token, querying the <code>[User ID]/accounts</code> endpoint will now provide page access tokens that do not expire for pages that a user manages. This will also apply when querying with a non-expiring user access token obtained through the deprecated <code>offline_access</code> permission.</p>
 <h2>Handling expired tokens, user password changes, uninstalled apps, and user logout</h2>
-<p>Regardless if your app requested the offline_access permission, apps should gracefully handle an expired access tokens in situations where a user changes their password, deauthorizes an app, or logs out. More information on these cases including a simple code solution that leads to a uniform user experience can be found in this <a href="https://developers.facebook.com/blog/post/500/" name="https://developers.facebook.com/blog/post/500/">blog post</a>.</p>
+<p>Regardless if your app requested the offline_access permission, apps should gracefully handle an expired access tokens in situations where a user changes their password, deauthorizes an app, or logs out. More information on these cases including a simple code solution that leads to a uniform user experience can be found in this <a href="https://developers.facebook.com/blog/post/500/" name="https://developers.facebook.com/blog/post/500/" target="_blank">blog post</a>.</p>
 <p>We&apos;re excited for this new migration and know that it will be great for both developers and users. We look forward to seeing your great applications as we continue to give you the tools and features that help you build and innovate on the Facebook platform.</p>
 <div class="mtl pvm uiBoxWhite topborder">
 <div class="mbm lfloat">

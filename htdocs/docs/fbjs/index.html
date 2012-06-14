@@ -13,54 +13,54 @@
 <div class="toplevelnav">
 <ul>
 <li>
-<a href="/docs/" name="https://developers.facebook.com/docs/" target="">
+<a href="/docs/" name="https://developers.facebook.com/docs/">
 <div class="navSectionTitle">Getting Started</div>
 </a>
 </li>
 <li>
-<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts" target="">
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts">
 <div class="navSectionTitle">Core Concepts</div>
 </a>
 </li>
 <li class="active withsubsections">
-<a class="selected" href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics" target="">
+<a class="selected" href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics">
 <div class="navSectionTitle">Advanced Topics</div>
 </a>
 <ul class="subsections">
 <li>
-<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/" target="">Dialogs</a>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
 </li>
 <li>
-<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/" target="">FQL</a>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
 </li>
 <li>
-<a href="/docs/internationalization/" name="https://developers.facebook.com/docs/internationalization" target="">Internationalization</a>
+<a href="/docs/internationalization/" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
 </li>
 <li>
-<a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api" target="">Ads API</a>
+<a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
 </li>
 <li>
-<a href="/docs/credits/" name="https://developers.facebook.com/docs/credits" target="">Credits</a>
+<a href="/docs/credits/" name="https://developers.facebook.com/docs/credits">Credits</a>
 </li>
 <li>
-<a href="/docs/chat/" name="https://developers.facebook.com/docs/chat" target="">Chat API</a>
+<a href="/docs/chat/" name="https://developers.facebook.com/docs/chat">Chat API</a>
 </li>
 <li>
-<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/" target="">Legacy REST API</a>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
 </li>
 <li>
-<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/" target="">Legacy FBML</a>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
 </li>
 <li>
-<a class="selected" href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/" target="">Legacy FBJS</a>
+<a class="selected" href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
 </li>
 <li>
-<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/" target="">Legacy Javascript SDK</a>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks" target="">
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks">
 <div class="navSectionTitle">SDK Reference</div>
 </a>
 </li>
@@ -89,8 +89,8 @@
 </table>
 <h2>Introduction</h2>
 <p>FBJS is Facebook&apos;s solution for developers who want to use JavaScript in their <a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml">FBML</a> applications. We built FBJS to empower developers with all the functionality they need while protecting our users&apos; privacy at the same time.</p>
-<p>Note: We don&apos;t recommend FBML for new developers. If you aren&apos;t already using FBML, you should instead <a href="https://developers.facebook.com/../guides/canvas" name="https://developers.facebook.com/../guides/canvas">implement your application within an <code>iframe</code>
-</a>, using the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript">JavaScript SDK</a> and <a href="https://developers.facebook.com/plugins" name="https://developers.facebook.com/plugins">social plugins</a> for client-side integration with Facebook services.</p>
+<p>Note: We don&apos;t recommend FBML for new developers. If you aren&apos;t already using FBML, you should instead <a href="https://developers.facebook.com/../guides/canvas" name="https://developers.facebook.com/../guides/canvas" target="_blank">implement your application within an <code>iframe</code>
+</a>, using the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript">JavaScript SDK</a> and <a href="https://developers.facebook.com/plugins" name="https://developers.facebook.com/plugins" target="_blank">social plugins</a> for client-side integration with Facebook services.</p>
 <hr />
 <h2>Contents</h2>
 <ul>
@@ -656,7 +656,7 @@ hello_world(document.getElementById(&apos;hello&apos;));
 </a>
 </p>
 <h2>Events</h2>
-<p>Events can be added to FBJS DOM objects using the W3C-style <a href="https://developer.mozilla.org/en/DOM/element.addEventListener" name="https://developer.mozilla.org/en/DOM/element.addEventListener">addEventListener method</a>. The third parameter, boolean useCapture is required (it does not have a default value), and removeEventListener is supported. In addition to the W3C event methods, we&apos;ve also added listEventListeners and purgeEventListeners.</p>
+<p>Events can be added to FBJS DOM objects using the W3C-style <a href="https://developer.mozilla.org/en/DOM/element.addEventListener" name="https://developer.mozilla.org/en/DOM/element.addEventListener" target="_blank">addEventListener method</a>. The third parameter, boolean useCapture is required (it does not have a default value), and removeEventListener is supported. In addition to the W3C event methods, we&apos;ve also added listEventListeners and purgeEventListeners.</p>
 <dl>
 <dt>listEventListeners(eventName)</dt>
 <dd>Returns an array of handles of all events that have been added to this event. Events that were added in FBML using the on<event> attributes will also be included</event>
@@ -727,7 +727,7 @@ document.getElementById(&apos;bar&apos;).addEventListener(&apos;mouseout&apos;,m
 </pre>
 <p>This functionality is very useful in cases where you have one event handler for multiple objects of the same type. Take for instance a shopping cart of some sort, or any type of object browser. When a user moves her mouse over one of the items in the cart, you may want to conditionally display information about the item -- by finding its ID, you may associate a description text for that item and display it to the user in another div. As you can see, using event listeners can be a very powerful way to display useful additional information to the user, based on where they move their mouse within your Facebook application. Happy coding and creativity! For me (end Aug 09) evt.target.getParentNode().getId() did work, the version with 2 or without ParentNode calls did not.</p>
 <p>
-<strong>Note</strong> (Sep 23 2009): Generally, to get the element which is currently being checked for event listeners (foo and bar in this case) then event.<a href="https://developer.mozilla.org/en/DOM/event.currentTarget" name="https://developer.mozilla.org/en/DOM/event.currentTarget">currentTarget</a> property should be used. But if you want to get the element that dispatched the event then event.<a href="https://developer.mozilla.org/en/DOM/event.target" name="https://developer.mozilla.org/en/DOM/event.target">target</a> property should be used, it could be the element that registered for the event or a child of it. Hence, the behavior described earlier is actually not a bug. Unfortunately FBJS does not supports <a href="https://developer.mozilla.org/en/DOM/event.currentTarget" name="https://developer.mozilla.org/en/DOM/event.currentTarget">currentTarget</a> property of the event object. So the only solution remains is to mimic currentTarget property by going up through parent elements and checking them for some kind of flag like classname, tagname or id.</p>
+<strong>Note</strong> (Sep 23 2009): Generally, to get the element which is currently being checked for event listeners (foo and bar in this case) then event.<a href="https://developer.mozilla.org/en/DOM/event.currentTarget" name="https://developer.mozilla.org/en/DOM/event.currentTarget" target="_blank">currentTarget</a> property should be used. But if you want to get the element that dispatched the event then event.<a href="https://developer.mozilla.org/en/DOM/event.target" name="https://developer.mozilla.org/en/DOM/event.target" target="_blank">target</a> property should be used, it could be the element that registered for the event or a child of it. Hence, the behavior described earlier is actually not a bug. Unfortunately FBJS does not supports <a href="https://developer.mozilla.org/en/DOM/event.currentTarget" name="https://developer.mozilla.org/en/DOM/event.currentTarget" target="_blank">currentTarget</a> property of the event object. So the only solution remains is to mimic currentTarget property by going up through parent elements and checking them for some kind of flag like classname, tagname or id.</p>
 <h3>Mimic event.currentTarget</h3>
 <p>Continuing previous example, we can mimic currentTarget property of the event object relying on ids of elements to whom the event listeners are attached.</p>
 <pre>
@@ -803,7 +803,7 @@ test();
 <dt>Ajax.RAW</dt>
 <dd>The response from your server is returned to your callback in its original form.</dd>
 <dt>Ajax.JSON</dt>
-<dd>The response from your server is parsed as a JSON object and returned to your callback in the form of an object. Properties of your JSON object that are prefixed with &quot;fbml_&quot; are parsed as individual FBML strings and returned as FBML blocks. These blocks can be used on a DOM object with the setInnerFBML method. Each variable and its value in the response is limited to a combined length of 5000 characters. <strong>Note:</strong> be sure to use json_encode or else you may see odd results with large data sets. See <a href="https://bugs.developers.facebook.com/show_bug.cgi?id=363" name="https://bugs.developers.facebook.com/show_bug.cgi?id=363">Bugzilla #363</a> for more information. json_encode is available by default in most PHP5 installations, and implementations for many other languages are available at json.org.</dd>
+<dd>The response from your server is parsed as a JSON object and returned to your callback in the form of an object. Properties of your JSON object that are prefixed with &quot;fbml_&quot; are parsed as individual FBML strings and returned as FBML blocks. These blocks can be used on a DOM object with the setInnerFBML method. Each variable and its value in the response is limited to a combined length of 5000 characters. <strong>Note:</strong> be sure to use json_encode or else you may see odd results with large data sets. See <a href="https://bugs.developers.facebook.com/show_bug.cgi?id=363" name="https://bugs.developers.facebook.com/show_bug.cgi?id=363" target="_blank">Bugzilla #363</a> for more information. json_encode is available by default in most PHP5 installations, and implementations for many other languages are available at json.org.</dd>
 <dt>Ajax.FBML</dt>
 <dd>The response from your server is parsed as FBML and returned as an FBML block. This block can used on a DOM object with the setInnerFBML method.</dd>
 </dl>
@@ -875,7 +875,7 @@ test();
 <h2>Animation</h2>
 <p>FBJS exposes a powerful animation library which gives developers an easy way to improve their user interface with a line of code or two. All animations are CSS based, so a working knowledge of CSS will really help you out here.</p>
 <p>The syntax for the open-source version is identical to the FBJS version (they&apos;re the same library) so the techniques you learn for FBJS Animation will work outside of Facebook, and vice versa.</p>
-<p>Note: If you&apos;re using the open-source Animation library, it&apos;s best if your page is running in standards compliant mode (i.e. not quirks mode). Quirks mode may cause FBJS to behave oddly with certain animations. Information regarding quirks mode and how to activate standards compliant mode: <a href="http://www.quirksmode.org/css/quirksmode.html" name="http://www.quirksmode.org/css/quirksmode.html">http://www.quirksmode.org/css/quirksmode.html</a>.</p>
+<p>Note: If you&apos;re using the open-source Animation library, it&apos;s best if your page is running in standards compliant mode (i.e. not quirks mode). Quirks mode may cause FBJS to behave oddly with certain animations. Information regarding quirks mode and how to activate standards compliant mode: <a href="http://www.quirksmode.org/css/quirksmode.html" name="http://www.quirksmode.org/css/quirksmode.html" target="_blank">http://www.quirksmode.org/css/quirksmode.html</a>.</p>
 <p>While FBJS&apos;s Animation library delivers much of the same functionality as other animation libraries, the interface is much different. In our opinion, it&apos;s a great improvement over current libraries. Understanding the code doesn&apos;t require obtuse dictionaries of properties, but instead relies on intuitive method chaining.</p>
 <h3>Basic Animations<br />
 <br />
@@ -1089,9 +1089,9 @@ Animation(obj).to(&apos;height&apos;, &apos;auto&apos;).from(&apos;0px&apos;).to
 <dt>setStyle</dt>
 <dd>Allows you to set the style of the parent dialog node</dd>
 <dt>showMessage(title, content, button_confirm = &apos;Okay&apos;)</dt>
-<dd>Displays a dialog with only a confirm button. <code>title</code> and <code>content</code> can be either strings or pre-rendered FBML blocks. This currently does not work in IE7. See <a href="https://bugs.developers.facebook.com/show_bug.cgi?id=6271" name="https://bugs.developers.facebook.com/show_bug.cgi?id=6271">the bug report</a>.</dd>
+<dd>Displays a dialog with only a confirm button. <code>title</code> and <code>content</code> can be either strings or pre-rendered FBML blocks. This currently does not work in IE7. See <a href="https://bugs.developers.facebook.com/show_bug.cgi?id=6271" name="https://bugs.developers.facebook.com/show_bug.cgi?id=6271" target="_blank">the bug report</a>.</dd>
 <dt>showChoice(title, content, button_confirm = &apos;Okay&apos;, button_cancel = &apos;Cancel&apos;)</dt>
-<dd>Displays a dialog with Confirm and Cancel buttons. <code>title</code> and <code>content</code> can be either strings or pre-rendered FBML blocks. This currently does not work in IE7. See <a href="https://bugs.developers.facebook.com/show_bug.cgi?id=6271" name="https://bugs.developers.facebook.com/show_bug.cgi?id=6271">the bug report</a>.</dd>
+<dd>Displays a dialog with Confirm and Cancel buttons. <code>title</code> and <code>content</code> can be either strings or pre-rendered FBML blocks. This currently does not work in IE7. See <a href="https://bugs.developers.facebook.com/show_bug.cgi?id=6271" name="https://bugs.developers.facebook.com/show_bug.cgi?id=6271" target="_blank">the bug report</a>.</dd>
 <dt>setContext</dt>
 <dd>(only applicable for DIALOG_CONTEXTUAL). Sets the context of a dialog, which basically means where the cursor arrow is pointing.</dd>
 <dt>hide</dt>
@@ -1242,10 +1242,10 @@ obj.setStyle(&apos;color&apos;, &apos;black&apos;);
 <p>You cannot extend base objects like Function or Array, however we do provide a typical &quot;bind&quot; implementation on the Function prototype.</p>
 </li>
 <li>
-<p>FBJS objects don&apos;t contain handles to any of their actual DOM objects, however if you use <a href="http://www.getfirebug.com/" name="http://www.getfirebug.com/">Firebug</a>, the console can show you exactly to what an object is referring. Try console.dir on an FBJS DOM object. In your console you&apos;ll see a <code>PRIV_obj</code> attribute which is the actual DOM node represented by your FBJS DOM handle. This can help you figure out what FBJS is doing behind the curtains. This trick also works with all other FBJS objects such as AJAX and FBML blocks.</p>
+<p>FBJS objects don&apos;t contain handles to any of their actual DOM objects, however if you use <a href="http://www.getfirebug.com/" name="http://www.getfirebug.com/" target="_blank">Firebug</a>, the console can show you exactly to what an object is referring. Try console.dir on an FBJS DOM object. In your console you&apos;ll see a <code>PRIV_obj</code> attribute which is the actual DOM node represented by your FBJS DOM handle. This can help you figure out what FBJS is doing behind the curtains. This trick also works with all other FBJS objects such as AJAX and FBML blocks.</p>
 </li>
 <li>
-<p>Use <a href="http://www.getfirebug.com/" name="http://www.getfirebug.com/">Firebug</a> to troubleshoot and diagnose anything that isn&apos;t working with your FBJS.</p>
+<p>Use <a href="http://www.getfirebug.com/" name="http://www.getfirebug.com/" target="_blank">Firebug</a> to troubleshoot and diagnose anything that isn&apos;t working with your FBJS.</p>
 </li>
 <li>
 <p>Consider using include files support to save processing/load times and bandwidth.</p>
