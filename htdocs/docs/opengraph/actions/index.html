@@ -416,9 +416,9 @@ https://graph.facebook.com/me/recipebox:cook?
 <p>For instance, you should use it to say, Austin is eating at The Ballpark with Rose. Not, Austin will eat at The Ballpark with Rose, since the action has not yet occurred with that person.</p>
 <p>For virtual actions, you could say &apos;Austin and Rose completed [LEVEL] in cooperative mode&apos; if the users acted together, but not &apos;Austin beat Rose in [CHALLENGE]&apos; as one user took the action against another, they were not acting together.</p>
 <p>Tagging requires additional approval before you can use it. When submitting your action for approval in the App Dashboard, be sure to check the box, &quot;Tags&quot;.</p>
-<p style="text-align:center">
-<img src="https://developers.facebook.com/attachment/og_submit_step2_v2.png/" width="70%" />
-</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/action_specify_location.png/" width="450px" />
+</div>
 <h4>Example</h4>
 <p>Here&apos;s an example action post with a user tag, and the subsequent notification and newsfeed story produced by the post:</p>
 <pre>
@@ -457,7 +457,11 @@ https://graph.facebook.com/me/recipezilla:cook?
 <h3>Tagging places</h3>
 <p>Actions can be tagged with places by specifying the <code>place</code> optional parameter. Places tagging for actions is comparable to <a href="https://www.facebook.com/about/location" name="https://www.facebook.com/about/location">location tagging for posts</a>. The place is attached to the story and also highlighted in the user&apos;s Timeline map.</p>
 <h4>Requirements</h4>
-<p>You can only encourage users to tag places if they are actually at the physical location. Tagging places must be used to indicate a place that the user has physically visited when taking the action you are publishing. For example, do not create a story where the user has not yet completed the action in that location like, &apos;Peter wants to cook a recipe on Recipe Box -- in New York, NY&apos;.</p>
+<p>You can only specify the place property if the user is actually at the physical location at the time the action occurs. For example, do not create a story where the user has not yet completed the action in that location like, &apos;Peter wants to cook a recipe on Recipe Box -- in New York, NY&apos;.</p>
+<p>To take advantage of location tagging functionality, developers must check the Place box when submitting their action for approval. We will only allow this feature to be enabled if the place represents the physical location where the user is located when the action occurs.</p>
+<div align="center">
+<img src="https://developers.facebook.com/attachment/action_specify_location.png/" width="450px" />
+</div>
 <h4>Examples</h4>
 <p>The following generates the action: Zhen cooked a recipe on Recipe Box -- in New York, NY.</p>
 <pre>
@@ -665,7 +669,7 @@ GET /{action-instance-id}/comments
 </fb:like>
 </div>
 <div class="clear">
-<abbr class="timestamp" data-utime="1339409615" title="2012年6月11日 3:13">2012年6月11日 3:13</abbr>
+<abbr class="timestamp" data-utime="1339637959" title="2012年6月13日 18:39">2012年6月13日 18:39</abbr>
 </div>
 </div></div>
 

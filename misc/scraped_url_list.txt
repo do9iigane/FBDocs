@@ -804,6 +804,9 @@ https://developers.facebook.com/docs/reference/plugins/live-stream/
 https://developers.facebook.com/docs/reference/plugins/live-stream/code/
 https://developers.facebook.com/docs/reference/plugins/login/
 https://developers.facebook.com/docs/reference/plugins/login/code/
+https://developers.facebook.com/docs/reference/plugins/name/
+https://developers.facebook.com/docs/reference/plugins/name/code/
+https://developers.facebook.com/docs/reference/plugins/name/tags/
 https://developers.facebook.com/docs/reference/plugins/recommendations/
 https://developers.facebook.com/docs/reference/plugins/recommendations/code/
 https://developers.facebook.com/docs/reference/plugins/recommendationsbar/
