@@ -111,11 +111,11 @@
 </div>
 </div>
 </div>
-<p>The OAuth Dialog is used within the <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication">authentication flows</a> to enabled a user to authorize your application and to grant additional permissions to your app. The Authentication is based on the <a href="http://tools.ietf.org/html/draft-ietf-oauth-v2" name="http://tools.ietf.org/html/draft-ietf-oauth-v2" target="_blank">OAuth 2.0</a> protocol.</p>
+<p>The OAuth Dialog is used within the <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication">authentication flows</a> to enabled a user to authorize your application and to grant additional permissions to your app. Facebook&apos;s authentication flows are based on the <a href="http://tools.ietf.org/html/draft-ietf-oauth-v2" name="http://tools.ietf.org/html/draft-ietf-oauth-v2" target="_blank">OAuth 2.0</a> protocol.</p>
 <p>
 <img alt="The OAuth dialog on web and mobile web" src="https://developers.facebook.com/attachment/auth-web-mobileweb.jpg" />
 </p>
-<p>While the dialog can be invoked using the JS SDK, the iOS SDK and the Android SDK, it can also be invoked directly by opening a URL in the user&apos;s web browser.</p>
+<p>While the dialog can be invoked using the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JS SDK</a>, the <a href="/docs/reference/iossdk/" name="https://developers.facebook.com/docs/reference/iossdk/">iOS SDK</a> and the <a href="/docs/reference/androidsdk/" name="https://developers.facebook.com/docs/reference/androidsdk/">Android SDK</a>, it can also be invoked directly by opening a URL in the user&apos;s web browser.</p>
 <h2>Constructing a URL to the OAuth Dialog</h2>
 <p>To invoke the OAuth Dialog, redirect the user&apos;s browser to a URL of the form:</p>
 <pre>
@@ -126,8 +126,10 @@
     &amp;scope=COMMA_SEPARATED_LIST_OF_PERMISSION_NAMES
 </code>
 </pre>
-<h2>Parameters</h2>
-<p>The OAuth Dialog supports the following parameters which should be passed in the URL string:</p>
+<h2>
+<a id="parameters">
+</a>Parameters</h2>
+<p>The OAuth Dialog supports the following parameters which may be passed in the URL string:</p>
 <table>
 <thead>
 <tr>
@@ -164,7 +166,7 @@
 <code>state</code>
 </td>
 <td>No</td>
-<td>An opaque string used to maintain application state between the request and callback. When Facebook redirects the user back to your <code>redirect_uri</code>, this value will be included unchanged in the response. You should use this to protect against <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" name="http://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_blank">Cross-Site Request Forgery</a>.</td>
+<td>An unique string used to maintain application state between the request and callback. When Facebook redirects the user back to your <code>redirect_uri</code>, this parameter&apos;s value will be included in the response. You should use this to protect against <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" name="http://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_blank">Cross-Site Request Forgery</a>.</td>
 </tr>
 <tr>
 <td>
@@ -178,7 +180,7 @@
 <code>display</code>
 </td>
 <td>No</td>
-<td>The display mode with which to render the Dialog. One of <code>page</code>, <code>popup</code> or <code>touch</code>. Defaults to <code>page</code>. In <code>page</code> mode, the OAuth dialog is displayed in the full Facebook chrome.</td>
+<td>The display mode with which to render the Dialog. One of <code>page</code>, <code>popup</code> or <code>touch</code>. Defaults to <code>page</code> when the user is using a desktop browser or the dialog is invoked on the <code>www.facebook.com</code> domain. Defaults to <code>touch</code> when the user is using a mobile browser or the dialog is invoked on the <code>m.facebook.com</code> domain. In <code>page</code> mode, the OAuth dialog is displayed in the full Facebook chrome. In &apos;popup&apos; mode, the OAuth dialog is displayed in a form suitable for embedding in a popup window. This parameter is automatically specified by most Facebook SDK, so may not need to be set explicitly.</td>
 </tr>
 </tbody>
 </table>
@@ -186,9 +188,8 @@
 <p>If the user authorizes your application, the browser will redirect to the URL you specified in the <code>redirect_uri</code> parameter.</p>
 <p>If the <code>response_type</code> was left unset or was set to the value <code>code</code>, if the user authorizes your application, the browser will be redirected to:</p>
 <pre>
-<code>YOUR_REDIRECT_URI?
-    state=YOUR_STATE_VALUE        
-    &amp;code=CODE_GENERATED_BY_FACEBOOK
+<code>YOUR_REDIRECT_URI?       
+     code=OAUTH_CODE_GENERATED_BY_FACEBOOK
     &amp;state=YOUR_STATE_VALUE
 </code>
 </pre>
@@ -219,7 +220,7 @@
 </fb:like>
 </div>
 <div class="clear">
-<abbr class="timestamp" data-utime="1332165738" title="2012年3月19日 7:02">2012年3月19日 7:02</abbr>
+<abbr class="timestamp" data-utime="1339757834" title="2012年6月15日 3:57">2012年6月15日 3:57</abbr>
 </div>
 </div></div>
 

@@ -121,7 +121,8 @@
 </div>
 </div>
 <p>On the Desktop Web and Mobile Web, to authenticate a user using a server-side flow, follow these steps:</p>
-<h3>1. Redirect the user to the OAuth Dialog</h3>
+<h3>1. Redirect the user to the <a href="/docs/reference/dialogs/oauth/" name="https://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog</a>
+</h3>
 <pre>
 <code>https://www.facebook.com/dialog/oauth?
     client_id=YOUR_APP_ID
@@ -130,9 +131,9 @@
    &amp;state=SOME_ARBITRARY_BUT_UNIQUE_STRING
 </code>
 </pre>
-<p>The <code>scope</code> parameter is optional, but allows you to specify an array of <a href="/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">additional permissions</a> which you would like the user to grant your app.</p>
+<p>The <code>scope</code> parameter is optional, but allows you to specify a comma separated list of <a href="/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">additional permissions</a> which you would like the user to grant your app.</p>
 <p>For security, the <code>redirect_uri</code> must have the same base domain as that specified in the App Domain property of <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps" target="_blank">your app&apos;s settings</a>, or be a URL of the form <code>https://apps.facebook.com/YOUR_APP_NAMESPACE</code>.</p>
-<p>The <code>state</code> parameter should be set to some arbitrary string you generate uniquely for each authentication request. This value will be passed back as a parameter to your <code>redirect_uri</code> once the user has authorized your app and you should check that the returned value matched the value you passed in at the start of the flow. This guards against <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" name="http://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_blank">Cross-site Request Forgery</a> by ensuring the incoming redirect is part of the authentication flow which you initiated.</p>
+<p>To ensure the security of the response when the user returns to your app after the authentication step you should generate and store a <code>state</code> parameter which is unique to this request. The <code>state</code> parameter can be any arbitrary string you choose. If set, the value of <code>state</code> is passed back to your app as a parameter of the <code>redirect_uri</code> when the user completed the authentication flow. Before trusting the authorization response, you should check that the returned <code>state</code> parameter matches the one you sent in the request. Use of the <code>state</code> parameter helps to guard against <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" name="http://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_blank">Cross-site Request Forgery</a>.</p>
 <p>For a full list of parameters, see the <a href="/docs/reference/dialogs/oauth/" name="https://developers.facebook.com/docs/reference/dialogs/oauth/">OAuth Dialog documentation</a>.</p>
 <h3>2. The user is prompted to authorize your application</h3>
 <div style="text-align:center">
@@ -156,7 +157,7 @@
    &amp;state=YOUR_STATE_VALUE
 </code>
 </pre>
-<h3>4. Exchange the code for a user access token</h3>
+<h3>4. Exchange the code for a User Access Token</h3>
 <p>Once the user has authorized your app, you should make a <strong>server side</strong> request to exchange the code returned above for a user access token.</p>
 <pre>
 <code>https://graph.facebook.com/oauth/access_token?
@@ -196,7 +197,8 @@
 </p>
 <hr />
 <h2>Example</h2>
-<p>The following PHP example demonstrates an implementation of the server-side flow including <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" name="http://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_blank">CSRF protection</a> using the <code>state</code> parameter:</p>
+<p>The following PHP example demonstrates an implementation of the server-side flow. This example implements including <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" name="http://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_blank">CSRF protection</a> using the <a href="/docs/reference/dialogs/oauth/#parameters" name="https://developers.facebook.com/docs/reference/dialogs/oauth/#parameters">
+<code>state</code> parameter</a>:</p>
 <pre>
 <code> &lt;?php 
 
@@ -244,7 +246,7 @@
 </fb:like>
 </div>
 <div class="clear">
-<abbr class="timestamp" data-utime="1338828936" title="2012年6月4日 9:55">2012年6月4日 9:55</abbr>
+<abbr class="timestamp" data-utime="1339757890" title="2012年6月15日 3:58">2012年6月15日 3:58</abbr>
 </div>
 </div></div>
 

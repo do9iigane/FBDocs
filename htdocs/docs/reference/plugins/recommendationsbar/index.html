@@ -125,9 +125,7 @@
 <p>The Recommendations Bar allows users to like content, get recommendations, and share what they’re reading with their friends.</p>
 <p>The Recommendations Bar is always docked to the lower right (or left) of the screen. When the page loads the Recommendations bar will be collapsed and the user will have the option to ‘like’ your page.</p>
 <p>As the user nears the end of your page, the plugin will expand. The expanded view will show the user a social recommendation of the next article to read on your site.</p>
-<p>People will also have the option to share what they read on your site with their friends on Facebook. If a user chooses to ‘Add to Facebook,’ she will TOS your application, and in the future every time the plugin is expanded a ‘read’ action will be shared to Facebook. We will aggregate read stories for the user and display them in interesting ways on a user&apos;s Timeline and in friend&apos;s News Feeds, all of which will provide new points of distribution for your site. Read about the <a href="/docs/opengraph/" name="https://developers.facebook.com/docs/opengraph/">Open Graph</a> for more details on the benefits.</p>
-<p>You must include <a href="/docs/opengraph/news/" name="https://developers.facebook.com/docs/opengraph/news/">open graph markup</a> on your articles so Facebook knows how to display them on the site. If you do not include this, the plugin will show an error message instead of a recommendation. The Recommendations Bar uses the <code>news.reads</code> Open Graph action which requires Open Graph objects of type <code>article</code> so pages with a recommendations bar must include a <code>&lt;meta property=&quot;og:type&quot; content=&quot;article&quot;/&gt;</code> tag.</p>
-<p>In order to use Open Graph publishing, the App must enable the &quot;Enhanced Auth Dialog&quot; migration. This can be done from the &quot;Advanced&quot; settings of the &quot;Edit App&quot; page.</p>
+<p>You must include <a href="/docs/opengraph/news/" name="https://developers.facebook.com/docs/opengraph/news/">open graph markup</a> on your articles so Facebook knows how to display them on the site. If you do not include this, the plugin will show an error message instead of a recommendation.</p>
 <p>
 <b>Expanding the plugin</b>
 <br /> The plugin is expanded once the <code>trigger</code> parameter requirements are met, and the person has been on the page for at least the duration specified in the <code>read_time</code> parameter. There are three values for the <code>trigger</code> parameter:</p>
@@ -277,7 +275,7 @@
 </dd>
 </dl>
 <div class="getCode">
-<a class="uiButton" href="/docs/reference/plugins/recommendationsbar/code/?revision=300246390037383" rel="dialog" role="button" name="https://developers.facebook.com/docs/reference/plugins/recommendationsbar/code/?revision=300246390037383">
+<a class="uiButton" href="/docs/reference/plugins/recommendationsbar/code/?revision=406364356081576" rel="dialog" role="button" name="https://developers.facebook.com/docs/reference/plugins/recommendationsbar/code/?revision=406364356081576">
 <span class="uiButtonText">Get Code</span>
 </a>
 </div>
@@ -318,11 +316,7 @@
 <li>
 <code>num_recommendations</code> - the number of recommendations to display. By default, this value is 2 and the maximum value is 5. </li>
 <li>
-<p>
-<code>max_age</code> - a limit on recommendation and creation time of articles that are surfaced in the plugins, the default is 0 (we don’t take age into account). Otherwise the valid values are 1-180, which specifies the number of days.</p>
-<p>
-<b>Usage Notes</b>: If you implement the Recommendations Bar, you may only publish Open Graph read actions through the Recommendations Bar.</p>
-</li>
+<code>max_age</code> - a limit on recommendation and creation time of articles that are surfaced in the plugins, the default is 0 (we don’t take age into account). Otherwise the valid values are 1-180, which specifies the number of days.</li>
 </ul>
 <div class="mtl pvm uiBoxWhite topborder">
 <div class="mbm lfloat">
@@ -330,7 +324,7 @@
 </fb:like>
 </div>
 <div class="clear">
-<abbr class="timestamp" data-utime="1330367749" title="2012年2月27日 10:35">2012年2月27日 10:35</abbr>
+<abbr class="timestamp" data-utime="1339743228" title="2012年6月14日 23:53">2012年6月14日 23:53</abbr>
 </div>
 </div></div>
 
