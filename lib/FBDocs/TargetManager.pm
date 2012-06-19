@@ -30,8 +30,11 @@ sub add_target {
     my $uri = URI->new_abs( $target, 'https://developers.facebook.com/' );
 
     # only add https://developers.facebook.com/docs/*
-    return unless $uri->can( 'host' ) && $uri->host eq 'developers.facebook.com';
-    return unless $uri->path =~ /^\/docs\//;
+    my $path = $uri->path;
+    return unless $uri->can( 'host' );
+    return unless $uri->host eq 'developers.facebook.com';
+    return unless $path && $path =~ /^\/docs\//;
+
     $uri->fragment( undef );
     $uri->query( undef );
     $uri->scheme('https');

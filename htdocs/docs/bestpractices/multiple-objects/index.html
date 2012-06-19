@@ -79,7 +79,7 @@
 </p>
 <p>The way the objects above are mapped defines the hierarchy of relationships between objects for Facebook. For example, by understanding the relationship between song and artist, Facebook can determine that when someone listens to a song, they’re listening to a specific artist. From this, Facebook can aggregate a story about Austin listening to Bad Romance with similar stories of friends listening to other songs by Lady Gaga or listening to pop music. Then we could show an <em>aggregated news feed story</em> about Austin and 3 friends listening to Lady Gaga.:</p>
 <p>
-<a href="/docs/" name="https://developers.facebook.com/docs/#">Austin Haugen</a> and <a href="/docs/" name="https://developers.facebook.com/docs/#">3 friends</a> listened to <a href="/docs/" name="https://developers.facebook.com/docs/#">Lady Gaga</a>
+<a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Austin Haugen</a> and <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">3 friends</a> listened to <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Lady Gaga</a>
 </p>
 <p>Note: Facebook only reads object relationships three deep, so there’s no need to map out more than 3 relationships for each object.</p>
 <p>
@@ -88,11 +88,11 @@
 <p>Objects don’t always have to be physical things like books or movies. They can also be categories, such as a genre of music or a type of cuisine. While you will always pass stories to Facebook about the user performing an action on a specific object, for example - <em>Austin Haugen read The Hound of the Baskervilles</em> - defining categories for objects allows Facebook to aggregate stories around general topics of interest (ex: <em>mystery novels</em>). Since more people are likely to be reading mystery novels than a specific book at any given time, this creates more frequent news feed aggregations for your app.</p>
 <ul>
 <li>
-<a href="/docs/" name="https://developers.facebook.com/docs/#">Tiffani Jones Brown</a> and <a href="/docs/" name="https://developers.facebook.com/docs/#">4 others</a> are reading <a href="/docs/" name="https://developers.facebook.com/docs/#">mystery novels</a>.</li>
+<a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Tiffani Jones Brown</a> and <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">4 others</a> are reading <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">mystery novels</a>.</li>
 <li>
-<a href="/docs/" name="https://developers.facebook.com/docs/#">Eddie O&apos;Neil</a> and <a href="/docs/" name="https://developers.facebook.com/docs/#">Carl Sjogreen</a> are listening to <a href="/docs/" name="https://developers.facebook.com/docs/#">jazz</a>.</li>
+<a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Eddie O&apos;Neil</a> and <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Carl Sjogreen</a> are listening to <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">jazz</a>.</li>
 <li>
-<a href="/docs/" name="https://developers.facebook.com/docs/#">Jen Taylor</a> cooked <a href="/docs/" name="https://developers.facebook.com/docs/#">5 desserts</a>.</li>
+<a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Jen Taylor</a> cooked <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">5 desserts</a>.</li>
 </ul>
 <p>If you think your app would benefit from categories, you should create them now—even if you’re early in implementation. This way, if you decide that you want to present stories by category in the future, you’ll have a rich inventory to work with.</p>
 <p>
@@ -103,7 +103,7 @@
 <p>Note: An object for a category should only be associated with another object. For example, if you define an object for the genre category, you would associate that with the objects for song not with the action listen.</p>
 <h3>2. Aggregating stories in news feed</h3>
 <p>Defining multiple objects and the relationship between them allows stories from your app to be aggregated in news feed, and lets you <a href="/docs/opengraph/define-units/" name="https://developers.facebook.com/docs/opengraph/define-units/">build your own aggregations for timeline</a>. While you define the specific structure of your timeline aggregations, news feed aggregations are created by Facebook based on the relationships you define between objects in the App Dashboard. Facebook aggregates stories in news feed both when friends take action on the same object and when friends take actions on different objects within the same category. For example, if two friends listen to two different songs, but both are from 2009, Facebook may create an aggregation saying: <em>Austin and Alex listened to songs from 2009</em>:</p>
-<p>• <a href="/docs/" name="https://developers.facebook.com/docs/#">Jenny Smith</a> and <a href="/docs/" name="https://developers.facebook.com/docs/#">4 others</a> listed to <a href="/docs/" name="https://developers.facebook.com/docs/#">Lady Gaga</a> (object.artist).<br /> • <a href="/docs/" name="https://developers.facebook.com/docs/#">Mike Vernal</a> listened to <a href="/docs/" name="https://developers.facebook.com/docs/#">Bad Romance</a> (object.song) 3 times.<br /> • <a href="/docs/" name="https://developers.facebook.com/docs/#">Austin Haugen</a> and <a href="/docs/" name="https://developers.facebook.com/docs/#">Paul Tarjan</a> listened to <a href="/docs/" name="https://developers.facebook.com/docs/#">Pop</a> (object.genre).</p>
+<p>• <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Jenny Smith</a> and <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">4 others</a> listed to <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Lady Gaga</a> (object.artist).<br /> • <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Mike Vernal</a> listened to <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Bad Romance</a> (object.song) 3 times.<br /> • <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Austin Haugen</a> and <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Paul Tarjan</a> listened to <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Pop</a> (object.genre).</p>
 <p>Aggregated stories can be grouped together based on any of the related objects.</p>
 <h3>3. Deciding where your objects link to</h3>
 <p>All objects show up as links in news feed and timeline. To get the most out of your stories, link people to destinations that are:</p>
@@ -119,7 +119,7 @@
 <table>
 <tr>
 <td width="40%">
-<a href="/docs/url/" name="https://developers.facebook.com/docs/url">Austin Haugen</a> listened to <a href="/docs/url/" name="https://developers.facebook.com/docs/url">Bad Romance</a>.</td>
+<a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Austin Haugen</a> listened to <a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Bad Romance</a>.</td>
 <td align="center">
 <img src="https://developers.facebook.com/attachment/arrow_174.png" />
 </td>
@@ -136,7 +136,7 @@
 <table>
 <tr>
 <td width="40%">
-<a href="/docs/url/" name="https://developers.facebook.com/docs/url">Austin Haugen</a> listened to <a href="/docs/url/" name="https://developers.facebook.com/docs/url">Bad Romance</a>.</td>
+<a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Austin Haugen</a> listened to <a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Bad Romance</a>.</td>
 <td align="center">
 <img src="https://developers.facebook.com/attachment/arrow_174.png" />
 </td>
@@ -164,11 +164,11 @@
 </tr>
 <tr>
 <td width="50%">
-<a href="/docs/url/" name="https://developers.facebook.com/docs/url">Austin Haugen</a> listened to <a href="/docs/url/" name="https://developers.facebook.com/docs/url">Bad Romance</a>.<br />
-<a href="/docs/url/" name="https://developers.facebook.com/docs/url">Austin Haugen</a> listened to <a href="/docs/url/" name="https://developers.facebook.com/docs/url">Lady Gaga</a>.<br />
+<a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Austin Haugen</a> listened to <a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Bad Romance</a>.<br />
+<a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Austin Haugen</a> listened to <a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Lady Gaga</a>.<br />
 </td>
 <td width="50%">
-<a href="/docs/url/" name="https://developers.facebook.com/docs/url">Austin Haugen</a> listened to <a href="/docs/url/" name="https://developers.facebook.com/docs/url">Bad Romance</a> by Lady Gaga.</td>
+<a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Austin Haugen</a> listened to <a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Bad Romance</a> by Lady Gaga.</td>
 </tr>
 <tr>
 <td width="50%">
@@ -183,8 +183,8 @@
 </p>
 <p>In our next guide, <a href="/docs/bestpractices/custom_properties/" name="https://developers.facebook.com/docs/bestpractices/custom_properties/">Working with Custom Properties</a>, we’ll discuss how to include objects in the attachments of stories. This will let you include info you capture in multiple objects in your news feed stories, like so:</p>
 <p>
-<a href="/docs/" name="https://developers.facebook.com/docs/#">Austin Haugen</a> listened to <a href="/docs/" name="https://developers.facebook.com/docs/#">Bad Romance</a>
-<br /> By <a href="/docs/" name="https://developers.facebook.com/docs/#">Lady Gaga</a>
+<a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Austin Haugen</a> listened to <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Bad Romance</a>
+<br /> By <a href="/docs/bestpractices/multiple-objects/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/#">Lady Gaga</a>
 </p>
 <p>• <strong>Don&apos;t collapse multiple objects into one.</strong> Don’t merge information that could be presented as an object (ex: a book and an author) with other objects. Presenting multiple pieces of valuable information in a single object limits the ways your content can be aggregated and distributed across Facebook.</p>
 <p>
@@ -202,10 +202,10 @@
 </tr>
 <tr>
 <td width="50%">
-<a href="/docs/url/" name="https://developers.facebook.com/docs/url">Mike Vernal</a> read <a href="/docs/url/" name="https://developers.facebook.com/docs/url">The Adventures of Huckleberry Finn</a>.<br />
-<a href="/docs/url/" name="https://developers.facebook.com/docs/url">Mike Vernal</a> read books by <a href="/docs/url/" name="https://developers.facebook.com/docs/url">Mark Twain</a>.</td>
+<a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Mike Vernal</a> read <a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">The Adventures of Huckleberry Finn</a>.<br />
+<a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Mike Vernal</a> read books by <a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Mark Twain</a>.</td>
 <td width="50%">
-<a href="/docs/url/" name="https://developers.facebook.com/docs/url">Mike Vernal</a> read <a href="/docs/url/" name="https://developers.facebook.com/docs/url">The Adventures of Huckleberry Finn by Mark Twain</a>.</td>
+<a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">Mike Vernal</a> read <a href="/docs/bestpractices/multiple-objects/url/" name="https://developers.facebook.com/docs/bestpractices/multiple-objects/url">The Adventures of Huckleberry Finn by Mark Twain</a>.</td>
 </tr>
 <tr>
 <td width="50%">

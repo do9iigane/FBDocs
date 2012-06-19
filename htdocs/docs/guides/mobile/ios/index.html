@@ -127,25 +127,25 @@
 <p>
 <strong>Getting Started:</strong>
 </p>
-<p>     1.  <a href="/docs/#register" name="https://developers.facebook.com/docs/#register">Registering your iOS App with Facebook</a>
-<br />      2.  <a href="/docs/#sdk" name="https://developers.facebook.com/docs/#sdk">Installing the iOS SDK</a>
-<br />      3.  <a href="/docs/#implementsso" name="https://developers.facebook.com/docs/#implementsso">Implementing Single Sign-On</a>
-<br />      4.  <a href="/docs/#logout" name="https://developers.facebook.com/docs/#logout">Adding Log Out to your App</a>
-<br />      5.  <a href="/docs/#additionalpermissions" name="https://developers.facebook.com/docs/#additionalpermissions">Requesting Additional Permissions</a>
+<p>     1.  <a href="/docs/guides/mobile/ios/#register" name="https://developers.facebook.com/docs/guides/mobile/ios/#register">Registering your iOS App with Facebook</a>
+<br />      2.  <a href="/docs/guides/mobile/ios/#sdk" name="https://developers.facebook.com/docs/guides/mobile/ios/#sdk">Installing the iOS SDK</a>
+<br />      3.  <a href="/docs/guides/mobile/ios/#implementsso" name="https://developers.facebook.com/docs/guides/mobile/ios/#implementsso">Implementing Single Sign-On</a>
+<br />      4.  <a href="/docs/guides/mobile/ios/#logout" name="https://developers.facebook.com/docs/guides/mobile/ios/#logout">Adding Log Out to your App</a>
+<br />      5.  <a href="/docs/guides/mobile/ios/#additionalpermissions" name="https://developers.facebook.com/docs/guides/mobile/ios/#additionalpermissions">Requesting Additional Permissions</a>
 <br />
 </p>
 <p>
 <strong>Adding Social Context:</strong>
 </p>
-<p>     6.  <a href="/docs/#graph" name="https://developers.facebook.com/docs/#graph">Using the Graph API</a>
-<br />      7.  <a href="/docs/#socialchannels" name="https://developers.facebook.com/docs/#socialchannels">Integrating with Social Channels</a>
+<p>     6.  <a href="/docs/guides/mobile/ios/#graph" name="https://developers.facebook.com/docs/guides/mobile/ios/#graph">Using the Graph API</a>
+<br />      7.  <a href="/docs/guides/mobile/ios/#socialchannels" name="https://developers.facebook.com/docs/guides/mobile/ios/#socialchannels">Integrating with Social Channels</a>
 <br />
 </p>
 <p>
 <strong>Advanced Configuration:</strong>
 </p>
-<p>     8.  <a href="/docs/#multipleapps" name="https://developers.facebook.com/docs/#multipleapps">Sharing an App ID across Multiple Apps</a>
-<br />      9.  <a href="/docs/#linktoapp" name="https://developers.facebook.com/docs/#linktoapp">Setting up for Facebook iOS App Distribution and Deep Linking</a>
+<p>     8.  <a href="/docs/guides/mobile/ios/#multipleapps" name="https://developers.facebook.com/docs/guides/mobile/ios/#multipleapps">Sharing an App ID across Multiple Apps</a>
+<br />      9.  <a href="/docs/guides/mobile/ios/#linktoapp" name="https://developers.facebook.com/docs/guides/mobile/ios/#linktoapp">Setting up for Facebook iOS App Distribution and Deep Linking</a>
 <br />
 </p>
 <p>
@@ -153,13 +153,13 @@
 </p>
 <ul>
 <li>
-<a href="/docs/#errors" name="https://developers.facebook.com/docs/#errors">Handle Errors</a>
+<a href="/docs/guides/mobile/ios/#errors" name="https://developers.facebook.com/docs/guides/mobile/ios/#errors">Handle Errors</a>
 </li>
 <li>
-<a href="/docs/#extend_token" name="https://developers.facebook.com/docs/#extend_token">Extending the Access Token</a>
+<a href="/docs/guides/mobile/ios/#extend_token" name="https://developers.facebook.com/docs/guides/mobile/ios/#extend_token">Extending the Access Token</a>
 </li>
 <li>
-<a href="/docs/#samples" name="https://developers.facebook.com/docs/#samples">Sample Apps</a>
+<a href="/docs/guides/mobile/ios/#samples" name="https://developers.facebook.com/docs/guides/mobile/ios/#samples">Sample Apps</a>
 </li>
 </ul>
 <hr />
@@ -255,7 +255,7 @@
 <p>
 <b>Step 3</b>. Once the instance is created, check for previously saved access token information (We will show you how to save this information in <b>Step 6</b>). Use the saved information to set up a &quot;session valid&quot; check by assigning the saved information to the <code>facebook</code> access token and expiration date properties. This ensures that your app does not redirect to the Facebook app and invoke the Auth Dialog if the app already has a valid <code>access_token</code>. If you have asked for <code>offline_access</code> extended permission, then your access token will not expire, but can still get invalidated if the user changes their password or uninstalls your app. Read more on <a href="https://developers.facebook.com/blog/post/500/" name="https://developers.facebook.com/blog/post/500/" target="_blank">How-To: Handle expired access tokens</a>.</p>
 <p>
-<b>Note: <code>offline_access</code> is deprecated!</b> See the <a href="/docs/#extend_token" name="https://developers.facebook.com/docs/#extend_token">Extending the access token</a> section for information on how to extend the expiration time of an access token for active users of your app.</p>
+<b>Note: <code>offline_access</code> is deprecated!</b> See the <a href="/docs/guides/mobile/ios/#extend_token" name="https://developers.facebook.com/docs/guides/mobile/ios/#extend_token">Extending the access token</a> section for information on how to extend the expiration time of an access token for active users of your app.</p>
 <pre>
 NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 if ([defaults objectForKey:@&quot;FBAccessTokenKey&quot;] 
@@ -478,7 +478,7 @@ facebook = [[Facebook alloc] initWithAppId:@&quot;YOUR_APP_ID&quot;
 <img alt="iOS Impl" src="https://developers.facebook.com/attachment/ios_config_localappid.png" />
 </p>
 <p>That is all you have to do to support SSO from multiple iOS apps with the same Facebook app ID. Build and run the app to ensure that your app works as before with the new SSO URL.</p>
-<p>When you have properly set up and configured SSO you can get <a href="/docs/#linktoapp" name="https://developers.facebook.com/docs/#linktoapp">Facebook distribution</a> to your app. If you have multiple apps using a single Facebook app ID you will need to add a configuration to the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps" target="_blank">App Dashboard</a> to list the URL Scheme Suffix information for the apps that share one ID.</p>
+<p>When you have properly set up and configured SSO you can get <a href="/docs/guides/mobile/ios/#linktoapp" name="https://developers.facebook.com/docs/guides/mobile/ios/#linktoapp">Facebook distribution</a> to your app. If you have multiple apps using a single Facebook app ID you will need to add a configuration to the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps" target="_blank">App Dashboard</a> to list the URL Scheme Suffix information for the apps that share one ID.</p>
 <p>
 <img alt="iOS Impl" src="https://developers.facebook.com/attachment/ios_devapp_urlscheme_suffix.png" />
 </p>
@@ -503,15 +503,15 @@ fb[app id]://authorize#target_url=[Linked URL]
 <p>To summarize, these are the channels that can drive distribution back to your app:</p>
 <ul>
 <li>
-<a href="/docs/#appsearch" name="https://developers.facebook.com/docs/#appsearch">App search</a>: your app will be visible if it passes an active usage threshold.</li>
+<a href="/docs/guides/mobile/ios/#appsearch" name="https://developers.facebook.com/docs/guides/mobile/ios/#appsearch">App search</a>: your app will be visible if it passes an active usage threshold.</li>
 <li>
-<a href="/docs/#appbookmarks" name="https://developers.facebook.com/docs/#appbookmarks">App bookmarks</a>: your app will be visible to users who have previously used it and based on a usage threshold.</li>
+<a href="/docs/guides/mobile/ios/#appbookmarks" name="https://developers.facebook.com/docs/guides/mobile/ios/#appbookmarks">App bookmarks</a>: your app will be visible to users who have previously used it and based on a usage threshold.</li>
 <li>
-<a href="/docs/#appnotifications" name="https://developers.facebook.com/docs/#appnotifications">App request notifications</a>: requests 2.0 notifications sent to a friend will link back to your app. </li>
+<a href="/docs/guides/mobile/ios/#appnotifications" name="https://developers.facebook.com/docs/guides/mobile/ios/#appnotifications">App request notifications</a>: requests 2.0 notifications sent to a friend will link back to your app. </li>
 <li>
-<a href="/docs/#appattribution" name="https://developers.facebook.com/docs/#appattribution">Story attribution</a>: your app source attribution will be visible if you set up your app with a namespace.</li>
+<a href="/docs/guides/mobile/ios/#appattribution" name="https://developers.facebook.com/docs/guides/mobile/ios/#appattribution">Story attribution</a>: your app source attribution will be visible if you set up your app with a namespace.</li>
 <li>
-<a href="/docs/#applinks" name="https://developers.facebook.com/docs/#applinks">Story links</a>: you can configure links in your News Feed stories that will point back to your app.</li>
+<a href="/docs/guides/mobile/ios/#applinks" name="https://developers.facebook.com/docs/guides/mobile/ios/#applinks">Story links</a>: you can configure links in your News Feed stories that will point back to your app.</li>
 </ul>
 <p>Let&apos;s walk through a tutorial of setting up and verifying Facebook app distribution.</p>
 <p>
@@ -531,11 +531,11 @@ fb[app id]://authorize#target_url=[Linked URL]
 <li>
 <code>iPad App Store ID</code> - If you have a separate iPad app that is listed in the iTunes App Store enter the ID here, e.g. 123456. If Facebook links out to your app and finds that the user does not have your app installed, then it will take the user to your app in the store. The user can then install your app. If your app is not in the iTunes App Store you can enter any valid app&apos;s ID but be sure to update this when your app is approved in the App Store.</li>
 <li>
-<code>Configured for iOS SSO</code> - you must enable this setting if you want your app to be visible in bookmarks and through search results. Make sure that you turn this on after you have properly <a href="/docs/#implementsso" name="https://developers.facebook.com/docs/#implementsso">implemented SSO</a>. </li>
+<code>Configured for iOS SSO</code> - you must enable this setting if you want your app to be visible in bookmarks and through search results. Make sure that you turn this on after you have properly <a href="/docs/guides/mobile/ios/#implementsso" name="https://developers.facebook.com/docs/guides/mobile/ios/#implementsso">implemented SSO</a>. </li>
 <li>
 <code>iOS native deep linking</code> - you must enable this setting if you want your app to be linked to from News Stories. You must also enable the <code>Configured for iOS SSO</code> setting to turn on this feature. If you wish to handle your own News Story links then disable this setting.</li>
 <li>
-<code>URL Scheme Suffix</code> - you should enter this information if you have <a href="/docs/#multipleapps" name="https://developers.facebook.com/docs/#multipleapps">multiple apps sharing</a> the same Facebook app ID. The entries here should contain the URL Scheme Suffix set up for each of your iOS apps. To handle the case where the user may have installed multiple versions of your app, you want to order the entries based on the order in which you want the Facebook app to search for the apps.</li>
+<code>URL Scheme Suffix</code> - you should enter this information if you have <a href="/docs/guides/mobile/ios/#multipleapps" name="https://developers.facebook.com/docs/guides/mobile/ios/#multipleapps">multiple apps sharing</a> the same Facebook app ID. The entries here should contain the URL Scheme Suffix set up for each of your iOS apps. To handle the case where the user may have installed multiple versions of your app, you want to order the entries based on the order in which you want the Facebook app to search for the apps.</li>
 <li>
 <code>iOS Bundle ID</code> - <strong>(Optional)</strong> You may set this to match the bundle ID for your iOS app. If you add this setting then the bundle ID of your app will be checked before authorizing the user. The benefit of this setting for SSO is if the user has already authorized your app they will not be asked to authorize it when they access your app from a new device.</li>
 </ol>
@@ -622,7 +622,7 @@ requestDialogButton.frame = CGRectMake(40, 150, 200, 40);
 <p>
 <a name="applinks">
 </a> <strong>Step 5</strong>. Exercise the app story link flow:</p>
-<p>When you have enabled <code>iOS native deep linking</code> in the App Dashboard, published stories on <a href="https://www.facebook.com/iphone" name="https://www.facebook.com/iphone" target="_blank">Facebook for iOS</a> will link back to your app if they have it installed, or the Apple App Store if they do not. Facebook will apply re-writing rules to redirect these links back to your app. See <a href="/docs/#deeplink" name="https://developers.facebook.com/docs/#deeplink">here</a> to see how you can implement deep linking so users go to the correct content in your app.</p>
+<p>When you have enabled <code>iOS native deep linking</code> in the App Dashboard, published stories on <a href="https://www.facebook.com/iphone" name="https://www.facebook.com/iphone" target="_blank">Facebook for iOS</a> will link back to your app if they have it installed, or the Apple App Store if they do not. Facebook will apply re-writing rules to redirect these links back to your app. See <a href="/docs/guides/mobile/ios/#deeplink" name="https://developers.facebook.com/docs/guides/mobile/ios/#deeplink">here</a> to see how you can implement deep linking so users go to the correct content in your app.</p>
 <ul>
 <li>
 <p>Modify MyGreatIOSAppAppDelegate.m file from the previous tutorial and add the following code to the beginning of the <code>application:didFinishLaunchingWithOptions:</code> method:</p>

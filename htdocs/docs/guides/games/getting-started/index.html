@@ -174,36 +174,36 @@
 <p>This guide will walk through the following steps:</p>
 <ul>
 <li>
-<a href="/docs/#step0" name="https://developers.facebook.com/docs/#step0">Step 0 - Create a Facebook App in the Developer App</a>
+<a href="/docs/guides/games/getting-started/#step0" name="https://developers.facebook.com/docs/guides/games/getting-started/#step0">Step 0 - Create a Facebook App in the Developer App</a>
 </li>
 <li>
-<a href="/docs/#step1" name="https://developers.facebook.com/docs/#step1">Step 1 - Authorization</a>
+<a href="/docs/guides/games/getting-started/#step1" name="https://developers.facebook.com/docs/guides/games/getting-started/#step1">Step 1 - Authorization</a>
 <ul>
 <li>
-<a href="/docs/#step1a" name="https://developers.facebook.com/docs/#step1a">Step 1a - Authorization on Canvas</a>
+<a href="/docs/guides/games/getting-started/#step1a" name="https://developers.facebook.com/docs/guides/games/getting-started/#step1a">Step 1a - Authorization on Canvas</a>
 </li>
 <li>
-<a href="/docs/#step1b" name="https://developers.facebook.com/docs/#step1b">Step 1b - Authorization on Mobile Web</a>
+<a href="/docs/guides/games/getting-started/#step1b" name="https://developers.facebook.com/docs/guides/games/getting-started/#step1b">Step 1b - Authorization on Mobile Web</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/docs/#step2" name="https://developers.facebook.com/docs/#step2">Step 2 - Implement Invites with Requests</a>
+<a href="/docs/guides/games/getting-started/#step2" name="https://developers.facebook.com/docs/guides/games/getting-started/#step2">Step 2 - Implement Invites with Requests</a>
 </li>
 <li>
-<a href="/docs/#step3" name="https://developers.facebook.com/docs/#step3">Step 3 - Implement Bragging Stories with Feed</a>
+<a href="/docs/guides/games/getting-started/#step3" name="https://developers.facebook.com/docs/guides/games/getting-started/#step3">Step 3 - Implement Bragging Stories with Feed</a>
 </li>
 <li>
-<a href="/docs/#step4" name="https://developers.facebook.com/docs/#step4">Step 4 - Implement the Facebook Scores API</a>
+<a href="/docs/guides/games/getting-started/#step4" name="https://developers.facebook.com/docs/guides/games/getting-started/#step4">Step 4 - Implement the Facebook Scores API</a>
 </li>
 <li>
-<a href="/docs/#step5" name="https://developers.facebook.com/docs/#step5">Step 5 - Load a leaderboard with the Facebook Scores API</a>
+<a href="/docs/guides/games/getting-started/#step5" name="https://developers.facebook.com/docs/guides/games/getting-started/#step5">Step 5 - Load a leaderboard with the Facebook Scores API</a>
 </li>
 <li>
-<a href="/docs/#step6" name="https://developers.facebook.com/docs/#step6">Step 6 - Implement the Facebook Achievements API</a>
+<a href="/docs/guides/games/getting-started/#step6" name="https://developers.facebook.com/docs/guides/games/getting-started/#step6">Step 6 - Implement the Facebook Achievements API</a>
 </li>
 <li>
-<a href="/docs/#step7" name="https://developers.facebook.com/docs/#step7">Step 7 - Create an App Detail page for App Center</a>
+<a href="/docs/guides/games/getting-started/#step7" name="https://developers.facebook.com/docs/guides/games/getting-started/#step7">Step 7 - Create an App Detail page for App Center</a>
 </li>
 </ul>
 <hr />
@@ -303,7 +303,7 @@
 </a>  </p>
 <h3>Step 1b - Authorization on Mobile Web</h3>
 <p>Games that are loaded only on Mobile Web do not receive the <a href="/docs/authentication/signed_request/" name="https://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a> parameter and as a result need to implement Authorization a little differently. For Critical Mass we will use <a href="/docs/authentication/client-side/" name="https://developers.facebook.com/docs/authentication/client-side/">client side Authorization</a> via the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>.</p>
-<p>Recall from <a href="/docs/#step0" name="https://developers.facebook.com/docs/#step0">Step 0</a> we set up a different end point for our Mobile Web URL in the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps" target="_blank">Developer App</a>. The result is that when viewing Critical Mass on a Mobile browser from the Facebook iOS, Android clients or the Mobile site this endpoint will be loaded. This allows us to create a customized interface and/or different initialization logic for a better mobile experience. The step is not necessary, you can use the same endpoint for both the Mobile and Canvas experiences if you would prefer.</p>
+<p>Recall from <a href="/docs/guides/games/getting-started/#step0" name="https://developers.facebook.com/docs/guides/games/getting-started/#step0">Step 0</a> we set up a different end point for our Mobile Web URL in the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps" target="_blank">Developer App</a>. The result is that when viewing Critical Mass on a Mobile browser from the Facebook iOS, Android clients or the Mobile site this endpoint will be loaded. This allows us to create a customized interface and/or different initialization logic for a better mobile experience. The step is not necessary, you can use the same endpoint for both the Mobile and Canvas experiences if you would prefer.</p>
 <p>First we will need to load the JavaScript SDK into our game. In <code>index.php</code> and <code>index_mobile.php</code> add the following code to load the SDK:</p>
 <pre>
 <code> &lt;!-- Load the Facebook JavaScript SDK --&gt;
@@ -451,7 +451,7 @@
 <li>name - optional, will set the display string for our link. If omitted the URL will be used</li>
 <li>picture - a URL to an image that will be included in our story</li>
 </ul>
-<p>Finally we will use the same callback function <code>fbCallback</code> that we used for our Invites example in <a href="/docs/#step2" name="https://developers.facebook.com/docs/#step2">Step 2</a>. The output of a successful Feed post looks like:</p>
+<p>Finally we will use the same callback function <code>fbCallback</code> that we used for our Invites example in <a href="/docs/guides/games/getting-started/#step2" name="https://developers.facebook.com/docs/guides/games/getting-started/#step2">Step 2</a>. The output of a successful Feed post looks like:</p>
 <p>
 <img src="https://developers.facebook.com/attachment/feed_success.jpg" />
 </p>
@@ -471,7 +471,7 @@
 <p>The Game APIs, <a href="/docs/score/" name="https://developers.facebook.com/docs/score/">Scores</a> and <a href="/docs/achievements/" name="https://developers.facebook.com/docs/achievements/">Achievements</a>, can only be used by Apps that have categorized themselves as Games. To do this, go into Basic Settings in the <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps" target="_blank">Developer App</a> and make sure your category is set to &apos;Games&apos;.</p>
 <p>Next we will be using the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> to POST a user score. Two important note when using the <a href="/docs/score/" name="https://developers.facebook.com/docs/score/">Scores</a> and <a href="/docs/achievements/" name="https://developers.facebook.com/docs/achievements/">Achievements</a> APIs:</p>
 <ol>
-<li>They require the <code>publish_actions</code> permission which we should already have as part of <a href="/docs/#step1" name="https://developers.facebook.com/docs/#step1">Step 1. Authorization</a>.</li>
+<li>They require the <code>publish_actions</code> permission which we should already have as part of <a href="/docs/guides/games/getting-started/#step1" name="https://developers.facebook.com/docs/guides/games/getting-started/#step1">Step 1. Authorization</a>.</li>
 <li>They require the use of an <a href="/docs/authentication/applications/" name="https://developers.facebook.com/docs/authentication/applications/">Application Access Token</a>. This is to ensure that the originator of the POST is our game, Critical Mass</li>
 </ol>
 <p>As <a href="/docs/authentication/applications/" name="https://developers.facebook.com/docs/authentication/applications/">Application Access Tokens</a> are built off the Games client secret, which is a shared secret between Facebook and the app, these should not be stored client side to protect their integrity. We will keep our <a href="/docs/authentication/applications/" name="https://developers.facebook.com/docs/authentication/applications/">Application Access Token</a> on our web server and write a small PHP script that will POST scores for Critical Mass.</p>
@@ -514,7 +514,7 @@
 </code>
 </pre>
 <p>The script expects a parameter <code>score</code>, the user&apos;s current score, which will be passed in via our game client.</p>
-<p>First we initialize the <a href="/docs/reference/php/" name="https://developers.facebook.com/docs/reference/php/">PHP SDK</a> similar to <a href="/docs/#step1a" name="https://developers.facebook.com/docs/#step1a">Step 1a</a>.</p>
+<p>First we initialize the <a href="/docs/reference/php/" name="https://developers.facebook.com/docs/reference/php/">PHP SDK</a> similar to <a href="/docs/guides/games/getting-started/#step1a" name="https://developers.facebook.com/docs/guides/games/getting-started/#step1a">Step 1a</a>.</p>
 <p>Next we retrieve our <a href="/docs/authentication/applications/" name="https://developers.facebook.com/docs/authentication/applications/">Application Access Token</a>. To do this we created a simple function <code>get_app_access_token</code> that will request this from the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a>. For more information on this step, check out this <a href="/docs/authentication/applications/" name="https://developers.facebook.com/docs/authentication/applications/">doc</a>.</p>
 <p>Once we have our <a href="/docs/authentication/applications/" name="https://developers.facebook.com/docs/authentication/applications/">Application Access Token</a> we then set this token in the PHP SDK with <code>$facebook-&gt;setAccessToken($app_access_token)</code>, as mentioned previously the Facebook SDKs default to using User Access Tokens.</p>
 <p>Finally we POST the score against the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a>, the request looks like:</p>
@@ -551,7 +551,7 @@
 <a name="step5">
 </a>  </p>
 <h2>Step 5 - Load a leaderboard with the Facebook Scores API</h2>
-<p>Our next step is to add a leaderboard to Critical Mass that will read in the scores we published with <a href="/docs/#step4" name="https://developers.facebook.com/docs/#step4">Step 4</a>. We will read back our leaderboard from the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> with:</p>
+<p>Our next step is to add a leaderboard to Critical Mass that will read in the scores we published with <a href="/docs/guides/games/getting-started/#step4" name="https://developers.facebook.com/docs/guides/games/getting-started/#step4">Step 4</a>. We will read back our leaderboard from the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> with:</p>
 <pre>
 <code> GET https://graph.facebook.com/APP_ID/scores?access_token=USER_ACCESS_TOKEN
 </code>
@@ -693,7 +693,7 @@
 </code>
 </pre>
 <p>The code we just wrote will now check each time a user makes an explosion to see if greater than 2 balls were hit. It will also check to see if the user is eligible to earn our achievement. If both of these conditions have been met it will then call <code>saveAchievement</code> to POST the achievement for the user.</p>
-<p>You will notice that <code>saveAchievement</code> calls a PHP script at <code>server/saveachievement.php</code>. This script is very similar to the <code>savescore.php</code> we added in <a href="/docs/#step4" name="https://developers.facebook.com/docs/#step4">Step 4</a>. The <a href="/docs/achievements/" name="https://developers.facebook.com/docs/achievements/">Achievements API</a> has the same restriction as the <a href="/docs/score/" name="https://developers.facebook.com/docs/score">Scores API</a> - it can only be used with an <a href="/docs/authentication/applications/" name="https://developers.facebook.com/docs/authentication/applications/">Application Access Token</a>:</p>
+<p>You will notice that <code>saveAchievement</code> calls a PHP script at <code>server/saveachievement.php</code>. This script is very similar to the <code>savescore.php</code> we added in <a href="/docs/guides/games/getting-started/#step4" name="https://developers.facebook.com/docs/guides/games/getting-started/#step4">Step 4</a>. The <a href="/docs/achievements/" name="https://developers.facebook.com/docs/achievements/">Achievements API</a> has the same restriction as the <a href="/docs/score/" name="https://developers.facebook.com/docs/score">Scores API</a> - it can only be used with an <a href="/docs/authentication/applications/" name="https://developers.facebook.com/docs/authentication/applications/">Application Access Token</a>:</p>
 <pre>
 <code> &lt;?php
      require &apos;fb-php-sdk/facebook.php&apos;;

@@ -223,7 +223,7 @@
 <li>
 <code>og:title</code> - The title of your object as it should appear within the graph, e.g., &quot;The Rock&quot;.</li>
 <li>
-<code>og:type</code> - The type of your object, e.g., &quot;movie&quot;. See the <a href="/docs/#types" name="https://developers.facebook.com/docs/#types">complete list of supported types</a>.</li>
+<code>og:type</code> - The type of your object, e.g., &quot;movie&quot;. See the <a href="/docs/opengraphprotocol/#types" name="https://developers.facebook.com/docs/opengraphprotocol/#types">complete list of supported types</a>.</li>
 <li>
 <code>og:image</code> - An image URL which should represent your object within the graph. The image must be at least 50px by 50px and have a maximum aspect ratio of 3:1. We support PNG, JPEG and GIF formats. You may include multiple <code>og:image</code> tags to associate multiple images with your page.</li>
 <li>
@@ -234,7 +234,7 @@
 <li>
 <code>fb:app_id</code> - A Facebook Platform application ID that administers this page. </li>
 </ul>
-<p>It&apos;s also recommended that you include the following properties as well as <a href="/docs/#extra-data" name="https://developers.facebook.com/docs/#extra-data">these multi-part properties</a>.</p>
+<p>It&apos;s also recommended that you include the following properties as well as <a href="/docs/opengraphprotocol/#extra-data" name="https://developers.facebook.com/docs/opengraphprotocol/#extra-data">these multi-part properties</a>.</p>
 <ul>
 <li>
 <code>og:site_name</code> - A human-readable name for your site, e.g., &quot;IMDb&quot;.</li>
@@ -256,7 +256,7 @@
 <p>
 <img alt="Open Graph profile" src="https://developers.facebook.com/images/devsite/open-graph-profile.png" />
 </p>
-<p>For some objects, it makes sense to specify additional meta data, such as location for a restaurant. You can add as many <code>og:</code>-prefixed properties as you would like to provide additional context about your web pages. <a href="/docs/#extra-data" name="https://developers.facebook.com/docs/#extra-data">Learn more</a> about the other property fields.</p>
+<p>For some objects, it makes sense to specify additional meta data, such as location for a restaurant. You can add as many <code>og:</code>-prefixed properties as you would like to provide additional context about your web pages. <a href="/docs/opengraphprotocol/#extra-data" name="https://developers.facebook.com/docs/opengraphprotocol/#extra-data">Learn more</a> about the other property fields.</p>
 <p>
 <a name="plugins">
 </a>
@@ -320,7 +320,7 @@
 <li>From Facebook, click Manage Pages under the Account tab, then click Go To Page next to your page name</li>
 </ul>
 <p>You can publish stories to your users the same way you write a Facebook post from your own wall: by typing in the Publisher, the field at the top of the screen that says &quot;What&apos;s on your mind?&quot; The stories appear in the News Feed of anyone who has clicked the Like button on your webpage.</p>
-<p>If you associate your page with a Facebook application using the <code>fb:app_id</code> meta tag, you can publish updates to the users who have liked your pages via the <a href="/docs/api/" name="https://developers.facebook.com/docs/api">Graph API</a>. First you need to get an access token for your application. This can be obtained with</p>
+<p>If you associate your page with a Facebook application using the <code>fb:app_id</code> meta tag, you can publish updates to the users who have liked your pages via the <a href="/docs/opengraphprotocol/api/" name="https://developers.facebook.com/docs/opengraphprotocol/api">Graph API</a>. First you need to get an access token for your application. This can be obtained with</p>
 <pre>
 <code>curl -F grant_type=client_credentials \
  -F client_id=your_app_id \

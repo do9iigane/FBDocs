@@ -466,11 +466,11 @@
 </td>
 </tr>
 </table>
-<p>Updates a user&apos;s Facebook status. This method requires the user to grant your application the <code>publish_stream</code> extended permission. You can test for this permission by checking for the error code listed below (250), or via the <a href="/docs/users.hasAppPermission/" name="https://developers.facebook.com/docs/users.hasAppPermission">
+<p>Updates a user&apos;s Facebook status. This method requires the user to grant your application the <code>publish_stream</code> extended permission. You can test for this permission by checking for the error code listed below (250), or via the <a href="/docs/reference/rest/users.setStatus/users.hasAppPermission/" name="https://developers.facebook.com/docs/reference/rest/users.setStatus/users.hasAppPermission">
 <code>users.hasAppPermission</code>
 </a> method.</p>
 <p>
-<strong>Note:</strong> The <a href="/docs/status.set/" name="https://developers.facebook.com/docs/status.set">
+<strong>Note:</strong> The <a href="/docs/reference/rest/users.setStatus/status.set/" name="https://developers.facebook.com/docs/reference/rest/users.setStatus/status.set">
 <code>status.set</code>
 </a> method is a more streamlined version of this call.</p>
 <p>For <strong>Web</strong> applications, you must pass <strong>either</strong> the ID of the user on whose behalf you&apos;re making this call <strong>or</strong> the session key for that user, but not both. If you don&apos;t specify a user with the <code>uid</code> parameter, then that user whose session it is will be the target of the call.</p>

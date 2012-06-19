@@ -468,7 +468,7 @@
 </table>
 <p>Returns metadata about all of the photo albums uploaded by the specified user.</p>
 <p>This method returns information from all visible albums satisfying the filters specified. The method can be used to return all photo albums created by a user, query a specific set of albums by a list of <code>aids</code>, or filter on any combination of these two.</p>
-<p>This call does return a user&apos;s profile picture album. However, you cannot upload photos to this album using <a href="/docs/photos.upload/" name="https://developers.facebook.com/docs/photos.upload">
+<p>This call does return a user&apos;s profile picture album. However, you cannot upload photos to this album using <a href="/docs/reference/rest/photos.getAlbums/photos.upload/" name="https://developers.facebook.com/docs/reference/rest/photos.getAlbums/photos.upload">
 <code>photos.upload</code>
 </a>. You can determine whether an album is the profile album by comparing the album cover <code>pid</code> with the user&apos;s profile picture <code>pid</code>. If they are the same <code>pid</code>, then that&apos;s the profile picture album. Also, see the Notes below for another way of returning the profile picture album.</p>
 <p>You <strong>cannot</strong> store the values returned from this call.</p>
@@ -502,7 +502,7 @@
 </tr>
 </table>
 <h2>レスポンス</h2>
-<p>The album IDs (<code>aid</code>s) returned by this function can be passed in to <a href="/docs/photos.get/" name="https://developers.facebook.com/docs/photos.get">
+<p>The album IDs (<code>aid</code>s) returned by this function can be passed in to <a href="/docs/reference/rest/photos.getAlbums/photos.get/" name="https://developers.facebook.com/docs/reference/rest/photos.getAlbums/photos.get">
 <code>photos.get</code>
 </a>.</p>
 <p>

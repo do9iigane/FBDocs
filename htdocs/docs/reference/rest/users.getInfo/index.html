@@ -466,7 +466,7 @@
 </tr>
 </table>
 <p>Returns a wide array of user-specific information for each user identifier passed, limited by the view of the current user. The current user is determined from the <code>session_key</code> parameter. The only storable values returned from this call are those under the <code>affiliations</code> element, the <code>notes_count</code> value, the <code>proxied_email</code> address, and the contents of the <code>profile_update_time</code> element.</p>
-<p>Use this call to get user data that you intend to display to other users (of your application, for example). If you need some basic information about a user for analytics purposes, call <a href="/docs/users.getStandardinfo/" name="https://developers.facebook.com/docs/users.getStandardinfo">
+<p>Use this call to get user data that you intend to display to other users (of your application, for example). If you need some basic information about a user for analytics purposes, call <a href="/docs/reference/rest/users.getInfo/users.getStandardinfo/" name="https://developers.facebook.com/docs/reference/rest/users.getInfo/users.getStandardinfo">
 <code>users.getStandardInfo</code>
 </a> instead.</p>
 <p>This call no longer requires a session key. However, if you call this method without a session key, you can only get the following information:</p>
@@ -596,7 +596,7 @@
 <strong>email</strong> is a string containing the user&apos;s primary Facebook email address or the user&apos;s proxied email address, whichever address the user granted your application.</p>
 </li>
 <li>
-<strong>email_hashes</strong> is an array containing a set of confirmed email hashes for the user. Emails are registered via the <a href="/docs/connect.registerUsers/" name="https://developers.facebook.com/docs/connect.registerUsers">
+<strong>email_hashes</strong> is an array containing a set of confirmed email hashes for the user. Emails are registered via the <a href="/docs/reference/rest/users.getInfo/connect.registerUsers/" name="https://developers.facebook.com/docs/reference/rest/users.getInfo/connect.registerUsers">
 <code>connect.registerUsers</code>
 </a> API call and are only confirmed when the user adds your application. The format of each email hash is the crc32 and md5 hashes of the email address combined with an underscore (_). </li>
 <li>

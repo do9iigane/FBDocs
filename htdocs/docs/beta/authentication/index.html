@@ -121,6 +121,9 @@
 <a href="/docs/opengraph/actions/builtin/" name="http://developers.facebook.com/docs/opengraph/actions/builtin/">Built-in Action Types</a>
 </li>
 <li>
+<a href="/docs/opengraph/simpletypes/" name="http://developers.facebook.com/docs/opengraph/simpletypes/">Simple Types</a>
+</li>
+<li>
 <a href="/docs/opengraph/complextypes/" name="http://developers.facebook.com/docs/opengraph/complextypes/">Complex Types</a>
 </li>
 <li>
@@ -182,12 +185,12 @@
 <p>We will cover the following topics:</p>
 <ul>
 <li>
-<a href="/docs/#configure" name="https://developers.facebook.com/docs/#configure">Configuring</a> the Auth Dialog</li>
-<li>Optimizing user activation with <a href="/docs/#referrals" name="https://developers.facebook.com/docs/#referrals">Authenticated Referrals</a>
+<a href="/docs/beta/authentication/#configure" name="https://developers.facebook.com/docs/beta/authentication/#configure">Configuring</a> the Auth Dialog</li>
+<li>Optimizing user activation with <a href="/docs/beta/authentication/#referrals" name="https://developers.facebook.com/docs/beta/authentication/#referrals">Authenticated Referrals</a>
 </li>
-<li>Improving user engagement with <a href="/docs/#add-data" name="https://developers.facebook.com/docs/#add-data">Add Data to Profile URL</a>
+<li>Improving user engagement with <a href="/docs/beta/authentication/#add-data" name="https://developers.facebook.com/docs/beta/authentication/#add-data">Add Data to Profile URL</a>
 </li>
-<li>Understanding <a href="/docs/#perms" name="https://developers.facebook.com/docs/#perms">Open Graph Permissions</a>
+<li>Understanding <a href="/docs/beta/authentication/#perms" name="https://developers.facebook.com/docs/beta/authentication/#perms">Open Graph Permissions</a>
 </li>
 </ul>
 <div style="text-align: center;">
@@ -229,7 +232,7 @@
 <li>
 <strong>Terms of Service URL</strong>: Your terms of service URL</li>
 <li>
-<strong>Add Data to Profile URL</strong>: The new user flow URL for your app. This URL should point to a URL that expedites for engagement and action publishing. See the <a href="/docs/#add-data" name="https://developers.facebook.com/docs/#add-data">Add Data to Profile</a> section below. </li>
+<strong>Add Data to Profile URL</strong>: The new user flow URL for your app. This URL should point to a URL that expedites for engagement and action publishing. See the <a href="/docs/beta/authentication/#add-data" name="https://developers.facebook.com/docs/beta/authentication/#add-data">Add Data to Profile</a> section below. </li>
 <li>
 <strong>Explanation for Permissions</strong>: If your app requires extended permissions other than <code>email</code> and <code>publish_actions</code>, a second Auth dialog screen will appear after the user authorizes the initial Auth Dialog. This is the text to explain why you need the additional permissions. </li>
 <li>
@@ -287,7 +290,7 @@
 </code>
 </pre>
 <p>which is the value that should be set in <code>redirect_uri</code>. Please make sure that this logic is dynamic as the query parameters appended to your click-through URL may be subject to change.</p>
-<p>We strongly encourage all Open Graph apps to leverage Authenticated Referrals, as it will help drive activity, sharing, and distribution of your app. Authenticated Referrals is turned on for all new apps and off by default for all existing apps on Platform. Enable this feature by visiting the Auth Dialog tab in the <a href="/docs/apps/" name="https://developers.facebook.com/docs/apps">App Dashboard</a> and select &quot;Enabled&quot; for Authenticated Referrals option.</p>
+<p>We strongly encourage all Open Graph apps to leverage Authenticated Referrals, as it will help drive activity, sharing, and distribution of your app. Authenticated Referrals is turned on for all new apps and off by default for all existing apps on Platform. Enable this feature by visiting the Auth Dialog tab in the <a href="/docs/beta/authentication/apps/" name="https://developers.facebook.com/docs/beta/authentication/apps">App Dashboard</a> and select &quot;Enabled&quot; for Authenticated Referrals option.</p>
 <p>
 <a name="add-data">
 </a>

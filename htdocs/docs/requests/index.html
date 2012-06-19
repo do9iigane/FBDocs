@@ -168,8 +168,8 @@
 </div>
 </div>
 <p>Requests are a one to one communication between a sender [user or app] and recipient [user]. While a single Request can be sent to multiple recipient users at one time, the recipient views the Request from the sender and cannot see other recipients. Requests are always private, a user&apos;s friends cannot see the user&apos;s Requests. Requests do not require any extended permissions to implement.</p>
-<p>If you are migrating from the previous <a href="/docs/reference/fbml/request-form/" name="https://developers.facebook.com/docs/reference/fbml/request-form/">FBML Requests</a>, keep in mind that Requests are no longer deleted when a user clicks on them. It is the <strong>Developers&apos; responsibility</strong> to delete a Request once it has been accepted. For more information on how to delete a request see the <a href="/docs/#deleting" name="https://developers.facebook.com/docs/#deleting">Deleting Requests</a> section. It is not possible to delete Requests sent to users that have not installed your app, these Requests will naturally timeout and be cleared automatically.</p>
-<p>Requests can be divided into two types: <a href="/docs/#user_to_user" name="https://developers.facebook.com/docs/#user_to_user">User to User Requests</a> and <a href="/docs/#app_to_user" name="https://developers.facebook.com/docs/#app_to_user">App to User</a> Requests.</p>
+<p>If you are migrating from the previous <a href="/docs/reference/fbml/request-form/" name="https://developers.facebook.com/docs/reference/fbml/request-form/">FBML Requests</a>, keep in mind that Requests are no longer deleted when a user clicks on them. It is the <strong>Developers&apos; responsibility</strong> to delete a Request once it has been accepted. For more information on how to delete a request see the <a href="/docs/requests/#deleting" name="https://developers.facebook.com/docs/requests/#deleting">Deleting Requests</a> section. It is not possible to delete Requests sent to users that have not installed your app, these Requests will naturally timeout and be cleared automatically.</p>
+<p>Requests can be divided into two types: <a href="/docs/requests/#user_to_user" name="https://developers.facebook.com/docs/requests/#user_to_user">User to User Requests</a> and <a href="/docs/requests/#app_to_user" name="https://developers.facebook.com/docs/requests/#app_to_user">App to User</a> Requests.</p>
 <p>
 <a name="user_to_user">
 </a>  </p>
@@ -212,7 +212,7 @@
 <code>https://apps.facebook.com/[app_name]/?request_ids=[request_ids]
 </code>
 </pre>
-<p>Then as the user handles the request(s) you must delete them via the Graph API, see <a href="/docs/#deleting" name="https://developers.facebook.com/docs/#deleting">Deleting Requests</a>. As a best practice when the the user lands in your app you should <a href="/docs/reference/api/user/#apprequests" name="https://developers.facebook.com/docs/reference/api/user/#apprequests">read</a> outstanding app requests via the <a href="/docs/reference/api/user/#apprequests" name="https://developers.facebook.com/docs/reference/api/user/#apprequests">Graph API</a>.</p>
+<p>Then as the user handles the request(s) you must delete them via the Graph API, see <a href="/docs/requests/#deleting" name="https://developers.facebook.com/docs/requests/#deleting">Deleting Requests</a>. As a best practice when the the user lands in your app you should <a href="/docs/reference/api/user/#apprequests" name="https://developers.facebook.com/docs/reference/api/user/#apprequests">read</a> outstanding app requests via the <a href="/docs/reference/api/user/#apprequests" name="https://developers.facebook.com/docs/reference/api/user/#apprequests">Graph API</a>.</p>
 <p>
 <a name="app_to_user">
 </a>  </p>
@@ -220,14 +220,14 @@
 <p>App to User Requests can be used to re-engage a user in your app and can only be sent to users that have installed the app. For example, notifying a user that something has changed since their last visit, &quot;10 of your friends are now online&quot;.</p>
 <p>App to User Request are sent via the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a>, for more information see the <a href="/docs/reference/api/user/#apprequests" name="https://developers.facebook.com/docs/reference/api/user/#apprequests">apprequests</a> docs. App to User Requests are only available for <a href="/docs/appsonfacebook/tutorial/" name="https://developers.facebook.com/docs/appsonfacebook/tutorial/">Canvas</a> apps, not websites, as accepting a request will direct the user to the Canvas Page URL of the app that sent the Request.</p>
 <h3>Notifying Users of a App Request</h3>
-<p>App to User Requests do not create notifications, though they do appear in the <a href="https://www.facebook.com/games" name="https://www.facebook.com/games" target="_blank">App and Games Dashboard</a> and increment an app bookmark counter, similar to <a href="/docs/#user_to_user" name="https://developers.facebook.com/docs/#user_to_user">User to User Requests</a>.</p>
+<p>App to User Requests do not create notifications, though they do appear in the <a href="https://www.facebook.com/games" name="https://www.facebook.com/games" target="_blank">App and Games Dashboard</a> and increment an app bookmark counter, similar to <a href="/docs/requests/#user_to_user" name="https://developers.facebook.com/docs/requests/#user_to_user">User to User Requests</a>.</p>
 <h3>Accepting an App Request</h3>
-<p>This process is identical to accepting a <a href="/docs/#user_to_user" name="https://developers.facebook.com/docs/#user_to_user">User to User</a> Request.</p>
+<p>This process is identical to accepting a <a href="/docs/requests/#user_to_user" name="https://developers.facebook.com/docs/requests/#user_to_user">User to User</a> Request.</p>
 <p>
 <a name="request_format">
 </a>  </p>
 <h2>Request ID Format</h2>
-<p>Each Request that is sent, whether <a href="/docs/#user_to_user" name="https://developers.facebook.com/docs/#user_to_user">User to User</a> or <a href="/docs/#app_to_user" name="https://developers.facebook.com/docs/#app_to_user">App to User</a>, has a unique Request Object ID. This ID represents the Request itself. This Request Object ID can be concatenated with a recipient User ID to create the specific instance of the Request - this represents the Request that was sent to that user.</p>
+<p>Each Request that is sent, whether <a href="/docs/requests/#user_to_user" name="https://developers.facebook.com/docs/requests/#user_to_user">User to User</a> or <a href="/docs/requests/#app_to_user" name="https://developers.facebook.com/docs/requests/#app_to_user">App to User</a>, has a unique Request Object ID. This ID represents the Request itself. This Request Object ID can be concatenated with a recipient User ID to create the specific instance of the Request - this represents the Request that was sent to that user.</p>
 <p>For example, when sending a Request via either the <a href="/docs/reference/dialogs/requests/" name="https://developers.facebook.com/docs/reference/dialogs/requests">Dialog API</a> or the <a href="/docs/reference/api/user/#apprequests" name="https://developers.facebook.com/docs/reference/api/user/#apprequests">Graph API</a> the response will look like:</p>
 <pre>
 {
@@ -240,7 +240,7 @@
 <code>https://graph.facebook.com/&lt;REQUEST_OBJECT_ID&gt;?access_token=APP_ACCESS_TOKEN
 </code>
 </pre>
-<p>You will get a response that looks like this for a <a href="/docs/#user_to_user" name="https://developers.facebook.com/docs/#user_to_user">User to User</a> Request:</p>
+<p>You will get a response that looks like this for a <a href="/docs/requests/#user_to_user" name="https://developers.facebook.com/docs/requests/#user_to_user">User to User</a> Request:</p>
 <pre>
 {
   &quot;id&quot;: &quot;REQUEST_OBJECT_ID&quot;, 
@@ -259,7 +259,7 @@
   &quot;type&quot;: &quot;apprequest&quot;
 }
 </pre>
-<p>and a response that looks like this for an <a href="/docs/#app_to_user" name="https://developers.facebook.com/docs/#app_to_user">App to User</a> Request:</p>
+<p>and a response that looks like this for an <a href="/docs/requests/#app_to_user" name="https://developers.facebook.com/docs/requests/#app_to_user">App to User</a> Request:</p>
 <pre>
 {
   &quot;id&quot;: &quot;REQUEST_OBJECT_ID&quot;, 

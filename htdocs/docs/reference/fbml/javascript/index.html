@@ -164,7 +164,7 @@
 <h2>Overview</h2>
 <p>The JavaScript SDK provides a rich set of client-side functionality for accessing Facebook&apos;s server-side API calls. These include all of the features of the <a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">REST API</a>, <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a>, and <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>. Further, it provides a mechanism for rendering of the XFBML versions of our <a href="https://developers.facebook.com/plugins/" name="https://developers.facebook.com/plugins/" target="_blank">Social Plugins</a>, and a way for <a href="/docs/guides/canvas/" name="https://developers.facebook.com/docs/guides/canvas/">Canvas pages</a> to communicate with Facebook.</p>
 <p>You will need an app ID to initialize the SDK, which you can obtain from the <a href="https://developers.facebook.com/apps/" name="https://developers.facebook.com/apps/" target="_blank">App Dashboard</a>.</p>
-<p>For example usage, check out <a href="https://developers.facebook.com/../guides/web" name="https://developers.facebook.com/../guides/web" target="_blank">Facebook for Websites</a> and the <a href="https://developers.facebook.com/../authentication/" name="https://developers.facebook.com/../authentication/" target="_blank">Authentication guide</a>. We also have a <a href="https://developers.facebook.com/../../tools/console" name="https://developers.facebook.com/../../tools/console" target="_blank">JavaScript Test Console</a> which allows you to test and debug common JavaScript SDK methods.</p>
+<p>For example usage, check out <a href="/docs/reference/guides/web/" name="https://developers.facebook.com/docs/reference/guides/web">Facebook for Websites</a> and the <a href="/docs/reference/authentication/" name="https://developers.facebook.com/docs/reference/authentication/">Authentication guide</a>. We also have a <a href="/docs/tools/console/" name="https://developers.facebook.com/docs/tools/console">JavaScript Test Console</a> which allows you to test and debug common JavaScript SDK methods.</p>
 <p>The JavaScript SDK <a href="https://developers.facebook.com/blog/post/525/" name="https://developers.facebook.com/blog/post/525/" target="_blank">supports OAuth 2.0</a>.</p>
 <h2>Loading</h2>
 <p>The following code will load and initialize the JavaScript SDK with all common options. Replace <code>YOUR_APP_ID</code> and <code>WWW.YOUR_DOMAIN.COM</code> with the appropriate values. The best place to put this code is right after the opening <code>&lt;body&gt;</code> tag.</p>
@@ -199,8 +199,8 @@
 <p>The SDK inserts elements into <code>fb-root</code> which expect to be positioned relative to the body or relative to an element close to the top of the page. It is best if the <code>fb-root</code> element is not inside of an element with <code>position: absolute</code> or <code>position: relative</code>. If you must place the <code>fb-root</code> element inside of a positioned element, then you should also give it a position close to the top of the body or some parts of the SDK may not work properly.</p>
 <p>This code loads the SDK asynchronously so it does not block loading other elements of your page. This is particularly important to ensure fast page loads for users and SEO robots.</p>
 <p>The URLs in the above code are protocol relative. This lets the browser to load the SDK over the same protocol (HTTP or HTTPS) as the containing page, which will prevent &quot;Insecure Content&quot; warnings.</p>
-<p>The function assigned to <code>window.fbAsyncInit</code> is run as soon as the SDK is loaded. Any code that you want to run after the SDK is loaded should be placed within this function and after the call to <code>FB.init</code>. For example, this is where you would <a href="/docs/FB.getLoginStatus/" name="https://developers.facebook.com/docs/FB.getLoginStatus">test the logged in status</a> of the user or <a href="/docs/FB.Event.subscribe/" name="https://developers.facebook.com/docs/FB.Event.subscribe">subscribe to any Facebook events</a> in which your application is interested.</p>
-<p>See the <a href="/docs/FB.init/" name="https://developers.facebook.com/docs/FB.init">FB.init documentation</a> for a full list of available initialization options.</p>
+<p>The function assigned to <code>window.fbAsyncInit</code> is run as soon as the SDK is loaded. Any code that you want to run after the SDK is loaded should be placed within this function and after the call to <code>FB.init</code>. For example, this is where you would <a href="/docs/reference/fbml/javascript/FB.getLoginStatus/" name="https://developers.facebook.com/docs/reference/fbml/javascript/FB.getLoginStatus">test the logged in status</a> of the user or <a href="/docs/reference/fbml/javascript/FB.Event.subscribe/" name="https://developers.facebook.com/docs/reference/fbml/javascript/FB.Event.subscribe">subscribe to any Facebook events</a> in which your application is interested.</p>
+<p>See the <a href="/docs/reference/fbml/javascript/FB.init/" name="https://developers.facebook.com/docs/reference/fbml/javascript/FB.init">FB.init documentation</a> for a full list of available initialization options.</p>
 <h3>Channel File</h3>
 <p>The channel file addresses some issues with cross domain communication in certain browsers. The contents of the <code>channel.html</code> file can be just a single line:</p>
 <pre>
@@ -388,19 +388,19 @@
 <h2>Method Categories</h2>
 <ul>
 <li>
-<a href="/docs/#core-methods" name="https://developers.facebook.com/docs/#core-methods">Core Methods</a>
+<a href="/docs/reference/fbml/javascript/#core-methods" name="https://developers.facebook.com/docs/reference/fbml/javascript/#core-methods">Core Methods</a>
 </li>
 <li>
-<a href="/docs/#auth-methods" name="https://developers.facebook.com/docs/#auth-methods">Auth Methods</a>
+<a href="/docs/reference/fbml/javascript/#auth-methods" name="https://developers.facebook.com/docs/reference/fbml/javascript/#auth-methods">Auth Methods</a>
 </li>
 <li>
-<a href="/docs/#event-handling" name="https://developers.facebook.com/docs/#event-handling">Event Handling</a>
+<a href="/docs/reference/fbml/javascript/#event-handling" name="https://developers.facebook.com/docs/reference/fbml/javascript/#event-handling">Event Handling</a>
 </li>
 <li>
-<a href="/docs/#xfbml-methods" name="https://developers.facebook.com/docs/#xfbml-methods">XFBML Methods</a>
+<a href="/docs/reference/fbml/javascript/#xfbml-methods" name="https://developers.facebook.com/docs/reference/fbml/javascript/#xfbml-methods">XFBML Methods</a>
 </li>
 <li>
-<a href="/docs/#canvas-methods" name="https://developers.facebook.com/docs/#canvas-methods">Canvas Methods</a>
+<a href="/docs/reference/fbml/javascript/#canvas-methods" name="https://developers.facebook.com/docs/reference/fbml/javascript/#canvas-methods">Canvas Methods</a>
 </li>
 </ul>
 <hr />
@@ -493,7 +493,7 @@
 <a href="/docs/reference/javascript/FB.Event.unsubscribe/" name="http://developers.facebook.com/docs/reference/javascript/FB.Event.unsubscribe/">FB.Event.unsubscribe</a>
 </div>
 <div class="snippet">
-<p>Removes subscribers, inverse of <a href="/docs/FB.Event.subscribe/" name="https://developers.facebook.com/docs/FB.Event.subscribe">FB.Event.subscribe</a>.</p>
+<p>Removes subscribers, inverse of <a href="/docs/reference/fbml/javascript/FB.Event.subscribe/" name="https://developers.facebook.com/docs/reference/fbml/javascript/FB.Event.subscribe">FB.Event.subscribe</a>.</p>
 </div>
 </div>
 </div>

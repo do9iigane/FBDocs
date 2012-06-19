@@ -497,13 +497,13 @@
 <p>Also see the following:</p>
 <ul>
 <li>
-<a href="/docs/#upd_del" name="https://developers.facebook.com/docs/#upd_del">Updating and deleting ad groups</a>
+<a href="/docs/reference/ads-api/adgroup/#upd_del" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/#upd_del">Updating and deleting ad groups</a>
 </li>
 <li>
-<a href="/docs/#estimreach" name="https://developers.facebook.com/docs/#estimreach">Estimating reach</a>
+<a href="/docs/reference/ads-api/adgroup/#estimreach" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/#estimreach">Estimating reach</a>
 </li>
 <li>
-<a href="/docs/#getstats" name="https://developers.facebook.com/docs/#getstats">Retrieving stats for an ad group</a>
+<a href="/docs/reference/ads-api/adgroup/#getstats" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/#getstats">Retrieving stats for an ad group</a>
 </li>
 </ul>
 <p>
@@ -668,7 +668,7 @@
 </a>
 </p>
 <h2>Estimating the reach of a set of targeting values</h2>
-<p>To get the estimated reach of a set of targeting values, submit the targeting values via query string parameter to <code>/act_{account-id}/reachestimate?currency=USD&amp;targeting_spec=</code>. The format is the same as it would be for the targeting array used when <a href="/docs/#creating_group" name="https://developers.facebook.com/docs/#creating_group">creating an ad group</a>.</p>
+<p>To get the estimated reach of a set of targeting values, submit the targeting values via query string parameter to <code>/act_{account-id}/reachestimate?currency=USD&amp;targeting_spec=</code>. The format is the same as it would be for the targeting array used when <a href="/docs/reference/ads-api/adgroup/#creating_group" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/#creating_group">creating an ad group</a>.</p>
 <p>Note that <code>currency</code> and <code>targeting_spec</code> are required for accessing <code>/act_{account-id}/reachestimate</code>. The returned CPC and CPM values are based on the currency specified. For the list of supported currencies, and the ISO values you can use, see the <a href="https://www.facebook.com/help/?faq=151451521590943" name="https://www.facebook.com/help/?faq=151451521590943" target="_blank">accepted currencies</a>. <code>targeting_spec</code> should include a country code at least.</p>
 <h2>Retrieving ad group targeting and estimating ad group reach</h2>
 <p>You can use <code>/{adgroup-id}</code> to get the targeting values for an ad group.</p>

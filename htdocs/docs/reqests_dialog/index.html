@@ -174,7 +174,7 @@
 &lt;/html&gt;
 </pre>
 <h2>Sending Requests</h2>
-<p>You can send Requests to a set of users by <a href="/docs/#direct_request" name="https://developers.facebook.com/docs/#direct_request">specifying</a> their User ID or allow a user to <a href="/docs/#mfs" name="https://developers.facebook.com/docs/#mfs">select</a> the recipients using the multi-friend selector.</p>
+<p>You can send Requests to a set of users by <a href="/docs/reqests_dialog/#direct_request" name="https://developers.facebook.com/docs/reqests_dialog/#direct_request">specifying</a> their User ID or allow a user to <a href="/docs/reqests_dialog/#mfs" name="https://developers.facebook.com/docs/reqests_dialog/#mfs">select</a> the recipients using the multi-friend selector.</p>
 <p>
 <a name="direct_request">
 </a>
@@ -234,7 +234,7 @@ function sendRequestViaMultiFriendSelector() {
 </p>
 <p>To enable Frictionless Requests you must initialize the JavaScript SDK with the <code>‘frictionlessRequests:true’</code> option in <a href="/docs/reference/javascript/FB.init/" name="https://developers.facebook.com/docs/reference/javascript/FB.init/">FB.init</a>. You send Requests to users via the Requests Dialog just as before. As users share with friends, they may authorize the app to send future requests to specific friends on their behalf.</p>
 <p>If you are sending a Request to multiple recipients and all of the user IDs are frictionless, the confirmation dialog will not display and the users will be notified of the Request. If one or more of the recipients are not frictionless, the confirmation dialog will be displayed and the user must press ‘Send Request’ for the Request to be sent.</p>
-<p>Building on the <a href="/docs/#javascript_example" name="https://developers.facebook.com/docs/#javascript_example">JavaScript example</a> from above, add <code>‘frictionlessRequests:true’</code> to the <code>FB.init</code> call to enable Frictionless Requests:</p>
+<p>Building on the <a href="/docs/reqests_dialog/#javascript_example" name="https://developers.facebook.com/docs/reqests_dialog/#javascript_example">JavaScript example</a> from above, add <code>‘frictionlessRequests:true’</code> to the <code>FB.init</code> call to enable Frictionless Requests:</p>
 <pre>
 FB.init({
   appId  : &apos;YOUR_APP_ID&apos;,
@@ -282,7 +282,7 @@ https://www.facebook.com/dialog/apprequests?
 <code>to</code>
 </td>
 <td>
-<p>A user ID or username. This may or may not be a friend of the user. If this is specified, the user will not have a choice of recipients. If this is omitted, the user will see a <a href="/docs/#mfs" name="https://developers.facebook.com/docs/#mfs">Multi Friend Selector</a> and will be able to select a maximum of 50 recipients. (Due to URL length restrictions, the maximum number of recipients is 25 in IE7/IE8 when using a non-iframe dialog.)</p>
+<p>A user ID or username. This may or may not be a friend of the user. If this is specified, the user will not have a choice of recipients. If this is omitted, the user will see a <a href="/docs/reqests_dialog/#mfs" name="https://developers.facebook.com/docs/reqests_dialog/#mfs">Multi Friend Selector</a> and will be able to select a maximum of 50 recipients. (Due to URL length restrictions, the maximum number of recipients is 25 in IE7/IE8 when using a non-iframe dialog.)</p>
 </td>
 </tr>
 <tr>
@@ -290,7 +290,7 @@ https://www.facebook.com/dialog/apprequests?
 <code>filters</code>
 </td>
 <td>
-<p>Optional, default is &apos;&apos;, which shows a <a href="/docs/#mfs" name="https://developers.facebook.com/docs/#mfs">Multi Friend Selector</a> that includes the ability for a user to browse all friends, but also filter to friends using the application and friends not using the application. Can also be <code>all</code>, <code>app_users</code> and <code>app_non_users</code>. This controls what set of friends the user sees if a <a href="/docs/#mfs" name="https://developers.facebook.com/docs/#mfs">Multi Friend Selector</a> is shown. If <code>all</code>, <code>app_users</code> ,or <code>app_non_users</code> is specified, the user will only be able to see users in that list and will not be able to filter to another list. Additionally, an application can suggest custom filters as dictionaries with a <code>name</code> key and a <code>user_ids</code> key, which respectively have values that are a string and a list of user IDs. <code>name</code> is the name of the custom filter that will show in the selector. <code>user_ids</code> is the list of friends to include, in the order they are to appear.<br />
+<p>Optional, default is &apos;&apos;, which shows a <a href="/docs/reqests_dialog/#mfs" name="https://developers.facebook.com/docs/reqests_dialog/#mfs">Multi Friend Selector</a> that includes the ability for a user to browse all friends, but also filter to friends using the application and friends not using the application. Can also be <code>all</code>, <code>app_users</code> and <code>app_non_users</code>. This controls what set of friends the user sees if a <a href="/docs/reqests_dialog/#mfs" name="https://developers.facebook.com/docs/reqests_dialog/#mfs">Multi Friend Selector</a> is shown. If <code>all</code>, <code>app_users</code> ,or <code>app_non_users</code> is specified, the user will only be able to see users in that list and will not be able to filter to another list. Additionally, an application can suggest custom filters as dictionaries with a <code>name</code> key and a <code>user_ids</code> key, which respectively have values that are a string and a list of user IDs. <code>name</code> is the name of the custom filter that will show in the selector. <code>user_ids</code> is the list of friends to include, in the order they are to appear.<br />
 <br />Example #1<br />
 <br />[{name: &apos;Neighbors&apos;, user_ids: [1, 2, 3]}, {name: &apos;Other Set&apos;, user_ids: [4,5,6]}]<br />
 <br />Example #2<br />
@@ -306,7 +306,7 @@ https://www.facebook.com/dialog/apprequests?
 <td>
 <p>A array of user IDs that will be excluded from the Dialog, for example:<br />
 <br /> exclude_ids: [1, 2, 3]<br />
-<br />If a user is excluded from the Dialog, the user will not show in the <a href="/docs/#mfs" name="https://developers.facebook.com/docs/#mfs">Multi Friend Selector</a>. This parameter is not supported on mobile devices.</p>
+<br />If a user is excluded from the Dialog, the user will not show in the <a href="/docs/reqests_dialog/#mfs" name="https://developers.facebook.com/docs/reqests_dialog/#mfs">Multi Friend Selector</a>. This parameter is not supported on mobile devices.</p>
 </td>
 </tr>
 <tr>

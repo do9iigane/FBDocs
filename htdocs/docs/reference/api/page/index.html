@@ -659,7 +659,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#questions" name="https://developers.facebook.com/docs/#questions">questions</a>
+<a href="/docs/reference/api/page/#questions" name="https://developers.facebook.com/docs/reference/api/page/#questions">questions</a>
 </td>
 <td>
 <p>The Page&apos;s questions.</p>
@@ -709,7 +709,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#admins" name="https://developers.facebook.com/docs/#admins">admins</a>
+<a href="/docs/reference/api/page/#admins" name="https://developers.facebook.com/docs/reference/api/page/#admins">admins</a>
 </td>
 <td>
 <p>A list of the Page&apos;s Admins.</p>
@@ -725,7 +725,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#conversations" name="https://developers.facebook.com/docs/#conversations">conversations</a>
+<a href="/docs/reference/api/page/#conversations" name="https://developers.facebook.com/docs/reference/api/page/#conversations">conversations</a>
 </td>
 <td>
 <p>A list of the Page&apos;s conversations.</p>
@@ -740,7 +740,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#lifeevents" name="https://developers.facebook.com/docs/#lifeevents">milestones</a>
+<a href="/docs/reference/api/page/#lifeevents" name="https://developers.facebook.com/docs/reference/api/page/#lifeevents">milestones</a>
 </td>
 <td>
 <p>A list of the Page&apos;s milestones.</p>
@@ -756,7 +756,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#blocked" name="https://developers.facebook.com/docs/#blocked">blocked</a>
+<a href="/docs/reference/api/page/#blocked" name="https://developers.facebook.com/docs/reference/api/page/#blocked">blocked</a>
 </td>
 <td>
 <p>A list of users blocked from the Page.</p>
@@ -772,7 +772,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#tabs" name="https://developers.facebook.com/docs/#tabs">tabs</a>
+<a href="/docs/reference/api/page/#tabs" name="https://developers.facebook.com/docs/reference/api/page/#tabs">tabs</a>
 </td>
 <td>
 <p>The Page&apos;s profile tabs.</p>
@@ -909,7 +909,7 @@
 </tbody>
 </table>
 <h2 id="attributes">Updating Page Attributes</h2>
-<p>You can update a Page&apos;s basic attributes or <code>About</code> section by issuing an HTTP POST request to <code>PAGE_ID</code> with <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Tokens</a> that has <code>manage_pages</code> permission and following parameters:</p>
+<p>You can update a Page&apos;s basic attributes or <code>About</code> section by issuing an HTTP POST request to <code>PAGE_ID</code> with <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Tokens</a> that has <code>manage_pages</code> permission and following parameters:</p>
 <table>
 <thead>
 <tr>
@@ -973,7 +973,7 @@
 </tbody>
 </table>
 <h3>Setting a Cover Photo</h3>
-<p>You can set a cover photo for a Page by issuing an HTTP POST to &apos;/PAGE_ID/&apos; with a <a href="/docs/page_access_tokens/" name="https://developers.facebook.com/docs/page_access_tokens">Page Acces Token</a> and the following parameters:</p>
+<p>You can set a cover photo for a Page by issuing an HTTP POST to &apos;/PAGE_ID/&apos; with a <a href="/docs/reference/api/page/page_access_tokens/" name="https://developers.facebook.com/docs/reference/api/page/page_access_tokens">Page Acces Token</a> and the following parameters:</p>
 <table>
 <thead>
 <tr>
@@ -1136,9 +1136,9 @@
 </table>
 <hr />
 <h2 id="feed">feed</h2>
-<p>This connection corresponds to the Page&apos;s Wall. You can create a <code>link</code>, <code>post</code> or <code>status message</code> by issuing an HTTP POST request to the <code>PAGE_ID/feed</code> connection. To see more details please see <a href="/docs/#links" name="https://developers.facebook.com/docs/#links">links</a>, <a href="/docs/#posts" name="https://developers.facebook.com/docs/#posts">posts</a>, and <a href="/docs/#statuses" name="https://developers.facebook.com/docs/#statuses">status messages</a> documentation.</p>
-<p>To impersonate the <code>Page</code> when posting to the wall (i.e. post as the <code>Page</code>, and not the current user), you must use a <code>Page</code> <code>access_token</code> with the <code>manage_pages</code> and <code>publish_stream</code> permissions, as described under <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Tokens</a> above.</p>
-<p>Posts may be targeted to countries, cities, regions or locales using the <code>targeting</code> parameter. Please see <a href="/docs/#posts" name="https://developers.facebook.com/docs/#posts">posts</a> for additional information.</p>
+<p>This connection corresponds to the Page&apos;s Wall. You can create a <code>link</code>, <code>post</code> or <code>status message</code> by issuing an HTTP POST request to the <code>PAGE_ID/feed</code> connection. To see more details please see <a href="/docs/reference/api/page/#links" name="https://developers.facebook.com/docs/reference/api/page/#links">links</a>, <a href="/docs/reference/api/page/#posts" name="https://developers.facebook.com/docs/reference/api/page/#posts">posts</a>, and <a href="/docs/reference/api/page/#statuses" name="https://developers.facebook.com/docs/reference/api/page/#statuses">status messages</a> documentation.</p>
+<p>To impersonate the <code>Page</code> when posting to the wall (i.e. post as the <code>Page</code>, and not the current user), you must use a <code>Page</code> <code>access_token</code> with the <code>manage_pages</code> and <code>publish_stream</code> permissions, as described under <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Tokens</a> above.</p>
+<p>Posts may be targeted to countries, cities, regions or locales using the <code>targeting</code> parameter. Please see <a href="/docs/reference/api/page/#posts" name="https://developers.facebook.com/docs/reference/api/page/#posts">posts</a> for additional information.</p>
 <hr />
 <h2 id="links">links</h2>
 <h3>Create</h3>
@@ -1466,7 +1466,7 @@
 <hr />
 <h2 id="lifeevents">milestones</h2>
 <h3>Read</h3>
-<p>You can read milestones for a page by issuing an HTTP GET too <code>/PAGE_ID/milestones</code> with a <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>. This will return the following fields.</p>
+<p>You can read milestones for a page by issuing an HTTP GET too <code>/PAGE_ID/milestones</code> with a <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Token</a>. This will return the following fields.</p>
 <table>
 <thead>
 <tr>
@@ -1546,7 +1546,7 @@
 </tbody>
 </table>
 <h3>Create</h3>
-<p>You can add a milestone by issuing an HTTP POST request to <code>PAGE_ID/milestones</code> with a <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a> and the following parameters:</p>
+<p>You can add a milestone by issuing an HTTP POST request to <code>PAGE_ID/milestones</code> with a <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Token</a> and the following parameters:</p>
 <table>
 <thead>
 <tr>
@@ -1610,7 +1610,7 @@
 </tbody>
 </table>
 <h3>Delete</h3>
-<p>You can delete a milestone by issuing an HTTP DELETE request to <code>/milestone_id</code> with a <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>
+<p>You can delete a milestone by issuing an HTTP DELETE request to <code>/milestone_id</code> with a <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Token</a>
 </p>
 <p>If the delete is successful, you get the following return.</p>
 <table>
@@ -1635,7 +1635,7 @@
 <p>Offers is currently in beta and is available to a limited set of Pages in New Zealand, Singapore, Australia, Japan, and Turkey. We plan to launch offers more widely in the next few weeks. To learn more, please see our recent <a href="http://facebook-studio.com/news/item/facebook-offers-is-a-new-way-to-reward-fans" name="http://facebook-studio.com/news/item/facebook-offers-is-a-new-way-to-reward-fans" target="_blank">blog post</a>.</p>
 </div>
 <h3>Read</h3>
-<p>You can read offers of a Page by issuing an HTTP GET to <code>/PAGE_ID/offers</code> with a <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>. This will return the following fields:</p>
+<p>You can read offers of a Page by issuing an HTTP GET to <code>/PAGE_ID/offers</code> with a <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Token</a>. This will return the following fields:</p>
 <table>
 <thead>
 <tr>
@@ -1717,7 +1717,7 @@
 </tbody>
 </table>
 <h3>Create</h3>
-<p>You can create an Offer for a page by issuing an HTTP POST to <code>/PAGE_ID/offers</code> with a <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a> and the following parameters:</p>
+<p>You can create an Offer for a page by issuing an HTTP POST to <code>/PAGE_ID/offers</code> with a <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Token</a> and the following parameters:</p>
 <table>
 <thead>
 <tr>
@@ -1801,7 +1801,7 @@
 </tbody>
 </table>
 <h3>Delete</h3>
-<p>You can delete a Offer by issuing an HTTP DELETE request to <code>/offer_id</code> with a <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>.</p>
+<p>You can delete a Offer by issuing an HTTP DELETE request to <code>/offer_id</code> with a <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Token</a>.</p>
 <p>If the delete is successful, you get the following return.</p>
 <table>
 <thead>
@@ -1823,7 +1823,7 @@
 <hr />
 <h2 id="conversations">Messages</h2>
 <h3>Read</h3>
-<p>You can read the messages for a page by issuing an HTTP GET request to <code>/PAGE_ID/conversations</code> with a <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a> and <code>read_mailbox</code> <a href="/docs/reference/api/permissions/#extended_perms" name="https://developers.facebook.com/docs/reference/api/permissions/#extended_perms">permission</a>. This will return the following fields:</p>
+<p>You can read the messages for a page by issuing an HTTP GET request to <code>/PAGE_ID/conversations</code> with a <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Token</a> and <code>read_mailbox</code> <a href="/docs/reference/api/permissions/#extended_perms" name="https://developers.facebook.com/docs/reference/api/permissions/#extended_perms">permission</a>. This will return the following fields:</p>
 <table>
 <thead>
 <tr>
@@ -2138,7 +2138,7 @@
 <hr />
 <h2 id="tabs">tabs</h2>
 <h3>Read</h3>
-<p>You can read the tabs for a <code>Page</code> by issuing an HTTP GET to <code>/PAGE_ID/tabs</code> with a <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>. This will return the following fields.</p>
+<p>You can read the tabs for a <code>Page</code> by issuing an HTTP GET to <code>/PAGE_ID/tabs</code> with a <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Token</a>. This will return the following fields.</p>
 <table>
 <thead>
 <tr>
@@ -2283,7 +2283,7 @@
 <p>This request will work for any <code>APP_ID</code> and return the above fields is the app is installed on the page. If the app is not installed on the page, this request will return an empty <code>data[]</code> array.</p>
 <p>You can also issue this same query with an <a href="/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">app access token</a>. In this case, you can query any <code>PAGE_ID</code>, and the above fields will be returned if your app is installed on the specified page. An empty <code>data[]</code> array is returned as usual if the app is not installed on the specified page.</p>
 <h3>Create</h3>
-<p>You can install a profile_tab at the end of the current list of installed tabs for a page by issuing an HTTP POST request to <code>PAGE_ID/tabs</code> with a <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>:</p>
+<p>You can install a profile_tab at the end of the current list of installed tabs for a page by issuing an HTTP POST request to <code>PAGE_ID/tabs</code> with a <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Token</a>:</p>
 <table>
 <thead>
 <tr>
@@ -2324,7 +2324,7 @@
 </tbody>
 </table>
 <h3>Update</h3>
-<p>You can update an installed profile_tab for a page by issuing an HTTP POST request to <code>/PAGE_ID/tabs/TAB_ID</code> with <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a> and the following parameters:</p>
+<p>You can update an installed profile_tab for a page by issuing an HTTP POST request to <code>/PAGE_ID/tabs/TAB_ID</code> with <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Token</a> and the following parameters:</p>
 <table>
 <thead>
 <tr>
@@ -2405,7 +2405,7 @@
 </tbody>
 </table>
 <h3>Delete</h3>
-<p>You can delete an installed profile_tab where is_permanent is not true for a page by issuing an HTTP DELETE request to <code>/PAGE_ID/tabs/TAB_ID</code> object with a <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>.</p>
+<p>You can delete an installed profile_tab where is_permanent is not true for a page by issuing an HTTP DELETE request to <code>/PAGE_ID/tabs/TAB_ID</code> object with a <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Token</a>.</p>
 <p>If the delete is successful, you get the following return.</p>
 <table>
 <thead>
@@ -2426,7 +2426,7 @@
 <hr />
 <h2 id="admins">admins</h2>
 <h3>Belongs</h3>
-<p>To check if a specific user is an admin of the Page, issue an HTTP GET request with the appropriate PAGE_ID, <a href="/docs/#page_access_tokens" name="https://developers.facebook.com/docs/#page_access_tokens">Page Access Token</a>, and USER_ID to <code>https://graph.facebook.com/PAGE_ID/admins/USER_ID</code>
+<p>To check if a specific user is an admin of the Page, issue an HTTP GET request with the appropriate PAGE_ID, <a href="/docs/reference/api/page/#page_access_tokens" name="https://developers.facebook.com/docs/reference/api/page/#page_access_tokens">Page Access Token</a>, and USER_ID to <code>https://graph.facebook.com/PAGE_ID/admins/USER_ID</code>
 </p>
 <p>This returns an <code>array</code> of objects with the following fields:</p>
 <table>

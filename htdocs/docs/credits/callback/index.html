@@ -135,12 +135,12 @@
 <ul>
 <li>
 <p>
-<a href="/docs/#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">Getting item information for display in the Pay Dialog.</a>
+<a href="/docs/credits/callback/#payments_get_items" name="https://developers.facebook.com/docs/credits/callback/#payments_get_items">Getting item information for display in the Pay Dialog.</a>
 </p>
 </li>
 <li>
 <p>
-<a href="/docs/#payments_status_update" name="https://developers.facebook.com/docs/#payments_status_update">Notifying the app of Facebook order status updates.</a>
+<a href="/docs/credits/callback/#payments_status_update" name="https://developers.facebook.com/docs/credits/callback/#payments_status_update">Notifying the app of Facebook order status updates.</a>
 </p>
 </li>
 </ul>
@@ -162,9 +162,9 @@
 </a>
 </td>
 <td>
-<i>Yes</i>.<br />When a user buys an item from the developer, Facebook needs the developer to provide the order information. As a result, Facebook sends a <code>payments_get_items</code> request to the developer&apos;s Credits Callback URL containing the <a href="/docs/reference/dialogs/pay/#buy_item_localcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency">Pay Dialog&apos;s <code>order_info</code> value</a>. The developer&apos;s response must contain the order information because this information is then displayed in the Pay Dialog. <a href="/docs/#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">Details on this request can be found here</a>.</td>
+<i>Yes</i>.<br />When a user buys an item from the developer, Facebook needs the developer to provide the order information. As a result, Facebook sends a <code>payments_get_items</code> request to the developer&apos;s Credits Callback URL containing the <a href="/docs/reference/dialogs/pay/#buy_item_localcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency">Pay Dialog&apos;s <code>order_info</code> value</a>. The developer&apos;s response must contain the order information because this information is then displayed in the Pay Dialog. <a href="/docs/credits/callback/#payments_get_items" name="https://developers.facebook.com/docs/credits/callback/#payments_get_items">Details on this request can be found here</a>.</td>
 <td>
-<i>Yes</i>.<br />After a user places an order and Facebook reserves the user&apos;s funds to purchase this order, Facebook sends a <code>payments_status_update</code> request to the developer&apos;s Credits Callback URL. Assuming the developer fulfills the order based on the <code>order_details</code> value, the developer should settle the order by responding so that Facebook can transfer the funds from the user to the developer. <a href="/docs/#payments_status_update_placed_item_order" name="https://developers.facebook.com/docs/#payments_status_update_placed_item_order">Details on this request can be found here</a>.</td>
+<i>Yes</i>.<br />After a user places an order and Facebook reserves the user&apos;s funds to purchase this order, Facebook sends a <code>payments_status_update</code> request to the developer&apos;s Credits Callback URL. Assuming the developer fulfills the order based on the <code>order_details</code> value, the developer should settle the order by responding so that Facebook can transfer the funds from the user to the developer. <a href="/docs/credits/callback/#payments_status_update_placed_item_order" name="https://developers.facebook.com/docs/credits/callback/#payments_status_update_placed_item_order">Details on this request can be found here</a>.</td>
 </tr>
 <tr>
 <td>
@@ -175,7 +175,7 @@
 <td>
 <i>No</i>.<br />Facebook does <i>not</i> send a <code>payments_get_items</code> request because the order information is <a href="/docs/credits/offers/#create_og_object_instance" name="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance">calculated</a> based on the <a href="/docs/reference/dialogs/pay/#earn_appcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#earn_appcurrency">Pay Dialog&apos;s <code>product</code> value</a> which is an <a href="/docs/credits/offers/#create_og_object_instance" name="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance">app&apos;s currency OG object URL</a>.</td>
 <td>
-<i>Yes</i>.<br />After a user completes an <i>offer</i>, an item order for the app&apos;s currency is placed, and Facebook reserves the user&apos;s funds to purchase this order. Then Facebook sends a <code>payments_status_update</code> request to the developer&apos;s Credits Callback URL to inform the developer that the user has placed an order. Assuming the developer fulfills the order based on the <code>modified</code> value, the developer should settle the order by responding so that Facebook can transfer the funds from the user to the developer. <a href="/docs/#payments_status_update_earn_app_currency" name="https://developers.facebook.com/docs/#payments_status_update_earn_app_currency">Details on this request can be found here</a>.</td>
+<i>Yes</i>.<br />After a user completes an <i>offer</i>, an item order for the app&apos;s currency is placed, and Facebook reserves the user&apos;s funds to purchase this order. Then Facebook sends a <code>payments_status_update</code> request to the developer&apos;s Credits Callback URL to inform the developer that the user has placed an order. Assuming the developer fulfills the order based on the <code>modified</code> value, the developer should settle the order by responding so that Facebook can transfer the funds from the user to the developer. <a href="/docs/credits/callback/#payments_status_update_earn_app_currency" name="https://developers.facebook.com/docs/credits/callback/#payments_status_update_earn_app_currency">Details on this request can be found here</a>.</td>
 </tr>
 <tr>
 <td>
@@ -189,7 +189,7 @@
 <i>No</i>.<br />Since the user is purchasing credits <i>from</i> Facebook and Facebook is responsible for fulfilling orders for credits, Facebook does <i>not</i> send a <code>payments_status_update</code> to the developer&apos;s Credits Callback URL indicating that orders for credits have been placed.</td>
 </tr>
 </table>
-<p>A PHP example can be found <a href="/docs/#php_example" name="https://developers.facebook.com/docs/#php_example">here</a>.</p>
+<p>A PHP example can be found <a href="/docs/credits/callback/#php_example" name="https://developers.facebook.com/docs/credits/callback/#php_example">here</a>.</p>
 <p>
 <a name="payments_get_items"> </a>
 </p>
@@ -379,22 +379,22 @@ Array(
 <ul>
 <li>
 <p>
-<a href="/docs/#payments_status_update_placed_item_order" name="https://developers.facebook.com/docs/#payments_status_update_placed_item_order">A user places an item order.</a>
+<a href="/docs/credits/callback/#payments_status_update_placed_item_order" name="https://developers.facebook.com/docs/credits/callback/#payments_status_update_placed_item_order">A user places an item order.</a>
 </p>
 </li>
 <li>
 <p>
-<a href="/docs/#payments_status_update_earn_app_currency" name="https://developers.facebook.com/docs/#payments_status_update_earn_app_currency">A user earns app currency.</a>
+<a href="/docs/credits/callback/#payments_status_update_earn_app_currency" name="https://developers.facebook.com/docs/credits/callback/#payments_status_update_earn_app_currency">A user earns app currency.</a>
 </p>
 </li>
 <li>
 <p>
-<a href="/docs/#payments_status_update_disputed_item_order" name="https://developers.facebook.com/docs/#payments_status_update_disputed_item_order">A user disputes an item order.</a>
+<a href="/docs/credits/callback/#payments_status_update_disputed_item_order" name="https://developers.facebook.com/docs/credits/callback/#payments_status_update_disputed_item_order">A user disputes an item order.</a>
 </p>
 </li>
 <li>
 <p>
-<a href="/docs/#payments_status_update_refunded_item_order" name="https://developers.facebook.com/docs/#payments_status_update_refunded_item_order">Facebook refunds an item order.</a>
+<a href="/docs/credits/callback/#payments_status_update_refunded_item_order" name="https://developers.facebook.com/docs/credits/callback/#payments_status_update_refunded_item_order">Facebook refunds an item order.</a>
 </p>
 </li>
 </ul>
@@ -435,7 +435,7 @@ method=payments_status_update
 <code>order_details</code>
 </td>
 <td>JSON string</td>
-<td>Contains the developer&apos;s <a href="/docs/#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">
+<td>Contains the developer&apos;s <a href="/docs/credits/callback/#payments_get_items" name="https://developers.facebook.com/docs/credits/callback/#payments_get_items">
 <code>payments_get_items</code> response</a> information. See below for an example.</td>
 </tr>
 <tr>
@@ -627,7 +627,7 @@ method=payments_status_update
 <code>order_details</code>
 </td>
 <td>JSON string</td>
-<td>Contains the developer&apos;s <a href="/docs/#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">
+<td>Contains the developer&apos;s <a href="/docs/credits/callback/#payments_get_items" name="https://developers.facebook.com/docs/credits/callback/#payments_get_items">
 <code>payments_get_items</code> response</a> information. See below for an example.</td>
 </tr>
 <tr>
@@ -695,8 +695,8 @@ Array(
   [status] =&gt; placed
 )
 </pre>
-<p>Unlike <a href="/docs/#payments_status_update_placed_item_order" name="https://developers.facebook.com/docs/#payments_status_update_placed_item_order">
-<code>payments_status_update</code> for placed item orders</a> which have a preceding <a href="/docs/#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">
+<p>Unlike <a href="/docs/credits/callback/#payments_status_update_placed_item_order" name="https://developers.facebook.com/docs/credits/callback/#payments_status_update_placed_item_order">
+<code>payments_status_update</code> for placed item orders</a> which have a preceding <a href="/docs/credits/callback/#payments_get_items" name="https://developers.facebook.com/docs/credits/callback/#payments_get_items">
 <code>payments_get_items</code> for the developer&apos;s item information</a>, <code>payments_status_update</code> for earned app currency does <i>not</i> have a preceding <code>payments_get_items</code>.</p>
 <p>As a result, the developer must JSON decode the <code>order_details</code>&apos; <code>items</code>&apos; <code>0</code>th element&apos;s <code>data</code> field&apos;s value to understand the contents of the order.</p>
 <p>JSON decoding the <code>data</code> value yields an array with the <code>modified</code> element.</p>
@@ -853,7 +853,7 @@ method=payments_status_update
 <code>order_details</code>
 </td>
 <td>JSON string</td>
-<td>Contains the developer&apos;s <a href="/docs/#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">
+<td>Contains the developer&apos;s <a href="/docs/credits/callback/#payments_get_items" name="https://developers.facebook.com/docs/credits/callback/#payments_get_items">
 <code>payments_get_items</code> response</a> information. See below for an example.</td>
 </tr>
 <tr>
@@ -1036,7 +1036,7 @@ method=payments_status_update
 <code>order_details</code>
 </td>
 <td>JSON string</td>
-<td>Contains the developer&apos;s <a href="/docs/#payments_get_items" name="https://developers.facebook.com/docs/#payments_get_items">
+<td>Contains the developer&apos;s <a href="/docs/credits/callback/#payments_get_items" name="https://developers.facebook.com/docs/credits/callback/#payments_get_items">
 <code>payments_get_items</code> response</a> information. See below for an example.</td>
 </tr>
 <tr>

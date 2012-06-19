@@ -474,7 +474,7 @@
 <li>By start and end times.</li>
 </ul>
 <p>
-<strong>Note:</strong> Posts are always retrieved in reverse chronological order (that is, starting with the most recent and returning backwards) with the most recent being limited by <code>end_time</code> and the oldest being limited by <code>start_time</code> (if either or both are specified), up to the total number of posts specified by the <code>limit</code> parameter. For example, if you specify a <code>start_time</code> that happens to include 15 posts but you also specify <code>limit=10</code> and no <code>end_time</code>, you&apos;ll retrieve the 10 most recent posts, not the 10 following <code>start_time</code>. * By the total number of posts you want to return. * By the user&apos;s filters. You can determine the filters using <a href="/docs/stream.getFilters/" name="https://developers.facebook.com/docs/stream.getFilters">
+<strong>Note:</strong> Posts are always retrieved in reverse chronological order (that is, starting with the most recent and returning backwards) with the most recent being limited by <code>end_time</code> and the oldest being limited by <code>start_time</code> (if either or both are specified), up to the total number of posts specified by the <code>limit</code> parameter. For example, if you specify a <code>start_time</code> that happens to include 15 posts but you also specify <code>limit=10</code> and no <code>end_time</code>, you&apos;ll retrieve the 10 most recent posts, not the 10 following <code>start_time</code>. * By the total number of posts you want to return. * By the user&apos;s filters. You can determine the filters using <a href="/docs/reference/rest/stream.get/stream.getFilters/" name="https://developers.facebook.com/docs/reference/rest/stream.get/stream.getFilters">
 <code>stream.getFilters</code>
 </a> or querying the stream_filter FQL table. Filters can be user-defined, Facebook-defined (like News Feed/nf or networks), or for applications (app_&lt;APPLICATION ID&gt;).</p>
 <p>Before you can get data from a user&apos;s stream, you need the extended permission <code>read_stream</code>.</p>
@@ -524,7 +524,7 @@
 <td class="name">filter_key</td>
 <td class="type">string</td>
 <td>
-<p>A filter associated with the user. Filters get returned by <a href="/docs/stream.getFilters/" name="https://developers.facebook.com/docs/stream.getFilters">
+<p>A filter associated with the user. Filters get returned by <a href="/docs/reference/rest/stream.get/stream.getFilters/" name="https://developers.facebook.com/docs/reference/rest/stream.get/stream.getFilters">
 <code>stream.getFilters</code>
 </a> or the stream_filter FQL table. To filter for stream posts from your application, look for a filter with a filter_key set to &quot;app_YOURAPPLICATIONID&quot;.</p>
 </td>

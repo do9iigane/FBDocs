@@ -85,7 +85,7 @@
 <div class="titleblock">
 <h3>Mobile web apps are built using web technologies including HTML5, Javascript and CSS. You can build once and deploy everywhere, including on iPhone, iPad and Android.</h3>
 </div>
-<p>This tutorial guides you through the key steps to build, test, and launch social integration in your mobile web app. It&apos;s a comprehensive walk through building basic social features into your web app. The code used in this tutorial is available below in the <a href="/docs/#samples" name="https://developers.facebook.com/docs/#samples">sample apps</a> section as &quot;Hello World&quot;. On your phone or tablet, you can play with the live<br /> sample at <a href="http://www.facebookmobileweb.com/hello/" name="http://www.facebookmobileweb.com/hello/" target="_blank">www.facebookmobileweb.com/hello/</a>.</p>
+<p>This tutorial guides you through the key steps to build, test, and launch social integration in your mobile web app. It&apos;s a comprehensive walk through building basic social features into your web app. The code used in this tutorial is available below in the <a href="/docs/mobile/web/build/#samples" name="https://developers.facebook.com/docs/mobile/web/build/#samples">sample apps</a> section as &quot;Hello World&quot;. On your phone or tablet, you can play with the live<br /> sample at <a href="http://www.facebookmobileweb.com/hello/" name="http://www.facebookmobileweb.com/hello/" target="_blank">www.facebookmobileweb.com/hello/</a>.</p>
 <div style="float: right; clear: none; margin: -31px 0px 25px; padding: 0px; height: 216px;">
 <img src="https://developers.facebook.com/attachment/mwa_device_splash_top.png" />
 </div>
@@ -97,24 +97,24 @@
 <p>
 <strong>Getting started</strong>
 </p>
-<p>  1. <a href="/docs/#register" name="https://developers.facebook.com/docs/#register">Register your web app</a>
-<br />   2. <a href="/docs/#sdk" name="https://developers.facebook.com/docs/#sdk">Implement the Facebook SDK</a>
-<br />   3. <a href="/docs/#login" name="https://developers.facebook.com/docs/#login">Log the user in</a>
+<p>  1. <a href="/docs/mobile/web/build/#register" name="https://developers.facebook.com/docs/mobile/web/build/#register">Register your web app</a>
+<br />   2. <a href="/docs/mobile/web/build/#sdk" name="https://developers.facebook.com/docs/mobile/web/build/#sdk">Implement the Facebook SDK</a>
+<br />   3. <a href="/docs/mobile/web/build/#login" name="https://developers.facebook.com/docs/mobile/web/build/#login">Log the user in</a>
 </p>
 <p>
 <strong>Adding social context and payments</strong>
 </p>
-<p>  4. <a href="/docs/#graph" name="https://developers.facebook.com/docs/#graph">Use the Graph API</a>
-<br />   5. <a href="/docs/#channels" name="https://developers.facebook.com/docs/#channels">Integrate with Social Channels</a>
-<br />   6. <a href="/docs/#payments" name="https://developers.facebook.com/docs/#payments">Add payments</a>
+<p>  4. <a href="/docs/mobile/web/build/#graph" name="https://developers.facebook.com/docs/mobile/web/build/#graph">Use the Graph API</a>
+<br />   5. <a href="/docs/mobile/web/build/#channels" name="https://developers.facebook.com/docs/mobile/web/build/#channels">Integrate with Social Channels</a>
+<br />   6. <a href="/docs/mobile/web/build/#payments" name="https://developers.facebook.com/docs/mobile/web/build/#payments">Add payments</a>
 <br />
 </p>
 <p>
 <strong>Deploying your social mobile web app</strong>
 </p>
-<p>  7. <a href="/docs/#display" name="https://developers.facebook.com/docs/#display">Display your app properly on devices</a>
-<br />   8. <a href="/docs/#test" name="https://developers.facebook.com/docs/#test">Test your integration</a>
-<br />   9. <a href="/docs/#icons" name="https://developers.facebook.com/docs/#icons">Set icons</a>
+<p>  7. <a href="/docs/mobile/web/build/#display" name="https://developers.facebook.com/docs/mobile/web/build/#display">Display your app properly on devices</a>
+<br />   8. <a href="/docs/mobile/web/build/#test" name="https://developers.facebook.com/docs/mobile/web/build/#test">Test your integration</a>
+<br />   9. <a href="/docs/mobile/web/build/#icons" name="https://developers.facebook.com/docs/mobile/web/build/#icons">Set icons</a>
 </p>
 <hr style="margin-top: 0px;" />
 <h2>Getting Started</h2>
@@ -161,7 +161,7 @@
 <p>Now that you have the SDK added to your website, you can start creating a social experience.</p>
 <hr />
 <h2 id="login">Step 3: Log the user in</h2>
-<p>The next step is to get the Facebook user’s access token in order to personalize the experience for them. If your app only wishes to use the News Feed for Request dialog and doesn&apos;t require the user to login you can skip directly to <a href="/docs/#channels" name="https://developers.facebook.com/docs/#channels">Social Channels</a>.</p>
+<p>The next step is to get the Facebook user’s access token in order to personalize the experience for them. If your app only wishes to use the News Feed for Request dialog and doesn&apos;t require the user to login you can skip directly to <a href="/docs/mobile/web/build/#channels" name="https://developers.facebook.com/docs/mobile/web/build/#channels">Social Channels</a>.</p>
 <h3>Login before landing on your web app</h3>
 <p>Authenticated referrals is a new authentication mode for Facebook applications that ensures all referral traffic from Facebook to your application is already connected with Facebook. This means that visitors arrive on your app already &quot;logged in&quot; and with whatever data permissions (email, likes and interests, etc.) you requested in the Required Permissions section. You can use this information to provide a personalized experience for Facebook visitors the moment they land on your app, and if you are using open graph, users will already have authorized your app to publish open graph actions on your behalf.</p>
 <p>Authenticated referrals works by showing the app permissions dialog on Facebook (immediately after clicking on any links to your app) so you should be sure to configure this dialog to properly show off the best features of your app, and what actions will be added to their profile. Once they are authenticated, they are sent directly to your Mobile Web URL.</p>
@@ -207,7 +207,7 @@
 </code>
 </pre>
 <p>This is the function that will be triggered when the user authenticates. If the function gets a response (the user is logged into Facebook and they&apos;ve logged into your app), the <code>&lt;body&gt;</code> class name will be changed to <code>connected</code>. If a response isn&apos;t returned (because the user hasn&apos;t logged into your app or is logged out of Facebook), the <code>&lt;body&gt;</code> class name will be <code>not_connected</code>. We&apos;re also logging the response to the console for debug purposes.</p>
-<p>Now, let&apos;s test this flow. On your Android or iOS device, go to m.facebook.com and search for your app. Once you tap the result, it will invoke the auth dialog with the set of permissions you asked for. You should then be redirected to your web app and see a response in your browser&apos;s debug console. Depending on the browser you&apos;re using, you may not be able to see the full Object. If you&apos;d like to see the full Object, we recommend testing in your desktop browser, while spoofing your User Agent. More info on that is below, in <a href="/docs/#test" name="https://developers.facebook.com/docs/#test">testing</a>.</p>
+<p>Now, let&apos;s test this flow. On your Android or iOS device, go to m.facebook.com and search for your app. Once you tap the result, it will invoke the auth dialog with the set of permissions you asked for. You should then be redirected to your web app and see a response in your browser&apos;s debug console. Depending on the browser you&apos;re using, you may not be able to see the full Object. If you&apos;d like to see the full Object, we recommend testing in your desktop browser, while spoofing your User Agent. More info on that is below, in <a href="/docs/mobile/web/build/#test" name="https://developers.facebook.com/docs/mobile/web/build/#test">testing</a>.</p>
 <p>This is what you should be seeing in your debug console.</p>
 <div align="center">
 <img src="https://developers.facebook.com/attachment/mwa_console_output_user_session.png" />
@@ -329,7 +329,7 @@
 <div align="center">
 <img src="https://developers.facebook.com/attachment/mwa_console_output_user_friends.png" />
 </div>
-<p>There are many more things you can do with the Graph API. Check out Hackbok in the <a href="/docs/#samples" name="https://developers.facebook.com/docs/#samples">sample apps section</a> to get a better idea. Also, read the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API docs for more info</a> and check out the <a href="https://developers.facebook.com/tools/explorer/" name="https://developers.facebook.com/tools/explorer/" target="_blank">Graph API Explorer</a>.</p>
+<p>There are many more things you can do with the Graph API. Check out Hackbok in the <a href="/docs/mobile/web/build/#samples" name="https://developers.facebook.com/docs/mobile/web/build/#samples">sample apps section</a> to get a better idea. Also, read the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API docs for more info</a> and check out the <a href="https://developers.facebook.com/tools/explorer/" name="https://developers.facebook.com/tools/explorer/" target="_blank">Graph API Explorer</a>.</p>
 <hr />
 <h2 id="channels">Step 5: Integrate with Social Channels</h2>
 <p>Social Channels enable users to post to their friends&apos; News Feed or send a Request to their friends. Read more about both products in <a href="/docs/mobile/" name="https://developers.facebook.com/docs/mobile/">the social channels section of the main mobile doc</a>.</p>

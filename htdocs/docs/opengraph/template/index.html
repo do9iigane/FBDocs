@@ -176,7 +176,7 @@
 </div>
 </div>
 </div>
-<p>Aggregations support a simple text template syntax for formatting Open Graph action / object properties into strings that a user sees. This template syntax supports <a href="/docs/#formatters" name="https://developers.facebook.com/docs/#formatters">Formatters</a> for different data types such as dates, times, currencies, etc., <a href="/docs/#pluralization" name="https://developers.facebook.com/docs/#pluralization">Pluralization</a> of display text and <a href="/docs/#operators" name="https://developers.facebook.com/docs/#operators">Operators</a> for simple mathematical computations. Text templates are specified between the <code>{...}</code> characters.</p>
+<p>Aggregations support a simple text template syntax for formatting Open Graph action / object properties into strings that a user sees. This template syntax supports <a href="/docs/opengraph/template/#formatters" name="https://developers.facebook.com/docs/opengraph/template/#formatters">Formatters</a> for different data types such as dates, times, currencies, etc., <a href="/docs/opengraph/template/#pluralization" name="https://developers.facebook.com/docs/opengraph/template/#pluralization">Pluralization</a> of display text and <a href="/docs/opengraph/template/#operators" name="https://developers.facebook.com/docs/opengraph/template/#operators">Operators</a> for simple mathematical computations. Text templates are specified between the <code>{...}</code> characters.</p>
 <p>
 <b>Aggregations Displaying Actions</b>
 <br /> Within an aggregation where the <a href="/docs/opengraph/define-units/#contents" name="https://developers.facebook.com/docs/opengraph/define-units/#contents">Data to Display</a> is an action, the properties of an action type are referenced directly within the caption text using the syntax <code>{property-name}</code> while the properties of the connected object type are referenced using the syntax <code>{object-type.property-name}</code>.</p>
@@ -184,7 +184,7 @@
 <p>
 <b>Aggregations Displaying Objects</b>
 <br /> The properties object type are referenced directly within the caption syntax as <code>{property-name}</code>. Example: An aggregation that displays the favorite songs of a user can reference the song title as simply <code>{title}</code>.</p>
-<p>Additionally, properties may need to be formatted before showing them to the user, as often is the case with numbers and dates. This is possible by using <a href="/docs/#formatters" name="https://developers.facebook.com/docs/#formatters">Formatters</a>.</p>
+<p>Additionally, properties may need to be formatted before showing them to the user, as often is the case with numbers and dates. This is possible by using <a href="/docs/opengraph/template/#formatters" name="https://developers.facebook.com/docs/opengraph/template/#formatters">Formatters</a>.</p>
 <p>
 <b>Referencing Properties within Nested Objects</b>
 <br /> When a property being referenced is a nested object itself, its own second-level properties can be referenced as:<br />

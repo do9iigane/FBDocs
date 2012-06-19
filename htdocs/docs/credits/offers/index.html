@@ -158,11 +158,11 @@
 <ul>
 <li>
 <p>
-<a href="/docs/#credits_offers" name="https://developers.facebook.com/docs/#credits_offers">Credits Offers</a>. Offers are denominated in credits.</p>
+<a href="/docs/credits/offers/#credits_offers" name="https://developers.facebook.com/docs/credits/offers/#credits_offers">Credits Offers</a>. Offers are denominated in credits.</p>
 </li>
 <li>
 <p>
-<a href="/docs/#app_currency_offers" name="https://developers.facebook.com/docs/#app_currency_offers">In-app Currency Offers</a>. Offers are denominated in the app&apos;s currency.</p>
+<a href="/docs/credits/offers/#app_currency_offers" name="https://developers.facebook.com/docs/credits/offers/#app_currency_offers">In-app Currency Offers</a>. Offers are denominated in the app&apos;s currency.</p>
 </li>
 </ul>
 <p>
@@ -251,13 +251,13 @@ var js_callback = function(data) {
 <p>This feature allows your users to earn in app currency by completing advertiser offers. Since users earn your in app currency, you&apos;ll need to implement the following steps to ensure proper settlement of In-app Currency Offer orders.</p>
 <ul>
 <li>
-<a href="/docs/#create_og_object_instance" name="https://developers.facebook.com/docs/#create_og_object_instance">Create an in app currency Open Graph object instance</a> which contains the conversion rate from credits to your in app currency. </li>
+<a href="/docs/credits/offers/#create_og_object_instance" name="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance">Create an in app currency Open Graph object instance</a> which contains the conversion rate from credits to your in app currency. </li>
 <li>
-<a href="/docs/#update_payments_status_update" name="https://developers.facebook.com/docs/#update_payments_status_update">Update your payment_status_update callback</a> to support fulfillment of the In-app Currency Offer orders.</li>
+<a href="/docs/credits/offers/#update_payments_status_update" name="https://developers.facebook.com/docs/credits/offers/#update_payments_status_update">Update your payment_status_update callback</a> to support fulfillment of the In-app Currency Offer orders.</li>
 <li>
-<a href="/docs/#implement_offerwall_or_dealspot" name="https://developers.facebook.com/docs/#implement_offerwall_or_dealspot">Implement an Offerwall or TrialPay&apos;s DealSpot </a> which utilizes an in app currency Open Graph object instance.</li>
+<a href="/docs/credits/offers/#implement_offerwall_or_dealspot" name="https://developers.facebook.com/docs/credits/offers/#implement_offerwall_or_dealspot">Implement an Offerwall or TrialPay&apos;s DealSpot </a> which utilizes an in app currency Open Graph object instance.</li>
 <li>
-<a href="/docs/#test" name="https://developers.facebook.com/docs/#test">Test your integration</a> to make sure it works correctly. </li>
+<a href="/docs/credits/offers/#test" name="https://developers.facebook.com/docs/credits/offers/#test">Test your integration</a> to make sure it works correctly. </li>
 </ul>
 <p>
 <a name="create_og_object_instance"> </a>
@@ -291,7 +291,7 @@ var js_callback = function(data) {
 <p>If the raw app currency value is (0, 1), TrialPay rounds <em>up</em> to one app currency unit. For example, assume the same exchange rate from above and an offer with value = 1 credit so 0.3333 * 1 = 0.3333 = round up (0.3333) = 1 app currency.</p>
 </li>
 </ol>
-<p>Facebook does not support customized rounding rules, but you may <a href="/docs/#update_payments_status_update" name="https://developers.facebook.com/docs/#update_payments_status_update">cancel the order</a> if you are unhappy with rounding applied to a specific order.</p>
+<p>Facebook does not support customized rounding rules, but you may <a href="/docs/credits/offers/#update_payments_status_update" name="https://developers.facebook.com/docs/credits/offers/#update_payments_status_update">cancel the order</a> if you are unhappy with rounding applied to a specific order.</p>
 <p>Additional notes:</p>
 <ul>
 <li>

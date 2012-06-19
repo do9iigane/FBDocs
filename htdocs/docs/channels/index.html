@@ -75,7 +75,7 @@
 </a>
 </p>
 <h2>News Feed</h2>
-<p>The News Feed is shown immediately to users upon logging into Facebook, making it core to the Facebook experience. There are several ways you can publish content to the stream: <a href="/docs/#feeddialog" name="https://developers.facebook.com/docs/#feeddialog">Feed Dialog</a>, <a href="/docs/#feedobject" name="https://developers.facebook.com/docs/#feedobject">Feed Graph object</a> and <a href="/docs/#likebutton" name="https://developers.facebook.com/docs/#likebutton">Like Button</a>.</p>
+<p>The News Feed is shown immediately to users upon logging into Facebook, making it core to the Facebook experience. There are several ways you can publish content to the stream: <a href="/docs/channels/#feeddialog" name="https://developers.facebook.com/docs/channels/#feeddialog">Feed Dialog</a>, <a href="/docs/channels/#feedobject" name="https://developers.facebook.com/docs/channels/#feedobject">Feed Graph object</a> and <a href="/docs/channels/#likebutton" name="https://developers.facebook.com/docs/channels/#likebutton">Like Button</a>.</p>
 <p>
 <a name="feeddialog">
 </a> <b>Feed Dialog: Prompt Users to Publish</b>
@@ -113,7 +113,7 @@
 <a name="feedobject">
 </a> <b>Feed Graph Object: Publish via the Graph API</b>
 </p>
-<p>There are some cases when you may want to provide a customized experience for publishing to the user&apos;s news feed. You can publish via the Graph API for users who have authorized your application and who have granted you the ‘publish_stream’ <a href="/docs/docs/reference/api/permissions/#extended_perms" name="https://developers.facebook.com/docs/docs/reference/api/permissions/#extended_perms">permission</a>. The available fields are the same as the feed dialog fields. The following POST action will render the same story as in the example above.</p>
+<p>There are some cases when you may want to provide a customized experience for publishing to the user&apos;s news feed. You can publish via the Graph API for users who have authorized your application and who have granted you the ‘publish_stream’ <a href="/docs/channels/docs/reference/api/permissions/#extended_perms" name="https://developers.facebook.com/docs/channels/docs/reference/api/permissions/#extended_perms">permission</a>. The available fields are the same as the feed dialog fields. The following POST action will render the same story as in the example above.</p>
 <p>For example, you can publish to a user&apos;s wall by issuing a POST request to <code>https://graph.facebook.com/&lt;username&gt;/feed</code>:</p>
 <pre>
 <code>curl -F &apos;access_token=...&apos; \
@@ -199,7 +199,7 @@
 </code>
 </pre>
 <p>The message parameter is a UTF-8 string which describes the request. The data parameter is a string which the app can use to store any relevant data in order to process the request.</p>
-<p>Once sent, new requests a user has received are visible as a counter on your application&apos;s <a href="/docs/#bookmarks" name="https://developers.facebook.com/docs/#bookmarks">bookmark</a> and it also increments the counter next to the appropriate <a href="/docs/#dashboards" name="https://developers.facebook.com/docs/#dashboards">Dashboard</a>.</p>
+<p>Once sent, new requests a user has received are visible as a counter on your application&apos;s <a href="/docs/channels/#bookmarks" name="https://developers.facebook.com/docs/channels/#bookmarks">bookmark</a> and it also increments the counter next to the appropriate <a href="/docs/channels/#dashboards" name="https://developers.facebook.com/docs/channels/#dashboards">Dashboard</a>.</p>
 <p>
 <img alt="Bookmark Counter" src="https://developers.facebook.com/attachment/bookmark_counter.png" />
 </p>
@@ -264,16 +264,16 @@
 <a herf="#bookmarks">Bookmarks</a>
 </li>
 <li>
-<a href="/docs/#notifications" name="https://developers.facebook.com/docs/#notifications">Notifications</a>
+<a href="/docs/channels/#notifications" name="https://developers.facebook.com/docs/channels/#notifications">Notifications</a>
 </li>
 <li>
-<a href="/docs/#dashboards" name="https://developers.facebook.com/docs/#dashboards">Dashboards</a>
+<a href="/docs/channels/#dashboards" name="https://developers.facebook.com/docs/channels/#dashboards">Dashboards</a>
 </li>
 <li>
-<a href="/docs/#stories" name="https://developers.facebook.com/docs/#stories">Usage Stories</a>
+<a href="/docs/channels/#stories" name="https://developers.facebook.com/docs/channels/#stories">Usage Stories</a>
 </li>
 <li>
-<a href="/docs/#profiles" name="https://developers.facebook.com/docs/#profiles">Search</a>
+<a href="/docs/channels/#profiles" name="https://developers.facebook.com/docs/channels/#profiles">Search</a>
 </li>
 </ul>
 <p>

@@ -83,7 +83,7 @@
 </div>
 <p>Facebook is currently available in over 70 languages, thanks to a framework that allows our user community to translate the text on Facebook. By integrating with Facebook, you can take advantage of our Translations framework immediately, so you can enjoy the benefits that translation can bring to your Platform application or website.</p>
 <p>
-<img src="https://developers.facebook.com/images/devsite/i18n_logo.jpg" /> <a href="/docs/locales/" name="https://developers.facebook.com/docs/locales">
+<img src="https://developers.facebook.com/images/devsite/i18n_logo.jpg" /> <a href="/docs/internationalization/locales/" name="https://developers.facebook.com/docs/internationalization/locales">
 </a>
 </p>
 <h3>Understanding Locales</h3>
@@ -103,22 +103,22 @@
 <p>The following steps assume you have <a href="https://developers.facebook.com/apps" name="https://developers.facebook.com/apps" target="_blank">created an application</a> and have an application ID.</p>
 <ul>
 <li>
-<a href="/docs/#prepare" name="https://developers.facebook.com/docs/#prepare">Preparing your application for translation</a>
+<a href="/docs/internationalization/#prepare" name="https://developers.facebook.com/docs/internationalization/#prepare">Preparing your application for translation</a>
 </li>
 <li>
-<a href="/docs/#register" name="https://developers.facebook.com/docs/#register">Registering the text you want translated</a>
+<a href="/docs/internationalization/#register" name="https://developers.facebook.com/docs/internationalization/#register">Registering the text you want translated</a>
 </li>
 <li>
-<a href="/docs/#markup" name="https://developers.facebook.com/docs/#markup">Marking up text for translation</a>
+<a href="/docs/internationalization/#markup" name="https://developers.facebook.com/docs/internationalization/#markup">Marking up text for translation</a>
 </li>
 <li>
-<a href="/docs/#translate" name="https://developers.facebook.com/docs/#translate">Getting your application translated</a>
+<a href="/docs/internationalization/#translate" name="https://developers.facebook.com/docs/internationalization/#translate">Getting your application translated</a>
 </li>
 <li>
-<a href="/docs/#administration" name="https://developers.facebook.com/docs/#administration">Managing the translation process</a>
+<a href="/docs/internationalization/#administration" name="https://developers.facebook.com/docs/internationalization/#administration">Managing the translation process</a>
 </li>
 <li>
-<a href="/docs/#best" name="https://developers.facebook.com/docs/#best">Best practices</a>
+<a href="/docs/internationalization/#best" name="https://developers.facebook.com/docs/internationalization/#best">Best practices</a>
 </li>
 </ul>
 <p>
@@ -141,7 +141,7 @@
 <li>Enable a language for translation. To enable translation of your application into a particular locale, select the row for the appropriate <strong>Language</strong>, then check the <strong>On</strong> check box for that locale. After checking it, users can see any strings that you mark as translatable, and can provide translations for them. <br />
 <strong>Note:</strong> If this check box is NOT checked, the only people who can translate your application into this language are the application&apos;s developers (listed in the App Dashboard) and those designated as the language managers for this language in the <strong>Language Managers</strong> column.</li>
 </ol>
-<p>Once you initiate the translation process, you&apos;ll return to the Translations dashboard when you need to do more <a href="/docs/#administration" name="https://developers.facebook.com/docs/#administration">administration</a>. For now, these steps are the ones necessary to get started.</p>
+<p>Once you initiate the translation process, you&apos;ll return to the Translations dashboard when you need to do more <a href="/docs/internationalization/#administration" name="https://developers.facebook.com/docs/internationalization/#administration">administration</a>. For now, these steps are the ones necessary to get started.</p>
 <p>
 <a name="register">
 </a>
@@ -149,7 +149,7 @@
 <h2>Registering the Text You Want Translated</h2>
 <p>Text can come from a lot of places, and it&apos;s important that if your application is available in a language that everything is translatable. The following is an exhaustive list of all places that you may find content you need to prepare for the translation process.</p>
 <h3>Text that gets rendered within your application or website.</h3>
-<p>Use FBML (for FBML applications) or XFBML (for Facebook websites or IFrame applications) <a href="/docs/#markup" name="https://developers.facebook.com/docs/#markup">markup tags</a> for this text.</p>
+<p>Use FBML (for FBML applications) or XFBML (for Facebook websites or IFrame applications) <a href="/docs/internationalization/#markup" name="https://developers.facebook.com/docs/internationalization/#markup">markup tags</a> for this text.</p>
 <h3 id="text_on_fb">Text entered on facebook.com.</h3>
 <p>There is a list of static text about your application that you may enter on facebook.com which you may want to have translated. Each of these fields, when submitted or updated on Facebook, will automatically be registered on the Translations application on behalf of your application.</p>
 <ul>
@@ -163,7 +163,7 @@
 </ul>
 <p>Once a translation is ready for any of these fields from the Translations application, it will automatically get used on Facebook without any further effort on the part of the developer.</p>
 <h3>Text sent through Facebook communication channels (like <a href="/docs/guides/attachments/" name="https://developers.facebook.com/docs/guides/attachments">stream attachments</a>).</h3>
-<p>Wrap the text using the <a href="/docs/#markup" name="https://developers.facebook.com/docs/#markup">FBML internationalization markup tags</a>. Then, use <a href="/docs/reference/rest/intl.uploadNativeStrings/" name="https://developers.facebook.com/docs/reference/rest/intl.uploadNativeStrings/">intl.uploadNativeStrings</a> if you want to register the text to be translatable by users before actually sending it.</p>
+<p>Wrap the text using the <a href="/docs/internationalization/#markup" name="https://developers.facebook.com/docs/internationalization/#markup">FBML internationalization markup tags</a>. Then, use <a href="/docs/reference/rest/intl.uploadNativeStrings/" name="https://developers.facebook.com/docs/reference/rest/intl.uploadNativeStrings/">intl.uploadNativeStrings</a> if you want to register the text to be translatable by users before actually sending it.</p>
 <h3>Text contained within your databases.</h3>
 <p>You may have content that isn&apos;t rendered directly. For instance, if your application is an online store, you might store a list of item names of your inventory. In order for this text to be registered for translation, use <a href="/docs/reference/rest/intl.uploadNativeStrings/" name="https://developers.facebook.com/docs/reference/rest/intl.uploadNativeStrings/">intl.uploadNativeStrings</a> to register all variations of the text that include each item from your database.</p>
 <p>
@@ -231,13 +231,13 @@ a copy of &quot;Catcher In the Rye&quot;?
 </ul>
 <p>Once your FBML text uses these tags, it will be uploaded to the Translations application on the first canvas page load containing this FBML. After that initial page load, it will be translatable both in the Translations application as well as inline by Facebook users. Once the text is translated in, say, Spanish, it will appear to users browsing in the Spanish locale.</p>
 <h3>Best Practices</h3>
-<p>Much of this may become clearer after reading the <a href="/docs/#best" name="https://developers.facebook.com/docs/#best">best practices</a> for advice on how to best prepare your applications. We <strong>strongly</strong> encourage you to do so.</p>
+<p>Much of this may become clearer after reading the <a href="/docs/internationalization/#best" name="https://developers.facebook.com/docs/internationalization/#best">best practices</a> for advice on how to best prepare your applications. We <strong>strongly</strong> encourage you to do so.</p>
 <p>
 <a name="translate">
 </a>
 </p>
 <h2>Getting Your Application Translated</h2>
-<p>Now that you <a href="/docs/#prepare" name="https://developers.facebook.com/docs/#prepare">prepared</a> your application or site for translation and <a href="/docs/#register" name="https://developers.facebook.com/docs/#register">registered</a> all the text you want translated, you can start getting the text translated. Any Facebook user can translate your application, but it&apos;s much easier for people who have already authorized your application.</p>
+<p>Now that you <a href="/docs/internationalization/#prepare" name="https://developers.facebook.com/docs/internationalization/#prepare">prepared</a> your application or site for translation and <a href="/docs/internationalization/#register" name="https://developers.facebook.com/docs/internationalization/#register">registered</a> all the text you want translated, you can start getting the text translated. Any Facebook user can translate your application, but it&apos;s much easier for people who have already authorized your application.</p>
 <p>Users can translate text in two ways:</p>
 <ul>
 <li>Inline while using your application.</li>

@@ -208,7 +208,7 @@
 <p>Creative specs are used to define what the creative of an <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a> looks like. Creative Specs are used in <a href="/docs/reference/ads-api/adcreative/" name="https://developers.facebook.com/docs/reference/ads-api/adcreative/">Ad Creative</a> and <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a> objects. Creative Specs can also be used to <a href="/docs/reference/ads-api/generatepreview/" name="https://developers.facebook.com/docs/reference/ads-api/generatepreview/">generate previews</a> of what a creative will look like when used in an <a href="/docs/reference/ads-api/adgroup/" name="https://developers.facebook.com/docs/reference/ads-api/adgroup/">Ad group</a>
 </p>
 <h2>Fields</h2>
-<p>The following are the fields for the creative spec. The required fields are different based on the creative type, see the parameter columns of the <a href="/docs/#ad_creative_types" name="https://developers.facebook.com/docs/#ad_creative_types">&quot;Ad Creative Types&quot;</a> table below. <table>
+<p>The following are the fields for the creative spec. The required fields are different based on the creative type, see the parameter columns of the <a href="/docs/reference/ads-api/creative-specs/#ad_creative_types" name="https://developers.facebook.com/docs/reference/ads-api/creative-specs/#ad_creative_types">&quot;Ad Creative Types&quot;</a> table below. <table>
 <thead>
 <tr>
 <th align="left">Name</th>
@@ -270,7 +270,7 @@
 <td align="left">
 <code>image_hash</code>
 </td>
-<td align="left">Image ID for an image you can use in creatives and thus in ads, see <a href="/docs/#using_images" name="https://developers.facebook.com/docs/#using_images">Using Images</a>
+<td align="left">Image ID for an image you can use in creatives and thus in ads, see <a href="/docs/reference/ads-api/creative-specs/#using_images" name="https://developers.facebook.com/docs/reference/ads-api/creative-specs/#using_images">Using Images</a>
 </td>
 <td align="left">
 <code>ads_management</code>
@@ -283,7 +283,7 @@
 <td align="left">
 <code>image_url</code>
 </td>
-<td align="left">A URL for the image for this creative, see <a href="/docs/#using_images" name="https://developers.facebook.com/docs/#using_images">Using Images</a>
+<td align="left">A URL for the image for this creative, see <a href="/docs/reference/ads-api/creative-specs/#using_images" name="https://developers.facebook.com/docs/reference/ads-api/creative-specs/#using_images">Using Images</a>
 </td>
 <td align="left">
 <code>ads_management</code>
@@ -380,7 +380,7 @@
 <td align="left">
 <code>related_fan_page</code>
 </td>
-<td align="left">Provides social context to a type 1 ad, see <a href="/docs/#include_social" name="https://developers.facebook.com/docs/#include_social">Including social context</a>
+<td align="left">Provides social context to a type 1 ad, see <a href="/docs/reference/ads-api/creative-specs/#include_social" name="https://developers.facebook.com/docs/reference/ads-api/creative-specs/#include_social">Including social context</a>
 </td>
 <td align="left">
 <code>ads_management</code>
@@ -528,7 +528,7 @@
 <tr>
 <td align="left">25</td>
 <td align="left">
-<a href="/docs/reference/ads-api/intro-sponsored-stories/" name="https://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/">Sponsored stories</a> for promoting actions taken by a user as defined by an Action Spec. Please see <a href="/docs/#action_specs_Sponsored_stories" name="https://developers.facebook.com/docs/#action_specs_Sponsored_stories">Action Specs for Sponsored Stories</a> below</td>
+<a href="/docs/reference/ads-api/intro-sponsored-stories/" name="https://developers.facebook.com/docs/reference/ads-api/intro-sponsored-stories/">Sponsored stories</a> for promoting actions taken by a user as defined by an Action Spec. Please see <a href="/docs/reference/ads-api/creative-specs/#action_specs_Sponsored_stories" name="https://developers.facebook.com/docs/reference/ads-api/creative-specs/#action_specs_Sponsored_stories">Action Specs for Sponsored Stories</a> below</td>
 <td align="left">
 <code>action_spec</code>
 </td>
@@ -600,7 +600,7 @@
 </tr>
 <tr>
 <td align="left">16</td>
-<td align="left">Promotes stories about a user using an app <a href="/docs/#action_specs_Sponsored_stories_app_used" name="https://developers.facebook.com/docs/#action_specs_Sponsored_stories_app_used">note</a>.</td>
+<td align="left">Promotes stories about a user using an app <a href="/docs/reference/ads-api/creative-specs/#action_specs_Sponsored_stories_app_used" name="https://developers.facebook.com/docs/reference/ads-api/creative-specs/#action_specs_Sponsored_stories_app_used">note</a>.</td>
 <td align="left">{&apos;action.type&apos;:&apos;app_use&apos;, &apos;application&apos;:APP_ID}</td>
 </tr>
 <tr>
@@ -658,7 +658,7 @@
 <p>For ads that lead to content off Facebook, it may be useful to distinguish whether clicks coming to your Facebook application of website are from an ad or a news feed story. Several ad types support adding query parameter to ads destination URL for purpose of tracking.</p>
 <ul>
 <li>For <strong>type 1</strong> ads, you can simply append a query parameter to a website URL when specifying <code>url_link</code>.</li>
-<li>For <strong>type 2</strong> ads that land on an <code>iframe</code> page tab application, you can append a special query parameter <code>app_data</code> to the page tab URL when specifying <code>url_link</code> (see <a href="/docs/#obtaining_objects" name="https://developers.facebook.com/docs/#obtaining_objects">Obtaining Objects</a> for obtaining page tab URLs). You can retrive <code>app_id</code> from <code>signed_request</code> parameter that Facebook platform appends to the application&apos;s tab URL when the tab is loaded (see <a href="/docs/authentication/signed_request/" name="https://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a>).</li>
+<li>For <strong>type 2</strong> ads that land on an <code>iframe</code> page tab application, you can append a special query parameter <code>app_data</code> to the page tab URL when specifying <code>url_link</code> (see <a href="/docs/reference/ads-api/creative-specs/#obtaining_objects" name="https://developers.facebook.com/docs/reference/ads-api/creative-specs/#obtaining_objects">Obtaining Objects</a> for obtaining page tab URLs). You can retrive <code>app_id</code> from <code>signed_request</code> parameter that Facebook platform appends to the application&apos;s tab URL when the tab is loaded (see <a href="/docs/authentication/signed_request/" name="https://developers.facebook.com/docs/authentication/signed_request/">Signed Request</a>).</li>
 <li>For <strong>type 4</strong> ads, you can simply append a query parameter to n app URL when specifying <code>url_link</code>.</li>
 <li>For <strong>type 25 ads</strong> you can use <code>url_tags</code> to specify a list of query parameters for the following action spec formats: {&apos;action.type&apos;:&apos;post&apos;, &apos;application&apos;:APP_ID}, {&apos;action.type&apos;:&apos;app_use&apos;, &apos;application&apos;:APP_ID} and {&apos;action.type&apos;:&apos;post&apos;, &apos;post.domain&apos;:DOMAIN_ID}. These query parameters will be appended to the ad&apos;s URL, which points to an external website or a Facebook canvas application. (see <a href="https://www.facebook.com/help/?faq=186017481448547" name="https://www.facebook.com/help/?faq=186017481448547" target="_blank">optional tracking tags</a>)</li>
 <li>For <strong>type 27 ads</strong>, you can use <code>url_tags</code> to specify a list of query parameters. These query parameters will be appended to the ad&apos;s URL, which points to an external website or a Facebook canvas application. (see <a href="https://www.facebook.com/help/?faq=186017481448547" name="https://www.facebook.com/help/?faq=186017481448547" target="_blank">optional tracking tags</a>).</li>
@@ -700,7 +700,7 @@
 </a>
 </p>
 <h2>Including social context in ads for external sites</h2>
-<p>Social Context may be applied to external URL (type 1) ads by means of the related_fan_page parameter. The social context can either be determined by Facebook or specified by you. Facebook can match the ad&apos;s external URL (specified in the link_url parameter) to a related Facebook page (or Facebook app) based on the <a href="/docs/#url_validation" name="https://developers.facebook.com/docs/#url_validation">validation criteria</a>. Alternatively you can specify the Object Id of the Facebook Page (or Facebook App) you want the social context to be applied from. Facebook will still validate this Object ID matches the URL in the Ad.</p>
+<p>Social Context may be applied to external URL (type 1) ads by means of the related_fan_page parameter. The social context can either be determined by Facebook or specified by you. Facebook can match the ad&apos;s external URL (specified in the link_url parameter) to a related Facebook page (or Facebook app) based on the <a href="/docs/reference/ads-api/creative-specs/#url_validation" name="https://developers.facebook.com/docs/reference/ads-api/creative-specs/#url_validation">validation criteria</a>. Alternatively you can specify the Object Id of the Facebook Page (or Facebook App) you want the social context to be applied from. Facebook will still validate this Object ID matches the URL in the Ad.</p>
 <p>
 <strong>Note:</strong> Pages must have a minimum of 10 fans before social context will be applied.</p>
 <table>

@@ -1085,7 +1085,7 @@
 <h3>Read</h3>
 <p>To retrieve a list of properties from an app, issue an HTTP GET with an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app access token</a> to <code>https://graph.facebook.com/APP_ID?fields=PROPERTY_NAME</code> using the property values above in a comma-separated list. The returned values for all properties are listed in the table above.</p>
 <h3>Create</h3>
-<p>To set properties for an app, issue an HTTP POST with an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app access token</a> to <code>https://graph.facebook.com/APP_ID?PROPERTY_1=PROPERTY_VALUE&amp;PROPERTY_2=PROPERTY_VALUE2</code> using the same properties and formats as in the table above. <strong>Not all app properties can be edited via the API, please refer to the <a href="/docs/#fields" name="https://developers.facebook.com/docs/#fields">properties in the table above</a> for an indication of whether a property can be edited or not.</strong> Array properties can be unset by passing an empty array.</p>
+<p>To set properties for an app, issue an HTTP POST with an <a href="/docs/authentication/#app-login" name="https://developers.facebook.com/docs/authentication/#app-login">app access token</a> to <code>https://graph.facebook.com/APP_ID?PROPERTY_1=PROPERTY_VALUE&amp;PROPERTY_2=PROPERTY_VALUE2</code> using the same properties and formats as in the table above. <strong>Not all app properties can be edited via the API, please refer to the <a href="/docs/reference/api/application/#fields" name="https://developers.facebook.com/docs/reference/api/application/#fields">properties in the table above</a> for an indication of whether a property can be edited or not.</strong> Array properties can be unset by passing an empty array.</p>
 <p>This returns <code>true</code> if successful.</p>
 <hr />
 <h2>Connections</h2>
@@ -1107,7 +1107,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#accounts" name="https://developers.facebook.com/docs/#accounts">accounts</a>
+<a href="/docs/reference/api/application/#accounts" name="https://developers.facebook.com/docs/reference/api/application/#accounts">accounts</a>
 </td>
 <td>
 <p>Test User accounts associated with the app.</p>
@@ -1123,7 +1123,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#banned" name="https://developers.facebook.com/docs/#banned">banned</a>
+<a href="/docs/reference/api/application/#banned" name="https://developers.facebook.com/docs/reference/api/application/#banned">banned</a>
 </td>
 <td>
 <p>Banned users from your app</p>
@@ -1186,7 +1186,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#roles" name="https://developers.facebook.com/docs/#roles">roles</a>
+<a href="/docs/reference/api/application/#roles" name="https://developers.facebook.com/docs/reference/api/application/#roles">roles</a>
 </td>
 <td>
 <p>The developer roles defined for this application.</p>
@@ -1249,7 +1249,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#scores" name="https://developers.facebook.com/docs/#scores">scores</a>
+<a href="/docs/reference/api/application/#scores" name="https://developers.facebook.com/docs/reference/api/application/#scores">scores</a>
 </td>
 <td>
 <p>Scores for the user and their friends.</p>
@@ -1265,7 +1265,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#achievements" name="https://developers.facebook.com/docs/#achievements">achievements</a>
+<a href="/docs/reference/api/application/#achievements" name="https://developers.facebook.com/docs/reference/api/application/#achievements">achievements</a>
 </td>
 <td>
 <p>Achievements registered for the app.</p>
@@ -1280,7 +1280,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#videos" name="https://developers.facebook.com/docs/#videos">videos</a>
+<a href="/docs/reference/api/application/#videos" name="https://developers.facebook.com/docs/reference/api/application/#videos">videos</a>
 </td>
 <td>
 <p>The videos uploaded to an application.</p>
@@ -1547,8 +1547,8 @@
 <hr />
 <h2 id="feed">feed</h2>
 <h3>Create</h3>
-<p>You can create a <code>link</code>, <code>post</code> or <code>status message</code> by issuing an HTTP POST request to the <code>APP_ID/feed</code> connection. To see more details please see <a href="/docs/#links" name="https://developers.facebook.com/docs/#links">links</a>, <a href="/docs/#posts" name="https://developers.facebook.com/docs/#posts">posts</a>, and <a href="/docs/#statuses" name="https://developers.facebook.com/docs/#statuses">status messages</a> documentation.</p>
-<p>To impersonate the <code>Application</code> when posting to the wall (i.e. post as the <code>Application</code>, and not the current user), you must use an <code>Application</code> <code>Page</code> <code>access_token</code> with the <code>manage_pages</code> and <code>publish_stream</code> permissions, as described under <a href="/docs/#application_access_tokens" name="https://developers.facebook.com/docs/#application_access_tokens">Application Access Tokens</a> above.</p>
+<p>You can create a <code>link</code>, <code>post</code> or <code>status message</code> by issuing an HTTP POST request to the <code>APP_ID/feed</code> connection. To see more details please see <a href="/docs/reference/api/application/#links" name="https://developers.facebook.com/docs/reference/api/application/#links">links</a>, <a href="/docs/reference/api/application/#posts" name="https://developers.facebook.com/docs/reference/api/application/#posts">posts</a>, and <a href="/docs/reference/api/application/#statuses" name="https://developers.facebook.com/docs/reference/api/application/#statuses">status messages</a> documentation.</p>
+<p>To impersonate the <code>Application</code> when posting to the wall (i.e. post as the <code>Application</code>, and not the current user), you must use an <code>Application</code> <code>Page</code> <code>access_token</code> with the <code>manage_pages</code> and <code>publish_stream</code> permissions, as described under <a href="/docs/reference/api/application/#application_access_tokens" name="https://developers.facebook.com/docs/reference/api/application/#application_access_tokens">Application Access Tokens</a> above.</p>
 <hr />
 <h2 id="links">links</h2>
 <h3>Create</h3>
@@ -1922,7 +1922,7 @@
 <hr />
 <h2 id="subscriptions">subscriptions</h2>
 <h3>Create / Update</h3>
-<p>You can set up a <a href="/docs/reference/api/subscription/" name="https://developers.facebook.com/docs/reference/api/subscription/">subscription</a> by issuing an HTTP POST request to <code>APP_ID/subscriptions</code> with an <a href="/docs/#application_access_tokens" name="https://developers.facebook.com/docs/#application_access_tokens">application page access token</a> and the following parameters.</p>
+<p>You can set up a <a href="/docs/reference/api/subscription/" name="https://developers.facebook.com/docs/reference/api/subscription/">subscription</a> by issuing an HTTP POST request to <code>APP_ID/subscriptions</code> with an <a href="/docs/reference/api/application/#application_access_tokens" name="https://developers.facebook.com/docs/reference/api/application/#application_access_tokens">application page access token</a> and the following parameters.</p>
 <table>
 <tr>
 <th> Parameter </th>

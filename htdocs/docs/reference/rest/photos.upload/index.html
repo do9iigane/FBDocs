@@ -468,7 +468,7 @@
 </table>
 <p>Uploads a photo owned by the specified user or the current session user and returns the new photo. See photo uploads for a description of the upload workflow. The only storable values returned from this call are <code>pid</code>, <code>aid</code>, and <code>owner</code>. All applications can upload photos with a &quot;pending&quot; state, which means that the photos must be approved by the user before they are visible on the site. Photos uploaded by applications with the <code>publish_stream</code> extended permission are visible immediately.</p>
 <p>If no album is specified, the photo is uploaded to a default album for the application, which can be created if necessary. Regular albums have a size limit of 200 photos. Default application albums have a size limit of 1000 photos.</p>
-<p>You can upload to a specific user&apos;s album by calling <a href="/docs/photos.getAlbums/" name="https://developers.facebook.com/docs/photos.getAlbums">
+<p>You can upload to a specific user&apos;s album by calling <a href="/docs/reference/rest/photos.upload/photos.getAlbums/" name="https://developers.facebook.com/docs/reference/rest/photos.upload/photos.getAlbums">
 <code>photos.getAlbums</code>
 </a>. However, you cannot upload to a user&apos;s profile picture album.</p>
 <p>

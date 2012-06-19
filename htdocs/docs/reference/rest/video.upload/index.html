@@ -472,11 +472,11 @@
 <h4>Where You Must Make this Call</h4>
 <p>Video uploads to Facebook happen on a specific set of servers. When you call video.upload, you need to account for this fact. You must make the video.upload call to http://api-video.facebook.com, and not api.facebook.com. If you call api.facebook.com, an error gets returned.</p>
 <h4>About User Upload Limits</h4>
-<p>Each user is subject to limits on the length and size of the video files they can upload, just like they are when uploading through Facebook. Use <a href="/docs/video.getUploadLimits/" name="https://developers.facebook.com/docs/video.getUploadLimits">
+<p>Each user is subject to limits on the length and size of the video files they can upload, just like they are when uploading through Facebook. Use <a href="/docs/reference/rest/video.upload/video.getUploadLimits/" name="https://developers.facebook.com/docs/reference/rest/video.upload/video.getUploadLimits">
 <code>video.getUploadLimits</code>
-</a> to determine a specific user&apos;s limits. To increase video upload limits, users can &apos;&apos;verify&apos;&apos; their accounts with Facebook. One simple way to verify an account is by <a href="https://register.facebook.com/mobile/?account" name="https://register.facebook.com/mobile/?account" target="_blank">confirming a mobile phone number</a> with Facebook. You can determine whether a user has verified their account querying for <code>verified</code> on the user FQL table or by calling <a href="/docs/users.isVerified/" name="https://developers.facebook.com/docs/users.isVerified">
+</a> to determine a specific user&apos;s limits. To increase video upload limits, users can &apos;&apos;verify&apos;&apos; their accounts with Facebook. One simple way to verify an account is by <a href="https://register.facebook.com/mobile/?account" name="https://register.facebook.com/mobile/?account" target="_blank">confirming a mobile phone number</a> with Facebook. You can determine whether a user has verified their account querying for <code>verified</code> on the user FQL table or by calling <a href="/docs/reference/rest/video.upload/users.isVerified/" name="https://developers.facebook.com/docs/reference/rest/video.upload/users.isVerified">
 <code>users.isVerified</code>
-</a>, but in general you should determine a user&apos;s video limits independently with <a href="/docs/video.getUploadLimits/" name="https://developers.facebook.com/docs/video.getUploadLimits">
+</a>, but in general you should determine a user&apos;s video limits independently with <a href="/docs/reference/rest/video.upload/video.getUploadLimits/" name="https://developers.facebook.com/docs/reference/rest/video.upload/video.getUploadLimits">
 <code>video.getUploadLimits</code>
 </a>. You might want to display these limits to the user before that user tries to upload a video to Facebook.</p>
 <h4>Supported Video Types</h4>
@@ -553,9 +553,9 @@
 <li>allow (string): When friends is set to SOME_FRIENDS, specify a comma-separated list of user IDs and friend list IDs that &apos;&apos;can&apos;&apos; see the post.</li>
 <li>deny (string): When friends is set to SOME_FRIENDS, specify a comma-separated list of user IDs and friend list IDs that &apos;&apos;cannot&apos;&apos; see the post.</li>
 </ul>
-<p>Only the user can specify the privacy settings for the post. You can create an interface that lets the user specify the privacy setting. For CUSTOM settings, use <a href="/docs/friends.get/" name="https://developers.facebook.com/docs/friends.get">
+<p>Only the user can specify the privacy settings for the post. You can create an interface that lets the user specify the privacy setting. For CUSTOM settings, use <a href="/docs/reference/rest/video.upload/friends.get/" name="https://developers.facebook.com/docs/reference/rest/video.upload/friends.get">
 <code>friends.get</code>
-</a> and <a href="/docs/friends.getLists/" name="https://developers.facebook.com/docs/friends.getLists">
+</a> and <a href="/docs/reference/rest/video.upload/friends.getLists/" name="https://developers.facebook.com/docs/reference/rest/video.upload/friends.getLists">
 <code>friends.getLists</code>
 </a> to get the user&apos;s friends and friend lists to populate the interface, then pass along the selections to the privacy object.</p>
 <p>

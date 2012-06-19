@@ -128,7 +128,7 @@
 <p>Use of this dialog does not require <a href="/docs/reference/api/permissions/" name="https://developers.facebook.com/docs/reference/api/permissions/">extended permissions</a>.</p>
 </li>
 <li>
-<p>Before integrating the Pay Dialog, developers must <a href="/docs/credits/build/" name="https://developers.facebook.com/docs/credits/build/">register their company information</a> and implement the <a href="/docs/credits/callback/" name="https://developers.facebook.com/docs/credits/callback/">server-side Credits Callbacks</a>. The contents of the Pay Dialog depend on it&apos;s <a href="/docs/#usage_notes" name="https://developers.facebook.com/docs/#usage_notes">use</a> and on how the developer implements the Credits Callbacks if applicable.</p>
+<p>Before integrating the Pay Dialog, developers must <a href="/docs/credits/build/" name="https://developers.facebook.com/docs/credits/build/">register their company information</a> and implement the <a href="/docs/credits/callback/" name="https://developers.facebook.com/docs/credits/callback/">server-side Credits Callbacks</a>. The contents of the Pay Dialog depend on it&apos;s <a href="/docs/reference/dialogs/pay/#usage_notes" name="https://developers.facebook.com/docs/reference/dialogs/pay/#usage_notes">use</a> and on how the developer implements the Credits Callbacks if applicable.</p>
 </li>
 </ul>
 <p>
@@ -137,7 +137,7 @@
 <h2>JavaScript Example</h2>
 <p>The following simple JavaScript example demonstrates invoking the <a href="/docs/reference/javascript/FB.ui/" name="https://developers.facebook.com/docs/reference/javascript/FB.ui/">
 <code>FB.ui</code>
-</a> method using the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a> to open a Pay Dialog for <a href="/docs/#buy_item_localcurrency" name="https://developers.facebook.com/docs/#buy_item_localcurrency">item purchases priced in local currency (e.g. USD)</a>.</p>
+</a> method using the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a> to open a Pay Dialog for <a href="/docs/reference/dialogs/pay/#buy_item_localcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency">item purchases priced in local currency (e.g. USD)</a>.</p>
 <p>For <code>buy_item</code> orders,</p>
 <ul>
 <li>
@@ -147,7 +147,7 @@
 <p>The <code>order_info</code> parameter and value are passed back to your Credits Callback URL when Facebook issues a <code>payments_get_items</code> request. Use this information to determine your <code>payments_get_items</code> response.</p>
 </li>
 </ul>
-<p>For other usages, click <a href="/docs/#usage_notes" name="https://developers.facebook.com/docs/#usage_notes">here</a>.</p>
+<p>For other usages, click <a href="/docs/reference/dialogs/pay/#usage_notes" name="https://developers.facebook.com/docs/reference/dialogs/pay/#usage_notes">here</a>.</p>
 <pre>
 &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
       xmlns:fb=&quot;https://www.facebook.com/2008/fbml&quot;&gt;
@@ -228,7 +228,7 @@
 <p>The <code>order_info</code> parameter and value are passed back to your Credits Callback URL when Facebook issues a <code>payments_get_items</code> request. Use this information to determine your <code>payments_get_items</code> response.</p>
 </li>
 </ul>
-<p>For other usages, click <a href="/docs/#usage_notes" name="https://developers.facebook.com/docs/#usage_notes">here</a>.</p>
+<p>For other usages, click <a href="/docs/reference/dialogs/pay/#usage_notes" name="https://developers.facebook.com/docs/reference/dialogs/pay/#usage_notes">here</a>.</p>
 <pre>
 https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
                                     redirect_uri=YOUR_REDIRECT_URI&amp;
@@ -244,27 +244,27 @@ https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
 <ul>
 <li>
 <p>
-<a href="/docs/#buy_item_localcurrency" name="https://developers.facebook.com/docs/#buy_item_localcurrency">Buy item priced in local currency (e.g. USD).</a>
+<a href="/docs/reference/dialogs/pay/#buy_item_localcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency">Buy item priced in local currency (e.g. USD).</a>
 </p>
 </li>
 <li>
 <p>
-<a href="/docs/#buy_item_credits" name="https://developers.facebook.com/docs/#buy_item_credits">Buy item priced in credits as a currency.</a>
+<a href="/docs/reference/dialogs/pay/#buy_item_credits" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_credits">Buy item priced in credits as a currency.</a>
 </p>
 </li>
 <li>
 <p>
-<a href="/docs/#buy_credits_localcurrency" name="https://developers.facebook.com/docs/#buy_credits_localcurrency">Buy credits priced in local currency (e.g. USD).</a>
+<a href="/docs/reference/dialogs/pay/#buy_credits_localcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_credits_localcurrency">Buy credits priced in local currency (e.g. USD).</a>
 </p>
 </li>
 <li>
 <p>
-<a href="/docs/#earn_credits" name="https://developers.facebook.com/docs/#earn_credits">Earn credits by completing advertiser offers.</a>
+<a href="/docs/reference/dialogs/pay/#earn_credits" name="https://developers.facebook.com/docs/reference/dialogs/pay/#earn_credits">Earn credits by completing advertiser offers.</a>
 </p>
 </li>
 <li>
 <p>
-<a href="/docs/#earn_appcurrency" name="https://developers.facebook.com/docs/#earn_appcurrency">Earn in-app currency by completing advertiser offers.</a>
+<a href="/docs/reference/dialogs/pay/#earn_appcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#earn_appcurrency">Earn in-app currency by completing advertiser offers.</a>
 </p>
 </li>
 </ul>
@@ -275,7 +275,7 @@ https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
 <p>To prompt users to purchase an item priced in <i>local currency (e.g. USD)</i>, developers should invoke <code>FB.ui</code> with the following properties and values.</p>
 <p>Note that Facebook considers app currency (e.g. Fred&apos;s App&apos;s Cash) to be an item.</p>
 <p>The contents of the dialog depend on how the developer has implemented the Credits Callback <code>payments_get_items</code> request and it&apos;s processing of <code>order_info</code>.</p>
-<p>If Facebook&apos;s <a href="/docs/#return_data" name="https://developers.facebook.com/docs/#return_data">return data</a> to the app&apos;s JavaScript callback contains an <code>order_id</code>, please notify the user that the purchased item has been delivered without a complete reload of the game.</p>
+<p>If Facebook&apos;s <a href="/docs/reference/dialogs/pay/#return_data" name="https://developers.facebook.com/docs/reference/dialogs/pay/#return_data">return data</a> to the app&apos;s JavaScript callback contains an <code>order_id</code>, please notify the user that the purchased item has been delivered without a complete reload of the game.</p>
 <pre>
 function buy() {
   var obj = {
@@ -288,7 +288,7 @@ function buy() {
   FB.ui(obj, js_callback);
 }
 </pre>
-<p>The <a href="/docs/#js_example" name="https://developers.facebook.com/docs/#js_example">JavaScript example</a> demonstrates this dialog.</p>
+<p>The <a href="/docs/reference/dialogs/pay/#js_example" name="https://developers.facebook.com/docs/reference/dialogs/pay/#js_example">JavaScript example</a> demonstrates this dialog.</p>
 <p>
 <img src="https://developers.facebook.com/attachment/js_buy_item_localcurrency.png" />
 </p>
@@ -300,7 +300,7 @@ https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
                                     order_info=SOME_DEV_JSON_ORDER_INFO&amp;
                                     dev_purchase_params={&quot;oscif&quot;:true}
 </pre>
-<p>The <a href="/docs/#directurl_example" name="https://developers.facebook.com/docs/#directurl_example">direct URL example</a> demonstrates this dialog.</p>
+<p>The <a href="/docs/reference/dialogs/pay/#directurl_example" name="https://developers.facebook.com/docs/reference/dialogs/pay/#directurl_example">direct URL example</a> demonstrates this dialog.</p>
 <p>
 <img src="https://developers.facebook.com/attachment/directurl_buy_item_localcurrency.png" />
 </p>
@@ -311,7 +311,7 @@ https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
 <p>To prompt users to purchase an item priced in <i>credits</i>, developers should invoke <code>FB.ui</code> with the following properties and values.</p>
 <p>Note that Facebook considers app currency (e.g. Fred&apos;s App&apos;s Cash) to be an item.</p>
 <p>The contents of the dialog depend on how the developer has implemented the Credits Callback <code>payments_get_items</code> request and it&apos;s processing of <code>order_info</code>.</p>
-<p>If Facebook&apos;s <a href="/docs/#return_data" name="https://developers.facebook.com/docs/#return_data">return data</a> to the app&apos;s JavaScript callback contains an <code>order_id</code>, please notify the user that the purchased item has been delivered without a complete reload of the game.</p>
+<p>If Facebook&apos;s <a href="/docs/reference/dialogs/pay/#return_data" name="https://developers.facebook.com/docs/reference/dialogs/pay/#return_data">return data</a> to the app&apos;s JavaScript callback contains an <code>order_id</code>, please notify the user that the purchased item has been delivered without a complete reload of the game.</p>
 <pre>
 function buy() {
   var obj = {
@@ -350,7 +350,7 @@ https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
 <p>There is no placed order with the developer, and therefore Facebook will <i>not</i> issue a Credits Callback <code>payments_status_update</code> request.</p>
 </li>
 </ul>
-<p>Since there&apos;s no placed order with the developer, an <code>order_id</code> is <i>never</i> returned to the app&apos;s JavaScript callback. The app&apos;s callback <i>only</i> receives the <a href="/docs/#return_data" name="https://developers.facebook.com/docs/#return_data">return data</a> parameter <code>error_code</code> with value <code>1383010</code> indicating that the user has closed the Pay Dialog. While it&apos;s possible that the user purchased credits from Facebook, it&apos;s <i>not</i> possible for the developer to determine the number of credits purchased.</p>
+<p>Since there&apos;s no placed order with the developer, an <code>order_id</code> is <i>never</i> returned to the app&apos;s JavaScript callback. The app&apos;s callback <i>only</i> receives the <a href="/docs/reference/dialogs/pay/#return_data" name="https://developers.facebook.com/docs/reference/dialogs/pay/#return_data">return data</a> parameter <code>error_code</code> with value <code>1383010</code> indicating that the user has closed the Pay Dialog. While it&apos;s possible that the user purchased credits from Facebook, it&apos;s <i>not</i> possible for the developer to determine the number of credits purchased.</p>
 <pre>
 function buy() {
   var obj = {
@@ -388,7 +388,7 @@ https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
 <p>There is no placed order with the developer, and therefore Facebook will <i>not</i> issue a Credits Callback <code>payments_status_update</code> request.</p>
 </li>
 </ul>
-<p>Since there&apos;s no placed order with the developer, an <code>order_id</code> is <i>never</i> returned to the app&apos;s JavaScript callback. The app&apos;s callback <i>only</i> receives the <a href="/docs/#return_data" name="https://developers.facebook.com/docs/#return_data">return data</a> parameter <code>error_code</code> with value <code>1383010</code> indicating that the user has closed the Pay Dialog. While it&apos;s possible that the user earned credits from Facebook, it&apos;s <i>not</i> possible for the developer to determine the number of credits earned.</p>
+<p>Since there&apos;s no placed order with the developer, an <code>order_id</code> is <i>never</i> returned to the app&apos;s JavaScript callback. The app&apos;s callback <i>only</i> receives the <a href="/docs/reference/dialogs/pay/#return_data" name="https://developers.facebook.com/docs/reference/dialogs/pay/#return_data">return data</a> parameter <code>error_code</code> with value <code>1383010</code> indicating that the user has closed the Pay Dialog. While it&apos;s possible that the user earned credits from Facebook, it&apos;s <i>not</i> possible for the developer to determine the number of credits earned.</p>
 <pre>
 function earn() {
   var obj = {
@@ -418,7 +418,7 @@ https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
 <p>For more details, visit the <a href="/docs/credits/offers/#app_currency_offers" name="https://developers.facebook.com/docs/credits/offers/#app_currency_offers">In-app Currency Offers documentation</a>.</p>
 <p>To prompt users to earn in app currency, developers should invoke <code>FB.ui</code> with the following properties and values.</p>
 <p>Facebook will <i>not</i> issue a Credits Callback <code>payments_get_items</code> request, but <i>will</i> issue a Credits Callback <code>payments_status_update</code> request. For details, visit the <a href="/docs/credits/offers/#update_payments_status_update" name="https://developers.facebook.com/docs/credits/offers/#update_payments_status_update">In-App Currency Offers <code>payments_status_update</code> documentation</a>.</p>
-<p>If Facebook&apos;s <a href="/docs/#return_data" name="https://developers.facebook.com/docs/#return_data">return data</a> to the app&apos;s JavaScript callback contains an <code>order_id</code>, please notify the user that the earned app currency has been delivered without a complete reload of the game. It’s possible for a user to complete multiple offers in a single Pay Dialog. Facebook only returns the last completed <code>order_id</code>.</p>
+<p>If Facebook&apos;s <a href="/docs/reference/dialogs/pay/#return_data" name="https://developers.facebook.com/docs/reference/dialogs/pay/#return_data">return data</a> to the app&apos;s JavaScript callback contains an <code>order_id</code>, please notify the user that the earned app currency has been delivered without a complete reload of the game. It’s possible for a user to complete multiple offers in a single Pay Dialog. Facebook only returns the last completed <code>order_id</code>.</p>
 <p>To test various <a href="/docs/credits/offers/#create_og_object_instance" name="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance">app currency object instances</a>, select an object instance to pass when invoking the Pay Dialog.</p>
 <p>Facebook uses the data associated with the last scape of the passed app currency object instance.</p>
 <pre>
@@ -472,13 +472,13 @@ https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
 <td>
 <code>action</code>
 </td>
-<td>One of the values <a href="/docs/#buy_item_localcurrency" name="https://developers.facebook.com/docs/#buy_item_localcurrency">
+<td>One of the values <a href="/docs/reference/dialogs/pay/#buy_item_localcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_item_localcurrency">
 <code>buy_item</code>
-</a>, <a href="/docs/#buy_credits_localcurrency" name="https://developers.facebook.com/docs/#buy_credits_localcurrency">
+</a>, <a href="/docs/reference/dialogs/pay/#buy_credits_localcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#buy_credits_localcurrency">
 <code>buy_credits</code>
-</a>, <a href="/docs/#earn_credits" name="https://developers.facebook.com/docs/#earn_credits">
+</a>, <a href="/docs/reference/dialogs/pay/#earn_credits" name="https://developers.facebook.com/docs/reference/dialogs/pay/#earn_credits">
 <code>earn_credits</code>
-</a>, <a href="/docs/#earn_appcurrency" name="https://developers.facebook.com/docs/#earn_appcurrency">
+</a>, <a href="/docs/reference/dialogs/pay/#earn_appcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#earn_appcurrency">
 <code>earn_currency</code>
 </a>. </td>
 </tr>
@@ -486,7 +486,7 @@ https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
 <td>
 <code>order_info</code>
 </td>
-<td>Developer provided data containing order information and is passed from the user&apos;s client to the developer&apos;s server via Facebook&apos;s <code>payments_get_items</code> request. Note not all <a href="/docs/#usage_notes" name="https://developers.facebook.com/docs/#usage_notes">usages</a> result in Facebook issuing <code>payments_get_items</code> requests. If using the <i>JavaScript SDK</i>, the data format is a <i>JavaScript object</i>. If using a <i>direct URL</i>, the data format is a <i>JSON string</i>.</td>
+<td>Developer provided data containing order information and is passed from the user&apos;s client to the developer&apos;s server via Facebook&apos;s <code>payments_get_items</code> request. Note not all <a href="/docs/reference/dialogs/pay/#usage_notes" name="https://developers.facebook.com/docs/reference/dialogs/pay/#usage_notes">usages</a> result in Facebook issuing <code>payments_get_items</code> requests. If using the <i>JavaScript SDK</i>, the data format is a <i>JavaScript object</i>. If using a <i>direct URL</i>, the data format is a <i>JSON string</i>.</td>
 </tr>
 <tr>
 <td>
@@ -498,7 +498,7 @@ https://www.facebook.com/dialog/pay?app_id=YOUR_APP_ID&amp;
 <td>
 <code>product</code>
 </td>
-<td>A <a href="/docs/credits/offers/#create_og_object_instance" name="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance">url to an app currency object instance</a> used for <a href="/docs/#earn_appcurrency" name="https://developers.facebook.com/docs/#earn_appcurrency">
+<td>A <a href="/docs/credits/offers/#create_og_object_instance" name="https://developers.facebook.com/docs/credits/offers/#create_og_object_instance">url to an app currency object instance</a> used for <a href="/docs/reference/dialogs/pay/#earn_appcurrency" name="https://developers.facebook.com/docs/reference/dialogs/pay/#earn_appcurrency">
 <code>earn_currency</code>
 </a> orders.</td>
 </tr>

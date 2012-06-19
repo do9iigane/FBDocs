@@ -823,7 +823,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#achievements" name="https://developers.facebook.com/docs/#achievements">achievements</a>
+<a href="/docs/reference/api/user/#achievements" name="https://developers.facebook.com/docs/reference/api/user/#achievements">achievements</a>
 </td>
 <td>
 <p>The achievements for the user.</p>
@@ -871,7 +871,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#apprequests" name="https://developers.facebook.com/docs/#apprequests">apprequests</a>
+<a href="/docs/reference/api/user/#apprequests" name="https://developers.facebook.com/docs/reference/api/user/#apprequests">apprequests</a>
 </td>
 <td>
 <p>The user&apos;s outstanding requests from an app.</p>
@@ -983,7 +983,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#friendrequests" name="https://developers.facebook.com/docs/#friendrequests">friendrequests</a>
+<a href="/docs/reference/api/user/#friendrequests" name="https://developers.facebook.com/docs/reference/api/user/#friendrequests">friendrequests</a>
 </td>
 <td>
 <p>The user&apos;s incoming friend requests.</p>
@@ -999,7 +999,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#friends" name="https://developers.facebook.com/docs/#friends">friends</a>
+<a href="/docs/reference/api/user/#friends" name="https://developers.facebook.com/docs/reference/api/user/#friends">friends</a>
 </td>
 <td>
 <p>The user&apos;s friends.</p>
@@ -1047,7 +1047,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#home" name="https://developers.facebook.com/docs/#home">home</a>
+<a href="/docs/reference/api/user/#home" name="https://developers.facebook.com/docs/reference/api/user/#home">home</a>
 </td>
 <td>
 <p>The user&apos;s news feed.</p>
@@ -1097,7 +1097,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#likes" name="https://developers.facebook.com/docs/#likes">likes</a>
+<a href="/docs/reference/api/user/#likes" name="https://developers.facebook.com/docs/reference/api/user/#likes">likes</a>
 </td>
 <td>
 <p>All the pages this user has liked.</p>
@@ -1210,7 +1210,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#notifications" name="https://developers.facebook.com/docs/#notifications">notifications</a>
+<a href="/docs/reference/api/user/#notifications" name="https://developers.facebook.com/docs/reference/api/user/#notifications">notifications</a>
 </td>
 <td>
 <p>The notifications for the user.</p>
@@ -1329,7 +1329,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#questions" name="https://developers.facebook.com/docs/#questions">questions</a>
+<a href="/docs/reference/api/user/#questions" name="https://developers.facebook.com/docs/reference/api/user/#questions">questions</a>
 </td>
 <td>
 <p>The user&apos;s questions.</p>
@@ -1346,7 +1346,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#scores" name="https://developers.facebook.com/docs/#scores">scores</a>
+<a href="/docs/reference/api/user/#scores" name="https://developers.facebook.com/docs/reference/api/user/#scores">scores</a>
 </td>
 <td>
 <p>The current <a href="/docs/score/" name="https://developers.facebook.com/docs/score/">scores</a> for the user in games.</p>
@@ -1377,7 +1377,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#subscribedto" name="https://developers.facebook.com/docs/#subscribedto">subscribedto</a>
+<a href="/docs/reference/api/user/#subscribedto" name="https://developers.facebook.com/docs/reference/api/user/#subscribedto">subscribedto</a>
 </td>
 <td>
 <p>People you&apos;re subscribed to.</p>
@@ -1393,7 +1393,7 @@
 </tr>
 <tr>
 <td>
-<a href="/docs/#subscribers" name="https://developers.facebook.com/docs/#subscribers">subscribers</a>
+<a href="/docs/reference/api/user/#subscribers" name="https://developers.facebook.com/docs/reference/api/user/#subscribers">subscribers</a>
 </td>
 <td>
 <p>The user&apos;s subscribers.</p>
@@ -1494,7 +1494,7 @@
 <code>name</code>
 </td>
 <td>
-<a href="/docs/docs/reference/api/album/" name="https://developers.facebook.com/docs/docs/reference/api/album/">Album</a> name</td>
+<a href="/docs/reference/api/user/docs/reference/api/album/" name="https://developers.facebook.com/docs/reference/api/user/docs/reference/api/album/">Album</a> name</td>
 <td>
 <code>string</code>
 </td>
@@ -1505,7 +1505,7 @@
 <code>message</code>
 </td>
 <td>
-<a href="/docs/docs/reference/api/album/" name="https://developers.facebook.com/docs/docs/reference/api/album/">Album</a> description</td>
+<a href="/docs/reference/api/user/docs/reference/api/album/" name="https://developers.facebook.com/docs/reference/api/user/docs/reference/api/album/">Album</a> description</td>
 <td>
 <code>string</code>
 </td>
@@ -1916,8 +1916,8 @@
 </table>
 <hr />
 <h2 id="feed">feed</h2>
-<p>This connection corresponds to the user&apos;s Wall. You can create a <code>link</code>, <code>post</code> or <code>status message</code> by issuing an HTTP POST request to the <code>PROFILE_ID/feed</code> connection. To see more details please see <a href="/docs/#links" name="https://developers.facebook.com/docs/#links">links</a>, <a href="/docs/#posts" name="https://developers.facebook.com/docs/#posts">posts</a>, and <a href="/docs/#statuses" name="https://developers.facebook.com/docs/#statuses">status messages</a> documentation.</p>
-<p>When retrieving Wall <a href="/docs/#posts" name="https://developers.facebook.com/docs/#posts">posts</a>, you can get only those <a href="/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> objects with a location attached by adding <code>with=location</code> to the URL parameters:</p>
+<p>This connection corresponds to the user&apos;s Wall. You can create a <code>link</code>, <code>post</code> or <code>status message</code> by issuing an HTTP POST request to the <code>PROFILE_ID/feed</code> connection. To see more details please see <a href="/docs/reference/api/user/#links" name="https://developers.facebook.com/docs/reference/api/user/#links">links</a>, <a href="/docs/reference/api/user/#posts" name="https://developers.facebook.com/docs/reference/api/user/#posts">posts</a>, and <a href="/docs/reference/api/user/#statuses" name="https://developers.facebook.com/docs/reference/api/user/#statuses">status messages</a> documentation.</p>
+<p>When retrieving Wall <a href="/docs/reference/api/user/#posts" name="https://developers.facebook.com/docs/reference/api/user/#posts">posts</a>, you can get only those <a href="/docs/reference/api/post/" name="https://developers.facebook.com/docs/reference/api/post/">Post</a> objects with a location attached by adding <code>with=location</code> to the URL parameters:</p>
 <p>
 <a href="https://developers.facebook.com/tools/explorer?method=GET&amp;path=me%2Ffeed%3Fwith%3Dlocation" name="https://developers.facebook.com/tools/explorer?method=GET&amp;path=me%2Ffeed%3Fwith%3Dlocation" target="_blank">https://graph.facebook.com/me/feed?with=location</a>
 </p>
@@ -2062,7 +2062,7 @@
 </table>
 <hr />
 <h2 id="home">home</h2>
-<p>This connection corresponds to the News Feed. See the <a href="/docs/#feed" name="https://developers.facebook.com/docs/#feed">feed</a> connection for information on how to create and delete objects that show up in the News Feed.</p>
+<p>This connection corresponds to the News Feed. See the <a href="/docs/reference/api/user/#feed" name="https://developers.facebook.com/docs/reference/api/user/#feed">feed</a> connection for information on how to create and delete objects that show up in the News Feed.</p>
 <p>You can retrieve the News Feed filtered by user&apos;s stream filters:</p>
 <ul>
 <li>friend lists</li>
@@ -2906,7 +2906,7 @@
 <hr />
 <h2 id="achievements">Achievements</h2>
 <h3>Read</h3>
-<p>You can read the set of achievements for a user by issuing an <code>HTTP GET</code> request to <code>/USER_ID/achievements</code> with a an app or user <code>access_token</code>. This returns an <code>array</code> of <a href="/docs/docs/reference/api/achievement/" name="https://developers.facebook.com/docs/docs/reference/api/achievement/">
+<p>You can read the set of achievements for a user by issuing an <code>HTTP GET</code> request to <code>/USER_ID/achievements</code> with a an app or user <code>access_token</code>. This returns an <code>array</code> of <a href="/docs/reference/api/user/docs/reference/api/achievement/" name="https://developers.facebook.com/docs/reference/api/user/docs/reference/api/achievement/">
 <code>achievement(instance)</code>
 </a> objects where each <code>achievement(instance)</code> represents the instance of the achievement achieved by the user.</p>
 <ul>

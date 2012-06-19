@@ -2,6 +2,7 @@ package FBDocs::Parser;
 use strict;
 use warnings;
 use Web::Scraper;
+use FBDocs::UserAgent;
 use URI;
 use Encode ();
 
@@ -14,45 +15,54 @@ sub new {
         %$args,
     }, $class;
     
-    $self->{scraper} ||= scraper {
+    $self->{scraper} ||= $self->create_scraper;
+    $self->{ua}      ||= $self->create_ua;
+    $self->{base_uri} = URI->new( $self->{base_url} );
+
+    return $self;
+}
+
+sub create_scraper {
+    return scraper {
         process '#bodyMenu', 'menu' => scraper {
             process '*', content => 'HTML',
             process 'a', 'links[]' => '@href',
         },
         process '#bodyText', 'body' => scraper {
             process '*', content => 'HTML',
-           process 'a', 'links[]' => '@href',
+            process 'a', 'links[]' => '@href',
         },
     };
+}
 
-    return $self;
+sub create_ua {
+    shift->{ua} = FBDocs::UserAgent->new;
 }
 
 sub parse {
-    my ( $self, $input ) = @_;
+    my ( $self, $target ) = @_;
+
+    my $content = $self->{ua}->get_content( $target ) || return undef;
 
     my $ret = eval {
-        $self->{scraper}->scrape( $input );
+        $self->{scraper}->scrape( $content );
     };
     if ($@ || !$ret) {
-        warn $@ . ' : ' . $input;
+        warn $@ . ' : ' . $content;
         return undef;
     }
 
     return +{
-        content => $self->_parse_html( $ret->{body}->{content} ) || '',
-        menu    => $self->_parse_html( $ret->{menu}->{content} ) || '',
+        content => $self->_parse_html( $target, $ret->{body}->{content} ) || '',
+        menu    => $self->_parse_html( $target, $ret->{menu}->{content} ) || '',
         links   => [ @{$ret->{menu}->{links} || []}, @{$ret->{body}->{links} || []} ],
     };
 }
 
 sub _parse_html {
-    my ($self, $input) = @_;
+    my ($self, $target, $input) = @_;
 
     return unless $input;
-
-    my $base_url = $self->{base_url};
-    my $orig_uri = URI->new( $base_url );
 
     # fix link href
     $input =~ s{<a\s+([^>]*?)href="(.*?)"(.*?)>(.*?)</a>}{
@@ -65,26 +75,29 @@ sub _parse_html {
         # $uri->query_param_delete( 'h' ); will give us amp param because of &amp;.
         # http://developers.facebook.com/l.php?u=http%3A%2F%2Ffacebook.stackoverflow.com%2Fsearch%3Fq%3D%255Bfacebook%255DDisputes%2B%2526%2BChargebacks&amp;h=7AQG7DHsI
         $href =~ s/&amp;h=([^&]*)//;
-        my $uri = URI->new_abs( $href, $base_url );
+
+        my $blank = '';
+        my $uri   = URI->new_abs( $href, $target );
+        my $path  = $uri->path || '';
+        my $host  = $uri->can( 'host' ) ? $uri->host : '';
 
         # they have hTTTps://developers.facebook.com/docs/FOO so $uri->host doesn't work!!!
-        my $target = '';
-        if ( $uri->can( 'host' ) && $uri->host eq $orig_uri->host && $uri->path =~ /\/docs/ ) {
+        if ( $host eq $self->{base_uri}->host && $path =~ /\/docs/ ) {
             # /docs/*
-            $href = $uri->path;
+            $href = $path;
             $href .= '/' unless $href =~ /\/$/;
             $href .= '?' . $uri->query if $uri->query;
             $href .= '#' . $uri->fragment if $uri->fragment;
         } else {
             # external links including /tools/*
-            $target = ' target="_blank"' if ( $pre !~ /target="_blank"/ && $post !~ /target="_blank"/ );
-            $href = $uri->canonical;
+            $blank = ' target="_blank"' if ( $pre !~ /target="_blank"/ && $post !~ /target="_blank"/ );
+            $href  = $uri->canonical;
         }
 
         $pre =~ s/\sonmouse(down|up)="(.*?)"//ig;
         $post =~ s/\sonmouse(down|up)="(.*?)"//ig;
 
-        sprintf( '<a %shref="%s"%s name="%s"%s>%s</a>', $pre, $href, $post, $uri->canonical, $target, $text );
+        sprintf( '<a %shref="%s"%s name="%s"%s>%s</a>', $pre, $href, $post, $uri->canonical, $blank, $text );
     }esig;
     
     # fix img src
@@ -92,7 +105,7 @@ sub _parse_html {
         my $pre  = $1;
         my $src  = $2;
         my $post = $3;
-        my $uri = URI->new_abs( $src, $base_url );
+        my $uri = URI->new_abs( $src, $target );
         sprintf( '<img %ssrc="%s"%s>', $pre, $uri->canonical, $post );
     }esig;
     
@@ -101,7 +114,7 @@ sub _parse_html {
         my $pre  = $1;
         my $src  = $2;
         my $post = $3;
-        my $uri = URI->new_abs( $src, $base_url );
+        my $uri = URI->new_abs( $src, $target );
         sprintf( '<image %ssrc="%s"%s></image>', $pre, $uri->canonical, $post )
     }esig;
     
