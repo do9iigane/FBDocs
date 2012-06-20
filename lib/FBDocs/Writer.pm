@@ -2,6 +2,7 @@ package FBDocs::Writer;
 use warnings;
 use strict;
 use File::Basename qw(dirname);
+use File::Path qw(mkpath);
 use IO::File;
 use Encode;
 use URI;

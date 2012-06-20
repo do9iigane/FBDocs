@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>https://developers.facebook.com/docs/subscriptions/</title>
+<link rel="stylesheet" href="/css/common.css" media="screen" />
+<script src="/js/common.js"></script>
+</head>
+<body>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/subscriptions/">https://developers.facebook.com/docs/subscriptions/</a>
+
+<div id="oklahomer-menu-wrapper">
+<div class="toplevelnav">
+<ul>
+<li>
+<a href="/docs/" name="https://developers.facebook.com/docs/">
+<div class="navSectionTitle">Getting Started</div>
+</a>
+</li>
+<li>
+<a href="/docs/coreconcepts/" name="https://developers.facebook.com/docs/coreconcepts">
+<div class="navSectionTitle">Core Concepts</div>
+</a>
+</li>
+<li class="active withsubsections">
+<a class="selected" href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics">
+<div class="navSectionTitle">Advanced Topics</div>
+</a>
+<ul class="subsections">
+<li>
+<a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialogs</a>
+</li>
+<li>
+<a href="/docs/reference/fql/" name="https://developers.facebook.com/docs/reference/fql/">FQL</a>
+</li>
+<li>
+<a href="/docs/internationalization/" name="https://developers.facebook.com/docs/internationalization">Internationalization</a>
+</li>
+<li>
+<a href="/docs/reference/ads-api/" name="https://developers.facebook.com/docs/reference/ads-api">Ads API</a>
+</li>
+<li>
+<a href="/docs/credits/" name="https://developers.facebook.com/docs/credits">Credits</a>
+</li>
+<li>
+<a href="/docs/chat/" name="https://developers.facebook.com/docs/chat">Chat API</a>
+</li>
+<li>
+<a href="/docs/reference/rest/" name="https://developers.facebook.com/docs/reference/rest/">Legacy REST API</a>
+</li>
+<li>
+<a href="/docs/reference/fbml/" name="https://developers.facebook.com/docs/reference/fbml/">Legacy FBML</a>
+</li>
+<li>
+<a href="/docs/fbjs/" name="https://developers.facebook.com/docs/fbjs/">Legacy FBJS</a>
+</li>
+<li>
+<a href="/docs/reference/oldjavascript/" name="https://developers.facebook.com/docs/reference/oldjavascript/">Legacy Javascript SDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks">
+<div class="navSectionTitle">SDK Reference</div>
+</a>
+</li>
+<li>
+<a href="https://developers.facebook.com/tools" name="https://developers.facebook.com/tools" target="_blank">
+<div class="navSectionTitle">Tools</div>
+</a>
+</li>
+</ul>
+</div>
+<ul id="navsubsectionpages">
+<li>
+</li>
+<li>
+<h5>Getting Started</h5>
+<ul>
+<li>
+<a href="/docs/credits/build/" name="http://developers.facebook.com/docs/credits/build/">Credits Tutorial </a>
+</li>
+<li>
+<a href="/docs/credits/callback/" name="http://developers.facebook.com/docs/credits/callback/">Credits Callback</a>
+</li>
+<li>
+<a href="/docs/credits/reports/" name="http://developers.facebook.com/docs/credits/reports/">Reports and Payouts</a>
+</li>
+<li>
+<a href="/docs/credits/disputes/" name="http://developers.facebook.com/docs/credits/disputes/">Disputes &amp; Chargebacks</a>
+</li>
+</ul>
+</li>
+<li>
+<h5>Core APIs</h5>
+<ul>
+<li>
+<a href="/docs/credits/pay_dialog/" name="http://developers.facebook.com/docs/credits/pay_dialog/">Pay Dialog</a>
+</li>
+<li>
+<a href="/docs/credits/orders/" name="http://developers.facebook.com/docs/credits/orders/">Order API</a>
+</li>
+<li>
+<a href="/docs/credits/errorcodes/" name="http://developers.facebook.com/docs/credits/errorcodes/">Error Codes</a>
+</li>
+</ul>
+</li>
+<li class="active">
+<h5>Advanced</h5>
+<ul>
+<li>
+<a href="/docs/credits/paymethods/" name="http://developers.facebook.com/docs/credits/paymethods/">Payment methods</a>
+</li>
+<li>
+<a href="/docs/credits/offers/" name="http://developers.facebook.com/docs/credits/offers/">Using Offers with Credits</a>
+</li>
+<li>
+<a href="/docs/credits/terms/" name="http://developers.facebook.com/docs/credits/terms/">Credits Terms</a>
+</li>
+<li>
+<a href="/docs/credits/local_currency_faq/" name="http://developers.facebook.com/docs/credits/local_currency_faq/">Local Currency FAQ</a>
+</li>
+<li>
+<a class="selected" href="/docs/subscriptions/" name="http://developers.facebook.com/docs/subscriptions/">Subscriptions</a>
+</li>
+</ul>
+</li>
+</ul></div>
+
+<div id="oklahomer-content-wrapper">
+<div class="header">
+<div class="content">
+<h1>Subscriptions</h1>
+<div class="breadcrumbs">
+<a href="/docs/advancedtopics/" name="https://developers.facebook.com/docs/advancedtopics/">Advanced Topics</a> › <a href="/docs/credits/" name="https://developers.facebook.com/docs/credits/">Credits</a> › <a href="/docs/subscriptions/" name="https://developers.facebook.com/docs/subscriptions/">Subscriptions</a>
+</div>
+</div>
+</div>
+<div class="blueBox">
+<p>
+<b>Payment Subscriptions is currently in closed beta.</b> We are testing with a small set of developers and plan to open it up to all developers once the functionality is ready. Please watch for the announcement on our <a href="https://developers.facebook.com/blog" name="https://developers.facebook.com/blog" target="_blank">Developer Blog</a>.</p>
+<p>You can sign up for updates, including notification as soon as we begin open onboarding, using <a href="https://facebook.com/help/contact/?id=161304207328094" name="https://facebook.com/help/contact/?id=161304207328094" target="_blank">this form</a>. </p>
+</div>
+<h1>Summary</h1>
+<p>Using Facebook&apos;s Payment Subscription feature, developers can bill users on a recurring, monthly basis. We envision this functionality being used to grant access to exclusive content, or to special buffs/power ups in a game.</p>
+<p>This document walks through</p>
+<ol>
+<li>
+<a href="/docs/subscriptions/#apis" name="https://developers.facebook.com/docs/subscriptions/#apis">Subscription APIs</a>
+</li>
+<li>
+<a href="/docs/subscriptions/#billing" name="https://developers.facebook.com/docs/subscriptions/#billing">Payment and Billing</a>
+</li>
+<li>
+<a href="/docs/subscriptions/#mgmt" name="https://developers.facebook.com/docs/subscriptions/#mgmt">Subscription Management Center</a>
+</li>
+</ol>
+<h1 id="apis">1. Subscription API</h1>
+<h2>Section Contents</h2>
+<h3>Subscription Creation</h3>
+<ol>
+<li>
+<a href="/docs/subscriptions/#register" name="https://developers.facebook.com/docs/subscriptions/#register">Define a subscription object for your application</a>
+</li>
+</ol>
+<h3>Client-side API</h3>
+<ol>
+<li>
+<a href="/docs/subscriptions/#prompt1" name="https://developers.facebook.com/docs/subscriptions/#prompt1">Prompt the user to purchase a monthly subscription for your application w/ free trial optional</a>
+</li>
+<li>
+<a href="/docs/subscriptions/#prompt2" name="https://developers.facebook.com/docs/subscriptions/#prompt2">Prompt the user to modify the payment method for an existing subscription in your application</a>
+</li>
+<li>
+<a href="/docs/subscriptions/#prompt3" name="https://developers.facebook.com/docs/subscriptions/#prompt3">Prompt the user to change his/her subscription for your application</a>
+</li>
+<li>
+<a href="/docs/subscriptions/#prompt4" name="https://developers.facebook.com/docs/subscriptions/#prompt4">Prompt the user to cancel an existing subscription for your application</a>
+</li>
+<li>
+<a href="/docs/subscriptions/#prompt5" name="https://developers.facebook.com/docs/subscriptions/#prompt5">Prompt the user to reactivate a subscription for your application that is pending cancellation</a>
+</li>
+<li>
+<a href="/docs/subscriptions/#settleflow" name="https://developers.facebook.com/docs/subscriptions/#settleflow">Prompt the user to settle a failed payment</a>
+</li>
+</ol>
+<h3>Server-side API</h3>
+<ol>
+<li>
+<a href="/docs/subscriptions/#query1" name="https://developers.facebook.com/docs/subscriptions/#query1">Query for the subscriptions a user has that are related to your application</a>
+</li>
+<li>
+<a href="/docs/subscriptions/#query2" name="https://developers.facebook.com/docs/subscriptions/#query2">Query for the details of any one subscription</a>
+</li>
+<li>
+<a href="/docs/subscriptions/#query3" name="https://developers.facebook.com/docs/subscriptions/#query3">Update the subscription programmatically</a>
+</li>
+<li>
+<a href="/docs/subscriptions/#query4" name="https://developers.facebook.com/docs/subscriptions/#query4">Query for the details of any payment</a>
+</li>
+<li>
+<a href="/docs/subscriptions/#query5" name="https://developers.facebook.com/docs/subscriptions/#query5">Consume updates in real-time</a>
+</li>
+<li>
+<a href="/docs/subscriptions/#refunds" name="https://developers.facebook.com/docs/subscriptions/#refunds">Query for or create a refund a payment</a>
+</li>
+</ol>
+<h3>Error codes</h3>
+<ol>
+<li>
+<a href="/docs/subscriptions/#codes" name="https://developers.facebook.com/docs/subscriptions/#codes">Error code reference</a>
+</li>
+</ol>
+<h2>Subscription Creation</h2>
+<h3>
+<a name="register">
+</a>Defining a subscription object for your application</h3>
+<p>A subscription object is an <code>fbpayment:subscription</code> Open Graph object that describes the details of a subscription offered by your application. Details about how Open Graph works can be found in our <a href="/docs/opengraph/" name="https://developers.facebook.com/docs/opengraph/">OG documentation</a>. An <code>fbpayment:subscription</code> object requires the following metadata tags:</p>
+<ol>
+<li>
+<code>og:title</code> – The title for your subscription </li>
+<li>
+<code>og:image</code> – A image that Facebook can associate with your subscription</li>
+<li>
+<code>og:description</code> – The description of your subscription</li>
+<li>
+<code>og:type</code> – The object type, which for subscriptions is always “fbpayment:subscription”</li>
+<li>
+<code>fb:app_id</code> – The application id that this subscription will be used in.</li>
+<li>
+<code>fbpayment:price</code> – The monthly price for this subscription, specified as a string consisting of a numeric price and an ISO-3 currency code, separated by a space, in either order</li>
+<li>
+<code>fbpayment:alternate_price</code> – (optional, multiple allowed) Similar to <code>price</code>; this allows for pricing in additional currencies </li>
+<li>
+<code>fbpayment:trial_duration</code> – (optional) the amount of time (in days, weeks, or months) that a user can use this subscription before the first billing period will begin</li>
+</ol>
+<h4>Notes:</h4>
+<ul>
+<li>There may be zero or more <code>alternate_price</code> properties, to allow the application to price subscriptions differently for different currencies. </li>
+<li>For users whose preferred currencies are not explicitly listed among the subscription object&apos;s <code>price</code>/<code>alternate_price</code> properties, Facebook will determine a price based on the <code>price</code> at our exchange rates, which are updated daily. </li>
+<li>Developers can supply a <code>trial_duration</code> which allows the user to get a free trial for the specified period. A given user can enjoy a free trial for a particular application, for any subscription, only once. </li>
+<li>If a <code>price</code> field is malformed (e.g. &apos;US$ 5.00&apos;, rather than the correctly-formed &apos;5.00 USD&apos;), Facebook can&apos;t catch it until a transaction is attempted. If, in your testing, you get a &quot;null&quot; value passed to your client-side callback, it may be for this reason.</li>
+<li>Discounted trials are not available for V1 - only free trials. We will update this document if and when that changes.</li>
+<li>An app can define multiple subscriptions associated with the app. However a user can have only one active subscription at any time for that app. </li>
+<li>Also a user can only get a free trial for any subscription for that app only once. </li>
+</ul>
+<h4>Example Object Markup</h4>
+<pre>
+
+&lt;html&gt;
+    &lt;head prefix=&quot;og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# fbpayment: http://ogp.me/ns/fb/fbpayment#&quot;&gt;        
+        &lt;meta property=&quot;og:title&quot; content=&quot;Abhi&apos;s Bronze Subscription&quot; /&gt;
+        &lt;meta property=&quot;og:image&quot; content=&quot;https://s-static.ak.fbcdn.net/images/devsite/attachment_blank.png&quot; /&gt;
+        &lt;meta property=&quot;og:description&quot; content=&quot;The Best bronze subscription around!&quot; /&gt;
+        &lt;meta property=&quot;fbpayment:price&quot; content=&quot;5.99 USD&quot; /&gt;
+        &lt;meta property=&quot;fbpayment:alternate_price&quot; content=&quot;3.99 EUR&quot; /&gt;
+        &lt;meta property=&quot;fbpayment:alternate_price&quot; content=&quot;3.99 GBP&quot; /&gt;
+        &lt;meta property=&quot;fbpayment:trial_duration&quot; content=&quot;7 days&quot; /&gt;
+        &lt;meta property=&quot;fb:app_id&quot; content=&quot;214417841952278&quot; /&gt;
+        &lt;meta property=&quot;og:url&quot; content=&quot;http://samples.ogp.me/231899796870749&quot; /&gt;
+        &lt;meta property=&quot;og:type&quot; content=&quot;fbpayment:subscription&quot; /&gt;
+&lt;/html&gt;
+</pre>
+<h2>Client-side API</h2>
+<h3>
+<a id="prompt1">
+</a> Prompting a User to Purchase a Subscription</h3>
+<p>Once an application has created at least one subscription Open Graph object, prompting a user to purchase a subscription requires using the Facebook Pay Dialog, <a href="/docs/credits/pay_dialog/" name="https://developers.facebook.com/docs/credits/pay_dialog/">as described in the core Payments documentation</a>. Please note that information in that document regarding server-side callbacks is not applicable here; instead, please use the <a href="/docs/subscriptions/#query1" name="https://developers.facebook.com/docs/subscriptions/#query1">server-side logic described below</a> to query a user&apos;s subscription status.</p>
+<p>
+<b>Subscription dialog</b>
+</p>
+<p>
+<img src="https://developers.facebook.com/attachment/subscription_create.png" width="500px" />
+</p>
+<p>
+<img src="https://developers.facebook.com/attachment/subscription_create_confirm.png" width="500px" />
+</p>
+<p>The following JS snippet can be used to start a subscription purchase dialog:</p>
+<pre>
+  var obj = {
+    method: &apos;pay&apos;,
+    action: &apos;create_subscription&apos;,
+    product: &apos;URL_TO_SUBSCRIPTION_OBJECT&apos;
+     };
+  FB.ui(obj, js_callback);
+</pre>
+<ul>
+<li>
+<code>product</code>: The url that hosts the application’s subscription open graph object.</li>
+</ul>
+<p>On completion or cancellation of the subscription purchase dialog, the Javascript callback will be called. In case of success, the callback&apos;s argument will be an object containing the keys:</p>
+<ul>
+<li>
+<code>subscription_id</code>: the unique identifier that represents the user’s active subscription</li>
+<li>
+<code>status</code>: “active”</li>
+</ul>
+<p>In the case where the user cancels the subscription purchase dialog, or if there is an error, the object will contain the keys:</p>
+<ul>
+<li>
+<code>error_code</code>: integer identifier for the error</li>
+<li>
+<code>error_message</code>: explanation of the error</li>
+</ul>
+<h3>
+<a id="prompt2">
+</a> Prompting a User to Modify the Payment Method for a Subscription</h3>
+<p>Once a user already has purchased a subscription it&apos;s possible for the application to prompt the user to change the payment method currently being used to pay for the service. For example, a user who has a credit card on file that he or she knows to be expiring soon can update the payment method from within the application with this functionality.</p>
+<p>
+<b>Change Payment Method Dialog</b>
+</p>
+<p>
+<img src="https://developers.facebook.com/attachment/subscription_modify.png" /> <img src="https://developers.facebook.com/attachment/subscription_modify_confirm.png" />
+</p>
+<p>This subscription modification dialog can be invoked with the following js snippet:</p>
+<pre>
+var obj = {
+     method: &apos;pay&apos;,
+     action: &apos;modify_subscription&apos;,
+     subscription_id: USER_SUBSCRIPTION_ID,
+  };
+  FB.ui(obj, js_callback);
+</pre>
+<ul>
+<li>
+<code>subscription_id</code>: user to subscription identifier returned when the user purchased this subscription</li>
+</ul>
+<p>On success, Facebook will invoke the application-specified “js_callback” with an object containing:</p>
+<ul>
+<li>
+<code>subscription_id</code>: the unique identifier that represents the user’s subscription. (Note that this is the same subscription_id as was provided when invoking this API)</li>
+<li>
+<code>status</code>: “active” – indicates the modified subscription is active. </li>
+</ul>
+<p>In the case where the user cancels the subscription modification dialog, or if there is an error, the object will instead contain:</p>
+<ul>
+<li>
+<code>error_code</code>: integer identifier for the error</li>
+<li>
+<code>error_message</code>: explanation of the error</li>
+</ul>
+<h3>
+<a id="prompt3">
+</a> Prompting a User to Upgrade/Downgrade a Subscription</h3>
+<p>Once a user already has purchased a subscription, the application can prompt the user to change his/her subscription. For example, a user may want to upgrade from a “Bronze” subscription to a “Silver” one or downgrade from a “Silver” subscription to a “Bronze” one.</p>
+<p>Subscription upgrades (defined as ones costing the same as, or more than, the existing subscription) take effect immediately and the user is charged a pro-rated amount for the rest of the current billing cycle. Subscription downgrades (those costing less than the existing subscription) take effect at the start of the subsequent billing cycle.</p>
+<p>
+<b>Upgrade Dialog</b>
+</p>
+<p>
+<img src="https://developers.facebook.com/attachment/subscription_modify.png" width="500px" /> <img src="https://developers.facebook.com/attachment/subscription_modify_confirm.png" width="500px" />
+</p>
+<p>This subscription change dialog can be invoked with the following js snippet:</p>
+<pre> 
+var obj = {
+     method: &apos;pay&apos;,
+     action: &apos;change_subscription&apos;,
+     subscription_id: USER_SUBSCRIPTION_ID,
+     product: &apos;URL_TO_SUBSCRIPTION_ WEBPAGE&apos;
+  };
+  FB.ui(obj, js_callback);
+</pre>
+<ul>
+<li>
+<code>subscription_id</code>: user-subscription unique identifier returned when the user purchased this subscription</li>
+<li>
+<code>product</code>: URL of the application’s subscription open graph object that the user is switching to</li>
+</ul>
+<p>As above, on success, Facebook will invoke the “js_callback” with an object containing:</p>
+<ul>
+<li>
+<code>subscription_id</code>: the unique identifier that represents the user’s subscription. (Note that this is the same subscription_id as was provided when invoking this API)</li>
+<li>
+<code>status</code>: “active” – indicates the changed subscription is active. For upgrades this means the user is now subscribed to the service determined by the provided product parameter. For downgrades, this means that the user’s subscription will change to the service determined by the provided product parameter at the start of the subsequent billing cycle. </li>
+</ul>
+<p>In case of an error, or if the user cancels the dialog, the object passed to the callback will contain:</p>
+<ul>
+<li>
+<code>error_code</code>: integer identifier for the error</li>
+<li>
+<code>error_message</code>: explanation of the error</li>
+</ul>
+<h3>
+<a id="prompt4">
+</a> Prompting a User to Cancel a Subscription</h3>
+<p>You may use this functionality to allow a user to cancel his or her existing subscription.</p>
+<p>After a user takes the action to cancel a subscription, it will be in the “pending cancellation” state, and will actually be canceled at the end of the current billing cycle. This means that the user should continue to receive all the benefits from the subscription until then. Also, note that a user can <a href="/docs/subscriptions/#prompt5" name="https://developers.facebook.com/docs/subscriptions/#prompt5">reactivate a subscription that is in a “pending cancellation” state, as described below</a>.</p>
+<p>
+<b>Cancel Dialog</b>
+</p>
+<p>
+<img src="https://developers.facebook.com/attachment/subscription_cancel.png" width="500px" /> <img src="https://developers.facebook.com/attachment/subscription_cancel_confirm.png" width="500px" />
+</p>
+<p>This subscription cancel dialog can be invoked with the following js snippet:</p>
+<pre>
+  var obj = {
+    method: &apos;pay&apos;,
+    action: &apos;cancel_subscription&apos;,
+    subscription_id: USER_SUBSCRIPTION_ID
+  };
+  FB.ui(obj, js_callback);
+</pre>
+<ul>
+<li>
+<code>subscription_id</code>: user to subscription identifier returned when the user purchased this subscription</li>
+</ul>
+<p>On success, the callback will be passed an object containing:</p>
+<ul>
+<li>
+<code>subscription_id</code>: the unique identifier that represents the user’s subscription</li>
+<li>
+<code>status</code>: “active” – as described above, cancellation does not happen immediately, so this indicates that the user’s subscription is still active, but that she/he has decided to cancel his subscription, and that change will take effect at the end of the current billing cycle</li>
+</ul>
+<p>In the case where the user cancels the subscription cancellation dialog, or if there is an error, the object will contain:</p>
+<ul>
+<li>
+<code>error_code</code>: integer identifier for the error</li>
+<li>
+<code>error_message</code>: explanation of the error</li>
+</ul>
+<h3>
+<a id="prompt5">
+</a> Prompting a User to Reactivate a Subscription</h3>
+<p>Once a user has decided to cancel a subscription, but before the cancellation actually takes place, a developer can re-engage the user via the reactivation flow. Note that if the cancellation is initiated by the app, this reactivation flow will not succeed.</p>
+<p>After a user takes the action to cancel a subscription it will be placed in a “pending cancellation” state, to be actually canceled at the end of the current billing cycle. Before the end of the current billing cycle, the user can reactivate the subscription and it will become active again. (The next charge will occur at the start of the next billing cycle.)</p>
+<p>
+<b>Reactivation Dialog</b>
+</p>
+<p>
+<img src="https://developers.facebook.com/attachment/subscription_reactivate.png" width="500px" /> <img src="https://developers.facebook.com/attachment/subscription_reactivate_confirm.png" width="500px" />
+</p>
+<p>This subscription reactivation dialog can be invoked with the following js snippet:</p>
+<pre>
+  var obj = {
+    method: &apos;pay&apos;,
+    action: &apos;reactivate_subscription&apos;,
+    subscription_id: USER_SUBSCRIPTION_ID
+  };
+  FB.ui(obj, js_callback);
+</pre>
+<ul>
+<li>
+<code>subscription_id</code>: user-subscription unique identifier returned when the user purchased this subscription</li>
+</ul>
+<p>On success, the callback will be passed an object containing:</p>
+<ul>
+<li>
+<code>subscription_id</code>: the unique identifier that represents the user’s subscription</li>
+<li>
+<code>status</code>: “active” – Indicates that the user has reactivated the subscription</li>
+</ul>
+<p>In the case where the user cancels the subscription reactivation dialog, or on error, the object will contain the following two keys:</p>
+<ul>
+<li>
+<code>error_code</code>: integer identifier for the error</li>
+<li>
+<code>error_message</code>: explanation of the error</li>
+</ul>
+<h3>
+<a id="settleflow">
+</a>Prompting a user to settle after payment failure</h3>
+<p>If a payment cannot be processed to fund a user&apos;s subscription, the <code>payment_success</code> flag in his or her subscription object will be <code>false</code>. In that case, the app can request that the user settle that payment using the pay dialog as illustrated in this snippet:</p>
+<p>
+<b>Settlement dialog</b>
+</p>
+<p>
+<img src="https://developers.facebook.com/attachment/subscription_settlement.png" />
+</p>
+<pre>
+var obj = {
+     method: &apos;pay&apos;,
+     action: &apos;settle_subscription&apos;,
+     subscription_id: USER_SUBSCRIPTION_ID,
+  };
+  FB.ui(obj, js_callback);
+</pre>
+<ul>
+<li>
+<code>subscription_id</code>: the user-specific subscription ID number</li>
+</ul>
+<p>On success, the callback will be passed an object containing:</p>
+<ul>
+<li>
+<code>subscription_id</code>: the unique identifier that represents the user’s subscription</li>
+<li>
+<code>status</code>: <code>active</code> to indicate that the user has reactivated the subscription</li>
+</ul>
+<p>In the case where the user cancels out of the dialog, or on an error, the object will contain:</p>
+<ul>
+<li>
+<code>error_code</code>: integer identifier for the error</li>
+<li>
+<code>error_message</code>: explanation of the error</li>
+</ul>
+<p>If the subscription is already settled (i.e. the subscription object&apos;s <code>payment_success</code> is <code>true</code>) when the dialog is invoked, the user will see an exception. It is the application&apos;s responsibility to verify the user&apos;s settlement status before proceeding.</p>
+<h2>Server-side API</h2>
+<h3>
+<a id="query1">
+</a>Querying for a User’s Subscriptions</h3>
+<p>Developers can use the Graph API end point <code>GET https://graph.facebook.com/USER_ID/payment.subscriptions</code> with an app access_token to access a user&apos;s subscriptions associated with that application. By default, just those in an active status will be returned; pass in a <code>status=&apos;canceled&apos;</code> parameter if you also want canceled subscriptions.</p>
+<h4>
+<code>GET https://graph.facebook.com/USER_ID/payment.subscriptions</code>
+</h4>
+<h5>Response Values</h5>
+<ul>
+<li>A json encoded string that represents an array of subscription identifiers and their details.</li>
+</ul>
+<h5>Sample Response</h5>
+<pre>
+{1234: {
+  id: 1234,
+  user: {
+      &quot;name&quot;: &quot;Bikash Agarwalla&quot;,
+      &quot;id&quot;: &quot;1245537185&quot;
+  },
+  application: {
+      &quot;name&quot;: &quot;Application&quot;,
+      &quot;id&quot;: &quot;10245213&quot;
+  },
+  status: &quot;active&quot;,
+  created_time: &quot;2012-03-16T20:10:34+0000&quot;,
+  updated_time: &quot;2012-03-16T20:10:34+0000&quot;,
+  amount: &quot;10.00&quot;,
+  currency: &quot;USD&quot;,
+  product: &quot;http://current_item&quot;,
+  period_start_time: &quot;2012-03-16T20:10:34+0000&quot;,
+  next_bill_time: &quot;2012-04-16T20:10:34+0000&quot;,
+  next_period_product: &quot;http://next_item&quot;,
+  next_period_amount:: &quot;20.00&quot;,
+  next_period_currency: &quot;USD&quot;,
+  payment_status: &quot;success&quot;, 
+  last_payment: {
+    &quot;id&quot;: 3566,
+    &quot;actions&quot;: [
+      {
+        &quot;type&quot;: &quot;charge&quot;,
+        &quot;status&quot;: &quot;completed&quot;,
+        &quot;amount&quot;: &quot;10.00&quot;,  
+        &quot;currency: &quot;USD&quot;,
+        &quot;time_created&quot;: &quot;2012-03-16T20:10:34+0000&quot;,
+        &quot;time_updated&quot;: &quot;2012-03-16T20:10:34+0000&quot;,
+    },
+    &quot;refundable_amount&quot;: {
+        &quot;currency&quot;: &quot;USD&quot;,
+        &quot;amount&quot;: &quot;10.00&quot;
+    },
+    &quot;country&quot;: &quot;US&quot;,  
+  }
+}
+</pre>
+<h3>
+<a id="query2">
+</a> Querying for the Details of a Specific Subscription</h3>
+<p>Calling the Graph API end point <code>GET https://graph.facebook.com/SUBSCRIPTION_ID/</code> with an app access_token returns details about a specific subscription, as long as it belongs to the application.</p>
+<h4>
+<code>GET https://graph.facebook.com/SUBSCRIPTION_ID/</code>
+</h4>
+<h5>Response Values</h5>
+<ul>
+<li>A json-encoded string containing: <ul>
+<li>
+<code>id</code>: the id of the subscription</li>
+<li>
+<code>user</code>: array containing user who is subscribed (name, id) </li>
+<li>
+<code>application</code>: array containing application info (name, id)</li>
+<li>
+<code>status</code>: current status of the subscription [active, canceled]</li>
+<li>
+<code>product</code>: the url that defines the subscription open graph object for the user in the current billing cycle</li>
+<li>
+<code>amount</code>: the amount the user is currently subscribed for in the current billing period</li>
+<li>
+<code>currency</code>: ISO-3 currency code for the current period amount.</li>
+<li>
+<code>period_start_time</code>: date that the current billing cycle began</li>
+<li>
+<code>created_time</code>: date on which subscription was created</li>
+<li>
+<code>updated_time</code>: date on which subscription was last updated</li>
+<li>
+<code>next_period_product</code>: the url that defines the subscription open graph object for the user in the next billing cycle</li>
+<li>
+<code>next_period_amount</code>: the amount that the user will pay in the next billing period</li>
+<li>
+<code>next_period_currency</code>: ISO-3 currency code for the next period amount.</li>
+<li>
+<code>next_bill_time</code>: date that the next billing cycle will begin</li>
+<li>
+<code>trial_expiry_time</code>: date on which any promotion (if provided) expires or expired for this subscription</li>
+<li>
+<code>trial_amount</code>: amount that applies during promotion period</li>
+<li>
+<code>trial_currency</code>: ISO-3 currency code corresponding to promotion amount</li>
+<li>
+<code>pending_cancel</code>: Boolean indicating whether or not the user has decided to cancel the subscription at the end of the current billing cycle. (NOTE: this will only be true when a user has taken explicit action to cancel his subscription. In other words, a subscription for which a payment has failed will not have this flag set to true.)</li>
+<li>
+<code>canceled_reason</code>: flag indicating why a subscription has been canceled [user_decision, app_decision, failed_payment, none]</li>
+<li>
+<code>payment_status</code>: string indicating the status of the payment for the current billing cycle [success, failed, not_billed]. It will be &quot;success&quot; if last payment for the user succeeded. It will be &quot;failed&quot; if last payment for the user failed. If the user hasn&apos;t been billed (for example, if the user is in free trial), this will be set to &quot;not_billed&quot;. (NOTE: more detailed reasons for failed status to be added; this document will be updated to reflect those changes)</li>
+<li>
+<code>last_payment</code>: details for the last payment, an object with fields &apos;id&apos;, &apos;actions&apos;, &apos;refundable_amount&apos;, and &apos;country&apos;</li>
+</ul>
+</li>
+</ul>
+<h5>Sample Response</h5>
+<ul>
+<li>In this example, we have a user who signed up for a 9.99 USD “gold” subscription service on 03/01/2012 and received a 2 week free trial. Sometime after 04/14/2012 and before 05/14/2012, the user decided to downgrade to the “bronze” subscription that costs only 5.99 USD. Assume the current date is 05/03/2012. </li>
+</ul>
+<pre>
+{id: &quot;122119087921267&quot;,
+ user: {
+      &quot;name&quot;: &quot;Bikash Agarwalla&quot;,
+      &quot;id&quot;: &quot;1245537185&quot;
+ },
+ application: {
+      &quot;name&quot;: &quot;Application&quot;,
+      &quot;id&quot;: &quot;10245213&quot;
+ },
+ status: &quot;active&quot;,
+ created_time: &quot;2012-04-01&quot;,
+ updated_time: &quot;2012-04-17&quot;,
+ amount: &quot;9.99&quot;,
+ currency: &quot;USD&quot;,
+ product: &quot;www.application.com/gold_subscription.html&quot;,
+ period_start_time: &quot;2012-04-14&quot;,
+ next_bill_time: &quot;2012-05-14&quot;,
+ next_period_product: &quot;www.application.com/bronze_subscription.html&quot;,
+ next_period_amount:: &quot;5.99&quot;,
+ next_period_currency: &quot;USD&quot;,
+ trial_amount: &quot;0&quot;,
+ trial_currency: &quot;USD&quot;,
+ trial_expiry_time: &quot;2012-04-14&quot;,
+ payment_status: &quot;success&quot;,
+ last_payment: {
+    &quot;id&quot;: 3566,
+    &quot;actions&quot;: [
+      {
+        &quot;type&quot;: &quot;charge&quot;,
+        &quot;status&quot;: &quot;completed&quot;,
+        &quot;amount&quot;: &quot;9.99&quot;,  
+        &quot;currency: &quot;USD&quot;,
+        &quot;time_created&quot;: &quot;2012-04-14T20:00:00+0000&quot;,
+        &quot;time_updated&quot;: &quot;2012-04-14T20:00:00+0000&quot;,
+    },
+    &quot;refundable_amount&quot;: {
+        &quot;currency&quot;: &quot;USD&quot;,
+        &quot;amount&quot;: &quot;9.99&quot;
+    },
+    &quot;country&quot;: &quot;US&quot;,  
+  }
+}
+</pre>
+<h5>Additional example response</h5>
+<pre>
+{id: &quot;122119087921265&quot;,
+ user: {
+      &quot;name&quot;: &quot;Bikash Agarwalla&quot;,
+      &quot;id&quot;: &quot;1245537185&quot;
+ },
+ application: {
+      &quot;name&quot;: &quot;Application&quot;,
+      &quot;id&quot;: &quot;10245213&quot;
+ },
+ status: &quot;active&quot;,
+ created_time: &quot;2012-04-16T20:10:34+0000&quot;,
+ updated_time: &quot;2012-04-17T20:10:34+0000&quot;,
+ amount: &quot;10.00&quot;,
+ currency: &quot;USD&quot;,
+ product: &quot;http://current_item&quot;,
+ period_start_time: &quot;2012-04-16T20:10:34+0000&quot;,
+ next_bill_time: &quot;2012-05-17T20:10:34+0000&quot;,
+ next_period_product: &quot;http://next_item&quot;,
+ next_period_amount:: &quot;20.00&quot;,
+ next_period_currency: &quot;USD&quot;,
+ trial_amount: &quot;0&quot;,
+ trial_currency: &quot;USD&quot;,
+ trial_expiry_time: &quot;2012-04-17T20:10:34+0000&quot;,
+ pending_cancel: true,
+ canceled_reason: &quot;user_decision&quot;,
+ payment_status: &quot;not_billed&quot;
+}
+
+</pre>
+<h3>
+<a id="query3">
+</a> Updating a Specific Subscription Programmatically</h3>
+<p>Certain properties of a subscription can be updated by the application.</p>
+<ul>
+<li>Developers can choose to push the next billing date out in case they wish to give users free usage time, most often as a compensation for poor delivery of service or other dissatisfaction.</li>
+<li>Developers can choose to discount the subscription for a given user, by updating the price of the subscription for that user to a value lower than the user&apos;s current price. An app might do this to (e.g.) avoid punishing early adopters if it later lowers the price of a subscription.</li>
+<li>Developers can cancel the subscription for a particular user at any time, without their explicit consent. They can choose to do so either immediately or at the end of a billing cycle. Subscriptions that are canceled directly by the developer cannot be re-activated with the <a href="/docs/subscriptions/#prompt5" name="https://developers.facebook.com/docs/subscriptions/#prompt5">client-side flow</a>. This might be done when a user&apos;s payment fails, for instance.</li>
+</ul>
+<p>To do any of these things, invoke the Graph API endpoint <code>POST https://graph.facebook.com/SUBSCRIPTION_ID/</code> with an app access_token and the appropriate parameter(s) from the list below.</p>
+<h4>
+<code>POST https://graph.facebook.com/SUBSCRIPTION_ID/</code>
+</h4>
+<h5>Parameters</h5>
+<ul>
+<li>
+<code>next_bill_time</code> (optional): string date for when the next billing date should be (i.e 05/20/2012)</li>
+<li>
+<code>amount</code> (optional): string that includes the amount (i.e 5.99) - note that without explicit user consent, the <code>amount</code> must be lower, denominated in the same currency, than the amount specified by the user&apos;s existing billing agreement</li>
+<li>
+<code>currency</code> (optional - <em>required</em> if <code>amount</code> is specified): ISO-3 currency code (i.e. USD)</li>
+<li>
+<code>status</code> (optional): the status that the subscription is in (the application can cancel a subscription) <ul>
+<li>
+<code>canceled</code> indicates that the subscription should be canceled.</li>
+</ul>
+</li>
+<li>
+<code>cancel_type</code> (optional) parameter with values either: <ul>
+<li>
+<code>immediate</code> (default) indicates that the subscription should be canceled now.</li>
+<li>
+<code>pending</code> indicates that the subscription should be canceled at the end of current billing cycle. </li>
+</ul>
+</li>
+</ul>
+<h5>Response Values</h5>
+<ul>
+<li>Boolean indicating success, or error on failure</li>
+</ul>
+<h3>
+<a id="query4">
+</a> Query for the details of any Payment</h3>
+<p>Developers can use the Graph API end point <code>GET https://graph.facebook.com/PAYMENT_ID/</code> with an app access token to get the details of a specific payment, provided the payment is related to this application.</p>
+<h4>
+<code>GET https://graph.facebook.com/PAYMENT_ID/</code>
+</h4>
+<h5>Response Values</h5>
+<ul>
+<li>A json-encoded string of data containing: <ul>
+<li>
+<code>id</code>: the id of the payment</li>
+<li>
+<code>user</code>: array containing id and name for the user who made the payment</li>
+<li>
+<code>application</code>: array containing application info (name, id)</li>
+<li>
+<code>actions</code>: an array of actions associated with the payment (type, status, amount, currency, time_created, time_updated) <ul>
+<li>type: &quot;charge&quot;, &quot;refund&quot;, &quot;chargeback&quot;, &quot;chargeback reversal&quot;</li>
+<li>status: &quot;inited&quot;, &quot;processing&quot;, &quot;completed&quot;, &quot;failed&quot;</li>
+</ul>
+</li>
+<li>
+<code>item</code>: the item associated with the payment (type, id and more details based on item type)</li>
+<li>
+<code>refundable_amount</code>: the amount that are still refundable by the app.</li>
+<li>
+<code>request_id</code> : // this is always empty for subscription, should we remove it for now?,</li>
+<li>
+<code>country</code>&quot; : the user&apos;s country for tax purposes.</li>
+</ul>
+</li>
+</ul>
+<h5>Example Response</h5>
+<pre>
+{
+  &quot;payment_id&quot;: 90010000008188,
+  user: {
+    &quot;name&quot;: &quot;Bikash Agarwalla&quot;,
+    &quot;id&quot;: &quot;1245537185&quot;
+  },
+  &quot;application&quot;: {
+    &quot;name&quot;: &quot;FBCredits Demo&quot;,
+    &quot;namespace&quot;: &quot;credits_demo&quot;,
+    &quot;id&quot;: 81947918671,
+  },
+  &quot;actions&quot;: [
+    {
+      &quot;type&quot;: &quot;charge&quot;,
+      &quot;status&quot;: &quot;completed&quot;,
+      &quot;amount&quot;: &quot;1.00&quot;,  
+      &quot;currency: &quot;USD&quot;,
+      &quot;time_created&quot;: &quot;2012-04-16T20:10:34+0000&quot;,
+      &quot;time_updated&quot;: &quot;2012-04-16T20:10:34+0000&quot;,
+    },
+    {
+      &quot;type&quot;: &quot;refund&quot;,
+      &quot;status&quot;: &quot;completed&quot;,
+      &quot;amount&quot;: &quot;0.20&quot;,
+      &quot;currency&quot;: &quot;USD&quot;,
+      &quot;time_created&quot;: &quot;2012-04-18T10:10:34+0000&quot;,
+      &quot;time_updated&quot;: &quot;2012-04-18T10:10:34+0000&quot;,
+    },
+    {
+      &quot;type&quot;: &quot;refund&quot;,
+      &quot;status&quot;: &quot;processing&quot;,
+      &quot;amount&quot;: &quot;0.30&quot;,
+      &quot;currency&quot;: &quot;USD&quot;,
+      &quot;time_created&quot;: &quot;2012-04-20T10:10:34+0000&quot;,
+      &quot;time_updated&quot;: &quot;2012-04-20T10:10:34+0000&quot;,
+    },
+  ],
+  &quot;refundable_amount&quot;: {
+    &quot;amount&quot;: &quot;0.50&quot;,
+    &quot;currency&quot;: &quot;USD&quot;,
+  }
+
+  &quot;items&quot;: [{
+    &quot;type&quot;: &quot;SUBSCRIPTION&quot;,
+    &quot;id&quot;: 376537519748,
+    &quot;product&quot;: &quot;http://test.com/test_subscription&quot;,
+    &quot;period_start_time&quot;: &quot;2012-03-16T10:10:34+0000&quot;,
+    &quot;period_end_time&quot; : &quot;2012-04-16T10:10:34+0000&quot;,
+    &quot;amount&quot;: &quot;10.10&quot;
+    &quot;currency&quot;: USD
+  }],
+
+  &quot;request_id&quot;: &quot;app_request_id_test_12345&quot;,
+  &quot;country&quot;: &quot;US&quot;,   
+}
+
+</pre>
+<h3>
+<a id="query5">
+</a> Consuming Updates in Real-time</h3>
+<p>Developers who prefer real time server-server updates when a particular subscription or payment changes can optionally register a callback url via the “Real-time Updates” Graph API. Details of how to register your callback url for specific updates can be found in the <a href="/docs/reference/api/realtime/" name="https://developers.facebook.com/docs/reference/api/realtime/">Realtime API docs</a>. The Realtime Update API has retry logic built into it and will retry approximately five times, with exponential backoff, over the course of 24 hours.</p>
+<h4>Subscription Updates</h4>
+<p>Real-time updates for a specific subscription are provided by consuming updates for the “subscription” object. Once signed up for these updates, you will receive notifications when:</p>
+<ul>
+<li>A new subscription becomes active</li>
+<li>An existing subscription gets upgraded or downgraded</li>
+<li>User decides to cancel their subscription and its pending_cancel becomes true</li>
+<li>User decides to cancel their subscription and the subscription gets cancelled at the end of the current billing cycle.</li>
+<li>A payment is processed for this subscription</li>
+</ul>
+<p>Apps can call <code>POST /&lt;app_id&gt;/subscriptions</code> to register for realtime notifications with the following parameters.</p>
+<h4>
+<code>GET https://graph.facebook.com/SUBSCRIPTION_ID/</code>
+</h4>
+<h5>Parameters</h5>
+<ul>
+<li>
+<code>object</code>: <code>payment_subscriptions</code>
+</li>
+<li>
+<code>fields</code>: Supported fields will be <code>status</code>, <code>canceled_reason</code>, <code>pending_cancel</code>, <code>next_period_amount</code>, <code>next_period_currency</code> ,<code>next_bill_time</code>, <code>next_period_product</code>, <code>product</code>, <code>payment_status</code>, <code>last_payment</code>
+</li>
+<li>
+<code>callback_url</code> - A callback URL to which Facebook will post subscription updates.</li>
+<li>
+<code>verify_token</code> - A subscriber-provided opaque token that will be echoed back in the verification request to assist the subscriber in identifying which subscription request is being verified. </li>
+</ul>
+<h5>Subscriptions realtime notification sample</h5>
+<pre> 
+{&quot;object&quot;:&quot;payment_subscriptions&quot;,
+ &quot;entry&quot;:[{&quot;id&quot;:&quot;SUBSCRIPTION_ID&quot;,&quot;time&quot;:1336431497,&quot;changed_fields&quot;:[...]}]} 
+</pre>
+<h4>Payment Updates</h4>
+<p>Real time updates for a specific payment (e.g did a payment get refunded or charged-back?) are provided by consuming updates for the “payment” object, using the endpoint <code>POST /APP_ID/subscriptions</code>. Apps consuming these receive real time updates when:</p>
+<ul>
+<li>A new payment has failed</li>
+<li>A new payment has succeeded </li>
+<li>An existing payment has been refunded </li>
+<li>An existing payment has been charged-back</li>
+</ul>
+<h4>
+<code>POST /APP_ID/subscriptions</code>
+</h4>
+<h5>Parameters</h5>
+<ul>
+<li>
+<code>object</code>: <code>payments</code>
+</li>
+<li>
+<code>fields</code>: the only supported fields will be <code>actions</code>
+</li>
+<li>
+<code>callback_url</code> - A callback URL to which Facebook will post subscription updates</li>
+<li>
+<code>verify_token</code> - A subscriber-provided opaque token that will be echoed back in the verification request to assist the subscriber in identifying which subscription request is being verified</li>
+</ul>
+<h5>Payment realtime notification sample</h5>
+<pre> 
+{&quot;object&quot;:&quot;payments&quot;,
+   &quot;entry&quot;:[{&quot;id&quot;:&quot;PAYMENT_ID&quot;,&quot;time&quot;:1336431497,&quot;changed_fields&quot;:[&quot;actions&quot;]}]}
+</pre>
+<h3>
+<a id="refunds">
+</a>Query for or create a refund for a payment</h3>
+<p>Developers can use the Graph API endpoint <code>GET https://graph.facebook.com/PAYMENT_ID/refunds</code> with an app access token to read a list of refunds for a given payment, and <code>POST https://graph.facebook.com/PAYMENT_ID/refunds</code> to initiate a new refund.</p>
+<h4>
+<code>GET https://graph.facebook.com/PAYMENT_ID/refunds</code>
+</h4>
+<h5>Response</h5>
+<ul>
+<li>
+<code>type</code> : with value <code>refund</code>
+</li>
+<li>
+<code>status</code> : status of the refund &quot;initiated&quot;, &quot;processing&quot;, &quot;completed&quot;, &quot;failed&quot;</li>
+<li>
+<code>currency</code> : currency in which the amount was refunded</li>
+<li>
+<code>amount</code> : amount refunded</li>
+<li>
+<code>time_created</code>: when the action (refund) was first initiated</li>
+<li>
+<code>time_updated</code>: when the refund was last changed, for instance, if a refund is to a pending method like direct debit, time_updated will change every time the status changed.</li>
+</ul>
+<h4>
+<code>POST https://graph.facebook.com/PAYMENT_ID/refunds</code>
+</h4>
+<h5>Parameters</h5>
+<ul>
+<li>
+<code>amount</code> : amount to refund</li>
+<li>
+<code>currency</code> : currency in which to refund</li>
+</ul>
+<h5>Sample response</h5>
+<pre>
+{
+   &quot;90810000015396&quot;: [
+      {
+         &quot;type&quot;: &quot;refund&quot;,
+         &quot;status&quot;: &quot;completed&quot;,
+         &quot;currency&quot;: &quot;USD&quot;,
+         &quot;amount&quot;: &quot;0.25&quot;,
+         &quot;time_created&quot;: &quot;2012-05-04T19:54:00+0000&quot;,
+         &quot;time_updated&quot;: &quot;2012-05-04T19:54:06+0000&quot;
+      },
+      {
+         &quot;type&quot;: &quot;refund&quot;,
+         &quot;status&quot;: &quot;completed&quot;,
+         &quot;currency&quot;: &quot;USD&quot;,
+         &quot;amount&quot;: &quot;0.25&quot;,
+         &quot;time_created&quot;: &quot;2012-05-04T19:56:44+0000&quot;,
+         &quot;time_updated&quot;: &quot;2012-05-04T19:56:50+0000&quot;
+      },
+      {
+         &quot;type&quot;: &quot;refund&quot;,
+         &quot;status&quot;: &quot;completed&quot;,
+         &quot;currency&quot;: &quot;USD&quot;,
+         &quot;amount&quot;: &quot;0.50&quot;,
+         &quot;time_created&quot;: &quot;2012-05-04T19:57:08+0000&quot;,
+         &quot;time_updated&quot;: &quot;2012-05-04T19:57:14+0000&quot;
+      }
+   ]
+}
+</pre>
+<h3 id="codes">Error codes</h3>
+<p>Subscriptions re-use most of the error codes for Payments listed <a href="/docs/credits/errorcodes/" name="https://developers.facebook.com/docs/credits/errorcodes/">in the core Payments documentation</a>. In addition, there are several Subscriptions-specific codes, as described below.</p>
+<table>
+<tr>
+<th>Error code</th>
+<th>Error Message</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>1179</td>
+<td>
+<code>API_EC_PAYMENTS_INVALID_AMOUNT</code>
+</td>
+<td>The amount you specified is invalid. Please verify that the amount is positive and is an allowed amount for the specific payment.</td>
+</tr>
+<tr>
+<td>1180</td>
+<td>
+<code>API_EC_PAYMENTS_CREDENTIAL_INVALID</code>
+</td>
+<td>The payment credential is not valid.</td>
+</tr>
+<tr>
+<td>1181</td>
+<td>
+<code>API_EC_PAYMENTS_BA_NOT_ACTIVE</code>
+</td>
+<td>Subscription is not active.</td>
+</tr>
+<tr>
+<td>1182</td>
+<td>
+<code>API_EC_PAYMENTS_BA_PENDING_CANCEL</code>
+</td>
+<td>Subscription is currently pending cancellation.</td>
+</tr>
+<tr>
+<td>1183</td>
+<td>
+<code>API_EC_PAYMENTS_BA_NOT_PENDING_CANCEL</code>
+</td>
+<td>Subscription is not pending cancellation.</td>
+</tr>
+</table>
+<h1 id="billing">2. Payment and Billing</h1>
+<p>Subscriptions are pre-paid and the user has to pay at the beginning of the pay cycle. The pay cycle length can only be one month. Users cannot use their credits balance towards payment of subscription fees.</p>
+<p>When a payment is due on a subscription, we update the subscription object&apos;s values for the next bill time and current period start time, reflecting the passage of a subscription period. We then attempt to process the payment in a smart queue that manages retries; in most cases, processing will occur within 20 minutes of payment creation.</p>
+<h2>Handling Chargebacks</h2>
+<p>Developers can find out when there has been a chargeback by either querying for the payment objects for each user at regular intervals or by registering a real-time update for the payment object.</p>
+<p>Note: Facebook does not directly take any action when there is a chargeback. Developers can choose to cancel the subscription at this point if they deem it the right action for the user and their application.</p>
+<h2>Payment Failure Retry Logic</h2>
+<p>When a user’s payment for a subscription fails Facebook will attempt several automated retries to collect funds from the existing funding source. (Each attempt will have a unique payment identifier.) In addition to retries, we will also notify the user of the failed payment, and provide her or him the opportunity to repay for the subscription with a new funding source.</p>
+<p>There are four payment failure scenarios, all of which apply to both credit card and PayPal:</p>
+<ul>
+<li>Situations where we deem the payment instrument to be &quot;non-chargeable&quot; e.g. Blacklisted card =&gt; we disable the payment instrument and do not retry (but of course, we would still email the user and ask them to update the instrument) </li>
+<li>Situations where we deem the payment instrument to be &quot;chargeable&quot; e.g. Reason codes like Insufficient funds (NSF), Credit Limit Hit (for some reason, these are different!) =&gt; retry every 3 days, for up to a maximum of 3 times </li>
+<li>Other, Facebook-internal errors (e.g. database error, system unavailable) =&gt; retry every 6 hours, for up to a maximum of 4 times </li>
+<li>Other, payment provider-side errors (e.g. Paypal unavailable) =&gt; retry every 12 hours, for up to a maximum of 4 times</li>
+</ul>
+<p>This logic reflects feedback from partners who claim that this captures and fixes about 75% of instrument declines.</p>
+<p>
+<strong>Note:</strong> A failed payment does not immediately affect the subscription. In fact, the subscription will remain active for the remainder of the billing cycle unless the developer cancels the subscription. The developer should continue to provide the service to the user until the subscription is actually cancelled. The reason is that when the payment succeeds in a retry, the billing cycle will not change and hence the user should get service for the days for which they have paid. If developers do not wish to provide service when payment fails, they should explicitly cancel the subscription. In any case, Facebook will cancel the subscription at the end of the billing cycle after an unresolved payment failure, so users will get at most one month of unpaid subscription, even absent developer intervention.</p>
+<h2>Emails to users</h2>
+<p>We will send emails to users on the following events</p>
+<ul>
+<li>Subscription created</li>
+<li>Subscription canceled </li>
+<li>Subscription reactivated</li>
+<li>Payment successful</li>
+<li>Payment declined (even on retries) </li>
+</ul>
+<h1 id="mgmt">3. Subscription management on Facebook</h1>
+<p>Facebook provides a <a href="https://secure.facebook.com/settings?tab=payments&amp;section=subscriptions&amp;view" name="https://secure.facebook.com/settings?tab=payments&amp;section=subscriptions&amp;view" target="_blank">settings page</a> to enable users to manage all their subscriptions in one place.</p>
+<p>Users will be able to either change their payment instrument, or cancel their subscriptions, here.</p>
+<p>
+<img src="https://developers.facebook.com/attachment/subscription3.png" width="700px" /> <img src="https://developers.facebook.com/attachment/subscriptions4.png" width="700px" /> <img src="https://developers.facebook.com/attachment/subscriptions5.png" width="700px" />
+</p>
+<div class="mtl pvm uiBoxWhite topborder">
+<div class="mbm lfloat">
+<fb:like href="http://developers.facebook.com/docs/subscriptions/" send="true" show_faces="false">
+</fb:like>
+</div>
+<div class="clear">
+<abbr class="timestamp" data-utime="1340138124" title="2012年6月19日 13:35">2012年6月19日 13:35</abbr>
+</div>
+</div></div>
+
+</body>
+</html>

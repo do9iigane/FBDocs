@@ -137,17 +137,21 @@
       &lt;title&gt;My Great Web page&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
+
       &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
       &lt;script&gt;
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) {return;}
-          js = d.createElement(s); js.id = id;
-          js.src = &quot;//connect.facebook.net/en_US/all.js#xfbml=1&quot;;
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, &apos;script&apos;, &apos;facebook-jssdk&apos;));
+        // Load the SDK Asynchronously
+        (function(d){
+           var js, id = &apos;facebook-jssdk&apos;, ref = d.getElementsByTagName(&apos;script&apos;)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+           js.src = &quot;//connect.facebook.net/en_US/all.js#xfbml=1&quot;;
+           ref.parentNode.insertBefore(js, ref);
+         }(document));
       &lt;/script&gt;
+
       &lt;div class=&quot;fb-like&quot;&gt;&lt;/div&gt;
+
     &lt;/body&gt;
  &lt;/html&gt;
 </code>
@@ -172,24 +176,29 @@
       &lt;title&gt;My Facebook Login Page&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
+
       &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
       &lt;script&gt;
         window.fbAsyncInit = function() {
           FB.init({
-            appId      : &apos;YOUR_APP_ID&apos;,
-            status     : true, 
-            cookie     : true,
-            xfbml      : true,
-            oauth      : true,
+            appId      : &apos;YOUR_APP_ID&apos;, // App ID
+            channelUrl : &apos;//WWW.YOUR_DOMAIN.COM/channel.html&apos;, // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
           });
+          // Additional initialization code here
         };
+        // Load the SDK Asynchronously
         (function(d){
-           var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+           var js, id = &apos;facebook-jssdk&apos;, ref = d.getElementsByTagName(&apos;script&apos;)[0];
+           if (d.getElementById(id)) {return;}
            js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
            js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
-           d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+           ref.parentNode.insertBefore(js, ref);
          }(document));
       &lt;/script&gt;
+
     &lt;/body&gt;
  &lt;/html&gt;
 </code>
@@ -201,25 +210,30 @@
       &lt;title&gt;My Facebook Login Page&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
+
       &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
       &lt;script&gt;
         window.fbAsyncInit = function() {
           FB.init({
-            appId      : &apos;YOUR_APP_ID&apos;,
-            status     : true, 
-            cookie     : true,
-            xfbml      : true,
-            oauth      : true,
+            appId      : &apos;YOUR_APP_ID&apos;, // App ID
+            channelUrl : &apos;//WWW.YOUR_DOMAIN.COM/channel.html&apos;, // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
           });
         };
+        // Load the SDK Asynchronously
         (function(d){
-           var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+           var js, id = &apos;facebook-jssdk&apos;, ref = d.getElementsByTagName(&apos;script&apos;)[0];
+           if (d.getElementById(id)) {return;}
            js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
            js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
-           d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+           ref.parentNode.insertBefore(js, ref);
          }(document));
       &lt;/script&gt;
+
       &lt;div class=&quot;fb-login-button&quot;&gt;Login with Facebook&lt;/div&gt;
+
     &lt;/body&gt;
  &lt;/html&gt;
 </code>
@@ -241,27 +255,32 @@
       &lt;title&gt;My Facebook Login Page&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
+
       &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
       &lt;script&gt;
         window.fbAsyncInit = function() {
           FB.init({
-            appId      : &apos;YOUR_APP_ID&apos;,
-            status     : true, 
-            cookie     : true,
-            xfbml      : true,
-            oauth      : true,
+            appId      : &apos;YOUR_APP_ID&apos;, // App ID
+            channelUrl : &apos;//WWW.YOUR_DOMAIN.COM/channel.html&apos;, // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
           });
         };
+        // Load the SDK Asynchronously
         (function(d){
-           var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+           var js, id = &apos;facebook-jssdk&apos;, ref = d.getElementsByTagName(&apos;script&apos;)[0];
+           if (d.getElementById(id)) {return;}
            js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
            js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
-           d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+           ref.parentNode.insertBefore(js, ref);
          }(document));
       &lt;/script&gt;
+
       &lt;div class=&quot;fb-login-button&quot; scope=&quot;email,user_checkins&quot;&gt;
         Login with Facebook
       &lt;/div&gt;
+
     &lt;/body&gt;
  &lt;/html&gt;
 </code>
@@ -279,24 +298,28 @@
       &lt;title&gt;My Facebook Login Page&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
+
       &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
       &lt;script&gt;
         window.fbAsyncInit = function() {
           FB.init({
-            appId      : &apos;YOUR_APP_ID&apos;,
-            status     : true, 
-            cookie     : true,
-            xfbml      : true,
-            oauth      : true,
+            appId      : &apos;YOUR_APP_ID&apos;, // App ID
+            channelUrl : &apos;//WWW.YOUR_DOMAIN.COM/channel.html&apos;, // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
           });
         };
+        // Load the SDK Asynchronously
         (function(d){
-           var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+           var js, id = &apos;facebook-jssdk&apos;, ref = d.getElementsByTagName(&apos;script&apos;)[0];
+           if (d.getElementById(id)) {return;}
            js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
            js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
-           d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+           ref.parentNode.insertBefore(js, ref);
          }(document));
       &lt;/script&gt;
+
       &lt;div 
         class=&quot;fb-registration&quot; 
         data-fields=&quot;[{&apos;name&apos;:&apos;name&apos;}, {&apos;name&apos;:&apos;email&apos;},
@@ -304,6 +327,7 @@
             &apos;type&apos;:&apos;text&apos;}]&quot; 
         data-redirect-uri=&quot;URL_TO_LOAD_AFTER_REGISTRATION&quot;
       &lt;/div&gt;
+
     &lt;/body&gt;
  &lt;/html&gt;
 </code>
@@ -336,17 +360,17 @@
       &lt;title&gt;My Facebook Login Page&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
+
       &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
       &lt;script&gt;
         window.fbAsyncInit = function() {
           FB.init({
-            appId      : &apos;YOUR_APP_ID&apos;,
-            status     : true, 
-            cookie     : true,
-            xfbml      : true,
-            oauth      : true,
+            appId      : &apos;YOUR_APP_ID&apos;, // App ID
+            channelUrl : &apos;//WWW.YOUR_DOMAIN.COM/channel.html&apos;, // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
           });
-
           FB.api(&apos;/me&apos;, function(user) {
             if (user) {
               var image = document.getElementById(&apos;image&apos;);
@@ -356,12 +380,13 @@
             }
           });
         };
-
+        // Load the SDK Asynchronously
         (function(d){
-           var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+           var js, id = &apos;facebook-jssdk&apos;, ref = d.getElementsByTagName(&apos;script&apos;)[0];
+           if (d.getElementById(id)) {return;}
            js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
            js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
-           d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+           ref.parentNode.insertBefore(js, ref);
          }(document));
       &lt;/script&gt;
 
@@ -369,6 +394,7 @@
         &lt;img id=&quot;image&quot;/&gt;
         &lt;div id=&quot;name&quot;&gt;&lt;/div&gt;
       &lt;/div&gt;
+
     &lt;/body&gt;
  &lt;/html&gt;
 </code>
@@ -380,26 +406,27 @@
       &lt;title&gt;My Facebook Login Page&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
+
       &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
       &lt;script&gt;
         window.fbAsyncInit = function() {
           FB.init({
-            appId      : &apos;YOUR_APP_ID&apos;,
-            status     : true, 
-            cookie     : true,
-            xfbml      : true,
-            oauth      : true,
+            appId      : &apos;YOUR_APP_ID&apos;, // App ID
+            channelUrl : &apos;//WWW.YOUR_DOMAIN.COM/channel.html&apos;, // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
           });
-
           FB.ui({ method: &apos;feed&apos;, 
               message: &apos;Facebook for Websites is super-cool&apos;});
         };
-
+        // Load the SDK Asynchronously
         (function(d){
-           var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
+           var js, id = &apos;facebook-jssdk&apos;, ref = d.getElementsByTagName(&apos;script&apos;)[0];
+           if (d.getElementById(id)) {return;}
            js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
            js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
-           d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
+           ref.parentNode.insertBefore(js, ref);
          }(document));
       &lt;/script&gt;
 
@@ -432,35 +459,39 @@ $userId = $facebook-&gt;getUser();
 
 &lt;html&gt;
   &lt;body&gt;
+    &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
     &lt;?php if ($userId) { 
       $userInfo = $facebook-&gt;api(&apos;/&apos; + $userId); ?&gt;
       Welcome &lt;?= $userInfo[&apos;name&apos;] ?&gt;
     &lt;?php } else { ?&gt;
-    &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
     &lt;fb:login-button&gt;&lt;/fb:login-button&gt;
     &lt;?php } ?&gt;
-    &lt;script&gt;
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : &apos;YOUR_APP_ID&apos;,
-          status     : true, 
-          cookie     : true,
-          xfbml      : true,
-          oauth      : true,
-        });
 
+
+        &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+        &lt;script&gt;
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : &apos;YOUR_APP_ID&apos;, // App ID
+              channelUrl : &apos;//WWW.YOUR_DOMAIN.COM/channel.html&apos;, // Channel File
+              status     : true, // check login status
+              cookie     : true, // enable cookies to allow the server to access the session
+              xfbml      : true  // parse XFBML
+            });
         FB.Event.subscribe(&apos;auth.login&apos;, function(response) {
           window.location.reload();
         });
-      };
+          };
+          // Load the SDK Asynchronously
+          (function(d){
+             var js, id = &apos;facebook-jssdk&apos;, ref = d.getElementsByTagName(&apos;script&apos;)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
+             js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
+             ref.parentNode.insertBefore(js, ref);
+           }(document));
+        &lt;/script&gt;
 
-      (function(d){
-         var js, id = &apos;facebook-jssdk&apos;; if (d.getElementById(id)) {return;}
-         js = d.createElement(&apos;script&apos;); js.id = id; js.async = true;
-         js.src = &quot;//connect.facebook.net/en_US/all.js&quot;;
-         d.getElementsByTagName(&apos;head&apos;)[0].appendChild(js);
-       }(document));
-    &lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </code>
@@ -493,7 +524,7 @@ $userId = $facebook-&gt;getUser();
 </fb:like>
 </div>
 <div class="clear">
-<abbr class="timestamp" data-utime="1337404262" title="2012年5月18日 22:11">2012年5月18日 22:11</abbr>
+<abbr class="timestamp" data-utime="1340135771" title="2012年6月19日 12:56">2012年6月19日 12:56</abbr>
 </div>
 </div></div>
 

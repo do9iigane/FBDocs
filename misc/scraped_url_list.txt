@@ -52,6 +52,7 @@ https://developers.facebook.com/docs/credits/build/
 https://developers.facebook.com/docs/credits/callback/
 https://developers.facebook.com/docs/credits/disputes/
 https://developers.facebook.com/docs/credits/errorcodes/
+https://developers.facebook.com/docs/credits/local_currency_faq/
 https://developers.facebook.com/docs/credits/offers/
 https://developers.facebook.com/docs/credits/orders/
 https://developers.facebook.com/docs/credits/pay_dialog/
@@ -78,6 +79,7 @@ https://developers.facebook.com/docs/guides/games/
 https://developers.facebook.com/docs/guides/games/auth/
 https://developers.facebook.com/docs/guides/games/canvas/
 https://developers.facebook.com/docs/guides/games/custom-multi-friend-selector/
+https://developers.facebook.com/docs/guides/games/custom-muti-friend-selector/
 https://developers.facebook.com/docs/guides/games/feed/
 https://developers.facebook.com/docs/guides/games/getting-started/
 https://developers.facebook.com/docs/guides/games/growth/
@@ -760,7 +762,6 @@ https://developers.facebook.com/docs/reference/plugins/recommendationsbar/
 https://developers.facebook.com/docs/reference/plugins/recommendationsbar/code/
 https://developers.facebook.com/docs/reference/plugins/registration/
 https://developers.facebook.com/docs/reference/plugins/send/
-https://developers.facebook.com/docs/reference/plugins/send/code/
 https://developers.facebook.com/docs/reference/plugins/subscribe/
 https://developers.facebook.com/docs/reference/plugins/subscribe/code/
 https://developers.facebook.com/docs/reference/rest/
@@ -890,6 +891,7 @@ https://developers.facebook.com/docs/samples/canvas/
 https://developers.facebook.com/docs/score/
 https://developers.facebook.com/docs/sdks/
 https://developers.facebook.com/docs/share/
+https://developers.facebook.com/docs/subscriptions/
 https://developers.facebook.com/docs/test_user/
 https://developers.facebook.com/docs/test_users/
 https://developers.facebook.com/docs/user_registration/flows/

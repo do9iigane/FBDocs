@@ -49,10 +49,10 @@
 <p>This document walks you through how to build a custom Multi-Friend Selector for sending <a href="/docs/requests/" name="https://developers.facebook.com/docs/requests">Requests</a> using the <a href="/docs/reference/api/" name="https://developers.facebook.com/docs/reference/api/">Graph API</a> and <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>.</p>
 <ol>
 <li>
-<a href="/docs/#step1" name="https://developers.facebook.com/docs/#step1">Get a list of friends via the Graph API</a>
+<a href="/docs/guides/games/custom-muti-friend-selector/#step1" name="https://developers.facebook.com/docs/guides/games/custom-muti-friend-selector/#step1">Get a list of friends via the Graph API</a>
 </li>
 <li>
-<a href="/docs/#step2" name="https://developers.facebook.com/docs/#step2">Send a Request to the list of friends</a>
+<a href="/docs/guides/games/custom-muti-friend-selector/#step2" name="https://developers.facebook.com/docs/guides/games/custom-muti-friend-selector/#step2">Send a Request to the list of friends</a>
 </li>
 </ol>
 <p>
@@ -117,7 +117,7 @@
 <p>Users can now select which friend(s) they would like to send a Request to directly. As a best practice you should design your UI to match the aesthetic of your game and consider creating pre-filtered lists of friends as tabs in your custom MFS.</p>
 <p>Some popular ideas include:</p>
 <h3>Friends that use this app</h3>
-<p>You can get a list of users that have installed you app by executing an <a href="/docs/" name="https://developers.facebook.com/docs/">FQL</a> like:</p>
+<p>You can get a list of users that have installed you app by executing an <a href="/docs/guides/games/custom-muti-friend-selector/" name="https://developers.facebook.com/docs/guides/games/custom-muti-friend-selector/">FQL</a> like:</p>
 <pre>
 <code> SELECT uid, name, is_app_user, pic_square
    FROM user WHERE uid
