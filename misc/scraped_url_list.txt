@@ -259,6 +259,7 @@ https://developers.facebook.com/docs/opengraph/
 https://developers.facebook.com/docs/opengraph/actionlinks/
 https://developers.facebook.com/docs/opengraph/actions/
 https://developers.facebook.com/docs/opengraph/actions/builtin/
+https://developers.facebook.com/docs/opengraph/actions/builtin/likes/
 https://developers.facebook.com/docs/opengraph/authentication/
 https://developers.facebook.com/docs/opengraph/checklist/
 https://developers.facebook.com/docs/opengraph/complextypes/
@@ -762,6 +763,7 @@ https://developers.facebook.com/docs/reference/plugins/recommendationsbar/
 https://developers.facebook.com/docs/reference/plugins/recommendationsbar/code/
 https://developers.facebook.com/docs/reference/plugins/registration/
 https://developers.facebook.com/docs/reference/plugins/send/
+https://developers.facebook.com/docs/reference/plugins/send/code/
 https://developers.facebook.com/docs/reference/plugins/subscribe/
 https://developers.facebook.com/docs/reference/plugins/subscribe/code/
 https://developers.facebook.com/docs/reference/rest/

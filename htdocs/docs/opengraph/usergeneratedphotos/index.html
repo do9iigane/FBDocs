@@ -121,6 +121,9 @@
 <a href="/docs/opengraph/actions/builtin/" name="http://developers.facebook.com/docs/opengraph/actions/builtin/">Built-in Action Types</a>
 </li>
 <li>
+<a href="/docs/opengraph/actions/builtin/likes/" name="http://developers.facebook.com/docs/opengraph/actions/builtin/likes/">Built-in Like</a>
+</li>
+<li>
 <a href="/docs/opengraph/simpletypes/" name="http://developers.facebook.com/docs/opengraph/simpletypes/">Simple Types</a>
 </li>
 <li>
@@ -204,10 +207,10 @@
 <h3>Privacy Controls</h3>
 <p>The action which the photo is attached to, will follow the privacy settings that the user had granted to the app through the <a href="/docs/opengraph/authentication/" name="https://developers.facebook.com/docs/opengraph/authentication/">Auth Dialog</a>. However, because the photo is also loaded into an album, that photo will follow the privacy settings of that album. Changes to one privacy setting will act independent of the other.</p>
 <h3>Specific Properties Required</h3>
-<p>Currently, each call will publish a single user-generated photo (specified by <code>image[0]</code>) at a time. The following fields are required:</p>
+<p>The following fields are required:</p>
 <table>
 <tr>
-<td width="200">
+<td width="260">
 <b>Property Name</b>
 </td>
 <td width="300">
@@ -216,24 +219,24 @@
 </tr>
 <tr>
 <td>
-<code>image[0][url]</code>
+<code>image[zero-based array][url]</code>
 </td>
 <td>A fully qualified URL to the location of a single user-generated photo</td>
 </tr>
 <tr>
 <td>
-<code>image[0][user_generated]</code>
+<code>image[zero-based array][user_generated]</code>
 </td>
 <td>Boolean</td>
 </tr>
 </table>
-<h3>Sample Code</h3>
+<h3>Sample Code for a Single Photo in an Action</h3>
 <pre>
 
 https://graph.facebook.com/me/nyccookbook:cook?
   recipe=http://www.yourdomain.com/pizza.html&amp;
   image[0][url]=http://www.yourdomain.com/images/my_camera_pizza_pic.jpg&amp;
-  image[0][user_generated]=true&amp;
+  image[0][user_generated]=true
   access_token=YOUR_ACCESS_TOKEN
 
 </pre>
@@ -244,7 +247,7 @@ https://graph.facebook.com/me/nyccookbook:cook?
 </fb:like>
 </div>
 <div class="clear">
-<abbr class="timestamp" data-utime="1337708027" title="2012年5月22日 10:33">2012年5月22日 10:33</abbr>
+<abbr class="timestamp" data-utime="1340225244" title="2012年6月20日 13:47">2012年6月20日 13:47</abbr>
 </div>
 </div></div>
 
