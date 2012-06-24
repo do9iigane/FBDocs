@@ -179,7 +179,7 @@
 </div>
 </div>
 </div>
-<p>Like, one of the most ubiquitous actions by Facebook users on the web today, is now available as a built-in Open Graph action. Developers can now design how Like, as an Open Graph action, fits into the core user experience of any app, through building a custom in-app “like button” that works across any mobile and web platform, while improving both in-app content relevance and its distribution on Facebook.</p>
+<p>Like, one of the most ubiquitous actions by Facebook users on the web today, is now available as a built-in Open Graph action. Developers can now design how Like, as an Open Graph action, fits into the core user experience of any app, through building a custom in-app “like button” that works across any mobile and web platform, helping to improve in-app content relevance while enjoying additional distribution on Facebook.</p>
 <p>
 <a name="publish">
 </a>
@@ -188,30 +188,36 @@
 </div>
 <hr />
 <h2>Publishing Built-in Likes</h2>
-<p>An app can publish a built-in Like action, on behalf of the user, for any in-app content, as long as the following conditions are true:</p>
+<p>An app can publish a built-in Like action, on behalf of the user, as long as the following conditions are true:</p>
 <ol>
 <li>The viewer of the in-app content is a Facebook user who has Facebook-authed and granted the app <code>publish_actions</code> permission</li>
 <li>The in-app content has an Open Graph object page that is properly marked-up using Open Graph metatags</li>
 <li>The viewer has intentionally clicked on an in-app “like button” associated with the in-app content</li>
 </ol>
-<p>Here, developers should design their apps to provide an in-app “like button” that could be clicked on. Apps with existing in-app “like buttons” can now not only have these buttons help improve internal content relevance tracking, but benefit from additional distribution on Facebook when these buttons publish built-in Like action stories to Open Graph.</p>
-<p>A successful publish of a built-in Like action on an Open Graph object will appear as a Ticker story and in a user’s activity feed (News Feed, Timeline, Activity Log).</p>
+<p>Here, developers should design their apps to provide an in-app “like button” that could be clicked on. Apps with existing in-app “like buttons” can now benefit from additional distribution on Facebook when these buttons publish built-in Like action stories to Open Graph.</p>
+<p>A successful publish of a built-in Like action will appear as an Open Graph story in all places that other Open Graph action stories appear (Ticker, News Feed, Timeline, Activity Log).</p>
 <p>
 <center>
-<img src="https://developers.facebook.com/attachment/OGLikes_DevApp.png" />
+<img src="https://developers.facebook.com/attachment/OGLikes_SocialCookbook_NewsFeed.png" />
 </center>
 </p>
 <p>To start configuring an app to have the ability to publish a built-in Like action on an Open Graph object:</p>
 <ol>
-<li>Within the Open Graph section of the Developer App configuration for an app, add the new built-in Like action, which should appear in the drop-down when adding a new Open Graph action.</li>
-<li>Create a custom in-app “like button” associated with each Open Graph object that users can “like” through an app.</li>
-<li>When a user clicks on this button and has both FB-authed and provided the <code>publish_actions</code> permission to an app in the past, the app should publish a built-in Like action story on the Open Graph object</li>
+<li>Within the Open Graph section of the Developer App configuration, add the built-in Like action, which should appear in the drop-down when adding a new Open Graph action. <p>
+<center>
+<img src="https://developers.facebook.com/attachment/OGLikes_DevApp.png" />
+</center>
+</p>
+</li>
+<li>Create a custom in-app “like button” associated with each Open Graph object that users can “like”.</li>
+<li>When a user clicks on this button and has both FB-authed and provided the `publish_actions` permission to an app in the past, the app should publish a built-in Like action story on the Open Graph object.</li>
 </ol>
 <p>To publish a built-in Like action on an Open Graph object, invoke the following HTTP POST request with a user’s access token and the url of the Open Graph object. This Open Graph object can be of any type.</p>
 <pre>
-POST  https://graph.facebook.com/[User FB ID]/og.likes?
-              object=OG_OBJECT_URL
-             &amp;access_token=USER_ACCESS_TOKEN
+curl -X POST
+     -F &apos;access_token=USER_ACCESS_TOKEN&apos; \
+     -F &apos;object=OG_OBJECT_URL&apos; \
+     https://graph.facebook.com/[User FB ID]/og.likes
 </pre>
 <p>which in turn will return the ID of the built-in Like action instance if the call is successful</p>
 <pre>
@@ -231,8 +237,9 @@ object on a unique action type Like. Original Action ID:
 </pre>
 <p>A re-publish will however succeed if the last known successful built-in Like action instance by the user on the object was removed. To undo a published “Like” action, essentially emulating an “Unlike”, invoke the following HTTP DELETE call on the ID of a Like action instance that was returned from a successful publish</p>
 <pre>
-DELETE  https://graph.facebook.com/[Like Action Instance ID]?
-                access_token=USER_ACCESS_TOKEN
+curl -X DELETE
+     -F &apos;access_token=USER_ACCESS_TOKEN&apos; \
+     https://graph.facebook.com/[Like Action Instance ID]
 </pre>
 <p>
 <a name="creation">
@@ -242,23 +249,27 @@ DELETE  https://graph.facebook.com/[Like Action Instance ID]?
 </div>
 <hr />
 <h2>Notifications for Built-in Likes</h2>
-<p>The built-in Like action is particularly beneficial for apps that promote the creation of user-generated content, in which the activity that created a user-generated content is published as an Open Graph action and the user-generated content is annotated as an Open Graph object. Here, we call such an Open Graph action a <strong>“creation action”</strong>. For example, imagine a social cookbook app, in which a user can “write” (action) a “recipe” (object), and this activity is also published to Open Graph and shared with a user’s friends. Here, “write” is a “creation action” since each time this action is undertaken by the user, a new user-generated content, a “recipe” object, is created.</p>
-<p>When a friend views the user’s “recipe” within the context of the social recipe app, and clicks on an associated “like button” that also publishes a built-in Like action to Open Graph, a Facebook notification would be generated. The user who created this “recipe” object through the “write” action will receive a Facebook notification that his/her friend “liked” the user’s “recipe”. This Facebook notification will only appear to a user when the person who “liked” the object is the user’s Facebook friend, this friend’s app activity is visible to the user, and the Open Graph object was “created” by the user.</p>
+<p>The built-in Like action is particularly beneficial for apps where users can publish back content they have created via the Open Graph. Here, we call such an Open Graph action a <strong>“creation action”</strong>. For example, imagine a social cookbook app, in which a user can “write” (action) a “recipe” (object), and this activity is also published to Open Graph and shared with a user’s friends. Here, “write” is a “creation action” since each time this action is undertaken by the user, a new user-generated content, a “recipe” object, is created.</p>
+<p>When a friend views the user’s “recipe” within the context of the social recipe app, and clicks on an associated “like button” that also publishes a built-in Like action to Open Graph, a Facebook notification would be generated. The user who created this “recipe” object through the “write” action will receive a Facebook notification that his/her friend “liked” the user’s “recipe”. This Facebook notification will only appear to a user when the person who “liked” the object is the user’s Facebook friend, this friend’s app activity is visible to the user, and the Open Graph object was “created” by the user through a “creation action”.</p>
 <p>
+<center>
+<img src="https://developers.facebook.com/attachment/OGLikes_SocialCookbook_Notification.png" />
+</center>
+</p>
+<p>To enable Facebook Notifications when publishing built-in Like actions, configure a &quot;creation action&quot; for the object representing the user-generated content:</p>
+<ol>
+<li>Within the Open Graph section of the Developer App configuration, click to edit the Open Graph object that will represent the user-generated content. Then, click on the “Advanced” link to expand it.</li>
+<li>Fill in the “Creation Action” field with the Open Graph action that “creates” this object. <p>
 <center>
 <img src="https://developers.facebook.com/attachment/OGLikes_CreationAction.png" />
 </center>
 </p>
-<p>To enable Facebook Notifications when publishing built-in Like actions on user-generated content:</p>
-<ol>
-<li>Within the Open Graph section of the Developer App configuration, click to edit the Open Graph object that will represent the user-generated content. Then, click on the “Advanced” link to expand it.</li>
-<li>Fill in the “Creation Action” field with the Open Graph action that “creates” this object.</li>
+</li>
 <li>Click on the “Save Changes” button.</li>
 <li>Whenever a Facebook user of an app “creates” user-generated content, the app should publish to Open Graph as usual, with the “creation action” as the Open Graph action and the user-generated content as the Open Graph object.</li>
 </ol>
 <p>As outlined in the previous section, developers should design an in-app “like button”. When someone views user-generated content through an app and clicks on the associated in-app “like button”, publish a built-in Like action story to Open Graph, using the REST calls and conditions outlined earlier.</p>
-<p>A successful publish of the “Like” action will appear as a Ticker story and in a user’s activity feed (News Feed, Timeline, Activity Log), while generating the appropriate Facebook Notification about this activity.</p>
-<p>If the Open Graph object does not have an associated “creation action”, then no Facebook notifications will be generated.</p>
+<p>If the Open Graph object does not have an associated “creation action”, then no Facebook notifications will be generated when a built-in Like is published on it.</p>
 <div class="mtm">
 <hr />
 <h2>
@@ -286,7 +297,7 @@ DELETE  https://graph.facebook.com/[Like Action Instance ID]?
 </fb:like>
 </div>
 <div class="clear">
-<abbr class="timestamp" data-utime="1340231682" title="2012年6月20日 15:34">2012年6月20日 15:34</abbr>
+<abbr class="timestamp" data-utime="1340268063" title="2012年6月21日 1:41">2012年6月21日 1:41</abbr>
 </div>
 </div></div>
 
