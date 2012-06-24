@@ -611,6 +611,7 @@ https://developers.facebook.com/docs/reference/javascript/FB.logout/
 https://developers.facebook.com/docs/reference/javascript/FB.ui/
 https://developers.facebook.com/docs/reference/javascript/fb.api/
 https://developers.facebook.com/docs/reference/javascript/fb.ui/
+https://developers.facebook.com/docs/reference/javascript/xfbml-fb-name/
 https://developers.facebook.com/docs/reference/oldjavascript/
 https://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.auth_getAppPublicKey/
 https://developers.facebook.com/docs/reference/oldjavascript/FB.ApiClient.auth_getSignedPublicSessionData/
@@ -755,8 +756,6 @@ https://developers.facebook.com/docs/reference/plugins/live-stream/code/
 https://developers.facebook.com/docs/reference/plugins/login/
 https://developers.facebook.com/docs/reference/plugins/login/code/
 https://developers.facebook.com/docs/reference/plugins/name/
-https://developers.facebook.com/docs/reference/plugins/name/code/
-https://developers.facebook.com/docs/reference/plugins/name/tags/
 https://developers.facebook.com/docs/reference/plugins/recommendations/
 https://developers.facebook.com/docs/reference/plugins/recommendations/code/
 https://developers.facebook.com/docs/reference/plugins/recommendationsbar/

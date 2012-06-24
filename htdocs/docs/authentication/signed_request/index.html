@@ -128,7 +128,7 @@
 <li>A <code>signed_request</code> parameter is passed to an app which is using the <a href="/docs/plugins/registration/" name="https://developers.facebook.com/docs/plugins/registration">Registration Plugin</a> whenever a user successfully registers.</li>
 <li>When using the <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JS SDK</a> for <a href="/docs/authentication/" name="https://developers.facebook.com/docs/authentication">authentication</a>, the <code>authResponse</code> object contains a <code>signed_request</code> property which is used to transfer information about the authenticated user.</li>
 </ul>
-<p>When you receive a <code>signed_request</code> string, it can be verified using your App Secret to ensure the request was send by Facebook and not a third party. Parsing the <code>signed_request</code> will yield a JSON object containing some data. The content and structure of this object differs depending on the scenario in which it was generated.</p>
+<p>When you receive a <code>signed_request</code> string, it can be verified using your App Secret to ensure the request was sent by Facebook and not a third party. Parsing the <code>signed_request</code> will yield a JSON object containing some data. The content and structure of this object differs depending on the scenario in which it was generated.</p>
 <h3>Parsing and Verifying</h3>
 <p>A <code>signed_request</code> string is the concatenation of an <a href="http://en.wikipedia.org/wiki/HMAC" name="http://en.wikipedia.org/wiki/HMAC" target="_blank">HMAC</a> <a href="http://en.wikipedia.org/wiki/SHA-2" name="http://en.wikipedia.org/wiki/SHA-2" target="_blank">SHA-256</a> signature, a period (<code>.</code>), and a <a href="http://en.wikipedia.org/wiki/Base64#URL_applications" name="http://en.wikipedia.org/wiki/Base64#URL_applications" target="_blank">base64url encoded</a> JSON object. It looks something like this (without the newlines):</p>
 <pre>
@@ -263,7 +263,7 @@ function base64_url_decode($input) {
 </fb:like>
 </div>
 <div class="clear">
-<abbr class="timestamp" data-utime="1331838528" title="2012年3月15日 12:08">2012年3月15日 12:08</abbr>
+<abbr class="timestamp" data-utime="1340399021" title="2012年6月22日 14:03">2012年6月22日 14:03</abbr>
 </div>
 </div></div>
 

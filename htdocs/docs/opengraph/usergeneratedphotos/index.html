@@ -179,7 +179,7 @@
 </div>
 </div>
 </div>
-<p>With the increasing number of users having access to mobile cameras, there is a growing need to be able to share and associate those user-generated photos with open graph stories. Stories with attached user-generated photos will have all of the same functionality of standard stories, but will help accentuate the photos with a larger display in Ticker, Timeline, and News Feed.</p>
+<p>With the increasing number of users having access to mobile cameras, there is a growing need to be able to share and associate those user-generated photos with open graph stories. Stories with attached user-generated photos will have all of the same functionality of standard stories, but will help accentuate the photos with a larger display in Ticker, Timeline, and News Feed. You can allow your users to upload a single photo or multiple user generated photos for a single action.</p>
 <p>User Generated photos requires additional approval before you can use it. When submitting your action for approval in the App Dashboard, be sure to check the box, &quot;User Generated Photos&quot;.</p>
 <p style="text-align:center">
 <img src="https://developers.facebook.com/attachment/og_submit_step2_v2.png/" width="65%" />
@@ -207,6 +207,7 @@
 <h3>Privacy Controls</h3>
 <p>The action which the photo is attached to, will follow the privacy settings that the user had granted to the app through the <a href="/docs/opengraph/authentication/" name="https://developers.facebook.com/docs/opengraph/authentication/">Auth Dialog</a>. However, because the photo is also loaded into an album, that photo will follow the privacy settings of that album. Changes to one privacy setting will act independent of the other.</p>
 <h3>Specific Properties Required</h3>
+<p>You can attach a single or multiple user_generated photos when publishing a single action. Your first user_generated photo array should be zero-based. If you wish to upload additional user_generated photos, simply pass the same &quot;url&quot; and &quot;user_generated=true&quot; parameters for each additional photos, incrementing the array value.</p>
 <p>The following fields are required:</p>
 <table>
 <tr>
@@ -230,24 +231,29 @@
 <td>Boolean</td>
 </tr>
 </table>
-<h3>Sample Code for a Single Photo in an Action</h3>
+<h3>Sample Code for Multiple Photos in a Single Action</h3>
 <pre>
 
 https://graph.facebook.com/me/nyccookbook:cook?
   recipe=http://www.yourdomain.com/pizza.html&amp;
   image[0][url]=http://www.yourdomain.com/images/my_camera_pizza_pic.jpg&amp;
-  image[0][user_generated]=true
+  image[0][user_generated]=true&amp;
+  image[1][url]=http://www.yourdomain.com/images/my_camera_soda_pic_2.jpg&amp;
+  image[1][user_generated]=true&amp;
   access_token=YOUR_ACCESS_TOKEN
 
 </pre>
-<p>To easily play with this feature, you should use the <a href="https://developers.facebook.com/tools/explorer/" name="https://developers.facebook.com/tools/explorer/" target="_blank">Graph Explorer</a> and include both the <code>image[0][url]</code> and <code>image[0][user_generated]</code> properties. Then check your Activity Log to see the larger treatment of this story.</p>
+<div style="text-align: center;">
+<img src="https://developers.facebook.com/attachment/user_generated_multiple_photos_w_message.png/" style="border:1px solid black;" />
+</div>
+<p>To easily play with this feature for posting a single image, you should use the <a href="https://developers.facebook.com/tools/explorer/" name="https://developers.facebook.com/tools/explorer/" target="_blank">Graph Explorer</a> and include both the <code>image[0][url]</code> and <code>image[0][user_generated]</code> properties. Then check your Activity Log to see the larger treatment of this story.</p>
 <div class="mtl pvm uiBoxWhite topborder">
 <div class="mbm lfloat">
 <fb:like href="http://developers.facebook.com/docs/opengraph/usergeneratedphotos/" send="true" show_faces="false">
 </fb:like>
 </div>
 <div class="clear">
-<abbr class="timestamp" data-utime="1340225244" title="2012年6月20日 13:47">2012年6月20日 13:47</abbr>
+<abbr class="timestamp" data-utime="1340225337" title="2012年6月20日 13:48">2012年6月20日 13:48</abbr>
 </div>
 </div></div>
 

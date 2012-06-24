@@ -395,7 +395,7 @@
 <p>If the user canceled the Dialog response will be <code>undefined</code>.</p>
 <p>For a full list of the parameters available check out the docs for the <a href="/docs/reference/dialogs/requests/" name="https://developers.facebook.com/docs/reference/dialogs/requests/">Request Dialog</a>, <a href="/docs/reference/dialogs/" name="https://developers.facebook.com/docs/reference/dialogs/">Dialog API</a> and <a href="/docs/reference/javascript/FB.ui/" name="https://developers.facebook.com/docs/reference/javascript/FB.ui/">FB.ui</a>.</p>
 <p>At this point we have implemented sending Requests and users can send Invites to their friends. The last thing we need to do is allow users to accept these Requests. Requests that are send to users are <strong>not</strong> cleared automatically when a user clicks on them. Developers need to clear an outstanding Request when the user has completed the desired action. In our case our Requests are Invites so by navigating to Critical Mass the recipient user has completed our desired action. Let&apos;s clear the Request when a user arrives at Critical Mass by accepting a Request.</p>
-<p>When a user accepts a Request via a notification or from the <a href="https://www.facebook.com/apps/center" name="https://www.facebook.com/apps/center" target="_blank">Games Dashboard</a> Facebook will pass the Request ID(s) to our <code>index.php</code> page. Let&apos;s clear these Requests using the PHP SDK for our Canvas version of Critical Mass:</p>
+<p>When a user accepts a Request via a notification or from the <a href="https://www.facebook.com/appcenter" name="https://www.facebook.com/appcenter" target="_blank">Games Dashboard</a> Facebook will pass the Request ID(s) to our <code>index.php</code> page. Let&apos;s clear these Requests using the PHP SDK for our Canvas version of Critical Mass:</p>
 <pre>
 <code> if(isset($_REQUEST[&apos;request_ids&apos;])) {
    $requestIDs = explode(&apos;,&apos; , $_REQUEST[&apos;request_ids&apos;]);
@@ -409,7 +409,7 @@
  }
 </code>
 </pre>
-<p>The code above will get the <code>request_ids</code> parameter and then split it on &apos;,&apos;, as this can be either a single Request ID or a comma delimited string of Request IDs. Next we use the Graph API via the <code>FB.api</code> method in the PHP SDK to delete each Request by sending a HTTP request like:</p>
+<p>The code above will get the <code>request_ids</code> parameter and then split it on &apos;,&apos;, as this can be either a single Request ID or a comma delimited string of Request IDs. Next we use the Graph API via the <code>$facebook-&gt;api()</code> method in the PHP SDK to delete each Request by sending a HTTP request like:</p>
 <pre>
 <code> DELETE https://graph.facebook.com/REQUEST_ID?access_token=USER_ACCESS_TOKEN
 </code>
@@ -790,7 +790,7 @@
 </fb:like>
 </div>
 <div class="clear">
-<abbr class="timestamp" data-utime="1338309790" title="2012年5月29日 9:43">2012年5月29日 9:43</abbr>
+<abbr class="timestamp" data-utime="1340476296" title="2012年6月23日 11:31">2012年6月23日 11:31</abbr>
 </div>
 </div></div>
 

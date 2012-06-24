@@ -2,12 +2,12 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>https://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading/</title>
+<title>https://developers.facebook.com/docs/reference/javascript/xfbml-fb-name/</title>
 <link rel="stylesheet" href="/css/common.css" media="screen" />
 <script src="/js/common.js"></script>
 </head>
 <body>
-<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading/">https://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading/</a>
+<a id="oklahomer-orig-url" href="https://developers.facebook.com/docs/reference/javascript/xfbml-fb-name/">https://developers.facebook.com/docs/reference/javascript/xfbml-fb-name/</a>
 
 <div id="oklahomer-menu-wrapper">
 <div class="toplevelnav">
@@ -158,53 +158,27 @@
 <div id="oklahomer-content-wrapper">
 <div class="header">
 <div class="content">
-<h1>FB.Canvas.setDoneLoading</h1>
+<h1>fb:name</h1>
 <div class="breadcrumbs">
-<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a> › <a href="/docs/reference/javascript/FB.Canvas.setDoneLoading/" name="https://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading/">FB.Canvas.setDoneLoading</a>
+<a href="/docs/sdks/" name="https://developers.facebook.com/docs/sdks/">SDK Reference</a> › <a href="/docs/reference/javascript/" name="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a> › <a href="/docs/reference/javascript/xfbml-fb-name/" name="https://developers.facebook.com/docs/reference/javascript/xfbml-fb-name/">fb:name</a>
 </div>
 </div>
 </div>
-<p>Calls you back with an integer, in milliseconds, of the timing of the page load, beginning from the time when the first bytes arrive on the client, and ending from the point at which you call this function.</p>
-<p>The point at which you call it is up to you; in general, choose a point at which the user will be able to interact meaningfully with your application.</p>
-<p>If you call this function, your application&apos;s page load performance over time will appear in the Performance tab of your application&apos;s <a href="https://www.facebook.com/insights" name="https://www.facebook.com/insights" target="_blank">Insights Dashboard</a>.</p>
-<p>If you want to exclude certain parts of the page load, use <a href="/docs/reference/javascript/FB.Canvas.stopTimer/" name="https://developers.facebook.com/docs/reference/javascript/FB.Canvas.stopTimer">stopTimer</a> and <a href="/docs/reference/javascript/FB.Canvas.startTimer/" name="https://developers.facebook.com/docs/reference/javascript/FB.Canvas.startTimer">startTimer</a>. These methods will stop and start the load timer respectively.</p>
-<h2>Examples</h2>
-<p>To simply report when your application is ready, call</p>
+<p>Renders the name of the user specified, optionally linked to his or her profile.</p>
+<p>This also works for Facebook Pages with the ID of the Page passed as the <code>uid</code> parameter. You can use this tag for both the subject and the object of a sentence describing an action. For example, if a user with the user ID &apos;&apos;$tagger&apos;&apos; tags a photo of a user with the user ID &apos;&apos;$tagee&apos;&apos;, you could say:</p>
 <pre>
-<code>FB.Canvas.setDoneLoading();
+<code>&lt;fb:name uid=&quot;$tagger&quot; capitalize=&quot;true&quot; /&gt; tagged a photo
+of &lt;fb:name subjectid=&quot;$tagger&quot; uid=&quot;$tagee&quot; /&gt;
 </code>
 </pre>
-<p>To use that information yourself, specify a callback. Here we pop up a dialog to display the application load time.</p>
-<pre>
-<code>FB.Canvas.setDoneLoading(
-  function (result) {
-    alert(result.time_delta_ms);
-  }
-);
-</code>
-</pre>
-<h2>パラメータ</h2>
-<table class="params">
-<tr>
-<th>名前</th>
-<th>タイプ</th>
-<th>説明</th>
-</tr>
-<tr>
-<td class="name">callback</td>
-<td class="type">Function</td>
-<td>
-<p>(optional) A function called back with the page load time.</p>
-</td>
-</tr>
-</table>
+<p>User names and profile links follow standard Facebook privacy rules for other viewing users.</p>
 <div class="mtl pvm uiBoxWhite topborder">
 <div class="mbm lfloat">
-<fb:like href="http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading/" send="true" show_faces="false">
+<fb:like href="http://developers.facebook.com/docs/reference/javascript/xfbml-fb-name/" send="true" show_faces="false">
 </fb:like>
 </div>
 <div class="clear">
-<abbr class="timestamp" data-utime="1316573097" title="2011年9月20日 19:44">2011年9月20日 19:44</abbr>
+<abbr class="timestamp" data-utime="1340386167" title="2012年6月22日 10:29">2012年6月22日 10:29</abbr>
 </div>
 </div></div>
 
