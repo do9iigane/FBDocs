@@ -9,6 +9,7 @@ sub new {
     my $args = shift || +{};
 
     my $self = bless $args, $class;
+    return $self;
 }
 
 sub ua {
